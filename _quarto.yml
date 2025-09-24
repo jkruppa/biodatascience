@@ -2,16 +2,9 @@ project:
   type: book
   output-dir: docs
 
-crossref:
-  fig-prefix: Abbildung
-  tbl-prefix: Tabelle
-  fig-title: Abbildung    
-  tbl-title: Tabelle 
-  title-delim: —     # (default is ":")
-
 book:
   title: "Bio Data Science"
-  subtitle: "The final guide"
+  subtitle: "The definitive guide"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
   date: "17. August 2025"
   favicon: cover2025_favi.png
