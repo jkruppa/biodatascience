@@ -1,0 +1,94 @@
+```{r echo = FALSE}
+pacman::p_load(tidyverse, readxl, knitr, kableExtra, Hmisc)
+```
+
+# Maßeinheiten, Flächenmaße und Volumenmaße {#sec-volume}
+
+*Letzte Änderung am `r format(fs::file_info("geometry-unit.qmd")$modification_time, '%d. %B %Y um %H:%M:%S')`*
+
+
+
+## Maßeinheiten
+
+Wozu brauchen wir Maßeinheiten? Zum einen wollen wir nicht immer so große Zahlen schreiben oder aber sehr kleine Zahlen. Die ganzen Nullen machen dann doch den Text sehr unübersichtlich. Aus diesem Grund gibt es mehrere Arten der Kurzschreibweise um Zahlen in einer kürzeren Form darzustellen. In der folgenden @tbl-unit-01 sind einem die sehr großen Zahlen bis $10^{12}$ einmal dargestellt.
+
+| Buchstabe | Präfix | Wissenschaftlich | Wissenschaftlich in R | Zahl              |
+|--------------|--------------|--------------|-----------------|--------------|
+| T         | Tera-  | $10^{12}$        | 1e+12                 | 1 000 000 000 000 |
+| G         | Giga-  | $10^{9}$         | 1e+9                  | 1 000 000 000     |
+| M         | Mega-  | $10^{6}$         | 1e+6                  | 1 000 000         |
+| k         | Kilo-  | $10^{3}$         | 1e+3                  | 1 000             |
+| h         | Hekto- | $10^{2}$         | 1e+2                  | 100               |
+
+: Große Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen. {#tbl-unit-01}
+
+Nachdem wir einmal die ganz großen Zahlen dargestellt haben, wollen wir uns in der @tbl-unit-02 nochmal die ganz kleinen Zahlen einmal anschauen. Besonders die schreibweise mit dem `e` werden wir dann wiederholt in R sehen.
+
+| Buchstabe | Präfix | Wissenschaftlich | Wissenschaftlich in R | Zahl              |
+|--------------|--------------|--------------|-----------------|--------------|
+| d         | Dezi-  | $10^{-1}$        | 1e-1                  | 0.1               |
+| c         | Zenti- | $10^{-2}$        | 1e-2                  | 0.01              |
+| m         | Milli- | $10^{-3}$        | 1e-3                  | 0.001             |
+| $\mu$     | Mikro- | $10^{-6}$        | 1e-6                  | 0.000 001         |
+| n         | Nano-  | $10^{-9}$        | 1e-9                  | 0.000 000 001     |
+| p         | Pico-  | $10^{-12}$       | 1e-12                 | 0.000 000 000 001 |
+
+: Sehr kleine Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen. {#tbl-unit-02}
+
+::: callout-tip
+## Wieviele Nullen sollen es sein?
+
+Du kannst dir merken, dass bei positiven Hochzahlen, die Hochzahl die Anzahl an Nullen angibt. So ist eben 1e+2 eine 1 mit zwei Nullen, also Hundert. Eine $10^3$ ist eine Eins mit drei Nullen, also Tausend.
+
+Bei den negativen Hochzahlen, siehst du immer eine Null weniger, als die Hochzahl angibt. So ist 1e-2 eben 0.01 und damit nur eine Null vor der Eins. Ebenso ist dann $10^{-4}$ dann 0.0001 also eine Eins mit drei Nullen.
+:::
+
+Wenn dir unklar ist, wie denn eine Zahl mit dem `e` aussehen würde, kannst du die Funktion `format()` mit der Option `scientific = FALSE` nutzen. Damit schaltest du die exponentielle Schreibweise in R aus.
+
+```{r}
+format(1.8e+7, scientific = FALSE)
+format(1.2e-4, scientific = FALSE)
+```
+
+Viele Taschenrechner haben auch die Möglichkeit das `e` umzurechnen. Meistens sind wir dann aber in R und da können wir dann die obige Funktion schnell nutzen.
+
+## Flächenmaße
+
+In der @tbl-unit-03 sehen wir nochmal die Umrechnung von gängigen Flächenmaßen. Dem einen oder anderen mag der Hektar $ha$ geläufig sein, für alle anderen hier nochmal die Flächen zum nachschlagen. Das Ar $ar$ ist in unterschiedlicher Verwendung, aber hier mit zu Vollständigkeit aufgeführt.
+
+| $km^2$ | $ha$ | $ar$   | $m^2$     |
+|--------|------|--------|-----------|
+| 1      | 100  | 10 000 | 1 000 000 |
+|        | 1    | 100    | 10 000    |
+|        |      | 1      | 100       |
+
+: Umrechnung von gängigen Flächenmaßen. {#tbl-unit-03}
+
+## Volumenmaße
+
+Die @tbl-unit-04 zeigt die Umrechnungen von Volumenmaßen. Häufig benötigen wir verschiedene Volumen bei der Abfüllung von Dünger oder aber auch anderer Flüssigkeiten. Die Bewässerung und auch die Kühlung wird über Volumen geregelt. Auch ist es wichtig zu wisen, wie denn die Idee des *Liters* mit den $m^3$ zusammenhängt.
+
+| Liter   | hl | l          | dl      | cl     | ml     |
+|---------|------|--------------|-----------|----------|-----------|
+| $1m^3$  | 10   | 1 000        | 10 000    | 100 000  | 1 000 000 |
+|         | 1    | 100          | 1 000     | 10 000   | 100 000   |
+|         |      | 10           | 100       | 1 000    | 10 000    |
+| $1dm^3$ |      | 1            | 10        | 100      | 1 000     |
+|         |      |              | 1         | 10       | 100       |
+|         |      |              |           | 1        | 10        |
+| $1cm^3$ |      |              |           |          | 1         |
+|         |      | $1 000 cm^3$ | $100cm^3$ | $10cm^3$ | $1cm^3$   |
+
+: Umrechnung von gängigen Volumenmaßen. {#tbl-unit-04}
+
+## Prozent, Promille und ppm
+
+Abschließend schauen wir uns in der @tbl-unit-05 nochmal die Umrechnungen von Prozent und Promille an. Das Prinzip nutzen wir dann häufig zur Abschätzung von anderen Flächen oder Volumen, wenn wir nicht die exakte Änderung kennen sondern eben nur die Prozentuale.
+
+|                                                          |                            |              | Ein Zuckerwürfel in                |
+|------------------------|----------------|----------------|----------------|
+| 1 Prozent ist 1 Teil von hundert Teilen                  | 10 Gramm pro Kilogramm     | $10 g/kg$    | 0.27 Litern, ca. 2 Tassen          |
+| 1 Promille ist 1 Teil von Tausend Teilen                 | 1 Gramm pro Kilogramm      | $1 g/kg$     | 2.7 Litern, ca. 3.5 Flaschen Wein  |
+| 1 ppm (part per million) ist 1 Teil von 1 Million Teilen | 1 Milligramm pro Kilogramm | $0.001 g/kg$ | 2 700 Litern, ca. einem Tanklaster |
+
+: Umrechnung von Prozenten und Anteilen. {#tbl-unit-05}

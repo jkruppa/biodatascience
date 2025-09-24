@@ -1,0 +1,58 @@
+project:
+  type: book
+  output-dir: docs
+
+crossref:
+  fig-prefix: Abbildung
+  tbl-prefix: Tabelle
+  fig-title: Abbildung    
+  tbl-title: Tabelle 
+  title-delim: —     # (default is ":")
+
+book:
+  title: "Bio Data Science"
+  subtitle: "The final guide"
+  author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
+  date: "17. August 2025"
+  favicon: cover2025_favi.png
+  description: "A book"
+  url: https://jkruppa.github.io/biodatascience
+  repo-url: https://github.com/jkruppa/jkruppa.github.io/biodatascience
+  repo-branch: master
+  repo-actions: [edit, issue, source]
+  sharing: [twitter, facebook, linkedin]
+  search: true
+  page-footer:
+    left: |
+      Mathematik wurde von <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a> geschrieben. 
+    right: |
+      Dieses Openbook wurde mit <a href="https://quarto.org/">Quarto</a> erstellt.
+  chapters:
+    - index.qmd
+    - part: geometry-preface.qmd
+      chapters:
+      - geometry-unit.qmd
+
+bibliography: references.bib
+lang: en 
+
+format:
+  html: 
+    theme:
+      - journal
+      - bioscience.scss
+    cover-image: cover2025.png
+    code-annotations: hover
+    lightbox: true
+    toc-expand: 2
+    code-fold: show
+    highlight-style: tango
+    code-block-border-left: true
+    code-summary: "R Code [show / hide]"
+    code-tools: true
+    mermaid:
+      theme: neutral
+      htmlLabels: true
+  pdf:
+    documentclass: scrreprt
+
