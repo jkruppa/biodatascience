@@ -7,8 +7,8 @@ book:
   subtitle: "The definitive guide"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
   date: "17. August 2025"
-  favicon: cover2025_favi.png
-  description: "A book"
+  favicon: cover2026_favi.png
+  description: "*A cookbook containing recipes from the fields of bioinformatics, biostatistics, biometrics and statistics that you can try at home!*"
   url: https://jkruppa.github.io/biodatascience
   repo-url: https://github.com/jkruppa/jkruppa.github.io/biodatascience
   repo-branch: master
@@ -17,9 +17,9 @@ book:
   search: true
   page-footer:
     left: |
-      Mathematik wurde von <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a> geschrieben. 
+      Bio Data Science was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>. 
     right: |
-      Dieses Openbook wurde mit <a href="https://quarto.org/">Quarto</a> erstellt.
+      This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
     - part: geometry-preface.qmd
@@ -34,7 +34,7 @@ format:
     theme:
       - journal
       - bioscience.scss
-    cover-image: cover2025.png
+    cover-image: cover2026.png
     code-annotations: hover
     lightbox: true
     toc-expand: 2
