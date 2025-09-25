@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="A book">
+<meta name="description" content="A cookbook containing recipes from the fields of bioinformatics, biostatistics, biometrics and statistics that you can try at home!">
 
-<title>Bio Data Science - 1&nbsp; Maßeinheiten, Flächenmaße und Volumenmaße</title>
+<title>1&nbsp; Maßeinheiten, Flächenmaße und Volumenmaße – Bio Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-05fe91a66cf75bbbb8c9664867fe5124.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-05a8b96638736df272eeeeef67138371.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -142,13 +142,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./geometry-preface.html">Von Maßzahlen, Flächen und Volumen</a></li><li class="breadcrumb-item"><a href="./geometry-unit.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Maßeinheiten, Flächenmaße und Volumenmaße</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -164,23 +164,23 @@ window.Quarto = {
         <div class="sidebar-tools-main">
     <a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-bi-twitter pe-1"></i>
+              <i class="bi bi-twitter pe-1"></i>
             Twitter
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-              <i class="bi bi-bi-facebook pe-1"></i>
+              <i class="bi bi-facebook pe-1"></i>
             Facebook
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-bi-linkedin pe-1"></i>
+              <i class="bi bi-linkedin pe-1"></i>
             LinkedIn
             </a>
           </li>
@@ -199,14 +199,14 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Willkommen</span></a>
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./geometry-preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Von Maßzahlen, Flächen und Volumen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -258,17 +258,17 @@ window.Quarto = {
 </header>
 
 
-<p><em>Letzte Änderung am 24. September 2025 um 11:03:59</em></p>
+<p><em>Letzte Änderung am 24. September 2025 um 12:00:03</em></p>
 <section id="maßeinheiten" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="maßeinheiten"><span class="header-section-number">1.1</span> Maßeinheiten</h2>
 <p>Wozu brauchen wir Maßeinheiten? Zum einen wollen wir nicht immer so große Zahlen schreiben oder aber sehr kleine Zahlen. Die ganzen Nullen machen dann doch den Text sehr unübersichtlich. Aus diesem Grund gibt es mehrere Arten der Kurzschreibweise um Zahlen in einer kürzeren Form darzustellen. In der folgenden <a href="#tbl-unit-01" class="quarto-xref">Table&nbsp;<span>1.1</span></a> sind einem die sehr großen Zahlen bis <span class="math inline">\(10^{12}\)</span> einmal dargestellt.</p>
-<div id="tbl-unit-01" class="quarto-float anchored">
+<div id="tbl-unit-01" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.1: Große Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.
 </figcaption>
 <div aria-describedby="tbl-unit-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
@@ -327,13 +327,13 @@ Table&nbsp;1.1: Große Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen 
 </figure>
 </div>
 <p>Nachdem wir einmal die ganz großen Zahlen dargestellt haben, wollen wir uns in der <a href="#tbl-unit-02" class="quarto-xref">Table&nbsp;<span>1.2</span></a> nochmal die ganz kleinen Zahlen einmal anschauen. Besonders die schreibweise mit dem <code>e</code> werden wir dann wiederholt in R sehen.</p>
-<div id="tbl-unit-02" class="quarto-float anchored">
+<div id="tbl-unit-02" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.2: Sehr kleine Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.
 </figcaption>
 <div aria-describedby="tbl-unit-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 19%">
 <col style="width: 19%">
@@ -434,13 +434,13 @@ Wieviele Nullen sollen es sein?
 <section id="flächenmaße" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="flächenmaße"><span class="header-section-number">1.2</span> Flächenmaße</h2>
 <p>In der <a href="#tbl-unit-03" class="quarto-xref">Table&nbsp;<span>1.3</span></a> sehen wir nochmal die Umrechnung von gängigen Flächenmaßen. Dem einen oder anderen mag der Hektar <span class="math inline">\(ha\)</span> geläufig sein, für alle anderen hier nochmal die Flächen zum nachschlagen. Das Ar <span class="math inline">\(ar\)</span> ist in unterschiedlicher Verwendung, aber hier mit zu Vollständigkeit aufgeführt.</p>
-<div id="tbl-unit-03" class="quarto-float anchored">
+<div id="tbl-unit-03" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.3: Umrechnung von gängigen Flächenmaßen.
 </figcaption>
 <div aria-describedby="tbl-unit-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th><span class="math inline">\(km^2\)</span></th>
@@ -477,13 +477,13 @@ Table&nbsp;1.3: Umrechnung von gängigen Flächenmaßen.
 <section id="volumenmaße" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="volumenmaße"><span class="header-section-number">1.3</span> Volumenmaße</h2>
 <p>Die <a href="#tbl-unit-04" class="quarto-xref">Table&nbsp;<span>1.4</span></a> zeigt die Umrechnungen von Volumenmaßen. Häufig benötigen wir verschiedene Volumen bei der Abfüllung von Dünger oder aber auch anderer Flüssigkeiten. Die Bewässerung und auch die Kühlung wird über Volumen geregelt. Auch ist es wichtig zu wisen, wie denn die Idee des <em>Liters</em> mit den <span class="math inline">\(m^3\)</span> zusammenhängt.</p>
-<div id="tbl-unit-04" class="quarto-float anchored">
+<div id="tbl-unit-04" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.4: Umrechnung von gängigen Volumenmaßen.
 </figcaption>
 <div aria-describedby="tbl-unit-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Liter</th>
@@ -568,13 +568,13 @@ Table&nbsp;1.4: Umrechnung von gängigen Volumenmaßen.
 <section id="prozent-promille-und-ppm" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="prozent-promille-und-ppm"><span class="header-section-number">1.4</span> Prozent, Promille und ppm</h2>
 <p>Abschließend schauen wir uns in der <a href="#tbl-unit-05" class="quarto-xref">Table&nbsp;<span>1.5</span></a> nochmal die Umrechnungen von Prozent und Promille an. Das Prinzip nutzen wir dann häufig zur Abschätzung von anderen Flächen oder Volumen, wenn wir nicht die exakte Änderung kennen sondern eben nur die Prozentuale.</p>
-<div id="tbl-unit-05" class="quarto-float anchored">
+<div id="tbl-unit-05" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-unit-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1.5: Umrechnung von Prozenten und Anteilen.
 </figcaption>
 <div aria-describedby="tbl-unit-05-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
 <col style="width: 22%">
@@ -655,18 +655,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -698,7 +687,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
   const viewSource = window.document.getElementById('quarto-view-source') ||
                      window.document.getElementById('quarto-code-tools-source');
   if (viewSource) {
@@ -750,6 +759,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   if (showAllCode) {
     showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -784,7 +811,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -832,7 +863,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -1200,19 +1230,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>| 1 ppm (part per million) ist 1 Teil von 1 Million Teilen | 1 Milligramm pro Kilogramm | $0.001 g/kg$ | 2 700 Litern, ca. einem Tanklaster |</span>
 <span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a>: Umrechnung von Prozenten und Anteilen. {#tbl-unit-05}</span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Mathematik wurde von <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a> geschrieben.</p>
+<p>Bio Data Science was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/edit/master/geometry-unit.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/blob/master/geometry-unit.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div>
     <div class="nav-footer-right">
-<p>Dieses Openbook wurde mit <a href="https://quarto.org/">Quarto</a> erstellt.</p>
+<p>This open book was created using <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>

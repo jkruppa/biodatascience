@@ -1,26 +1,13 @@
 # Welcome {.unnumbered}
 
-> *"Mir wird applaudiert, weil mich jeder versteht, und Ihnen, weil Sie niemand versteht." --- Charlie Chaplin zu Albert Einstein*
+> *"Life is difficult." --- M. Scott Peck's, The Road Less Traveled *
 
-Auf den folgenden Seiten wirst du nochmal die Grundlagen der Mathematik wiederholen und lernen. Wir lagern hier die Inhalte die sehr mathematisch sind von den angewandten, statistischen Themen aus. Das heißt, du findest hier sehr viel Mathematik und auch Rechenbeispiele. Es wird aber R Code geben - siehe den R Code als den Taschenrechnercode. Das hat den einfachen Grund, das wir eben dann doch mal die Grundlagen in der Mathematik wiederholen müssen. Es kann aber auch sein, dass du gar nicht so viel Mathematik später brauchst - oder wiederkommst, weil du nochmal nachschauen willst, wie du eine Teilstückfläche berechnest. Wir auch immer, hier findest du die Mathematikteile aus meinen Vorlesungen.
+This cookbook contains an extensive collection of recipes from the fields of biostatistics, biometrics, statistics, bioinformatics and R programming. These will enable you to gain in-depth knowledge of these subject areas for data analysis, eliminating the need to attend my courses. Feel free to browse through the book to see if anything interests you, and then put together your own menu. I am continuously updating the book and adding to it all the time. In addition to the written content, there are also explanatory YouTube videos available. Either way, I am delighted that you are interested in learning something new, whether through personal interest or exam preparation. Either way, I recommend that you just take a look around. Don't be put off by the sheer volume of material – it just happened that way.
 
-Im Weiteren findest du meine gesammelten Klausurfragen für alle Module auf GitHub unter folgendem Link: [gesammelten Klausurfragen auf GitHub](https://github.com/jkruppa/exam/blob/main/Gesammelte_Klausurfragen_Bio_Data_Science.pdf) oder auf [ILIAS](https://lms.hs-osnabrueck.de/) im entsprechenden Modul "Mathematik und Statistik". Die Klausurfragen zu den einzelnen Vorlesungen innerhalb eines Moduls werden in den entsprechenden Übungen behandelt. Zusätzlich gibt es ein Archiv, das alle bisherigen Klausuren über alle Studiengänge hinweg enthält. Dieses Archiv findest du hier: [Archive aller bisherigen Klausuren](https://github.com/jkruppa/archive). In der ![](images/youtube.png){fig-align="center" width="55"} [Playlist der Fragen & Antworten](https://www.youtube.com/playlist?list=PLe51bCp9JvEHxsispwEyTp6B9bqNZ1EmJ) findest du nochmal alle Antworten zu den Klausurfragen *kurz* besprochen. 
+> *"If there's a book that you want to read, but it hasn't been written yet, then you must write it." --- Toni Morrison*
 
+::: callout-note
+## German Version
 
-## Kontakt {#sec-contact-mail}
-
-Noch Fragen? Wie erreichst du mich? Am einfachsten über die gute, alte E-Mail. Bitte beachte, dass gerade kurz vor den Prüfungen ich mehr E-Mails kriege. Leider kann es dann einen Tick dauern. Einfach an [j.kruppa\@hs-osnabrueck.de](mailto:j.kruppa@hs-osnabrueck.de){.email} schreiben. Du findest hier auch eine kurze Formulierungshilfe.
-
-::: callout-tip
-## E-Mailvorlage mit beispielhafter Anrede
-
-Hallo Herr Kruppa,
-
-... ich belege gerade Ihr Modul `Modulname` und hätte eine Bitte/Frage/Anregung...
-
-... ich benötige Hilfe bei der Planung/Auswertung meiner Bachelorarbeit...
-
-Mit freundlichen Grüßen
-
-M. Muster
+This is the English version of my German Openbook [Bio Data Science](https://jkruppa.github.io).
 :::
