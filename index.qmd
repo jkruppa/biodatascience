@@ -7,7 +7,7 @@ This cookbook contains an extensive collection of recipes from the fields of bio
 ::: {layout="[30,70]" layout-valign="top"}
 ![](images/german_version.png){fig-align="center" width="100%"}
 
-> *An German version of this Openbook Bio Data Science is available. The page exists at link <https://jkruppa.github.io/>, but is much more unstructured.  It is more like a cookbook in contrast to this book with a continous storyline.*
+> *A German version of this OpenBook Bio Data Science is available. The page can be found at the following link: https://jkruppa.github.io/. However, it is much more unstructured.  It is more like a cookbook than this book, which has a continuous storyline.*
 :::
 
 > *"If there's a book that you want to read, but it hasn't been written yet, then you must write it." --- Toni Morrison*
