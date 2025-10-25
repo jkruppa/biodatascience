@@ -1,0 +1,19 @@
+```{r echo = FALSE}
+pacman::p_load(tidyverse)
+```
+
+# Template chapter {#sec-temp}
+
+*Last modified on `r format(fs::file_info("template-chapter.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## Generale background
+
+## Theoretical background
+
+## R packages used
+
+## Data
+
+## References {.unnumbered}

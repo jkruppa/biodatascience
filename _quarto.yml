@@ -22,9 +22,9 @@ book:
       This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
-    - part: geometry-preface.qmd
+    - part: template-preface.qmd
       chapters:
-      - geometry-unit.qmd
+      - template-chapter.qmd
 
 bibliography: references.bib
 lang: en 
