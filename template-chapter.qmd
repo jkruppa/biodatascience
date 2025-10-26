@@ -10,17 +10,26 @@ pacman::p_load(tidyverse)
 
 ## Generale background
 
-::: callout-tip
-## Further tutorials on XXX
-
-Text
-
-:::
-
 ## Theoretical background
 
 ## R packages used
 
 ## Data
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Data Science" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
 
 ## References {.unnumbered}
