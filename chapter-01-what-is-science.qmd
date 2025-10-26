@@ -1,0 +1,35 @@
+```{r echo = FALSE}
+pacman::p_load(tidyverse)
+```
+
+# What is science? {#sec-what-is-science}
+
+*Last modified on `r format(fs::file_info("chapter-01-what-is-science.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## Generale background
+
+## Theoretical background
+
+## R packages used
+
+## Data
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Data Science" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}

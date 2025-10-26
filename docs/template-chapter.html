@@ -8,7 +8,7 @@
 
 <meta name="description" content="A cookbook containing recipes from the fields of bioinformatics, biostatistics, biometrics and statistics that you can try at home!">
 
-<title>1&nbsp; Template chapter – Bio Data Science</title>
+<title>4&nbsp; Template chapter – Bio Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./template-preface.html" rel="prev">
+<link href="./chapter-02-what-is-a-model.html" rel="prev">
 <link href="./cover2026_favi.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./template-preface.html">Template Preface</a></li><li class="breadcrumb-item"><a href="./template-chapter.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Template chapter</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./template-preface.html">Template Preface</a></li><li class="breadcrumb-item"><a href="./template-chapter.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Template chapter</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -189,8 +189,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./chapter-00-what-is-science.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is science?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-01-what-is-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">What is data?</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-02-what-is-a-model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">What is a model?</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./template-preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Template Preface</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./template-chapter.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Template chapter</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Template chapter</span></span></a>
   </div>
 </li>
       </ul>
@@ -205,14 +234,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#generale-background" id="toc-generale-background" class="nav-link active" data-scroll-target="#generale-background"><span class="header-section-number">1.1</span> Generale background</a></li>
-  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">1.2</span> Theoretical background</a></li>
-  <li><a href="#r-packages-used" id="toc-r-packages-used" class="nav-link" data-scroll-target="#r-packages-used"><span class="header-section-number">1.3</span> R packages used</a></li>
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">1.4</span> Data</a></li>
-  <li><a href="#alternatives" id="toc-alternatives" class="nav-link" data-scroll-target="#alternatives"><span class="header-section-number">1.5</span> Alternatives</a></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">1.6</span> Glossary</a></li>
-  <li><a href="#the-meaning-of-data-science-in-this-chapter." id="toc-the-meaning-of-data-science-in-this-chapter." class="nav-link" data-scroll-target="#the-meaning-of-data-science-in-this-chapter."><span class="header-section-number">1.7</span> The meaning of “Data Science” in this chapter.</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">1.8</span> Summary</a></li>
+  <li><a href="#generale-background" id="toc-generale-background" class="nav-link active" data-scroll-target="#generale-background"><span class="header-section-number">4.1</span> Generale background</a></li>
+  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">4.2</span> Theoretical background</a></li>
+  <li><a href="#r-packages-used" id="toc-r-packages-used" class="nav-link" data-scroll-target="#r-packages-used"><span class="header-section-number">4.3</span> R packages used</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">4.4</span> Data</a></li>
+  <li><a href="#alternatives" id="toc-alternatives" class="nav-link" data-scroll-target="#alternatives"><span class="header-section-number">4.5</span> Alternatives</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">4.6</span> Glossary</a></li>
+  <li><a href="#the-meaning-of-data-science-in-this-chapter." id="toc-the-meaning-of-data-science-in-this-chapter." class="nav-link" data-scroll-target="#the-meaning-of-data-science-in-this-chapter."><span class="header-section-number">4.7</span> The meaning of “Data Science” in this chapter.</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">4.8</span> Summary</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/edit/master/template-chapter.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/jkruppa/jkruppa.github.io/biodatascience/blob/master/template-chapter.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -220,9 +249,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./template-preface.html">Template Preface</a></li><li class="breadcrumb-item"><a href="./template-chapter.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Template chapter</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./template-preface.html">Template Preface</a></li><li class="breadcrumb-item"><a href="./template-chapter.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Template chapter</span></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span id="sec-temp" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Template chapter</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title"><span id="sec-temp" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Template chapter</span></span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -243,24 +272,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
-<section id="generale-background" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="generale-background"><span class="header-section-number">1.1</span> Generale background</h2>
+<section id="generale-background" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="generale-background"><span class="header-section-number">4.1</span> Generale background</h2>
 </section>
-<section id="theoretical-background" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">1.2</span> Theoretical background</h2>
+<section id="theoretical-background" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">4.2</span> Theoretical background</h2>
 </section>
-<section id="r-packages-used" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="r-packages-used"><span class="header-section-number">1.3</span> R packages used</h2>
+<section id="r-packages-used" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="r-packages-used"><span class="header-section-number">4.3</span> R packages used</h2>
 </section>
-<section id="data" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="data"><span class="header-section-number">1.4</span> Data</h2>
+<section id="data" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="data"><span class="header-section-number">4.4</span> Data</h2>
 </section>
-<section id="alternatives" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="alternatives"><span class="header-section-number">1.5</span> Alternatives</h2>
+<section id="alternatives" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="alternatives"><span class="header-section-number">4.5</span> Alternatives</h2>
 <p>Further tutorials and R packages on XXX</p>
 </section>
-<section id="glossary" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="glossary"><span class="header-section-number">1.6</span> Glossary</h2>
+<section id="glossary" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="glossary"><span class="header-section-number">4.6</span> Glossary</h2>
 <dl>
 <dt>term</dt>
 <dd>
@@ -268,14 +297,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </dd>
 </dl>
 </section>
-<section id="the-meaning-of-data-science-in-this-chapter." class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="the-meaning-of-data-science-in-this-chapter."><span class="header-section-number">1.7</span> The meaning of “Data Science” in this chapter.</h2>
+<section id="the-meaning-of-data-science-in-this-chapter." class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="the-meaning-of-data-science-in-this-chapter."><span class="header-section-number">4.7</span> The meaning of “Data Science” in this chapter.</h2>
 <ul>
 <li>itemize with max. 5-6 words</li>
 </ul>
 </section>
-<section id="summary" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.8</span> Summary</h2>
+<section id="summary" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.8</span> Summary</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -778,8 +807,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./template-preface.html" class="pagination-link" aria-label="Template Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Template Preface</span>
+      <a href="./chapter-02-what-is-a-model.html" class="pagination-link" aria-label="What is a model?">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">What is a model?</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

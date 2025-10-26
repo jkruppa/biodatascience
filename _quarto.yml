@@ -6,7 +6,7 @@ book:
   title: "Bio Data Science"
   subtitle: "The definitive guide"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
-  date: "17. August 2025"
+  date: "26. October 2025"
   favicon: cover2026_favi.png
   description: "*A cookbook containing recipes from the fields of bioinformatics, biostatistics, biometrics and statistics that you can try at home!*"
   url: https://jkruppa.github.io/biodatascience
@@ -22,6 +22,11 @@ book:
       This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
+    - part: chapter-00-preface.qmd
+      chapters:
+      - chapter-01-what-is-science.qmd
+      - chapter-02-what-is-data.qmd
+      - chapter-03-what-is-a-model.qmd
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd

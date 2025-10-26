@@ -10,81 +10,6 @@
     ]
   },
   {
-    "objectID": "index.html#sec-contact-mail",
-    "href": "index.html#sec-contact-mail",
-    "title": "Bio Data Science",
-    "section": "Kontakt",
-    "text": "Kontakt\nNoch Fragen? Wie erreichst du mich? Am einfachsten über die gute, alte E-Mail. Bitte beachte, dass gerade kurz vor den Prüfungen ich mehr E-Mails kriege. Leider kann es dann einen Tick dauern. Einfach an j.kruppa@hs-osnabrueck.de schreiben. Du findest hier auch eine kurze Formulierungshilfe.\n\n\n\n\n\n\nE-Mailvorlage mit beispielhafter Anrede\n\n\n\nHallo Herr Kruppa,\n… ich belege gerade Ihr Modul Modulname und hätte eine Bitte/Frage/Anregung…\n… ich benötige Hilfe bei der Planung/Auswertung meiner Bachelorarbeit…\nMit freundlichen Grüßen\nM. Muster",
-    "crumbs": [
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "geometry-preface.html",
-    "href": "geometry-preface.html",
-    "title": "Von Maßzahlen, Flächen und Volumen",
-    "section": "",
-    "text": "Letzte Änderung am 24. September 2025 um 12:00:03\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nIn dem folgenden Kapitel zu den Maßzahlen von Einheiten sowie der Fläche und dem Volumen wollen wir uns einmal mit den Grundlagen der Berechungen beschäftigen. Wir brauchen diese Werkzeuge um zu bestimmen, wie groß ein Teilstück sein soll oder aber wenn wir wissen wollen, wie viel Torf wir bestellen müssen.\nIm ersten Abschnitt schauen wir uns einmal Flächenmaße und Volumenmaße an. Wie sind die Abkürzungen für die entsprechenden Maßzahlen und wie lauten die Abkürzungen für sehr große oder sehr kleine Zahlen.\nDann schauen wir noch einmal auf die Flächen und Umfänge von gängigen geometrischen Objekten. Welche Eigenschaften hat das Quadrat, das Rechteck und der Kreis? Wir merken uns hier natürlich nur die wichtigsten Formeln, den Rest kannst du dann immer mal wieder nachschlagen.\nAm Ende wollen wir dann die Flächen noch ins Volumen bringen. Hier rechnen wir dann das Volumne eines Würfels oder eines Quaders aus. Häufig brauchen wir diese Informationen, wenn wir berechnen wollen, wie viel Torf wir brauchen oder wie viel Volumen an Futter verbraucht wird bzw. eingekauft werden muss.",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen"
-    ]
-  },
-  {
-    "objectID": "geometry-unit.html",
-    "href": "geometry-unit.html",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "",
-    "text": "1.1 Maßeinheiten\nLetzte Änderung am 24. September 2025 um 12:00:03\nWozu brauchen wir Maßeinheiten? Zum einen wollen wir nicht immer so große Zahlen schreiben oder aber sehr kleine Zahlen. Die ganzen Nullen machen dann doch den Text sehr unübersichtlich. Aus diesem Grund gibt es mehrere Arten der Kurzschreibweise um Zahlen in einer kürzeren Form darzustellen. In der folgenden Table 1.1 sind einem die sehr großen Zahlen bis \\(10^{12}\\) einmal dargestellt.\nNachdem wir einmal die ganz großen Zahlen dargestellt haben, wollen wir uns in der Table 1.2 nochmal die ganz kleinen Zahlen einmal anschauen. Besonders die schreibweise mit dem e werden wir dann wiederholt in R sehen.\nWenn dir unklar ist, wie denn eine Zahl mit dem e aussehen würde, kannst du die Funktion format() mit der Option scientific = FALSE nutzen. Damit schaltest du die exponentielle Schreibweise in R aus.\nR Code [show / hide]\nformat(1.8e+7, scientific = FALSE)\n\n\n[1] \"18000000\"\n\n\nR Code [show / hide]\nformat(1.2e-4, scientific = FALSE)\n\n\n[1] \"0.00012\"\nViele Taschenrechner haben auch die Möglichkeit das e umzurechnen. Meistens sind wir dann aber in R und da können wir dann die obige Funktion schnell nutzen.",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "geometry-unit.html#maßeinheiten",
-    "href": "geometry-unit.html#maßeinheiten",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "",
-    "text": "Table 1.1: Große Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.\n\n\n\n\n\n\n\n\n\n\n\n\nBuchstabe\nPräfix\nWissenschaftlich\nWissenschaftlich in R\nZahl\n\n\n\n\nT\nTera-\n\\(10^{12}\\)\n1e+12\n1 000 000 000 000\n\n\nG\nGiga-\n\\(10^{9}\\)\n1e+9\n1 000 000 000\n\n\nM\nMega-\n\\(10^{6}\\)\n1e+6\n1 000 000\n\n\nk\nKilo-\n\\(10^{3}\\)\n1e+3\n1 000\n\n\nh\nHekto-\n\\(10^{2}\\)\n1e+2\n100\n\n\n\n\n\n\n\n\n\n\nTable 1.2: Sehr kleine Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.\n\n\n\n\n\n\n\n\n\n\n\n\nBuchstabe\nPräfix\nWissenschaftlich\nWissenschaftlich in R\nZahl\n\n\n\n\nd\nDezi-\n\\(10^{-1}\\)\n1e-1\n0.1\n\n\nc\nZenti-\n\\(10^{-2}\\)\n1e-2\n0.01\n\n\nm\nMilli-\n\\(10^{-3}\\)\n1e-3\n0.001\n\n\n\\(\\mu\\)\nMikro-\n\\(10^{-6}\\)\n1e-6\n0.000 001\n\n\nn\nNano-\n\\(10^{-9}\\)\n1e-9\n0.000 000 001\n\n\np\nPico-\n\\(10^{-12}\\)\n1e-12\n0.000 000 000 001\n\n\n\n\n\n\n\n\n\n\n\n\nWieviele Nullen sollen es sein?\n\n\n\nDu kannst dir merken, dass bei positiven Hochzahlen, die Hochzahl die Anzahl an Nullen angibt. So ist eben 1e+2 eine 1 mit zwei Nullen, also Hundert. Eine \\(10^3\\) ist eine Eins mit drei Nullen, also Tausend.\nBei den negativen Hochzahlen, siehst du immer eine Null weniger, als die Hochzahl angibt. So ist 1e-2 eben 0.01 und damit nur eine Null vor der Eins. Ebenso ist dann \\(10^{-4}\\) dann 0.0001 also eine Eins mit drei Nullen.",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "geometry-unit.html#flächenmaße",
-    "href": "geometry-unit.html#flächenmaße",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.2 Flächenmaße",
-    "text": "1.2 Flächenmaße\nIn der Table 1.3 sehen wir nochmal die Umrechnung von gängigen Flächenmaßen. Dem einen oder anderen mag der Hektar \\(ha\\) geläufig sein, für alle anderen hier nochmal die Flächen zum nachschlagen. Das Ar \\(ar\\) ist in unterschiedlicher Verwendung, aber hier mit zu Vollständigkeit aufgeführt.\n\n\n\nTable 1.3: Umrechnung von gängigen Flächenmaßen.\n\n\n\n\n\n\\(km^2\\)\n\\(ha\\)\n\\(ar\\)\n\\(m^2\\)\n\n\n\n\n1\n100\n10 000\n1 000 000\n\n\n\n1\n100\n10 000\n\n\n\n\n1\n100",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "geometry-unit.html#volumenmaße",
-    "href": "geometry-unit.html#volumenmaße",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.3 Volumenmaße",
-    "text": "1.3 Volumenmaße\nDie Table 1.4 zeigt die Umrechnungen von Volumenmaßen. Häufig benötigen wir verschiedene Volumen bei der Abfüllung von Dünger oder aber auch anderer Flüssigkeiten. Die Bewässerung und auch die Kühlung wird über Volumen geregelt. Auch ist es wichtig zu wisen, wie denn die Idee des Liters mit den \\(m^3\\) zusammenhängt.\n\n\n\nTable 1.4: Umrechnung von gängigen Volumenmaßen.\n\n\n\n\n\nLiter\nhl\nl\ndl\ncl\nml\n\n\n\n\n\\(1m^3\\)\n10\n1 000\n10 000\n100 000\n1 000 000\n\n\n\n1\n100\n1 000\n10 000\n100 000\n\n\n\n\n10\n100\n1 000\n10 000\n\n\n\\(1dm^3\\)\n\n1\n10\n100\n1 000\n\n\n\n\n\n1\n10\n100\n\n\n\n\n\n\n1\n10\n\n\n\\(1cm^3\\)\n\n\n\n\n1\n\n\n\n\n\\(1 000 cm^3\\)\n\\(100cm^3\\)\n\\(10cm^3\\)\n\\(1cm^3\\)",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "geometry-unit.html#prozent-promille-und-ppm",
-    "href": "geometry-unit.html#prozent-promille-und-ppm",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.4 Prozent, Promille und ppm",
-    "text": "1.4 Prozent, Promille und ppm\nAbschließend schauen wir uns in der Table 1.5 nochmal die Umrechnungen von Prozent und Promille an. Das Prinzip nutzen wir dann häufig zur Abschätzung von anderen Flächen oder Volumen, wenn wir nicht die exakte Änderung kennen sondern eben nur die Prozentuale.\n\n\n\nTable 1.5: Umrechnung von Prozenten und Anteilen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEin Zuckerwürfel in\n\n\n\n\n1 Prozent ist 1 Teil von hundert Teilen\n10 Gramm pro Kilogramm\n\\(10 g/kg\\)\n0.27 Litern, ca. 2 Tassen\n\n\n1 Promille ist 1 Teil von Tausend Teilen\n1 Gramm pro Kilogramm\n\\(1 g/kg\\)\n2.7 Litern, ca. 3.5 Flaschen Wein\n\n\n1 ppm (part per million) ist 1 Teil von 1 Million Teilen\n1 Milligramm pro Kilogramm\n\\(0.001 g/kg\\)\n2 700 Litern, ca. einem Tanklaster",
-    "crumbs": [
-      "Von Maßzahlen, Flächen und Volumen",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
     "objectID": "template-preface.html",
     "href": "template-preface.html",
     "title": "Template Preface",
@@ -95,157 +20,706 @@
     ]
   },
   {
+    "objectID": "chapter-00-what-is-science.html",
+    "href": "chapter-00-what-is-science.html",
+    "title": "1  What is science?",
+    "section": "",
+    "text": "1.1 Generale background\nLast modified on 26. October 2025 at 20:38:17",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#theoretical-background",
+    "href": "chapter-00-what-is-science.html#theoretical-background",
+    "title": "1  What is science?",
+    "section": "1.2 Theoretical background",
+    "text": "1.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#r-packages-used",
+    "href": "chapter-00-what-is-science.html#r-packages-used",
+    "title": "1  What is science?",
+    "section": "1.3 R packages used",
+    "text": "1.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#data",
+    "href": "chapter-00-what-is-science.html#data",
+    "title": "1  What is science?",
+    "section": "1.4 Data",
+    "text": "1.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#alternatives",
+    "href": "chapter-00-what-is-science.html#alternatives",
+    "title": "1  What is science?",
+    "section": "1.5 Alternatives",
+    "text": "1.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#glossary",
+    "href": "chapter-00-what-is-science.html#glossary",
+    "title": "1  What is science?",
+    "section": "1.6 Glossary",
+    "text": "1.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-00-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "1  What is science?",
+    "section": "1.7 The meaning of “Data Science” in this chapter.",
+    "text": "1.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#summary",
+    "href": "chapter-00-what-is-science.html#summary",
+    "title": "1  What is science?",
+    "section": "1.8 Summary",
+    "text": "1.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-what-is-science.html#references",
+    "href": "chapter-00-what-is-science.html#references",
+    "title": "1  What is science?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html",
+    "href": "chapter-01-what-is-data.html",
+    "title": "2  What is data?",
+    "section": "",
+    "text": "2.1 Generale background\nLast modified on 26. October 2025 at 20:40:03",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#theoretical-background",
+    "href": "chapter-01-what-is-data.html#theoretical-background",
+    "title": "2  What is data?",
+    "section": "2.2 Theoretical background",
+    "text": "2.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#r-packages-used",
+    "href": "chapter-01-what-is-data.html#r-packages-used",
+    "title": "2  What is data?",
+    "section": "2.3 R packages used",
+    "text": "2.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#data",
+    "href": "chapter-01-what-is-data.html#data",
+    "title": "2  What is data?",
+    "section": "2.4 Data",
+    "text": "2.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#alternatives",
+    "href": "chapter-01-what-is-data.html#alternatives",
+    "title": "2  What is data?",
+    "section": "2.5 Alternatives",
+    "text": "2.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#glossary",
+    "href": "chapter-01-what-is-data.html#glossary",
+    "title": "2  What is data?",
+    "section": "2.6 Glossary",
+    "text": "2.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-01-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "2  What is data?",
+    "section": "2.7 The meaning of “Data Science” in this chapter.",
+    "text": "2.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#summary",
+    "href": "chapter-01-what-is-data.html#summary",
+    "title": "2  What is data?",
+    "section": "2.8 Summary",
+    "text": "2.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-data.html#references",
+    "href": "chapter-01-what-is-data.html#references",
+    "title": "2  What is data?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html",
+    "href": "chapter-02-what-is-a-model.html",
+    "title": "3  What is a model?",
+    "section": "",
+    "text": "3.1 Generale background\nLast modified on 26. October 2025 at 20:40:11",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#theoretical-background",
+    "href": "chapter-02-what-is-a-model.html#theoretical-background",
+    "title": "3  What is a model?",
+    "section": "3.2 Theoretical background",
+    "text": "3.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#r-packages-used",
+    "href": "chapter-02-what-is-a-model.html#r-packages-used",
+    "title": "3  What is a model?",
+    "section": "3.3 R packages used",
+    "text": "3.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#data",
+    "href": "chapter-02-what-is-a-model.html#data",
+    "title": "3  What is a model?",
+    "section": "3.4 Data",
+    "text": "3.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#alternatives",
+    "href": "chapter-02-what-is-a-model.html#alternatives",
+    "title": "3  What is a model?",
+    "section": "3.5 Alternatives",
+    "text": "3.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#glossary",
+    "href": "chapter-02-what-is-a-model.html#glossary",
+    "title": "3  What is a model?",
+    "section": "3.6 Glossary",
+    "text": "3.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-02-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "3  What is a model?",
+    "section": "3.7 The meaning of “Data Science” in this chapter.",
+    "text": "3.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#summary",
+    "href": "chapter-02-what-is-a-model.html#summary",
+    "title": "3  What is a model?",
+    "section": "3.8 Summary",
+    "text": "3.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-a-model.html#references",
+    "href": "chapter-02-what-is-a-model.html#references",
+    "title": "3  What is a model?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "1  Template chapter",
+    "title": "4  Template chapter",
     "section": "",
-    "text": "1.1 Generale background\nLast modified on 26. October 2025 at 13:57:25",
+    "text": "4.1 Generale background\nLast modified on 26. October 2025 at 13:57:25",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#maßeinheiten",
-    "href": "template-chapter.html#maßeinheiten",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "",
-    "text": "Table 1.1: Große Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.\n\n\n\n\n\n\n\n\n\n\n\n\nBuchstabe\nPräfix\nWissenschaftlich\nWissenschaftlich in R\nZahl\n\n\n\n\nT\nTera-\n\\(10^{12}\\)\n1e+12\n1 000 000 000 000\n\n\nG\nGiga-\n\\(10^{9}\\)\n1e+9\n1 000 000 000\n\n\nM\nMega-\n\\(10^{6}\\)\n1e+6\n1 000 000\n\n\nk\nKilo-\n\\(10^{3}\\)\n1e+3\n1 000\n\n\nh\nHekto-\n\\(10^{2}\\)\n1e+2\n100\n\n\n\n\n\n\n\n\n\n\nTable 1.2: Sehr kleine Zahlen mit vielen Nullen mit den jeweiligen Abkürzungen und Schreibweisen.\n\n\n\n\n\n\n\n\n\n\n\n\nBuchstabe\nPräfix\nWissenschaftlich\nWissenschaftlich in R\nZahl\n\n\n\n\nd\nDezi-\n\\(10^{-1}\\)\n1e-1\n0.1\n\n\nc\nZenti-\n\\(10^{-2}\\)\n1e-2\n0.01\n\n\nm\nMilli-\n\\(10^{-3}\\)\n1e-3\n0.001\n\n\n\\(\\mu\\)\nMikro-\n\\(10^{-6}\\)\n1e-6\n0.000 001\n\n\nn\nNano-\n\\(10^{-9}\\)\n1e-9\n0.000 000 001\n\n\np\nPico-\n\\(10^{-12}\\)\n1e-12\n0.000 000 000 001\n\n\n\n\n\n\n\n\n\n\n\n\nTipWieviele Nullen sollen es sein?\n\n\n\nDu kannst dir merken, dass bei positiven Hochzahlen, die Hochzahl die Anzahl an Nullen angibt. So ist eben 1e+2 eine 1 mit zwei Nullen, also Hundert. Eine \\(10^3\\) ist eine Eins mit drei Nullen, also Tausend.\nBei den negativen Hochzahlen, siehst du immer eine Null weniger, als die Hochzahl angibt. So ist 1e-2 eben 0.01 und damit nur eine Null vor der Eins. Ebenso ist dann \\(10^{-4}\\) dann 0.0001 also eine Eins mit drei Nullen.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#flächenmaße",
-    "href": "template-chapter.html#flächenmaße",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.2 Flächenmaße",
-    "text": "1.2 Flächenmaße\nIn der Table 1.3 sehen wir nochmal die Umrechnung von gängigen Flächenmaßen. Dem einen oder anderen mag der Hektar \\(ha\\) geläufig sein, für alle anderen hier nochmal die Flächen zum nachschlagen. Das Ar \\(ar\\) ist in unterschiedlicher Verwendung, aber hier mit zu Vollständigkeit aufgeführt.\n\n\n\nTable 1.3: Umrechnung von gängigen Flächenmaßen.\n\n\n\n\n\n\\(km^2\\)\n\\(ha\\)\n\\(ar\\)\n\\(m^2\\)\n\n\n\n\n1\n100\n10 000\n1 000 000\n\n\n\n1\n100\n10 000\n\n\n\n\n1\n100",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#volumenmaße",
-    "href": "template-chapter.html#volumenmaße",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.3 Volumenmaße",
-    "text": "1.3 Volumenmaße\nDie Table 1.4 zeigt die Umrechnungen von Volumenmaßen. Häufig benötigen wir verschiedene Volumen bei der Abfüllung von Dünger oder aber auch anderer Flüssigkeiten. Die Bewässerung und auch die Kühlung wird über Volumen geregelt. Auch ist es wichtig zu wisen, wie denn die Idee des Liters mit den \\(m^3\\) zusammenhängt.\n\n\n\nTable 1.4: Umrechnung von gängigen Volumenmaßen.\n\n\n\n\n\nLiter\nhl\nl\ndl\ncl\nml\n\n\n\n\n\\(1m^3\\)\n10\n1 000\n10 000\n100 000\n1 000 000\n\n\n\n1\n100\n1 000\n10 000\n100 000\n\n\n\n\n10\n100\n1 000\n10 000\n\n\n\\(1dm^3\\)\n\n1\n10\n100\n1 000\n\n\n\n\n\n1\n10\n100\n\n\n\n\n\n\n1\n10\n\n\n\\(1cm^3\\)\n\n\n\n\n1\n\n\n\n\n\\(1 000 cm^3\\)\n\\(100cm^3\\)\n\\(10cm^3\\)\n\\(1cm^3\\)",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#prozent-promille-und-ppm",
-    "href": "template-chapter.html#prozent-promille-und-ppm",
-    "title": "1  Maßeinheiten, Flächenmaße und Volumenmaße",
-    "section": "1.4 Prozent, Promille und ppm",
-    "text": "1.4 Prozent, Promille und ppm\nAbschließend schauen wir uns in der Table 1.5 nochmal die Umrechnungen von Prozent und Promille an. Das Prinzip nutzen wir dann häufig zur Abschätzung von anderen Flächen oder Volumen, wenn wir nicht die exakte Änderung kennen sondern eben nur die Prozentuale.\n\n\n\nTable 1.5: Umrechnung von Prozenten und Anteilen.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEin Zuckerwürfel in\n\n\n\n\n1 Prozent ist 1 Teil von hundert Teilen\n10 Gramm pro Kilogramm\n\\(10 g/kg\\)\n0.27 Litern, ca. 2 Tassen\n\n\n1 Promille ist 1 Teil von Tausend Teilen\n1 Gramm pro Kilogramm\n\\(1 g/kg\\)\n2.7 Litern, ca. 3.5 Flaschen Wein\n\n\n1 ppm (part per million) ist 1 Teil von 1 Million Teilen\n1 Milligramm pro Kilogramm\n\\(0.001 g/kg\\)\n2 700 Litern, ca. einem Tanklaster",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Maßeinheiten, Flächenmaße und Volumenmaße</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "1  Template chapter",
-    "section": "1.2 Theoretical background",
-    "text": "1.2 Theoretical background",
+    "title": "4  Template chapter",
+    "section": "4.2 Theoretical background",
+    "text": "4.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "1  Template chapter",
-    "section": "1.3 R packages used",
-    "text": "1.3 R packages used",
+    "title": "4  Template chapter",
+    "section": "4.3 R packages used",
+    "text": "4.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "1  Template chapter",
-    "section": "1.4 Data",
-    "text": "1.4 Data",
+    "title": "4  Template chapter",
+    "section": "4.4 Data",
+    "text": "4.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#references",
-    "href": "template-chapter.html#references",
-    "title": "1  Template chapter",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#generale-background",
-    "href": "template-chapter.html#generale-background",
-    "title": "1  Template chapter",
-    "section": "",
-    "text": "TipFurther tutorials on XXX\n\n\n\nText",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "1  Template chapter",
-    "section": "1.5 Alternatives",
-    "text": "1.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "4  Template chapter",
+    "section": "4.5 Alternatives",
+    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "1  Template chapter",
-    "section": "1.6 Glossary",
-    "text": "1.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "4  Template chapter",
+    "section": "4.6 Glossary",
+    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
-    "title": "1  Template chapter",
-    "section": "1.7 The meaning of “Data Science” in this chapter.",
-    "text": "1.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "4  Template chapter",
+    "section": "4.7 The meaning of “Data Science” in this chapter.",
+    "text": "4.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "1  Template chapter",
+    "title": "4  Template chapter",
+    "section": "4.8 Summary",
+    "text": "4.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#references",
+    "href": "template-chapter.html#references",
+    "title": "4  Template chapter",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-00-preface.html",
+    "href": "chapter-00-preface.html",
+    "title": "From science to data by models",
+    "section": "",
+    "text": "Last modified on 26. October 2025 at 20:43:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "From science to data by models"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html",
+    "href": "chapter-01-what-is-science.html",
+    "title": "1  What is science?",
+    "section": "",
+    "text": "1.1 Generale background\nLast modified on 26. October 2025 at 20:42:28",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#theoretical-background",
+    "href": "chapter-01-what-is-science.html#theoretical-background",
+    "title": "1  What is science?",
+    "section": "1.2 Theoretical background",
+    "text": "1.2 Theoretical background",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#r-packages-used",
+    "href": "chapter-01-what-is-science.html#r-packages-used",
+    "title": "1  What is science?",
+    "section": "1.3 R packages used",
+    "text": "1.3 R packages used",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#data",
+    "href": "chapter-01-what-is-science.html#data",
+    "title": "1  What is science?",
+    "section": "1.4 Data",
+    "text": "1.4 Data",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#alternatives",
+    "href": "chapter-01-what-is-science.html#alternatives",
+    "title": "1  What is science?",
+    "section": "1.5 Alternatives",
+    "text": "1.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#glossary",
+    "href": "chapter-01-what-is-science.html#glossary",
+    "title": "1  What is science?",
+    "section": "1.6 Glossary",
+    "text": "1.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-01-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "1  What is science?",
+    "section": "1.7 The meaning of “Data Science” in this chapter.",
+    "text": "1.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#summary",
+    "href": "chapter-01-what-is-science.html#summary",
+    "title": "1  What is science?",
     "section": "1.8 Summary",
     "text": "1.8 Summary",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Template chapter</span>"
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#references",
+    "href": "chapter-01-what-is-science.html#references",
+    "title": "1  What is science?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html",
+    "href": "chapter-02-what-is-data.html",
+    "title": "2  What is data?",
+    "section": "",
+    "text": "2.1 Generale background\nLast modified on 26. October 2025 at 20:42:22",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#theoretical-background",
+    "href": "chapter-02-what-is-data.html#theoretical-background",
+    "title": "2  What is data?",
+    "section": "2.2 Theoretical background",
+    "text": "2.2 Theoretical background",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#r-packages-used",
+    "href": "chapter-02-what-is-data.html#r-packages-used",
+    "title": "2  What is data?",
+    "section": "2.3 R packages used",
+    "text": "2.3 R packages used",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#data",
+    "href": "chapter-02-what-is-data.html#data",
+    "title": "2  What is data?",
+    "section": "2.4 Data",
+    "text": "2.4 Data",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#alternatives",
+    "href": "chapter-02-what-is-data.html#alternatives",
+    "title": "2  What is data?",
+    "section": "2.5 Alternatives",
+    "text": "2.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#glossary",
+    "href": "chapter-02-what-is-data.html#glossary",
+    "title": "2  What is data?",
+    "section": "2.6 Glossary",
+    "text": "2.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-02-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "2  What is data?",
+    "section": "2.7 The meaning of “Data Science” in this chapter.",
+    "text": "2.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#summary",
+    "href": "chapter-02-what-is-data.html#summary",
+    "title": "2  What is data?",
+    "section": "2.8 Summary",
+    "text": "2.8 Summary",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#references",
+    "href": "chapter-02-what-is-data.html#references",
+    "title": "2  What is data?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html",
+    "href": "chapter-03-what-is-a-model.html",
+    "title": "3  What is a model?",
+    "section": "",
+    "text": "3.1 Generale background\nLast modified on 26. October 2025 at 20:42:18",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#theoretical-background",
+    "href": "chapter-03-what-is-a-model.html#theoretical-background",
+    "title": "3  What is a model?",
+    "section": "3.2 Theoretical background",
+    "text": "3.2 Theoretical background",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#r-packages-used",
+    "href": "chapter-03-what-is-a-model.html#r-packages-used",
+    "title": "3  What is a model?",
+    "section": "3.3 R packages used",
+    "text": "3.3 R packages used",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#data",
+    "href": "chapter-03-what-is-a-model.html#data",
+    "title": "3  What is a model?",
+    "section": "3.4 Data",
+    "text": "3.4 Data",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#alternatives",
+    "href": "chapter-03-what-is-a-model.html#alternatives",
+    "title": "3  What is a model?",
+    "section": "3.5 Alternatives",
+    "text": "3.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#glossary",
+    "href": "chapter-03-what-is-a-model.html#glossary",
+    "title": "3  What is a model?",
+    "section": "3.6 Glossary",
+    "text": "3.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "chapter-03-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "3  What is a model?",
+    "section": "3.7 The meaning of “Data Science” in this chapter.",
+    "text": "3.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#summary",
+    "href": "chapter-03-what-is-a-model.html#summary",
+    "title": "3  What is a model?",
+    "section": "3.8 Summary",
+    "text": "3.8 Summary",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#references",
+    "href": "chapter-03-what-is-a-model.html#references",
+    "title": "3  What is a model?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
     ]
   }
 ]
