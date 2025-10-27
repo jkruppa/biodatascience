@@ -8,7 +8,7 @@ pacman::p_load(tidyverse)
 
 > *"A quote." --- Dan Meyer*
 
-## Generale background
+## General background
 
 ## Theoretical background
 

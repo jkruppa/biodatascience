@@ -1,17 +1,14 @@
 ```{r echo = FALSE}
-pacman::p_load(tidyverse)
+pacman::p_load(tidyverse, patchwork)
 theme_book <- function() {
   theme_minimal() +
     theme(panel.grid.minor = element_blank(),
-          plot.background = element_rect(fill = "white", color = NA),
           plot.title = element_text(size = 16, face = "bold"),
           plot.subtitle = element_text(size = 12, face = "italic"),
           plot.caption = element_text(face = "italic"),
-          axis.title = element_text(face = "bold"),
-          axis.text = element_text(size = 12),
-          legend.title = element_text(face = "bold"),
-          strip.text = element_text(face = "bold"),
-          strip.background = element_rect(fill = "grey80", color = NA))
+          axis.title = element_text(size = 12, face = "bold"),
+          axis.text = element_text(size = 11),
+          legend.title = element_text(face = "bold"))
 }
 ```
 
@@ -19,19 +16,32 @@ theme_book <- function() {
 
 *Last modified on `r format(fs::file_info("chapter-02-what-is-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"A quote." --- Dan Meyer*
+> *"The limits of my language mean the limits of my world." --- Ludwig Wittgenstein*
 
-## Generale background
+## General background
 
 ## Theoretical background
+
+|   | Symbol |  Application | Englisch |
+|------------------------|:----------------------:|--|------------------------|
+| *LHS* | $Y$ / $y$ |  | **outcome** / response / endpoint / dependent variable |
+| *RHS* | $X$ / $x$ |  | **influencer** / influential variable / risk factor / fixed effect / independent variable |
+| *RHS* | $Z$ / $z$ |  | random effect |
+| *RHS* | $X$ / $x$ | Explanation | **explanator** / explanatory variable |
+| *RHS* | $X$ / $x$ | Prediction  | **predictor** / predictive variable |
+| *RHS* | $X$ / $x$ | Multiple model | **focal variable** |
+| $X$ is continuous | $c_1$ |  | covariate 1 |
+| $X$ is categorical | $f_A$ |  | factor $A$ with levels $A.1$ to $A.j$ |
+
+: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 10, 30, 46$$"}
 
 ## R packages used
 
 ## Data
 
 ```{r}
-jump_weight_tbl <- tibble(weight = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
-                          jump_length = 0.15*weight^3 - 2.2*weight^2 + 8.8*weight + 3.2)
+jump_weight_tbl <- tibble(weight_mg = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
+                          jump_length_cm = 0.15*weight_mg^3 - 2.2*weight_mg^2 + 8.8*weight_mg + 3.2 + rnorm(9, 0, 0.5))
 ```
 
 @eq-jump-weight
@@ -45,19 +55,43 @@ $$ {#eq-jump-weight}
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 4.5
-#| fig-width: 7
+#| fig-height: 4
+#| fig-width: 10
 #| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
 #| label: fig-02-jump-weight
 
-ggplot(jump_weight_tbl, aes(x = weight, y = jump_length)) +
+p1 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
   theme_book() +
-  geom_point()
+  scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
+  scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
+  labs(x = "Flea weight in [mg]", y = "Jump length in [cm]",
+       title = "Science") +
+  theme(axis.text = element_blank())
 
+p2 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
+  theme_book() +
+  geom_point() +
+  scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
+  scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
+  labs(x = "weight_mg", y = "jump_length_cm",
+       title = "Data")
+
+p3 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
+  theme_book() +
+  geom_function(fun = \(x) 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2,
+                size = 1) +
+  scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
+  scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
+  labs(x = "Influencer (X)", y = "Outcome (Y)",
+       title = "Model")
+
+p1 + p2 + p3 +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-
-## Alternatives 
+## Alternatives
 
 Further tutorials and R packages on XXX
 
@@ -65,11 +99,11 @@ Further tutorials and R packages on XXX
 
 term
 
-: what does it mean.
+:   what does it mean.
 
 ## The meaning of "Data Science" in this chapter.
 
-- itemize with max. 5-6 words
+-   itemize with max. 5-6 words
 
 ## Summary
 

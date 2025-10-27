@@ -123,7 +123,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 Generale background\nLast modified on 27. October 2025 at 13:26:02",
+    "text": "2.1 General background\nLast modified on 27. October 2025 at 14:30:51",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -134,7 +134,7 @@
     "href": "chapter-02-what-is-data.html#theoretical-background",
     "title": "2  What is data?",
     "section": "2.2 Theoretical background",
-    "text": "2.2 Theoretical background",
+    "text": "2.2 Theoretical background\n\n\n\nTable 2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in bold are used here. (LHS = left-hand side, RHS = right-hand side)\n\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nApplication\nEnglisch\n\n\n\n\nLHS\n\\(Y\\) / \\(y\\)\n\noutcome / response / endpoint / dependent variable\n\n\nRHS\n\\(X\\) / \\(x\\)\n\ninfluencer / influential variable / risk factor / fixed effect / independent variable\n\n\nRHS\n\\(Z\\) / \\(z\\)\n\nrandom effect\n\n\nRHS\n\\(X\\) / \\(x\\)\nExplanation\nexplanator / explanatory variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nPrediction\npredictor / predictive variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nMultiple model\nfocal variable\n\n\n\\(X\\) is continuous\n\\(c_1\\)\n\ncovariate 1\n\n\n\\(X\\) is categorical\n\\(f_A\\)\n\nfactor \\(A\\) with levels \\(A.1\\) to \\(A.j\\)",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -156,7 +156,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(weight = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          jump_length = 0.15*weight^3 - 2.2*weight^2 + 8.8*weight + 3.2)\n\n\nEquation 2.1\n\\[\nf(x) = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo. [Zum Vergrößern anklicken]",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(weight_mg = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          jump_length_cm = 0.15*weight_mg^3 - 2.2*weight_mg^2 + 8.8*weight_mg + 3.2 + rnorm(9, 0, 0.5))\n\n\nEquation 2.1\n\\[\nf(x) = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo. [Zum Vergrößern anklicken]",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
