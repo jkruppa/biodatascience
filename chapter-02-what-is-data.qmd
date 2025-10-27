@@ -1,5 +1,18 @@
 ```{r echo = FALSE}
 pacman::p_load(tidyverse)
+theme_book <- function() {
+  theme_minimal() +
+    theme(panel.grid.minor = element_blank(),
+          plot.background = element_rect(fill = "white", color = NA),
+          plot.title = element_text(size = 16, face = "bold"),
+          plot.subtitle = element_text(size = 12, face = "italic"),
+          plot.caption = element_text(face = "italic"),
+          axis.title = element_text(face = "bold"),
+          axis.text = element_text(size = 12),
+          legend.title = element_text(face = "bold"),
+          strip.text = element_text(face = "bold"),
+          strip.background = element_rect(fill = "grey80", color = NA))
+}
 ```
 
 # What is data? {#sec-what-is-data}
@@ -15,6 +28,34 @@ pacman::p_load(tidyverse)
 ## R packages used
 
 ## Data
+
+```{r}
+jump_weight_tbl <- tibble(weight = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
+                          jump_length = 0.15*weight^3 - 2.2*weight^2 + 8.8*weight + 3.2)
+```
+
+@eq-jump-weight
+
+$$
+f(x) = 0.15\cdot x^3 - 2.2\cdot x^2 + 8.8 \cdot x + 3.2
+$$ {#eq-jump-weight}
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 7
+#| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
+#| label: fig-02-jump-weight
+
+ggplot(jump_weight_tbl, aes(x = weight, y = jump_length)) +
+  theme_book() +
+  geom_point()
+
+```
+
 
 ## Alternatives 
 

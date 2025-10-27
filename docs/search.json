@@ -14,7 +14,7 @@
     "href": "chapter-00-preface.html",
     "title": "From science to data by models",
     "section": "",
-    "text": "Last modified on 26. October 2025 at 20:43:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "text": "Last modified on 27. October 2025 at 13:16:42\n\n“I’d like to solve the puzzle.” — Wheel of Fortune\n\nHere comes the preface text",
     "crumbs": [
       "From science to data by models"
     ]
@@ -123,7 +123,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 Generale background\nLast modified on 26. October 2025 at 20:42:22",
+    "text": "2.1 Generale background\nLast modified on 27. October 2025 at 13:26:02",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -156,7 +156,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(weight = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          jump_length = 0.15*weight^3 - 2.2*weight^2 + 8.8*weight + 3.2)\n\n\nEquation 2.1\n\\[\nf(x) = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo. [Zum Vergrößern anklicken]",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
