@@ -123,7 +123,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 General background\nLast modified on 27. October 2025 at 14:37:01",
+    "text": "2.1 General background\nLast modified on 27. October 2025 at 19:49:11",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -134,7 +134,7 @@
     "href": "chapter-02-what-is-data.html#theoretical-background",
     "title": "2  What is data?",
     "section": "2.2 Theoretical background",
-    "text": "2.2 Theoretical background\n\n\n\nTable 2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in bold are used here. (LHS = left-hand side, RHS = right-hand side)\n\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nApplication\nEnglisch\n\n\n\n\nLHS\n\\(Y\\) / \\(y\\)\n\noutcome / response / endpoint / dependent variable\n\n\nRHS\n\\(X\\) / \\(x\\)\n\ninfluencer / influential variable / risk factor / fixed effect / independent variable\n\n\nRHS\n\\(Z\\) / \\(z\\)\n\nrandom effect\n\n\nRHS\n\\(X\\) / \\(x\\)\nExplanation\nexplanator / explanatory variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nPrediction\npredictor / predictive variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nMain effect in multiple model\nfocal explanator or focal predictor / focal variable\n\n\n\\(X\\) is continuous\n\\(c\\)\n\ncovariate\n\n\n\\(X\\) is categorical\n\\(f_A\\)\n\nfactor \\(A\\) with levels \\(A.1\\) to \\(A.j\\)",
+    "text": "2.2 Theoretical background\n\n\n\nTable 2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in bold are used here. (LHS = left-hand side, RHS = right-hand side)\n\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nApplication\nEnglisch\n\n\n\n\nLHS\n\\(Y / y\\)\n\noutcome / response / endpoint / dependent variable\n\n\nRHS\n\\(X / x\\)\n\ninfluencer / influential variable / risk factor / fixed effect / independent variable\n\n\nRHS\n\\(Z / z\\)\n\nrandom effect\n\n\nRHS\n\\(X / x\\)\nExplanation\nexplanator / explanatory variable\n\n\nRHS\n\\(X / x\\)\nPrediction\npredictor / predictive variable\n\n\nRHS\n\\(X / x\\)\nMain effect in multiple model\nfocal explanator or focal predictor / focal variable\n\n\n\\(X / x\\) is continuous\n\\(c\\)\nModelling\ncovariate\n\n\n\\(X / x\\) is categorical\n\\(f_A\\)\nModelling\nfactor \\(A\\) with levels \\(A.1\\) to \\(A.j\\)\n\n\n\n\n\n\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -156,7 +156,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(weight_mg = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          jump_length_cm = 0.15*weight_mg^3 - 2.2*weight_mg^2 + 8.8*weight_mg + 3.2 + rnorm(9, 0, 0.5))\n\n\nEquation 2.1\n\\[\nf(x) = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo. [Zum Vergrößern anklicken]",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.2: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.396246\n\n\n1.0\n10.112345\n\n\n2.3\n13.273475\n\n\n3.5\n13.160227\n\n\n5.2\n10.276160\n\n\n7.1\n8.842102\n\n\n8.4\n11.245328\n\n\n9.2\n14.879852\n\n\n10.0\n21.071588\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\nf(x) = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo. [Zum Vergrößern anklicken]\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo. [Zum Vergrößern anklicken]",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"

@@ -1,5 +1,5 @@
 ```{r echo = FALSE}
-pacman::p_load(tidyverse, patchwork)
+pacman::p_load(tidyverse, patchwork, knitr)
 theme_book <- function() {
   theme_minimal() +
     theme(panel.grid.minor = element_blank(),
@@ -24,25 +24,41 @@ theme_book <- function() {
 
 |   | Symbol |  Application | Englisch |
 |------------------------|:----------------------:|--|------------------------|
-| *LHS* | $Y$ / $y$ |  | **outcome** / response / endpoint / dependent variable |
-| *RHS* | $X$ / $x$ |  | **influencer** / influential variable / risk factor / fixed effect / independent variable |
-| *RHS* | $Z$ / $z$ |  | **random effect** |
-| *RHS* | $X$ / $x$ | Explanation | **explanator** / explanatory variable |
-| *RHS* | $X$ / $x$ | Prediction  | **predictor** / predictive variable |
-| *RHS* | $X$ / $x$ | Main effect in multiple model | **focal explanator** or **focal predictor** / focal variable |
-| $X$ is continuous | $c$ |  | **covariate** |
-| $X$ is categorical | $f_A$ |  | **factor** $A$ with levels $A.1$ to $A.j$ |
+| *LHS* | $Y / y$ | | **outcome** / response / endpoint / dependent variable |
+| *RHS* | $X / x$ |  | **influencer** / influential variable / risk factor / fixed effect / independent variable |
+| *RHS* | $Z / z$ |  | **random effect** |
+| *RHS* | $X / x$ | Explanation | **explanator** / explanatory variable |
+| *RHS* | $X / x$ | Prediction  | **predictor** / predictive variable |
+| *RHS* | $X / x$ | Main effect in multiple model | **focal explanator** or **focal predictor** / focal variable |
+| $X / x$ is continuous | $c$ | Modelling | **covariate** |
+| $X / x$ is categorical | $f_A$ | Modelling | **factor** $A$ with levels $A.1$ to $A.j$ |
 
-: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 10, 28, 48$$"}
+: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 8, 28, 50$$"}
+
+A sentence why we use $y$ and not $x$ for mean and other stuff.
 
 ## R packages used
 
 ## Data
 
 ```{r}
-jump_weight_tbl <- tibble(weight_mg = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
-                          jump_length_cm = 0.15*weight_mg^3 - 2.2*weight_mg^2 + 8.8*weight_mg + 3.2 + rnorm(9, 0, 0.5))
+jump_weight_tbl <- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
+                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |>
+  rename(weight_mg = x, jump_length_cm = y)
 ```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-02-jump-weight
+#| tbl-cap: "foo."
+
+jump_weight_tbl|> 
+  kable(align = "c", "pipe")
+```
+
+
 
 @eq-jump-weight
 
@@ -58,7 +74,7 @@ $$ {#eq-jump-weight}
 #| fig-height: 4
 #| fig-width: 10
 #| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
-#| label: fig-02-jump-weight
+#| label: fig-02-science-to-model
 
 p1 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
   theme_book() +
@@ -83,13 +99,36 @@ p3 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
   scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
   scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
   labs(x = "Influencer (X)", y = "Outcome (Y)",
-       title = "Model")
+       title = "Model") +
+  theme(axis.text = element_blank())
 
 p1 + p2 + p3 +
   plot_layout(ncol = 3) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 5.5
+#| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
+#| label: fig-02-science-with-model
+
+ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
+  theme_book() +
+  geom_point(size = 3, shape = 21, fill = "gray75") +
+  geom_function(fun = \(x) 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2) +
+  scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
+  scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
+  labs(x = "Flea weight in [mg]", y = "Jump length in [cm]",
+       title = "Combination of science with data and model") 
+```
+
+
 
 ## Alternatives
 
