@@ -22,18 +22,19 @@ theme_book <- function() {
 
 ## Theoretical background
 
-|   | Symbol |  Application | Englisch |
-|------------------------|:----------------------:|--|------------------------|
-| *LHS* | $Y / y$ | | **outcome** / response / endpoint / dependent variable |
-| *RHS* | $X / x$ |  | **influencer** / influential variable / risk factor / fixed effect / independent variable |
-| *RHS* | $Z / z$ |  | **random effect** |
-| *RHS* | $X / x$ | Explanation | **explanator** / explanatory variable |
-| *RHS* | $X / x$ | Prediction  | **predictor** / predictive variable |
-| *RHS* | $X / x$ | Main effect in multiple model | **focal explanator** or **focal predictor** / focal variable |
-| $X / x$ is continuous | $c$ | Modelling | **covariate** |
-| $X / x$ is categorical | $f_A$ | Modelling | **factor** $A$ with levels $A.1$ to $A.j$ |
 
-: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 8, 28, 50$$"}
+| Application | Symbol | Name | Description |
+|:-------------|:--------:|:------------------|:------------------|
+|  | $y$ | **outcome**, response, endpoint, dependent variable | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
+|  | $x$ | **influencer**, influential variable, risk factor, fixed effect, independent variable | *The left-hand side (abbr. LHS) of the model. Describing the influential  variables in an experiment or study.* |
+|  | $z$ | **random effect** | *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* |
+| Explanation | $x$ | **explanator**, explanatory variable | *The influencer is used to describe or explain the outcome.* |
+| Prediction | $x$ | **predictor**, predictive variable | *The influencer is used to predict the outcome.* |
+| Main effect | $x$ | **focal explanator**, **focal predictor**, focal variable | *In a model with multiple influencers, the focal variable is the variable of primary interest.* |
+| Continuous $x$ | $c$ | **covariate**, covariable | *The influencer is a numeric variable with continuous values.* |
+| Categorical $x$ | $f_A$ | **factor A with levels A.1 to A.j**, factorial variable, categorical variable | *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.*  |
+
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.  {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}
 
 A sentence why we use $y$ and not $x$ for mean and other stuff.
 
@@ -59,8 +60,6 @@ jump_weight_tbl|>
   kable(align = "c", "pipe")
 ```
 
-
-
 @eq-jump-weight
 
 $$
@@ -74,7 +73,7 @@ $$ {#eq-jump-weight}
 #| fig-align: center
 #| fig-height: 4
 #| fig-width: 10
-#| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
+#| fig-cap: "foo."
 #| label: fig-02-science-to-model
 
 p1 <- ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
@@ -116,7 +115,7 @@ p1 + p2 + p3 +
 #| fig-align: center
 #| fig-height: 4.5
 #| fig-width: 5.5
-#| fig-cap: "foo. *[Zum Vergrößern anklicken]*"
+#| fig-cap: "foo."
 #| label: fig-02-science-with-model
 
 ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
@@ -128,8 +127,6 @@ ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
   labs(x = "Flea weight in [mg]", y = "Jump length in [cm]",
        title = "Science with data and model") 
 ```
-
-
 
 ## Alternatives
 
