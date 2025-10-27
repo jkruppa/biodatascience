@@ -301,7 +301,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 27. October 2025 at 14:30:51</em></p>
+<p><em>Last modified on 27. October 2025 at 14:37:01</em></p>
 <blockquote class="blockquote">
 <p><em>“The limits of my language mean the limits of my world.” — Ludwig Wittgenstein</em></p>
 </blockquote>
@@ -310,7 +310,7 @@ window.Quarto = {
 </section>
 <section id="theoretical-background" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">2.2</span> Theoretical background</h2>
-<div id="tbl-names-regression" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="14, 10, 30, 46">
+<div id="tbl-names-regression" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="14, 10, 28, 48">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-names-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in <strong>bold</strong> are used here. (<em>LHS</em> = left-hand side, <em>RHS</em> = right-hand side)
@@ -320,8 +320,8 @@ Table&nbsp;2.1: Summary table of terminology used in my statistical modelling. T
 <colgroup>
 <col style="width: 14%">
 <col style="width: 10%">
-<col style="width: 30%">
-<col style="width: 46%">
+<col style="width: 28%">
+<col style="width: 48%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -348,7 +348,7 @@ Table&nbsp;2.1: Summary table of terminology used in my statistical modelling. T
 <td><em>RHS</em></td>
 <td style="text-align: center;"><span class="math inline">\(Z\)</span> / <span class="math inline">\(z\)</span></td>
 <td></td>
-<td>random effect</td>
+<td><strong>random effect</strong></td>
 </tr>
 <tr class="even">
 <td><em>RHS</em></td>
@@ -365,20 +365,20 @@ Table&nbsp;2.1: Summary table of terminology used in my statistical modelling. T
 <tr class="even">
 <td><em>RHS</em></td>
 <td style="text-align: center;"><span class="math inline">\(X\)</span> / <span class="math inline">\(x\)</span></td>
-<td>Multiple model</td>
-<td><strong>focal variable</strong></td>
+<td>Main effect in multiple model</td>
+<td><strong>focal explanator</strong> or <strong>focal predictor</strong> / focal variable</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(X\)</span> is continuous</td>
-<td style="text-align: center;"><span class="math inline">\(c_1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(c\)</span></td>
 <td></td>
-<td>covariate 1</td>
+<td><strong>covariate</strong></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(X\)</span> is categorical</td>
 <td style="text-align: center;"><span class="math inline">\(f_A\)</span></td>
 <td></td>
-<td>factor <span class="math inline">\(A\)</span> with levels <span class="math inline">\(A.1\)</span> to <span class="math inline">\(A.j\)</span></td>
+<td><strong>factor</strong> <span class="math inline">\(A\)</span> with levels <span class="math inline">\(A.1\)</span> to <span class="math inline">\(A.j\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -978,14 +978,14 @@ Figure&nbsp;2.1: foo. <em>[Zum Vergrößern anklicken]</em>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------------------|:----------------------:|</span>--<span class="pp">|------------------------|</span></span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *LHS* | $Y$ / $y$ |  | **outcome** / response / endpoint / dependent variable <span class="pp">|</span></span>
 <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $X$ / $x$ |  | **influencer** / influential variable / risk factor / fixed effect / independent variable <span class="pp">|</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* <span class="pp">|</span> $Z$ / $z$ <span class="pp">|</span>  <span class="pp">|</span> random effect <span class="pp">|</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $Z$ / $z$ |  | **random effect** <span class="pp">|</span></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $X$ / $x$ | Explanation | **explanator** / explanatory variable <span class="pp">|</span></span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $X$ / $x$ | Prediction  | **predictor** / predictive variable <span class="pp">|</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $X$ / $x$ | Multiple model | **focal variable** <span class="pp">|</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $X$ is continuous <span class="pp">|</span> $c_1$ <span class="pp">|</span>  <span class="pp">|</span> covariate 1 <span class="pp">|</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $X$ is categorical <span class="pp">|</span> $f_A$ <span class="pp">|</span>  <span class="pp">|</span> factor $A$ with levels $A.1$ to $A.j$ <span class="pp">|</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> *RHS* | $X$ / $x$ | Main effect in multiple model | **focal explanator** or **focal predictor** / focal variable <span class="pp">|</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $X$ is continuous <span class="pp">|</span> $c$ <span class="pp">|</span>  <span class="pp">|</span> **covariate** <span class="pp">|</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $X$ is categorical <span class="pp">|</span> $f_A$ <span class="pp">|</span>  <span class="pp">|</span> **factor** $A$ with levels $A.1$ to $A.j$ <span class="pp">|</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 10, 30, 46$$"}</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>: Summary table of terminology used in my statistical modelling. The terms highlighted in **bold** are used here. (*LHS* = left-hand side, *RHS* = right-hand side) {#tbl-names-regression tbl-colwidths="$$14, 10, 28, 48$$"}</span>
 <span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>

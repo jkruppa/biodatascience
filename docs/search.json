@@ -123,7 +123,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 General background\nLast modified on 27. October 2025 at 14:30:51",
+    "text": "2.1 General background\nLast modified on 27. October 2025 at 14:37:01",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -134,7 +134,7 @@
     "href": "chapter-02-what-is-data.html#theoretical-background",
     "title": "2  What is data?",
     "section": "2.2 Theoretical background",
-    "text": "2.2 Theoretical background\n\n\n\nTable 2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in bold are used here. (LHS = left-hand side, RHS = right-hand side)\n\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nApplication\nEnglisch\n\n\n\n\nLHS\n\\(Y\\) / \\(y\\)\n\noutcome / response / endpoint / dependent variable\n\n\nRHS\n\\(X\\) / \\(x\\)\n\ninfluencer / influential variable / risk factor / fixed effect / independent variable\n\n\nRHS\n\\(Z\\) / \\(z\\)\n\nrandom effect\n\n\nRHS\n\\(X\\) / \\(x\\)\nExplanation\nexplanator / explanatory variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nPrediction\npredictor / predictive variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nMultiple model\nfocal variable\n\n\n\\(X\\) is continuous\n\\(c_1\\)\n\ncovariate 1\n\n\n\\(X\\) is categorical\n\\(f_A\\)\n\nfactor \\(A\\) with levels \\(A.1\\) to \\(A.j\\)",
+    "text": "2.2 Theoretical background\n\n\n\nTable 2.1: Summary table of terminology used in my statistical modelling. The terms highlighted in bold are used here. (LHS = left-hand side, RHS = right-hand side)\n\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nApplication\nEnglisch\n\n\n\n\nLHS\n\\(Y\\) / \\(y\\)\n\noutcome / response / endpoint / dependent variable\n\n\nRHS\n\\(X\\) / \\(x\\)\n\ninfluencer / influential variable / risk factor / fixed effect / independent variable\n\n\nRHS\n\\(Z\\) / \\(z\\)\n\nrandom effect\n\n\nRHS\n\\(X\\) / \\(x\\)\nExplanation\nexplanator / explanatory variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nPrediction\npredictor / predictive variable\n\n\nRHS\n\\(X\\) / \\(x\\)\nMain effect in multiple model\nfocal explanator or focal predictor / focal variable\n\n\n\\(X\\) is continuous\n\\(c\\)\n\ncovariate\n\n\n\\(X\\) is categorical\n\\(f_A\\)\n\nfactor \\(A\\) with levels \\(A.1\\) to \\(A.j\\)",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
