@@ -44,6 +44,7 @@ A sentence why we use $y$ and not $x$ for mean and other stuff.
 ```{r}
 jump_weight_tbl <- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
                           y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |>
+  mutate_all(round, 1) |> 
   rename(weight_mg = x, jump_length_cm = y)
 ```
 
@@ -63,7 +64,7 @@ jump_weight_tbl|>
 @eq-jump-weight
 
 $$
-f(x) = 0.15\cdot x^3 - 2.2\cdot x^2 + 8.8 \cdot x + 3.2
+y = 0.15\cdot x^3 - 2.2\cdot x^2 + 8.8 \cdot x + 3.2
 $$ {#eq-jump-weight}
 
 ```{r}
@@ -125,7 +126,7 @@ ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
   scale_x_continuous(breaks = 0:10, limits = c(0, 10)) +
   scale_y_continuous(breaks = seq(7, 21, 2), limits = c(7, 22)) +
   labs(x = "Flea weight in [mg]", y = "Jump length in [cm]",
-       title = "Combination of science with data and model") 
+       title = "Science with data and model") 
 ```
 
 
