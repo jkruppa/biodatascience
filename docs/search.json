@@ -10,412 +10,6 @@
     ]
   },
   {
-    "objectID": "template-preface.html",
-    "href": "template-preface.html",
-    "title": "Template Preface",
-    "section": "",
-    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
-    "crumbs": [
-      "Template Preface"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html",
-    "href": "chapter-00-what-is-science.html",
-    "title": "1  What is science?",
-    "section": "",
-    "text": "1.1 Generale background\nLast modified on 26. October 2025 at 20:38:17",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#theoretical-background",
-    "href": "chapter-00-what-is-science.html#theoretical-background",
-    "title": "1  What is science?",
-    "section": "1.2 Theoretical background",
-    "text": "1.2 Theoretical background",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#r-packages-used",
-    "href": "chapter-00-what-is-science.html#r-packages-used",
-    "title": "1  What is science?",
-    "section": "1.3 R packages used",
-    "text": "1.3 R packages used",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#data",
-    "href": "chapter-00-what-is-science.html#data",
-    "title": "1  What is science?",
-    "section": "1.4 Data",
-    "text": "1.4 Data",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#alternatives",
-    "href": "chapter-00-what-is-science.html#alternatives",
-    "title": "1  What is science?",
-    "section": "1.5 Alternatives",
-    "text": "1.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#glossary",
-    "href": "chapter-00-what-is-science.html#glossary",
-    "title": "1  What is science?",
-    "section": "1.6 Glossary",
-    "text": "1.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-00-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
-    "title": "1  What is science?",
-    "section": "1.7 The meaning of “Data Science” in this chapter.",
-    "text": "1.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#summary",
-    "href": "chapter-00-what-is-science.html#summary",
-    "title": "1  What is science?",
-    "section": "1.8 Summary",
-    "text": "1.8 Summary",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-what-is-science.html#references",
-    "href": "chapter-00-what-is-science.html#references",
-    "title": "1  What is science?",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html",
-    "href": "chapter-01-what-is-data.html",
-    "title": "2  What is data?",
-    "section": "",
-    "text": "2.1 Generale background\nLast modified on 26. October 2025 at 20:40:03",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#theoretical-background",
-    "href": "chapter-01-what-is-data.html#theoretical-background",
-    "title": "2  What is data?",
-    "section": "2.2 Theoretical background",
-    "text": "2.2 Theoretical background",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#r-packages-used",
-    "href": "chapter-01-what-is-data.html#r-packages-used",
-    "title": "2  What is data?",
-    "section": "2.3 R packages used",
-    "text": "2.3 R packages used",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#data",
-    "href": "chapter-01-what-is-data.html#data",
-    "title": "2  What is data?",
-    "section": "2.4 Data",
-    "text": "2.4 Data",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#alternatives",
-    "href": "chapter-01-what-is-data.html#alternatives",
-    "title": "2  What is data?",
-    "section": "2.5 Alternatives",
-    "text": "2.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#glossary",
-    "href": "chapter-01-what-is-data.html#glossary",
-    "title": "2  What is data?",
-    "section": "2.6 Glossary",
-    "text": "2.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-01-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
-    "title": "2  What is data?",
-    "section": "2.7 The meaning of “Data Science” in this chapter.",
-    "text": "2.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#summary",
-    "href": "chapter-01-what-is-data.html#summary",
-    "title": "2  What is data?",
-    "section": "2.8 Summary",
-    "text": "2.8 Summary",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-data.html#references",
-    "href": "chapter-01-what-is-data.html#references",
-    "title": "2  What is data?",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html",
-    "href": "chapter-02-what-is-a-model.html",
-    "title": "3  What is a model?",
-    "section": "",
-    "text": "3.1 Generale background\nLast modified on 26. October 2025 at 20:40:11",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#theoretical-background",
-    "href": "chapter-02-what-is-a-model.html#theoretical-background",
-    "title": "3  What is a model?",
-    "section": "3.2 Theoretical background",
-    "text": "3.2 Theoretical background",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#r-packages-used",
-    "href": "chapter-02-what-is-a-model.html#r-packages-used",
-    "title": "3  What is a model?",
-    "section": "3.3 R packages used",
-    "text": "3.3 R packages used",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#data",
-    "href": "chapter-02-what-is-a-model.html#data",
-    "title": "3  What is a model?",
-    "section": "3.4 Data",
-    "text": "3.4 Data",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#alternatives",
-    "href": "chapter-02-what-is-a-model.html#alternatives",
-    "title": "3  What is a model?",
-    "section": "3.5 Alternatives",
-    "text": "3.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#glossary",
-    "href": "chapter-02-what-is-a-model.html#glossary",
-    "title": "3  What is a model?",
-    "section": "3.6 Glossary",
-    "text": "3.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-02-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
-    "title": "3  What is a model?",
-    "section": "3.7 The meaning of “Data Science” in this chapter.",
-    "text": "3.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#summary",
-    "href": "chapter-02-what-is-a-model.html#summary",
-    "title": "3  What is a model?",
-    "section": "3.8 Summary",
-    "text": "3.8 Summary",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-02-what-is-a-model.html#references",
-    "href": "chapter-02-what-is-a-model.html#references",
-    "title": "3  What is a model?",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html",
-    "href": "template-chapter.html",
-    "title": "4  Template chapter",
-    "section": "",
-    "text": "4.1 Generale background\nLast modified on 26. October 2025 at 13:57:25",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#theoretical-background",
-    "href": "template-chapter.html#theoretical-background",
-    "title": "4  Template chapter",
-    "section": "4.2 Theoretical background",
-    "text": "4.2 Theoretical background",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#r-packages-used",
-    "href": "template-chapter.html#r-packages-used",
-    "title": "4  Template chapter",
-    "section": "4.3 R packages used",
-    "text": "4.3 R packages used",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#data",
-    "href": "template-chapter.html#data",
-    "title": "4  Template chapter",
-    "section": "4.4 Data",
-    "text": "4.4 Data",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#alternatives",
-    "href": "template-chapter.html#alternatives",
-    "title": "4  Template chapter",
-    "section": "4.5 Alternatives",
-    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#glossary",
-    "href": "template-chapter.html#glossary",
-    "title": "4  Template chapter",
-    "section": "4.6 Glossary",
-    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
-    "title": "4  Template chapter",
-    "section": "4.7 The meaning of “Data Science” in this chapter.",
-    "text": "4.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#summary",
-    "href": "template-chapter.html#summary",
-    "title": "4  Template chapter",
-    "section": "4.8 Summary",
-    "text": "4.8 Summary",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#references",
-    "href": "template-chapter.html#references",
-    "title": "4  Template chapter",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
     "objectID": "chapter-00-preface.html",
     "href": "chapter-00-preface.html",
     "title": "From science to data by models",
@@ -720,6 +314,115 @@
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "template-preface.html",
+    "href": "template-preface.html",
+    "title": "Template Preface",
+    "section": "",
+    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Template Preface"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html",
+    "href": "template-chapter.html",
+    "title": "4  Template chapter",
+    "section": "",
+    "text": "4.1 Generale background\nLast modified on 26. October 2025 at 13:57:25",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#theoretical-background",
+    "href": "template-chapter.html#theoretical-background",
+    "title": "4  Template chapter",
+    "section": "4.2 Theoretical background",
+    "text": "4.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#r-packages-used",
+    "href": "template-chapter.html#r-packages-used",
+    "title": "4  Template chapter",
+    "section": "4.3 R packages used",
+    "text": "4.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#data",
+    "href": "template-chapter.html#data",
+    "title": "4  Template chapter",
+    "section": "4.4 Data",
+    "text": "4.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#alternatives",
+    "href": "template-chapter.html#alternatives",
+    "title": "4  Template chapter",
+    "section": "4.5 Alternatives",
+    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#glossary",
+    "href": "template-chapter.html#glossary",
+    "title": "4  Template chapter",
+    "section": "4.6 Glossary",
+    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
+    "href": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
+    "title": "4  Template chapter",
+    "section": "4.7 The meaning of “Data Science” in this chapter.",
+    "text": "4.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#summary",
+    "href": "template-chapter.html#summary",
+    "title": "4  Template chapter",
+    "section": "4.8 Summary",
+    "text": "4.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#references",
+    "href": "template-chapter.html#references",
+    "title": "4  Template chapter",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   }
 ]
