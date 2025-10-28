@@ -39,6 +39,24 @@ theme_book <- function() {
 
 A sentence why we use $y$ and not $x$ for mean and other stuff.
 
+
+
+|  | Symbol | Name | Description |
+|:-------------|:--------:|:------------------|:------------------|
+| Continuous $x$ | $c$ | **covariate**, covariable | *The influencer is a numeric variable with continuous values.* |
+| Categorical $x$ | $f_A$ | **factor A**, factorial variable, categorical variable | *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.*  |
+| Categorical $x$ | $A.1$ to $A.j$ | **levels**, groups, treatment groups | *The discrete groups included in one factor A.*  |
+
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.  {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}
+
+
+|  | Symbol | Name | Description |
+|:-------------|:--------:|:------------------|:------------------|
+|  | $y$ | **label**, response, endpoint, dependent variable | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
+| Prediction | $x$ | **predictor**, predictive variable | *The influencer is used to predict the outcome.* |
+
+: Table of terms used in the prediction. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.  {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}
+
 ## R packages used
 
 ## Data
