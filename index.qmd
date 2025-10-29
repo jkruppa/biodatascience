@@ -1,4 +1,4 @@
-# Welcome {.unnumbered}
+# Preface {.unnumbered}
 
 > *"Life is difficult." --- M. Scott Peck's, The Road Less Traveled *
 
@@ -10,10 +10,4 @@ This cookbook contains an extensive collection of recipes from the fields of bio
 > *A German version of this OpenBook Bio Data Science is available. The page can be found at the following link: https://jkruppa.github.io/. However, it is much more unstructured.  It is more like a cookbook than this book, which has a continuous storyline.*
 :::
 
-> *"If there's a book that you want to read, but it hasn't been written yet, then you must write it." --- Toni Morrison*
 
-::: callout-note
-## German Version
-
-This is the English version of my German Openbook [Bio Data Science](https://jkruppa.github.io).
-:::
