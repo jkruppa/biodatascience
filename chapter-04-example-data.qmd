@@ -1,0 +1,43 @@
+```{r echo = FALSE}
+pacman::p_load(tidyverse)
+```
+
+# Data examples {#sec-data-examples}
+
+*Last modified on `r format(fs::file_info("chapter-04-example-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## General background
+
+## Theoretical background
+
+## R packages used
+
+## Data
+
+Based on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:
+
+Blood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.
+
+Sugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.
+
+Ketchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Data Science" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}
