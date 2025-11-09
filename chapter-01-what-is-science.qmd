@@ -14,6 +14,20 @@ Idea of hypotheses
 
 Science is guessing and falsification
 
+@chalmers2013thing [What is this thing called Science?](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)
+
+@feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)
+
+@campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)
+
+@clark2025models [Models Demystified: A Practical Guide from Linear Regression to Deep Learning](https://m-clark.github.io/book-of-models/)
+
+@cox2017statistical [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)
+
+@deutsch2011beginning [The beginning of infinity: Explanations that transform the world](https://www.academia.edu/download/106176299/rtx120400544p.pdf)
+
+[David Deutsch > Quotes](https://www.goodreads.com/author/quotes/103190.David_Deutsch)
+
 ## Theoretical background
 
 ## R packages used

@@ -56,7 +56,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -275,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><em>Last modified on 28. October 2025 at 15:38:26</em></p>
+<p><em>Last modified on 09. November 2025 at 19:30:27</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -283,6 +303,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="1.1" class="anchored" data-anchor-id="general-background"><span class="header-section-number">1.1</span> General background</h2>
 <p>Idea of hypotheses</p>
 <p>Science is guessing and falsification</p>
+<p><span class="citation" data-cites="chalmers2013thing">Chalmers (<a href="#ref-chalmers2013thing" role="doc-biblioref">2013</a>)</span> <a href="https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf">What is this thing called Science?</a></p>
+<p><span class="citation" data-cites="feynman1966science">Feynman (<a href="#ref-feynman1966science" role="doc-biblioref">1966</a>)</span> <a href="https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf">What is science</a></p>
+<p><span class="citation" data-cites="campbell1952science">Campbell (<a href="#ref-campbell1952science" role="doc-biblioref">1952</a>)</span> <a href="https://www.whatisscience.info/files/what_is_science_rd1.pdf">What is science?</a></p>
+<p><span class="citation" data-cites="clark2025models">Clark and Berry (<a href="#ref-clark2025models" role="doc-biblioref">2025</a>)</span> <a href="https://m-clark.github.io/book-of-models/">Models Demystified: A Practical Guide from Linear Regression to Deep Learning</a></p>
+<p><span class="citation" data-cites="cox2017statistical">Cox and Efron (<a href="#ref-cox2017statistical" role="doc-biblioref">2017</a>)</span> <a href="https://statsthinking21.github.io/statsthinking21-core-site/index.html">Statistical Thinking for the 21st Century</a></p>
+<p><span class="citation" data-cites="deutsch2011beginning">Deutsch (<a href="#ref-deutsch2011beginning" role="doc-biblioref">2011</a>)</span> <a href="https://www.academia.edu/download/106176299/rtx120400544p.pdf">The beginning of infinity: Explanations that transform the world</a></p>
+<p><a href="https://www.goodreads.com/author/quotes/103190.David_Deutsch">David Deutsch &gt; Quotes</a></p>
 </section>
 <section id="theoretical-background" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">1.2</span> Theoretical background</h2>
@@ -321,6 +348,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-campbell1952science" class="csl-entry" role="listitem">
+Campbell, Norman Robert. 1952. <span>“What Is Science?”</span>
+</div>
+<div id="ref-chalmers2013thing" class="csl-entry" role="listitem">
+Chalmers, Alan F. 2013. <em>What Is This Thing Called Science?</em> Hackett Publishing.
+</div>
+<div id="ref-clark2025models" class="csl-entry" role="listitem">
+Clark, Michael, and Seth Berry. 2025. <em>Models Demystified: A Practical Guide from Linear Regression to Deep Learning</em>. CRC Press.
+</div>
+<div id="ref-cox2017statistical" class="csl-entry" role="listitem">
+Cox, DR, and Bradley Efron. 2017. <span>“Statistical Thinking for 21st Century Scientists.”</span> <em>Science Advances</em> 3 (6): e1700768.
+</div>
+<div id="ref-deutsch2011beginning" class="csl-entry" role="listitem">
+Deutsch, David. 2011. <em>The Beginning of Infinity: Explanations That Transform the World</em>. penguin uK.
+</div>
+<div id="ref-feynman1966science" class="csl-entry" role="listitem">
+Feynman, Richard. 1966. <span>“What Is Science.”</span>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -842,29 +889,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Science is guessing and falsification</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>@chalmers2013thing <span class="co">[</span><span class="ot">What is this thing called Science?</span><span class="co">](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)</span></span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>@feynman1966science <span class="co">[</span><span class="ot">What is science</span><span class="co">](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>@campbell1952science <span class="co">[</span><span class="ot">What is science?</span><span class="co">](https://www.whatisscience.info/files/what_is_science_rd1.pdf)</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>@clark2025models <span class="co">[</span><span class="ot">Models Demystified: A Practical Guide from Linear Regression to Deep Learning</span><span class="co">](https://m-clark.github.io/book-of-models/)</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>@cox2017statistical <span class="co">[</span><span class="ot">Statistical Thinking for the 21st Century</span><span class="co">](https://statsthinking21.github.io/statsthinking21-core-site/index.html)</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>@deutsch2011beginning <span class="co">[</span><span class="ot">The beginning of infinity: Explanations that transform the world</span><span class="co">](https://www.academia.edu/download/106176299/rtx120400544p.pdf)</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">David Deutsch &gt; Quotes</span><span class="co">](https://www.goodreads.com/author/quotes/103190.David_Deutsch)</span></span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Data Science" in this chapter.</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Data Science" in this chapter.</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
