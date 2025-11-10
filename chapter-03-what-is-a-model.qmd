@@ -36,6 +36,8 @@ A sentence why we use $y$ and not $x$ for mean and other stuff.
 
 @spanos2006statistical [Where do statistical models come from? Revisiting the problem of specification](https://arxiv.org/pdf/math.ST/0610849)
 
+@gilchrist1984statistical [Statistical modelling](https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf)
+
 ## Theoretical background
 
 ## R packages used
