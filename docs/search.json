@@ -222,7 +222,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 28. October 2025 at 15:37:34\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.",
+    "text": "3.1 General background\nLast modified on 09. November 2025 at 20:10:06\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -321,7 +321,7 @@
     "href": "chapter-03-what-is-a-model.html#references",
     "title": "3  What is a model?",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\n\n\n\n\nAppleton, David R. 1995. “What Do We Mean by a Statistical Model?” Statistics in Medicine 14 (2): 185–97.\n\n\nHand, David. 2019. “What Is the Purpose of Statistical Modeling?” Harvard Data Science Review 1 (1).\n\n\nMcCullagh, Peter. 2002. “What Is a Statistical Model?” The Annals of Statistics 30 (5): 1225–1310.\n\n\nSpanos, Aris. 2006. “Where Do Statistical Models Come from? Revisiting the Problem of Specification.” Lecture Notes-Monograph Series, 98–119.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"

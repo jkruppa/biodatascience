@@ -28,6 +28,13 @@ pacman::p_load(tidyverse)
 A sentence why we use $y$ and not $x$ for mean and other stuff.
 
 
+@mccullagh2002statistical [What is a statistical model?](https://projecteuclid.org/journals/annals-of-statistics/volume-30/issue-5/What-is-a-statistical-model/10.1214/aos/1035844977.pdf)
+
+@appleton1995we [What do we mean by a statistical model?](https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.4780140209?casa_token=jLDogF46zS8AAAAA%3AKOKHMTgbj4gK8ayVXmT1GaXq7slv9i3VGqzA184yydwKUjsDIszepgOaeMQc_L5hRY-TpLZvgDDIdDea)
+
+@hand2019purpose [What Is the Purpose of Statistical Modeling?](https://hdsr.mitpress.mit.edu/pub/9qsbf3hz/release/2?from=603&to=744)
+
+@spanos2006statistical [Where do statistical models come from? Revisiting the problem of specification](https://arxiv.org/pdf/math.ST/0610849)
 
 ## Theoretical background
 
