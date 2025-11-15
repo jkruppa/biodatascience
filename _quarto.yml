@@ -3,12 +3,12 @@ project:
   output-dir: docs
 
 book:
-  title: "Bio Data Science"
-  subtitle: "The definitive guide"
+  title: "Models of Reality"
+  subtitle: "From Data to Science"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
   date: "26. October 2025"
   favicon: cover2026_favi.png
-  description: "*A cookbook containing recipes from the fields of bioinformatics, biostatistics, biometrics and statistics that you can try at home!*"
+  description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
   url: https://jkruppa.github.io/biodatascience
   repo-url: https://github.com/jkruppa/jkruppa.github.io/biodatascience
   repo-branch: master
@@ -17,7 +17,7 @@ book:
   search: true
   page-footer:
     left: |
-      Bio Data Science was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>. 
+      Models of reality was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>. 
     right: |
       This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:
@@ -40,7 +40,7 @@ format:
     theme:
       - journal
       - bioscience.scss
-    cover-image: cover2026.png
+    cover-image: cover2026b.png
     code-annotations: hover
     lightbox: true
     toc-expand: 2

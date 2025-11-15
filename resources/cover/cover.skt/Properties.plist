@@ -259,5 +259,7 @@
 	</array>
 	<key>Version</key>
 	<string>1.0</string>
+	<key>eraser</key>
+	<integer>3</integer>
 </dict>
 </plist>
