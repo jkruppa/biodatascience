@@ -24,7 +24,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 16. November 2025 at 13:36:16\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 16. November 2025 at 21:01:02\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -123,7 +123,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 General background\nLast modified on 28. October 2025 at 15:38:28",
+    "text": "2.1 General background\nLast modified on 16. November 2025 at 18:24:07",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -156,7 +156,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n8.1\n\n\n1.0\n9.3\n\n\n2.3\n13.8\n\n\n3.5\n13.9\n\n\n5.2\n11.6\n\n\n7.1\n8.4\n\n\n8.4\n11.3\n\n\n9.2\n14.5\n\n\n10.0\n21.1\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.6\n\n\n1.0\n9.0\n\n\n2.3\n13.6\n\n\n3.5\n13.8\n\n\n5.2\n10.3\n\n\n7.1\n8.7\n\n\n8.4\n11.5\n\n\n9.2\n14.0\n\n\n10.0\n21.2\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -222,7 +222,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 10. November 2025 at 07:32:04\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
+    "text": "3.1 General background\nLast modified on 16. November 2025 at 18:24:27\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -332,7 +332,7 @@
     "href": "chapter-04-example-data.html",
     "title": "4  Data examples",
     "section": "",
-    "text": "4.1 General background\nLast modified on 06. November 2025 at 17:07:41",
+    "text": "4.1 General background\nLast modified on 16. November 2025 at 18:24:38",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
@@ -441,7 +441,7 @@
     "href": "template-chapter.html",
     "title": "5  Template chapter",
     "section": "",
-    "text": "5.1 General background\nLast modified on 27. October 2025 at 14:15:06",
+    "text": "5.1 General background\nLast modified on 16. November 2025 at 18:24:22",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"

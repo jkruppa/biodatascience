@@ -1,5 +1,5 @@
 ```{r echo = FALSE}
-pacman::p_load(tidyverse)
+source("init.R")
 ```
 
 # Data examples {#sec-data-examples}
