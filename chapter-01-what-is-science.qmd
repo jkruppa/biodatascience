@@ -1,14 +1,55 @@
 ```{r echo = FALSE}
-pacman::p_load(tidyverse)
+pacman::p_load(tidyverse, ggforce)
 ```
 
 # What is science? {#sec-what-is-science}
 
 *Last modified on `r format(fs::file_info("chapter-01-what-is-science.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"A quote." --- Dan Meyer*
+> *"Reality is negotiable." --- Tim Ferriss*
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-vulcan
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 7
+#| fig-cap: "foo*"
+
+
+
+ggplot() +
+  #theme_void() +
+  geom_ellipse(aes(x0 = 0, y0 = 0, a = 10.5, b = 4.9, angle = pi/5.5),
+               color = "gray50", fill = "blue") +
+  geom_ellipse(aes(x0 = 0, y0 = 0, a = 10, b = 5, angle = pi/5.5),
+               color = "gray50", fill = "white") +
+  geom_ellipse(aes(x0 = 0, y0 = 0, a = 5.5, b = 3.5, angle = -2.25),
+               color = "gray50", linetype = 11) +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(-10,10)) +
+  annotate("point", x = 0, y = 0, size = 10) +
+  annotate("text", x = 0.5, y = 1, hjust = "left", label = "Sun", size = 4) +
+  annotate("point", x = 8.6, y = 5, size = 3) +
+  annotate("point", x = 3.5, y = 4.2, size = 3) +
+  annotate("text", x = 3.7, y = 4.7, hjust = "left", label = "Vulcan", size = 4) 
+
+
+```
+
+
 
 ## General background
+
+
+> *"Any sufficiently advanced technology is indistinguishable from magic." ---  @clarke1968clarke, Clarke's third law*
+
+Full quote
+
+> *"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical." --- Tim Ferriss*
 
 Idea of hypotheses
 

@@ -2,7 +2,10 @@
 
 > *"Life is difficult." --- M. Scott Peck's, The Road Less Traveled *
 
-Text
+Text @smolin2019einstein
+
+
+The first principle is that you must not fool yourself — and you are the easiest person to fool. So you have to be very careful about that. @feynman1992surely and @feynman1998cargo
 
 ::: {layout="[30,70]" layout-valign="top"}
 ![](images/german_version.png){fig-align="center" width="100%"}
@@ -11,3 +14,4 @@ Text
 :::
 
 
+## References {.unnumbered}
