@@ -115,13 +115,11 @@ p_model <- ggplot() +
              arrow = arrow(length = unit(0.3, "cm"), type = "closed"),
              color = "gray50", size = 2, curvature = -0.3,
   ) +
-  annotate("label", x = -2, y = -3, hjust = "center", label = "Cloud gaps", size = 4,
-           color = "black") + 
   geom_curve(aes(x = 0.25, y = -0.5, xend = 5.75, yend = 1.5),
              arrow = arrow(length = unit(0.3, "cm"), type = "closed"),
              color = "gray50", size = 2, curvature = 0.3,
   ) +
-  annotate("label", x = 3, y = -1.5, hjust = "center", label = "Cloud gaps", size = 4,
+  annotate("label", x = 0.1, y = -1.5, hjust = "center", label = "Cloud gaps", size = 5,
            color = "black") + 
   labs(title = "Model") +
   coord_cartesian(xlim = c(-6, 8), ylim = c(-9, 9)) +
