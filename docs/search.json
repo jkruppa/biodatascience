@@ -10,6 +10,16 @@
     ]
   },
   {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Models of Reality",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
     "objectID": "chapter-00-preface.html",
     "href": "chapter-00-preface.html",
     "title": "From science to data by models",
@@ -24,7 +34,18 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 17. November 2025 at 14:49:34\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 17. November 2025 at 20:07:49\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#general-background",
+    "href": "chapter-01-what-is-science.html#general-background",
+    "title": "1  What is science?",
+    "section": "",
+    "text": "“Any sufficiently advanced technology is indistinguishable from magic.” — Clarke (1968), Clarke’s third law\n\n\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -86,11 +107,11 @@
     ]
   },
   {
-    "objectID": "chapter-01-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-01-what-is-science.html#the-meaning-of-data-science-in-this-chapter.",
+    "objectID": "chapter-01-what-is-science.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-01-what-is-science.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "1  What is science?",
-    "section": "1.7 The meaning of “Data Science” in this chapter.",
-    "text": "1.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "1.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "1.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -123,7 +144,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 General background\nLast modified on 16. November 2025 at 18:24:07",
+    "text": "2.1 General background\nLast modified on 17. November 2025 at 20:02:51",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -156,7 +177,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.6\n\n\n1.0\n9.0\n\n\n2.3\n13.6\n\n\n3.5\n13.8\n\n\n5.2\n10.3\n\n\n7.1\n8.7\n\n\n8.4\n11.5\n\n\n9.2\n14.0\n\n\n10.0\n21.2\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.9\n\n\n1.0\n9.4\n\n\n2.3\n14.3\n\n\n3.5\n14.4\n\n\n5.2\n10.7\n\n\n7.1\n7.4\n\n\n8.4\n10.9\n\n\n9.2\n14.3\n\n\n10.0\n21.4\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -185,11 +206,11 @@
     ]
   },
   {
-    "objectID": "chapter-02-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-02-what-is-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "objectID": "chapter-02-what-is-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-02-what-is-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "2  What is data?",
-    "section": "2.7 The meaning of “Data Science” in this chapter.",
-    "text": "2.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "2.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "2.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -222,7 +243,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 16. November 2025 at 18:24:27\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
+    "text": "3.1 General background\nLast modified on 17. November 2025 at 20:02:42\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -295,11 +316,11 @@
     ]
   },
   {
-    "objectID": "chapter-03-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-03-what-is-a-model.html#the-meaning-of-data-science-in-this-chapter.",
+    "objectID": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "3  What is a model?",
-    "section": "3.7 The meaning of “Data Science” in this chapter.",
-    "text": "3.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "3.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "3.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -332,7 +353,7 @@
     "href": "chapter-04-example-data.html",
     "title": "4  Data examples",
     "section": "",
-    "text": "4.1 General background\nLast modified on 16. November 2025 at 18:24:38",
+    "text": "4.1 General background\nLast modified on 17. November 2025 at 20:02:10",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
@@ -394,11 +415,11 @@
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "chapter-04-example-data.html#the-meaning-of-data-science-in-this-chapter.",
+    "objectID": "chapter-04-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-04-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "4  Data examples",
-    "section": "4.7 The meaning of “Data Science” in this chapter.",
-    "text": "4.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
@@ -441,7 +462,7 @@
     "href": "template-chapter.html",
     "title": "5  Template chapter",
     "section": "",
-    "text": "5.1 General background\nLast modified on 16. November 2025 at 18:24:22",
+    "text": "5.1 General background\nLast modified on 17. November 2025 at 20:02:35",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
@@ -503,11 +524,11 @@
     ]
   },
   {
-    "objectID": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
-    "href": "template-chapter.html#the-meaning-of-data-science-in-this-chapter.",
+    "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "5  Template chapter",
-    "section": "5.7 The meaning of “Data Science” in this chapter.",
-    "text": "5.7 The meaning of “Data Science” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "5.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "5.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
@@ -533,27 +554,6 @@
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-01-what-is-science.html#general-background",
-    "href": "chapter-01-what-is-science.html#general-background",
-    "title": "1  What is science?",
-    "section": "",
-    "text": "“Any sufficiently advanced technology is indistinguishable from magic.” — Clarke (1968), Clarke’s third law\n\n\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss",
-    "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Models of Reality",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
-    "crumbs": [
-      "Preface"
     ]
   }
 ]

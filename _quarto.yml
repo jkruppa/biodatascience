@@ -6,7 +6,7 @@ book:
   title: "Models of Reality"
   subtitle: "From Data to Science"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
-  date: "26. October 2025"
+  date: "17. November 2025"
   favicon: cover2026_favi.png
   description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
   url: https://jkruppa.github.io/biodatascience
@@ -38,7 +38,7 @@ lang: en
 format:
   html: 
     theme:
-      - journal
+      - united
       - bioscience.scss
     cover-image: cover2026b.png
     code-annotations: hover

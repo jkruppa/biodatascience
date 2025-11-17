@@ -1,4 +1,4 @@
-```{r echo = FALSE}
+```{r echo = FALSE, warning = FALSE}
 source("init.R")
 ```
 
@@ -112,7 +112,7 @@ term
 
 :   what does it mean.
 
-## The meaning of "Data Science" in this chapter.
+## The meaning of "Models of Reality" in this chapter.
 
 -   itemize with max. 5-6 words
 
