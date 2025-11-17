@@ -34,7 +34,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 17. November 2025 at 20:07:49\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 17. November 2025 at 20:17:22\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -554,6 +554,115 @@
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-preface.html",
+    "href": "chapter-10-preface.html",
+    "title": "Template Preface",
+    "section": "",
+    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Template Preface"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html",
+    "href": "chapter-11-example-data.html",
+    "title": "4  Data examples",
+    "section": "",
+    "text": "4.1 General background\nLast modified on NA",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#theoretical-background",
+    "href": "chapter-11-example-data.html#theoretical-background",
+    "title": "4  Data examples",
+    "section": "4.2 Theoretical background",
+    "text": "4.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#r-packages-used",
+    "href": "chapter-11-example-data.html#r-packages-used",
+    "title": "4  Data examples",
+    "section": "4.3 R packages used",
+    "text": "4.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#data",
+    "href": "chapter-11-example-data.html#data",
+    "title": "4  Data examples",
+    "section": "4.4 Data",
+    "text": "4.4 Data\nBased on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:\nBlood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.\nSugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.\nKetchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#alternatives",
+    "href": "chapter-11-example-data.html#alternatives",
+    "title": "4  Data examples",
+    "section": "4.5 Alternatives",
+    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#glossary",
+    "href": "chapter-11-example-data.html#glossary",
+    "title": "4  Data examples",
+    "section": "4.6 Glossary",
+    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-11-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "4  Data examples",
+    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#summary",
+    "href": "chapter-11-example-data.html#summary",
+    "title": "4  Data examples",
+    "section": "4.8 Summary",
+    "text": "4.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-example-data.html#references",
+    "href": "chapter-11-example-data.html#references",
+    "title": "4  Data examples",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
     ]
   }
 ]

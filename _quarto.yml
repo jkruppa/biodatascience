@@ -27,7 +27,9 @@ book:
       - chapter-01-what-is-science.qmd
       - chapter-02-what-is-data.qmd
       - chapter-03-what-is-a-model.qmd
-      - chapter-04-example-data.qmd      
+    - part: chapter-10-preface.qmd  
+      chapters:
+      - chapter-11-example-data.qmd   
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd
