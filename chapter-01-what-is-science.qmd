@@ -27,9 +27,9 @@ p_observed <- ggplot() +
   geom_ellipse(aes(x0 = 0, y0 = 0, a = 10, b = 5, angle = pi/5.5),
                color = "gray50", fill = "white") +
   annotate("point", x = 0, y = 0, size = 10, fill = c6_pal[6], shape = 21) +
-  annotate("text", x = 0.6, y = 1, hjust = "left", label = "Sun", size = 4) +
+  annotate("text", x = 0.6, y = 1, hjust = "left", label = "Sun", size = 5) +
   annotate("point", x = -8.6, y = -5, size = 4) +
-  annotate("text", x = -8.3, y = -4.5, hjust = "left", label = "Mercury", size = 4) +
+  annotate("text", x = -8.3, y = -4.5, hjust = "left", label = "Mercury", size = 5) +
   annotate("label", x = 2.5, y = -7, 
            label = expression(Deviation~"="~frac(34*"°", 3600*"°")%~~%1.2*"%"),
            hjust = "left", fill = col_pal(1, 0.25)) +
@@ -46,12 +46,12 @@ p_model <- ggplot() +
   geom_ellipse(aes(x0 = 0, y0 = 0, a = 5.5, b = 3.5, angle = -2.25),
                color = col_pal(1), linetype = 11) +
   annotate("point", x = 0, y = 0, size = 10, fill = c6_pal[6], shape = 21) +
-  annotate("text", x = 0.6, y = 1, hjust = "left", label = "Sun", size = 4) +
+  annotate("text", x = 0.6, y = 1, hjust = "left", label = "Sun", size = 5) +
   annotate("point", x = -9.1, y = -5, size = 4) +
-  annotate("text", x = -8.8, y = -4.5, hjust = "left", label = "Mercury", size = 4) +
+  annotate("text", x = -8.8, y = -4.5, hjust = "left", label = "Mercury", size = 5) +
   annotate("point", x = 3.5, y = 4.2, size = 3,
            shape = 21, fill = col_pal(1)) +
-  annotate("text", x = 3.7, y = 4.7, hjust = "left", label = "Vulcan", size = 4) +
+  annotate("text", x = 3.7, y = 4.7, hjust = "left", label = "Vulcan", size = 5) +
   labs(title = "Model") +
   coord_cartesian(xlim = c(-9, 9), ylim = c(-8,6.5)) +
   theme(plot.title = element_text(size = 16, face = "bold"))
@@ -73,8 +73,7 @@ p_observed + p_model +
 #| fig-width: 10.5
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
-p_observed <- 
-  ggplot() +
+p_observed <- ggplot() +
   theme_void() +
   geom_ellipse(aes(x0 = 6, y0 = 4, a = 14, b = 8, angle = pi/4),
                color = col_pal(1, 0.75)) +
@@ -86,7 +85,7 @@ p_observed <-
   annotate("text", x = -4, y = 0, hjust = "left", label = "Earth", size = 5) +   
   geom_curve(aes(x = -4.5, y = -3, xend = 5.75, yend = 1.5),
              arrow = arrow(length = unit(0.3, "cm"), type = "closed"),
-             color = "gray50", size = 2, curvature = 0.2,
+             color = "gray50", size = 1.5, curvature = 0.2,
   ) +
   annotate("label", x = 1.25, y = -3, hjust = "center", label = "Sunspots", size = 5,
            color = "black") + 
@@ -113,11 +112,11 @@ p_model <- ggplot() +
   annotate("text", x = 0.5, y = 1.5, hjust = "left", label = "Moon", size = 5) +
   geom_curve(aes(x = -0.25, y = -0.5, xend = -4.5, yend = -3.5),
              arrow = arrow(length = unit(0.3, "cm"), type = "closed"),
-             color = "gray50", size = 2, curvature = -0.3,
+             color = "gray50", size = 1.5, curvature = -0.3,
   ) +
   geom_curve(aes(x = 0.25, y = -0.5, xend = 5.75, yend = 1.5),
              arrow = arrow(length = unit(0.3, "cm"), type = "closed"),
-             color = "gray50", size = 2, curvature = 0.3,
+             color = "gray50", size = 1.5, curvature = 0.3,
   ) +
   annotate("label", x = 0.1, y = -1.5, hjust = "center", label = "Cloud gaps", size = 5,
            color = "black") + 
@@ -127,6 +126,27 @@ p_model <- ggplot() +
 
 p_observed + p_model
 ```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-hollow
+#| fig-align: center
+#| fig-height: 3
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+ggplot(tibble(x = 1:10, y = 1:10), aes(x,y )) +
+  # theme_void() +
+  annotate("point", x = 0, y = -7, size = 25, shape = 17) +
+  annotate("segment", x = -5, y = -10, xend = 5, yend = 5,
+           size = 3, lineend = "round") +
+  labs(title = "Observed") +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
+  theme(plot.title = element_text(size = 16, face = "bold"))
+```
+
 
 ## General background
 
