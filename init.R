@@ -13,3 +13,4 @@ theme_book <- function() {
 }
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
+c6_pal <- col_pal(6, 1)
