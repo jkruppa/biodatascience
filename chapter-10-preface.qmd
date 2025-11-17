@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse)
 ```
 
-# Template Preface {#sec-geometry}
+# Data {#sec-geometry}
 
 *Last modified on `r format(fs::file_info("template-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
