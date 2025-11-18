@@ -6,7 +6,7 @@ book:
   title: "Models of Reality"
   subtitle: "From Data to Science"
   author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
-  date: "17. November 2025"
+  date: "18. November 2025"
   favicon: cover2026_favi.png
   description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
   url: https://jkruppa.github.io/biodatascience
@@ -29,7 +29,9 @@ book:
       - chapter-03-what-is-a-model.qmd
     - part: chapter-10-preface.qmd  
       chapters:
-      - chapter-11-example-data.qmd   
+      - chapter-11-factorial-data.qmd   
+      - chapter-12-covariate-data.qmd
+      - chapter-13-combined-data.qmd
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd
@@ -40,9 +42,9 @@ lang: en
 format:
   html: 
     theme:
-      - united
+      - simplex
       - bioscience.scss
-    cover-image: cover2026b.png
+    cover-image: cover2026.png
     code-annotations: hover
     lightbox: true
     toc-expand: 2

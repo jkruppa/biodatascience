@@ -34,7 +34,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 17. November 2025 at 20:18:03\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 18. November 2025 at 20:02:34\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -177,7 +177,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.7\n\n\n1.0\n9.7\n\n\n2.3\n14.2\n\n\n3.5\n13.1\n\n\n5.2\n11.2\n\n\n7.1\n7.9\n\n\n8.4\n10.6\n\n\n9.2\n14.2\n\n\n10.0\n20.1\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n6.9\n\n\n1.0\n10.1\n\n\n2.3\n12.6\n\n\n3.5\n12.8\n\n\n5.2\n10.9\n\n\n7.1\n8.0\n\n\n8.4\n10.4\n\n\n9.2\n15.5\n\n\n10.0\n20.9\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -349,102 +349,310 @@
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html",
-    "href": "chapter-04-example-data.html",
-    "title": "4  Data examples",
+    "objectID": "chapter-10-preface.html",
+    "href": "chapter-10-preface.html",
+    "title": "Tales of data",
     "section": "",
-    "text": "4.1 General background\nLast modified on 17. November 2025 at 20:02:10",
+    "text": "Last modified on 18. November 2025 at 19:44:46\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#theoretical-background",
-    "href": "chapter-04-example-data.html#theoretical-background",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html",
+    "href": "chapter-11-factorial-data.html",
+    "title": "4  Factorial data",
+    "section": "",
+    "text": "4.1 General background\nLast modified on 18. November 2025 at 19:55:01",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-factorial-data.html#theoretical-background",
+    "href": "chapter-11-factorial-data.html#theoretical-background",
+    "title": "4  Factorial data",
     "section": "4.2 Theoretical background",
     "text": "4.2 Theoretical background",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#r-packages-used",
-    "href": "chapter-04-example-data.html#r-packages-used",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#r-packages-used",
+    "href": "chapter-11-factorial-data.html#r-packages-used",
+    "title": "4  Factorial data",
     "section": "4.3 R packages used",
     "text": "4.3 R packages used",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#data",
-    "href": "chapter-04-example-data.html#data",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#data",
+    "href": "chapter-11-factorial-data.html#data",
+    "title": "4  Factorial data",
     "section": "4.4 Data",
     "text": "4.4 Data\nBased on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:\nBlood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.\nSugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.\nKetchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#alternatives",
-    "href": "chapter-04-example-data.html#alternatives",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#alternatives",
+    "href": "chapter-11-factorial-data.html#alternatives",
+    "title": "4  Factorial data",
     "section": "4.5 Alternatives",
     "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#glossary",
-    "href": "chapter-04-example-data.html#glossary",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#glossary",
+    "href": "chapter-11-factorial-data.html#glossary",
+    "title": "4  Factorial data",
     "section": "4.6 Glossary",
     "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-04-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "4  Factorial data",
     "section": "4.7 The meaning of “Models of Reality” in this chapter.",
     "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#summary",
-    "href": "chapter-04-example-data.html#summary",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#summary",
+    "href": "chapter-11-factorial-data.html#summary",
+    "title": "4  Factorial data",
     "section": "4.8 Summary",
     "text": "4.8 Summary",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
     ]
   },
   {
-    "objectID": "chapter-04-example-data.html#references",
-    "href": "chapter-04-example-data.html#references",
-    "title": "4  Data examples",
+    "objectID": "chapter-11-factorial-data.html#references",
+    "href": "chapter-11-factorial-data.html#references",
+    "title": "4  Factorial data",
     "section": "References",
     "text": "References",
     "crumbs": [
-      "From science to data by models",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Factorial data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html",
+    "href": "chapter-12-covariate-data.html",
+    "title": "5  Covariate data",
+    "section": "",
+    "text": "5.1 General background\nLast modified on 18. November 2025 at 19:54:48",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#theoretical-background",
+    "href": "chapter-12-covariate-data.html#theoretical-background",
+    "title": "5  Covariate data",
+    "section": "5.2 Theoretical background",
+    "text": "5.2 Theoretical background",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#r-packages-used",
+    "href": "chapter-12-covariate-data.html#r-packages-used",
+    "title": "5  Covariate data",
+    "section": "5.3 R packages used",
+    "text": "5.3 R packages used",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#data",
+    "href": "chapter-12-covariate-data.html#data",
+    "title": "5  Covariate data",
+    "section": "5.4 Data",
+    "text": "5.4 Data",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#alternatives",
+    "href": "chapter-12-covariate-data.html#alternatives",
+    "title": "5  Covariate data",
+    "section": "5.5 Alternatives",
+    "text": "5.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#glossary",
+    "href": "chapter-12-covariate-data.html#glossary",
+    "title": "5  Covariate data",
+    "section": "5.6 Glossary",
+    "text": "5.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-12-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "5  Covariate data",
+    "section": "5.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "5.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#summary",
+    "href": "chapter-12-covariate-data.html#summary",
+    "title": "5  Covariate data",
+    "section": "5.8 Summary",
+    "text": "5.8 Summary",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-covariate-data.html#references",
+    "href": "chapter-12-covariate-data.html#references",
+    "title": "5  Covariate data",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Covariate data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html",
+    "href": "chapter-13-combined-data.html",
+    "title": "6  Combinded data",
+    "section": "",
+    "text": "6.1 General background\nLast modified on 18. November 2025 at 19:54:35",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#theoretical-background",
+    "href": "chapter-13-combined-data.html#theoretical-background",
+    "title": "6  Combinded data",
+    "section": "6.2 Theoretical background",
+    "text": "6.2 Theoretical background",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#r-packages-used",
+    "href": "chapter-13-combined-data.html#r-packages-used",
+    "title": "6  Combinded data",
+    "section": "6.3 R packages used",
+    "text": "6.3 R packages used",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#data",
+    "href": "chapter-13-combined-data.html#data",
+    "title": "6  Combinded data",
+    "section": "6.4 Data",
+    "text": "6.4 Data",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#alternatives",
+    "href": "chapter-13-combined-data.html#alternatives",
+    "title": "6  Combinded data",
+    "section": "6.5 Alternatives",
+    "text": "6.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#glossary",
+    "href": "chapter-13-combined-data.html#glossary",
+    "title": "6  Combinded data",
+    "section": "6.6 Glossary",
+    "text": "6.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-13-combined-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "6  Combinded data",
+    "section": "6.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "6.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#summary",
+    "href": "chapter-13-combined-data.html#summary",
+    "title": "6  Combinded data",
+    "section": "6.8 Summary",
+    "text": "6.8 Summary",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-13-combined-data.html#references",
+    "href": "chapter-13-combined-data.html#references",
+    "title": "6  Combinded data",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Combinded data</span>"
     ]
   },
   {
@@ -460,209 +668,100 @@
   {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "5  Template chapter",
+    "title": "7  Template chapter",
     "section": "",
-    "text": "5.1 General background\nLast modified on 17. November 2025 at 20:02:35",
+    "text": "7.1 General background\nLast modified on 17. November 2025 at 20:02:35",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "5  Template chapter",
-    "section": "5.2 Theoretical background",
-    "text": "5.2 Theoretical background",
+    "title": "7  Template chapter",
+    "section": "7.2 Theoretical background",
+    "text": "7.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "5  Template chapter",
-    "section": "5.3 R packages used",
-    "text": "5.3 R packages used",
+    "title": "7  Template chapter",
+    "section": "7.3 R packages used",
+    "text": "7.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "5  Template chapter",
-    "section": "5.4 Data",
-    "text": "5.4 Data",
+    "title": "7  Template chapter",
+    "section": "7.4 Data",
+    "text": "7.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "5  Template chapter",
-    "section": "5.5 Alternatives",
-    "text": "5.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "7  Template chapter",
+    "section": "7.5 Alternatives",
+    "text": "7.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "5  Template chapter",
-    "section": "5.6 Glossary",
-    "text": "5.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "7  Template chapter",
+    "section": "7.6 Glossary",
+    "text": "7.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "5  Template chapter",
-    "section": "5.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "5.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "7  Template chapter",
+    "section": "7.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "7.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "5  Template chapter",
-    "section": "5.8 Summary",
-    "text": "5.8 Summary",
+    "title": "7  Template chapter",
+    "section": "7.8 Summary",
+    "text": "7.8 Summary",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#references",
     "href": "template-chapter.html#references",
-    "title": "5  Template chapter",
+    "title": "7  Template chapter",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-10-preface.html",
-    "href": "chapter-10-preface.html",
-    "title": "Data",
-    "section": "",
-    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
-    "crumbs": [
-      "Data"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html",
-    "href": "chapter-11-example-data.html",
-    "title": "4  Data examples",
-    "section": "",
-    "text": "4.1 General background\nLast modified on NA",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#theoretical-background",
-    "href": "chapter-11-example-data.html#theoretical-background",
-    "title": "4  Data examples",
-    "section": "4.2 Theoretical background",
-    "text": "4.2 Theoretical background",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#r-packages-used",
-    "href": "chapter-11-example-data.html#r-packages-used",
-    "title": "4  Data examples",
-    "section": "4.3 R packages used",
-    "text": "4.3 R packages used",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#data",
-    "href": "chapter-11-example-data.html#data",
-    "title": "4  Data examples",
-    "section": "4.4 Data",
-    "text": "4.4 Data\nBased on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:\nBlood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.\nSugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.\nKetchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#alternatives",
-    "href": "chapter-11-example-data.html#alternatives",
-    "title": "4  Data examples",
-    "section": "4.5 Alternatives",
-    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#glossary",
-    "href": "chapter-11-example-data.html#glossary",
-    "title": "4  Data examples",
-    "section": "4.6 Glossary",
-    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-11-example-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "4  Data examples",
-    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#summary",
-    "href": "chapter-11-example-data.html#summary",
-    "title": "4  Data examples",
-    "section": "4.8 Summary",
-    "text": "4.8 Summary",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-example-data.html#references",
-    "href": "chapter-11-example-data.html#references",
-    "title": "4  Data examples",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Data examples</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   }
 ]

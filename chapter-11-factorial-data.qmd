@@ -2,9 +2,9 @@
 source("init.R")
 ```
 
-# Data examples {#sec-data-examples}
+# Factorial data {#sec-data-examples}
 
-*Last modified on `r format(fs::file_info("chapter-04-example-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+*Last modified on `r format(fs::file_info("chapter-11-factorial-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"A quote." --- Dan Meyer*
 
