@@ -10,7 +10,7 @@ book:
   favicon: cover2026_favi.png
   description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
   url: https://jkruppa.github.io/biodatascience
-  repo-url: https://github.com/jkruppa/jkruppa.github.io/biodatascience
+  repo-url: https://github.com/jkruppa/biodatascience
   repo-branch: master
   repo-actions: [edit, issue, source]
   sharing: [twitter, facebook, linkedin]
