@@ -243,7 +243,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 17. November 2025 at 20:02:42\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
+    "text": "3.1 General background\nLast modified on 19. November 2025 at 19:56:20\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -254,7 +254,7 @@
     "href": "chapter-03-what-is-a-model.html#general-background",
     "title": "3  What is a model?",
     "section": "",
-    "text": "Table 3.1: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.\n\n\n\n\n\n\n\n\n\n\n\nApplication\nSymbol\nName\nDescription\n\n\n\n\n\n\\(y\\)\noutcome, response, endpoint, dependent variable\nThe right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.\n\n\n\n\\(x\\)\ninfluencer, influential variable, risk factor, fixed effect, independent variable\nThe left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.\n\n\n\n\\(z\\)\nrandom effect\nA factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.\n\n\nExplanation\n\\(x\\)\nexplanator, explanatory variable\nThe influencer is used to describe or explain the outcome.\n\n\nPrediction\n\\(x\\)\npredictor, predictive variable\nThe influencer is used to predict the outcome.\n\n\nMain effect\n\\(x\\)\nfocal explanator, focal predictor, focal variable\nIn a model with multiple influencers, the focal variable is the variable of primary interest.\n\n\nContinuous \\(x\\)\n\\(c\\)\ncovariate, covariable\nThe influencer is a numeric variable with continuous values.\n\n\nCategorical \\(x\\)\n\\(f_A\\)\nfactor A, factorial variable, categorical variable\nThe influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.\n\n\nFactor \\(f_A\\)\n\\(A.1\\) to \\(A.j\\)\nlevels, groups, treatment groups\nThe discrete groups included in one factor A.",
+    "text": "Table 3.1: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.\n\n\n\n\n\n\n\n\n\n\n\nSymbol\nName\nApplication\nDescription\n\n\n\n\n\\(y\\)\noutcome, response, endpoint, dependent variable\n\nThe right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.\n\n\n\\(x\\)\ninfluencer, influential variable, risk factor, fixed effect, independent variable\n\nThe left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.\n\n\n\\(z\\)\nrandom effect\n\nA factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.\n\n\n\\(x\\)\nexplanator, explanatory variable\nExplanation\nThe influencer is used to describe or explain the outcome.\n\n\n\\(x\\)\npredictor, predictive variable\nPrediction\nThe influencer is used to predict the outcome.\n\n\n\\(x\\)\nfocal explanator, focal predictor, focal variable\nMain effect\nIn a model with multiple influencers, the focal variable is the variable of primary interest.\n\n\n\\(c\\)\ncovariate, covariable\nContinuous \\(x\\)\nThe influencer is a numeric variable with continuous values.\n\n\n\\(f_A\\)\nfactor A, factorial variable, categorical variable\nCategorical \\(x\\)\nThe influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.\n\n\n\\(A.1\\) to \\(A.j\\)\nlevels, groups, treatment groups\nFactor \\(f_A\\)\nThe discrete groups included in one factor A.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -361,100 +361,100 @@
   {
     "objectID": "chapter-11-factorial-data.html",
     "href": "chapter-11-factorial-data.html",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "",
-    "text": "4.1 General background\nLast modified on 18. November 2025 at 20:31:13",
+    "text": "4.1 General background\nLast modified on 19. November 2025 at 19:45:33",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#theoretical-background",
     "href": "chapter-11-factorial-data.html#theoretical-background",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.2 Theoretical background",
     "text": "4.2 Theoretical background",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#r-packages-used",
     "href": "chapter-11-factorial-data.html#r-packages-used",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.3 R packages used",
     "text": "4.3 R packages used",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#data",
     "href": "chapter-11-factorial-data.html#data",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.4 Data",
     "text": "4.4 Data\nBased on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:\nBlood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.\nSugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.\nKetchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#alternatives",
     "href": "chapter-11-factorial-data.html#alternatives",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.5 Alternatives",
     "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#glossary",
     "href": "chapter-11-factorial-data.html#glossary",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.6 Glossary",
     "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.7 The meaning of “Models of Reality” in this chapter.",
     "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#summary",
     "href": "chapter-11-factorial-data.html#summary",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "4.8 Summary",
     "text": "4.8 Summary",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
     "objectID": "chapter-11-factorial-data.html#references",
     "href": "chapter-11-factorial-data.html#references",
-    "title": "4  Fleas on dogs and cats",
+    "title": "4  Fleas of animals",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas on dogs and cats</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
