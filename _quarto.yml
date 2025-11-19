@@ -17,7 +17,7 @@ book:
   search: true
   page-footer:
     left: |
-      Models of reality was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>. 
+      Models of Reality was written by <a href="https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/">Jochen Kruppa-Scheetz</a>. 
     right: |
       This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:

@@ -2,7 +2,7 @@
 source("init.R")
 ```
 
-# Covariate data {#sec-temp}
+# Body weight of fleas {#sec-temp}
 
 *Last modified on `r format(fs::file_info("chapter-12-covariate-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 

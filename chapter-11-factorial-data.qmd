@@ -2,7 +2,7 @@
 source("init.R")
 ```
 
-# Factorial data {#sec-data-examples}
+# Fleas on dogs and cats {#sec-data-examples}
 
 *Last modified on `r format(fs::file_info("chapter-11-factorial-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 

@@ -2,7 +2,7 @@
 source("init.R")
 ```
 
-# Combinded data {#sec-temp}
+# Eating habits of fleas {#sec-temp}
 
 *Last modified on `r format(fs::file_info("chapter-13-combined-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
