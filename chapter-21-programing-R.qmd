@@ -1,0 +1,37 @@
+```{r echo = FALSE, warning = FALSE}
+source("init.R")
+```
+
+# Programing in R {#sec-temp}
+
+*Last modified on `r format(fs::file_info("chapter-21-programing-R.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## General background
+
+@dormann2025statistics
+
+## Theoretical background
+
+## R packages used
+
+## Data
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Models of Reality" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}

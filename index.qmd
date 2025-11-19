@@ -7,8 +7,10 @@ It's too early to write a preface. I started writing this book a few weeks ago. 
 Text @smolin2019einstein
 
 
-> *"The first principle is that you must not fool yourself — and you are the easiest person to fool. So you have to be very careful about that.*" --- @feynman1992surely 
+> *"The first principle is that you must not fool yourself — and you are the easiest person to fool. So you have to be very careful about that." --- @feynman1992surely* 
 
+
+> *"Hic sunt dracones!" --- Hic Sunt Dracones on the Hunt–Lenox Globe (eng. "Here be dragons")*
 
 @feynman1998cargo
 

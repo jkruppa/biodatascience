@@ -672,7 +672,7 @@
     "section": "",
     "text": "7.1 General background\nLast modified on 17. November 2025 at 20:02:35",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -683,7 +683,7 @@
     "section": "7.2 Theoretical background",
     "text": "7.2 Theoretical background",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -694,7 +694,7 @@
     "section": "7.3 R packages used",
     "text": "7.3 R packages used",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -705,7 +705,7 @@
     "section": "7.4 Data",
     "text": "7.4 Data",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -716,7 +716,7 @@
     "section": "7.5 Alternatives",
     "text": "7.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -727,7 +727,7 @@
     "section": "7.6 Glossary",
     "text": "7.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -738,7 +738,7 @@
     "section": "7.7 The meaning of “Models of Reality” in this chapter.",
     "text": "7.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -749,7 +749,7 @@
     "section": "7.8 Summary",
     "text": "7.8 Summary",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
@@ -760,8 +760,117 @@
     "section": "References",
     "text": "References",
     "crumbs": [
-      "Template Preface",
+      "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-20-programing.html",
+    "href": "chapter-20-programing.html",
+    "title": "Speaking to data",
+    "section": "",
+    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Speaking to data"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html",
+    "href": "chapter-21-programing-R.html",
+    "title": "7  Programing in R",
+    "section": "",
+    "text": "7.1 General background\nLast modified on 19. November 2025 at 14:11:19\nDormann and Ellison (2025)",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#theoretical-background",
+    "href": "chapter-21-programing-R.html#theoretical-background",
+    "title": "7  Programing in R",
+    "section": "7.2 Theoretical background",
+    "text": "7.2 Theoretical background",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#r-packages-used",
+    "href": "chapter-21-programing-R.html#r-packages-used",
+    "title": "7  Programing in R",
+    "section": "7.3 R packages used",
+    "text": "7.3 R packages used",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#data",
+    "href": "chapter-21-programing-R.html#data",
+    "title": "7  Programing in R",
+    "section": "7.4 Data",
+    "text": "7.4 Data",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#alternatives",
+    "href": "chapter-21-programing-R.html#alternatives",
+    "title": "7  Programing in R",
+    "section": "7.5 Alternatives",
+    "text": "7.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#glossary",
+    "href": "chapter-21-programing-R.html#glossary",
+    "title": "7  Programing in R",
+    "section": "7.6 Glossary",
+    "text": "7.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-21-programing-R.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "7  Programing in R",
+    "section": "7.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "7.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#summary",
+    "href": "chapter-21-programing-R.html#summary",
+    "title": "7  Programing in R",
+    "section": "7.8 Summary",
+    "text": "7.8 Summary",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-21-programing-R.html#references",
+    "href": "chapter-21-programing-R.html#references",
+    "title": "7  Programing in R",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\nDormann, Carsten F, and Aaron M Ellison. 2025. Statistics by Simulation: A Synthetic Data Approach. Princeton University Press.",
+    "crumbs": [
+      "Speaking to data",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in R</span>"
     ]
   }
 ]
