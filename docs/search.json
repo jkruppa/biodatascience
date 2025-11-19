@@ -177,7 +177,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n6.9\n\n\n1.0\n10.1\n\n\n2.3\n12.6\n\n\n3.5\n12.8\n\n\n5.2\n10.9\n\n\n7.1\n8.0\n\n\n8.4\n10.4\n\n\n9.2\n15.5\n\n\n10.0\n20.9\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.7\n\n\n1.0\n10.0\n\n\n2.3\n13.5\n\n\n3.5\n13.0\n\n\n5.2\n10.2\n\n\n7.1\n8.7\n\n\n8.4\n10.6\n\n\n9.2\n14.7\n\n\n10.0\n21.0\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -656,115 +656,6 @@
     ]
   },
   {
-    "objectID": "template-preface.html",
-    "href": "template-preface.html",
-    "title": "Template Preface",
-    "section": "",
-    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
-    "crumbs": [
-      "Template Preface"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html",
-    "href": "template-chapter.html",
-    "title": "7  Template chapter",
-    "section": "",
-    "text": "7.1 General background\nLast modified on 17. November 2025 at 20:02:35",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#theoretical-background",
-    "href": "template-chapter.html#theoretical-background",
-    "title": "7  Template chapter",
-    "section": "7.2 Theoretical background",
-    "text": "7.2 Theoretical background",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#r-packages-used",
-    "href": "template-chapter.html#r-packages-used",
-    "title": "7  Template chapter",
-    "section": "7.3 R packages used",
-    "text": "7.3 R packages used",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#data",
-    "href": "template-chapter.html#data",
-    "title": "7  Template chapter",
-    "section": "7.4 Data",
-    "text": "7.4 Data",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#alternatives",
-    "href": "template-chapter.html#alternatives",
-    "title": "7  Template chapter",
-    "section": "7.5 Alternatives",
-    "text": "7.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#glossary",
-    "href": "template-chapter.html#glossary",
-    "title": "7  Template chapter",
-    "section": "7.6 Glossary",
-    "text": "7.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "7  Template chapter",
-    "section": "7.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "7.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#summary",
-    "href": "template-chapter.html#summary",
-    "title": "7  Template chapter",
-    "section": "7.8 Summary",
-    "text": "7.8 Summary",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#references",
-    "href": "template-chapter.html#references",
-    "title": "7  Template chapter",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Speaking to data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
     "objectID": "chapter-20-programing.html",
     "href": "chapter-20-programing.html",
     "title": "Speaking to data",
@@ -871,6 +762,115 @@
     "crumbs": [
       "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in the 21st century</span>"
+    ]
+  },
+  {
+    "objectID": "template-preface.html",
+    "href": "template-preface.html",
+    "title": "Template Preface",
+    "section": "",
+    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Template Preface"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html",
+    "href": "template-chapter.html",
+    "title": "8  Template chapter",
+    "section": "",
+    "text": "8.1 General background\nLast modified on 17. November 2025 at 20:02:35",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#theoretical-background",
+    "href": "template-chapter.html#theoretical-background",
+    "title": "8  Template chapter",
+    "section": "8.2 Theoretical background",
+    "text": "8.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#r-packages-used",
+    "href": "template-chapter.html#r-packages-used",
+    "title": "8  Template chapter",
+    "section": "8.3 R packages used",
+    "text": "8.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#data",
+    "href": "template-chapter.html#data",
+    "title": "8  Template chapter",
+    "section": "8.4 Data",
+    "text": "8.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#alternatives",
+    "href": "template-chapter.html#alternatives",
+    "title": "8  Template chapter",
+    "section": "8.5 Alternatives",
+    "text": "8.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#glossary",
+    "href": "template-chapter.html#glossary",
+    "title": "8  Template chapter",
+    "section": "8.6 Glossary",
+    "text": "8.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "8  Template chapter",
+    "section": "8.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "8.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#summary",
+    "href": "template-chapter.html#summary",
+    "title": "8  Template chapter",
+    "section": "8.8 Summary",
+    "text": "8.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "template-chapter.html#references",
+    "href": "template-chapter.html#references",
+    "title": "8  Template chapter",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   }
 ]
