@@ -16,13 +16,156 @@ source("init.R")
 
 ## Data
 
-Based on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:
+### Jump performances of fleas
 
-Blood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.
+@cadiergues2000comparison
 
-Sugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.
 
-Ketchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.
+*C. felis felis* jump was $19.9 \pm 9.1cm$ with a range from $2$ to $48cm$ 
+
+*C. canis* jump was longer $30.4 \pm 9.1cm$  with a range from $3$ to $50cm$
+
+```{r}
+jump_flea_tbl <- tibble(host = rep(0:1, each = 7),
+                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |> 
+  mutate(host = factor(host, labels = c("cat", "dog")))
+```
+
+```{r}
+jump_flea_tbl |> 
+  group_by(host) |> 
+  summarise(mean(jump_length),
+            sd(jump_length)) |> 
+  mutate_if(is.numeric, round, 2)
+```
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-fac-01
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_flea_tbl |> 
+  ggplot(aes(x = host, y = jump_length, fill = host)) +
+  theme_book() +
+  geom_point(position = position_nudge(-0.075),
+             show.legend = FALSE, shape = 21) +
+  stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), 
+               geom="pointrange", shape = 23, size = 1,
+               show.legend = FALSE) +
+  stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
+               size = 4, position = position_nudge(x = 0.05), alpha = 0.5,
+               show.legend = FALSE, hjust = "left") +
+  labs(x = "Flea host", y = "Jump length in [cm]",
+       fill = "Host") +
+  scale_fill_viridis(discrete = TRUE, option = "plasma")
+```
+
+```{r}
+jump_animals_tbl <- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),
+                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1),
+                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6)) |>
+  pivot_longer(cols = cat:rat, values_to = "jump_length", names_to = "host") |> 
+  arrange(host) |> 
+  mutate(host = fct(host))
+```
+
+```{r}
+jump_animals_tbl |> 
+  group_by(host) |> 
+  summarise(mean(jump_length),
+            sd(jump_length)) |> 
+  mutate_if(is.numeric, round, 2)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-fac-02
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_animals_tbl |> 
+  ggplot(aes(x = host, y = jump_length, fill = host)) +
+  theme_book() +
+  geom_point(position = position_nudge(-0.075),
+             show.legend = FALSE, shape = 21) +
+  stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), 
+               geom="pointrange", shape = 23, size = 1,
+               show.legend = FALSE) +
+  stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
+               size = 4, position = position_nudge(x = 0.075), alpha = 0.5,
+               show.legend = FALSE, hjust = "left") +
+  labs(x = "Flea host", y = "Jump length in [cm]",
+       fill = "Host") +
+  scale_fill_viridis(discrete = TRUE, option = "plasma")
+```
+
+
+### Measurements on animal fleas
+
+
+
+### Fleas in urban and rural habitats
+
+```{r}
+jump_habitat_tbl <- expand_grid(host = 1:3, site = 1:2) |> 
+  mutate(mean_host = c(19.9, 30.4, 15.2, 19.9, 30.4, 15.2),
+         mean_site = c(2, 5, -5, 2, 5, 5),
+         mean = mean_host + mean_site,
+         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6)) |> 
+  group_by(host, site) |> 
+  nest() |> 
+  mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |> 
+  unnest(c(host, site, jump_length)) |>
+  ungroup() |> 
+  select(host, site, jump_length) |> 
+  mutate(host = factor(host, labels = c("cat", "dog", "rat")),
+         site = factor(site, labels = c("urban", "rural"))) |> 
+  mutate_if(is.numeric, round, 2)
+```
+
+```{r}
+#| warning: false
+#| message: false
+jump_habitat_tbl |> 
+  group_by(host, site) |> 
+  summarise(mean(jump_length),
+            sd(jump_length)) |> 
+  mutate_if(is.numeric, round, 2)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-fac-03
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_habitat_tbl |> 
+  ggplot(aes(x = host, y = jump_length, fill = site)) +
+  theme_book() +
+  geom_point(position = position_dodge(0.5),
+             show.legend = FALSE, shape = 21) +
+  stat_summary(fun.data=mean_sdl, fun.args = list(mult = 1), 
+               geom="pointrange", shape = 23, size = 1,
+               show.legend = TRUE, position = position_dodge(0.9)) +
+  stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
+               size = 4, position = position_dodge(1.8), 
+               alpha = 0.5, show.legend = FALSE) +
+  labs(x = "Flea host", y = "Jump length in [cm]",
+       fill = "Host") +
+  scale_fill_viridis(discrete = TRUE, option = "plasma") 
+```
 
 ## Alternatives 
 

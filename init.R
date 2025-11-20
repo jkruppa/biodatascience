@@ -1,5 +1,8 @@
 ## load packages
-pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork)
+pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork,
+               gghalves, ggdist)
+## global seed
+set.seed(20251115)
 ## ggplot theme
 theme_book <- function() {
   theme_minimal() +
@@ -9,7 +12,8 @@ theme_book <- function() {
           plot.caption = element_text(face = "italic"),
           axis.title = element_text(size = 12, face = "bold"),
           axis.text = element_text(size = 11),
-          legend.title = element_text(face = "bold"))
+          legend.title = element_text(face = "bold"),
+          legend.position = "top")
 }
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
