@@ -110,26 +110,40 @@ jump_animals_tbl |>
 
 ### Measurements on animal fleas
 
-
+- Jump length in [cm] called `jump_length`
+- Number of hairs on each leg called `count_leg_left` and `count_leg_right`
+- Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating`
+- Infection status with flea cold called `infected`
 
 ### Fleas in urban and rural habitats
 
+@rpkg_purrr
+
 ```{r}
-jump_habitat_tbl <- expand_grid(host = 1:3, site = 1:2) |> 
+jump_habitat_eff_grid <- expand_grid(host = 1:3, site = 1:2) |> 
   mutate(mean_host = c(19.9, 30.4, 15.2, 19.9, 30.4, 15.2),
          mean_site = c(2, 5, -5, 2, 5, 5),
          mean = mean_host + mean_site,
-         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6)) |> 
-  group_by(host, site) |> 
-  nest() |> 
+         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6))
+jump_habitat_eff_grid
+```
+
+
+```{r}
+jump_habitat_raw_tbl <- jump_habitat_eff_grid |> 
+  group_by(host, site) |> nest() |> 
   mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |> 
-  unnest(c(host, site, jump_length)) |>
-  ungroup() |> 
+  unnest(c(host, site, jump_length)) |> ungroup()
+```
+
+```{r}
+jump_habitat_tbl <- jump_habitat_raw_tbl |> 
   select(host, site, jump_length) |> 
   mutate(host = factor(host, labels = c("cat", "dog", "rat")),
          site = factor(site, labels = c("urban", "rural"))) |> 
   mutate_if(is.numeric, round, 2)
 ```
+
 
 ```{r}
 #| warning: false
