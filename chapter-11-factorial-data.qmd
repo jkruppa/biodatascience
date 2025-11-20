@@ -14,7 +14,18 @@ source("init.R")
 
 ## R packages used
 
+```{r}
+#| message: false
+#| warning: false
+pacman::p_load(tidyverse, conflicted)
+```
+
+
+@wickham2023r
+
 ## Data
+
+Small data
 
 ### Jump performances of fleas
 
@@ -66,11 +77,11 @@ jump_flea_tbl |>
 
 ```{r}
 jump_animals_tbl <- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),
-                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1),
-                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6)) |>
-  pivot_longer(cols = cat:rat, values_to = "jump_length", names_to = "host") |> 
-  arrange(host) |> 
-  mutate(host = fct(host))
+                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),
+                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),
+                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |>
+  pivot_longer(cols = cat:dog, values_to = "jump_length", names_to = "host") |> 
+  mutate(host = as_factor(host))
 ```
 
 ```{r}
@@ -112,10 +123,23 @@ jump_animals_tbl |>
 
 - Jump length in [cm] called `jump_length`
 - Number of hairs on each leg called `count_leg_left` and `count_leg_right`
-- Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating`
-- Infection status with flea cold called `infected`
+- Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating` on a Likert scale from 1 to 5, with 5 being the strongest expression.
+- The infection status with the flea cold is called `infected`, with a value of 0/1 for no/yes.
+
+
+```{r}
+tibble(jump_length = rnorm(7, 5, 1),
+       count_right_leg = rpois(7, 4),
+       count_left_leg = rpois(7, 4),
+       count_leg = (count_left_leg + count_right_leg)/2,
+       rating = NA,
+       infectd = rbinom(7, prob = 0.5, size = 1))
+```
+
 
 ### Fleas in urban and rural habitats
+
+Why so complex?
 
 @rpkg_purrr
 
@@ -180,6 +204,31 @@ jump_habitat_tbl |>
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") 
 ```
+
+## Data availability
+
+The data is available as txt-Files under <https://github.com/jkruppa/biodatascience>.
+
+```{r}
+#| echo: false
+
+jump_animals_tbl |> 
+  arrange(host) |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_animals.txt")
+
+jump_flea_tbl |> 
+  arrange(host) |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_fleas.txt")
+
+jump_habitat_tbl |> 
+  arrange(host, site) |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_habitat.txt")
+```
+
+
 
 ## Alternatives 
 

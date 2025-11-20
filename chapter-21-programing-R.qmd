@@ -12,6 +12,12 @@ source("init.R")
 
 @dormann2025statistics
 
+@wickham2023r
+
+@rpkg_conflicted
+
+@rpkg_pacman
+
 ## Theoretical background
 
 ## R packages used

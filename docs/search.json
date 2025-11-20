@@ -363,7 +363,7 @@
     "href": "chapter-11-factorial-data.html",
     "title": "4  Fleas of animals",
     "section": "",
-    "text": "4.1 General background\nLast modified on 20. November 2025 at 12:30:00",
+    "text": "4.1 General background\nLast modified on 20. November 2025 at 20:20:34",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -385,7 +385,7 @@
     "href": "chapter-11-factorial-data.html#r-packages-used",
     "title": "4  Fleas of animals",
     "section": "4.3 R packages used",
-    "text": "4.3 R packages used",
+    "text": "4.3 R packages used\n\n\nR Code [show / hide]\npacman::p_load(tidyverse, conflicted)\n\n\nWickham, Çetinkaya-Rundel, and Grolemund (2023)",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -396,7 +396,7 @@
     "href": "chapter-11-factorial-data.html#data",
     "title": "4  Fleas of animals",
     "section": "4.4 Data",
-    "text": "4.4 Data\n\n4.4.1 Jump performances of fleas\nCadiergues, Joubert, and Franc (2000)\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(host = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\")))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  24.0             10.5 \n2 dog                  28.4              7.25\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6)) |&gt;\n  pivot_longer(cols = cat:rat, values_to = \"jump_length\", names_to = \"host\") |&gt; \n  arrange(host) |&gt; \n  mutate(host = fct(host))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 3 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  20.6              9.62\n2 dog                  36.0              8.51\n3 rat                  12.8              2.06\n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating\nInfection status with flea cold called infected\n\n\n\n4.4.3 Fleas in urban and rural habitats\nWickham and Henry (2025)\n\n\nR Code [show / hide]\njump_habitat_eff_grid &lt;- expand_grid(host = 1:3, site = 1:2) |&gt; \n  mutate(mean_host = c(19.9, 30.4, 15.2, 19.9, 30.4, 15.2),\n         mean_site = c(2, 5, -5, 2, 5, 5),\n         mean = mean_host + mean_site,\n         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6))\njump_habitat_eff_grid\n\n\n# A tibble: 6 × 6\n   host  site mean_host mean_site  mean    sd\n  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1      19.9         2  21.9   9.1\n2     1     2      30.4         5  35.4   9.1\n3     2     1      15.2        -5  10.2   4.6\n4     2     2      19.9         2  21.9   9.1\n5     3     1      30.4         5  35.4   9.1\n6     3     2      15.2         5  20.2   4.6\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_eff_grid |&gt; \n  group_by(host, site) |&gt; nest() |&gt; \n  mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |&gt; \n  unnest(c(host, site, jump_length)) |&gt; ungroup()\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(host, site, jump_length) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\", \"rat\")),\n         site = factor(site, labels = c(\"urban\", \"rural\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(host, site) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   host [3]\n  host  site  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt; &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat   urban               16.9              12.1 \n2 cat   rural               33.4              11.3 \n3 dog   urban                9.83              2.76\n4 dog   rural               26.9              10.8 \n5 rat   urban               42.5               5.96\n6 rat   rural               23.0               3.02\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo",
+    "text": "4.4 Data\nSmall data\n\n4.4.1 Jump performances of fleas\nCadiergues, Joubert, and Franc (2000)\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(host = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\")))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  24.0             10.5 \n2 dog                  28.4              7.25\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |&gt;\n  pivot_longer(cols = cat:dog, values_to = \"jump_length\", names_to = \"host\") |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 4 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  20.6              9.62\n2 fox                  41.6              9.63\n3 rat                  12.8              2.06\n4 dog                  26.2             10.1 \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating on a Likert scale from 1 to 5, with 5 being the strongest expression.\nThe infection status with the flea cold is called infected, with a value of 0/1 for no/yes.\n\n\n\nR Code [show / hide]\ntibble(jump_length = rnorm(7, 5, 1),\n       count_right_leg = rpois(7, 4),\n       count_left_leg = rpois(7, 4),\n       count_leg = (count_left_leg + count_right_leg)/2,\n       rating = NA,\n       infectd = rbinom(7, prob = 0.5, size = 1))\n\n\n# A tibble: 7 × 6\n  jump_length count_right_leg count_left_leg count_leg rating infectd\n        &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;lgl&gt;    &lt;int&gt;\n1        2.92               4              1       2.5 NA           1\n2        5.08               4              2       3   NA           0\n3        6.37               6              2       4   NA           1\n4        4.63               9              8       8.5 NA           0\n5        4.97               6              3       4.5 NA           1\n6        5.84               6              5       5.5 NA           1\n7        4.21               3              5       4   NA           1\n\n\n\n\n4.4.3 Fleas in urban and rural habitats\nWhy so complex?\nWickham and Henry (2025)\n\n\nR Code [show / hide]\njump_habitat_eff_grid &lt;- expand_grid(host = 1:3, site = 1:2) |&gt; \n  mutate(mean_host = c(19.9, 30.4, 15.2, 19.9, 30.4, 15.2),\n         mean_site = c(2, 5, -5, 2, 5, 5),\n         mean = mean_host + mean_site,\n         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6))\njump_habitat_eff_grid\n\n\n# A tibble: 6 × 6\n   host  site mean_host mean_site  mean    sd\n  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1      19.9         2  21.9   9.1\n2     1     2      30.4         5  35.4   9.1\n3     2     1      15.2        -5  10.2   4.6\n4     2     2      19.9         2  21.9   9.1\n5     3     1      30.4         5  35.4   9.1\n6     3     2      15.2         5  20.2   4.6\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_eff_grid |&gt; \n  group_by(host, site) |&gt; nest() |&gt; \n  mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |&gt; \n  unnest(c(host, site, jump_length)) |&gt; ungroup()\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(host, site, jump_length) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\", \"rat\")),\n         site = factor(site, labels = c(\"urban\", \"rural\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(host, site) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   host [3]\n  host  site  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt; &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat   urban                16.2              8.26\n2 cat   rural                27.9             10.8 \n3 dog   urban                10.5              2.21\n4 dog   rural                26.2              3.14\n5 rat   urban                31.2              4.85\n6 rat   rural                20.6              2.89\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -406,8 +406,8 @@
     "objectID": "chapter-11-factorial-data.html#alternatives",
     "href": "chapter-11-factorial-data.html#alternatives",
     "title": "4  Fleas of animals",
-    "section": "4.5 Alternatives",
-    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "4.6 Alternatives",
+    "text": "4.6 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -417,8 +417,8 @@
     "objectID": "chapter-11-factorial-data.html#glossary",
     "href": "chapter-11-factorial-data.html#glossary",
     "title": "4  Fleas of animals",
-    "section": "4.6 Glossary",
-    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "4.7 Glossary",
+    "text": "4.7 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -428,8 +428,8 @@
     "objectID": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "4  Fleas of animals",
-    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "4.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -439,8 +439,8 @@
     "objectID": "chapter-11-factorial-data.html#summary",
     "href": "chapter-11-factorial-data.html#summary",
     "title": "4  Fleas of animals",
-    "section": "4.8 Summary",
-    "text": "4.8 Summary",
+    "section": "4.9 Summary",
+    "text": "4.9 Summary",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -451,7 +451,7 @@
     "href": "chapter-11-factorial-data.html#references",
     "title": "4  Fleas of animals",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nCadiergues, Marie-Christine, Christel Joubert, and Michel Franc. 2000. “A Comparison of Jump Performances of the Dog Flea, Ctenocephalides Canis (Curtis, 1826) and the Cat Flea, Ctenocephalides Felis Felis (Bouché, 1835).” Veterinary Parasitology 92 (3): 239–41.\n\n\nWickham, Hadley, and Lionel Henry. 2025. Purrr: Functional Programming Tools. https://purrr.tidyverse.org/.",
+    "text": "References\n\n\n\n\n\n\nCadiergues, Marie-Christine, Christel Joubert, and Michel Franc. 2000. “A Comparison of Jump Performances of the Dog Flea, Ctenocephalides Canis (Curtis, 1826) and the Cat Flea, Ctenocephalides Felis Felis (Bouché, 1835).” Veterinary Parasitology 92 (3): 239–41.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\".\n\n\nWickham, Hadley, and Lionel Henry. 2025. Purrr: Functional Programming Tools. https://purrr.tidyverse.org/.",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
@@ -670,7 +670,7 @@
     "href": "chapter-21-programing-R.html",
     "title": "7  Programing in the 21st century",
     "section": "",
-    "text": "7.1 General background\nLast modified on 19. November 2025 at 14:16:12\nDormann and Ellison (2025)",
+    "text": "7.1 General background\nLast modified on 20. November 2025 at 14:02:31\nDormann and Ellison (2025)\nWickham, Çetinkaya-Rundel, and Grolemund (2023)\nWickham (2023)\nRinker and Kurkiewicz (2012)",
     "crumbs": [
       "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in the 21st century</span>"
@@ -758,7 +758,7 @@
     "href": "chapter-21-programing-R.html#references",
     "title": "7  Programing in the 21st century",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nDormann, Carsten F, and Aaron M Ellison. 2025. Statistics by Simulation: A Synthetic Data Approach. Princeton University Press.",
+    "text": "References\n\n\n\n\n\n\nDormann, Carsten F, and Aaron M Ellison. 2025. Statistics by Simulation: A Synthetic Data Approach. Princeton University Press.\n\n\nRinker, Tyler, and Dason Kurkiewicz. 2012. Pacman: Package Management Tool. https://github.com/trinker/pacman.\n\n\nWickham, Hadley. 2023. Conflicted: An Alternative Conflict Resolution Strategy. https://conflicted.r-lib.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\".",
     "crumbs": [
       "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in the 21st century</span>"
@@ -1013,6 +1013,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-factorial-data.html#data-availability",
+    "href": "chapter-11-factorial-data.html#data-availability",
+    "title": "4  Fleas of animals",
+    "section": "4.5 Data availability",
+    "text": "4.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   }
 ]

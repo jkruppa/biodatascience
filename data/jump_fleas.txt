@@ -1,0 +1,15 @@
+host jump_length
+cat 17.12
+cat 12.99
+cat 26.57
+cat 40.22
+cat 14.46
+cat 21.15
+cat 35.34
+dog 20.4
+dog 34.53
+dog 31.24
+dog 28.16
+dog 24.82
+dog 39.52
+dog 20.09
