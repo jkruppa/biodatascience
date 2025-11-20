@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Models of Reality",
     "section": "",
-    "text": "Preface\nIt’s too early to write a preface. I started writing this book a few weeks ago. From my perspective, it will be a good one, but it will take some time. In the meantime, you are welcome to see what’s happening here and what I’m writing. Sometimes things will be in the wrong place. This is a normal part of the writing process. Just so you know, I started writing on 15 November 2025.\nText Smolin (2019)\nRichard P. Feynman (1998)",
+    "text": "Welcome\n\n“Life is difficult.” — M. Scott Peck’s, The Road Less Traveled \n\n\n\n\n\n\n\n\n\n\n\n\nThis book has a German predecessor. You might not recognise this book. That’s fine. The page can be found at the following link: https://jkruppa.github.io/. However, it is much more unstructured. It is more like a cookbook than this book, which has a continuous storyline.",
     "crumbs": [
-      "Preface"
+      "Welcome"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "References",
     "text": "References\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
     "crumbs": [
-      "Preface"
+      "Welcome"
     ]
   },
   {
@@ -871,6 +871,148 @@
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html",
+    "href": "appendix-a.html",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "",
+    "text": "A.1 Used R packages\nLast modified on 20. November 2025 at 10:01:22\nThis is a printout of the init.R file, which can be found on GitHub\nR Code [show / hide]\npacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#theoretical-background",
+    "href": "appendix-a.html#theoretical-background",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.5 Theoretical background",
+    "text": "A.5 Theoretical background",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#r-packages-used",
+    "href": "appendix-a.html#r-packages-used",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.6 R packages used",
+    "text": "A.6 R packages used",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#data",
+    "href": "appendix-a.html#data",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.7 Data",
+    "text": "A.7 Data",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#alternatives",
+    "href": "appendix-a.html#alternatives",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.8 Alternatives",
+    "text": "A.8 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#glossary",
+    "href": "appendix-a.html#glossary",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.9 Glossary",
+    "text": "A.9 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "appendix-a.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.4 The meaning of “Models of Reality” in this chapter.",
+    "text": "A.4 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#summary",
+    "href": "appendix-a.html#summary",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.5 Summary",
+    "text": "A.5 Summary",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#references",
+    "href": "appendix-a.html#references",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#references-.unnumbered-.-unlisted",
+    "href": "index.html#references-.unnumbered-.-unlisted",
+    "title": "Models of Reality",
+    "section": "References {.unnumbered . unlisted}",
+    "text": "References {.unnumbered . unlisted}\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#used-theme-of-the-visualitations",
+    "href": "appendix-a.html#used-theme-of-the-visualitations",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.2 Used theme of the visualitations",
+    "text": "A.2 Used theme of the visualitations\n\n\nR Code [show / hide]\ntheme_book &lt;- function() {\n  theme_minimal() +\n    theme(panel.grid.minor = element_blank(),\n          plot.title = element_text(size = 16, face = \"bold\"),\n          plot.subtitle = element_text(size = 12, face = \"italic\"),\n          plot.caption = element_text(face = \"italic\"),\n          axis.title = element_text(size = 12, face = \"bold\"),\n          axis.text = element_text(size = 11),\n          legend.title = element_text(face = \"bold\"))\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#used-color-palettes",
+    "href": "appendix-a.html#used-color-palettes",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.3 Used color palettes",
+    "text": "A.3 Used color palettes\n\n\nR Code [show / hide]\ncol_pal &lt;- \\(n, alpha) plasma(n = n, alpha = alpha)\nc6_pal &lt;- col_pal(6, 1)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#general-background",
+    "href": "appendix-a.html#general-background",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.4 General background",
+    "text": "A.4 General background",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
     ]
   }
 ]

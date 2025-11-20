@@ -1,0 +1,18 @@
+# Preface {.unnumbered .unlisted} 
+
+It's too early to write a preface. I started writing this book a few weeks ago. From my perspective, it will be a good one, but it will take some time. In the meantime, you are welcome to see what's happening here and what I'm writing. Sometimes things will be in the wrong place. This is a normal part of the writing process. Just so you know, I started writing on 15 November 2025.
+
+text @smolin2019einstein
+
+
+> *"The first principle is that you must not fool yourself — and you are the easiest person to fool. So you have to be very careful about that." --- @feynman1992surely* 
+
+
+> *"Hic sunt dracones!" --- Hic Sunt Dracones on the Hunt–Lenox Globe (eng. "Here be dragons")*
+
+@feynman1998cargo
+
+
+
+
+## References {.unnumbered .unlisted}

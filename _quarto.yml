@@ -5,8 +5,14 @@ project:
 book:
   title: "Models of Reality"
   subtitle: "From Data to Science"
-  author: "<a href='https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/'>Prof. Dr. Jochen Kruppa-Scheetz</a>"
   date: "18. November 2025"
+  author:
+  - name: Prof. Dr. Jochen Kruppa-Scheetz
+    affiliation: Osnabrück University of Applied Sciences
+    orcid: 0000-0001-8376-8864
+    url: https://www.hs-osnabrueck.de/prof-dr-jochen-kruppa/
+    email: j.kruppa@hs-osnabrueck.de
+    corresponding: true
   favicon: cover2026_favi.png
   description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
   url: https://jkruppa.github.io/biodatascience
@@ -22,6 +28,7 @@ book:
       This open book was created using <a href="https://quarto.org/">Quarto</a>.
   chapters:
     - index.qmd
+    - preface.qmd
     - part: chapter-00-preface.qmd
       chapters:
       - chapter-01-what-is-science.qmd
@@ -38,9 +45,12 @@ book:
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd
+  appendices:
+    - appendix-a.qmd
 
 bibliography: references.bib
 lang: en 
+
 
 format:
   html: 
@@ -56,9 +66,6 @@ format:
     code-block-border-left: true
     code-summary: "R Code [show / hide]"
     code-tools: true
-    mermaid:
-      theme: neutral
-      htmlLabels: true
   pdf:
     documentclass: scrreprt
 
