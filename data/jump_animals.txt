@@ -1,4 +1,4 @@
-host mean sd jump_length
+host mean sd jump_length_cm
 cat 19.9 9.1 27.62
 cat 19.9 9.1 7.7
 cat 19.9 9.1 14.43
