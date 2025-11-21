@@ -86,7 +86,8 @@ jump_flea_tbl |>
                show.legend = FALSE, hjust = "left") +
   labs(x = "Flea host", y = "Jump length in [cm]",
        fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma")
+  scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  coord_cartesian(ylim = c(0, NA))
 ```
 
 
@@ -137,7 +138,8 @@ jump_animals_tbl |>
                show.legend = FALSE, hjust = "left") +
   labs(x = "Flea host", y = "Jump length in [cm]",
        fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma")
+  scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  coord_cartesian(ylim = c(0, NA))
 ```
 
 
@@ -167,11 +169,9 @@ Why so complex?
 ```{r}
 jump_habitat_grid <- expand_grid(host = 1:3, site = 1:2) |> 
   mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),
-         mean_site = c(2, 5, 2, 5, 5, -5),
+         mean_site = c(5, 0, 5, 0, 5, -5),
          mean = mean_host + mean_site,
-         sd_host = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6),
-         sd_site = c(0.3, 0.5, 0.3, 0.5, 0.3, 0.5),
-         sd = sd_host + sd_site)
+         sd = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6))
 jump_habitat_grid
 ```
 
@@ -226,7 +226,8 @@ jump_habitat_tbl |>
                alpha = 0.5, show.legend = FALSE) +
   labs(x = "Flea host", y = "Jump length in [cm]",
        fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma") 
+  scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  coord_cartesian(ylim = c(0, NA))
 ```
 
 ## Data availability
