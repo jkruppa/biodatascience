@@ -27,7 +27,7 @@ pacman::p_load(tidyverse, conflicted)
 
 ## Data
 
-Small data
+Small data and grid
 
 ### Jump performances of fleas
 
@@ -38,16 +38,20 @@ Small data
 
 *C. canis* jump was longer $30.4 \pm 9.1cm$  with a range from $3$ to $50cm$
 
+
 ```{r}
-jump_flea_tbl <- tibble(host = rep(0:1, each = 7),
-                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |> 
-  mutate(host = factor(host, labels = c("cat", "dog")))
+jump_flea_grid <- expand_grid(host = c("cat", "dog")) |> 
+  mutate(mean = c(19.9, 30.4), 
+         sd = c(9.1))
 ```
 
 ```{r}
-expand_grid(host = c("cat", "dog"), rep = 1:7)
+jump_flea_tbl <- jump_flea_grid |> 
+  rowwise() |> 
+  mutate(jump_length = lst(rnorm(7, mean, sd))) |> 
+  unnest(cols = jump_length) |> 
+  mutate(host = as_factor(host))
 ```
-
 
 
 ```{r}
@@ -57,6 +61,8 @@ jump_flea_tbl |>
             sd(jump_length)) |> 
   mutate_if(is.numeric, round, 2)
 ```
+
+
 ```{r}
 #| echo: false
 #| message: false
@@ -83,14 +89,22 @@ jump_flea_tbl |>
   scale_fill_viridis(discrete = TRUE, option = "plasma")
 ```
 
+
+
 ```{r}
-jump_animals_tbl <- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),
-                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),
-                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),
-                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |>
-  pivot_longer(cols = cat:dog, values_to = "jump_length", names_to = "host") |> 
+jump_animals_grid <- expand_grid(host = c("cat", "fox", "rat", "dog")) |> 
+  mutate(mean = c(19.9, 35.2, 15.2, 30.4), 
+         sd = c(9.1, 10.3, 4.6, 9.1))
+```
+
+```{r}
+jump_animals_tbl <- jump_animals_grid |> 
+  rowwise() |> 
+  mutate(jump_length = lst(rnorm(7, mean, sd))) |> 
+  unnest(cols = jump_length) |> 
   mutate(host = as_factor(host))
 ```
+
 
 ```{r}
 jump_animals_tbl |> 
@@ -151,23 +165,24 @@ Why so complex?
 @rpkg_purrr
 
 ```{r}
-jump_habitat_eff_grid <- expand_grid(host = 1:3, site = 1:2) |> 
+jump_habitat_grid <- expand_grid(host = 1:3, site = 1:2) |> 
   mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),
          mean_site = c(2, 5, 2, 5, 5, -5),
          mean = mean_host + mean_site,
          sd_host = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6),
          sd_site = c(0.3, 0.5, 0.3, 0.5, 0.3, 0.5),
          sd = sd_host + sd_site)
-jump_habitat_eff_grid
+jump_habitat_grid
 ```
-
 
 ```{r}
-jump_habitat_raw_tbl <- jump_habitat_eff_grid |> 
-  group_by(host, site) |> nest() |> 
-  mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |> 
-  unnest(c(host, site, jump_length)) |> ungroup()
+jump_habitat_raw_tbl <- jump_habitat_grid |> 
+  rowwise() |> 
+  mutate(jump_length = lst(rnorm(7, mean, sd))) |> 
+  unnest(cols = jump_length)
 ```
+
+
 
 ```{r}
 jump_habitat_tbl <- jump_habitat_raw_tbl |> 
@@ -242,6 +257,26 @@ jump_habitat_tbl |>
 ## Alternatives 
 
 Further tutorials and R packages on XXX
+
+### Why linear is a bad idea?
+
+```{r}
+jump_flea_tbl <- tibble(host = rep(0:1, each = 7),
+                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |> 
+  mutate(host = factor(host, labels = c("cat", "dog")))
+```
+
+### Why is a `tibble()` bad idea?
+
+```{r}
+jump_animals_tbl <- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),
+                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),
+                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),
+                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |>
+  pivot_longer(cols = cat:dog, values_to = "jump_length", names_to = "host") |> 
+  mutate(host = as_factor(host))
+```
+
 
 ## Glossary
 
