@@ -396,7 +396,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 20. November 2025 at 20:20:34</em></p>
+<p><em>Last modified on 20. November 2025 at 21:08:32</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -445,8 +445,8 @@ window.Quarto = {
 <pre><code># A tibble: 2 × 3
   host  `mean(jump_length)` `sd(jump_length)`
   &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;
-1 cat                  24.0             10.5 
-2 dog                  28.4              7.25</code></pre>
+1 cat                  21.2              7.3 
+2 dog                  33.0              6.57</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -487,10 +487,10 @@ Figure&nbsp;4.1: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <pre><code># A tibble: 4 × 3
   host  `mean(jump_length)` `sd(jump_length)`
   &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;
-1 cat                  20.6              9.62
-2 fox                  41.6              9.63
-3 rat                  12.8              2.06
-4 dog                  26.2             10.1 </code></pre>
+1 cat                  21.2              9.36
+2 fox                  34.6             10.2 
+3 rat                  13.4              2.51
+4 dog                  34.0             17.4 </code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -523,20 +523,20 @@ Figure&nbsp;4.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_right_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_left_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_leg =</span> (count_left_leg <span class="sc">+</span> count_right_leg)<span class="sc">/</span><span class="dv">2</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="cn">NA</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
   jump_length count_right_leg count_left_leg count_leg rating infectd
-        &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;lgl&gt;    &lt;int&gt;
-1        2.92               4              1       2.5 NA           1
-2        5.08               4              2       3   NA           0
-3        6.37               6              2       4   NA           1
-4        4.63               9              8       8.5 NA           0
-5        4.97               6              3       4.5 NA           1
-6        5.84               6              5       5.5 NA           1
-7        4.21               3              5       4   NA           1</code></pre>
+        &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;
+1        6.17               4              8       6        3       1
+2        5.03               5              5       5        4       0
+3        6.51               6              1       3.5      3       0
+4        4.38               2              1       1.5      3       1
+5        2.62               0              3       1.5      3       0
+6        6.64               3              3       3        2       0
+7        3.82               3              3       3        3       0</code></pre>
 </div>
 </div>
 </section>
@@ -548,22 +548,24 @@ Figure&nbsp;4.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">host =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_host <span class="sc">+</span> mean_site,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>))</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd_host =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>),</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd_site =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>),</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> sd_host <span class="sc">+</span> sd_site)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 6
-   host  site mean_host mean_site  mean    sd
-  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1     1      19.9         2  21.9   9.1
-2     1     2      30.4         5  35.4   9.1
-3     2     1      15.2        -5  10.2   4.6
-4     2     2      19.9         2  21.9   9.1
-5     3     1      30.4         5  35.4   9.1
-6     3     2      15.2         5  20.2   4.6</code></pre>
+<pre><code># A tibble: 6 × 8
+   host  site mean_host mean_site  mean sd_host sd_site    sd
+  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1     1     1      19.9         2  21.9     9.1     0.3   9.4
+2     1     2      19.9         5  24.9     9.1     0.5   9.6
+3     2     1      30.4         2  32.4     9.1     0.3   9.4
+4     2     2      30.4         5  35.4     9.1     0.5   9.6
+5     3     1      15.2         5  20.2     4.6     0.3   4.9
+6     3     2      15.2        -5  10.2     4.6     0.5   5.1</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -599,12 +601,12 @@ Figure&nbsp;4.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 # Groups:   host [3]
   host  site  `mean(jump_length)` `sd(jump_length)`
   &lt;fct&gt; &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;
-1 cat   urban                16.2              8.26
-2 cat   rural                27.9             10.8 
-3 dog   urban                10.5              2.21
-4 dog   rural                26.2              3.14
-5 rat   urban                31.2              4.85
-6 rat   rural                20.6              2.89</code></pre>
+1 cat   urban               15.5               8.22
+2 cat   rural               28.2               8.7 
+3 dog   urban               34.1               9.36
+4 dog   rural               37.8               9.85
+5 rat   urban               19.0               4.44
+6 rat   rural                8.88              7.64</code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -1299,127 +1301,128 @@ Wickham, Hadley, and Lionel Henry. 2025. <em>Purrr: Functional Programming Tools
 <span id="cb16-140"><a href="#cb16-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called <span class="in">`rating`</span> on a Likert scale from 1 to 5, with 5 being the strongest expression.</span>
 <span id="cb16-141"><a href="#cb16-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The infection status with the flea cold is called <span class="in">`infected`</span>, with a value of 0/1 for no/yes.</span>
 <span id="cb16-142"><a href="#cb16-142" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-143"><a href="#cb16-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jump_length =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
-<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_right_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_left_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_leg =</span> (count_left_leg <span class="sc">+</span> count_right_leg)<span class="sc">/</span><span class="dv">2</span>,</span>
-<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="cn">NA</span>,</span>
-<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
-<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-145"><a href="#cb16-145" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-146"><a href="#cb16-146" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jump_length =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
+<span id="cb16-147"><a href="#cb16-147" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_right_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb16-148"><a href="#cb16-148" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_left_leg =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb16-149"><a href="#cb16-149" aria-hidden="true" tabindex="-1"></a>       <span class="at">count_leg =</span> (count_left_leg <span class="sc">+</span> count_right_leg)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb16-150"><a href="#cb16-150" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
+<span id="cb16-151"><a href="#cb16-151" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
+<span id="cb16-152"><a href="#cb16-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-153"><a href="#cb16-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-154"><a href="#cb16-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fleas in urban and rural habitats</span></span>
-<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a>Why so complex?</span>
-<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a>@rpkg_purrr</span>
-<span id="cb16-161"><a href="#cb16-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">host =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>),</span>
-<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">5</span>),</span>
-<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_host <span class="sc">+</span> mean_site,</span>
-<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>))</span>
-<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid</span>
-<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-172"><a href="#cb16-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-155"><a href="#cb16-155" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fleas in urban and rural habitats</span></span>
+<span id="cb16-156"><a href="#cb16-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-157"><a href="#cb16-157" aria-hidden="true" tabindex="-1"></a>Why so complex?</span>
+<span id="cb16-158"><a href="#cb16-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-159"><a href="#cb16-159" aria-hidden="true" tabindex="-1"></a>@rpkg_purrr</span>
+<span id="cb16-160"><a href="#cb16-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-163"><a href="#cb16-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-164"><a href="#cb16-164" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">host =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-165"><a href="#cb16-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
+<span id="cb16-166"><a href="#cb16-166" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
+<span id="cb16-167"><a href="#cb16-167" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_host <span class="sc">+</span> mean_site,</span>
+<span id="cb16-168"><a href="#cb16-168" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd_host =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>),</span>
+<span id="cb16-169"><a href="#cb16-169" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd_site =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>, <span class="fl">0.3</span>, <span class="fl">0.5</span>),</span>
+<span id="cb16-170"><a href="#cb16-170" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> sd_host <span class="sc">+</span> sd_site)</span>
+<span id="cb16-171"><a href="#cb16-171" aria-hidden="true" tabindex="-1"></a>jump_habitat_eff_grid</span>
+<span id="cb16-172"><a href="#cb16-172" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-173"><a href="#cb16-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-176"><a href="#cb16-176" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_eff_grid <span class="sc">|&gt;</span> </span>
-<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(host, site) <span class="sc">|&gt;</span> <span class="fu">nest</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jump_length =</span> <span class="fu">map</span>(data, <span class="sc">~</span><span class="fu">rnorm</span>(<span class="dv">5</span>, .x<span class="sc">$</span>mean, .x<span class="sc">$</span>sd))) <span class="sc">|&gt;</span> </span>
-<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="fu">c</span>(host, site, jump_length)) <span class="sc">|&gt;</span> <span class="fu">ungroup</span>()</span>
-<span id="cb16-181"><a href="#cb16-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-182"><a href="#cb16-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-185"><a href="#cb16-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jump_length) <span class="sc">|&gt;</span> </span>
-<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
-<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
-<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-192"><a href="#cb16-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-174"><a href="#cb16-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-177"><a href="#cb16-177" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-178"><a href="#cb16-178" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_eff_grid <span class="sc">|&gt;</span> </span>
+<span id="cb16-179"><a href="#cb16-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(host, site) <span class="sc">|&gt;</span> <span class="fu">nest</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb16-180"><a href="#cb16-180" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jump_length =</span> <span class="fu">map</span>(data, <span class="sc">~</span><span class="fu">rnorm</span>(<span class="dv">5</span>, .x<span class="sc">$</span>mean, .x<span class="sc">$</span>sd))) <span class="sc">|&gt;</span> </span>
+<span id="cb16-181"><a href="#cb16-181" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="fu">c</span>(host, site, jump_length)) <span class="sc">|&gt;</span> <span class="fu">ungroup</span>()</span>
+<span id="cb16-182"><a href="#cb16-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-183"><a href="#cb16-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-186"><a href="#cb16-186" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-187"><a href="#cb16-187" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-188"><a href="#cb16-188" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jump_length) <span class="sc">|&gt;</span> </span>
+<span id="cb16-189"><a href="#cb16-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
+<span id="cb16-190"><a href="#cb16-190" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb16-191"><a href="#cb16-191" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
+<span id="cb16-192"><a href="#cb16-192" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-193"><a href="#cb16-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-196"><a href="#cb16-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(host, site) <span class="sc">|&gt;</span> </span>
-<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jump_length),</span>
-<span id="cb16-202"><a href="#cb16-202" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jump_length)) <span class="sc">|&gt;</span> </span>
-<span id="cb16-203"><a href="#cb16-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
-<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-208"><a href="#cb16-208" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-fac-03</span></span>
-<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb16-214"><a href="#cb16-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
-<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
-<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-218"><a href="#cb16-218" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> host, <span class="at">y =</span> jump_length, <span class="at">fill =</span> site)) <span class="sc">+</span></span>
-<span id="cb16-220"><a href="#cb16-220" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
-<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.5</span>),</span>
-<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_sdl, <span class="at">fun.args =</span> <span class="fu">list</span>(<span class="at">mult =</span> <span class="dv">1</span>), </span>
-<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a>               <span class="at">geom=</span><span class="st">"pointrange"</span>, <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
-<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>               <span class="at">show.legend =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>)) <span class="sc">+</span></span>
-<span id="cb16-226"><a href="#cb16-226" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"label"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(..y..,<span class="dv">2</span>)),</span>
-<span id="cb16-227"><a href="#cb16-227" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">1.8</span>), </span>
-<span id="cb16-228"><a href="#cb16-228" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb16-229"><a href="#cb16-229" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flea host"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
-<span id="cb16-230"><a href="#cb16-230" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Host"</span>) <span class="sc">+</span></span>
-<span id="cb16-231"><a href="#cb16-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>) </span>
-<span id="cb16-232"><a href="#cb16-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-233"><a href="#cb16-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-234"><a href="#cb16-234" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data availability</span></span>
-<span id="cb16-235"><a href="#cb16-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-236"><a href="#cb16-236" aria-hidden="true" tabindex="-1"></a>The data is available as txt-Files under <span class="ot">&lt;https://github.com/jkruppa/biodatascience&gt;</span>.</span>
-<span id="cb16-237"><a href="#cb16-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-240"><a href="#cb16-240" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb16-241"><a href="#cb16-241" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb16-242"><a href="#cb16-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-243"><a href="#cb16-243" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-244"><a href="#cb16-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
-<span id="cb16-245"><a href="#cb16-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-246"><a href="#cb16-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
-<span id="cb16-247"><a href="#cb16-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-248"><a href="#cb16-248" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-249"><a href="#cb16-249" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
-<span id="cb16-250"><a href="#cb16-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-251"><a href="#cb16-251" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
-<span id="cb16-252"><a href="#cb16-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-253"><a href="#cb16-253" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-254"><a href="#cb16-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host, site) <span class="sc">|&gt;</span> </span>
-<span id="cb16-255"><a href="#cb16-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-256"><a href="#cb16-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_habitat.txt"</span>)</span>
-<span id="cb16-257"><a href="#cb16-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb16-258"><a href="#cb16-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-194"><a href="#cb16-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-197"><a href="#cb16-197" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-198"><a href="#cb16-198" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb16-199"><a href="#cb16-199" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb16-200"><a href="#cb16-200" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-201"><a href="#cb16-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(host, site) <span class="sc">|&gt;</span> </span>
+<span id="cb16-202"><a href="#cb16-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jump_length),</span>
+<span id="cb16-203"><a href="#cb16-203" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jump_length)) <span class="sc">|&gt;</span> </span>
+<span id="cb16-204"><a href="#cb16-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
+<span id="cb16-205"><a href="#cb16-205" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-206"><a href="#cb16-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-209"><a href="#cb16-209" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-210"><a href="#cb16-210" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb16-211"><a href="#cb16-211" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb16-212"><a href="#cb16-212" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb16-213"><a href="#cb16-213" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-fac-03</span></span>
+<span id="cb16-214"><a href="#cb16-214" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb16-215"><a href="#cb16-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
+<span id="cb16-216"><a href="#cb16-216" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb16-217"><a href="#cb16-217" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
+<span id="cb16-218"><a href="#cb16-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-219"><a href="#cb16-219" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-220"><a href="#cb16-220" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> host, <span class="at">y =</span> jump_length, <span class="at">fill =</span> site)) <span class="sc">+</span></span>
+<span id="cb16-221"><a href="#cb16-221" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
+<span id="cb16-222"><a href="#cb16-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.5</span>),</span>
+<span id="cb16-223"><a href="#cb16-223" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb16-224"><a href="#cb16-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_sdl, <span class="at">fun.args =</span> <span class="fu">list</span>(<span class="at">mult =</span> <span class="dv">1</span>), </span>
+<span id="cb16-225"><a href="#cb16-225" aria-hidden="true" tabindex="-1"></a>               <span class="at">geom=</span><span class="st">"pointrange"</span>, <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
+<span id="cb16-226"><a href="#cb16-226" aria-hidden="true" tabindex="-1"></a>               <span class="at">show.legend =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>)) <span class="sc">+</span></span>
+<span id="cb16-227"><a href="#cb16-227" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"label"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(..y..,<span class="dv">2</span>)),</span>
+<span id="cb16-228"><a href="#cb16-228" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">1.8</span>), </span>
+<span id="cb16-229"><a href="#cb16-229" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb16-230"><a href="#cb16-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flea host"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
+<span id="cb16-231"><a href="#cb16-231" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Host"</span>) <span class="sc">+</span></span>
+<span id="cb16-232"><a href="#cb16-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>) </span>
+<span id="cb16-233"><a href="#cb16-233" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb16-234"><a href="#cb16-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-235"><a href="#cb16-235" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data availability</span></span>
+<span id="cb16-236"><a href="#cb16-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-237"><a href="#cb16-237" aria-hidden="true" tabindex="-1"></a>The data is available as txt-Files under <span class="ot">&lt;https://github.com/jkruppa/biodatascience&gt;</span>.</span>
+<span id="cb16-238"><a href="#cb16-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-241"><a href="#cb16-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb16-242"><a href="#cb16-242" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb16-243"><a href="#cb16-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-244"><a href="#cb16-244" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-245"><a href="#cb16-245" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
+<span id="cb16-246"><a href="#cb16-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-247"><a href="#cb16-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
+<span id="cb16-248"><a href="#cb16-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-249"><a href="#cb16-249" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-250"><a href="#cb16-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
+<span id="cb16-251"><a href="#cb16-251" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-252"><a href="#cb16-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
+<span id="cb16-253"><a href="#cb16-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-254"><a href="#cb16-254" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb16-255"><a href="#cb16-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host, site) <span class="sc">|&gt;</span> </span>
+<span id="cb16-256"><a href="#cb16-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-257"><a href="#cb16-257" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_habitat.txt"</span>)</span>
+<span id="cb16-258"><a href="#cb16-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb16-259"><a href="#cb16-259" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-260"><a href="#cb16-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-261"><a href="#cb16-261" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
-<span id="cb16-262"><a href="#cb16-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-263"><a href="#cb16-263" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
-<span id="cb16-264"><a href="#cb16-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-265"><a href="#cb16-265" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
-<span id="cb16-266"><a href="#cb16-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-267"><a href="#cb16-267" aria-hidden="true" tabindex="-1"></a>term</span>
-<span id="cb16-268"><a href="#cb16-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-269"><a href="#cb16-269" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
-<span id="cb16-270"><a href="#cb16-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-271"><a href="#cb16-271" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
-<span id="cb16-272"><a href="#cb16-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-273"><a href="#cb16-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
-<span id="cb16-274"><a href="#cb16-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-275"><a href="#cb16-275" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb16-276"><a href="#cb16-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-277"><a href="#cb16-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb16-261"><a href="#cb16-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-262"><a href="#cb16-262" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
+<span id="cb16-263"><a href="#cb16-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-264"><a href="#cb16-264" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb16-265"><a href="#cb16-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-266"><a href="#cb16-266" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb16-267"><a href="#cb16-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-268"><a href="#cb16-268" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb16-269"><a href="#cb16-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-270"><a href="#cb16-270" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb16-271"><a href="#cb16-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-272"><a href="#cb16-272" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb16-273"><a href="#cb16-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-274"><a href="#cb16-274" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb16-275"><a href="#cb16-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-276"><a href="#cb16-276" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb16-277"><a href="#cb16-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-278"><a href="#cb16-278" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

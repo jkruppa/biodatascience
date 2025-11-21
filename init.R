@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork,
                gghalves, ggdist)
 ## global seed
-set.seed(20251115)
+set.seed(202511)
 ## ggplot theme
 theme_book <- function() {
   theme_minimal() +

@@ -36,8 +36,8 @@ book:
       - chapter-03-what-is-a-model.qmd
     - part: chapter-10-preface.qmd  
       chapters:
-      - chapter-11-factorial-data.qmd   
-      - chapter-12-covariate-data.qmd
+      - chapter-11-covariate-data.qmd
+      - chapter-12-factorial-data.qmd   
       - chapter-13-combined-data.qmd
     - part: chapter-20-programing.qmd
       chapters:

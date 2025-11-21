@@ -4,7 +4,7 @@ source("init.R")
 
 # Body weight of fleas {#sec-temp}
 
-*Last modified on `r format(fs::file_info("chapter-12-covariate-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+*Last modified on `r format(fs::file_info("chapter-11-covariate-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"A quote." --- Dan Meyer*
 

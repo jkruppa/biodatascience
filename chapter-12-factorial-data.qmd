@@ -4,11 +4,13 @@ source("init.R")
 
 # Fleas of animals {#sec-data-examples}
 
-*Last modified on `r format(fs::file_info("chapter-11-factorial-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+*Last modified on `r format(fs::file_info("chapter-12-factorial-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"A quote." --- Dan Meyer*
 
 ## General background
+
+What is a data grid?
 
 ## Theoretical background
 
@@ -41,6 +43,12 @@ jump_flea_tbl <- tibble(host = rep(0:1, each = 7),
                         jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |> 
   mutate(host = factor(host, labels = c("cat", "dog")))
 ```
+
+```{r}
+expand_grid(host = c("cat", "dog"), rep = 1:7)
+```
+
+
 
 ```{r}
 jump_flea_tbl |> 
@@ -126,13 +134,12 @@ jump_animals_tbl |>
 - Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating` on a Likert scale from 1 to 5, with 5 being the strongest expression.
 - The infection status with the flea cold is called `infected`, with a value of 0/1 for no/yes.
 
-
 ```{r}
 tibble(jump_length = rnorm(7, 5, 1),
        count_right_leg = rpois(7, 4),
        count_left_leg = rpois(7, 4),
        count_leg = (count_left_leg + count_right_leg)/2,
-       rating = NA,
+       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),
        infectd = rbinom(7, prob = 0.5, size = 1))
 ```
 
@@ -145,10 +152,12 @@ Why so complex?
 
 ```{r}
 jump_habitat_eff_grid <- expand_grid(host = 1:3, site = 1:2) |> 
-  mutate(mean_host = c(19.9, 30.4, 15.2, 19.9, 30.4, 15.2),
-         mean_site = c(2, 5, -5, 2, 5, 5),
+  mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),
+         mean_site = c(2, 5, 2, 5, 5, -5),
          mean = mean_host + mean_site,
-         sd = c(9.1, 9.1, 4.6, 9.1, 9.1, 4.6))
+         sd_host = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6),
+         sd_site = c(0.3, 0.5, 0.3, 0.5, 0.3, 0.5),
+         sd = sd_host + sd_site)
 jump_habitat_eff_grid
 ```
 
