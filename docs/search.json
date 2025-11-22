@@ -10,13 +10,23 @@
     ]
   },
   {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Models of Reality",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
+    "objectID": "preface.html",
+    "href": "preface.html",
+    "title": "Preface",
+    "section": "",
+    "text": "References\nIt’s too early to write a preface. I started writing this book a few weeks ago. From my perspective, it will be a good one, but it will take some time. In the meantime, you are welcome to see what’s happening here and what I’m writing. Sometimes things will be in the wrong place. This is a normal part of the writing process. Just so you know, I started writing on 15 November 2025.\ntext1\n3",
     "crumbs": [
-      "Welcome"
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "preface.html#references",
+    "href": "preface.html#references",
+    "title": "Preface",
+    "section": "",
+    "text": "[1] Smolin L. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin; 2019.\n\n\n[2] Feynman RP, Leighton R. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House; 1992.\n\n\n[3] Feynman RP. Cargo cult science. In: The Art and Science of Analog Circuit Design. Elsevier; 1998:55-61.",
+    "crumbs": [
+      "Preface"
     ]
   },
   {
@@ -30,11 +40,21 @@
     ]
   },
   {
+    "objectID": "chapter-00-preface.html#references",
+    "href": "chapter-00-preface.html#references",
+    "title": "From science to data by models",
+    "section": "",
+    "text": "[1] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[2] Everett III H. ’Relative state’ formulation of quantum mechanics. Reviews of modern physics. 1957;29(3):454.",
+    "crumbs": [
+      "From science to data by models"
+    ]
+  },
+  {
     "objectID": "chapter-01-what-is-science.html",
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 18. November 2025 at 20:02:34\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\nChalmers (2013) What is this thing called Science?\nFeynman (1966) What is science\nCampbell (1952) What is science?\nClark and Berry (2025) Models Demystified: A Practical Guide from Linear Regression to Deep Learning\nCox and Efron (2017) Statistical Thinking for the 21st Century\nDeutsch (2011) The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 18. November 2025 at 20:02:34\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\n2 What is this thing called Science?\n3 What is science\n4 What is science?\n5 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n6 Statistical Thinking for the 21st Century\n7 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -45,7 +65,7 @@
     "href": "chapter-01-what-is-science.html#general-background",
     "title": "1  What is science?",
     "section": "",
-    "text": "“Any sufficiently advanced technology is indistinguishable from magic.” — Clarke (1968), Clarke’s third law\n\n\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss",
+    "text": "“Any sufficiently advanced technology is indistinguishable from magic.” —1, Clarke’s third law\n\n\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -133,7 +153,7 @@
     "href": "chapter-01-what-is-science.html#references",
     "title": "1  What is science?",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nCampbell, Norman Robert. 1952. “What Is Science?”\n\n\nChalmers, Alan F. 2013. What Is This Thing Called Science? Hackett Publishing.\n\n\nClark, Michael, and Seth Berry. 2025. Models Demystified: A Practical Guide from Linear Regression to Deep Learning. CRC Press.\n\n\nClarke, Arthur C. 1968. “Clarke’s Third Law on UFO’s.” Science 159 (3812): 255–55.\n\n\nCox, DR, and Bradley Efron. 2017. “Statistical Thinking for 21st Century Scientists.” Science Advances 3 (6): e1700768.\n\n\nDeutsch, David. 2011. The Beginning of Infinity: Explanations That Transform the World. penguin uK.\n\n\nFeynman, Richard. 1966. “What Is Science.”",
+    "text": "References\n\n\n\n\n\n\n[1] Clarke AC. Clarke’s third law on UFO’s. Science. 1968;159(3812):255-255.\n\n\n[2] Chalmers AF. What Is This Thing Called Science? Hackett Publishing; 2013.\n\n\n[3] Feynman R. What is science. Published online 1966.\n\n\n[4] Campbell NR. What is science? Published online 1952.\n\n\n[5] Clark M, Berry S. Models Demystified: A Practical Guide from Linear Regression to Deep Learning. CRC Press; 2025.\n\n\n[6] Cox D, Efron B. Statistical thinking for 21st century scientists. Science advances. 2017;3(6):e1700768.\n\n\n[7] Deutsch D. The Beginning of Infinity: Explanations That Transform the World. penguin uK; 2011.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -177,7 +197,7 @@
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
     "section": "2.4 Data",
-    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n7.7\n\n\n1.0\n10.0\n\n\n2.3\n13.5\n\n\n3.5\n13.0\n\n\n5.2\n10.2\n\n\n7.1\n8.7\n\n\n8.4\n10.6\n\n\n9.2\n14.7\n\n\n10.0\n21.0\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
+    "text": "2.4 Data\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n8.5\n\n\n1.0\n9.6\n\n\n2.3\n13.7\n\n\n3.5\n13.2\n\n\n5.2\n11.0\n\n\n7.1\n8.3\n\n\n8.4\n10.9\n\n\n9.2\n14.3\n\n\n10.0\n21.1\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -243,7 +263,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 19. November 2025 at 19:56:20\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\nMcCullagh (2002) What is a statistical model?\nAppleton (1995) What do we mean by a statistical model?\nHand (2019) What Is the Purpose of Statistical Modeling?\nSpanos (2006) Where do statistical models come from? Revisiting the problem of specification\nGilchrist (1984) Statistical modelling",
+    "text": "3.1 General background\nLast modified on 22. November 2025 at 19:25:57\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -342,7 +362,7 @@
     "href": "chapter-03-what-is-a-model.html#references",
     "title": "3  What is a model?",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nAppleton, David R. 1995. “What Do We Mean by a Statistical Model?” Statistics in Medicine 14 (2): 185–97.\n\n\nGilchrist, Warren. 1984. Statistical Modelling. Wiley Chichester.\n\n\nHand, David. 2019. “What Is the Purpose of Statistical Modeling?” Harvard Data Science Review 1 (1).\n\n\nMcCullagh, Peter. 2002. “What Is a Statistical Model?” The Annals of Statistics 30 (5): 1225–1310.\n\n\nSpanos, Aris. 2006. “Where Do Statistical Models Come from? Revisiting the Problem of Specification.” Lecture Notes-Monograph Series, 98–119.",
+    "text": "References\n\n\n\n\n\n\n[1] McCullagh P. What is a statistical model? The Annals of Statistics. 2002;30(5):1225-1310.\n\n\n[2] Appleton DR. What do we mean by a statistical model? Statistics in medicine. 1995;14(2):185-197.\n\n\n[3] Hand D. What is the purpose of statistical modeling? Harvard Data Science Review. 2019;1(1).\n\n\n[4] Spanos A. Where do statistical models come from? Revisiting the problem of specification. Lecture Notes-Monograph Series. Published online 2006:98-119.\n\n\n[5] Gilchrist W. Statistical Modelling. Wiley Chichester; 1984.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -359,201 +379,222 @@
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html",
-    "href": "chapter-11-factorial-data.html",
-    "title": "4  Fleas of animals",
+    "objectID": "chapter-10-preface.html#references",
+    "href": "chapter-10-preface.html#references",
+    "title": "Tales of data",
     "section": "",
-    "text": "4.1 General background\nLast modified on 20. November 2025 at 21:08:32",
+    "text": "[1] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[2] Everett III H. ’Relative state’ formulation of quantum mechanics. Reviews of modern physics. 1957;29(3):454.",
     "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "Tales of data"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#theoretical-background",
-    "href": "chapter-11-factorial-data.html#theoretical-background",
-    "title": "4  Fleas of animals",
+    "objectID": "chapter-11-covariate-data.html",
+    "href": "chapter-11-covariate-data.html",
+    "title": "4  Body weight of fleas",
+    "section": "",
+    "text": "4.1 General background\nLast modified on 22. November 2025 at 09:30:36",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#theoretical-background",
+    "href": "chapter-11-covariate-data.html#theoretical-background",
+    "title": "4  Body weight of fleas",
     "section": "4.2 Theoretical background",
     "text": "4.2 Theoretical background",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#r-packages-used",
-    "href": "chapter-11-factorial-data.html#r-packages-used",
-    "title": "4  Fleas of animals",
+    "objectID": "chapter-11-covariate-data.html#r-packages-used",
+    "href": "chapter-11-covariate-data.html#r-packages-used",
+    "title": "4  Body weight of fleas",
     "section": "4.3 R packages used",
-    "text": "4.3 R packages used\n\n\nR Code [show / hide]\npacman::p_load(tidyverse, conflicted)\n\n\nWickham, Çetinkaya-Rundel, and Grolemund (2023)",
+    "text": "4.3 R packages used",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#data",
-    "href": "chapter-11-factorial-data.html#data",
-    "title": "4  Fleas of animals",
+    "objectID": "chapter-11-covariate-data.html#data",
+    "href": "chapter-11-covariate-data.html#data",
+    "title": "4  Body weight of fleas",
     "section": "4.4 Data",
-    "text": "4.4 Data\nSmall data\n\n4.4.1 Jump performances of fleas\nCadiergues, Joubert, and Franc (2000)\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(host = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\")))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  21.2              7.3 \n2 dog                  33.0              6.57\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |&gt;\n  pivot_longer(cols = cat:dog, values_to = \"jump_length\", names_to = \"host\") |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 4 × 3\n  host  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat                  21.2              9.36\n2 fox                  34.6             10.2 \n3 rat                  13.4              2.51\n4 dog                  34.0             17.4 \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating on a Likert scale from 1 to 5, with 5 being the strongest expression.\nThe infection status with the flea cold is called infected, with a value of 0/1 for no/yes.\n\n\n\nR Code [show / hide]\ntibble(jump_length = rnorm(7, 5, 1),\n       count_right_leg = rpois(7, 4),\n       count_left_leg = rpois(7, 4),\n       count_leg = (count_left_leg + count_right_leg)/2,\n       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),\n       infectd = rbinom(7, prob = 0.5, size = 1))\n\n\n# A tibble: 7 × 6\n  jump_length count_right_leg count_left_leg count_leg rating infectd\n        &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;\n1        6.17               4              8       6        3       1\n2        5.03               5              5       5        4       0\n3        6.51               6              1       3.5      3       0\n4        4.38               2              1       1.5      3       1\n5        2.62               0              3       1.5      3       0\n6        6.64               3              3       3        2       0\n7        3.82               3              3       3        3       0\n\n\n\n\n4.4.3 Fleas in urban and rural habitats\nWhy so complex?\nWickham and Henry (2025)\n\n\nR Code [show / hide]\njump_habitat_eff_grid &lt;- expand_grid(host = 1:3, site = 1:2) |&gt; \n  mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),\n         mean_site = c(2, 5, 2, 5, 5, -5),\n         mean = mean_host + mean_site,\n         sd_host = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6),\n         sd_site = c(0.3, 0.5, 0.3, 0.5, 0.3, 0.5),\n         sd = sd_host + sd_site)\njump_habitat_eff_grid\n\n\n# A tibble: 6 × 8\n   host  site mean_host mean_site  mean sd_host sd_site    sd\n  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;\n1     1     1      19.9         2  21.9     9.1     0.3   9.4\n2     1     2      19.9         5  24.9     9.1     0.5   9.6\n3     2     1      30.4         2  32.4     9.1     0.3   9.4\n4     2     2      30.4         5  35.4     9.1     0.5   9.6\n5     3     1      15.2         5  20.2     4.6     0.3   4.9\n6     3     2      15.2        -5  10.2     4.6     0.5   5.1\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_eff_grid |&gt; \n  group_by(host, site) |&gt; nest() |&gt; \n  mutate(jump_length = map(data, ~rnorm(5, .x$mean, .x$sd))) |&gt; \n  unnest(c(host, site, jump_length)) |&gt; ungroup()\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(host, site, jump_length) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\", \"rat\")),\n         site = factor(site, labels = c(\"urban\", \"rural\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(host, site) |&gt; \n  summarise(mean(jump_length),\n            sd(jump_length)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   host [3]\n  host  site  `mean(jump_length)` `sd(jump_length)`\n  &lt;fct&gt; &lt;fct&gt;               &lt;dbl&gt;             &lt;dbl&gt;\n1 cat   urban               15.5               8.22\n2 cat   rural               28.2               8.7 \n3 dog   urban               34.1               9.36\n4 dog   rural               37.8               9.85\n5 rat   urban               19.0               4.44\n6 rat   rural                8.88              7.64\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo",
+    "text": "4.4 Data\n\n4.4.1 Linear\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = abs(rnorm(21, 5, 4)),\n                          y = 10 + 1.2 * x + rnorm(21, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_feeding_tbl &lt;- expand_grid(f = c(0, 1), \n                                       x = abs(rnorm(21, 5, 4))) |&gt; \n  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Non-linear\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- tibble(x = abs(rnorm(32, 3, 3)),\n                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- expand_grid(f = c(0, 1), \n                                          x = abs(rnorm(42, 2.5, 2.5))) |&gt; \n  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.4: foo (A) foo (B) foo",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#alternatives",
-    "href": "chapter-11-factorial-data.html#alternatives",
-    "title": "4  Fleas of animals",
-    "section": "4.6 Alternatives",
-    "text": "4.6 Alternatives\nFurther tutorials and R packages on XXX",
+    "objectID": "chapter-11-covariate-data.html#alternatives",
+    "href": "chapter-11-covariate-data.html#alternatives",
+    "title": "4  Body weight of fleas",
+    "section": "4.5 Alternatives",
+    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#glossary",
-    "href": "chapter-11-factorial-data.html#glossary",
-    "title": "4  Fleas of animals",
-    "section": "4.7 Glossary",
-    "text": "4.7 Glossary\n\nterm\n\nwhat does it mean.",
+    "objectID": "chapter-11-covariate-data.html#glossary",
+    "href": "chapter-11-covariate-data.html#glossary",
+    "title": "4  Body weight of fleas",
+    "section": "4.6 Glossary",
+    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-11-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "4  Fleas of animals",
-    "section": "4.8 The meaning of “Models of Reality” in this chapter.",
-    "text": "4.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "objectID": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "4  Body weight of fleas",
+    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#summary",
-    "href": "chapter-11-factorial-data.html#summary",
-    "title": "4  Fleas of animals",
-    "section": "4.9 Summary",
-    "text": "4.9 Summary",
+    "objectID": "chapter-11-covariate-data.html#summary",
+    "href": "chapter-11-covariate-data.html#summary",
+    "title": "4  Body weight of fleas",
+    "section": "4.8 Summary",
+    "text": "4.8 Summary",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   },
   {
-    "objectID": "chapter-11-factorial-data.html#references",
-    "href": "chapter-11-factorial-data.html#references",
-    "title": "4  Fleas of animals",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nCadiergues, Marie-Christine, Christel Joubert, and Michel Franc. 2000. “A Comparison of Jump Performances of the Dog Flea, Ctenocephalides Canis (Curtis, 1826) and the Cat Flea, Ctenocephalides Felis Felis (Bouché, 1835).” Veterinary Parasitology 92 (3): 239–41.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\".\n\n\nWickham, Hadley, and Lionel Henry. 2025. Purrr: Functional Programming Tools. https://purrr.tidyverse.org/.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html",
-    "href": "chapter-12-covariate-data.html",
-    "title": "5  Body weight of fleas",
-    "section": "",
-    "text": "5.1 General background\nLast modified on 18. November 2025 at 20:32:35",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#theoretical-background",
-    "href": "chapter-12-covariate-data.html#theoretical-background",
-    "title": "5  Body weight of fleas",
-    "section": "5.2 Theoretical background",
-    "text": "5.2 Theoretical background",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#r-packages-used",
-    "href": "chapter-12-covariate-data.html#r-packages-used",
-    "title": "5  Body weight of fleas",
-    "section": "5.3 R packages used",
-    "text": "5.3 R packages used",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#data",
-    "href": "chapter-12-covariate-data.html#data",
-    "title": "5  Body weight of fleas",
-    "section": "5.4 Data",
-    "text": "5.4 Data",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#alternatives",
-    "href": "chapter-12-covariate-data.html#alternatives",
-    "title": "5  Body weight of fleas",
-    "section": "5.5 Alternatives",
-    "text": "5.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#glossary",
-    "href": "chapter-12-covariate-data.html#glossary",
-    "title": "5  Body weight of fleas",
-    "section": "5.6 Glossary",
-    "text": "5.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-12-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "5  Body weight of fleas",
-    "section": "5.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "5.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#summary",
-    "href": "chapter-12-covariate-data.html#summary",
-    "title": "5  Body weight of fleas",
-    "section": "5.8 Summary",
-    "text": "5.8 Summary",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-covariate-data.html#references",
-    "href": "chapter-12-covariate-data.html#references",
-    "title": "5  Body weight of fleas",
+    "objectID": "chapter-11-covariate-data.html#references",
+    "href": "chapter-11-covariate-data.html#references",
+    "title": "4  Body weight of fleas",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Body weight of fleas</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html",
+    "href": "chapter-12-factorial-data.html",
+    "title": "5  Fleas of animals",
+    "section": "",
+    "text": "5.1 General background\nLast modified on 21. November 2025 at 15:21:35\nWhat is a data grid?",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#theoretical-background",
+    "href": "chapter-12-factorial-data.html#theoretical-background",
+    "title": "5  Fleas of animals",
+    "section": "5.2 Theoretical background",
+    "text": "5.2 Theoretical background",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#r-packages-used",
+    "href": "chapter-12-factorial-data.html#r-packages-used",
+    "title": "5  Fleas of animals",
+    "section": "5.3 R packages used",
+    "text": "5.3 R packages used\n\n\nR Code [show / hide]\npacman::p_load(tidyverse, conflicted)\n\n\n1",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#data",
+    "href": "chapter-12-factorial-data.html#data",
+    "title": "5  Fleas of animals",
+    "section": "5.4 Data",
+    "text": "5.4 Data\nSmall data and grid\n\n5.4.1 Jump performances of fleas\n2\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\n\n\nR Code [show / hide]\njump_flea_grid &lt;- expand_grid(host = c(\"cat\", \"dog\")) |&gt; \n  mutate(mean = c(19.9, 30.4), \n         sd = c(9.1))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- jump_flea_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm) |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  host  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat                     21.2                 7.3 \n2 dog                     33.0                 6.57\n\n\n\n\n\n\n\n\n\n\nFigure 5.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_grid &lt;- expand_grid(host = c(\"cat\", \"fox\", \"rat\", \"dog\")) |&gt; \n  mutate(mean = c(19.9, 35.2, 15.2, 30.4), \n         sd = c(9.1, 10.3, 4.6, 9.1))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- jump_animals_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm) |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 4 × 3\n  host  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat                     21.2                 9.36\n2 fox                     34.6                10.2 \n3 rat                     13.4                 2.51\n4 dog                     34.0                17.4 \n\n\n\n\n\n\n\n\n\n\nFigure 5.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n5.4.2 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating on a Likert scale from 1 to 5, with 5 being the strongest expression.\nThe infection status with the flea cold is called infected, with a value of 0/1 for no/yes.\n\n\n\nR Code [show / hide]\ntibble(jump_length_cm = rnorm(7, 5, 1),\n       count_right_leg = rpois(7, 4),\n       count_left_leg = rpois(7, 4),\n       count_leg = (count_left_leg + count_right_leg)/2,\n       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),\n       infectd = rbinom(7, prob = 0.5, size = 1))\n\n\n# A tibble: 7 × 6\n  jump_length_cm count_right_leg count_left_leg count_leg rating infectd\n           &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;\n1           6.17               4              8       6        3       1\n2           5.03               5              5       5        4       0\n3           6.51               6              1       3.5      3       0\n4           4.38               2              1       1.5      3       1\n5           2.62               0              3       1.5      3       0\n6           6.64               3              3       3        2       0\n7           3.82               3              3       3        3       0\n\n\n\n\n5.4.3 Fleas in urban and rural habitats\nWhy so complex?\n3\n\n\nR Code [show / hide]\njump_habitat_grid &lt;- expand_grid(host = 1:3, site = 1:2) |&gt; \n  mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),\n         mean_site = c(5, 0, 5, 0, 5, -5),\n         mean = mean_host + mean_site,\n         sd = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6))\njump_habitat_grid\n\n\n# A tibble: 6 × 6\n   host  site mean_host mean_site  mean    sd\n  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1      19.9         5  24.9   9.1\n2     1     2      19.9         0  19.9   9.1\n3     2     1      30.4         5  35.4   9.1\n4     2     2      30.4         0  30.4   9.1\n5     3     1      15.2         5  20.2   4.6\n6     3     2      15.2        -5  10.2   4.6\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(host, site, jump_length_cm) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\", \"rat\")),\n         site = factor(site, labels = c(\"urban\", \"rural\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(host, site) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   host [3]\n  host  site  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt; &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat   urban                   21.8                 9.26\n2 cat   rural                   23.6                 7.23\n3 dog   urban                   35.2                 9.1 \n4 dog   rural                   27.9                12.8 \n5 rat   urban                   19.2                 1.85\n6 rat   rural                   12.8                 3.74\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#data-availability",
+    "href": "chapter-12-factorial-data.html#data-availability",
+    "title": "5  Fleas of animals",
+    "section": "5.5 Data availability",
+    "text": "5.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#alternatives",
+    "href": "chapter-12-factorial-data.html#alternatives",
+    "title": "5  Fleas of animals",
+    "section": "5.6 Alternatives",
+    "text": "5.6 Alternatives\nFurther tutorials and R packages on XXX\n\n5.6.1 Why linear is a bad idea?\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(host = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\")))\n\n\n\n\n5.6.2 Why is a tibble() bad idea?\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |&gt;\n  pivot_longer(cols = cat:dog, values_to = \"jump_length\", names_to = \"host\") |&gt; \n  mutate(host = as_factor(host))",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#glossary",
+    "href": "chapter-12-factorial-data.html#glossary",
+    "title": "5  Fleas of animals",
+    "section": "5.7 Glossary",
+    "text": "5.7 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "5  Fleas of animals",
+    "section": "5.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "5.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#summary",
+    "href": "chapter-12-factorial-data.html#summary",
+    "title": "5  Fleas of animals",
+    "section": "5.9 Summary",
+    "text": "5.9 Summary",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#references",
+    "href": "chapter-12-factorial-data.html#references",
+    "title": "5  Fleas of animals",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n[1] Wickham H, Çetinkaya-Rundel M, Grolemund G. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\"; 2023.\n\n\n[2] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[3] Wickham H, Henry L. Purrr: Functional Programming Tools.; 2025. https://purrr.tidyverse.org/",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
     ]
   },
   {
@@ -670,7 +711,7 @@
     "href": "chapter-21-programing-R.html",
     "title": "7  Programing in the 21st century",
     "section": "",
-    "text": "7.1 General background\nLast modified on 20. November 2025 at 14:02:31\nDormann and Ellison (2025)\nWickham, Çetinkaya-Rundel, and Grolemund (2023)\nWickham (2023)\nRinker and Kurkiewicz (2012)",
+    "text": "7.1 General background\nLast modified on 20. November 2025 at 14:02:31\n1\n2\n3\n4",
     "crumbs": [
       "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in the 21st century</span>"
@@ -758,7 +799,7 @@
     "href": "chapter-21-programing-R.html#references",
     "title": "7  Programing in the 21st century",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\nDormann, Carsten F, and Aaron M Ellison. 2025. Statistics by Simulation: A Synthetic Data Approach. Princeton University Press.\n\n\nRinker, Tyler, and Dason Kurkiewicz. 2012. Pacman: Package Management Tool. https://github.com/trinker/pacman.\n\n\nWickham, Hadley. 2023. Conflicted: An Alternative Conflict Resolution Strategy. https://conflicted.r-lib.org/.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\".",
+    "text": "References\n\n\n\n\n\n\n[1] Dormann CF, Ellison AM. Statistics by Simulation: A Synthetic Data Approach. Princeton University Press; 2025.\n\n\n[2] Wickham H, Çetinkaya-Rundel M, Grolemund G. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\"; 2023.\n\n\n[3] Wickham H. Conflicted: An Alternative Conflict Resolution Strategy.; 2023. https://conflicted.r-lib.org/\n\n\n[4] Rinker T, Kurkiewicz D. Pacman: Package Management Tool.; 2012. https://github.com/trinker/pacman",
     "crumbs": [
       "Speaking to data",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Programing in the 21st century</span>"
@@ -885,104 +926,6 @@
     ]
   },
   {
-    "objectID": "appendix-a.html#theoretical-background",
-    "href": "appendix-a.html#theoretical-background",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.5 Theoretical background",
-    "text": "A.5 Theoretical background",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#r-packages-used",
-    "href": "appendix-a.html#r-packages-used",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.6 R packages used",
-    "text": "A.6 R packages used",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#data",
-    "href": "appendix-a.html#data",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.7 Data",
-    "text": "A.7 Data",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#alternatives",
-    "href": "appendix-a.html#alternatives",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.8 Alternatives",
-    "text": "A.8 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#glossary",
-    "href": "appendix-a.html#glossary",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.9 Glossary",
-    "text": "A.9 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "appendix-a.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.4 The meaning of “Models of Reality” in this chapter.",
-    "text": "A.4 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#summary",
-    "href": "appendix-a.html#summary",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.5 Summary",
-    "text": "A.5 Summary",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#references",
-    "href": "appendix-a.html#references",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#references-.unnumbered-.-unlisted",
-    "href": "index.html#references-.unnumbered-.-unlisted",
-    "title": "Models of Reality",
-    "section": "References {.unnumbered . unlisted}",
-    "text": "References {.unnumbered . unlisted}\n\n\n\n\n\n\nFeynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
     "objectID": "appendix-a.html#used-theme-of-the-visualitations",
     "href": "appendix-a.html#used-theme-of-the-visualitations",
     "title": "Appendix A — Why does it look like this?",
@@ -1005,284 +948,14 @@
     ]
   },
   {
-    "objectID": "appendix-a.html#general-background",
-    "href": "appendix-a.html#general-background",
+    "objectID": "appendix-a.html#references",
+    "href": "appendix-a.html#references",
     "title": "Appendix A — Why does it look like this?",
-    "section": "A.4 General background",
-    "text": "A.4 General background",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-factorial-data.html#data-availability",
-    "href": "chapter-11-factorial-data.html#data-availability",
-    "title": "4  Fleas of animals",
-    "section": "4.5 Data availability",
-    "text": "4.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html",
-    "href": "chapter-12-factorial-data.html",
-    "title": "5  Fleas of animals",
-    "section": "",
-    "text": "5.1 General background\nLast modified on 21. November 2025 at 15:21:35\nWhat is a data grid?",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#theoretical-background",
-    "href": "chapter-12-factorial-data.html#theoretical-background",
-    "title": "5  Fleas of animals",
-    "section": "5.2 Theoretical background",
-    "text": "5.2 Theoretical background",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#r-packages-used",
-    "href": "chapter-12-factorial-data.html#r-packages-used",
-    "title": "5  Fleas of animals",
-    "section": "5.3 R packages used",
-    "text": "5.3 R packages used\n\n\nR Code [show / hide]\npacman::p_load(tidyverse, conflicted)\n\n\nWickham, Çetinkaya-Rundel, and Grolemund (2023)",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#data",
-    "href": "chapter-12-factorial-data.html#data",
-    "title": "5  Fleas of animals",
-    "section": "5.4 Data",
-    "text": "5.4 Data\nSmall data and grid\n\n5.4.1 Jump performances of fleas\nCadiergues, Joubert, and Franc (2000)\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\n\n\nR Code [show / hide]\njump_flea_grid &lt;- expand_grid(host = c(\"cat\", \"dog\")) |&gt; \n  mutate(mean = c(19.9, 30.4), \n         sd = c(9.1))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- jump_flea_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm) |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  host  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat                     21.2                 7.3 \n2 dog                     33.0                 6.57\n\n\n\n\n\n\n\n\n\n\nFigure 5.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_grid &lt;- expand_grid(host = c(\"cat\", \"fox\", \"rat\", \"dog\")) |&gt; \n  mutate(mean = c(19.9, 35.2, 15.2, 30.4), \n         sd = c(9.1, 10.3, 4.6, 9.1))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- jump_animals_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm) |&gt; \n  mutate(host = as_factor(host))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(host) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 4 × 3\n  host  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat                     21.2                 9.36\n2 fox                     34.6                10.2 \n3 rat                     13.4                 2.51\n4 dog                     34.0                17.4 \n\n\n\n\n\n\n\n\n\n\nFigure 5.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n5.4.2 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating on a Likert scale from 1 to 5, with 5 being the strongest expression.\nThe infection status with the flea cold is called infected, with a value of 0/1 for no/yes.\n\n\n\nR Code [show / hide]\ntibble(jump_length_cm = rnorm(7, 5, 1),\n       count_right_leg = rpois(7, 4),\n       count_left_leg = rpois(7, 4),\n       count_leg = (count_left_leg + count_right_leg)/2,\n       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),\n       infectd = rbinom(7, prob = 0.5, size = 1))\n\n\n# A tibble: 7 × 6\n  jump_length_cm count_right_leg count_left_leg count_leg rating infectd\n           &lt;dbl&gt;           &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;\n1           6.17               4              8       6        3       1\n2           5.03               5              5       5        4       0\n3           6.51               6              1       3.5      3       0\n4           4.38               2              1       1.5      3       1\n5           2.62               0              3       1.5      3       0\n6           6.64               3              3       3        2       0\n7           3.82               3              3       3        3       0\n\n\n\n\n5.4.3 Fleas in urban and rural habitats\nWhy so complex?\nWickham and Henry (2025)\n\n\nR Code [show / hide]\njump_habitat_grid &lt;- expand_grid(host = 1:3, site = 1:2) |&gt; \n  mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),\n         mean_site = c(5, 0, 5, 0, 5, -5),\n         mean = mean_host + mean_site,\n         sd = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6))\njump_habitat_grid\n\n\n# A tibble: 6 × 6\n   host  site mean_host mean_site  mean    sd\n  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     1     1      19.9         5  24.9   9.1\n2     1     2      19.9         0  19.9   9.1\n3     2     1      30.4         5  35.4   9.1\n4     2     2      30.4         0  30.4   9.1\n5     3     1      15.2         5  20.2   4.6\n6     3     2      15.2        -5  10.2   4.6\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_grid |&gt; \n  rowwise() |&gt; \n  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jump_length_cm)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(host, site, jump_length_cm) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\", \"rat\")),\n         site = factor(site, labels = c(\"urban\", \"rural\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(host, site) |&gt; \n  summarise(mean(jump_length_cm),\n            sd(jump_length_cm)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   host [3]\n  host  site  `mean(jump_length_cm)` `sd(jump_length_cm)`\n  &lt;fct&gt; &lt;fct&gt;                  &lt;dbl&gt;                &lt;dbl&gt;\n1 cat   urban                   21.8                 9.26\n2 cat   rural                   23.6                 7.23\n3 dog   urban                   35.2                 9.1 \n4 dog   rural                   27.9                12.8 \n5 rat   urban                   19.2                 1.85\n6 rat   rural                   12.8                 3.74\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#data-availability",
-    "href": "chapter-12-factorial-data.html#data-availability",
-    "title": "5  Fleas of animals",
-    "section": "5.5 Data availability",
-    "text": "5.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#alternatives",
-    "href": "chapter-12-factorial-data.html#alternatives",
-    "title": "5  Fleas of animals",
-    "section": "5.6 Alternatives",
-    "text": "5.6 Alternatives\nFurther tutorials and R packages on XXX\n\n5.6.1 Why linear is a bad idea?\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(host = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |&gt; \n  mutate(host = factor(host, labels = c(\"cat\", \"dog\")))\n\n\n\n\n5.6.2 Why is a tibble() bad idea?\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |&gt;\n  pivot_longer(cols = cat:dog, values_to = \"jump_length\", names_to = \"host\") |&gt; \n  mutate(host = as_factor(host))",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#glossary",
-    "href": "chapter-12-factorial-data.html#glossary",
-    "title": "5  Fleas of animals",
-    "section": "5.7 Glossary",
-    "text": "5.7 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "5  Fleas of animals",
-    "section": "5.8 The meaning of “Models of Reality” in this chapter.",
-    "text": "5.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#summary",
-    "href": "chapter-12-factorial-data.html#summary",
-    "title": "5  Fleas of animals",
-    "section": "5.9 Summary",
-    "text": "5.9 Summary",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-12-factorial-data.html#references",
-    "href": "chapter-12-factorial-data.html#references",
-    "title": "5  Fleas of animals",
-    "section": "References",
-    "text": "References\n\n\n\n\n\n\nCadiergues, Marie-Christine, Christel Joubert, and Michel Franc. 2000. “A Comparison of Jump Performances of the Dog Flea, Ctenocephalides Canis (Curtis, 1826) and the Cat Flea, Ctenocephalides Felis Felis (Bouché, 1835).” Veterinary Parasitology 92 (3): 239–41.\n\n\nWickham, Hadley, Mine Çetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\".\n\n\nWickham, Hadley, and Lionel Henry. 2025. Purrr: Functional Programming Tools. https://purrr.tidyverse.org/.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Fleas of animals</span>"
-    ]
-  },
-  {
-    "objectID": "preface.html",
-    "href": "preface.html",
-    "title": "Preface",
-    "section": "",
-    "text": "References\nIt’s too early to write a preface. I started writing this book a few weeks ago. From my perspective, it will be a good one, but it will take some time. In the meantime, you are welcome to see what’s happening here and what I’m writing. Sometimes things will be in the wrong place. This is a normal part of the writing process. Just so you know, I started writing on 15 November 2025.\ntext Smolin (2019)\nRichard P. Feynman (1998)",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "preface.html#references",
-    "href": "preface.html#references",
-    "title": "Preface",
-    "section": "",
-    "text": "Feynman, Richard P. 1998. “Cargo Cult Science.” In The Art and Science of Analog Circuit Design, 55–61. Elsevier.\n\n\nFeynman, Richard Phillips, and Ralph Leighton. 1992. \" Surely You’re Joking, Mr. Feynman!\": Adventures of a Curious Character. Random House.\n\n\nSmolin, Lee. 2019. Einstein’s Unfinished Revolution: The Search for What Lies Beyond the Quantum. Penguin.",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html",
-    "href": "chapter-11-covariate-data.html",
-    "title": "4  Body weight of fleas",
-    "section": "",
-    "text": "4.1 General background\nLast modified on 22. November 2025 at 09:30:36",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#theoretical-background",
-    "href": "chapter-11-covariate-data.html#theoretical-background",
-    "title": "4  Body weight of fleas",
-    "section": "4.2 Theoretical background",
-    "text": "4.2 Theoretical background",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#r-packages-used",
-    "href": "chapter-11-covariate-data.html#r-packages-used",
-    "title": "4  Body weight of fleas",
-    "section": "4.3 R packages used",
-    "text": "4.3 R packages used",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#data",
-    "href": "chapter-11-covariate-data.html#data",
-    "title": "4  Body weight of fleas",
-    "section": "4.4 Data",
-    "text": "4.4 Data\n\n4.4.1 Linear\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = abs(rnorm(21, 5, 4)),\n                          y = 10 + 1.2 * x + rnorm(21, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_feeding_tbl &lt;- expand_grid(f = c(0, 1), \n                                       x = abs(rnorm(21, 5, 4))) |&gt; \n  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Non-linear\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- tibble(x = abs(rnorm(32, 3, 3)),\n                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- expand_grid(f = c(0, 1), \n                                          x = abs(rnorm(42, 2.5, 2.5))) |&gt; \n  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.4: foo (A) foo (B) foo",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#alternatives",
-    "href": "chapter-11-covariate-data.html#alternatives",
-    "title": "4  Body weight of fleas",
-    "section": "4.5 Alternatives",
-    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#glossary",
-    "href": "chapter-11-covariate-data.html#glossary",
-    "title": "4  Body weight of fleas",
-    "section": "4.6 Glossary",
-    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "4  Body weight of fleas",
-    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#summary",
-    "href": "chapter-11-covariate-data.html#summary",
-    "title": "4  Body weight of fleas",
-    "section": "4.8 Summary",
-    "text": "4.8 Summary",
-    "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-11-covariate-data.html#references",
-    "href": "chapter-11-covariate-data.html#references",
-    "title": "4  Body weight of fleas",
     "section": "References",
     "text": "References",
     "crumbs": [
-      "Tales of data",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-00-preface.html#references",
-    "href": "chapter-00-preface.html#references",
-    "title": "From science to data by models",
-    "section": "",
-    "text": "[1] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[2] Everett III H. ’Relative state’ formulation of quantum mechanics. Reviews of modern physics. 1957;29(3):454.",
-    "crumbs": [
-      "From science to data by models"
-    ]
-  },
-  {
-    "objectID": "chapter-10-preface.html#references",
-    "href": "chapter-10-preface.html#references",
-    "title": "Tales of data",
-    "section": "",
-    "text": "[1] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[2] Everett III H. ’Relative state’ formulation of quantum mechanics. Reviews of modern physics. 1957;29(3):454.",
-    "crumbs": [
-      "Tales of data"
-    ]
-  },
-  {
-    "objectID": "chapter-10-preface.html#footnotes",
-    "href": "chapter-10-preface.html#footnotes",
-    "title": "Tales of data",
-    "section": "",
-    "text": "Unfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches2.↩︎",
-    "crumbs": [
-      "Tales of data"
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
     ]
   }
 ]

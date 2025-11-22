@@ -60,7 +60,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -225,6 +224,12 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./preface.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -268,14 +273,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-11-factorial-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Fleas of animals</span></span></a>
+  <a href="./chapter-11-covariate-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Body weight of fleas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-12-covariate-data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Body weight of fleas</span></span></a>
+  <a href="./chapter-12-factorial-data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Fleas of animals</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -316,6 +321,23 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="./template-chapter.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Template chapter</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendix-a.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Why does it look like this?</span></span></a>
   </div>
 </li>
       </ul>
@@ -364,10 +386,11 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 19. November 2025 at 19:56:20</em></p>
+<p><em>Last modified on 22. November 2025 at 19:25:57</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
+<p>Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.</p>
 <section id="general-background" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="general-background"><span class="header-section-number">3.1</span> General background</h2>
 <div id="tbl-names-regression" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="20, 5, 30, 45">
@@ -452,11 +475,11 @@ Table&nbsp;3.1: Table of terms used in the statistical modelling. The terms in b
 </figure>
 </div>
 <p>A sentence why we use <span class="math inline">\(y\)</span> and not <span class="math inline">\(x\)</span> for mean and other stuff.</p>
-<p><span class="citation" data-cites="mccullagh2002statistical">McCullagh (<a href="#ref-mccullagh2002statistical" role="doc-biblioref">2002</a>)</span> <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-30/issue-5/What-is-a-statistical-model/10.1214/aos/1035844977.pdf">What is a statistical model?</a></p>
-<p><span class="citation" data-cites="appleton1995we">Appleton (<a href="#ref-appleton1995we" role="doc-biblioref">1995</a>)</span> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.4780140209?casa_token=jLDogF46zS8AAAAA%3AKOKHMTgbj4gK8ayVXmT1GaXq7slv9i3VGqzA184yydwKUjsDIszepgOaeMQc_L5hRY-TpLZvgDDIdDea">What do we mean by a statistical model?</a></p>
-<p><span class="citation" data-cites="hand2019purpose">Hand (<a href="#ref-hand2019purpose" role="doc-biblioref">2019</a>)</span> <a href="https://hdsr.mitpress.mit.edu/pub/9qsbf3hz/release/2?from=603&amp;to=744">What Is the Purpose of Statistical Modeling?</a></p>
-<p><span class="citation" data-cites="spanos2006statistical">Spanos (<a href="#ref-spanos2006statistical" role="doc-biblioref">2006</a>)</span> <a href="https://arxiv.org/pdf/math.ST/0610849">Where do statistical models come from? Revisiting the problem of specification</a></p>
-<p><span class="citation" data-cites="gilchrist1984statistical">Gilchrist (<a href="#ref-gilchrist1984statistical" role="doc-biblioref">1984</a>)</span> <a href="https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf">Statistical modelling</a></p>
+<p><span class="citation" data-cites="mccullagh2002statistical"><sup><a href="#ref-mccullagh2002statistical" role="doc-biblioref">1</a></sup></span> <a href="https://projecteuclid.org/journals/annals-of-statistics/volume-30/issue-5/What-is-a-statistical-model/10.1214/aos/1035844977.pdf">What is a statistical model?</a></p>
+<p><span class="citation" data-cites="appleton1995we"><sup><a href="#ref-appleton1995we" role="doc-biblioref">2</a></sup></span> <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.4780140209?casa_token=jLDogF46zS8AAAAA%3AKOKHMTgbj4gK8ayVXmT1GaXq7slv9i3VGqzA184yydwKUjsDIszepgOaeMQc_L5hRY-TpLZvgDDIdDea">What do we mean by a statistical model?</a></p>
+<p><span class="citation" data-cites="hand2019purpose"><sup><a href="#ref-hand2019purpose" role="doc-biblioref">3</a></sup></span> <a href="https://hdsr.mitpress.mit.edu/pub/9qsbf3hz/release/2?from=603&amp;to=744">What Is the Purpose of Statistical Modeling?</a></p>
+<p><span class="citation" data-cites="spanos2006statistical"><sup><a href="#ref-spanos2006statistical" role="doc-biblioref">4</a></sup></span> <a href="https://arxiv.org/pdf/math.ST/0610849">Where do statistical models come from? Revisiting the problem of specification</a></p>
+<p><span class="citation" data-cites="gilchrist1984statistical"><sup><a href="#ref-gilchrist1984statistical" role="doc-biblioref">5</a></sup></span> <a href="https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf">Statistical modelling</a></p>
 </section>
 <section id="theoretical-background" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">3.2</span> Theoretical background</h2>
@@ -495,21 +518,21 @@ Table&nbsp;3.1: Table of terms used in the statistical modelling. The terms in b
 
 <!-- -->
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-appleton1995we" class="csl-entry" role="listitem">
-Appleton, David R. 1995. <span>“What Do We Mean by a Statistical Model?”</span> <em>Statistics in Medicine</em> 14 (2): 185–97.
+<div id="refs" class="references csl-bib-body" role="list">
+<div id="ref-mccullagh2002statistical" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">McCullagh P. What is a statistical model? <em>The Annals of Statistics</em>. 2002;30(5):1225-1310.</div>
 </div>
-<div id="ref-gilchrist1984statistical" class="csl-entry" role="listitem">
-Gilchrist, Warren. 1984. <em>Statistical Modelling</em>. Wiley Chichester.
+<div id="ref-appleton1995we" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">Appleton DR. What do we mean by a statistical model? <em>Statistics in medicine</em>. 1995;14(2):185-197.</div>
 </div>
 <div id="ref-hand2019purpose" class="csl-entry" role="listitem">
-Hand, David. 2019. <span>“What Is the Purpose of Statistical Modeling?”</span> <em>Harvard Data Science Review</em> 1 (1).
-</div>
-<div id="ref-mccullagh2002statistical" class="csl-entry" role="listitem">
-McCullagh, Peter. 2002. <span>“What Is a Statistical Model?”</span> <em>The Annals of Statistics</em> 30 (5): 1225–1310.
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Hand D. What is the purpose of statistical modeling? <em>Harvard Data Science Review</em>. 2019;1(1).</div>
 </div>
 <div id="ref-spanos2006statistical" class="csl-entry" role="listitem">
-Spanos, Aris. 2006. <span>“Where Do Statistical Models Come from? Revisiting the Problem of Specification.”</span> <em>Lecture Notes-Monograph Series</em>, 98–119.
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline">Spanos A. Where do statistical models come from? Revisiting the problem of specification. <em>Lecture Notes-Monograph Series</em>. Published online 2006:98-119.</div>
+</div>
+<div id="ref-gilchrist1984statistical" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">Gilchrist W. <em>Statistical Modelling</em>. Wiley Chichester; 1984.</div>
 </div>
 </div>
 </section>
@@ -1027,57 +1050,60 @@ Spanos, Aris. 2006. <span>“Where Do Statistical Models Come from? Revisiting t
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"A quote." --- Dan Meyer*</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## General background</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Symbol <span class="pp">|</span> Name <span class="pp">|</span> Application <span class="pp">|</span> Description <span class="pp">|</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|:--------------:|:-------------------|:---------------|:-------------------|</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $y$ <span class="pp">|</span> **outcome**, response, endpoint, dependent variable <span class="pp">|</span>  <span class="pp">|</span> *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* <span class="pp">|</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **influencer**, influential variable, risk factor, fixed effect, independent variable <span class="pp">|</span>  <span class="pp">|</span> *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* <span class="pp">|</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $z$ <span class="pp">|</span> **random effect** <span class="pp">|</span>  <span class="pp">|</span> *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* <span class="pp">|</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **explanator**, explanatory variable <span class="pp">|</span> Explanation <span class="pp">|</span> *The influencer is used to describe or explain the outcome.* <span class="pp">|</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **predictor**, predictive variable <span class="pp">|</span> Prediction <span class="pp">|</span> *The influencer is used to predict the outcome.* <span class="pp">|</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **focal explanator**, **focal predictor**, focal variable <span class="pp">|</span> Main effect <span class="pp">|</span> *In a model with multiple influencers, the focal variable is the variable of primary interest.* <span class="pp">|</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $c$ <span class="pp">|</span> **covariate**, covariable <span class="pp">|</span> Continuous $x$ <span class="pp">|</span> *The influencer is a numeric variable with continuous values.* <span class="pp">|</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $f_A$ <span class="pp">|</span> **factor A**, factorial variable, categorical variable <span class="pp">|</span> Categorical $x$ <span class="pp">|</span> *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* <span class="pp">|</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $A.1$ to $A.j$ <span class="pp">|</span> **levels**, groups, treatment groups <span class="pp">|</span> Factor $f_A$ <span class="pp">|</span> *The discrete groups included in one factor A.* <span class="pp">|</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>A sentence why we use $y$ and not $x$ for mean and other stuff.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>@mccullagh2002statistical <span class="co">[</span><span class="ot">What is a statistical model?</span><span class="co">](https://projecteuclid.org/journals/annals-of-statistics/volume-30/issue-5/What-is-a-statistical-model/10.1214/aos/1035844977.pdf)</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>@appleton1995we <span class="co">[</span><span class="ot">What do we mean by a statistical model?</span><span class="co">](https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.4780140209?casa_token=jLDogF46zS8AAAAA%3AKOKHMTgbj4gK8ayVXmT1GaXq7slv9i3VGqzA184yydwKUjsDIszepgOaeMQc_L5hRY-TpLZvgDDIdDea)</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>@hand2019purpose <span class="co">[</span><span class="ot">What Is the Purpose of Statistical Modeling?</span><span class="co">](https://hdsr.mitpress.mit.edu/pub/9qsbf3hz/release/2?from=603&amp;to=744)</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>@spanos2006statistical <span class="co">[</span><span class="ot">Where do statistical models come from? Revisiting the problem of specification</span><span class="co">](https://arxiv.org/pdf/math.ST/0610849)</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>@gilchrist1984statistical <span class="co">[</span><span class="ot">Statistical modelling</span><span class="co">]</span>(https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>term</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>:   what does it mean.</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>itemize with max. 5-6 words</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## General background</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Symbol <span class="pp">|</span> Name <span class="pp">|</span> Application <span class="pp">|</span> Description <span class="pp">|</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|:--------------:|:-------------------|:---------------|:-------------------|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $y$ <span class="pp">|</span> **outcome**, response, endpoint, dependent variable <span class="pp">|</span>  <span class="pp">|</span> *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* <span class="pp">|</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **influencer**, influential variable, risk factor, fixed effect, independent variable <span class="pp">|</span>  <span class="pp">|</span> *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* <span class="pp">|</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $z$ <span class="pp">|</span> **random effect** <span class="pp">|</span>  <span class="pp">|</span> *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* <span class="pp">|</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **explanator**, explanatory variable <span class="pp">|</span> Explanation <span class="pp">|</span> *The influencer is used to describe or explain the outcome.* <span class="pp">|</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **predictor**, predictive variable <span class="pp">|</span> Prediction <span class="pp">|</span> *The influencer is used to predict the outcome.* <span class="pp">|</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $x$ <span class="pp">|</span> **focal explanator**, **focal predictor**, focal variable <span class="pp">|</span> Main effect <span class="pp">|</span> *In a model with multiple influencers, the focal variable is the variable of primary interest.* <span class="pp">|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $c$ <span class="pp">|</span> **covariate**, covariable <span class="pp">|</span> Continuous $x$ <span class="pp">|</span> *The influencer is a numeric variable with continuous values.* <span class="pp">|</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $f_A$ <span class="pp">|</span> **factor A**, factorial variable, categorical variable <span class="pp">|</span> Categorical $x$ <span class="pp">|</span> *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* <span class="pp">|</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> $A.1$ to $A.j$ <span class="pp">|</span> **levels**, groups, treatment groups <span class="pp">|</span> Factor $f_A$ <span class="pp">|</span> *The discrete groups included in one factor A.* <span class="pp">|</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>A sentence why we use $y$ and not $x$ for mean and other stuff.</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>@mccullagh2002statistical <span class="co">[</span><span class="ot">What is a statistical model?</span><span class="co">](https://projecteuclid.org/journals/annals-of-statistics/volume-30/issue-5/What-is-a-statistical-model/10.1214/aos/1035844977.pdf)</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>@appleton1995we <span class="co">[</span><span class="ot">What do we mean by a statistical model?</span><span class="co">](https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.4780140209?casa_token=jLDogF46zS8AAAAA%3AKOKHMTgbj4gK8ayVXmT1GaXq7slv9i3VGqzA184yydwKUjsDIszepgOaeMQc_L5hRY-TpLZvgDDIdDea)</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>@hand2019purpose <span class="co">[</span><span class="ot">What Is the Purpose of Statistical Modeling?</span><span class="co">](https://hdsr.mitpress.mit.edu/pub/9qsbf3hz/release/2?from=603&amp;to=744)</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>@spanos2006statistical <span class="co">[</span><span class="ot">Where do statistical models come from? Revisiting the problem of specification</span><span class="co">](https://arxiv.org/pdf/math.ST/0610849)</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>@gilchrist1984statistical <span class="co">[</span><span class="ot">Statistical modelling</span><span class="co">]</span>(https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>:   what does it mean.</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>itemize with max. 5-6 words</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

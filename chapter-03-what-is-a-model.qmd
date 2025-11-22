@@ -8,6 +8,9 @@ source("init.R")
 
 > *"A quote." --- Dan Meyer*
 
+Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.
+
+
 ## General background
 
 | Symbol | Name | Application | Description |
