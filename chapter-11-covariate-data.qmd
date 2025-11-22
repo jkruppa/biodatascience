@@ -81,8 +81,8 @@ jump_weight_feeding_tbl |>
 
 
 ```{r}
-jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(21, 4, 3)),
-                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(21, 0, 1)) |>
+jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 3)),
+                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |>
   rename(weight_mg = x, jump_length_cm = y)
 ```
 
@@ -106,12 +106,6 @@ jump_weight_non_linear_tbl |>
   coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
 ```
 
-
-```{r}
-jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(21, 2, 2)),
-                                     y = 20 - 18 * exp(-0.2 * x^2) + rnorm(21, 0, 2)) |>
-  rename(weight_mg = x, jump_length_cm = y)
-```
 
 ```{r}
 jump_weight_non_linear_tbl <- expand_grid(f = c(0, 1), 

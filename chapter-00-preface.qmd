@@ -9,3 +9,7 @@ pacman::p_load(tidyverse)
 > *"I'd like to solve the puzzle." --- Wheel of Fortune*
 
 Here comes the preface text
+
+
+> *"X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes." --- German intro of Beyond Belief: Fact or Fiction*
+

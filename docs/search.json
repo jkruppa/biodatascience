@@ -24,7 +24,7 @@
     "href": "chapter-00-preface.html",
     "title": "From science to data by models",
     "section": "",
-    "text": "Last modified on 27. October 2025 at 13:16:42\n\n“I’d like to solve the puzzle.” — Wheel of Fortune\n\nHere comes the preface text",
+    "text": "Last modified on 22. November 2025 at 10:13:46\n\n“I’d like to solve the puzzle.” — Wheel of Fortune\n\nHere comes the preface text\n\n“X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes.” — German intro of Beyond Belief: Fact or Fiction",
     "crumbs": [
       "From science to data by models"
     ]
@@ -1161,7 +1161,7 @@
     "href": "chapter-11-covariate-data.html",
     "title": "4  Body weight of fleas",
     "section": "",
-    "text": "4.1 General background\nLast modified on 21. November 2025 at 20:59:19",
+    "text": "4.1 General background\nLast modified on 22. November 2025 at 09:30:36",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -1194,7 +1194,7 @@
     "href": "chapter-11-covariate-data.html#data",
     "title": "4  Body weight of fleas",
     "section": "4.4 Data",
-    "text": "4.4 Data\n\n4.4.1 Linear\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = abs(rnorm(21, 5, 4)),\n                          y = 10 + 1.2 * x + rnorm(21, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_feeding_tbl &lt;- expand_grid(f = c(0, 1), \n                                       x = abs(rnorm(21, 5, 4))) |&gt; \n  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Non-linear\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- tibble(x = abs(rnorm(21, 4, 3)),\n                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(21, 0, 1)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- tibble(x = abs(rnorm(21, 2, 2)),\n                                     y = 20 - 18 * exp(-0.2 * x^2) + rnorm(21, 0, 2)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- expand_grid(f = c(0, 1), \n                                          x = abs(rnorm(42, 2.5, 2.5))) |&gt; \n  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.4: foo (A) foo (B) foo",
+    "text": "4.4 Data\n\n4.4.1 Linear\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = abs(rnorm(21, 5, 4)),\n                          y = 10 + 1.2 * x + rnorm(21, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_feeding_tbl &lt;- expand_grid(f = c(0, 1), \n                                       x = abs(rnorm(21, 5, 4))) |&gt; \n  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n4.4.2 Non-linear\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- tibble(x = abs(rnorm(32, 3, 3)),\n                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |&gt;\n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\n\n\n\n\nFigure 4.3: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_weight_non_linear_tbl &lt;- expand_grid(f = c(0, 1), \n                                          x = abs(rnorm(42, 2.5, 2.5))) |&gt; \n  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),\n         f = factor(f, labels = c(\"sugar_water\", \"blood\")))  |&gt;\n  mutate_if(is.numeric, round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y, feeding = f) \n\n\n\n\n\n\n\n\n\n\nFigure 4.4: foo (A) foo (B) foo",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
