@@ -19,7 +19,7 @@ source("init.R")
 ### Linear
 
 ```{r}
-jump_weight_tbl <- tibble(x = abs(rnorm(21, 5, 4)),
+jump_weight_tbl <- tibble(x = abs(rnorm(21, 3, 4)),
                           y = 10 + 1.2 * x + rnorm(21, 0, 2)) |>
   mutate_all(round, 1) |> 
   rename(weight_mg = x, jump_length_cm = y)
@@ -42,46 +42,16 @@ jump_weight_tbl |>
   labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  scale_x_continuous(breaks = 0:10) +
   coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
 ```
 
-
-
-```{r}
-jump_weight_feeding_tbl <- expand_grid(f = c(0, 1), 
-                                       x = abs(rnorm(21, 5, 4))) |> 
-  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),
-         f = factor(f, labels = c("sugar_water", "blood")))  |>
-  mutate_if(is.numeric, round, 1) |> 
-  rename(weight_mg = x, jump_length_cm = y, feeding = f) 
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-11-cov-02
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 7
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-jump_weight_feeding_tbl |> 
-  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = feeding)) +
-  theme_book() +
-  geom_point(shape = 21) +
-  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
-       fill = "Feeding") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma",
-                     labels = c("Sugar water", "Blood")) +
-  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
-```
 
 ### Non-linear
 
 
 ```{r}
-jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 3)),
+jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 4)),
                                      y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |>
   rename(weight_mg = x, jump_length_cm = y)
 ```
@@ -103,40 +73,11 @@ jump_weight_non_linear_tbl |>
   labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  scale_x_continuous(breaks = 0:10) +
   coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
 ```
 
 
-```{r}
-jump_weight_non_linear_tbl <- expand_grid(f = c(0, 1), 
-                                          x = abs(rnorm(42, 2.5, 2.5))) |> 
-  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),
-         f = factor(f, labels = c("sugar_water", "blood")))  |>
-  mutate_if(is.numeric, round, 1) |> 
-  rename(weight_mg = x, jump_length_cm = y, feeding = f) 
-```
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-11-cov-05
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 7
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-jump_weight_non_linear_tbl |> 
-  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = feeding)) +
-  theme_book() +
-  geom_point(shape = 21) +
-  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
-       fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma",
-                     labels = c("Sugar water", "Blood")) +
-  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA)) 
-```
 
 
 ## Alternatives 

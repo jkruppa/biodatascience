@@ -25,6 +25,124 @@ Ketchup - a nutrient-poor or unsuitable food: This option is used to simulate po
 
 ## Data
 
+### Linear
+
+```{r}
+jump_weight_feeding_tbl <- expand_grid(f = c(0, 1), 
+                                       x = abs(rnorm(21, 5, 4))) |> 
+  mutate(y = 10 + 1.2 * x + 10 * f + rnorm(42, 0, 2),
+         f = factor(f, labels = c("sugar_water", "blood")))  |>
+  mutate_if(is.numeric, round, 1) |> 
+  rename(weight_mg = x, jump_length_cm = y, feeding = f) 
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-02
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_weight_feeding_tbl |> 
+  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = feeding)) +
+  theme_book() +
+  geom_point(shape = 21) +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
+       fill = "Feeding") +
+  scale_fill_viridis(discrete = TRUE, option = "plasma",
+                     labels = c("Sugar water", "Blood")) +
+  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
+```
+
+### Non linear
+
+```{r}
+jump_weight_non_linear_tbl <- expand_grid(f = c(0, 1), 
+                                          x = abs(rnorm(42, 2.5, 2.5))) |> 
+  mutate(y = 25 - 4*f - 21 * exp(-0.2 * x^2 - 1.1 * f) + rnorm(84, 0, 1),
+         f = factor(f, labels = c("sugar_water", "blood")))  |>
+  mutate_if(is.numeric, round, 1) |> 
+  rename(weight_mg = x, jump_length_cm = y, feeding = f) 
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-05
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_weight_non_linear_tbl |> 
+  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = feeding)) +
+  theme_book() +
+  geom_point(shape = 21) +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
+       fill = "Host") +
+  scale_fill_viridis(discrete = TRUE, option = "plasma",
+                     labels = c("Sugar water", "Blood")) +
+  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA)) 
+```
+
+### International study
+
+Degree of Urbanization of the United nations (rural as low-dense areas, town as semi-dense areas, cities as high-dense areas)
+
+
+```{r}
+n_obs <- 7
+jump_habitat_grid <- expand_grid(country = 1:8) |> 
+  mutate(mean_country = rnorm(8, 5, 1)) |> 
+  expand_grid(site = 1:3) |> 
+  mutate(mean_site = rnorm(24, 10, 1)) |> 
+  expand_grid(rep = 1:n_obs) |> 
+  mutate(x = abs(rnorm(n = (8*3*n_obs), 2.5, 2.5)),
+         y = 10 + 1.2 * x + mean_country + mean_site + rnorm(n = (8*3*n_obs), 0, 1))
+jump_habitat_grid |> 
+  ggplot(aes(x, y, color = as_factor(site))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~ country)
+```
+
+```{r}
+jump_habitat_raw_tbl <- jump_habitat_grid |> 
+  rowwise() |> 
+  mutate(jump_length_cm = lst(rnorm(7, mean, sd))) |> 
+  unnest(cols = jump_length_cm)
+```
+
+```{r}
+jump_habitat_tbl <- jump_habitat_raw_tbl |> 
+  select(host, site, jump_length_cm) |> 
+  mutate(host = factor(host, labels = c("cat", "dog", "rat")),
+         site = factor(site, labels = c("urban", "rural"))) |> 
+  mutate_if(is.numeric, round, 2)
+```
+
+```{r}
+n_obs <- 10
+expand_grid(z_1 = 0:7, 
+            z_2 = 0:2) |>
+  mutate(z_1_eff = rnorm(24, 5, 0.001),
+         z_2_eff = rnorm(24, 15, 0.001)) |> 
+  expand_grid(rep = 1:n_obs) |> 
+  mutate(x = abs(rnorm(n = (8*3*n_obs), 2.5, 2.5)),
+         y = 10 * 1.2 * x + z_1_eff * z_1 + z_2_eff * z_2 + rnorm(n = (8*3*n_obs), 0, 0.001)) |> 
+  ggplot(aes(x, y, color = as_factor(z_2))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~ z_1)
+```
+
+
+
 ## Alternatives 
 
 Further tutorials and R packages on XXX
