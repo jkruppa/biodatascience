@@ -6,6 +6,12 @@ pacman::p_load(tidyverse)
 
 *Last modified on `r format(fs::file_info("chapter-10-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don't have sufficient information and you have to go find some." --- [Dan Meyer in  Math class needs a makeover](https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover?language=en&subtitle=en&trigger=5s)*
+> *"X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes." --- German intro of Beyond Belief: Fact or Fiction*
 
-Here comes the data and the story behind the data...
+
+Once upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas @cadiergues2000comparison. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?
+
+
+Unfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches @everett1957relative.
+
+## References {.unnumbered}

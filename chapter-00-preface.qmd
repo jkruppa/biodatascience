@@ -8,8 +8,8 @@ pacman::p_load(tidyverse)
 
 > *"I'd like to solve the puzzle." --- Wheel of Fortune*
 
-Here comes the preface text
+In 2008, Cadiergues and his team won the Ig Nobel Prize at Harvard University in Cambridge for their work with dog and cat fleas @cadiergues2000comparison. This book tells the story of what had happened if they won the Nobel Prize in Stockholm instead. The Nobel Prize sparked extensive research in many scientific fields. Fleas became all the rage. Lots of data was collected, fleas were measured, and questions were asked that no one had ever asked before. Let's check out this data and see what it tells us about fleas. Come along to Adventure Land and get ready to be amazed.
 
+None of this happened in our reality. At least not in our branch of reality, if you believe Everett @everett1957relative. But since this book is also about models of reality, we can question the whole of reality and create a new one that fits. 
 
-> *"X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes." --- German intro of Beyond Belief: Fact or Fiction*
-
+## References {.unnumbered}

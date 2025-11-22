@@ -48,8 +48,8 @@ book:
     - appendix-a.qmd
 
 bibliography: references.bib
+csl: taylor-and-francis-ama.csl
 lang: en 
-
 
 format:
   html: 
