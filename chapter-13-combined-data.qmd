@@ -94,45 +94,87 @@ jump_weight_non_linear_tbl |>
 
 Degree of Urbanization of the United nations (rural as low-dense areas, town as semi-dense areas, cities as high-dense areas)
 
+ODer das ganze mal mit Bodylength?
 
 ```{r}
 n_obs <- 41
-jump_habitat_grid <- expand_grid(country = 1:9) |> 
+jump_international_grid <- expand_grid(country = 1:9) |> 
   mutate(mean_country = rnorm(9, 0, 4)) |> 
   expand_grid(site = 1:3) |> 
-  mutate(mean_site = rnorm(27, 0, 2)) |> 
+  mutate(mean_site = rnorm(27, 0, 4)) |> 
   expand_grid(rep = 1:n_obs) |> 
-  mutate(x = abs(rnorm(n = (9*3*n_obs), 2.5, 2.5)),
-         y = 10 + 1.2 * x + mean_country + mean_site + rnorm(n = (9*3*n_obs), 0, 3)) |> 
-  mutate(country = as_factor(country),
-         site = as_factor(site))
-jump_habitat_grid |> 
-  ggplot(aes(x, y, color = as_factor(site))) +
-  geom_point() +
-  geom_smooth(method = "lm", se = FALSE) +
-  facet_wrap(~ country)
+  mutate(bodyweight = abs(rnorm(n = (9*3*n_obs), 2.5, 2.5)),
+         jumplength = 10 + 1.5 * bodyweight + mean_country + mean_site + rnorm(n = (9*3*n_obs), 0, 3))
+```
 
-library(lme4)
+DE = Germany
+FR = France
+IN = India
+US = United States
+CN = China
+MX = Mexico
+PE = Peru
+SE = Sweden
+ZA = South Africa
 
-lmer(y ~ x + (site|country), data = jump_habitat_grid)
-
+```{r}
+jump_international_tbl <- jump_international_grid |> 
+  select(bodyweight, country, site, jumplength) |> 
+  mutate(country = factor(country, labels = c("DE", "FR", "MX",
+                                              "IN", "US", "CN",
+                                              "PE", "SE", "ZA")),
+         site = factor(site, labels = c("rural", "semi-dense", "city"))) |> 
+  mutate_if(is.numeric, round, 2)
 ```
 
 
 ```{r}
-#| eval: false
-jump_habitat_tbl <- jump_habitat_raw_tbl |> 
-  select(host, site, jumplength) |> 
-  mutate(host = factor(host, labels = c("cat", "dog", "rat")),
-         site = factor(site, labels = c("urban", "rural"))) |> 
-  mutate_if(is.numeric, round, 2)
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-13-mixed
+#| fig-align: center
+#| fig-height: 7
+#| fig-width: 9
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+jump_international_tbl |> 
+  ggplot(aes(bodyweight, jumplength, color = site)) +
+  theme_book() +
+  geom_point2() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~ country) +
+  scale_color_viridis(discrete = TRUE, option = "plasma") +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
+       color = "Site") 
 ```
+
+
+```{r}
+library(lme4)
+
+lmer(jumplength ~ bodyweight + (site|country), data = jump_international_tbl)
+
+
+c("#0D0887FF", "#5402A3FF", "#8B0AA5FF", "#B93289FF",
+  "#DB5C68FF", "#F48849FF", "#FEBC2AFF", "#F0F921FF")
+```
+
+
 
 
 
 ## Alternatives 
 
 Further tutorials and R packages on XXX
+
+```{r}
+expand_grid(obs = c(1, 3, 2)) |> 
+  rowwise() |> 
+  mutate(foo = list(expand_grid(1:obs))) |> 
+  unnest(cols = c(foo))
+```
+
 
 ## Glossary
 

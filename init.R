@@ -1,6 +1,6 @@
 ## load packages
 pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork,
-               gghalves, ggdist)
+               gghalves, ggdist, see, conflicted)
 ## global seed
 set.seed(202511)
 ## ggplot theme
@@ -13,8 +13,10 @@ theme_book <- function() {
           axis.title = element_text(size = 12, face = "bold"),
           axis.text = element_text(size = 11),
           legend.title = element_text(face = "bold"),
+          strip.text = element_text(size = 11, face = "bold"),
           legend.position = "top")
 }
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
 c6_pal <- col_pal(6, 1)
+c8_pal <- col_pal(8, 1)
