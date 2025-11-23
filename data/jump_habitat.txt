@@ -1,4 +1,4 @@
-host site jump_length_cm
+host site jumplength
 cat urban 21.1
 cat urban 14.02
 cat urban 25.61

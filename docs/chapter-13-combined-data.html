@@ -346,7 +346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><em>Last modified on 22. November 2025 at 20:02:14</em></p>
+<p><em>Last modified on 23. November 2025 at 08:50:15</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -375,7 +375,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">10</span> <span class="sc">*</span> f <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">42</span>, <span class="dv">0</span>, <span class="dv">2</span>),</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight_mg =</span> x, <span class="at">jump_length_cm =</span> y, <span class="at">feeding =</span> f) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight =</span> x, <span class="at">jumplength =</span> y, <span class="at">feeding =</span> f) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell" data-layout-align="center">
@@ -403,7 +403,7 @@ Figure&nbsp;6.1: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">25</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>f <span class="sc">-</span> <span class="dv">21</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span> <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="fl">1.1</span> <span class="sc">*</span> f) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">84</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight_mg =</span> x, <span class="at">jump_length_cm =</span> y, <span class="at">feeding =</span> f) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight =</span> x, <span class="at">jumplength =</span> y, <span class="at">feeding =</span> f) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell" data-layout-align="center">
@@ -427,59 +427,21 @@ Figure&nbsp;6.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">host =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_host <span class="sc">+</span> mean_site,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 6
-   host  site mean_host mean_site  mean    sd
-  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     1     1      19.9         5  24.9   9.1
-2     1     2      19.9         0  19.9   9.1
-3     2     1      30.4         5  35.4   9.1
-4     2     2      30.4         0  30.4   9.1
-5     3     1      15.2         5  20.2   4.6
-6     3     2      15.2        -5  10.2   4.6</code></pre>
-</div>
-</div>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jump_length_cm =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jump_length_cm)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jump_length_cm) <span class="sc">|&gt;</span> </span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-</div>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">expand_grid</span>(<span class="at">z_1 =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">7</span>, </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">z_2 =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">z_1_eff =</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">5</span>, <span class="fl">0.001</span>),</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">z_2_eff =</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">15</span>, <span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span>n_obs) <span class="sc">|&gt;</span> </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">8</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="fl">2.5</span>, <span class="fl">2.5</span>)),</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="dv">10</span> <span class="sc">*</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> z_1_eff <span class="sc">*</span> z_1 <span class="sc">+</span> z_2_eff <span class="sc">*</span> z_2 <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">8</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="dv">0</span>, <span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y, <span class="at">color =</span> <span class="fu">as_factor</span>(z_2))) <span class="sc">+</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> z_1)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">41</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">country =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_country =</span> <span class="fu">rnorm</span>(<span class="dv">9</span>, <span class="dv">0</span>, <span class="dv">4</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_site =</span> <span class="fu">rnorm</span>(<span class="dv">27</span>, <span class="dv">0</span>, <span class="dv">2</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span>n_obs) <span class="sc">|&gt;</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">9</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="fl">2.5</span>, <span class="fl">2.5</span>)),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> mean_country <span class="sc">+</span> mean_site <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">9</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="dv">0</span>, <span class="dv">3</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">as_factor</span>(country),</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">as_factor</span>(site))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="sc">|&gt;</span> </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y, <span class="at">color =</span> <span class="fu">as_factor</span>(site))) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> country)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
@@ -487,10 +449,61 @@ Figure&nbsp;6.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="chapter-13-combined-data_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="chapter-13-combined-data_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="chapter-13-combined-data_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="chapter-13-combined-data_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
+<details open="" class="code-fold">
+<summary>R Code [show / hide]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'lme4' was built under R version 4.4.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: Matrix</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'Matrix' was built under R version 4.4.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'Matrix'
+
+The following objects are masked from 'package:tidyr':
+
+    expand, pack, unpack</code></pre>
+</div>
+<details open="" class="code-fold">
+<summary>R Code [show / hide]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lmer</span>(y <span class="sc">~</span> x <span class="sc">+</span> (site<span class="sc">|</span>country), <span class="at">data =</span> jump_habitat_grid)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear mixed model fit by REML ['lmerMod']
+Formula: y ~ x + (site | country)
+   Data: jump_habitat_grid
+REML criterion at convergence: 5612.551
+Random effects:
+ Groups   Name        Std.Dev. Corr       
+ country  (Intercept) 3.876               
+          site2       2.212    -0.29      
+          site3       2.026    -0.11  0.33
+ Residual             2.927               
+Number of obs: 1107, groups:  country, 9
+Fixed Effects:
+(Intercept)            x  
+      8.351        1.234  </code></pre>
+</div>
+</div>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>R Code [show / hide]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jumplength) <span class="sc">|&gt;</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 </div>
 </section>
 </section>
@@ -1027,161 +1040,155 @@ Figure&nbsp;6.2: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, warning = FALSE}</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"init.R"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Eating habits of fleas {#sec-temp}</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>*Last modified on `r format(fs::file_info("chapter-13-combined-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"A quote." --- Dan Meyer*</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## General background</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>Based on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>Blood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>Sugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>Ketchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linear</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>jump_weight_feeding_tbl <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">f =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
-<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="dv">21</span>, <span class="dv">5</span>, <span class="dv">4</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">10</span> <span class="sc">*</span> f <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">42</span>, <span class="dv">0</span>, <span class="dv">2</span>),</span>
-<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
-<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight_mg =</span> x, <span class="at">jump_length_cm =</span> y, <span class="at">feeding =</span> f) </span>
-<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-cov-02</span></span>
-<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
-<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
-<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>jump_weight_feeding_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> weight_mg, <span class="at">y =</span> jump_length_cm, <span class="at">fill =</span> feeding)) <span class="sc">+</span></span>
-<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
-<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cat flea weight [mg]"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
-<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Feeding"</span>) <span class="sc">+</span></span>
-<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>,</span>
-<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Sugar water"</span>, <span class="st">"Blood"</span>)) <span class="sc">+</span></span>
-<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span>
-<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Non linear</span></span>
-<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-68"><a href="#cb9-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-69"><a href="#cb9-69" aria-hidden="true" tabindex="-1"></a>jump_weight_non_linear_tbl <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">f =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
-<span id="cb9-70"><a href="#cb9-70" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="dv">42</span>, <span class="fl">2.5</span>, <span class="fl">2.5</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb9-71"><a href="#cb9-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">25</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>f <span class="sc">-</span> <span class="dv">21</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span> <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="fl">1.1</span> <span class="sc">*</span> f) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">84</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
-<span id="cb9-72"><a href="#cb9-72" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
-<span id="cb9-73"><a href="#cb9-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb9-74"><a href="#cb9-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight_mg =</span> x, <span class="at">jump_length_cm =</span> y, <span class="at">feeding =</span> f) </span>
-<span id="cb9-75"><a href="#cb9-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-76"><a href="#cb9-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-77"><a href="#cb9-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-80"><a href="#cb9-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-81"><a href="#cb9-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb9-82"><a href="#cb9-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-cov-05</span></span>
-<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
-<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb9-88"><a href="#cb9-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
-<span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>jump_weight_non_linear_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> weight_mg, <span class="at">y =</span> jump_length_cm, <span class="at">fill =</span> feeding)) <span class="sc">+</span></span>
-<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
-<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cat flea weight [mg]"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
-<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Host"</span>) <span class="sc">+</span></span>
-<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>,</span>
-<span id="cb9-97"><a href="#cb9-97" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Sugar water"</span>, <span class="st">"Blood"</span>)) <span class="sc">+</span></span>
-<span id="cb9-98"><a href="#cb9-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) </span>
-<span id="cb9-99"><a href="#cb9-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-100"><a href="#cb9-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-101"><a href="#cb9-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### International study</span></span>
-<span id="cb9-102"><a href="#cb9-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-103"><a href="#cb9-103" aria-hidden="true" tabindex="-1"></a>Degree of Urbanization of the United nations (rural as low-dense areas, town as semi-dense areas, cities as high-dense areas)</span>
-<span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">host =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_host =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
-<span id="cb9-111"><a href="#cb9-111" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_site =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
-<span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_host <span class="sc">+</span> mean_site,</span>
-<span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
-<span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span>
-<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-119"><a href="#cb9-119" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-120"><a href="#cb9-120" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
-<span id="cb9-121"><a href="#cb9-121" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jump_length_cm =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
-<span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jump_length_cm)</span>
-<span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb9-130"><a href="#cb9-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jump_length_cm) <span class="sc">|&gt;</span> </span>
-<span id="cb9-131"><a href="#cb9-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
-<span id="cb9-132"><a href="#cb9-132" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb9-133"><a href="#cb9-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
-<span id="cb9-134"><a href="#cb9-134" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-135"><a href="#cb9-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-138"><a href="#cb9-138" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-139"><a href="#cb9-139" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb9-140"><a href="#cb9-140" aria-hidden="true" tabindex="-1"></a><span class="fu">expand_grid</span>(<span class="at">z_1 =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">7</span>, </span>
-<span id="cb9-141"><a href="#cb9-141" aria-hidden="true" tabindex="-1"></a>            <span class="at">z_2 =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span></span>
-<span id="cb9-142"><a href="#cb9-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">z_1_eff =</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">5</span>, <span class="fl">0.001</span>),</span>
-<span id="cb9-143"><a href="#cb9-143" aria-hidden="true" tabindex="-1"></a>         <span class="at">z_2_eff =</span> <span class="fu">rnorm</span>(<span class="dv">24</span>, <span class="dv">15</span>, <span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-144"><a href="#cb9-144" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span>n_obs) <span class="sc">|&gt;</span> </span>
-<span id="cb9-145"><a href="#cb9-145" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">8</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="fl">2.5</span>, <span class="fl">2.5</span>)),</span>
-<span id="cb9-146"><a href="#cb9-146" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="dv">10</span> <span class="sc">*</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> z_1_eff <span class="sc">*</span> z_1 <span class="sc">+</span> z_2_eff <span class="sc">*</span> z_2 <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">8</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="dv">0</span>, <span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb9-147"><a href="#cb9-147" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y, <span class="at">color =</span> <span class="fu">as_factor</span>(z_2))) <span class="sc">+</span></span>
-<span id="cb9-148"><a href="#cb9-148" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb9-149"><a href="#cb9-149" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-150"><a href="#cb9-150" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> z_1)</span>
-<span id="cb9-151"><a href="#cb9-151" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-152"><a href="#cb9-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-153"><a href="#cb9-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-154"><a href="#cb9-154" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-155"><a href="#cb9-155" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
-<span id="cb9-156"><a href="#cb9-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-157"><a href="#cb9-157" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
-<span id="cb9-158"><a href="#cb9-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-159"><a href="#cb9-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
-<span id="cb9-160"><a href="#cb9-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-161"><a href="#cb9-161" aria-hidden="true" tabindex="-1"></a>term</span>
-<span id="cb9-162"><a href="#cb9-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-163"><a href="#cb9-163" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
-<span id="cb9-164"><a href="#cb9-164" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-165"><a href="#cb9-165" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
-<span id="cb9-166"><a href="#cb9-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-167"><a href="#cb9-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
-<span id="cb9-168"><a href="#cb9-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-169"><a href="#cb9-169" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb9-170"><a href="#cb9-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-171"><a href="#cb9-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, warning = FALSE}</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"init.R"</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Eating habits of fleas {#sec-temp}</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>*Last modified on `r format(fs::file_info("chapter-13-combined-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"A quote." --- Dan Meyer*</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## General background</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>Based on standard methods in flea research and experimental entomology, as well as a similar published experiment, the following three types of food for adult cat fleas are possible, representing different nutritional conditions:</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>Blood: This is the natural and optimal food source for adult fleas.Often, defibrinated or anticoagulated animal blood (e.g. bovine blood, rabbit blood) is used for this purpose, which is offered in special in vitro feeding systems (e.g. through a membrane).Expectation: Fleas that are optimally nourished should show the greatest jumping distance.</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>Sugar water: Often serves as a ‘control feed’ or as a feed that provides energy (sugar) but lacks essential nutrients (such as proteins from blood).Expectation: Jumping distance could be reduced due to the lack of blood and thus the proteins important for reproduction, which could impair physiological fitness.</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>Ketchup - a nutrient-poor or unsuitable food: This option is used to simulate poor, incomplete or stressful nutritional conditions.In a similar documented experiment, ketchup (a combination of sugar, vinegar and minimal other substances, but no blood) was used as the third feed.Expectation: It can be assumed that fleas will show the shortest jumping distance under these conditions, as they lack both essential nutrients and the necessary energy.</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Theoretical background</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a><span class="fu">### Linear</span></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>jump_weight_feeding_tbl <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">f =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>                                       <span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="dv">21</span>, <span class="dv">5</span>, <span class="dv">4</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">10</span> <span class="sc">*</span> f <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">42</span>, <span class="dv">0</span>, <span class="dv">2</span>),</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight =</span> x, <span class="at">jumplength =</span> y, <span class="at">feeding =</span> f) </span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-cov-02</span></span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a>jump_weight_feeding_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> weight, <span class="at">y =</span> jumplength, <span class="at">fill =</span> feeding)) <span class="sc">+</span></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cat flea weight [mg]"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Feeding"</span>) <span class="sc">+</span></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>,</span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Sugar water"</span>, <span class="st">"Blood"</span>)) <span class="sc">+</span></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Non linear</span></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>jump_weight_non_linear_tbl <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">f =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), </span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>                                          <span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="dv">42</span>, <span class="fl">2.5</span>, <span class="fl">2.5</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="dv">25</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>f <span class="sc">-</span> <span class="dv">21</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.2</span> <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="fl">1.1</span> <span class="sc">*</span> f) <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">84</span>, <span class="dv">0</span>, <span class="dv">1</span>),</span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>         <span class="at">f =</span> <span class="fu">factor</span>(f, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar_water"</span>, <span class="st">"blood"</span>)))  <span class="sc">|&gt;</span></span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">weight =</span> x, <span class="at">jumplength =</span> y, <span class="at">feeding =</span> f) </span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-cov-05</span></span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>jump_weight_non_linear_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> weight, <span class="at">y =</span> jumplength, <span class="at">fill =</span> feeding)) <span class="sc">+</span></span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Cat flea weight [mg]"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Host"</span>) <span class="sc">+</span></span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>,</span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Sugar water"</span>, <span class="st">"Blood"</span>)) <span class="sc">+</span></span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) </span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a><span class="fu">### International study</span></span>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a>Degree of Urbanization of the United nations (rural as low-dense areas, town as semi-dense areas, cities as high-dense areas)</span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>n_obs <span class="ot">&lt;-</span> <span class="dv">41</span></span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">country =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_country =</span> <span class="fu">rnorm</span>(<span class="dv">9</span>, <span class="dv">0</span>, <span class="dv">4</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">site =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_site =</span> <span class="fu">rnorm</span>(<span class="dv">27</span>, <span class="dv">0</span>, <span class="dv">2</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_grid</span>(<span class="at">rep =</span> <span class="dv">1</span><span class="sc">:</span>n_obs) <span class="sc">|&gt;</span> </span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x =</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">9</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="fl">2.5</span>, <span class="fl">2.5</span>)),</span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="dv">10</span> <span class="sc">+</span> <span class="fl">1.2</span> <span class="sc">*</span> x <span class="sc">+</span> mean_country <span class="sc">+</span> mean_site <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="at">n =</span> (<span class="dv">9</span><span class="sc">*</span><span class="dv">3</span><span class="sc">*</span>n_obs), <span class="dv">0</span>, <span class="dv">3</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">country =</span> <span class="fu">as_factor</span>(country),</span>
+<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">as_factor</span>(site))</span>
+<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="sc">|&gt;</span> </span>
+<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, y, <span class="at">color =</span> <span class="fu">as_factor</span>(site))) <span class="sc">+</span></span>
+<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> country)</span>
+<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a><span class="fu">lmer</span>(y <span class="sc">~</span> x <span class="sc">+</span> (site<span class="sc">|</span>country), <span class="at">data =</span> jump_habitat_grid)</span>
+<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: false</span></span>
+<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(host, site, jumplength) <span class="sc">|&gt;</span> </span>
+<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">host =</span> <span class="fu">factor</span>(host, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"rat"</span>)),</span>
+<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a>         <span class="at">site =</span> <span class="fu">factor</span>(site, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
+<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
+<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

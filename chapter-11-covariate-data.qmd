@@ -22,7 +22,7 @@ source("init.R")
 jump_weight_tbl <- tibble(x = abs(rnorm(21, 3, 4)),
                           y = 10 + 1.2 * x + rnorm(21, 0, 2)) |>
   mutate_all(round, 1) |> 
-  rename(weight_mg = x, jump_length_cm = y)
+  rename(weight = x, jumplength = y)
 ```
 
 ```{r}
@@ -36,7 +36,7 @@ jump_weight_tbl <- tibble(x = abs(rnorm(21, 3, 4)),
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 jump_weight_tbl |> 
-  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = col_pal(1, 0.5))) +
+  ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
   theme_book() +
   geom_point(show.legend = FALSE, shape = 21) +
   labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
@@ -53,7 +53,7 @@ jump_weight_tbl |>
 ```{r}
 jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 4)),
                                      y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |>
-  rename(weight_mg = x, jump_length_cm = y)
+  rename(weight = x, jumplength = y)
 ```
 
 ```{r}
@@ -67,7 +67,7 @@ jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 4)),
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 jump_weight_non_linear_tbl |> 
-  ggplot(aes(x = weight_mg, y = jump_length_cm, fill = col_pal(1, 0.5))) +
+  ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
   theme_book() +
   geom_point(show.legend = FALSE, shape = 21) +
   labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
