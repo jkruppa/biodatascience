@@ -1,5 +1,6 @@
 ```{r echo = FALSE, warning = FALSE}
 source("init.R")
+source("images/part_0/part_0_model.R")
 ```
 
 # What is a model? {#sec-what-is-a-model}
@@ -41,6 +42,130 @@ A sentence why we use $y$ and not $x$ for mean and other stuff.
 
 ## Theoretical background
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-1
+p_lhs_rhs
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-2
+p_model_abstract
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-4
+p_model_exp_simple_reg
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-5
+p_simple_model
+```
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-6
+p_mult_model
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-7
+p_lhs_rhs_simple_r
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-8
+p_lhs_rhs_mult_r
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2.5
+#| fig-width: 9.5
+#| fig-cap: "foo"
+#| label: fig-model-in-R-9
+p_regression_wording
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-10
+p_lhs_rhs_detail
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-11
+p_problem_x 
+
+c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
+c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
+```
 ## R packages used
 
 ## Data

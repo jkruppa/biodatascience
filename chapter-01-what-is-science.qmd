@@ -1,6 +1,6 @@
 ```{r echo = FALSE, warning = FALSE}
 source("init.R")
-source("images/part_0/part_0.R")
+source("images/part_0/part_0_science.R")
 ```
 
 # What is science? {#sec-what-is-science}

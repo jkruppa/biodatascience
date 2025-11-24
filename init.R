@@ -1,6 +1,6 @@
 ## load packages
 pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork,
-               gghalves, ggdist, see, conflicted)
+               gghalves, ggdist, see, ggtext, conflicted)
 ## global seed
 set.seed(202511)
 ## ggplot theme
@@ -19,4 +19,4 @@ theme_book <- function() {
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
 c6_pal <- col_pal(6, 1)
-c8_pal <- col_pal(8, 1)
+c6_a5_pal <- col_pal(6, 0.5)
