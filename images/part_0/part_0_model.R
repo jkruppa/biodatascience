@@ -333,7 +333,7 @@ p_problem_x <- ggplot() +
   theme_void() +
   scale_x_continuous(limits = c(-10, 10)) +
   scale_y_continuous(limits = c(-10, 10)) +
-  geom_tile(aes(x = 1.15, y = 0, width = 7.4, height = 7.4), fill = "#0D088780",
+  geom_tile(aes(x = 1.15, y = 0, width = 7.4, height = 7.4), fill = "#0D088780", alpha = 0.25,
             color = "#0D0887FF", linewidth = 0.5) +
   geom_curve(aes(x = 5.2, y = 0, xend = 7, yend = -5),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
