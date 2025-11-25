@@ -94,6 +94,32 @@ jump_weight_non_linear_tbl |>
 
 Degree of Urbanization of the United nations (rural as low-dense areas, town as semi-dense areas, cities as high-dense areas)
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-13-worldmap
+#| fig-align: center
+#| fig-height: 2.5
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+pacman::p_load(sf, rnaturalearth, rnaturalearthdata)
+
+ne_countries(scale = "medium", returnclass = "sf") |> 
+  mutate(my_selection = ifelse(iso_a2_eh %in% c("DE", "FR", "AU",
+                                              "IN", "US", "CN",
+                                              "PE", "SE", "ZA"),
+                               1, 0)) |> 
+  ggplot(aes(fill=as_factor(my_selection))) +
+  geom_sf() + 
+  theme_void() +
+  scale_fill_viridis(option = "plasma", discrete = TRUE) +
+  theme(legend.position = "none") +
+  coord_sf(ylim = c(-50, NA))
+```
+
+
 ODer das ganze mal mit Bodylength?
 
 ```{r}
@@ -112,7 +138,7 @@ FR = France
 IN = India
 US = United States
 CN = China
-MX = Mexico
+AU = Australia
 PE = Peru
 SE = Sweden
 ZA = South Africa
@@ -120,7 +146,7 @@ ZA = South Africa
 ```{r}
 jump_international_tbl <- jump_international_grid |> 
   select(bodyweight, country, site, jumplength) |> 
-  mutate(country = factor(country, labels = c("DE", "FR", "MX",
+  mutate(country = factor(country, labels = c("DE", "FR", "AU",
                                               "IN", "US", "CN",
                                               "PE", "SE", "ZA")),
          site = factor(site, labels = c("rural", "semi-dense", "city"))) |> 

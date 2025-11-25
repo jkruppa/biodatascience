@@ -1,5 +1,6 @@
 ```{r echo = FALSE, warning = FALSE}
 source("init.R")
+source("images/part_1/part_1_data.R")
 ```
 
 # Fleas of animals {#sec-data-examples}
@@ -33,6 +34,18 @@ Small data and grid
 
 @cadiergues2000comparison
 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-flea
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+flea_jump_exp_p
+```
 
 *C. felis felis* jump was $19.9 \pm 9.1cm$ with a range from $2$ to $48cm$ 
 

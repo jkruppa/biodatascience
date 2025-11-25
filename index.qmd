@@ -2,11 +2,7 @@
 
 > *"Life is difficult." --- M. Scott Peck's, The Road Less Traveled *
 
+This will be a long journey... it's a hell of a time.
 
 
-::: {layout="[30,70]" layout-valign="top"}
-![](images/german_version.png){fig-align="center" width="100%"}
-
-> *This book has a German predecessor. You might not recognise this book. That's fine. The page can be found at the following link: <https://jkruppa.github.io/>. However, it is much more unstructured. It is more like a cookbook than this book, which has a continuous storyline.*
-:::
 
