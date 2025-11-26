@@ -166,6 +166,10 @@ p_problem_x
 c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
 c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
 ```
+
+
+
+
 ## R packages used
 
 ## Data
