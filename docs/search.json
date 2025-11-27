@@ -54,7 +54,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 27. November 2025 at 14:56:50\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\n2 What is this thing called Science?\n3 What is science\n4 What is science?\n5 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n6 Statistical Thinking for the 21st Century\n7 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 27. November 2025 at 15:18:05\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\n2 What is this thing called Science?\n3 What is science\n4 What is science?\n5 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n6 Statistical Thinking for the 21st Century\n7 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -697,8 +697,8 @@
     ]
   },
   {
-    "objectID": "chapter-20-programing.html",
-    "href": "chapter-20-programing.html",
+    "objectID": "chapter-20-preface.html",
+    "href": "chapter-20-preface.html",
     "title": "Speaking to data",
     "section": "",
     "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
@@ -806,6 +806,115 @@
     ]
   },
   {
+    "objectID": "chapter-30-preface.html",
+    "href": "chapter-30-preface.html",
+    "title": "Hypothese testing",
+    "section": "",
+    "text": "Last modified on 27. November 2025 at 15:17:37\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Hypothese testing"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html",
+    "href": "chapter-31-statistical-testing.html",
+    "title": "8  Statistical testing",
+    "section": "",
+    "text": "8.1 General background\nLast modified on 27. November 2025 at 15:52:37\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 8.1: foo\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 8.2: foo",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#theoretical-background",
+    "href": "chapter-31-statistical-testing.html#theoretical-background",
+    "title": "8  Statistical testing",
+    "section": "8.2 Theoretical background",
+    "text": "8.2 Theoretical background\n\n8.2.1 Fisher’s approach: The ‘significance test’\nFisher saw statistics as a tool for inductive reasoning (learning from data for science).\n\nOnly ONE hypothesis: There is only the null hypothesis (\\(H_0\\) e.g., ‘no effect’). An alternative does not formally exist.\nThe measure (p-value): The p-value is a continuous measure of the strength of evidence against the null hypothesis \\(H_0\\).\n\n\\(p = 0.01\\) Strong evidence against the null hypothesis.\n\\(p = 0.20\\) No evidence against the null hypothesis.\n\nThe result: One rejects the null hypothesis \\(H_0\\) or one does not make a judgement. One never ‘accepts’ the null hypothesis (one simply has not found enough evidence to reject it).\nObjective: Gain knowledge through individual experiments.\n\n\n\n8.2.2 Neyman-Pearson’s approach: The ‘hypothesis test’\nNeyman and Pearson sharply criticised Fisher. They said, ‘You can’t reject anything if you don’t know what to accept instead.’ They saw statistics as a decision-making process (behaviourism).\n\nTWO hypotheses: There is the null hypothesis (\\(H_0\\)) AND a specific alternative hypothesis (\\(H_A\\)).\nType 1 and 2 errors: Before the experiment begins, the following is determined:\n\n\\(\\alpha\\) (alpha): How often am I allowed to incorrectly find an effect? (e.g. 5%)\n\\(\\beta\\) (Beta): How often am I allowed to mistakenly overlook a real effect? (Power/test strength).\n\nThe result: A tough decision. ‘Accept \\(H_0\\)’ or ‘Reject \\(H_0\\)’ (or Accept \\(H_A\\)).\nGoal: Minimisation of losses over many repeated experiments (as in industrial production).\n\nNeymans philosophy: We are not looking for the ‘truth’ in individual cases, but rather we behave in such a way that we are wrong as rarely as possible in 1000 decisions.\n\n\n8.2.3 Today’s ‘hybrid chaos’\nModern textbooks and software (such as SPSS or R) often use a hybrid that historically makes no sense:\n\nWe define \\(\\alpha = 5\\%\\) (Neyman-Pearson).\nWe calculate an exact p-value (Fisher).\nWe report the p-value as evidence (Fisher), but use it for a hard yes/no decision (Neyman-Pearson).\nWe talk about ‘power’ (Neyman-Pearson), but often only test against a non-specific alternative.\n\nThis mishmash often leads to misunderstandings, such as that a \\(p = 0.001\\) indicates a ‘stronger effect’ than \\(p = 0.049\\) (Fisher thinking), even though in Neyman-Pearson logic at \\(\\alpha = 5\\%\\) , one would have to make exactly the same decision in both cases (‘Reject \\(H_0\\)’).",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#r-packages-used",
+    "href": "chapter-31-statistical-testing.html#r-packages-used",
+    "title": "8  Statistical testing",
+    "section": "8.3 R packages used",
+    "text": "8.3 R packages used",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#data",
+    "href": "chapter-31-statistical-testing.html#data",
+    "title": "8  Statistical testing",
+    "section": "8.4 Data",
+    "text": "8.4 Data",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#alternatives",
+    "href": "chapter-31-statistical-testing.html#alternatives",
+    "title": "8  Statistical testing",
+    "section": "8.5 Alternatives",
+    "text": "8.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#glossary",
+    "href": "chapter-31-statistical-testing.html#glossary",
+    "title": "8  Statistical testing",
+    "section": "8.6 Glossary",
+    "text": "8.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-31-statistical-testing.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "8  Statistical testing",
+    "section": "8.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "8.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#summary",
+    "href": "chapter-31-statistical-testing.html#summary",
+    "title": "8  Statistical testing",
+    "section": "8.8 Summary",
+    "text": "8.8 Summary",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#references",
+    "href": "chapter-31-statistical-testing.html#references",
+    "title": "8  Statistical testing",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
     "objectID": "template-preface.html",
     "href": "template-preface.html",
     "title": "Template Preface",
@@ -818,100 +927,100 @@
   {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "8  Template chapter",
+    "title": "9  Template chapter",
     "section": "",
-    "text": "8.1 General background\nLast modified on 17. November 2025 at 20:02:35",
+    "text": "9.1 General background\nLast modified on 17. November 2025 at 20:02:35",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "8  Template chapter",
-    "section": "8.2 Theoretical background",
-    "text": "8.2 Theoretical background",
+    "title": "9  Template chapter",
+    "section": "9.2 Theoretical background",
+    "text": "9.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "8  Template chapter",
-    "section": "8.3 R packages used",
-    "text": "8.3 R packages used",
+    "title": "9  Template chapter",
+    "section": "9.3 R packages used",
+    "text": "9.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "8  Template chapter",
-    "section": "8.4 Data",
-    "text": "8.4 Data",
+    "title": "9  Template chapter",
+    "section": "9.4 Data",
+    "text": "9.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "8  Template chapter",
-    "section": "8.5 Alternatives",
-    "text": "8.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "9  Template chapter",
+    "section": "9.5 Alternatives",
+    "text": "9.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "8  Template chapter",
-    "section": "8.6 Glossary",
-    "text": "8.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "9  Template chapter",
+    "section": "9.6 Glossary",
+    "text": "9.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "8  Template chapter",
-    "section": "8.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "8.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "9  Template chapter",
+    "section": "9.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "9.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "8  Template chapter",
-    "section": "8.8 Summary",
-    "text": "8.8 Summary",
+    "title": "9  Template chapter",
+    "section": "9.8 Summary",
+    "text": "9.8 Summary",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#references",
     "href": "template-chapter.html#references",
-    "title": "8  Template chapter",
+    "title": "9  Template chapter",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {

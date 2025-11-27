@@ -1,0 +1,295 @@
+---
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+```{r echo = FALSE, warning = FALSE}
+source("init.R")
+```
+
+# Statistical testing {#sec-temp}
+
+*Last modified on `r format(fs::file_info("chapter-31-statistical-testing.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## General background
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.75
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-upper
+
+c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
+c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
+
+ggplot() +
+  theme_void() +
+  #theme_minimal() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(0.5, 10)) +
+  ## Population
+  geom_shape(data = tibble(x = c(0.5, 10.25, 10.25, 0.5), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(-10.25, -0.5, -0.5, -10.25), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
+  annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
+  annotate("text", x = 10.25, y = 5, label = "EXPERIMENT", size = 6, fontface = 2, angle = -90) +
+  annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, angle = 90) +
+  geom_curve(aes(x = -2, y = 8, xend = 6, yend = 8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  ## Sample
+  geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1.5), fill = "white") +
+  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2) +
+  annotate("text", x = 7.5, y = 7.5, label = "Data", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6) +
+  geom_curve(aes(x = 6, y = 7, xend = 3, yend = 6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5) +
+  ## Test
+  geom_circle(aes(x0 = 7.5, y0 = 2.5, r = 1.5), fill = "white") +
+  geom_curve(aes(x = 6, y = 2, xend = -1.9, yend = 2),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  annotate("text", x = 7.5, y = 2.25, label = "Statistical\ntest", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6) +
+  annotate("text", x = 2, y = 1.25, label = "Conclusion", size = 5.5, fontface = 2) +
+  annotate("text", x = 2, y = 0.55, label = "Is the null hypothesis valid?", 
+           size = 5, fontface = 3) +
+  ## Desc stat
+  geom_curve(aes(x = 3, y = 4, xend = 6, yend = 3),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5) +
+  geom_shape(data = tibble(x = c(1, 5, 5, 1), y = c(4.1, 4.1, 5.9, 5.9)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
+  annotate("text", x = 3, y = 5, label = "Descriptive\nstatistics", size = 6, fontface = 2) 
+
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 10
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-full
+
+c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
+c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
+
+ggplot() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
+  ## Population
+  geom_shape(data = tibble(x = c(0.5, 10.25, 10.25, 0.5), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(-10.25, -0.5, -0.5, -10.25), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
+  annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
+  annotate("text", x = 10.25, y = 5, label = "EXPERIMENT", size = 6, fontface = 2, angle = -90) +
+  annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, angle = 90) +
+  geom_curve(aes(x = -2, y = 8, xend = 6, yend = 8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  ## Sample
+  geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1.5), fill = "white") +
+  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2) +
+  annotate("text", x = 7.5, y = 7.5, label = "Data", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6) +
+  geom_curve(aes(x = 6, y = 7, xend = 3, yend = 6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5) +
+  ## Test
+  geom_circle(aes(x0 = 7.5, y0 = 2.5, r = 1.5), fill = "white") +
+  annotate("text", x = 7.5, y = 2.25, label = "Statistical\ntest", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6) +
+  ## Desc stat
+  geom_curve(aes(x = 3, y = 4, xend = 6, yend = 3),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5) +
+  geom_shape(data = tibble(x = c(1, 5, 5, 1), y = c(4.1, 4.1, 5.9, 5.9)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
+  annotate("text", x = 3, y = 5, label = "Descriptive\nstatistics", size = 6, fontface = 2) +
+  ## Distribution
+  geom_shape(data = tibble(x = c(-10.25, 10.25, 10.25, -10.25), 
+                           y = c(-10.25, -10.25, -0.25, -0.25)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = 10.25, y = -5, label = "THEORY", size = 6, fontface = 2, angle = -90) +
+  geom_ribbon(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)*18-9), 
+            aes(x = (x_raw*1.25 + 5), ymax = (y_raw), ymin = -9),
+            linewidth = 1, fill = "#FCA63680") +  
+  geom_ribbon(data = tibble(x_raw = seq(2, 3.5, 0.01), y_raw = dnorm(x_raw)*18-9), 
+            aes(x = (x_raw*1.25 + 5), ymax = (y_raw), ymin = -9),
+            linewidth = 1, fill = "gray80") +  
+  geom_segment(aes(x = 7.5, y = -9, xend = 7.5, yend = -8)) +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(x = (x_raw*1.25 + 5), y = (y_raw*18 - 9)),
+            linewidth = 1, color = "black") +
+  geom_segment(aes(x = 5, y = -9, xend = 5, yend = -1.8), color = "black") +
+  geom_segment(aes(x = 0.7, y = -9, xend = 9.3, yend = -9), color = "black") + 
+  annotate("text", x = 7.5, y = -9.5, label = expression(T[D]), size = 6) +
+  annotate("text", x = 9, y = -8, label = "p-value", size = 6) +
+  geom_curve(aes(x = 9, y = -8.3, xend = 7.8, yend = -8.8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  annotate("text", x = 5, y = -1.5, label = "Anzahl", size = 5, fontface = 2) +
+  annotate("text", x = 9.5, y = -9.35, label = "T", size = 5, fontface = 2) +
+  ## other samples
+  geom_circle(aes(x0 = -9, y0 = -2, r = 1), fill = "white") +
+  annotate("text", x = -9, y = -2, label = expression(R[1]), size = 7) +
+  geom_circle(aes(x0 = -6.5, y0 = -3, r = 1), fill = "white") +
+  annotate("text", x = -6.5, y = -3, label = expression(R[2]), size = 7) +
+  geom_circle(aes(x0 = -3.5, y0 = -3, r = 1), fill = "white") +
+  annotate("text", x = -3.5, y = -3, label = expression(R[3]), size = 7) +
+  geom_circle(aes(x0 = -1, y0 = -2, r = 1), fill = "white") +
+  annotate("text", x = -1, y = -2, label = expression(R[k]), size = 7) +
+  geom_curve(aes(x = -3.5, y = 1, xend = -1.5, yend = -1),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -4.5, y = 0.8, xend = -4, yend = -2),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -5.5, y = 0.8, xend = -6, yend = -2),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -6.5, y = 1, xend = -8.5, yend = -1),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  annotate("label", x = -5, y = 1, label = "Null is true", size = 8, fontface = 2) +
+  annotate("text", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2) +
+  geom_circle(aes(x0 = -9, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
+  annotate("text", x = -9, y = -2-3.5, label = expression(T[1]), size = 7) +
+  geom_circle(aes(x0 = -6.5, y0 = -3-3.5, r = 1), fill = "#FCA63680") +
+  annotate("text", x = -6.5, y = -3-3.5, label = expression(T[2]), size = 7) +
+  geom_circle(aes(x0 = -3.5, y0 = -3-3.5, r = 1), fill = "#FCA63680") +
+  annotate("text", x = -3.5, y = -3-3.5, label = expression(T[3]), size = 7) +
+  geom_circle(aes(x0 = -1, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
+  annotate("text", x = -1, y = -2-3.5, label = expression(T[k]), size = 7) +
+  annotate("text", x = -5, y = -4.7, label = "Statistical test", size = 6, fontface = 2) +
+  geom_curve(aes(x = -9, y = -3, xend = -9, yend = -4.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -6.5, y = -4, xend = -6.5, yend = -5.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -3.5, y = -4, xend = -3.5, yend = -5.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -1, y = -3, xend = -1, yend = -4.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -9, y = -6.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.5, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -6.5, y = -7.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -3.5, y = -7.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.35, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -1, y = -6.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.45, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  ## dist to test
+  geom_curve(aes(x = 4, y = -3, xend = -1.9, yend = 2),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", linewidth = 0.5) +
+  annotate("text", x = 1, y = 0.25, label = "Conclusion", size = 5.5, fontface = 2,
+           angle = -35) +
+  annotate("text", x = 1.8, y = 1, label = "Is the null hypothesis valid?", 
+           size = 5, fontface = 3, angle = -35) +
+  geom_curve(aes(x = 8.8, y = 0.9, xend = 7.6, yend = -8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) 
+
+```
+
+## Theoretical background
+
+### Fisher's approach: The ‘significance test’
+
+Fisher saw statistics as a tool for inductive reasoning (learning from data for science).
+
+-   Only ONE hypothesis: There is only the null hypothesis ($H_0$ e.g., ‘no effect’). An alternative does not formally exist.
+-   The measure (p-value): The p-value is a continuous measure of the strength of evidence against the null hypothesis $H_0$.
+    -   $p = 0.01$ Strong evidence against the null hypothesis.
+    -   $p = 0.20$ No evidence against the null hypothesis. 
+-   The result: One rejects the null hypothesis $H_0$ or one does not make a judgement. One never ‘accepts’ the null hypothesis (one simply has not found enough evidence to reject it).
+-   Objective: Gain knowledge through individual experiments.
+
+### Neyman-Pearson's approach: The ‘hypothesis test’
+
+Neyman and Pearson sharply criticised Fisher.
+They said, ‘You can't reject anything if you don't know what to accept instead.’ They saw statistics as a decision-making process (behaviourism).
+
+-   TWO hypotheses: There is the null hypothesis ($H_0$) AND a specific alternative hypothesis ($H_A$).
+-   Type 1 and 2 errors: Before the experiment begins, the following is determined:
+    -   $\alpha$ (alpha): How often am I allowed to incorrectly find an effect? (e.g. 5%)
+    -   $\beta$ (Beta): How often am I allowed to mistakenly overlook a real effect? (Power/test strength).
+-   The result: A tough decision. ‘Accept $H_0$’ or ‘Reject $H_0$’ (or Accept $H_A$).
+-   Goal: Minimisation of losses over many repeated experiments (as in industrial production).
+
+Neymans philosophy: We are not looking for the ‘truth’ in individual cases, but rather we behave in such a way that we are wrong as rarely as possible in 1000 decisions.
+
+### Today's ‘hybrid chaos’
+
+Modern textbooks and software (such as SPSS or R) often use a hybrid that historically makes no sense:
+
+-   We define $\alpha = 5\%$ (Neyman-Pearson).
+-   We calculate an exact p-value (Fisher).
+-   We report the p-value as evidence (Fisher), but use it for a hard yes/no decision (Neyman-Pearson).
+-   We talk about ‘power’ (Neyman-Pearson), but often only test against a non-specific alternative.
+
+This mishmash often leads to misunderstandings, such as that a $p = 0.001$ indicates a ‘stronger effect’ than $p = 0.049$  (Fisher thinking), even though in Neyman-Pearson logic at $\alpha = 5\%$ , one would have to make exactly the same decision in both cases (‘Reject $H_0$’).
+
+## R packages used
+
+## Data
+
+## Alternatives
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+:   what does it mean.
+
+## The meaning of "Models of Reality" in this chapter.
+
+-   itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}

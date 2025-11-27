@@ -38,9 +38,12 @@ book:
       - chapter-11-covariate-data.qmd
       - chapter-12-factorial-data.qmd   
       - chapter-13-combined-data.qmd
-    - part: chapter-20-programing.qmd
+    - part: chapter-20-preface.qmd
       chapters:
       - chapter-21-programing-R.qmd
+    - part: chapter-30-preface.qmd
+      chapters:
+      - chapter-31-statistical-testing.qmd
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd
