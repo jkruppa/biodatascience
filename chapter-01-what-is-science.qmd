@@ -19,26 +19,34 @@ source("images/part_0/part_0_science.R")
 #| fig-cap: "foo"
 #| label: fig-test-theory
 
-
+c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
+c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
 
 ggplot() +
   #theme_void() +
-  coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-10.5, 10.5), ylim = c(-10.5, 10.5)) +
   geom_hline(yintercept = c(-5, 0, 5), color = "gray") +
   geom_vline(xintercept = c(-5, 0, 5), color = "gray") +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
   scale_y_continuous(breaks = seq(-10, 10, 1)) +
   ## Population
+  geom_shape(data = tibble(x = c(0.75, 10.25, 10.25, 0.75), 
+                           y = c(0.75, 0.75, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
   annotate("label", x = -5, y = 9.25, label = "Population", size = 7.5, fontface = 2) +
   annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
-  annotate("text", x = 2, y = 9.5, label = "Structural equality", size = 5, fontface = 3) +
+  annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
+  annotate("text", x = 10.25, y = 5, label = "EXPERIMENT", size = 6, fontface = 2, angle = -90) +
   geom_curve(aes(x = -2, y = 8, xend = 6, yend = 8),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 0.5) +
   ## Sample
   geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1.5), fill = "white") +
   annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2) +
+  annotate("text", x = 7.5, y = 7.5, label = "Data", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6) +
   geom_curve(aes(x = 6, y = 7, xend = 3, yend = 6),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = 0.4, color = "black", linewidth = 0.5) +
@@ -51,10 +59,10 @@ ggplot() +
   geom_curve(aes(x = 6, y = 2, xend = -1.9, yend = 2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 0.5) +
-  annotate("text", x = 7.5, y = 2.5, label = "Statistical\ntest", size = 6, fontface = 2) +
-  annotate("label", x = 8.5, y = 1.4, label = expression(T[D]), size = 6) +
-  annotate("text", x = 2, y = 1.85, label = "Conclusion", size = 5.5, fontface = 2) +
-  annotate("text", x = 2, y = 1.25, label = expression(Does~H[0]~apply*"?"), 
+  annotate("text", x = 7.5, y = 2.25, label = "Statistical\ntest", size = 6, fontface = 2) +
+  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6) +
+  annotate("text", x = 2, y = 1.25, label = "Conclusion", size = 5.5, fontface = 2) +
+  annotate("text", x = 2, y = 0.55, label = "Is the null hypothesis valid?", 
            size = 5, fontface = 3) +
   ## Desc stat
   geom_curve(aes(x = 3, y = 4, xend = 6, yend = 3),
@@ -64,144 +72,41 @@ ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
   annotate("text", x = 3, y = 5, label = "Descriptive\nstatistics", size = 6, fontface = 2) +
   ## Distribution
-  geom_segment(aes(x = 7.5, y = -8.5, xend = 7.5, yend = -7.5)) +
+  geom_shape(data = tibble(x = c(-10.25, 10.25, 10.25, -10.25), 
+                           y = c(-10.25, -10.25, -0.25, -0.25)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = 10.25, y = -5, label = "THEORY", size = 6, fontface = 2, angle = -90) +
+  geom_segment(aes(x = 7.5, y = -9, xend = 7.5, yend = -8)) +
   geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
-            aes(x = (x_raw*1.25 + 5), y = (y_raw*18 - 8.5)),
-            linewidth = 1, color = "gray") +
-  geom_segment(aes(x = 5, y = -8.5, xend = 5, yend = -1.3), color = "gray") +
-  geom_segment(aes(x = 0.7, y = -8.5, xend = 9.3, yend = -8.5), color = "gray") 
-
-
-
-```
-
-
-
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 7
-#| fig-width: 7
-#| fig-cap: "foo"
-#| label: fig-test-theory-old
-set.seed(20240407)
-
-truth_tbl <- tibble(grp = as_factor("truth"),
-                    x = rnorm(200, 20, 7),
-                    y = rnorm(200, 70, 7),
-                    color = as_factor(sample(1:6, 200, replace = TRUE)),
-                    shape = as_factor(sample(1:4, 200, replace = TRUE)))
-
-data_theory_tbl <- tibble(grp = as_factor("data"),
-                          x = rnorm(12, 90, 2),
-                          y = rnorm(12, 80, 2),
-                          color = as_factor(sample(1:3, 12, replace = TRUE)),
-                          shape = as_factor(sample(1:2, 12, replace = TRUE)))
-
-t1_tbl <- tibble(grp = as_factor("t1"),
-                 x = rnorm(12, 70, 3),
-                 y = rnorm(12, 45, 3),
-                 color = as_factor(sample(2:4, 12, replace = TRUE)),
-                 shape = as_factor(sample(2:3, 12, replace = TRUE)))
-
-t2_tbl <- tibble(grp = as_factor("t1"),
-                 x = rnorm(12, 60, 2),
-                 y = rnorm(12, 25, 2),
-                 color = as_factor(sample(4:6, 12, replace = TRUE)),
-                 shape = as_factor(sample(2:3, 12, replace = TRUE)))
-
-t3_tbl <- tibble(grp = as_factor("t1"),
-                 x = rnorm(12, 35, 2),
-                 y = rnorm(12, 10, 2),
-                 color = as_factor(sample(1:4, 12, replace = TRUE)),
-                 shape = as_factor(sample(3:4, 12, replace = TRUE)))
-
-t4_tbl <- tibble(grp = as_factor("t1"),
-                 x = rnorm(12, 5, 3),
-                 y = rnorm(12, 10, 3),
-                 color = as_factor(sample(3:6, 12, replace = TRUE)),
-                 shape = as_factor(sample(1:2, 12, replace = TRUE)))
-
-dist_tbl <- tibble(x_raw = seq(-4, 4, 0.01),
-                   y_raw = dnorm(x_raw))
-
-bind_rows(truth_tbl,
-          data_theory_tbl,
-          t1_tbl,
-          t2_tbl,
-          t3_tbl,
-          t4_tbl) |> 
-  ggplot(aes(x, y)) +
-  theme_void() +
-  #theme_minimal() +
-  geom_jitter(aes(fill = color, shape = shape), size = 4, width = 5, height = 5) +
-  annotate("text", x = 60, y = 105, label = "Randomisierung", size = 5, fontface = 2) +
-  annotate("text", x = 60, y = 101, label = "(Strukturgleichheit)", size = 5, fontface = 3) +
-  geom_curve(x = 36, y = 90, xend = 85, yend = 85,
+            aes(x = (x_raw*1.25 + 5), y = (y_raw*18 - 9)),
+            linewidth = 1, color = "black") +
+  geom_segment(aes(x = 5, y = -9, xend = 5, yend = -1.8), color = "black") +
+  geom_segment(aes(x = 0.7, y = -9, xend = 9.3, yend = -9), color = "black") + 
+  annotate("text", x = 7.5, y = -9.5, label = expression(T[D]), size = 6) +
+  ## other samples
+  geom_circle(aes(x0 = -9, y0 = -2, r = 1), fill = "white") +
+  geom_circle(aes(x0 = -6.5, y0 = -3, r = 1), fill = "white") +
+  geom_circle(aes(x0 = -3.5, y0 = -3, r = 1), fill = "white") +
+  geom_circle(aes(x0 = -1, y0 = -2, r = 1), fill = "white") +
+  geom_curve(aes(x = -3.5, y = 1, xend = -1.5, yend = -1),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.5, color = "black", linewidth = 0.5) +
-  geom_curve(x = 91, y = 38, xend = 43, yend = 72,
+             curvature = 0.2, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = -4.5, y = 0.8, xend = -4, yend = -2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.6, color = "black", linewidth = 0.5) +
-  geom_curve(x = 99, y = 83, xend = 110, yend = 68,
+             curvature = 0.2, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = -5.5, y = 0.8, xend = -6, yend = -2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = -0.2, color = "black", linewidth = 0.5) +
-  geom_curve(x = 110, y = 60, xend = 105, yend = 11,
+  geom_curve(aes(x = -6.5, y = 1, xend = -8.5, yend = -1),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 0.5) +
-  annotate("text", x = 20, y = 102, label = "Grundgesamtheit", size = 5, fontface = 2) +
-  geom_ellipse(aes(x0 = 20, y0 = 70, a = 22, b = 29, angle = 0), color = "black") +
-  annotate("text", x = 93, y = 98, label = "Stichprobe", size = 5, fontface = 2) +
-  annotate("text", x = 93, y = 94, label = "Daten (D)", size = 5, fontface = 3) +
-  geom_ellipse(aes(x0 = 91, y0 = 80, a = 12, b = 7, angle = 20), color = "black") +
-  annotate("text", x = 110, y = 66, label = "Teststatistik", size = 5, fontface = 2) +
-  annotate("label", x = 110, y = 60, label = expression(T[D]), size = 7) +
-  annotate("text", x = 60, y = 77, label = "Rückschluß", size = 5, fontface = 2) +
-  annotate("text", x = 60, y = 70, label = expression(Gilt~die~H[0]*"?"), 
-           size = 5, fontface = 3) +
-  geom_ellipse(aes(x0 = 7, y0 = 10, a = 10, b = 10, angle = 0), color = "gray") +
-  geom_ellipse(aes(x0 = 36, y0 = 10, a = 10, b = 10, angle = 0), color = "gray") +
-  geom_ellipse(aes(x0 = 60, y0 = 24, a = 10, b = 10, angle = 0), color = "gray") +
-  geom_ellipse(aes(x0 = 70, y0 = 44, a = 10, b = 10, angle = 0), color = "gray") +
-  geom_curve(x = 34, y = 42, xend = 59, yend = 44,
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.2, color = "gray", linewidth = 0.5) +
-  geom_curve(x = 35, y = 41, xend = 51, yend = 30,
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.2, color = "gray", linewidth = 0.5) +
-  geom_curve(x = 30, y = 40, xend = 35, yend = 21,
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.2, color = "gray", linewidth = 0.5) +
-  geom_curve(x = 20, y = 40, xend = 8, yend = 21,
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "gray", linewidth = 0.5) +
-  annotate("label", x = 25, y = 42, label = expression(H[0]~wahr), 
-           size = 7) +
-  geom_line(data = dist_tbl, aes(x = (x_raw + 13)*7, y = y_raw*80+5),
-            linewidth = 1, color = "gray") +
-  geom_segment(x = 65, y = 5, xend = 115, yend = 5, color = "gray") +
-  geom_segment(x = 91, y = 5, xend = 91, yend = 37, color = "gray") +
-  geom_segment(x = 104, y = 5, xend = 104, yend = 10.5) +
-  annotate("text", x = 91, y = 3, label = "0") +
-  annotate("text", x = 104, y = 3, label = expression(T[D])) +
-  annotate("text", x = 80, y = -2, label = "Testverteilung", size = 5, 
-           fontface = 2) +
-  annotate("text", x = 101, y = -2, label = expression("("*T[1]*","*"..."*","*T[p]*")"), size = 5, 
-           fontface = 2) +
-  annotate("text", x = 21.5, y = 12, label = "...", size = 12, fontface = 2,
-           color = "gray") +
-  annotate("label", x = 81, y = 42, label = expression(T[1]), size = 7) +
-  annotate("label", x = 70, y = 18, label = expression(T[2]), size = 7) +
-  annotate("label", x = 46, y = 3, label = expression(T[3]), size = 7) +
-  annotate("label", x = 16.5, y = 3, label = expression(T[p]), size = 7) +
-  scale_x_continuous(limits = c(-3, 115)) +
-  scale_y_continuous(limits = c(-4, 105)) +
-  scale_shape_manual(values = 21:24) +
-  theme(legend.position = "none") +
-  scale_fill_okabeito() 
+             curvature = -0.2, color = "black", linewidth = 0.5)
+
+
 ```
+
+
+
+
 
 
 
