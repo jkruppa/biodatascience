@@ -129,6 +129,9 @@ ggplot() +
                            y = c(-10.25, -10.25, -0.25, -0.25)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("text", x = 10.25, y = -5, label = "THEORY", size = 6, fontface = 2, angle = -90) +
+  geom_ribbon(data = tibble(x_raw = seq(2, 3.5, 0.01), y_raw = dnorm(x_raw)*18-9), 
+            aes(x = (x_raw*1.25 + 5), ymax = (y_raw), ymin = -9),
+            linewidth = 1, fill = "gray80") +  
   geom_segment(aes(x = 7.5, y = -9, xend = 7.5, yend = -8)) +
   geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
             aes(x = (x_raw*1.25 + 5), y = (y_raw*18 - 9)),
@@ -136,6 +139,10 @@ ggplot() +
   geom_segment(aes(x = 5, y = -9, xend = 5, yend = -1.8), color = "black") +
   geom_segment(aes(x = 0.7, y = -9, xend = 9.3, yend = -9), color = "black") + 
   annotate("text", x = 7.5, y = -9.5, label = expression(T[D]), size = 6) +
+  annotate("text", x = 9, y = -8, label = "p-value", size = 6) +
+  geom_curve(aes(x = 9, y = -8.3, xend = 7.8, yend = -8.8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
   annotate("text", x = 5, y = -1.5, label = "Anzahl", size = 5, fontface = 2) +
   annotate("text", x = 9.5, y = -9.35, label = "T", size = 5, fontface = 2) +
   ## other samples
