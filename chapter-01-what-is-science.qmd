@@ -31,14 +31,18 @@ ggplot() +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
   scale_y_continuous(breaks = seq(-10, 10, 1)) +
   ## Population
-  geom_shape(data = tibble(x = c(0.75, 10.25, 10.25, 0.75), 
-                           y = c(0.75, 0.75, 9.75, 9.75)),
+  geom_shape(data = tibble(x = c(0.5, 10.25, 10.25, 0.5), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(-10.25, -0.5, -0.5, -10.25), 
+                           y = c(0.5, 0.5, 9.75, 9.75)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
-  annotate("label", x = -5, y = 9.25, label = "Population", size = 7.5, fontface = 2) +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
   annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
   annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
   annotate("text", x = 10.25, y = 5, label = "EXPERIMENT", size = 6, fontface = 2, angle = -90) +
+  annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, angle = 90) +
   geom_curve(aes(x = -2, y = 8, xend = 6, yend = 8),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 0.5) +
@@ -83,23 +87,75 @@ ggplot() +
   geom_segment(aes(x = 5, y = -9, xend = 5, yend = -1.8), color = "black") +
   geom_segment(aes(x = 0.7, y = -9, xend = 9.3, yend = -9), color = "black") + 
   annotate("text", x = 7.5, y = -9.5, label = expression(T[D]), size = 6) +
+  annotate("text", x = 5, y = -1.5, label = "Anzahl", size = 5, fontface = 2) +
+  annotate("text", x = 9.5, y = -9.35, label = "T", size = 5, fontface = 2) +
   ## other samples
   geom_circle(aes(x0 = -9, y0 = -2, r = 1), fill = "white") +
+  annotate("text", x = -9, y = -2, label = expression(R[1]), size = 7) +
   geom_circle(aes(x0 = -6.5, y0 = -3, r = 1), fill = "white") +
+  annotate("text", x = -6.5, y = -3, label = expression(R[2]), size = 7) +
   geom_circle(aes(x0 = -3.5, y0 = -3, r = 1), fill = "white") +
+  annotate("text", x = -3.5, y = -3, label = expression(R[3]), size = 7) +
   geom_circle(aes(x0 = -1, y0 = -2, r = 1), fill = "white") +
+  annotate("text", x = -1, y = -2, label = expression(R[k]), size = 7) +
   geom_curve(aes(x = -3.5, y = 1, xend = -1.5, yend = -1),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "black", linewidth = 0.5) +
+             curvature = 0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
   geom_curve(aes(x = -4.5, y = 0.8, xend = -4, yend = -2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "black", linewidth = 0.5) +
+             curvature = 0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
   geom_curve(aes(x = -5.5, y = 0.8, xend = -6, yend = -2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.2, color = "black", linewidth = 0.5) +
+             curvature = -0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
   geom_curve(aes(x = -6.5, y = 1, xend = -8.5, yend = -1),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = -0.2, color = "black", linewidth = 0.5)
+             curvature = -0.2, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  annotate("text", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2) +
+  geom_circle(aes(x0 = -9, y0 = -2-3.5, r = 1), fill = "white") +
+  annotate("text", x = -9, y = -2-3.5, label = expression(T[1]), size = 7) +
+  geom_circle(aes(x0 = -6.5, y0 = -3-3.5, r = 1), fill = "white") +
+  annotate("text", x = -6.5, y = -3-3.5, label = expression(T[2]), size = 7) +
+  geom_circle(aes(x0 = -3.5, y0 = -3-3.5, r = 1), fill = "white") +
+  annotate("text", x = -3.5, y = -3-3.5, label = expression(T[3]), size = 7) +
+  geom_circle(aes(x0 = -1, y0 = -2-3.5, r = 1), fill = "white") +
+  annotate("text", x = -1, y = -2-3.5, label = expression(T[k]), size = 7) +
+  annotate("text", x = -5, y = -4.7, label = "Statistical test", size = 6, fontface = 2) +
+  geom_curve(aes(x = -9, y = -3, xend = -9, yend = -4.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -6.5, y = -4, xend = -6.5, yend = -5.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -3.5, y = -4, xend = -3.5, yend = -5.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -1, y = -3, xend = -1, yend = -4.5),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -9, y = -6.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.5, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -6.5, y = -7.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.4, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -3.5, y = -7.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.35, color = "black", linewidth = 0.5,
+             linetype = "33") +
+  geom_curve(aes(x = -1, y = -6.5, xend = 3, yend = -6),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.45, color = "black", linewidth = 0.5,
+             linetype = "33")
 
 
 ```
