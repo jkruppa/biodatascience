@@ -16,6 +16,52 @@ source("init.R")
 
 ## General background
 
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.75
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-random
+
+c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
+c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
+
+ggplot() +
+  theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(0.5, 10)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(0, 10, 1)) +
+  ## Population
+ # geom_shape(data = tibble(x = c(0.5, 10.25, 10.25, 0.5), 
+#                           y = c(0.5, 0.5, 9.75, 9.75)),
+#             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+#  geom_shape(data = tibble(x = c(-10.25, -0.5, -0.5, -10.25), 
+#                           y = c(0.5, 0.5, 9.75, 9.75)),
+#             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("text", x = 10.25, y = 5, label = "SAMPLE", size = 6, fontface = 2, angle = -90) +
+  annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, angle = 90) +
+  geom_curve(aes(x = -2, y = 8, xend = 6, yend = 8),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  ## Sample
+  geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1), fill = "white") +
+  annotate("text", x = 7.5, y = 7.5, label = "Data", size = 6, fontface = 2) +
+  ## Test
+  geom_circle(aes(x0 = 7.5, y0 = 2.5, r = 1.5), fill = "white") +
+  geom_curve(aes(x = -1.9, y = 2, xend = 6, yend = 2),
+             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", linewidth = 0.5) 
+```
+
+
+
 ```{r}
 #| message: false
 #| echo: false
@@ -178,7 +224,8 @@ ggplot() +
              curvature = -0.2, color = "black", linewidth = 0.5,
              linetype = "33") +
   annotate("label", x = -5, y = 1, label = "Null is true", size = 8, fontface = 2) +
-  annotate("text", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2) +
+  annotate("label", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2,
+           fill = "gray95", label.size = NA) +
   geom_circle(aes(x0 = -9, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
   annotate("text", x = -9, y = -2-3.5, label = expression(T[1]), size = 7) +
   geom_circle(aes(x0 = -6.5, y0 = -3-3.5, r = 1), fill = "#FCA63680") +
@@ -187,7 +234,6 @@ ggplot() +
   annotate("text", x = -3.5, y = -3-3.5, label = expression(T[3]), size = 7) +
   geom_circle(aes(x0 = -1, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
   annotate("text", x = -1, y = -2-3.5, label = expression(T[k]), size = 7) +
-  annotate("text", x = -5, y = -4.7, label = "Statistical test", size = 6, fontface = 2) +
   geom_curve(aes(x = -9, y = -3, xend = -9, yend = -4.5),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = 0, color = "black", linewidth = 0.5,
@@ -220,6 +266,8 @@ ggplot() +
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = 0.45, color = "black", linewidth = 0.5,
              linetype = "33") +
+  annotate("label", x = -5, y = -4.7, label = "Statistical test", size = 6, 
+           fontface = 2, fill = "gray95", label.size = NA) +
   ## dist to test
   geom_curve(aes(x = 4, y = -3, xend = -1.9, yend = 2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
