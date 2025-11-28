@@ -22,7 +22,7 @@ source("init.R")
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 4.75
+#| fig-height: 5
 #| fig-width: 10
 #| fig-cap: "foo"
 #| label: fig-test-theory-random
@@ -33,7 +33,7 @@ c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
 ggplot() +
   theme_void() +
   theme_minimal() +
-  coord_cartesian(xlim = c(-10, 10), ylim = c(0.5, 10)) +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(0, 10)) +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
   scale_y_continuous(breaks = seq(0, 10, 1)) +
   ## Population
@@ -50,6 +50,7 @@ ggplot() +
   annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, 
            angle = 90) +
   ## Sample
+  ## upper
   geom_circle(aes(x0 = 3, y0 = 9, r = 1), fill = "white") +
   annotate("text", x = 3, y = 9, label = expression(R[1]), size = 6) +
   geom_curve(aes(x = -2, y = 8, xend = 1.9, yend = 9),
@@ -60,14 +61,15 @@ ggplot() +
   geom_curve(aes(x = -1, y = 6.5, xend = 1.9, yend = 6.5),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 0.5) +
-  geom_circle(aes(x0 = 3, y0 = 4, r = 1), fill = "white") +
-  annotate("text", x = 3, y = 4, label = expression(R[3]), size = 6) +
-  geom_curve(aes(x = -1, y = 3.5, xend = 1.9, yend = 3.5),
+  ## lower
+  geom_circle(aes(x0 = 3, y0 = 3.5, r = 1), fill = "white") +
+  annotate("text", x = 3, y = 3.5, label = expression(R[k-1]), size = 6) +
+  geom_curve(aes(x = -1.25, y = 3, xend = 1.9, yend = 3.5),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "black", linewidth = 0.5) +
-  geom_circle(aes(x0 = 3, y0 = 1.5, r = 1), fill = "white") +
-  annotate("text", x = 3, y = 1.5, label = expression(R[k]), size = 6) +
-  geom_curve(aes(x = -1.9, y = 2, xend = 1.9, yend = 1.5),
+  geom_circle(aes(x0 = 3, y0 = 1, r = 1), fill = "white") +
+  annotate("text", x = 3, y = 1, label = expression(R[k]), size = 6) +
+  geom_curve(aes(x = -2.5, y = 1.5, xend = 1.9, yend = 1),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "black", linewidth = 0.5) 
 ```
