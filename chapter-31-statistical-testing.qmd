@@ -17,15 +17,48 @@ source("init.R")
 ## General background
 
 ```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-pval-fisher
+
 expand_grid(x = 1:40,
             y = 1:25) |> 
   mutate(pval = pt(rt(1000, 5), 5),
          decision = pval <= 0.05) |>
   ggplot(aes(x, y, fill = pval)) +
   theme_void() +
-  geom_point(shape = 21) +
+  geom_point(shape = 21, size = 4) +
   scale_fill_viridis(option = "plasma",
-                     breaks = c(0.05, 0.5, 0.75), labels = c("low", "med", "high"))
+                     breaks = c(0.05, 0.5, 0.75), labels = c("low", "med", "high")) +
+  theme(legend.position = "top")
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-pval-neyman
+
+expand_grid(x = 1:40,
+            y = 1:25) |> 
+  mutate(pval = pt(rt(1000, 5), 5),
+         decision = pval <= 0.05) |>
+  ggplot(aes(x, y, fill = decision)) +
+  theme_void() +
+  geom_point(shape = 21, size = 4) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE,
+                     labels = c("low", "med")) +
+  theme(legend.position = "top")
 ```
 
 
