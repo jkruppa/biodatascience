@@ -16,6 +16,54 @@ source("init.R")
 
 ## General background
 
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 7
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-test-theory-dist
+
+
+ggplot() +
+  coord_cartesian(xlim = c(-10,10), ylim = c(-10, 10)) +
+  scale_x_continuous(breaks = seq(-10,10,1)) +
+  scale_y_continuous(breaks = seq(-10,10,1)) +
+  annotate("point", x = 1, y = 2, shape = 21, size = 3) +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(x = (x_raw-6), y = (y_raw*10)),
+            linewidth = 1, color = "black") +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(x = (x_raw+6), y = (y_raw*5)),
+            linewidth = 1, color = "black") +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(x = (x_raw+6), y = (y_raw*5+5)),
+            linewidth = 1, color = "black") +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(x = (x_raw+6), y = (y_raw*5-5)),
+            linewidth = 1, color = "black") 
+```
+
+
+```{r}
+flea_weight_dist_tbl <- tibble(sample_1 = c(4.1, 4.1, 7.1, 7.1, 8.3),
+                               sample_2 = c(3, 5, 7, 9, NA),
+                               sample_3 = c(4, 7.5, 7.5, 8, NA)) |> 
+  gather() |> 
+  na.omit()
+
+flea_weight_dist_tbl |> 
+  ggplot(aes(x = value, fill = key)) +
+  geom_dotplot()
+
+```
+
+
+
 ```{r}
 #| message: false
 #| echo: false
