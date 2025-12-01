@@ -28,10 +28,12 @@ source("images/part_3/part_3_theory_testing.R")
 #| fig-cap: "foo"
 #| label: fig-test-theory-pval-fisher
 
-expand_grid(x = 1:40,
+p_val_tbl <- expand_grid(x = 1:40,
             y = 1:25) |> 
-  mutate(pval = pt(rt(1000, 5), 5),
-         decision = pval <= 0.05) |>
+  mutate(pval = sort(pt(rt(1000, 5), 5)),
+         decision = pval >= 0.05) 
+
+p_val_tbl |>
   ggplot(aes(x, y, fill = pval)) +
   theme_void() +
   geom_point(shape = 21, size = 3) +
@@ -54,10 +56,7 @@ expand_grid(x = 1:40,
 #| fig-cap: "foo"
 #| label: fig-test-theory-pval-neyman
 
-expand_grid(x = 1:40,
-            y = 1:25) |> 
-  mutate(pval = pt(rt(1000, 5), 5),
-         decision = pval >= 0.05) |>
+p_val_tbl |> 
   ggplot(aes(x, y, fill = decision)) +
   theme_void() +
   geom_point(shape = 21, size = 3) +
