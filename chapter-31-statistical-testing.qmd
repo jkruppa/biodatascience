@@ -39,7 +39,7 @@ ggplot() +
                            y = c(-4, -4, 24.25, 24.25)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_shape(data = tibble(x = c(-3, 52, 52, -3), 
-                           y = c(24.5, 24.5, 49.5, 49.5)),
+                           y = c(24.75, 24.75, 49.5, 49.5)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("text", x = -3, y = 37, label = "FISHER", size = 5.5, fontface = 2, 
            angle = 90) +
