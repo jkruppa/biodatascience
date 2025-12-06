@@ -1,4 +1,4 @@
-```{r echo = FALSE, warning = FALSE}
+```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
 source("images/part_1/part_1_data.R")
 ```
