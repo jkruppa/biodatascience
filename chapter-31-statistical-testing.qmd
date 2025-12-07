@@ -13,7 +13,18 @@ source("images/part_3/part_3_theory_testing.R")
 ## General background
 
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 5.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-stat-fire-alarm
 
+p_fire_alarm
+```
 
 
 

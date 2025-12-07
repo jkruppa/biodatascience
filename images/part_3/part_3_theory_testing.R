@@ -392,3 +392,104 @@ p_fisher_newman <- ggplot() +
            label = "Reject Null", fontface = 2, fill = "#0D088780", size = 3.5) +
   scale_fill_viridis(option = "plasma") +
   theme(legend.position = "none") 
+
+
+geom_fire_alarm <- function(x, y, alarm = FALSE, fire = FALSE) {
+  list(
+    geom_curve(aes(x = x-0.25, y = y+0.25, xend = x-0.25, yend = y+1.5),
+               curvature = -0.8, color = "black", linewidth = 0.5, lineend = "round"),
+    annotate("point", x = x, y = y, shape = 24, fill = "#E16462FF", color = "black", size = 10),
+    annotate("point", x = x, y = y+0.75, shape = 21, fill = "#E16462FF", color = "black", size = 10),
+    annotate("point", x = x, y = y+0.75, shape = 16, color = "black", size = 2),
+    annotate("point", x = x-0.25, y = y+1.5, shape = 16, color = "black", size = 3),  
+    annotate("rect", xmin = x +1.5, xmax = x + 4.5, ymin = y, ymax = y - 2, fill = "gray80"),
+    geom_shape(data = tibble(x = c(x+4.5, x+5, x+5, x+4.5), 
+                             y = c(y+0, y+0.5, y-1.5, y-2)),
+               aes(x, y), fill = "gray50"),
+    geom_shape(data = tibble(x = c(x+1.5, x+2, x+5, x+4.5), 
+                             y = c(y+0, y+0.5, y+0.5, y+0)),
+               aes(x, y), fill = "gray65"),
+    annotate("segment", x = x+2.25, xend = x +3.75, y = y-0.9, yend = y-0.9),
+    annotate("segment", x = x+2.25, xend = x +3.75, y = y-1.1, yend = y-1.1),
+    annotate("point", x = c(x+2.25, x +3.75), y = y-0.25, shape = 10, size = 2),
+    geom_ellipse(aes(x0 = x + 2.5, y0 = y+0.25, a = 0.5, b = 0.15, angle = 0), fill = "gray20"),
+    geom_ellipse(aes(x0 = x + 4, y0 = y+0.25, a = 0.5, b = 0.15, angle = 0), fill = "gray20"),
+    if(alarm) {
+      list(
+        geom_curve(aes(x = x+0.5, y = y+0.35, xend = x+0.25, yend = y+1.35),
+                   curvature = 0.7, color = "#0D0887FF", linewidth = 0.5, lineend = "round"), 
+        geom_curve(aes(x = x+0.6, y = y+0.25, xend = x+0.35, yend = y+1.45),
+                   curvature = 0.7, color = "#0D0887FF", linewidth = 0.5, lineend = "round"),
+        geom_curve(aes(x = x+0.7, y = y+0.15, xend = x+0.45, yend = y+1.55),
+                   curvature = 0.7, color = "#0D0887FF", linewidth = 0.5, lineend = "round"),
+        geom_curve(aes(x = x+0.8, y = y+0.05, xend = x+0.55, yend = y+1.65),
+                   curvature = 0.7, color = "#0D0887FF", linewidth = 0.5, lineend = "round"),
+        annotate("label", x = x, y = y-0.2, shape = 16, color = "black", size = 1.6, 
+                 label = "ALARM", fontface = 2)
+      )
+    },
+    if(fire){
+      list(
+        geom_image(aes(x = x+4, y = y+1.05, image = "images/fire.png"), size = 0.06),
+        geom_shape(data = tibble(x = c(x+2, x+4, x+4, x+2), 
+                                 y = c(y-0.5, y-0.5, y-1.5, y-1.5)),
+                   aes(x, y), fill = "#FCA63680", radius = unit(0.1, 'cm'))
+      )
+    } else {
+      geom_shape(data = tibble(x = c(x+2, x+4, x+4, x+2), 
+                               y = c(y-0.5, y-0.5, y-1.5, y-1.5)),
+                 aes(x, y), fill = "#0D088780", radius = unit(0.1, 'cm'))
+    }
+  )
+}
+
+p_fire_alarm <- ggplot() +
+  theme_void() +
+  coord_cartesian(xlim = c(-9.1, 9.2), ylim = c(-9.2, 9.1)) +
+  scale_x_continuous(breaks = seq(-10,10,1)) +
+  scale_y_continuous(breaks = seq(-10,10,1)) +
+  #  geom_hline(yintercept = c(-10, -2, 6), color = "gray75") +
+  #  geom_vline(xintercept = c(-6, 2, 10), color = "gray75") +
+  geom_fire_alarm(x = 4, y = 4, alarm = "TRUE") +
+  geom_fire_alarm(x = -4, y = 4, alarm = "TRUE", fire = "TRUE") +
+  geom_fire_alarm(x = 4, y = -4) +
+  geom_fire_alarm(x = -4, y = -4, fire = "TRUE") +
+  ## coords
+  annotate("segment", x = -10, y = -10, xend = 10, yend = -10, size = 1) +
+  annotate("segment", x = -8, y = -2, xend = 10, yend = -2, size = 1) +
+  annotate("segment", x = -10, y = 6, xend = 10, yend = 6, size = 1) +
+  annotate("segment", x = -6, y = 10, xend = -6, yend = -10, size = 1) +
+  annotate("segment", x = 2, y = 8, xend = 2, yend = -10, size = 1) +
+  annotate("segment", x = 10, y = 10, xend = 10, yend = -10, size = 1) +
+  ## text
+  annotate("text", x = -2, y = 1.5, label = "ALARM with FIRE", fontface = 3) +
+  annotate("text", x = -2, y = 0.5, label = "Power / True positive", fontface = 2, size = 5) +
+  annotate("text", x = -2, y = -0.5, label = expression(1-beta~"="~80*"%"), size = 4.5) + 
+  annotate("text", x = -2, y = -1.5, label = "We believe in this to be high.", fontface = 3.5,
+           size = 4) +
+  annotate("text", x = 6, y = 1.5, label = "ALARM without FIRE", fontface = 3) +
+  annotate("text", x = 6, y = 0.5, label = "Type I error / False positive", fontface = 2, size = 5) +
+  annotate("text", x = 6, y = -0.5, label = expression(alpha~"="~5*"%"), size = 4.5) +
+  annotate("text", x = 6, y = -1.5, label = "We control this in our testing.", fontface = 3.5,
+           size = 4) +
+  annotate("text", x = -2, y = -6.5, label = "FIRE without ALARM", fontface = 3) +
+  annotate("text", x = -2, y = -7.5, label = "Type II error / False negative", 
+           fontface = 2, size = 5) +
+  annotate("text", x = -2, y = -8.5, label = expression(beta~"="~20*"%"), size = 4.5) +
+  annotate("text", x = -2, y = -9.5, label = "We cannot control this in our testing.", 
+           fontface = 3, size = 4) +
+  annotate("text", x = 6, y = -6.5, label = "No FIRE, no ALARM", fontface = 3) +
+  annotate("text", x = 6, y = -7.5, label = "True negative", fontface = 2, size = 5) +
+  annotate("text", x = 6, y = -8.5, label = expression(1-alpha~"="~95*"%"), size = 4.5) +
+  annotate("text", x = 6, y = -9.5, label = "We are rarely interested in.", 
+           fontface = 3, size = 4) +
+  ## columns
+  annotate("text", x = 2, y = 9, label = "Unkown truth in the population", fontface = 2, size = 7.5) +
+  annotate("text", x = -2, y = 7, label = "Null is false / effect", fontface = 2, size = 5.5) +
+  annotate("text", x = 6, y = 7, label = "Null is true / no effect", fontface = 2, size = 5.5) +
+  ## rows
+  annotate("text", x = -9, y = -2, label = "Decision by a statistical test", fontface = 2, 
+           size = 7.5, angle = 90) +
+  annotate("text", x = -7, y = 2, label = "Reject Null / effect", fontface = 2, size = 5.5, angle = 90) +
+  annotate("text", x = -7, y = -6, label = "Keep Null / no effect", fontface = 2, size = 5.5, angle = 90) 
+
