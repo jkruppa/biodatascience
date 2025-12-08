@@ -820,7 +820,18 @@
     "href": "chapter-31-statistical-testing.html",
     "title": "8  Statistical testing",
     "section": "",
-    "text": "8.1 General background\nLast modified on 08. December 2025 at 12:16:02\nFigure 8.1: foo\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo\nFigure 8.7: foo",
+    "text": "8.1 General background\nLast modified on 08. December 2025 at 19:07:26\nStatistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.\nStatistics means: If the hunter misses the rabbit once to the left and once to the right, then on average, the rabbit’s a goner.\nFigure 8.1: foo\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo\nFigure 8.7: foo",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#general-background",
+    "href": "chapter-31-statistical-testing.html#general-background",
+    "title": "8  Statistical testing",
+    "section": "",
+    "text": "“Statistik ist: Wenn der Jäger am Hasen einmal links und einmal rechts vorbeischießt, dann ist der Hase im Durchschnitt tot.” — Mike Krüger, German comedian",
     "crumbs": [
       "Hypothese testing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
@@ -1065,17 +1076,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-31-statistical-testing.html#general-background",
-    "href": "chapter-31-statistical-testing.html#general-background",
-    "title": "8  Statistical testing",
-    "section": "",
-    "text": "“Statistik ist: Wenn der Jäger am Hasen einmal links und einmal rechts vorbeischießt, dann ist der Hase im Durchschnitt tot.” — Mike Krüger, German comedian",
-    "crumbs": [
-      "Hypothese testing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
     ]
   }
 ]

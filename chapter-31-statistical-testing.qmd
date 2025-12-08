@@ -15,6 +15,10 @@ source("images/part_3/part_3_theory_testing.R")
 
 > *"Statistik ist: Wenn der Jäger am Hasen einmal links und einmal rechts vorbeischießt, dann ist der Hase im Durchschnitt tot." --- Mike Krüger, German comedian*
 
+Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.  
+
+Statistics means: If the hunter misses the rabbit once to the left and once to the right, then on average, the rabbit’s a goner. 
+
 ```{r}
 #| message: false
 #| echo: false
