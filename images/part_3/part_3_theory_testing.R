@@ -493,3 +493,98 @@ p_fire_alarm <- ggplot() +
   annotate("text", x = -7, y = 2, label = "Reject Null / effect", fontface = 2, size = 5.5, angle = 90) +
   annotate("text", x = -7, y = -6, label = "Keep Null / no effect", fontface = 2, size = 5.5, angle = 90) 
 
+
+geom_bulls_eye <- function(x, y) {
+  list(
+    stat_circle(aes(x0 = x, y0 = y, r = 0.2), fill = "#E16462FF", color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 0.5), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 1), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 1.5), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 2), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 2.5), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 3), color = "gray50"),
+    stat_circle(aes(x0 = x, y0 = y, r = 3.5), color = "gray50")
+  )
+}
+
+error_tbl <- tibble(x = seq(0, 3, by = 0.1),
+                    y_1 = x^2+1,
+                    y_2 = exp(-x+2.65),
+                    y_sum = y_1 + y_2)
+min_y_sum_tbl <- error_tbl |> 
+  mutate(fct = seq(1, 29/17, length.out = 31)) |> 
+  filter(y_sum == min(y_sum))
+
+p_bulls_eye <- ggplot() +
+  theme_void() +
+  coord_cartesian(xlim = c(-8.5, 27.5), ylim = c(-9.2, 9.1)) +
+  scale_x_continuous(breaks = seq(-10,30,1)) +
+  scale_y_continuous(breaks = seq(-10,10,1)) +
+  #  geom_hline(yintercept = c(-10, -2, 6), color = "gray75") +
+  #  geom_vline(xintercept = c(-6, 2, 10), color = "gray75") +
+  ## bulls eye
+  geom_bulls_eye(x = -2, y = 2) +  
+  geom_bulls_eye(x = 6, y = 2) +  
+  geom_bulls_eye(x = -2, y = -6) +  
+  geom_bulls_eye(x = 6, y = -6) +  
+  geom_point(data = tibble(x = rnorm(12, -3, 1.25),
+                           y = rnorm(12, 5, 1.25)), 
+             aes(x,y), shape = 19) +
+  geom_point(data = tibble(x = rnorm(10, 4, 0.25),
+                           y = rnorm(10, 4, 0.25)), 
+             aes(x,y), shape = 19) +
+  geom_point(data = tibble(x = rnorm(10, 6, 0.2),
+                           y = rnorm(10, -6, 0.2)), 
+             aes(x,y), shape = 19) +
+  geom_point(data = tibble(x = rnorm(12, -2, 1),
+                           y = rnorm(12, -6, 1)), 
+             aes(x,y), shape = 19) +
+  ## coords
+  annotate("segment", x = -10, y = -10, xend = 10, yend = -10, size = 1) +
+  annotate("segment", x = -8, y = -2, xend = 10, yend = -2, size = 1) +
+  annotate("segment", x = -10, y = 6, xend = 10, yend = 6, size = 1) +
+  annotate("segment", x = -6, y = 10, xend = -6, yend = -10, size = 1) +
+  annotate("segment", x = 2, y = 8, xend = 2, yend = -10, size = 1) +
+  annotate("segment", x = 10, y = 10, xend = 10, yend = -10, size = 1) +
+  ## text
+  ## columns
+  annotate("text", x = 2, y = 9, label = "Variance", fontface = 2, size = 8.5) +
+  annotate("text", x = -2, y = 7, label = "High", fontface = 2, size = 7.5) +
+  annotate("text", x = 6, y = 7, label = "Low", fontface = 2, size = 7.5) +
+  ## rows
+  annotate("text", x = -9, y = -2, label = "Bias", fontface = 2, 
+           size = 8.5, angle = 90) +
+  annotate("text", x = -7, y = 2, label = "High", fontface = 2, size = 7.5, angle = 90) +
+  annotate("text", x = -7, y = -6, label = "Low", fontface = 2, size = 7.5, angle = 90) +
+  # right
+  ## coords
+  annotate("text", x = 21.5, y = -9, label = "Complexity of the model", fontface = 2, size = 7.5) +  
+  annotate("text", x = 13, y = 0.5, label = "Error", fontface = 2, 
+           size = 7.5, angle = 90) +
+  geom_line(data = error_tbl,
+            aes(x = (x+14)*seq(1, 29/17, length.out = 31), 
+                y = (y_1-8)*seq(1, 1.5, length.out = 31)), color = "#0D0887FF", size = 1.5) + 
+  geom_line(data = error_tbl,
+            aes(x = (x+14)*seq(1, 29/17, length.out = 31), 
+                y = (y_2-8)), color = "#B12A90FF", size = 1.5) +
+  geom_line(data = error_tbl,
+            aes(x = (x+14)*seq(1, 29/17, length.out = 31), 
+                y = (y_sum-8)), color = "#FCA636FF", size = 1.5) +
+  geom_segment(data = min_y_sum_tbl, aes(x = (x+14)*fct, xend = (x+14)*fct,
+                                         y = 8, yend = -7.9), color = "gray50",
+               arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
+  annotate("segment", x = 14, y = -8, xend = 29, yend = -8, size = 1,
+           arrow = arrow(length = unit(0.03, "npc"), type = "closed")) +
+  annotate("segment", x = 14, y = -8, xend = 14, yend = 9, size = 1,
+           arrow = arrow(length = unit(0.03, "npc"), type = "closed")) +
+  annotate("text", x = 29, y = -6, hjust = "right", label = "Bias²", size = 5.5, 
+           color = "#B12A90FF", fontface = 2) +
+  annotate("text", x = 29, y = -3, hjust = "right", label = "Variance", size = 5.5, 
+           color = "#0D0887FF", fontface = 2) +
+  annotate("text", x = 29, y = 4, hjust = "right", label = "Total Error", size = 5.5, 
+           color = "#FCA636FF", fontface = 2) +
+  annotate("text", x = 20.25, y = 4, hjust = "center", label = "Optimal complexity", size = 5.5, 
+           color = "gray50", fontface = 3, angle = 90)  +
+  ## letter
+  annotate("text", x = c(-9, 11.5), y = c(9, 9), label = c("(A)", "(B)"), size = 9,
+           fontface = 2)
