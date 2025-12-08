@@ -820,7 +820,7 @@
     "href": "chapter-31-statistical-testing.html",
     "title": "8  Statistical testing",
     "section": "",
-    "text": "8.1 General background\nLast modified on 07. December 2025 at 20:43:24\nFigure 8.1: foo\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo",
+    "text": "8.1 General background\nLast modified on 08. December 2025 at 11:19:50\nFigure 8.1: foo\nR Code [show / hide]\ntibble(x = seq(0, 3, by = 0.1),\n       y_1 = 0.1*x^2+1,\n       y_2 = exp(-x+0.5))\n\n\n# A tibble: 31 × 3\n       x   y_1   y_2\n   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1   0    1    1.65 \n 2   0.1  1.00 1.49 \n 3   0.2  1.00 1.35 \n 4   0.3  1.01 1.22 \n 5   0.4  1.02 1.11 \n 6   0.5  1.02 1    \n 7   0.6  1.04 0.905\n 8   0.7  1.05 0.819\n 9   0.8  1.06 0.741\n10   0.9  1.08 0.670\n# ℹ 21 more rows\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo\nFigure 8.7: foo",
     "crumbs": [
       "Hypothese testing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
@@ -1065,6 +1065,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-31-statistical-testing.html#general-background",
+    "href": "chapter-31-statistical-testing.html#general-background",
+    "title": "8  Statistical testing",
+    "section": "",
+    "text": "“Statistik ist: Wenn der Jäger am Hasen einmal links und einmal rechts vorbeischießt, dann ist der Hase im Durchschnitt tot.” — Mike Krüger, German comedian",
+    "crumbs": [
+      "Hypothese testing",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
     ]
   }
 ]
