@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Models of Reality",
     "section": "",
-    "text": "Welcome\n\n“Life is difficult.” — M. Scott Peck’s, The Road Less Traveled \n\nThis will be a long journey… it’s a hell of a time.\n\n“Ludwig Boltzman, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the work, died similarly in 1933. Now it is our turn to study statistical mechanics. Perhaps it will be wise to approach the subject cautiously.” — Opening lines of ‘States of Matter’, by D.L. Goodstein.”",
+    "text": "Welcome\n\n“Life is difficult.” — M. Scott Peck’s, The Road Less Traveled \n\nThis will be a long journey… it’s a hell of a time.\n\n“Ludwig Boltzman, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the work, died similarly in 1933. Now it is our turn to study statistical mechanics. Perhaps it will be wise to approach the subject cautiously.” — Opening lines of ‘States of Matter’, by D.L. Goodstein.",
     "crumbs": [
       "Welcome"
     ]
@@ -940,7 +940,7 @@
     "href": "chapter-41-eda.html",
     "title": "9  Explorative data analysis",
     "section": "",
-    "text": "9.1 General background\nLast modified on 09. December 2025 at 10:27:53",
+    "text": "9.1 General background\nLast modified on 09. December 2025 at 19:48:35",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -973,7 +973,7 @@
     "href": "chapter-41-eda.html#data",
     "title": "9  Explorative data analysis",
     "section": "9.4 Data",
-    "text": "9.4 Data",
+    "text": "9.4 Data\n\n\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\") \n\n\n\n\nR Code [show / hide]\njump_dog_tbl\n\n\n# A tibble: 7 × 2\n  host  jumplength\n  &lt;chr&gt;      &lt;dbl&gt;\n1 dog         21.8\n2 dog         28.4\n3 dog         34.8\n4 dog         34.4\n5 dog         38.8\n6 dog         31.4\n7 dog         41.4",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -983,8 +983,8 @@
     "objectID": "chapter-41-eda.html#alternatives",
     "href": "chapter-41-eda.html#alternatives",
     "title": "9  Explorative data analysis",
-    "section": "9.5 Alternatives",
-    "text": "9.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "9.6 Alternatives",
+    "text": "9.6 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -994,8 +994,8 @@
     "objectID": "chapter-41-eda.html#glossary",
     "href": "chapter-41-eda.html#glossary",
     "title": "9  Explorative data analysis",
-    "section": "9.6 Glossary",
-    "text": "9.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "9.7 Glossary",
+    "text": "9.7 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1005,8 +1005,8 @@
     "objectID": "chapter-41-eda.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-41-eda.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "9  Explorative data analysis",
-    "section": "9.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "9.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "9.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "9.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1016,8 +1016,8 @@
     "objectID": "chapter-41-eda.html#summary",
     "href": "chapter-41-eda.html#summary",
     "title": "9  Explorative data analysis",
-    "section": "9.8 Summary",
-    "text": "9.8 Summary",
+    "section": "9.9 Summary",
+    "text": "9.9 Summary",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1185,6 +1185,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#mean",
+    "href": "chapter-41-eda.html#mean",
+    "title": "9  Explorative data analysis",
+    "section": "9.5 Mean",
+    "text": "9.5 Mean\n\n\n\n\n\n\n\n\nFigure 9.2: foo",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
     ]
   }
 ]

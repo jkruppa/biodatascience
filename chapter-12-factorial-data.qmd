@@ -282,15 +282,15 @@ The data is available as txt-Files under <https://github.com/jkruppa/biodatascie
 ```{r}
 #| echo: false
 
-jump_animals_tbl |> 
-  arrange(host) |> 
-  mutate_if(is.numeric, round, 2) |> 
-  write_delim("data/jump_animals.txt")
-
 jump_flea_tbl |> 
   arrange(host) |> 
   mutate_if(is.numeric, round, 2) |> 
   write_delim("data/jump_fleas.txt")
+
+jump_animals_tbl |> 
+  arrange(host) |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_animals.txt")
 
 jump_habitat_tbl |> 
   arrange(host, site) |> 
