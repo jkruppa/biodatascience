@@ -1,0 +1,52 @@
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+source("init.R")
+```
+
+# Explorative data analysis {#sec-temp}
+
+*Last modified on `r format(fs::file_info("chapter-41-eda.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## General background
+
+## Theoretical background
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-dist-test
+
+ggplot()+
+  geom_path(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
+            aes(y = -(x_raw*1.4-5), x = (y_raw*15-2)),
+            linewidth = 1, color = "black", angle = 90) 
+```
+
+
+## R packages used
+
+## Data
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Models of Reality" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}

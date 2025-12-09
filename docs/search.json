@@ -373,7 +373,7 @@
     "href": "chapter-10-preface.html",
     "title": "Tales of data",
     "section": "",
-    "text": "References\nLast modified on 22. November 2025 at 19:18:43\nOnce upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas1. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?\nUnfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches2.",
+    "text": "References\nLast modified on 09. December 2025 at 10:28:31\nOnce upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas1. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?\nUnfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches2.",
     "crumbs": [
       "Tales of data"
     ]
@@ -701,7 +701,7 @@
     "href": "chapter-20-preface.html",
     "title": "Speaking to data",
     "section": "",
-    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "text": "Last modified on 09. December 2025 at 10:28:21\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
     "crumbs": [
       "Speaking to data"
     ]
@@ -810,7 +810,7 @@
     "href": "chapter-30-preface.html",
     "title": "Hypothese testing",
     "section": "",
-    "text": "Last modified on 27. November 2025 at 15:17:37\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "text": "Last modified on 09. December 2025 at 10:28:06\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
     "crumbs": [
       "Hypothese testing"
     ]
@@ -926,11 +926,120 @@
     ]
   },
   {
+    "objectID": "chapter-40-preface.html",
+    "href": "chapter-40-preface.html",
+    "title": "Visualisation of data",
+    "section": "",
+    "text": "Last modified on 09. December 2025 at 10:10:37\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Visualisation of data"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html",
+    "href": "chapter-41-eda.html",
+    "title": "9  Explorative data analysis",
+    "section": "",
+    "text": "9.1 General background\nLast modified on 09. December 2025 at 10:27:53",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#theoretical-background",
+    "href": "chapter-41-eda.html#theoretical-background",
+    "title": "9  Explorative data analysis",
+    "section": "9.2 Theoretical background",
+    "text": "9.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 9.1: foo",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#r-packages-used",
+    "href": "chapter-41-eda.html#r-packages-used",
+    "title": "9  Explorative data analysis",
+    "section": "9.3 R packages used",
+    "text": "9.3 R packages used",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#data",
+    "href": "chapter-41-eda.html#data",
+    "title": "9  Explorative data analysis",
+    "section": "9.4 Data",
+    "text": "9.4 Data",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#alternatives",
+    "href": "chapter-41-eda.html#alternatives",
+    "title": "9  Explorative data analysis",
+    "section": "9.5 Alternatives",
+    "text": "9.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#glossary",
+    "href": "chapter-41-eda.html#glossary",
+    "title": "9  Explorative data analysis",
+    "section": "9.6 Glossary",
+    "text": "9.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-41-eda.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "9  Explorative data analysis",
+    "section": "9.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "9.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#summary",
+    "href": "chapter-41-eda.html#summary",
+    "title": "9  Explorative data analysis",
+    "section": "9.8 Summary",
+    "text": "9.8 Summary",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#references",
+    "href": "chapter-41-eda.html#references",
+    "title": "9  Explorative data analysis",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
     "objectID": "template-preface.html",
     "href": "template-preface.html",
     "title": "Template Preface",
     "section": "",
-    "text": "Last modified on 25. October 2025 at 20:17:25\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "text": "Last modified on 09. December 2025 at 10:27:51\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
     "crumbs": [
       "Template Preface"
     ]
@@ -938,100 +1047,100 @@
   {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "9  Template chapter",
+    "title": "10  Template chapter",
     "section": "",
-    "text": "9.1 General background\nLast modified on 17. November 2025 at 20:02:35",
+    "text": "10.1 General background\nLast modified on 09. December 2025 at 10:27:43",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "9  Template chapter",
-    "section": "9.2 Theoretical background",
-    "text": "9.2 Theoretical background",
+    "title": "10  Template chapter",
+    "section": "10.2 Theoretical background",
+    "text": "10.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "9  Template chapter",
-    "section": "9.3 R packages used",
-    "text": "9.3 R packages used",
+    "title": "10  Template chapter",
+    "section": "10.3 R packages used",
+    "text": "10.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "9  Template chapter",
-    "section": "9.4 Data",
-    "text": "9.4 Data",
+    "title": "10  Template chapter",
+    "section": "10.4 Data",
+    "text": "10.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "9  Template chapter",
-    "section": "9.5 Alternatives",
-    "text": "9.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "10  Template chapter",
+    "section": "10.5 Alternatives",
+    "text": "10.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "9  Template chapter",
-    "section": "9.6 Glossary",
-    "text": "9.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "10  Template chapter",
+    "section": "10.6 Glossary",
+    "text": "10.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "9  Template chapter",
-    "section": "9.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "9.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "10  Template chapter",
+    "section": "10.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "10.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "9  Template chapter",
-    "section": "9.8 Summary",
-    "text": "9.8 Summary",
+    "title": "10  Template chapter",
+    "section": "10.8 Summary",
+    "text": "10.8 Summary",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#references",
     "href": "template-chapter.html#references",
-    "title": "9  Template chapter",
+    "title": "10  Template chapter",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {

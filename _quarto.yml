@@ -44,6 +44,9 @@ book:
     - part: chapter-30-preface.qmd
       chapters:
       - chapter-31-statistical-testing.qmd
+    - part: chapter-40-preface.qmd
+      chapters:
+      - chapter-41-eda.qmd
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd
