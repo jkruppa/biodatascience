@@ -4,7 +4,7 @@ project:
 
 book:
   title: "Models of Reality"
-  subtitle: "From Data to Science"
+  subtitle: "The Illustrative Guide"
   date: "05. December 2025"
   author:
   - name: Prof. Dr. Jochen Kruppa-Scheetz
@@ -13,7 +13,7 @@ book:
     email: j.kruppa@hs-osnabrueck.de
     corresponding: true
   favicon: cover2026_favi.png
-  description: "*A book that takes you from data to science through models! I hope it provides some guidance in your life.*"
+  description: "*A book that takes you from data to science through models by visualizations.*"
   url: https://jkruppa.github.io/biodatascience
   repo-url: https://github.com/jkruppa/biodatascience
   repo-branch: master
