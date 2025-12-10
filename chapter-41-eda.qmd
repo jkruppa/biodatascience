@@ -107,8 +107,8 @@ jump_dog_plot_tbl |>
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 5
-#| fig-width: 9
+#| fig-height: 4.5
+#| fig-width: 11
 #| fig-cap: "foo"
 #| label: fig-var-example
 
@@ -133,22 +133,29 @@ jump_dog_plot_tbl |>
                 y = jumplength - e/2, 
                 width = e, height = e), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
-  geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6), 
-                y = c(40, 42, 37, 37, 42, 37, 40), 
+  geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
+                y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, 
                 width = e, height = e), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
-  annotate("tile", x = 25,y = 28, 
+  annotate("tile", x = 24, y = 21, 
            width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   geom_segment(x = -2, xend = 13, 
                y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
   geom_point() +
-  scale_x_continuous(breaks = 1:7, limits = c(NA, 46)) +
+  scale_x_continuous(breaks = 1:7, limits = c(NA, 55)) +
   scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
                      labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
                      limits = c(NA, NA)) +
-  labs(x = str_pad("Dog flea ID", 100, "right"), y = "Jump length in [cm]") +
+  labs(x = str_pad("Dog flea ID", 172, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
+  annotate("segment", x = 21, xend = 54, y = 29.5, yend = 29.5, size = 0.75) +
+  annotate("text", x = 20.5, y = 29.75, hjust = "right", label = expression(s^2~"="),
+           size = 7) + 
+  annotate("text", x = 37.5, y = 28, hjust = "center", label = expression((7-1)),
+           size = 6) + 
+  annotate("text", x = 20.5, y = 21, hjust = "right", label = expression(s^2~"="),
+           size = 7) + 
   theme(panel.grid = element_blank())
 ```
 
