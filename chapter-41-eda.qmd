@@ -65,16 +65,17 @@ jump_dog_tbl
 mean_dog_jump <- mean(jump_dog_tbl$jumplength)
 
 jump_dog_plot_tbl <- jump_dog_tbl |>
-  mutate(e = jumplength - mean_dog_jump,
-         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
+  mutate(e = round(jumplength - mean_dog_jump, 1),
+         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")),
+         e_label = str_c(sign, abs(e)))
 
 jump_dog_plot_tbl |> 
   ggplot(aes(x = 1:7, y = jumplength)) +
   theme_book() +
   geom_segment(aes(x = 1:7, xend = 1:7, y = jumplength, yend = mean_dog_jump, 
                    color = sign), show.legend = FALSE, size = 1) +
-  geom_text(aes(x = 1:7, y = jumplength - e/2, label = sign, color = sign),
-            size = 4, position = position_nudge(0.2), fontface = 2, show.legend = FALSE) +
+  geom_text(aes(x = 1:7, y = jumplength - e/2, label = e_label, color = sign),
+            size = 4, position = position_nudge(0.3), fontface = 2, show.legend = FALSE) +
   geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
   geom_point() +
   scale_x_continuous(breaks = 1:7) +
@@ -82,23 +83,33 @@ jump_dog_plot_tbl |>
                      labels = c("25", "30", round(mean_dog_jump,1), "35", "40")) +
   labs(x = "Dog flea ID", y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
-  geom_shape(data = tibble(x = c(4.9, 5.5, 5.5, 4.9), 
-                           y = c(20, 20, 28, 28)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  geom_shape(data = tibble(x = c(5.9, 6.7, 6.7, 5.9), 
-                           y = c(20, 20, 28, 28)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  annotate("label", x = 5.2, y = 29, label = "Negative", fontface = 2) +
-  annotate("label", x = 6.3, y = 29, label = "Positive", fontface = 2) +
+  geom_shape(data = tibble(x = c(4.6, 5.6, 5.6, 4.6), 
+                           y = c(19, 19, 28.5, 28.5)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(5.8, 7.1, 7.1, 5.8), 
+                           y = c(19, 19, 28.5, 28.5)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("label", x = 5.1, y = 29, label = "Negative", fontface = 2, 
+           fill = "#0D0887FF", alpha = 0.5) +
+  annotate("label", x = 6.45, y = 29, label = "Positive", fontface = 2, 
+           fill = "#FCCE25FF", alpha = 0.5) +
   geom_segment(data = filter(jump_dog_plot_tbl, sign == "\U2012"),
-    aes(x = 5 + c(0, 0.2, 0.4), xend = 5 + c(0, 0.2, 0.4), 
+               aes(x = 4.8 + c(0, 0.3, 0.6), xend = 4.8 + c(0, 0.3, 0.6), 
                    y = (jumplength+20)/2, yend = (mean_dog_jump+20)/2, 
                    color = sign), show.legend = FALSE, size = 1) +
   geom_segment(data = filter(jump_dog_plot_tbl, sign == "+"),
-    aes(x = 6 + c(0, 0.2, 0.4, 0.6), xend = 6 + c(0, 0.2, 0.4, 0.6), 
+               aes(x = 6 + c(0, 0.3, 0.6, 0.9), xend = 6 + c(0, 0.3, 0.6, 0.9), 
                    y = (jumplength+13)/2, yend = (mean_dog_jump+13)/2, 
                    color = sign), show.legend = FALSE, size = 1) +
-  annotate("text", x = 5.7, y = 24, label = "=", size = 7) 
+  geom_text(data = filter(jump_dog_plot_tbl, sign == "\U2012"),
+            aes(x = 4.8 + c(0, 0.3, 0.6), y = (jumplength+20)/2-0.5, 
+                label = e_label, color = sign), fontface = 2, show.legend = FALSE, size = 3) +  
+  geom_text(data = filter(jump_dog_plot_tbl, sign == "+"),
+            aes(x = 6 + c(0, 0.3, 0.6, 0.9), y = (jumplength+13)/2+0.5,  
+                label = e_label, color = sign), fontface = 2, show.legend = FALSE, size = 3) + 
+  annotate("text", x = 5.7, y = 24, label = "=", size = 6) +
+  annotate("text", x = 5.3, y = 20, label = expression(sum()*-17.4), size = 3) +
+  annotate("text", x = 6.8, y = 20, label = expression(sum()*+17.4), size = 3)
   
 ```
 
@@ -108,7 +119,7 @@ jump_dog_plot_tbl |>
 #| warning: false
 #| fig-align: center
 #| fig-height: 4.5
-#| fig-width: 11
+#| fig-width: 9
 #| fig-cap: "foo"
 #| label: fig-var-example
 
@@ -133,21 +144,35 @@ jump_dog_plot_tbl |>
                 y = jumplength - e/2, 
                 width = e, height = e), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_shape(data = tibble(x = c(13.8, 46.5, 46.5, 13.8) + 7, 
+                           y = c(33.85, 33.85, 46.3, 46.3) - 4),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
   geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
                 y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, 
                 width = e, height = e), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_text(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
+                y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, label = round(e^2,1)),
+            fontface = 2) +
+  annotate("text", x = 50, y = 40.5, label = expression(sum()*258.5), size = 5) +
   annotate("tile", x = 24, y = 21, 
            width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("text", x = 24, y = 21, label = "43.08", fontface = 2) +
+  annotate("segment", x = 26.4, xend = 26.4, y = 18.5, yend = 23.5, size = 1.5, color = "#E16462FF") +
+  annotate("label", x = 32, y = 21, hjust = "left", label = expression(s~"="~6.56),
+           size = 5, color = "#E16462FF") + 
+  geom_curve(aes(x = 31.5, y = 21, xend = 26.9, yend = 21),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.3, color = "#E16462FF", lineend = "round") +
   geom_segment(x = -2, xend = 13, 
                y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
   geom_point() +
-  scale_x_continuous(breaks = 1:7, limits = c(NA, 55)) +
+  scale_x_continuous(breaks = 1:7, limits = c(NA, 54)) +
   scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
                      labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
                      limits = c(NA, NA)) +
-  labs(x = str_pad("Dog flea ID", 172, "right"), y = "Jump length in [cm]") +
+  labs(x = str_pad("Dog flea ID", 140, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
   annotate("segment", x = 21, xend = 54, y = 29.5, yend = 29.5, size = 0.75) +
   annotate("text", x = 20.5, y = 29.75, hjust = "right", label = expression(s^2~"="),
