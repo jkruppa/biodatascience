@@ -75,22 +75,81 @@ jump_dog_plot_tbl |>
                    color = sign), show.legend = FALSE, size = 1) +
   geom_text(aes(x = 1:7, y = jumplength - e/2, label = sign, color = sign),
             size = 4, position = position_nudge(0.2), fontface = 2, show.legend = FALSE) +
-  geom_hline(yintercept = mean_dog_jump) +
+  geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
   geom_point() +
   scale_x_continuous(breaks = 1:7) +
   scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
                      labels = c("25", "30", round(mean_dog_jump,1), "35", "40")) +
   labs(x = "Dog flea ID", y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
+  geom_shape(data = tibble(x = c(4.9, 5.5, 5.5, 4.9), 
+                           y = c(20, 20, 28, 28)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(5.9, 6.7, 6.7, 5.9), 
+                           y = c(20, 20, 28, 28)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("label", x = 5.2, y = 29, label = "Negative", fontface = 2) +
+  annotate("label", x = 6.3, y = 29, label = "Positive", fontface = 2) +
   geom_segment(data = filter(jump_dog_plot_tbl, sign == "\U2012"),
-    aes(x = seq(4, 5, length.out = 3), xend = seq(4, 5, length.out = 3), 
-                   y = (jumplength-4)/2, yend = (mean_dog_jump-4)/2, 
+    aes(x = 5 + c(0, 0.2, 0.4), xend = 5 + c(0, 0.2, 0.4), 
+                   y = (jumplength+20)/2, yend = (mean_dog_jump+20)/2, 
                    color = sign), show.legend = FALSE, size = 1) +
   geom_segment(data = filter(jump_dog_plot_tbl, sign == "+"),
-    aes(x = seq(5.5, 6, length.out = 4), xend = seq(5.5, 6, length.out = 4), 
-                   y = (jumplength-4)/2, yend = (mean_dog_jump-4)/2, 
-                   color = sign), show.legend = FALSE, size = 1) 
+    aes(x = 6 + c(0, 0.2, 0.4, 0.6), xend = 6 + c(0, 0.2, 0.4, 0.6), 
+                   y = (jumplength+13)/2, yend = (mean_dog_jump+13)/2, 
+                   color = sign), show.legend = FALSE, size = 1) +
+  annotate("text", x = 5.7, y = 24, label = "=", size = 7) 
+  
+```
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 9
+#| fig-cap: "foo"
+#| label: fig-var-example
+
+mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+
+jump_dog_plot_tbl <- jump_dog_tbl |>
+  mutate(jump_length = jumplength,
+         e = jumplength - mean_dog_jump,
+         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
+
+sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
+
+jump_dog_plot_tbl |> 
+  ggplot(aes(x = 1:7, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  annotate("segment", x = rep(-2, 4), xend = rep(14, 4),
+           y = c(25, 30, 35, 40), yend = c(25, 30, 35, 40),
+           color = "gray95") +
+  geom_vline(xintercept = 1:7, color = "gray95") +
+  geom_tile(aes(x = 1:7 - e/2, 
+                y = jumplength - e/2, 
+                width = e, height = e), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6), 
+                y = c(40, 42, 37, 37, 42, 37, 40), 
+                width = e, height = e), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("tile", x = 25,y = 28, 
+           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_segment(x = -2, xend = 13, 
+               y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
+  geom_point() +
+  scale_x_continuous(breaks = 1:7, limits = c(NA, 46)) +
+  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
+                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
+                     limits = c(NA, NA)) +
+  labs(x = str_pad("Dog flea ID", 100, "right"), y = "Jump length in [cm]") +
+  scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
+  theme(panel.grid = element_blank())
 ```
 
 
