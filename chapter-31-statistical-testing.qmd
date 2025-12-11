@@ -1,7 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
 source("images/part_3/part_3_theory_testing.R")
-
 ```
 
 # Statistical testing {#sec-temp}
@@ -60,18 +59,6 @@ p_fisher_newman
 ```
 
 
-
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 4
-#| fig-width: 7
-#| fig-cap: "foo"
-#| label: fig-test-theory-dist
-p_population_sample
-```
 
 
 ```{r}
