@@ -1,6 +1,7 @@
 ## load packages
 pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork,
-               gghalves, ggdist, see, ggtext, ggimage, conflicted)
+               gghalves, ggdist, see, ggtext, ggimage, ggrepel,
+               conflicted)
 conflicted::conflicts_prefer(dplyr::filter)
 ## global seed
 set.seed(202511)
