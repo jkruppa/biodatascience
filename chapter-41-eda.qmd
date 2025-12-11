@@ -12,23 +12,26 @@ source("init.R")
 
 ## Theoretical background
 
-
-
-
 ```{r}
 #| message: false
+#| eval: false
 #| echo: false
 #| warning: false
 #| fig-align: center
 #| fig-height: 4
-#| fig-width: 7
+#| fig-width: 3
 #| fig-cap: "foo"
-#| label: fig-dist-test
-
-ggplot()+
-  geom_path(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw)), 
-            aes(y = -(x_raw*1.4-5), x = (y_raw*15-2)),
+#| label: fig-mean-dist-theo
+ggplot() +
+  theme_book() +
+  coord_cartesian(xlim = c(0, 5), ylim = c(0, 60)) +
+  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_path(data = tibble(x_raw = seq(-15, 15, 0.1), 
+                          y_raw = dnorm(x_raw, sd = 5)), 
+            aes(y = -(x_raw*1.4)+20, x = (y_raw*15)), 
             linewidth = 1, color = "black", angle = 90) 
+
+
 ```
 
 
@@ -58,18 +61,48 @@ jump_dog_tbl
 #| warning: false
 #| fig-align: center
 #| fig-height: 4
+#| fig-width: 3
+#| fig-cap: "foo"
+#| label: fig-mean-dist
+
+mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+sd_dog_jump <- sd(jump_dog_tbl$jumplength)
+
+ggplot() +
+  theme_book() +
+  coord_cartesian(xlim = c(-0.5, 1.5), ylim = c(0, 60)) +
+  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_path(data = tibble(x_raw = seq(mean_dog_jump-mean_dog_jump/1.5, 
+                                      mean_dog_jump+mean_dog_jump/1.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = mean_dog_jump, sd = sd_dog_jump)), 
+            aes(y = x_raw, x = y_raw*20), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) 
+
+```
+
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4
 #| fig-width: 7
 #| fig-cap: "foo"
 #| label: fig-mean-example
 
 mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+sd_dog_jump <- sd(jump_dog_tbl$jumplength)
+
 
 jump_dog_plot_tbl <- jump_dog_tbl |>
   mutate(e = round(jumplength - mean_dog_jump, 1),
          sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")),
          e_label = str_c(sign, abs(e)))
 
-jump_dog_plot_tbl |> 
+p1_fig_mean_example <- jump_dog_plot_tbl |> 
   ggplot(aes(x = 1:7, y = jumplength)) +
   theme_book() +
   geom_segment(aes(x = 1:7, xend = 1:7, y = jumplength, yend = mean_dog_jump, 
@@ -118,8 +151,42 @@ jump_dog_plot_tbl |>
   annotate("text", x = 6.8, y = 20, label = expression(sum()*+17.4), size = 3) +
   ## right
   geom_point(data = jump_dog_plot_tbl, aes(x = 0, y = jumplength), size = 2) 
-  
+p1_fig_mean_example
+
 ```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 8
+#| fig-cap: "foo"
+#| label: fig-mean-example-extend
+
+p2_fig_mean_example <- ggplot() +
+  theme_book() +
+  coord_cartesian(xlim = c(-0.1, 1.2)) +
+  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_path(data = tibble(x_raw = seq(mean_dog_jump-mean_dog_jump/1.5, 
+                                      mean_dog_jump+mean_dog_jump/1.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = mean_dog_jump, sd = sd_dog_jump)), 
+            aes(y = x_raw, x = y_raw*20), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
+  labs(x = "", y = "") +
+  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
+                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40")) 
+
+
+p1_fig_mean_example + p2_fig_mean_example +
+  plot_layout(ncol = 2, widths = c(7, 1)) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
 
 ```{r}
 #| message: false
