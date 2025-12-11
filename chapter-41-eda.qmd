@@ -245,7 +245,8 @@ jump_dog_plot_tbl |>
   annotate("text", x = 13.5, y = 33, hjust = "left", label = expression(bold(bar(y))),
            size = 5, color = "#B12A90FF") + 
   geom_point() +
-  scale_x_continuous(breaks = 1:7, limits = c(NA, 54)) +
+  scale_x_continuous(breaks = 1:7, limits = c(NA, 54),
+                     expand = expand_scale(mult = 0)) +
   scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
                      labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
                      limits = c(NA, NA)) +
