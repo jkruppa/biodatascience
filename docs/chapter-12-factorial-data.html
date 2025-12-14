@@ -433,7 +433,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 07. December 2025 at 20:42:45</em></p>
+<p><em>Last modified on 14. December 2025 at 19:22:00</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -617,23 +617,23 @@ Figure&nbsp;5.5: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg =</span> (countleg_left <span class="sc">+</span> countleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 6
-  jumplength countleg_left countleg_right countleg rating infectd
-       &lt;dbl&gt;         &lt;int&gt;          &lt;int&gt;    &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;
-1       6.17             4              8      6        3       1
-2       5.03             5              5      5        4       0
-3       6.51             6              1      3.5      3       0
-4       4.38             2              1      1.5      3       1
-5       2.62             0              3      1.5      3       0
-6       6.64             3              3      3        2       0
-7       3.82             3              3      3        3       0</code></pre>
+  jumplength counthairleg_left counthairleg_right counthairleg rating infectd
+       &lt;dbl&gt;             &lt;int&gt;              &lt;int&gt;        &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;
+1       6.17                 4                  8          6        3       1
+2       5.03                 5                  5          5        4       0
+3       6.51                 6                  1          3.5      3       0
+4       4.38                 2                  1          1.5      3       1
+5       2.62                 0                  3          1.5      3       0
+6       6.64                 3                  3          3        2       0
+7       3.82                 3                  3          3        3       0</code></pre>
 </div>
 </div>
 </section>
@@ -1492,9 +1492,9 @@ Figure&nbsp;5.6: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
-<span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb20-227"><a href="#cb20-227" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>       <span class="at">countleg =</span> (countleg_left <span class="sc">+</span> countleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb20-227"><a href="#cb20-227" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
 <span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
 <span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
 <span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
@@ -1577,15 +1577,15 @@ Figure&nbsp;5.6: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb20-322"><a href="#cb20-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb20-324"><a href="#cb20-324" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
 <span id="cb20-325"><a href="#cb20-325" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
+<span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
 <span id="cb20-327"><a href="#cb20-327" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host) <span class="sc">|&gt;</span> </span>
 <span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
+<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
 <span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(host, site) <span class="sc">|&gt;</span> </span>
