@@ -87,7 +87,7 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
 }
 
  ggplot() +
-  ## theme_void() +
+  ##theme_void() +
   theme_minimal() +
   coord_cartesian(xlim = c(-1, 20), ylim = c(0, 27)) +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
@@ -134,7 +134,7 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
   annotate("segment", x = 3.75, xend = 7.25, y = 20.5, yend = 23, linewidth = 0.65) +
   geom_curve(aes(x = 4, y = 20, xend = 7.25, yend = 22.5),
              curvature = -0.4, color = "black", linewidth = 0.65) +
-  ### 3lvl
+ ### 3lvl
   geom_rect(aes(xmin = 10.1, xmax = 10.35, ymin = 19.5, ymax = 22.25), fill = "#B12A9080",
             color = "black") +
   geom_segment(aes(x = 10.225, xend = 10.225, y = 22.25, yend = 22.75)) +
