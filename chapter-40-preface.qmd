@@ -197,14 +197,14 @@ annotate("point", x = c(0.5, 1, 1.25, 1.7, 2.5, 3.2) + 3.5,
                  15, 15, 15, 16, 16, 16, 16, 17, 17, 17), size = 1.5) +
   geom_curve(aes(x = 3.5, y = 13.5, xend = 7.25, yend = 17),
              curvature = 0.3, color = "black", linewidth = 0.65) +
-  annotate("text", hjust = "right", x = 5.5, y = 16.5, label = "Discrete counts") +
+  annotate("text", hjust = "right", x = 5.75, y = 16.4, label = "Discrete counts") +
   geom_curve(aes(x = 5.55, y = 16.25, xend = 6.2, yend = 16),
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+             arrow = arrow(length = unit(0.005, "npc"), type = "closed"),
              curvature = 0.2, color = "black", linewidth = 0.5) +
   annotate("text", hjust = "left", x = 4.25, y = 15.5, label = "Zero counts") +
-  geom_curve(aes(x = 4.2, y = 15.25, xend = 3.75, yend = 14),
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "black", linewidth = 0.5)
+  geom_curve(aes(x = 4.2, y = 15.25, xend = 3.75, yend = 13.8),
+             arrow = arrow(length = unit(0.005, "npc"), type = "closed"),
+             curvature = 0.2, color = "black", linewidth = 0.5) +
   ### 3lvl
   geom_rect(aes(xmin = 10.1, xmax = 10.35, ymin = 13.5, ymax = 15.25), fill = "#0D088780",
             color = "black") +
