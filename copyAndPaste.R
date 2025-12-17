@@ -94,22 +94,7 @@ ggplot() +
   geom_coord_cross(x = 9.5, y = 1.5, yticks = "2lvl", xticks = "3lvl") +
   geom_coord_cross(x = 15.5, y = 1.5, yticks = "2lvl", xticks = "2lvl") +
   ## normal
-  annotate("label", x = 6.8, y = 16, label = "           ") +
-  annotate("label", x = 3.8, y = 13.5, label = "      ", alpha = 0, fill = "white") +
-  annotate("point", x = c(0.1, 0.25, 1, 1.3, 1.7, 0.5, 1.75, 2, 2.4, 
-                          2.2, 2.3, 2.6, 2.9, 3.1, 3.5, 3.7, 3.5, 3.9, 3.3) + 3.5, 
-           y = c(13.5, 13.5,  14, 14, 14, 13.5, 14.5, 14.5, 14.5, 
-                 15, 15, 15, 16, 16, 16, 16, 17, 17, 17), size = 1.5) +
-  geom_curve(aes(x = 3.5, y = 13.5, xend = 7.25, yend = 17),
-             curvature = 0.3, color = "black", linewidth = 0.65) +
-  annotate("text", hjust = "right", x = 5.5, y = 16.5, label = "Discrete counts") +
-  geom_curve(aes(x = 5.55, y = 16.25, xend = 6.2, yend = 16),
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "black", linewidth = 0.5) +
-  annotate("text", hjust = "left", x = 4.25, y = 15.5, label = "Zero counts") +
-  geom_curve(aes(x = 4.2, y = 15.25, xend = 3.75, yend = 14),
-             arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
-             curvature = 0.2, color = "black", linewidth = 0.5)
+
 
 
 
