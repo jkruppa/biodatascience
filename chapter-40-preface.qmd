@@ -82,7 +82,6 @@ ggplot() +
            y = c(0, 7, 14), yend = c(0, 7, 14)) +
   scale_x_continuous(breaks = 0:14, expand = expansion(mult = 0)) +
   scale_y_continuous(breaks = 0:14, expand = expansion(mult = 0)) +
-  geom_vline(xintercept = c(5.25, 11.25), color = "gray50") +
   ## outer text
   annotate("text", x = 11, y = 26.5, label = "Characteristic of the influencer (X)", 
            size = 8, fontface = 2) +
@@ -98,11 +97,66 @@ ggplot() +
   geom_coord_cross(x = 9.5, y = 1.5, yticks = "2lvl", xticks = "2lvl") +
   annotate("text", x = c(11, 5, 11, 5), y = c(6.25, 6.25, 13.25, 13.25), 
            label = c("Binomial", "Ordinal", "Poisson", "Normal"), size = 7, fontface = 2) +
-  geom_path(data = tibble(x_raw = seq(10.5-10.5/1.5, 
-                                      10.5+10.5/1.5, 0.1), 
-                          y_raw = dnorm(x_raw, mean = 10.5, sd = 1)), 
-            aes(y = x_raw, x = y_raw*20+5), 
-            linewidth = 1, color = "black", angle = 90)
+  ### normal
+  geom_path(data = tibble(x_raw = seq(11-11/9, 
+                                      11+11/9, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 11, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+4.5), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 4, y = rnorm(21, 11, 0.6)), aes(x, y), 
+              shape = 21, width = 0.2, fill = "#0D088780") +
+  geom_path(data = tibble(x_raw = seq(9.75-9.75/8.25, 
+                                      9.75+9.75/8.25, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 9.75, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+6.25), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 5.75, y = rnorm(21, 9.75, 0.4)), aes(x, y), 
+              shape = 21, width = 0.2, fill = "#A21D9A80") +
+  ## Poisson
+  geom_path(data = tibble(x_raw = seq(11-11/9, 
+                                      11+11/9, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 11, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+10.5), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 10, y = (rpois(25, 3))/4+10.25), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  geom_path(data = tibble(x_raw = seq(9.75-9.75/8.25, 
+                                      9.75+9.75/8.25, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 9.75, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+12.25), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 11.75, y = (rpois(25, 3))/4+9), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
+  ## ordinal
+  geom_path(data = tibble(x_raw = seq(4-4/3.5, 
+                                      4+4/3.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 4, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+4.5), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 4, y = ceiling(rnorm(21, 4, 0.4)/0.5)*0.5), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  geom_path(data = tibble(x_raw = seq(2.75-2.75/2.5, 
+                                      2.75+2.75/2.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 2.75, sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+6.25), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 5.75, y = ceiling(rnorm(21, 2.75, 0.4)/0.5)*0.5), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
+  ## binomial
+  geom_path(data = tibble(x_raw = seq(3.875-3.875/3.5, 
+                                      3.875+3.875/3.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 2+(2.5*0.75), sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+10.5), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 10, y = (rbinom(21, 1, 0.75)*2.5)+2), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  geom_path(data = tibble(x_raw = seq(2.625-2.625/2.5, 
+                                      2.625+2.625/2.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = 2+(2.5*0.25), sd = 0.4)), 
+            aes(y = x_raw, x = y_raw*0.75+12.25), 
+            linewidth = 1, color = "black", angle = 90) +
+  geom_jitter(data = tibble(x = 11.75, y = (rbinom(21, 1, 0.25)*2.5)+2), aes(x, y), 
+              shape = 21, width = 0.25, height = 0, fill = "#A21D9A80")  
 
 
 jump_dog_tbl <- read_delim("data/jump_fleas.txt") |> 

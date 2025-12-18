@@ -2,7 +2,7 @@
 source("init.R")
 ```
 
-# Template chapter {#sec-temp}
+# Overview {#sec-temp}
 
 *Last modified on `r format(fs::file_info("chapter-51-statistical-modeling.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 

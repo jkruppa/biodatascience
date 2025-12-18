@@ -2,7 +2,7 @@
 pacman::p_load(tidyverse)
 ```
 
-# Template Preface
+# Statistical modeling
 
 *Last modified on `r format(fs::file_info("chapter-50-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
