@@ -47,6 +47,9 @@ book:
     - part: chapter-40-preface.qmd
       chapters:
       - chapter-41-eda.qmd
+    - part: chapter-50-preface.qmd
+      chapters:
+      - chapter-51-statistical-modeling.qmd
     - part: template-preface.qmd
       chapters:
       - template-chapter.qmd

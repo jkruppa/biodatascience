@@ -930,7 +930,7 @@
     "href": "chapter-40-preface.html",
     "title": "Visualisation of data",
     "section": "",
-    "text": "Last modified on 17. December 2025 at 18:49:51\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo",
+    "text": "Last modified on 18. December 2025 at 13:32:00\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: foo",
     "crumbs": [
       "Visualisation of data"
     ]
@@ -974,6 +974,17 @@
     "title": "9  Explorative data analysis",
     "section": "9.4 Data",
     "text": "9.4 Data\n\n\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\") \n\n\n\n\nR Code [show / hide]\njump_dog_tbl\n\n\n# A tibble: 7 × 2\n  host  jumplength\n  &lt;chr&gt;      &lt;dbl&gt;\n1 dog         21.8\n2 dog         28.4\n3 dog         34.8\n4 dog         34.4\n5 dog         38.8\n6 dog         31.4\n7 dog         41.4",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-41-eda.html#mean",
+    "href": "chapter-41-eda.html#mean",
+    "title": "9  Explorative data analysis",
+    "section": "9.5 Mean",
+    "text": "9.5 Mean\n\n\n\n\n\n\n\n\nFigure 9.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.4: foo",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1035,6 +1046,115 @@
     ]
   },
   {
+    "objectID": "chapter-50-preface.html",
+    "href": "chapter-50-preface.html",
+    "title": "Template Preface",
+    "section": "",
+    "text": "Last modified on 18. December 2025 at 12:00:22\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "crumbs": [
+      "Template Preface"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html",
+    "href": "chapter-51-statistical-modeling.html",
+    "title": "10  Template chapter",
+    "section": "",
+    "text": "10.1 General background\nLast modified on 18. December 2025 at 12:28:48\nFigure 10.1: foo",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#theoretical-background",
+    "href": "chapter-51-statistical-modeling.html#theoretical-background",
+    "title": "10  Template chapter",
+    "section": "10.2 Theoretical background",
+    "text": "10.2 Theoretical background",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#r-packages-used",
+    "href": "chapter-51-statistical-modeling.html#r-packages-used",
+    "title": "10  Template chapter",
+    "section": "10.3 R packages used",
+    "text": "10.3 R packages used",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#data",
+    "href": "chapter-51-statistical-modeling.html#data",
+    "title": "10  Template chapter",
+    "section": "10.4 Data",
+    "text": "10.4 Data",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#alternatives",
+    "href": "chapter-51-statistical-modeling.html#alternatives",
+    "title": "10  Template chapter",
+    "section": "10.5 Alternatives",
+    "text": "10.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#glossary",
+    "href": "chapter-51-statistical-modeling.html#glossary",
+    "title": "10  Template chapter",
+    "section": "10.6 Glossary",
+    "text": "10.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-51-statistical-modeling.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "10  Template chapter",
+    "section": "10.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "10.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#summary",
+    "href": "chapter-51-statistical-modeling.html#summary",
+    "title": "10  Template chapter",
+    "section": "10.8 Summary",
+    "text": "10.8 Summary",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-51-statistical-modeling.html#references",
+    "href": "chapter-51-statistical-modeling.html#references",
+    "title": "10  Template chapter",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Template Preface",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+    ]
+  },
+  {
     "objectID": "template-preface.html",
     "href": "template-preface.html",
     "title": "Template Preface",
@@ -1047,100 +1167,100 @@
   {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "10  Template chapter",
+    "title": "11  Template chapter",
     "section": "",
-    "text": "10.1 General background\nLast modified on 09. December 2025 at 10:27:43",
+    "text": "11.1 General background\nLast modified on 09. December 2025 at 10:27:43",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "10  Template chapter",
-    "section": "10.2 Theoretical background",
-    "text": "10.2 Theoretical background",
+    "title": "11  Template chapter",
+    "section": "11.2 Theoretical background",
+    "text": "11.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "10  Template chapter",
-    "section": "10.3 R packages used",
-    "text": "10.3 R packages used",
+    "title": "11  Template chapter",
+    "section": "11.3 R packages used",
+    "text": "11.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "10  Template chapter",
-    "section": "10.4 Data",
-    "text": "10.4 Data",
+    "title": "11  Template chapter",
+    "section": "11.4 Data",
+    "text": "11.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "10  Template chapter",
-    "section": "10.5 Alternatives",
-    "text": "10.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "11  Template chapter",
+    "section": "11.5 Alternatives",
+    "text": "11.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "10  Template chapter",
-    "section": "10.6 Glossary",
-    "text": "10.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "11  Template chapter",
+    "section": "11.6 Glossary",
+    "text": "11.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "10  Template chapter",
-    "section": "10.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "10.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "11  Template chapter",
+    "section": "11.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "11.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "10  Template chapter",
-    "section": "10.8 Summary",
-    "text": "10.8 Summary",
+    "title": "11  Template chapter",
+    "section": "11.8 Summary",
+    "text": "11.8 Summary",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#references",
     "href": "template-chapter.html#references",
-    "title": "10  Template chapter",
+    "title": "11  Template chapter",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
@@ -1185,17 +1305,6 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "chapter-41-eda.html#mean",
-    "href": "chapter-41-eda.html#mean",
-    "title": "9  Explorative data analysis",
-    "section": "9.5 Mean",
-    "text": "9.5 Mean\n\n\n\n\n\n\n\n\nFigure 9.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.4: foo",
-    "crumbs": [
-      "Visualisation of data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
     ]
   }
 ]
