@@ -98,6 +98,9 @@ ggplot() +
   annotate("text", x = c(11, 5, 11, 5), y = c(6.25, 6.25, 13.25, 13.25), 
            label = c("Binomial", "Ordinal", "Poisson", "Normal"), size = 7, fontface = 2) +
   ### normal
+  annotate("segment", x = 3.55, xend = 5.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
+  annotate("text", x = 5.35, y = 11, hjust = "left", label = expression(bold(bar(y))),
+           size = 5, color = "#0D0887FF") + 
   geom_path(data = tibble(x_raw = seq(11-11/9, 
                                       11+11/9, 0.1), 
                           y_raw = dnorm(x_raw, mean = 11, sd = 0.4)), 
@@ -105,6 +108,9 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 4, y = rnorm(21, 11, 0.6)), aes(x, y), 
               shape = 21, width = 0.2, fill = "#0D088780") +
+  annotate("segment", x = 3.55, xend = 7, y = 9.75, yend = 9.75, color = "#B12A90FF", size = 1) +
+  annotate("text", x = 7.1, y = 9.75, hjust = "left", label = expression(bold(bar(y))),
+           size = 5, color = "#B12A90FF") + 
   geom_path(data = tibble(x_raw = seq(9.75-9.75/8.25, 
                                       9.75+9.75/8.25, 0.1), 
                           y_raw = dnorm(x_raw, mean = 9.75, sd = 0.4)), 
@@ -159,36 +165,7 @@ ggplot() +
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80")  
 
 
-jump_dog_tbl <- read_delim("data/jump_fleas.txt") |> 
-  select(host, jumplength) |> 
-  filter(host == "dog") 
 
-mean_dog_jump <- mean(jump_dog_tbl$jumplength)
-sd_dog_jump <- sd(jump_dog_tbl$jumplength)
-
- ggplot() +
-  theme_book() +
-  coord_cartesian(xlim = c(-0.25, 1.5), ylim = c(0, 60)) +
-  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
-  geom_segment(aes(x = 0.75, xend = 0.75, 
-               y = mean_dog_jump, yend = mean_dog_jump+ sd_dog_jump), 
-               color = "#E16462FF", size = 1) +
-  annotate("text", x = 0.8, y = mean_dog_jump+ sd_dog_jump/2-0.5, hjust = "left", 
-           label = expression(bold(s)), size = 5, color = "#E16462FF") +
-  geom_path(data = tibble(x_raw = seq(mean_dog_jump-mean_dog_jump/1.5, 
-                                      mean_dog_jump+mean_dog_jump/1.5, 0.1), 
-                          y_raw = dnorm(x_raw, mean = mean_dog_jump, sd = sd_dog_jump)), 
-            aes(y = x_raw, x = y_raw*20), 
-            linewidth = 1, color = "black", angle = 90) +
-  geom_segment(aes(x = -0.03, xend = 1.35, 
-               y = mean_dog_jump, yend = mean_dog_jump), color = "#B12A90FF", size = 1) +
-  annotate("text", x = 1.4, y = 33, hjust = "left", label = expression(bold(bar(y))),
-           size = 5, color = "#B12A90FF") + 
-  geom_text_repel(data = jump_dog_tbl, aes(x = 0, y = jumplength, label = 1:7)) +
-  scale_x_continuous(breaks = 0, labels = "dog") +
-  scale_y_continuous(breaks = c(0, 20, mean_dog_jump, 40, 60),
-                     labels = c("0", "20", round(mean_dog_jump,1), "40", "60")) +
-  labs(x = "", y = "")
 
 ```
 
