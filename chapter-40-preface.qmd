@@ -97,6 +97,8 @@ ggplot() +
   geom_coord_cross(x = 9.5, y = 1.5, yticks = "2lvl", xticks = "2lvl") +
   annotate("text", x = c(11, 5, 11, 5), y = c(6.25, 6.25, 13.25, 13.25), 
            label = c("Binomial", "Ordinal", "Poisson", "Normal"), size = 7, fontface = 2) +
+  annotate("label", x = c(6.5, 6.5, 12.5, 12.5), y = c(12.25, 5.25, 12.25, 5.25), 
+           label = c("Model", "Model", "Model", "Model")) +
   ### normal
   annotate("segment", x = 3.55, xend = 5.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
   annotate("text", x = 5.35, y = 11, hjust = "left", label = expression(bold(bar(y))),
@@ -119,6 +121,7 @@ ggplot() +
   geom_jitter(data = tibble(x = 5.75, y = rnorm(21, 9.75, 0.4)), aes(x, y), 
               shape = 21, width = 0.2, fill = "#A21D9A80") +
   ## Poisson
+  annotate("segment", x = 9.55, xend = 11.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(11-11/9, 
                                       11+11/9, 0.1), 
                           y_raw = dnorm(x_raw, mean = 11, sd = 0.4)), 
@@ -126,6 +129,7 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 10, y = (rpois(25, 3))/4+10.25), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  annotate("segment", x = 9.55, xend = 13, y = 9.75, yend = 9.75, color = "#B12A90FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(9.75-9.75/8.25, 
                                       9.75+9.75/8.25, 0.1), 
                           y_raw = dnorm(x_raw, mean = 9.75, sd = 0.4)), 
@@ -134,6 +138,7 @@ ggplot() +
   geom_jitter(data = tibble(x = 11.75, y = (rpois(25, 3))/4+9), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
   ## ordinal
+  annotate("segment", x = 3.55, xend = 5.25, y = 4, yend = 4, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(4-4/3.5, 
                                       4+4/3.5, 0.1), 
                           y_raw = dnorm(x_raw, mean = 4, sd = 0.4)), 
@@ -141,6 +146,7 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 4, y = ceiling(rnorm(21, 4, 0.4)/0.5)*0.5), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  annotate("segment", x = 3.55, xend = 7, y = 2.75, yend = 2.75, color = "#B12A90FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(2.75-2.75/2.5, 
                                       2.75+2.75/2.5, 0.1), 
                           y_raw = dnorm(x_raw, mean = 2.75, sd = 0.4)), 
@@ -149,6 +155,7 @@ ggplot() +
   geom_jitter(data = tibble(x = 5.75, y = ceiling(rnorm(21, 2.75, 0.4)/0.5)*0.5), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
   ## binomial
+  annotate("segment", x = 9.55, xend = 11.25, y = 3.875, yend = 3.875, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(3.875-3.875/3.5, 
                                       3.875+3.875/3.5, 0.1), 
                           y_raw = dnorm(x_raw, mean = 2+(2.5*0.75), sd = 0.4)), 
@@ -156,6 +163,7 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 10, y = (rbinom(21, 1, 0.75)*2.5)+2), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#0D088780") +
+  annotate("segment", x = 9.55, xend = 13, y = 2.625, yend = 2.625, color = "#B12A90FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(2.625-2.625/2.5, 
                                       2.625+2.625/2.5, 0.1), 
                           y_raw = dnorm(x_raw, mean = 2+(2.5*0.25), sd = 0.4)), 
