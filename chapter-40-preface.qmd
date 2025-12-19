@@ -33,15 +33,15 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
           annotate("segment", x = x-0.1, xend = x, y = y + seq(0, 3.5, 0.5), yend = y+ seq(0, 3.5, 0.5)),
           annotate("text", x = x -0.25, y = y + seq(0, 3.5, 0.5), label = seq(0, 70, 10),
                    hjust = "right"),
-          annotate("text", x = x - 1, y = y +2, label = c("Count of hairleg"), fontface = 2, size = 5,
-                   angle = 90)
+          annotate("text", x = x - 0.9, y = y + 2, label = c("Mean count of hairleg"), fontface = 2, 
+                   size = 4, angle = 90)
         )
       } else {
         list(
           annotate("segment", x = x-0.1, xend = x, y = y + seq(0, 3.5, 0.5), yend = y+ seq(0, 3.5, 0.5)),
           annotate("text", x = x -0.25, y = y + seq(0.5, 3.5, 0.5), 
                    label = round(seq(15, 40, length.out = 7)), hjust = "right") ,
-          annotate("text", x = x - 1, y = y +2, label = c("Jump length"), fontface = 2, size = 5, 
+          annotate("text", x = x - 0.9, y = y +2, label = c("Mean jump length"), fontface = 2, size = 4, 
                    angle = 90)
         )        
       }
@@ -51,21 +51,23 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
         annotate("segment", x = x-0.1, xend = x, y = y + (1:7)/2, yend = y + (1:7)/2),
         annotate("text", x = x -0.25, y = y + (1:7)/2, label = c("1", "2", "3", "4", "5", "6", "7"), 
                  hjust = "right") ,
-        annotate("text", x = x - 1, y = y +2, label = c("Grade"), fontface = 2, size = 5, angle = 90)
+        annotate("text", x = x - 0.8, y = y +2, label = c("Average grade"), fontface = 2, size = 4, 
+                 angle = 90)
       )
     },
     if(yticks == "2lvl") {
       list(
         annotate("segment", x = x-0.1, xend = x, y = y + c(0.5, 3), yend = y+  c(0.5, 3)),
         annotate("text", x = x -0.25, y = y + c(0.5, 3), label = c("0", "1"), hjust = "right") ,
-        annotate("text", x = x - 1, y = y +2, label = c("Infected"), fontface = 2, size = 5, angle = 90)
+        annotate("text", x = x - 0.8, y = y +2, label = c("Mean infection rate"), fontface = 2, size = 4,
+                 angle = 90)
       )
     },
     if(xticks == "2lvl") {
       list(
         annotate("segment", x = x+ c(0.5, 2.25), xend = x+ c(0.5, 2.25), y = y -0.1 , yend = y),
         annotate("text", x = x + c(0.5, 2.25), y = y -0.35, label = c("dog", "cat")),
-        annotate("text", x = x + 2, y = y -1, label = c("Host"), fontface = 2, size = 5)
+        annotate("text", x = x + 2, y = y -1, label = c("Host"), fontface = 2, size = 4)
 
       )
     }
@@ -73,13 +75,13 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
 }
 
 ggplot() +
-  ##theme_void() +
-  theme_minimal() +
-  coord_cartesian(xlim = c(2, 14), ylim = c(0, 14)) +
-  annotate("segment", x = c(2, 8, 14), xend = c(2, 8, 14),
-           y = c(0, 0, 0), yend = 14) +
-  annotate("segment", x = c(0.25, 0.25, 0.25), xend = c(14, 14, 14),
-           y = c(0, 7, 14), yend = c(0, 7, 14)) +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(2.25, 13.5), ylim = c(0.25, 13.75)) +
+  annotate("segment", x = c(8), xend = c(8),
+           y = c(0), yend = 14, color = "gray50") +
+  annotate("segment", x = c(0.25), xend = c(14),
+           y = c(7), yend = c(7), color = "gray50") +
   scale_x_continuous(breaks = 0:14, expand = expansion(mult = 0)) +
   scale_y_continuous(breaks = 0:14, expand = expansion(mult = 0)) +
   ## outer text
@@ -95,11 +97,16 @@ ggplot() +
   geom_coord_cross(x = 9.5, y = 8.5, yticks = "numeric", xticks = "2lvl", zero = TRUE) +
   geom_coord_cross(x = 3.5, y = 1.5, yticks = "3lvl", xticks = "2lvl") +
   geom_coord_cross(x = 9.5, y = 1.5, yticks = "2lvl", xticks = "2lvl") +
-  annotate("text", x = c(11, 5, 11, 5), y = c(6.25, 6.25, 13.25, 13.25), 
-           label = c("Binomial", "Ordinal", "Poisson", "Normal"), size = 7, fontface = 2) +
-  annotate("label", x = c(5, 6.5, 5, 6.5, 11, 12.5, 11, 12.5), 
-           y = c(12.5, 12.5,  5.5, 5.5, 12.5, 12.5, 5.5, 5.5)-0.25, 
-           label = rep("Model", 8), fill = "#F0F92180", size = 2.5, fontface = 2) +
+  annotate("text", x = c(11, 5, 11, 5), y = c(6.5, 6.5, 13.5, 13.5), 
+           label = c("Binomial", "Ordinal", "Poisson", "Normal"), 
+           size = 7, fontface = 2) +
+  annotate("text", x = c(11, 5, 11, 5), y = c(5.9, 5.9, 12.9, 12.9), 
+           label = c("modeled by Gaussian regression", "modeled by Gaussian regression", 
+                     "modeled by Gaussian regression", "modeled by Gaussian regression"), size = 4,
+           fontface = 3) +
+#  annotate("label", x = c(5, 6.5, 5, 6.5, 11, 12.5, 11, 12.5), 
+#           y = c(12.5, 12.5,  5.5, 5.5, 12.5, 12.5, 5.5, 5.5)-0.25, 
+#           label = rep("Model", 8), fill = "#F0F92180", size = 2.5, fontface = 2) +
   ### normal
   annotate("segment", x = 3.55, xend = 5.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
   annotate("text", x = 5.35, y = 11, hjust = "left", label = expression(bold(bar(y))),
@@ -180,7 +187,10 @@ ggplot() +
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
   annotate("segment", x = 10.5, xend = 12.25, y = 3.875, yend = 2.625, 
            linetype = 1, color = "#F0F921FF") +
-  annotate("point", x = c(10.5, 12.25), y = c(3.875, 2.625), shape = 21, fill = "#F0F921FF")  
+  annotate("point", x = c(10.5, 12.25), y = c(3.875, 2.625), shape = 21, fill = "#F0F921FF")  +
+  annotate("label", x = c(5.25, 5.25, 11.3, 11.3), 
+           y = c(10.4, 3.4, 10.4, 3.3), 
+           label = rep("Model", 4), fill = "#F0F92180", size = 2.5, fontface = 2) 
 
 
 

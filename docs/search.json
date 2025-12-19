@@ -263,7 +263,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 26. November 2025 at 13:17:46\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling",
+    "text": "3.1 General background\nLast modified on 19. December 2025 at 19:29:05\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -285,7 +285,7 @@
     "href": "chapter-03-what-is-a-model.html#theoretical-background",
     "title": "3  What is a model?",
     "section": "3.2 Theoretical background",
-    "text": "3.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 3.1: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.8: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.9: foo\n\n\n\n\n\n\n\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 3.10: foo",
+    "text": "3.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 3.1: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.8: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.9: foo\n\n\n\n\n\n\n\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 3.10: foo\n\n\n\n\n\n\n“Twistin’, shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La” — The Blues Brothers (1980) – Shake a Tail Feather\n\n\n“It started with a kiss line; […] How could I resist?” — Hot Chocolate – It Started With A Kiss",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -930,7 +930,7 @@
     "href": "chapter-40-preface.html",
     "title": "Visualisation of data",
     "section": "",
-    "text": "Last modified on 19. December 2025 at 13:53:08\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo",
+    "text": "Last modified on 19. December 2025 at 19:48:00\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo",
     "crumbs": [
       "Visualisation of data"
     ]

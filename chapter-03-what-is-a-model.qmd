@@ -167,8 +167,10 @@ c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
 c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
 ```
 
+> *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop
+Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*
 
-
+> *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [Hot Chocolate -- It Started With A Kiss](https://www.youtube.com/watch?v=NosS1rpJ7tU)*
 
 ## R packages used
 
