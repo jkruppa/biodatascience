@@ -97,8 +97,9 @@ ggplot() +
   geom_coord_cross(x = 9.5, y = 1.5, yticks = "2lvl", xticks = "2lvl") +
   annotate("text", x = c(11, 5, 11, 5), y = c(6.25, 6.25, 13.25, 13.25), 
            label = c("Binomial", "Ordinal", "Poisson", "Normal"), size = 7, fontface = 2) +
-  annotate("label", x = c(6.5, 6.5, 12.5, 12.5), y = c(12.25, 5.25, 12.25, 5.25), 
-           label = c("Model", "Model", "Model", "Model")) +
+  annotate("label", x = c(5, 6.5, 5, 6.5, 11, 12.5, 11, 12.5), 
+           y = c(12.5, 12.5,  5.5, 5.5, 12.5, 12.5, 5.5, 5.5)-0.25, 
+           label = rep("Model", 8), fill = "#F0F92180", size = 2.5, fontface = 2) +
   ### normal
   annotate("segment", x = 3.55, xend = 5.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
   annotate("text", x = 5.35, y = 11, hjust = "left", label = expression(bold(bar(y))),
@@ -120,6 +121,8 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 5.75, y = rnorm(21, 9.75, 0.4)), aes(x, y), 
               shape = 21, width = 0.2, fill = "#A21D9A80") +
+  annotate("segment", x = 4.5, xend = 6.25, y = 11, yend = 9.75, linetype = 1, color = "#F0F921FF") +
+  annotate("point", x = c(4.5, 6.25), y = c(11, 9.75), shape = 21, fill = "#F0F921FF") +  
   ## Poisson
   annotate("segment", x = 9.55, xend = 11.25, y = 11, yend = 11, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(11-11/9, 

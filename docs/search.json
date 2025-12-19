@@ -930,7 +930,7 @@
     "href": "chapter-40-preface.html",
     "title": "Visualisation of data",
     "section": "",
-    "text": "Last modified on 19. December 2025 at 12:51:04\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo",
+    "text": "Last modified on 19. December 2025 at 13:26:35\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text\n\n\n\n\n\n\n\n\nFigure 1: foo",
     "crumbs": [
       "Visualisation of data"
     ]
@@ -1048,110 +1048,110 @@
   {
     "objectID": "chapter-50-preface.html",
     "href": "chapter-50-preface.html",
-    "title": "Template Preface",
+    "title": "Statistical modeling",
     "section": "",
-    "text": "Last modified on 18. December 2025 at 12:00:22\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
+    "text": "Last modified on 18. December 2025 at 19:09:01\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
     "crumbs": [
-      "Template Preface"
+      "Statistical modeling"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html",
     "href": "chapter-51-statistical-modeling.html",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "",
-    "text": "10.1 General background\nLast modified on 18. December 2025 at 12:28:48\nFigure 10.1: foo",
+    "text": "10.1 General background\nLast modified on 18. December 2025 at 19:09:05\nFigure 10.1: foo",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#theoretical-background",
     "href": "chapter-51-statistical-modeling.html#theoretical-background",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.2 Theoretical background",
     "text": "10.2 Theoretical background",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#r-packages-used",
     "href": "chapter-51-statistical-modeling.html#r-packages-used",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.3 R packages used",
     "text": "10.3 R packages used",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#data",
     "href": "chapter-51-statistical-modeling.html#data",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.4 Data",
     "text": "10.4 Data",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#alternatives",
     "href": "chapter-51-statistical-modeling.html#alternatives",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.5 Alternatives",
     "text": "10.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#glossary",
     "href": "chapter-51-statistical-modeling.html#glossary",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.6 Glossary",
     "text": "10.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-51-statistical-modeling.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.7 The meaning of “Models of Reality” in this chapter.",
     "text": "10.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#summary",
     "href": "chapter-51-statistical-modeling.html#summary",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "10.8 Summary",
     "text": "10.8 Summary",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
     "objectID": "chapter-51-statistical-modeling.html#references",
     "href": "chapter-51-statistical-modeling.html#references",
-    "title": "10  Template chapter",
+    "title": "10  Overview",
     "section": "References",
     "text": "References",
     "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Template chapter</span>"
+      "Statistical modeling",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Overview</span>"
     ]
   },
   {
