@@ -140,6 +140,8 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 11.75, y = (rpois(25, 3))/4+9), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
+  annotate("segment", x = 10.5, xend = 12.25, y = 11, yend = 9.75, linetype = 1, color = "#F0F921FF") +
+  annotate("point", x = c(10.5, 12.25), y = c(11, 9.75), shape = 21, fill = "#F0F921FF") + 
   ## ordinal
   annotate("segment", x = 3.55, xend = 5.25, y = 4, yend = 4, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(4-4/3.5, 
@@ -157,6 +159,8 @@ ggplot() +
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 5.75, y = ceiling(rnorm(21, 2.75, 0.4)/0.5)*0.5), aes(x, y), 
               shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
+  annotate("segment", x = 4.5, xend = 6.25, y = 4, yend = 2.75, linetype = 1, color = "#F0F921FF") +
+  annotate("point", x = c(4.5, 6.25), y = c(4, 2.75), shape = 21, fill = "#F0F921FF") +  
   ## binomial
   annotate("segment", x = 9.55, xend = 11.25, y = 3.875, yend = 3.875, color = "#0D0887FF", size = 1) +
   geom_path(data = tibble(x_raw = seq(3.875-3.875/3.5, 
@@ -173,7 +177,10 @@ ggplot() +
             aes(y = x_raw, x = y_raw*0.75+12.25), 
             linewidth = 1, color = "black", angle = 90) +
   geom_jitter(data = tibble(x = 11.75, y = (rbinom(21, 1, 0.25)*2.5)+2), aes(x, y), 
-              shape = 21, width = 0.25, height = 0, fill = "#A21D9A80")  
+              shape = 21, width = 0.25, height = 0, fill = "#A21D9A80") +
+  annotate("segment", x = 10.5, xend = 12.25, y = 3.875, yend = 2.625, 
+           linetype = 1, color = "#F0F921FF") +
+  annotate("point", x = c(10.5, 12.25), y = c(3.875, 2.625), shape = 21, fill = "#F0F921FF")  
 
 
 
