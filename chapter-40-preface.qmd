@@ -197,3 +197,34 @@ ggplot() +
 
 ```
 
+```{r}
+foo <- tibble(A = rnorm(10, 5, 1),
+              B = rnorm(10, 8, 1)) |> 
+  gather()
+
+foo |> 
+  group_by(key) |> 
+  summarise(mean(value), var(value), sd(value))
+```
+
+
+```{r}
+sqrt((0.5764023	+ 0.7797969)/2)	
+```
+
+
+```{r}
+fit <- lm(value ~ key, foo)
+
+fit |> summary()
+```
+```{r}
+sqrt(diag(vcov(fit)))
+```
+
+```{r}
+library(nlme)
+gls(value ~ key, weights = varIdent(form =  ~ 1 | key), foo) |> 
+  summary()
+```
+
