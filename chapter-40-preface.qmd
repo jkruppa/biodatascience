@@ -198,8 +198,10 @@ ggplot() +
 ```
 
 ```{r}
-foo <- tibble(A = rnorm(10, 5, 1),
-              B = rnorm(10, 8, 1)) |> 
+pacman::p_load(emmeans, parameters, nlme, broom)
+
+foo <- tibble(A = rnorm(10000, 5, 4),
+              B = rnorm(10000, 8, 2)) |> 
   gather()
 
 foo |> 
@@ -209,22 +211,48 @@ foo |>
 
 
 ```{r}
-sqrt((0.5764023	+ 0.7797969)/2)	
+sqrt((16.77840 + 3.94372)/2)	
 ```
 
 
 ```{r}
-fit <- lm(value ~ key, foo)
+fit <- lm(value ~ 0+key, foo)
 
-fit |> summary()
+fit |> parameters()
 ```
+
+```{r}
+fit |> glance()
+```
+
+
+```{r}
+0.02012848 * sqrt(10000)
+```
+
+
+
 ```{r}
 sqrt(diag(vcov(fit)))
 ```
 
 ```{r}
-library(nlme)
-gls(value ~ key, weights = varIdent(form =  ~ 1 | key), foo) |> 
-  summary()
+model_parameters(fit, vcov = "HC3")
 ```
+
+
+```{r}
+
+gls(value ~ 0 + key, weights = varIdent(form =  ~ 1 | key), foo) |> 
+  parameters()
+```
+```{r}
+
+emm <- emmeans(fit, "key", vcov = sandwich::vcovHAC)
+summary_emm <- summary(emm)
+# Calculate SD from SE and sample size (n)
+summary_emm$SE * sqrt(summary_emm$df/2) 
+
+```
+
 
