@@ -64,6 +64,53 @@ jump_dog_tbl <- read_delim("data/jump_fleas.txt") |>
 
 ```{r}
 jump_dog_tbl
+
+```
+
+```{r}
+sem <- \(x) sd(x)/sqrt(length(x))
+
+sem(jump_dog_tbl$jumplength)
+
+sem <- \(x) sqrt(var(x)/length(x))
+
+sem(jump_dog_tbl$jumplength)
+
+sem <- \(x) sqrt(sum((x-mean(x))^2)/(length(x)*(length(x)-1)))
+
+sem(jump_dog_tbl$jumplength)
+
+sem <- \(x) sqrt(sum((x-mean(x))^2))/sqrt(length(x)*(length(x)-1))
+
+sem(jump_dog_tbl$jumplength)
+```
+
+$$
+SE = \cfrac{s}{\sqrt{n}}
+$$
+$$
+SE = \sqrt{\cfrac{s^2}{n}}
+$$
+
+$$
+SE = \cfrac{\sqrt{SS}}{n};\; \mbox{for large n}
+$$
+
+$$
+SE = \sqrt{\cfrac{\sum_{i=1}^n\cfrac{(y_i - \bar{y})^2}{n-1}}{n}} = \sqrt{\cfrac{\sum_{i=1}^n (y_i - \bar{y})^2}{n\cdot(n-1)}} = \cfrac{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}{\sqrt{n\cdot(n-1)}}
+$$
+
+With n is large
+
+$$
+SE = \cfrac{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}{\sqrt{n^2}} = \cfrac{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}{n} = \cfrac{\sqrt{SS}}{n}
+$$
+
+```{r}
+jump_dog_tbl |> 
+  group_by(host) |> 
+  summarise(mean(jumplength), var(jumplength), sd(jumplength), sem(jumplength)) |> 
+  mutate_if(is.numeric, round, 2)
 ```
 
 
@@ -232,7 +279,7 @@ p1_fig_dist_example +
 #| fig-height: 4.5
 #| fig-width: 9
 #| fig-cap: "foo"
-#| label: fig-var-example
+#| label: fig-sem-example
 
 mean_dog_jump <- mean(jump_dog_tbl$jumplength)
 
@@ -297,6 +344,9 @@ jump_dog_plot_tbl |>
            size = 5) + 
   theme(panel.grid = element_blank())
 ```
+
+
+
 
 
 ## Alternatives 

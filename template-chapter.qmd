@@ -10,6 +10,96 @@ source("init.R")
 
 ## General background
 
+```{r}
+#| message: false
+#| warning: false
+jump_dog_tbl <- read_delim("data/jump_fleas.txt") |> 
+  select(host, jumplength) |> 
+  filter(host == "dog") 
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 9
+#| fig-cap: "foo"
+#| label: fig-var-example
+
+mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+
+jump_dog_plot_tbl <- jump_dog_tbl |>
+  mutate(jump_length = jumplength,
+         e = jumplength - mean_dog_jump,
+         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
+
+sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
+
+jump_dog_plot_tbl |> 
+  ggplot(aes(x = 1:7, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  annotate("segment", x = rep(-2, 4), xend = rep(14, 4),
+           y = c(25, 30, 35, 40), yend = c(25, 30, 35, 40),
+           color = "gray95") +
+  geom_vline(xintercept = 1:7, color = "gray95") +
+  geom_tile(aes(x = 1:7 - e/2, 
+                y = jumplength - e/2, 
+                width = e, height = e), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_shape(data = tibble(x = c(13.8, 46.5, 46.5, 13.8) + 7, 
+                           y = c(33.85, 33.85, 46.3, 46.3) - 4),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
+                y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, 
+                width = e, height = e), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_text(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
+                y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, label = round(e^2,1)),
+            fontface = 2) +
+  annotate("text", x = 50, y = 40.5, label = expression(sum()*258.5), size = 5) +
+  annotate("tile", x = 28.25, y = 20, 
+           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("text", x = 28.25, y = 20, label = "258.5", fontface = 2, size = 5) +
+  annotate("segment", x = 35.25, xend = 35.25, y = 13, yend = 27, size = 1.5, color = "#E16462FF") +
+  annotate("text", x = 36, y = 20, hjust = "left", label = "16.08", color = "#E16462FF",
+           size = 5, fontface = 2) + 
+  geom_curve(aes(x = 41, y = 25.5, xend = 36, yend = 25),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", lineend = "round") +
+  annotate("text", x = 41.75, y = 25.25, hjust = "left", label = expression(SE~"="~frac(sqrt(258.5),
+                                                                                        sqrt(7 %.% (7-1)))),
+           size = 5, color = "black") + 
+  annotate("text", x = 41.75, y = 19.5, hjust = "left", 
+           label = expression(phantom(SE)~"="~frac(16.08, 6.48)),
+           size = 5, color = "black") + 
+  annotate("text", x = 41.75, y = 15.5, hjust = "left", 
+           label = expression(phantom(SE)~"="~"2.48"),
+           size = 5, color = "black") + 
+  geom_segment(x = -2, xend = 13, 
+               y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
+  annotate("text", x = 13.5, y = 33, hjust = "left", label = expression(bold(bar(y))),
+           size = 5, color = "#B12A90FF") + 
+  geom_point() +
+  scale_x_continuous(breaks = 1:7, limits = c(NA, 54),
+                     expand = expand_scale(mult = 0)) +
+  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
+                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
+                     limits = c(NA, NA)) +
+  labs(x = str_pad("Dog flea ID", 140, "right"), y = "Jump length in [cm]") +
+  scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
+  annotate("text", x = 20.5, y = 36, hjust = "right", label = expression(SS~"="),
+           size = 5) + 
+  annotate("text", x = 20.5, y = 20, hjust = "right", label = expression(SS~"="),
+           size = 5) + 
+  theme(panel.grid = element_blank())
+```
+
+
 ## Theoretical background
 
 ## R packages used
