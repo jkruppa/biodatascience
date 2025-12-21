@@ -64,19 +64,23 @@ jump_dog_plot_tbl |>
   annotate("tile", x = 28.25, y = 20, 
            width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
-  annotate("text", x = 28.25, y = 20, label = "258.5", fontface = 2, size = 5) +
+  annotate("text", x = 28.25, y = 20, label = "258.5", fontface = 2) +
   annotate("segment", x = 35.25, xend = 35.25, y = 13, yend = 27, size = 1.5, color = "#E16462FF") +
-  annotate("text", x = 36, y = 20, hjust = "left", label = "16.08", color = "#E16462FF",
-           size = 5, fontface = 2) + 
+  annotate("text", x = 36.25, y = 20, hjust = "center", label = "16.08", color = "#E16462FF",
+           fontface = 2, angle = -90) + 
   geom_curve(aes(x = 41, y = 25.5, xend = 36, yend = 25),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "black", lineend = "round") +
-  annotate("text", x = 41.75, y = 25.25, hjust = "left", label = expression(SE~"="~frac(sqrt(258.5),
-                                                                                        sqrt(7 %.% (7-1)))),
+  annotate("text", x = 41.75, y = 25.25, hjust = "left", 
+           label = expression(SE~"="~frac(sqrt(phantom(258.5)), sqrt(7 %.% (7-1)))),
            size = 5, color = "black") + 
+  annotate("text", x = 47.75, y = 26.5, hjust = "left", 
+           label = "258.5", size = 5, color = "#FCA636FF", fontface = 2) + 
   annotate("text", x = 41.75, y = 19.5, hjust = "left", 
-           label = expression(phantom(SE)~"="~frac(16.08, 6.48)),
+           label = expression(phantom(SE)~"="~frac(phantom(16.08), 6.48)),
            size = 5, color = "black") + 
+  annotate("text", x = 45.5, y = 20.5, hjust = "left", 
+           label = "16.08", size = 5, color = "#E16462FF", fontface = 2) + 
   annotate("text", x = 41.75, y = 15.5, hjust = "left", 
            label = expression(phantom(SE)~"="~"2.48"),
            size = 5, color = "black") + 
