@@ -940,7 +940,7 @@
     "href": "chapter-41-eda.html",
     "title": "9  Explorative data analysis",
     "section": "",
-    "text": "9.1 General background\nLast modified on 21. December 2025 at 19:59:26",
+    "text": "9.1 General background\nLast modified on 22. December 2025 at 12:26:32",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1169,7 +1169,7 @@
     "href": "template-chapter.html",
     "title": "11  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 21. December 2025 at 20:20:37\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\")\nFigure 11.1: foo",
+    "text": "11.1 General background\nLast modified on 22. December 2025 at 14:28:24\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\")\nFigure 11.1: foo\nFigure 11.2: foo\nFigure 11.3: foo\nFigure 11.4: foo\nFigure 11.5: foo",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
