@@ -1169,7 +1169,7 @@
     "href": "template-chapter.html",
     "title": "11  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 22. December 2025 at 14:28:24\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\")\nFigure 11.1: foo\nFigure 11.2: foo\nFigure 11.3: foo\nFigure 11.4: foo\nFigure 11.5: foo",
+    "text": "11.1 General background\nLast modified on 22. December 2025 at 15:00:34\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\")\nFigure 11.1: foo\nFigure 11.2: foo\nFigure 11.3: foo\nFigure 11.4: foo\nFigure 11.5: foo",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
