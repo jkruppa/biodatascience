@@ -114,6 +114,20 @@ jump_dog_tbl |>
 ```
 
 
+```{r}
+#| message: false
+#| warning: false
+#| echo: false
+mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+
+jump_dog_plot_tbl <- jump_dog_tbl |>
+  mutate(e = jumplength - mean_dog_jump,
+         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
+
+sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
+```
+
+
 ## Mean
 
 
@@ -271,31 +285,30 @@ p1_fig_dist_example +
 ```
 
 
+
+
+
+
+
 ```{r}
 #| message: false
 #| echo: false
 #| warning: false
 #| fig-align: center
 #| fig-height: 4.5
-#| fig-width: 9
+#| fig-width: 7.5
 #| fig-cap: "foo"
-#| label: fig-sem-example
+#| label: fig-var-2-example
 
 mean_dog_jump <- mean(jump_dog_tbl$jumplength)
-
-jump_dog_plot_tbl <- jump_dog_tbl |>
-  mutate(jump_length = jumplength,
-         e = jumplength - mean_dog_jump,
-         sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
-
 sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
 
 jump_dog_plot_tbl |> 
   ggplot(aes(x = 1:7, y = jumplength)) +
   theme_book() +
   coord_equal() +
-  annotate("segment", x = rep(-2, 4), xend = rep(14, 4),
-           y = c(25, 30, 35, 40), yend = c(25, 30, 35, 40),
+  annotate("segment", x = rep(-2, 6), xend = rep(14, 6),
+           y = c(15, 20, 25, 30, 35, 40), yend = c(15, 20, 25, 30, 35, 40),
            color = "gray95") +
   geom_vline(xintercept = 1:7, color = "gray95") +
   geom_tile(aes(x = 1:7 - e/2, 
@@ -303,7 +316,7 @@ jump_dog_plot_tbl |>
                 width = e, height = e), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   geom_shape(data = tibble(x = c(13.8, 46.5, 46.5, 13.8) + 7, 
-                           y = c(33.85, 33.85, 46.3, 46.3) - 4),
+                           y = c(33, 33, 47, 47) - 4),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
   geom_tile(aes(x = c(20, 28.4, 28.4, 31.5, 34, 35, 41.6)+7, 
                 y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, 
@@ -313,16 +326,10 @@ jump_dog_plot_tbl |>
                 y = c(40, 36.7, 42, 42, 37.2, 42, 38.5)-4, label = round(e^2,1)),
             fontface = 2) +
   annotate("text", x = 50, y = 40.5, label = expression(sum()*258.5), size = 5) +
-  annotate("tile", x = 24, y = 21, 
-           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+  annotate("tile", x = 28.25, y = 20, 
+           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
-  annotate("text", x = 24, y = 21, label = "43.08", fontface = 2) +
-  annotate("segment", x = 26.4, xend = 26.4, y = 18.5, yend = 23.5, size = 1.5, color = "#E16462FF") +
-  annotate("text", x = 32, y = 21, hjust = "left", label = expression(s~"="~6.56),
-           size = 5, color = "black") + 
-  geom_curve(aes(x = 31.5, y = 21, xend = 26.9, yend = 21),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0.3, color = "black", lineend = "round") +
+  annotate("text", x = 28.25, y = 20, label = "258.5 cm²", fontface = 2, size = 4.5) +
   geom_segment(x = -2, xend = 13, 
                y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
   annotate("text", x = 13.5, y = 33, hjust = "left", label = expression(bold(bar(y))),
@@ -330,22 +337,198 @@ jump_dog_plot_tbl |>
   geom_point() +
   scale_x_continuous(breaks = 1:7, limits = c(NA, 54),
                      expand = expand_scale(mult = 0)) +
-  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
-                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
+  scale_y_continuous(breaks = c(15, 20, 25, 30, mean_dog_jump, 35, 40),
+                     labels = c("15", "20", "25", "30", round(mean_dog_jump,1), "35", "40"),
                      limits = c(NA, NA)) +
-  labs(x = str_pad("Dog flea ID", 140, "right"), y = "Jump length in [cm]") +
+  labs(x = str_pad("Dog flea ID", 122.5, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
-  annotate("segment", x = 21, xend = 54, y = 29.5, yend = 29.5, size = 0.75) +
-  annotate("text", x = 20.5, y = 29.75, hjust = "right", label = expression(s^2~"="),
+  annotate("text", x = 20.5, y = 36, hjust = "right", label = expression(SS~"="),
            size = 5) + 
-  annotate("text", x = 37.5, y = 28, hjust = "center", label = expression((7-1)),
-           size = 5) + 
-  annotate("text", x = 20.5, y = 21, hjust = "right", label = expression(s^2~"="),
+  annotate("text", x = 20.5, y = 20, hjust = "right", label = expression(SS~"="),
            size = 5) + 
   theme(panel.grid = element_blank())
 ```
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-var-3-example
 
+ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_equal() +
+##  coord_cartesian(xlim = c(0, 10), ylim = c(-20, 20)) +
+  scale_x_continuous(breaks = -10:10, expand = expansion(mult = 0), limits = c(-8.5, 17)) +
+  scale_y_continuous(breaks = -10:15, expand = expansion(mult = 0), limits = c(-5.5, 12)) +
+  annotate("tile", x = 2, y = 5, 
+           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("text", x = 2, y = 5, label = "258.5 cm²", fontface = 2, size = 4.5) +
+  annotate("text", x = -6, y = -2.4, hjust = "right", label = expression(s^2~"="),
+           size = 6.5) +
+  annotate("segment", x = -5.5, xend = 9.5, y = -2.5, yend = -2.5) +
+  annotate("text", x = 2, y = -3.5, label = expression(7-1), fontface = 1, size = 5.5) +
+  annotate("text", x = 10, y = -2.4, hjust = "left", label = expression("="),
+           size = 6) +
+  annotate("tile", x = 14, y = -2.5, 
+           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("text", x = 14, y = -2.5, label = "43.08 cm²", fontface = 2, size = 4.5) 
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 1.75
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-var-4-example
+
+ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = -10:10, expand = expansion(mult = 0), limits = c(-7.5, 3.5)) +
+  scale_y_continuous(breaks = -10:15, expand = expansion(mult = 0), limits = c(-5, 0)) +
+  annotate("text", x = -5.75, y = -2.6, hjust = "right", label = expression(s~"="),
+           size = 6.5) +
+  annotate("tile", x = -3, y = -2.5, 
+           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+           alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
+  annotate("segment", x = -0.5, xend = -0.5, y = -5, yend = 0, size = 1.5, color = "#E16462FF") +
+  annotate("text", x = 0, y = -2.5, hjust = "center", label = "6.56 cm", color = "#E16462FF",
+           fontface = 2, angle = -90, size = 5) +
+  annotate("text", x = -3, y = -2.5, label = "43.08 cm²", fontface = 2, size = 4.5)  +
+  annotate("text", x = 0.5, y = -2.6, hjust = "left", label = expression("="~"6.56 cm"),
+           size = 6) 
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-var-5-example
+
+ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = -10:20, expand = expansion(mult = 0), limits = c(-8.5, 25)) +
+  scale_y_continuous(breaks = -10:15, expand = expansion(mult = 0), limits = c(-2, 12)) +
+  annotate("text", x = -5.5, y = 5, hjust = "right", label = expression(SE~"="),
+           size = 6.5) +
+  annotate("tile", x = 2, y = 5, 
+           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
+  annotate("text", x = 2, y = 5, label = "258.5 cm²", fontface = 2, size = 4.5) +
+  annotate("segment", x = 9, xend = 9, y = -2, yend = 12, size = 1.5, color = "#E16462FF") +
+  annotate("text", x = 9.75, y = 5, hjust = "center", label = "16.08 cm", color = "#E16462FF",
+           fontface = 2, angle = -90, size = 5) +
+  annotate("text", x = -3, y = -2.5, label = "43.08 cm²", fontface = 2, size = 4.5) +
+  annotate("text", x = 11, y = 4.75, hjust = "left", 
+           label = expression("="~frac(16.08~"cm", sqrt(7 %.% (7-1)))),
+           color = "black", size = 6) + 
+  annotate("text", x = 18.5, y = 5, hjust = "left", 
+           label = expression("="~frac(16.08~"cm", 6.48)),
+           color = "black", size = 6) +
+  annotate("text", x = 18.5, y = 1, hjust = "left", 
+           label = expression("="~2.48~"cm"),
+           color = "black", size = 6) 
+```
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.75
+#| fig-width: 5
+#| fig-cap: "foo"
+#| label: fig-var-6-example
+
+sd_forumla_x <- -5.5
+sd_tile_x <- -3
+se_forumla_x <- 5.5
+se_tile_x <- 3
+
+ggplot() +
+  theme_void() +
+  coord_equal() + 
+  scale_x_continuous(breaks = -15:15, expand = expansion(mult = 0), limits = c(-8, 8)) +
+  scale_y_continuous(breaks = 0:-15, expand = expansion(mult = 0), limits = c(1, -14.5)) +
+  annotate("text", x = c(-4, 4), y = c(0.5, 0.5), label = c("Standard deviation", "Standard error"),
+           fontface = 2, size = 5) +
+  annotate("segment", x = 0, xend = 0, y = 1, yend = -14.5, color = "gray50") +
+  annotate("tile", x = c(sd_tile_x, se_tile_x), y = c(-2, -2), 
+           width = 3, height = 3, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("tile", x = c(sd_tile_x), y = c(-8), 
+           width = 1.5, height = 1.5, fill = "#FCA63680",
+           alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("tile", x = c(se_tile_x), y = c(-8), 
+           width = 3, height = 3, fill = "#FCA63680",
+           alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
+  annotate("tile", x = c(sd_tile_x), y = -13.25, 
+           width = 1.5, height = 1.5, fill = "#FCA63680",
+           alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
+  annotate("segment", x = sd_tile_x+0.75, xend = sd_tile_x+0.75, y = -12.5, yend = -14, 
+           size = 1.5, color = "#E16462FF") +
+  annotate("segment", x = se_tile_x+1.5, xend = se_tile_x+1.5, y = -9.5, yend = -6.5, 
+           size = 1.5, color = "#E16462FF") +
+  annotate("segment", x = se_tile_x, xend = se_tile_x, y = -12.75, yend = -13.75, 
+           size = 1.5, color = "#E16462FF") +
+  geom_curve(aes(x = sd_tile_x, y = -4, xend = sd_tile_x, yend = -6.75),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0, color = "black", lineend = "round") +
+  geom_curve(aes(x = sd_tile_x, y = -9.25, xend = sd_tile_x, yend = -12),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0, color = "black", lineend = "round") +
+  geom_curve(aes(x = se_tile_x, y = -4, xend = se_tile_x, yend = -6),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0, color = "black", lineend = "round") +
+  geom_curve(aes(x = se_tile_x, y = -10, xend = se_tile_x, yend = -12.25),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0, color = "black", lineend = "round") +
+  annotate("label", hjust = "right", x = sd_tile_x - 0.5, y = -5.25,
+           label = "divide by n", fontface = 3, color = "#0D0887FF") +
+  annotate("label", hjust = "right", x = sd_tile_x - 0.5, y = -10.5,
+           label = "square root", fontface = 3, color = "#B12A90FF") +
+  annotate("label", hjust = "left", x = se_tile_x + 0.5, y = -4.875,
+           label = "square root", fontface = 3, color = "#B12A90FF") +
+  annotate("label", hjust = "left", x = se_tile_x + 0.5, y = -11,
+           label = "divide by n", fontface = 3, color = "#0D0887FF") +
+  annotate("text", hjust = "center", x = sd_forumla_x, y = -2,
+           label = expression(SS)) +
+  annotate("text", hjust = "center", x = sd_forumla_x, y = -8,
+           label = expression(frac(SS, n)), color = "#0D0887FF") +
+  annotate("text", hjust = "center", x = sd_forumla_x, y = -13.25,
+           label = expression(sqrt(frac(SS, n))), color = "#B12A90FF")  +
+  annotate("text", hjust = "center", x = se_forumla_x, y = -2,
+           label = expression(SS)) +
+  annotate("text", hjust = "center", x = se_forumla_x, y = -8,
+           label = expression(sqrt(SS)), color = "#B12A90FF") +
+  annotate("text", hjust = "center", x = se_forumla_x, y = -13.25,
+           label = expression(frac(sqrt(SS), n)), color = "#0D0887FF") +
+  annotate("text", c(sd_tile_x, se_tile_x), y = c(-2, -2), label = c(258.5), fontface = 2) +
+  annotate("text", c(sd_tile_x, se_tile_x+1.125), y = c(-8, -8), label = c(43.08, 16.08), fontface = 2,
+           angle = c(0, 90), color = c("black", "#E16462FF")) +
+  annotate("text", c(sd_tile_x+0.375, se_tile_x-0.375), y = c(-13.25, -13.25), 
+           label = c(6.56, 2.48), fontface = 2,
+           angle = 90, color = "#E16462FF") 
+  
+
+```
 
 
 

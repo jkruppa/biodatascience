@@ -940,7 +940,7 @@
     "href": "chapter-41-eda.html",
     "title": "9  Explorative data analysis",
     "section": "",
-    "text": "9.1 General background\nLast modified on 22. December 2025 at 12:26:32",
+    "text": "9.1 General background\nLast modified on 22. December 2025 at 19:37:59",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -984,7 +984,7 @@
     "href": "chapter-41-eda.html#mean",
     "title": "9  Explorative data analysis",
     "section": "9.5 Mean",
-    "text": "9.5 Mean\n\n\n\n\n\n\n\n\nFigure 9.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.4: foo",
+    "text": "9.5 Mean\n\n\n\n\n\n\n\n\nFigure 9.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 9.8: foo",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1169,7 +1169,7 @@
     "href": "template-chapter.html",
     "title": "11  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 22. December 2025 at 15:00:34\nR Code [show / hide]\njump_dog_tbl &lt;- read_delim(\"data/jump_fleas.txt\") |&gt; \n  select(host, jumplength) |&gt; \n  filter(host == \"dog\")\nFigure 11.1: foo\nFigure 11.2: foo\nFigure 11.3: foo\nFigure 11.4: foo\nFigure 11.5: foo",
+    "text": "11.1 General background\nLast modified on 22. December 2025 at 19:34:21",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
