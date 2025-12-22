@@ -393,7 +393,7 @@
     "href": "chapter-11-covariate-data.html",
     "title": "4  Body weight of fleas",
     "section": "",
-    "text": "4.1 General background\nLast modified on 23. November 2025 at 08:41:10",
+    "text": "4.1 General background\nLast modified on 22. December 2025 at 19:58:29",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -436,8 +436,8 @@
     "objectID": "chapter-11-covariate-data.html#alternatives",
     "href": "chapter-11-covariate-data.html#alternatives",
     "title": "4  Body weight of fleas",
-    "section": "4.5 Alternatives",
-    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "4.6 Alternatives",
+    "text": "4.6 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -447,8 +447,8 @@
     "objectID": "chapter-11-covariate-data.html#glossary",
     "href": "chapter-11-covariate-data.html#glossary",
     "title": "4  Body weight of fleas",
-    "section": "4.6 Glossary",
-    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "4.7 Glossary",
+    "text": "4.7 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -458,8 +458,8 @@
     "objectID": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "4  Body weight of fleas",
-    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "4.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -469,8 +469,8 @@
     "objectID": "chapter-11-covariate-data.html#summary",
     "href": "chapter-11-covariate-data.html#summary",
     "title": "4  Body weight of fleas",
-    "section": "4.8 Summary",
-    "text": "4.8 Summary",
+    "section": "4.9 Summary",
+    "text": "4.9 Summary",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -940,7 +940,7 @@
     "href": "chapter-41-eda.html",
     "title": "9  Explorative data analysis",
     "section": "",
-    "text": "9.1 General background\nLast modified on 22. December 2025 at 19:37:59",
+    "text": "9.1 General background\nLast modified on 22. December 2025 at 19:54:13",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1169,7 +1169,7 @@
     "href": "template-chapter.html",
     "title": "11  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 22. December 2025 at 19:34:21",
+    "text": "11.1 General background\nLast modified on 22. December 2025 at 20:15:14\nR Code [show / hide]\njump_weight_tbl &lt;- read_delim(\"data/jump_weight.txt\") |&gt; \n  select(weight, jumplength) |&gt; \n  sample_n(5)\n\nmean_cat_jump &lt;- mean(jump_weight_tbl$jumplength)\n\njump_weight_plot_tbl &lt;- jump_weight_tbl |&gt;\n  mutate(sx = weight - mean(weight),\n         sy = jumplength - mean(jumplength))\nFigure 11.1: foo\n\n\n\n\n\n\n\n\n\n\n\nFigure 11.2: foo",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
@@ -1305,6 +1305,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#data-availability",
+    "href": "chapter-11-covariate-data.html#data-availability",
+    "title": "4  Body weight of fleas",
+    "section": "4.5 Data availability",
+    "text": "4.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
     ]
   }
 ]

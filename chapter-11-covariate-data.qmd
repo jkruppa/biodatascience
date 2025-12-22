@@ -78,6 +78,21 @@ jump_weight_non_linear_tbl |>
 ```
 
 
+## Data availability
+
+The data is available as txt-Files under <https://github.com/jkruppa/biodatascience>.
+
+```{r}
+#| echo: false
+
+jump_weight_tbl |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_weight.txt")
+
+jump_weight_non_linear_tbl |> 
+  mutate_if(is.numeric, round, 2) |> 
+  write_delim("data/jump_weight_non_linear.txt")
+```
 
 
 ## Alternatives 

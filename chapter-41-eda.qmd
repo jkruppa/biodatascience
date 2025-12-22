@@ -361,9 +361,7 @@ jump_dog_plot_tbl |>
 
 ggplot() +
   theme_void() +
-  ##theme_minimal() +
   coord_equal() +
-##  coord_cartesian(xlim = c(0, 10), ylim = c(-20, 20)) +
   scale_x_continuous(breaks = -10:10, expand = expansion(mult = 0), limits = c(-8.5, 17)) +
   scale_y_continuous(breaks = -10:15, expand = expansion(mult = 0), limits = c(-5.5, 12)) +
   annotate("tile", x = 2, y = 5, 

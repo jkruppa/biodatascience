@@ -10,6 +10,72 @@ source("init.R")
 
 ## General background
 
+```{r}
+#| message: false
+#| warning: false
+jump_weight_tbl <- read_delim("data/jump_weight.txt") |> 
+  select(weight, jumplength) |> 
+  sample_n(5)
+
+mean_cat_jump <- mean(jump_weight_tbl$jumplength)
+
+jump_weight_plot_tbl <- jump_weight_tbl |>
+  mutate(sx = weight - mean(weight),
+         sy = jumplength - mean(jumplength))
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 7.5
+#| fig-cap: "foo"
+#| label: fig-var-2-example
+
+p1_corr <- jump_weight_plot_tbl |> 
+  ggplot(aes(x = weight, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  geom_point() +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]") +
+  geom_tile(aes(x = weight - sx/2, 
+                y = jumplength - sx/2, 
+                width = sx, height = sx), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) 
+
+p2_corr <- jump_weight_plot_tbl |> 
+  ggplot(aes(x = weight, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  geom_point() +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]") +
+  geom_tile(aes(x = weight - sy/2, 
+                y = jumplength - sy/2, 
+                width = sy, height = sy), fill = "#B12A9080",
+            alpha = 0.2, color = "#B12A90FF", linewidth = 0.5)
+
+p1_corr + p2_corr + 
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+
+jump_weight_plot_tbl |> 
+  ggplot(aes(x = weight, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  geom_point() +
+  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]") +
+  geom_tile(aes(x = weight - sx/2, 
+                y = jumplength - sy/2, 
+                width = sx, height = sy), fill = "#B12A9080",
+            alpha = 0.2, color = "#B12A90FF", linewidth = 0.5)
+
+```
+
+
+
 
 ## Theoretical background
 
