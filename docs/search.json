@@ -1169,7 +1169,7 @@
     "href": "template-chapter.html",
     "title": "11  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 22. December 2025 at 20:15:14\nR Code [show / hide]\njump_weight_tbl &lt;- read_delim(\"data/jump_weight.txt\") |&gt; \n  select(weight, jumplength) |&gt; \n  sample_n(5)\n\nmean_cat_jump &lt;- mean(jump_weight_tbl$jumplength)\n\njump_weight_plot_tbl &lt;- jump_weight_tbl |&gt;\n  mutate(sx = weight - mean(weight),\n         sy = jumplength - mean(jumplength))\nFigure 11.1: foo\n\n\n\n\n\n\n\n\n\n\n\nFigure 11.2: foo",
+    "text": "11.1 General background\nLast modified on 23. December 2025 at 08:59:03\nR Code [show / hide]\njump_weight_tbl &lt;- read_delim(\"data/jump_weight.txt\") |&gt; \n  select(weight, jumplength) |&gt; \n  sample_n(5)\n\nmean_cat_jump &lt;- mean(jump_weight_tbl$jumplength)\n\njump_weight_plot_tbl &lt;- jump_weight_tbl |&gt;\n  mutate(sx = weight - mean(weight),\n         sy = jumplength - mean(jumplength))\nFigure 11.1: foo\n\n\n\n\n\n\n\n\n\n\n\nFigure 11.2: foo",
     "crumbs": [
       "Template Preface",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
