@@ -97,7 +97,7 @@ SE = \cfrac{\sqrt{SS}}{n};\; \mbox{for large n}
 $$
 
 $$
-SE = \sqrt{\cfrac{\sum_{i=1}^n\cfrac{(y_i - \bar{y})^2}{n-1}}{n}} = \sqrt{\cfrac{\sum_{i=1}^n (y_i - \bar{y})^2}{n\cdot(n-1)}} = \cfrac{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}{\sqrt{n\cdot(n-1)}}
+SE = \sqrt{\cfrac{\sum_{i=1}^n\cfrac{(y_i - \bar{y})^2}{n-1}}{n}} = \sqrt{\cfrac{\sum_{i=1}^n (y_i - \bar{y})^2}{n\cdot(n-1)}} = \cfrac{\sqrt{SS}}{\sqrt{n\cdot(n-1)}}
 $$
 
 With n is large
