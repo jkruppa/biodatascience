@@ -14,20 +14,37 @@ source("init.R")
 #| message: false
 #| warning: false
 
-r2_tbl <- tibble(weight = abs(rnorm(5, 3, 4)),
-                 jumplength = 10 + 1.2 * weight + rnorm(5, 0, 3))
+r2_good_tbl <- tibble(weight = abs(rnorm(5, 3, 4)),
+                      jumplength = 10 + 1.2 * weight + rnorm(5, 0, 3))
 
-r2_fit <- lm(jumplength ~ weight, data = r2_tbl)
+r2_good_fit <- lm(jumplength ~ weight, data = r2_good_tbl)
 
-mean_cat_jump <- mean(r2_tbl$jumplength)
+mean_good_cat_jump <- mean(r2_good_tbl$jumplength)
 
-r2_plot_tbl <- r2_tbl |> 
+r2_good_plot_tbl <- r2_good_tbl |> 
   mutate(sy = jumplength - mean(jumplength),
-         e = residuals(r2_fit))
+         e = residuals(r2_good_fit))
 
-sum_sy <- (r2_plot_tbl$sy)^2 |> abs() |> sum() |> round(2)
-sum_e <- (r2_plot_tbl$e)^2 |> abs() |> sum() |> round(2)
-1-(sum_e/sum_sy)
+sum_good_sy <- (r2_good_plot_tbl$sy)^2 |> abs() |> sum() |> round(2)
+sum_good_e <- (r2_good_plot_tbl$e)^2 |> abs() |> sum() |> round(2)
+r2_good <- 1-(sum_good_e/sum_good_sy)
+
+
+r2_bad_tbl <- tibble(weight = r2_good_tbl$weight,
+                     jumplength = 9 + 0.5 * weight + rnorm(5, 0, 4))
+
+r2_bad_fit <- lm(jumplength ~ weight, data = r2_bad_tbl)
+
+mean_bad_cat_jump <- mean(r2_bad_tbl$jumplength)
+
+r2_bad_plot_tbl <- r2_bad_tbl |> 
+  mutate(sy = jumplength - mean(jumplength),
+         e = residuals(r2_bad_fit),
+         e2 = e^2)
+
+sum_bad_sy <- (r2_bad_plot_tbl$sy)^2 |> abs() |> sum() |> round(2)
+sum_bad_e <- (r2_bad_plot_tbl$e)^2 |> abs() |> sum() |> round(2)
+r2_bad <- 1-(sum_bad_e/sum_bad_sy)
 ```
 
 ```{r}
@@ -40,13 +57,13 @@ sum_e <- (r2_plot_tbl$e)^2 |> abs() |> sum() |> round(2)
 #| fig-cap: "foo"
 #| label: fig-r2-example
 
-r2_plot_tbl |> 
+r2_good_plot_tbl |> 
   ggplot(aes(x = weight, y = jumplength)) +
   theme_book() +
   coord_equal() +
   annotate("segment", x = rep(-1, 7), xend = rep(11, 7),
-           y = c(8, 10, 12, mean_cat_jump, 16, 18, 20), 
-           yend = c(8, 10, 12, mean_cat_jump, 16, 18, 20),
+           y = c(8, 10, 12, mean_good_cat_jump, 16, 18, 20), 
+           yend = c(8, 10, 12, mean_good_cat_jump, 16, 18, 20),
            color = "gray95") +
   geom_vline(xintercept = c(0,5,10), color = "gray95") +
   geom_tile(aes(x = weight - sy/2, 
@@ -54,15 +71,15 @@ r2_plot_tbl |>
                 width = sy, height = sy), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   geom_segment(x = -1, xend = 11, 
-               y = mean_cat_jump, yend = mean_cat_jump, color = "#B12A90FF", size = 1) +
-  annotate("text", x = 11.5, y = mean_cat_jump, hjust = "left", label = expression(bold(bar(y))),
+               y = mean_good_cat_jump, yend = mean_good_cat_jump, color = "#B12A90FF", size = 1) +
+  annotate("text", x = 11.5, y = mean_good_cat_jump, hjust = "left", label = expression(bold(bar(y))),
            size = 5, color = "#B12A90FF") + 
   geom_tile(aes(x = weight - e/2, 
                 y = jumplength - e/2, 
                 width = e, height = e), fill = "#0D088780",
             alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) +
   geom_point() +
-  geom_line(aes(y = predict(r2_fit)), color = "#0D0887FF") +
+  geom_line(aes(y = predict(r2_good_fit)), color = "#0D0887FF", size = 1) +
   annotate("text", x = 17, y = 15, hjust = "right", label = expression(R^2~"="~1~"\u2013"),
            size = 6) +
   geom_shape(data = tibble(x = c(17.5, 30, 30, 17.5), 
@@ -77,9 +94,6 @@ r2_plot_tbl |>
                 y = c(17, 17, 17, 17, 17), 
                 width = e, height = e), fill = "#0D088780",
             alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) +
-#  geom_text(aes(x = c(19, 21, 23, 25, 27), 
-#                y = c(17, 17, 17, 17, 17), label = round(e^2,1)),
-#            fontface = 2) +
   annotate("segment", x = 17.5, xend = 30, y = 15, yend = 15) +
   geom_tile(aes(x = seq(20.5, 27, length.out =5), 
                 y = c(11.5, 11.5, 11.5, 11.5, 11.5), 
@@ -87,25 +101,71 @@ r2_plot_tbl |>
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   annotate("text", x = 29.5, y = 8.5, label = expression(sum()*105.52), size = 5,
            hjust = "right") +
-#  geom_text(aes(x = seq(20.5, 27, length.out =5),  
-#                y = c(11.5, 11.5, 11.5, 11.5, 11.5), label = round(sy^2,1)),
-#            fontface = 2) +
   annotate("text", x = 30.5, y = 15, hjust = "left", label = expression("= 0.86"),
            size = 6) +
   scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 33.5),
                      expand = expand_scale(mult = 0)) +
-  scale_y_continuous(breaks = c(8, 10, 12, mean_cat_jump, 16, 18, 20),
-                     labels = c("8", "10", "12", round(mean_cat_jump, 1), "16", "18", "20"),
+  scale_y_continuous(breaks = c(8, 10, 12, mean_good_cat_jump, 16, 18, 20),
+                     labels = c("8", "10", "12", round(mean_good_cat_jump, 1), "16", "18", "20"),
                      limits = c(NA, NA)) +
   labs(x = str_pad("Cat flea weight [mg]", 122.5, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
-#  annotate("text", x = 20.5, y = 36, hjust = "right", label = expression(SS~"="),
-#           size = 5) + 
-#  annotate("text", x = 20.5, y = 20, hjust = "right", label = expression(SS~"="),
-#           size = 5) + 
   theme(panel.grid = element_blank())
 
-
+r2_bad_plot_tbl |> 
+  ggplot(aes(x = weight, y = jumplength)) +
+  theme_book() +
+  coord_equal() +
+  annotate("segment", x = rep(-1, 7), xend = rep(11, 7),
+           y = c(8, 10, 12, mean_bad_cat_jump, 16, 18, 20), 
+           yend = c(8, 10, 12, mean_bad_cat_jump, 16, 18, 20),
+           color = "gray95") +
+  geom_vline(xintercept = c(0,5,10), color = "gray95") +
+  geom_tile(aes(x = weight - sy/2, 
+                y = jumplength - sy/2, 
+                width = sy, height = sy), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  geom_segment(x = -1, xend = 11, 
+               y = mean_bad_cat_jump, yend = mean_bad_cat_jump, color = "#B12A90FF", size = 1) +
+  annotate("text", x = 11.5, y = mean_bad_cat_jump, hjust = "left", label = expression(bold(bar(y))),
+           size = 5, color = "#B12A90FF") + 
+  geom_tile(aes(x = weight - e/2, 
+                y = jumplength - e/2, 
+                width = e, height = e), fill = "#0D088780",
+            alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) +
+  geom_point() +
+  geom_line(aes(y = predict(r2_bad_fit)), color = "#0D0887FF", size = 1) +
+  annotate("text", x = 17, y = 15, hjust = "right", label = expression(R^2~"="~1~"\u2013"),
+           size = 6) +
+  geom_shape(data = tibble(x = c(17.5, 30, 30, 17.5), 
+                           y = c(15.5, 15.5, 19.75, 19.75)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(17.5, 30, 30, 17.5), 
+                           y = c(14.5, 14.5, 7.75, 7.75)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = 29.5, y = 19, label = expression(sum()*14.94), size = 5,
+           hjust = "right") +
+  geom_tile(aes(x = c(19, 21, 23, 25, 27), 
+                y = c(17, 17, 17, 17, 17), 
+                width = e, height = e), fill = "#0D088780",
+            alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) +
+  annotate("segment", x = 17.5, xend = 30, y = 15, yend = 15) +
+  geom_tile(aes(x = seq(20.5, 27, length.out =5), 
+                y = c(11.5, 11.5, 11.5, 11.5, 11.5), 
+                width = sy, height = sy), fill = "#FCA63680",
+            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
+  annotate("text", x = 29.5, y = 8.5, label = expression(sum()*105.52), size = 5,
+           hjust = "right") +
+  annotate("text", x = 30.5, y = 15, hjust = "left", label = expression("= 0.86"),
+           size = 6) +
+  scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 33.5),
+                     expand = expand_scale(mult = 0)) +
+  scale_y_continuous(breaks = c(8, 10, 12, mean_bad_cat_jump, 16, 18, 20),
+                     labels = c("8", "10", "12", round(mean_bad_cat_jump, 1), "16", "18", "20"),
+                     limits = c(NA, NA)) +
+  labs(x = str_pad("Cat flea weight [mg]", 122.5, "right"), y = "Jump length in [cm]") +
+  scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
+  theme(panel.grid = element_blank())
 ```
 
 
