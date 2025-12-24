@@ -52,12 +52,12 @@ r2_bad <- 1-(sum_bad_e/sum_bad_sy)
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 3.75
+#| fig-height: 7.5
 #| fig-width: 9
 #| fig-cap: "foo"
 #| label: fig-r2-example
 
-r2_good_plot_tbl |> 
+p_r2_good <- r2_good_plot_tbl |> 
   ggplot(aes(x = weight, y = jumplength)) +
   theme_book() +
   coord_equal() +
@@ -103,7 +103,7 @@ r2_good_plot_tbl |>
            hjust = "right") +
   annotate("text", x = 30.5, y = 15, hjust = "left", label = expression("= 0.86"),
            size = 6) +
-  scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 33.5),
+  scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 34),
                      expand = expand_scale(mult = 0)) +
   scale_y_continuous(breaks = c(8, 10, 12, mean_good_cat_jump, 16, 18, 20),
                      labels = c("8", "10", "12", round(mean_good_cat_jump, 1), "16", "18", "20"),
@@ -112,7 +112,7 @@ r2_good_plot_tbl |>
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
   theme(panel.grid = element_blank())
 
-r2_bad_plot_tbl |> 
+p_r2_bad <- r2_bad_plot_tbl |> 
   ggplot(aes(x = weight, y = jumplength)) +
   theme_book() +
   coord_equal() +
@@ -143,7 +143,7 @@ r2_bad_plot_tbl |>
   geom_shape(data = tibble(x = c(17.5, 30, 30, 17.5), 
                            y = c(14.5, 14.5, 7.75, 7.75)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
-  annotate("text", x = 29.5, y = 19, label = expression(sum()*14.94), size = 5,
+  annotate("text", x = 29.5, y = 19, label = expression(sum()*4.64), size = 5,
            hjust = "right") +
   geom_tile(aes(x = c(19, 21, 23, 25, 27), 
                 y = c(17, 17, 17, 17, 17), 
@@ -154,11 +154,11 @@ r2_bad_plot_tbl |>
                 y = c(11.5, 11.5, 11.5, 11.5, 11.5), 
                 width = sy, height = sy), fill = "#FCA63680",
             alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
-  annotate("text", x = 29.5, y = 8.5, label = expression(sum()*105.52), size = 5,
+  annotate("text", x = 29.5, y = 8.5, label = expression(sum()*6.43), size = 5,
            hjust = "right") +
-  annotate("text", x = 30.5, y = 15, hjust = "left", label = expression("= 0.86"),
+  annotate("text", x = 30.5, y = 15, hjust = "left", label = expression("= 0.28"),
            size = 6) +
-  scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 33.5),
+  scale_x_continuous(breaks = c(0,5,10), limits = c(NA, 34),
                      expand = expand_scale(mult = 0)) +
   scale_y_continuous(breaks = c(8, 10, 12, mean_bad_cat_jump, 16, 18, 20),
                      labels = c("8", "10", "12", round(mean_bad_cat_jump, 1), "16", "18", "20"),
@@ -166,6 +166,11 @@ r2_bad_plot_tbl |>
   labs(x = str_pad("Cat flea weight [mg]", 122.5, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
   theme(panel.grid = element_blank())
+
+p_r2_good + p_r2_bad + 
+  plot_layout(ncol = 1) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
 
