@@ -197,14 +197,18 @@ cor(cor_high_tbl$weight, cor_high_tbl$jumplength)
 #| label: fig-corr-theo-example
 
 geom_spit_tile <- function(x, y, a, b, weight, color, fill) {
+  a <- a*weight
+  b <- b*weight
+  x <- x - a/2
+  y <- y - b/2
   list(  
-    geom_shape(data = tibble(x = c(x, x+b-0.01, x)*weight, 
-                             y = c(y+0.01, y+a, y+a)*weight),
+    geom_shape(data = tibble(x = c(x, x+b-0.01, x), 
+                             y = c(y+0.01, y+a, y+a)),
                aes(x, y), color = color[1], fill = fill[1]),
-    geom_shape(data = tibble(x = c(x+0.01, x+b, x+b)*weight, 
-                             y = c(y, y, y+a-0.01)*weight),
+    geom_shape(data = tibble(x = c(x+0.01, x+b, x+b), 
+                             y = c(y, y, y+a-0.01)),
                aes(x, y), color = color[2], fill = fill[2])    
-  )
+  ) 
 }
 
 cor_high_tbl |> 
@@ -234,10 +238,68 @@ cor_high_tbl |>
                      limits = c(NA, NA)) +
   labs(x = str_pad("Cat flea weight [mg]", 122.5, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
-#  annotate("text", x = 20.5, y = 36, hjust = "right", label = expression(SS~"="),
-#           size = 5) + 
-#  annotate("text", x = 20.5, y = 20, hjust = "right", label = expression(SS~"="),
-#           size = 5) + 
+  ## upper right
+  annotate("text", x = 13.5, y = 20, hjust = "right", label = expression(SS~"="),
+            size = 5) + 
+  geom_shape(data = tibble(x = c(14, 30.25, 30.25, 14), 
+                           y = c(20.25, 20.25, 24, 24)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("segment", x = 13.75, xend = 30.5, y = 20, yend = 20) +
+  geom_shape(data = tibble(x = c(14, 22, 22, 14), 
+                           y = c(19.75, 19.75, 16, 16)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(22.25, 30.25, 30.25, 22.25), 
+                           y = c(19.75, 19.75, 16, 16)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = 30.75, y = 20, hjust = "left", label = expression("="~120.33),
+            size = 5) + 
+  geom_spit_tile(x = c(19), y = c(22.25), 
+                 a = cor_high_tbl$sweight[1], b = cor_high_tbl$sjump[1], weight = 0.7,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_spit_tile(x = c(16.5), y = c(21.75), 
+                 a = cor_high_tbl$sweight[2], b = cor_high_tbl$sjump[2], weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_spit_tile(x = c(23.5), y = c(20.5), 
+                 a = cor_high_tbl$sweight[3], b = cor_high_tbl$sjump[3], weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_spit_tile(x = c(24.5), y = c(21), 
+                 b = cor_high_tbl$sweight[4], a = cor_high_tbl$sjump[4], weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_spit_tile(x = c(26), y = c(22.25), 
+                 a = cor_high_tbl$sweight[5], b = cor_high_tbl$sjump[5], weight = 0.7,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_tile(aes(x = c(15, 16, 17, 18, 19), 
+                y = c(18, 18, 18, 18, 18), 
+                width = sjump/2, height = sjump/2), fill = "#0D088780",
+            alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) + 
+  geom_tile(aes(x = c(23, 24, 25, 26, 27), 
+                y = c(18, 18, 18, 18, 18), 
+                width = sweight/2, height = sweight/2), fill = "#B12A9080",
+            alpha = 0.2, color = "#B12A90FF", linewidth = 0.5) + 
+  ## lower right left
+  annotate("text", x = 13.5, y = 12, hjust = "right", label = expression(r~"="),
+            size = 5) + 
+  annotate("segment", x = 13.75, xend = 24.75, y = 12, yend = 12) +
+  geom_spit_tile(x = 19.25, y = 12.25+3/2, a = 3, b = 3, weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  annotate("tile", x = 16.5, y = 11.75-3+3/2, 
+           width = 3, height = 3, fill = "#0D088780",
+           alpha = 0.1, color = "#0D0887FF", linewidth = 0.5, linetype = "33") +
+  annotate("tile", x = 22, y = 11.75-3+3/2, 
+           width = 3, height = 3, fill = "#B12A9080",
+           alpha = 0.1, color = "#B12A90FF", linewidth = 0.5, linetype = "33") +
+  annotate("point", x = 19.25, y = 10.25, size = 2) +
+  ## annotate("segment", x = -0.5, xend = -0.5, y = -5, yend = 0, size = 1.5, color = "#E16462FF") +
+  ## lower right right
+  annotate("text", x = 25.5, y = 12, hjust = "right", label = expression("="),
+            size = 5) + 
+  annotate("segment", x = 25.75, xend = 30.5, y = 12, yend = 12) +
+  annotate("text", x = 30.75, y = 12, hjust = "left", label = expression("="~0.86),
+            size = 5) + 
+  geom_spit_tile(x = 28.125, y = 12.25+3/2, a = 3, b = 3, weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  geom_spit_tile(x = 28.125, y = 11.75-3+3/2, a = 3, b = 3, weight = 1,
+                 color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
   theme(panel.grid = element_blank())
 
 
