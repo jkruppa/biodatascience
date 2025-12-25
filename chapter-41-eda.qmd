@@ -229,9 +229,6 @@ p1_fig_mean_example <- jump_dog_plot_tbl |>
                    color = sign), show.legend = FALSE, size = 1) +
   geom_text(aes(x = 1:7, y = jumplength - e/2, label = e_label, color = sign),
             size = 4, position = position_nudge(0.3), fontface = 2, show.legend = FALSE) +
-#  geom_shape(data = tibble(x = c(-0.25, 0.25, 0.25, -0.25), 
-#                           y = c(19, 19, 44, 44)),
-#             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
   geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
   geom_point(size = 2) +
   scale_x_continuous(breaks = c(0:7), labels = c("All", 1:7)) +
@@ -240,9 +237,6 @@ p1_fig_mean_example <- jump_dog_plot_tbl |>
                      limits = c(19, 44)) +
   labs(x = "Dog flea ID", y = "") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
-#  geom_segment(aes(x = 0.1, xend = (1:7)-0.1, y = jumplength, yend = jumplength),
-#               linetype = 11, color = "gray50",
-#               arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
   geom_shape(data = tibble(x = c(4.6, 5.6, 5.6, 4.6), 
                            y = c(19, 19, 28.5, 28.5)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
