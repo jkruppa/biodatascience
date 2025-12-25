@@ -302,21 +302,23 @@ cor_high_tbl |>
            hjust = "right") +
   annotate("text", x = 14.25, y = 23.25, label = expression(bold(SS[xy])), size = 4.5,
            hjust = "left") +
-  geom_tile(aes(x = c(15.1, 19.5, 21, 21, 17.3), 
-                y = c(17.5, 18.5, 17.75, 18.825, 18), 
+  ##
+  geom_tile(aes(x = c(23.5, 27.9, 29.25, 29.5, 25.7), 
+                y = c(17.5, 18.5, 17.75, 18.9, 18), 
                 width = sjump/2, height = sjump/2), fill = "#0D088780",
             alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) + 
-  annotate("text", x = 21.75, y = 16.75, label = expression(sum()*47.94), size = 4.5,
+  annotate("text", x = 30, y = 16.75, label = expression(sum()*47.94), size = 4.5,
            hjust = "right") +
-  annotate("text", x = 14.25, y = 19, label = expression(bold(SS[y])), size = 4.5,
+  annotate("text", x = 14.25, y = 19, label = expression(bold(SS[x])), size = 4.5,
            hjust = "left") +
-  geom_tile(aes(x = c(23.5, 25.25, 26.75, 27.625, 29), 
-                y = c(17.5, 18, 18, 18, 18.5), 
+  ##
+  geom_tile(aes(x = c(15.2, 19.5, 21, 21, 17.3), 
+                y = c(17.5, 18.5, 17.75, 18.825, 18),  
                 width = sweight/2, height = sweight/2), fill = "#B12A9080",
             alpha = 0.2, color = "#B12A90FF", linewidth = 0.5) +
-  annotate("text", x = 30, y = 16.75, label = expression(sum()*33.96), size = 4.5,
+  annotate("text", x = 21.75, y = 16.75, label = expression(sum()*33.96), size = 4.5,
            hjust = "right") +
-  annotate("text", x = 22.5, y = 19, label = expression(bold(SS[x])), size = 4.5,
+  annotate("text", x = 22.5, y = 19, label = expression(bold(SS[y])), size = 4.5,
            hjust = "left") +
   ## lower right left
   annotate("text", x = 13.5, y = 12, hjust = "right", label = expression("="),
@@ -325,22 +327,24 @@ cor_high_tbl |>
   geom_spit_tile(x = 19.25, y = 12.25+3/2, a = 3, b = 3, weight = 0.9,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
   annotate("text", x = 19.25, y = 12.25+3/2, label = "33.21", fontface = 2) +
-  annotate("tile", x = 16.5, y = 11.75-3+3/2, 
+  ##
+  annotate("tile", x = 22, y = 11.75-3+3/2,
            width = 3, height = 3, fill = "#0D088780",
            alpha = 0.1, color = "#0D0887FF", linewidth = 0.5, linetype = "33") +
-  annotate("text", x = 16.5, y = 11.75-3+3/2, label = "47.94", fontface = 2) +
-  annotate("segment", x = 15, xend = 15, 
+  annotate("text", x = 22, y = 11.75-3+3/2, label = "47.94", fontface = 2) +
+  annotate("segment", x = 23.5, xend = 23.5, 
            y = 8.7, yend = 11.8, size = 1.5, color = "#0D0887FF") +
-  annotate("text", x = 14.6, y = 10.25, hjust = "center", label = "6.92", color = "#0D0887FF",
-           fontface = 2, angle = 90, size = 3.5) +
-  annotate("tile", x = 22, y = 11.75-3+3/2, 
+  annotate("text", x = 23.9, y = 10.2375, hjust = "center", label = "6.92", color = "#0D0887FF",
+           fontface = 2, angle = -90, size = 3.5) +
+  ##
+  annotate("tile", x = 16.5, y = 11.75-3+3/2, 
            width = 3*0.9, height = 3*0.9, fill = "#B12A9080",
            alpha = 0.1, color = "#B12A90FF", linewidth = 0.5, linetype = "33") +
-  annotate("text", x = 22, y = 11.75-3+3/2, label = "33.96", fontface = 2) +
-  annotate("segment", x = 23.4, xend = 23.4, 
-           y = 8.85, yend = 11.625, size = 1.5, color = "#B12A90FF") +
-  annotate("text", x = 23.8, y = 10.2375, hjust = "center", label = "5.83", color = "#B12A90FF",
-           fontface = 2, angle = -90, size = 3.5) +
+  annotate("text", x = 16.5, y = 11.75-3+3/2, label = "33.96", fontface = 2) +
+  annotate("segment", x = 15.2, xend = 15.2, 
+           y = 8.85, yend = 11.65, size = 1.5, color = "#B12A90FF") +
+  annotate("text", x = 14.8, y = 10.25, hjust = "center", label = "5.83", color = "#B12A90FF",
+           fontface = 2, angle = 90, size = 3.5) +
   annotate("point", x = 19.25, y = 10.25, size = 2, shape = 4) +
   ## lower right right
   annotate("text", x = 25.5, y = 12, hjust = "right", label = expression("="),
