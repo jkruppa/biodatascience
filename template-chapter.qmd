@@ -180,8 +180,17 @@ set.seed(20251226) #20251226
 cor_high_tbl <- tibble(weight = abs(rnorm(5, 3, 4)),
                        jumplength = 10 + 1 * weight + rnorm(5, 0, 4)) |> 
   mutate(sweight = weight - mean(weight),
-         sjump = jumplength - mean(jumplength))
+         sjump = jumplength - mean(jumplength),
+         ss_xy = sweight * sjump,
+         ss_x = sweight^2,
+         ss_y = sjump^2)
 set.seed(202511)
+
+sum(cor_high_tbl$ss_x)
+sum(cor_high_tbl$ss_x) |> sqrt()
+sum(cor_high_tbl$ss_y)
+sum(cor_high_tbl$ss_y) |> sqrt()
+sum(cor_high_tbl$ss_xy)
 
 cor(cor_high_tbl$weight, cor_high_tbl$jumplength)
 ```
@@ -204,10 +213,10 @@ geom_spit_tile <- function(x, y, a, b, weight, color, fill) {
   list(  
     geom_shape(data = tibble(x = c(x, x+b-0.01, x), 
                              y = c(y+0.01, y+a, y+a)),
-               aes(x, y), color = color[1], fill = fill[1]),
+               aes(x, y), color = color[1], fill = fill[1], alpha = 0.2),
     geom_shape(data = tibble(x = c(x+0.01, x+b, x+b), 
                              y = c(y, y, y+a-0.01)),
-               aes(x, y), color = color[2], fill = fill[2])    
+               aes(x, y), color = color[2], fill = fill[2], alpha = 0.2)    
   ) 
 }
 
@@ -251,43 +260,52 @@ cor_high_tbl |>
   geom_shape(data = tibble(x = c(22.25, 30.25, 30.25, 22.25), 
                            y = c(19.75, 19.75, 16, 16)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
-  annotate("text", x = 30.75, y = 20, hjust = "left", label = expression("="~120.33),
-            size = 5) + 
+#  annotate("text", x = 30.75, y = 20, hjust = "left", label = expression("="~120.33),
+#            size = 5) + 
   geom_spit_tile(x = c(19), y = c(22.25), 
                  a = cor_high_tbl$sweight[1], b = cor_high_tbl$sjump[1], weight = 0.7,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
   geom_spit_tile(x = c(16.5), y = c(21.75), 
                  a = cor_high_tbl$sweight[2], b = cor_high_tbl$sjump[2], weight = 1,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
-  geom_spit_tile(x = c(23.5), y = c(20.5), 
+  geom_spit_tile(x = c(23), y = c(20.5), 
                  a = cor_high_tbl$sweight[3], b = cor_high_tbl$sjump[3], weight = 1,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
-  geom_spit_tile(x = c(24.5), y = c(21), 
+  geom_spit_tile(x = c(24), y = c(21), 
                  b = cor_high_tbl$sweight[4], a = cor_high_tbl$sjump[4], weight = 1,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
-  geom_spit_tile(x = c(26), y = c(22.25), 
-                 a = cor_high_tbl$sweight[5], b = cor_high_tbl$sjump[5], weight = 0.7,
+  geom_spit_tile(x = c(25), y = c(22.25), 
+                 a = cor_high_tbl$sweight[5], b = cor_high_tbl$sjump[5], weight = 0.6,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
-  geom_tile(aes(x = c(15, 16, 17, 18, 19), 
-                y = c(18, 18, 18, 18, 18), 
+  annotate("text", x = 30, y = 23.25, label = expression(sum()*33.21), size = 4.5,
+           hjust = "right") +
+  geom_tile(aes(x = c(17.75, 19.5, 21, 21, 15.5), 
+                y = c(18, 18.5, 17.75, 18.825, 18), 
                 width = sjump/2, height = sjump/2), fill = "#0D088780",
             alpha = 0.2, color = "#0D0887FF", linewidth = 0.5) + 
-  geom_tile(aes(x = c(23, 24, 25, 26, 27), 
-                y = c(18, 18, 18, 18, 18), 
+  annotate("text", x = 21.75, y = 16.75, label = expression(sum()*47.94), size = 4.5,
+           hjust = "right") +
+  geom_tile(aes(x = c(23.5, 25.25, 26.75, 27.625, 29), 
+                y = c(18, 18, 18, 18, 18.5), 
                 width = sweight/2, height = sweight/2), fill = "#B12A9080",
-            alpha = 0.2, color = "#B12A90FF", linewidth = 0.5) + 
+            alpha = 0.2, color = "#B12A90FF", linewidth = 0.5) +
+  annotate("text", x = 30, y = 16.75, label = expression(sum()*33.96), size = 4.5,
+           hjust = "right") +
   ## lower right left
   annotate("text", x = 13.5, y = 12, hjust = "right", label = expression(r~"="),
             size = 5) + 
   annotate("segment", x = 13.75, xend = 24.75, y = 12, yend = 12) +
   geom_spit_tile(x = 19.25, y = 12.25+3/2, a = 3, b = 3, weight = 1,
                  color = c("#0D0887FF", "#B12A90FF"), fill = c("#0D088780", "#B12A9080")) +
+  annotate("text", x = 19.25, y = 12.25+3/2, label = "33.21", fontface = 2) +
   annotate("tile", x = 16.5, y = 11.75-3+3/2, 
            width = 3, height = 3, fill = "#0D088780",
            alpha = 0.1, color = "#0D0887FF", linewidth = 0.5, linetype = "33") +
+  annotate("text", x = 16.5, y = 11.75-3+3/2, label = "47.94", fontface = 2) +
   annotate("tile", x = 22, y = 11.75-3+3/2, 
            width = 3, height = 3, fill = "#B12A9080",
            alpha = 0.1, color = "#B12A90FF", linewidth = 0.5, linetype = "33") +
+  annotate("text", x = 22, y = 11.75-3+3/2, label = "33.96", fontface = 2) +
   annotate("point", x = 19.25, y = 10.25, size = 2) +
   ## annotate("segment", x = -0.5, xend = -0.5, y = -5, yend = 0, size = 1.5, color = "#E16462FF") +
   ## lower right right
