@@ -153,6 +153,12 @@ cor_high_tbl |>
   annotate("text", x = 20, y = 9, label = expression(5-1), size = 5) +
   annotate("text", x = 25.5, y = 9.5, hjust = "left", label = expression("= 8.30"),
             size = 5) + 
+  annotate("text", x = mean(cor_high_tbl$weight) + cor_high_tbl$sweight/2, 
+           y = cor_high_tbl$jumplength + c(-0.45, 0.45, 0.45, 0.45, 0.45), 
+           label = round(cor_high_tbl$sweight, 2), color = "#B12A90FF") +
+  annotate("text", x = cor_high_tbl$weight + c(-0.45, -0.45, 0.45, 0.45, 0.45),
+           y = mean(cor_high_tbl$jumplength) + cor_high_tbl$sjump/2, angle = 90,  
+           label = round(cor_high_tbl$sjump, 2), color = "#0D0887FF") +
   theme(panel.grid = element_blank())
 
 ```
