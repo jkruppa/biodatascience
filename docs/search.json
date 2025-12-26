@@ -940,7 +940,7 @@
     "href": "chapter-41-eda.html",
     "title": "9  Explorative data analysis",
     "section": "",
-    "text": "9.1 General background\nLast modified on 22. December 2025 at 20:40:02",
+    "text": "9.1 General background\nLast modified on 26. December 2025 at 19:09:05",
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Explorative data analysis</span>"
@@ -1167,100 +1167,100 @@
   {
     "objectID": "template-chapter.html",
     "href": "template-chapter.html",
-    "title": "11  Template chapter",
+    "title": "12  Template chapter",
     "section": "",
-    "text": "11.1 General background\nLast modified on 25. December 2025 at 20:48:44\nR Code [show / hide]\nr2_good_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                      jumplength = 10 + 1.2 * weight + rnorm(5, 0, 3))\n\nr2_good_fit &lt;- lm(jumplength ~ weight, data = r2_good_tbl)\n\nmean_good_cat_jump &lt;- mean(r2_good_tbl$jumplength)\n\nr2_good_plot_tbl &lt;- r2_good_tbl |&gt; \n  mutate(sy = jumplength - mean(jumplength),\n         e = residuals(r2_good_fit))\n\nsum_good_sy &lt;- (r2_good_plot_tbl$sy)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nsum_good_e &lt;- (r2_good_plot_tbl$e)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nr2_good &lt;- 1-(sum_good_e/sum_good_sy)\n\n\nr2_bad_tbl &lt;- tibble(weight = r2_good_tbl$weight,\n                     jumplength = 9 + 0.5 * weight + rnorm(5, 0, 4))\n\nr2_bad_fit &lt;- lm(jumplength ~ weight, data = r2_bad_tbl)\n\nmean_bad_cat_jump &lt;- mean(r2_bad_tbl$jumplength)\n\nr2_bad_plot_tbl &lt;- r2_bad_tbl |&gt; \n  mutate(sy = jumplength - mean(jumplength),\n         e = residuals(r2_bad_fit),\n         e2 = e^2)\n\nsum_bad_sy &lt;- (r2_bad_plot_tbl$sy)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nsum_bad_e &lt;- (r2_bad_plot_tbl$e)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nr2_bad &lt;- 1-(sum_bad_e/sum_bad_sy)\n\\[\nR^2 = 1 - \\cfrac{SS_{res}}{SS_{total}}\n\\]\nFigure 11.1: foo\nR Code [show / hide]\nset.seed(20251226) #20251226\ncor_high_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                       jumplength = 10 + 1 * weight + rnorm(5, 0, 4)) |&gt; \n  mutate(sweight = weight - mean(weight),\n         sjump = jumplength - mean(jumplength),\n         ss_xy = sweight * sjump,\n         ss_x = sweight^2,\n         ss_y = sjump^2)\nset.seed(202511)\n\nsum(cor_high_tbl$ss_x)\n\n\n[1] 33.95848\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_x) |&gt; sqrt()\n\n\n[1] 5.82739\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y)\n\n\n[1] 47.94158\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y) |&gt; sqrt()\n\n\n[1] 6.923986\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_xy)\n\n\n[1] 33.21142\n\n\nR Code [show / hide]\ncor(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 0.8231087\n\\[\nr = \\cfrac{SS_{xy}}{\\sqrt{SS_x}\\cdot\\sqrt{SS_y}}\n\\]\nFigure 11.2: foo",
+    "text": "12.1 General background\nLast modified on 26. December 2025 at 20:14:57\nR Code [show / hide]\nset.seed(20251226) #20251226\ncor_high_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                       jumplength = 10 + 1 * weight + rnorm(5, 0, 4)) |&gt; \n  mutate(sweight = weight - mean(weight),\n         sjump = jumplength - mean(jumplength),\n         ss_xy = sweight * sjump,\n         ss_x = sweight^2,\n         ss_y = sjump^2,\n         sign_xy = ifelse(sign(ss_xy) == -1, \"\\U2012\", \"+\"))\nset.seed(202511)\n\nsum(cor_high_tbl$ss_x)\n\n\n[1] 33.95848\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_x) |&gt; sqrt()\n\n\n[1] 5.82739\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y)\n\n\n[1] 47.94158\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y) |&gt; sqrt()\n\n\n[1] 6.923986\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_xy)\n\n\n[1] 33.21142\nR Code [show / hide]\ncor(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 0.8231087\nR Code [show / hide]\ncov(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 8.302855\nR Code [show / hide]\nlm_fit &lt;- lm(jumplength ~ weight, data = cor_high_tbl)\nR Code [show / hide]\nvcov(lm_fit)\n\n\n            (Intercept)     weight\n(Intercept)   3.4921715 -0.6111907\nweight       -0.6111907  0.1517616\nFigure 12.1: foo",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#theoretical-background",
     "href": "template-chapter.html#theoretical-background",
-    "title": "11  Template chapter",
-    "section": "11.2 Theoretical background",
-    "text": "11.2 Theoretical background",
+    "title": "12  Template chapter",
+    "section": "12.2 Theoretical background",
+    "text": "12.2 Theoretical background",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#r-packages-used",
     "href": "template-chapter.html#r-packages-used",
-    "title": "11  Template chapter",
-    "section": "11.3 R packages used",
-    "text": "11.3 R packages used",
+    "title": "12  Template chapter",
+    "section": "12.3 R packages used",
+    "text": "12.3 R packages used",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#data",
     "href": "template-chapter.html#data",
-    "title": "11  Template chapter",
-    "section": "11.4 Data",
-    "text": "11.4 Data",
+    "title": "12  Template chapter",
+    "section": "12.4 Data",
+    "text": "12.4 Data",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#alternatives",
     "href": "template-chapter.html#alternatives",
-    "title": "11  Template chapter",
-    "section": "11.5 Alternatives",
-    "text": "11.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "title": "12  Template chapter",
+    "section": "12.5 Alternatives",
+    "text": "12.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#glossary",
     "href": "template-chapter.html#glossary",
-    "title": "11  Template chapter",
-    "section": "11.6 Glossary",
-    "text": "11.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "title": "12  Template chapter",
+    "section": "12.6 Glossary",
+    "text": "12.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "11  Template chapter",
-    "section": "11.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "11.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "title": "12  Template chapter",
+    "section": "12.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "12.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#summary",
     "href": "template-chapter.html#summary",
-    "title": "11  Template chapter",
-    "section": "11.8 Summary",
-    "text": "11.8 Summary",
+    "title": "12  Template chapter",
+    "section": "12.8 Summary",
+    "text": "12.8 Summary",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
     "objectID": "template-chapter.html#references",
     "href": "template-chapter.html#references",
-    "title": "11  Template chapter",
+    "title": "12  Template chapter",
     "section": "References",
     "text": "References",
     "crumbs": [
       "Template Preface",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Template chapter</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
     ]
   },
   {
@@ -1316,6 +1316,105 @@
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html",
+    "href": "chapter-42-r2-r.html",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "",
+    "text": "10.1 General background\nLast modified on 26. December 2025 at 19:12:18\nR Code [show / hide]\nr2_good_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                      jumplength = 10 + 1.2 * weight + rnorm(5, 0, 3))\n\nr2_good_fit &lt;- lm(jumplength ~ weight, data = r2_good_tbl)\n\nmean_good_cat_jump &lt;- mean(r2_good_tbl$jumplength)\n\nr2_good_plot_tbl &lt;- r2_good_tbl |&gt; \n  mutate(sy = jumplength - mean(jumplength),\n         e = residuals(r2_good_fit))\n\nsum_good_sy &lt;- (r2_good_plot_tbl$sy)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nsum_good_e &lt;- (r2_good_plot_tbl$e)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nr2_good &lt;- 1-(sum_good_e/sum_good_sy)\n\n\nr2_bad_tbl &lt;- tibble(weight = r2_good_tbl$weight,\n                     jumplength = 9 + 0.5 * weight + rnorm(5, 0, 4))\n\nr2_bad_fit &lt;- lm(jumplength ~ weight, data = r2_bad_tbl)\n\nmean_bad_cat_jump &lt;- mean(r2_bad_tbl$jumplength)\n\nr2_bad_plot_tbl &lt;- r2_bad_tbl |&gt; \n  mutate(sy = jumplength - mean(jumplength),\n         e = residuals(r2_bad_fit),\n         e2 = e^2)\n\nsum_bad_sy &lt;- (r2_bad_plot_tbl$sy)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nsum_bad_e &lt;- (r2_bad_plot_tbl$e)^2 |&gt; abs() |&gt; sum() |&gt; round(2)\nr2_bad &lt;- 1-(sum_bad_e/sum_bad_sy)\n\\[\nR^2 = 1 - \\cfrac{SS_{res}}{SS_{total}}\n\\]\nFigure 10.1: foo\nR Code [show / hide]\nset.seed(20251226) #20251226\ncor_high_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                       jumplength = 10 + 1 * weight + rnorm(5, 0, 4)) |&gt; \n  mutate(sweight = weight - mean(weight),\n         sjump = jumplength - mean(jumplength),\n         ss_xy = sweight * sjump,\n         ss_x = sweight^2,\n         ss_y = sjump^2,\n         sign_xy = ifelse(sign(ss_xy) == -1, \"\\U2012\", \"+\"))\nset.seed(202511)\n\nsum(cor_high_tbl$ss_x)\n\n\n[1] 33.95848\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_x) |&gt; sqrt()\n\n\n[1] 5.82739\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y)\n\n\n[1] 47.94158\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y) |&gt; sqrt()\n\n\n[1] 6.923986\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_xy)\n\n\n[1] 33.21142\n\n\nR Code [show / hide]\ncor(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 0.8231087\n\\[\nr = \\cfrac{SS_{xy}}{\\sqrt{SS_x}\\cdot\\sqrt{SS_y}}\n\\]\nFigure 10.2: foo",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#theoretical-background",
+    "href": "chapter-42-r2-r.html#theoretical-background",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.2 Theoretical background",
+    "text": "10.2 Theoretical background",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#r-packages-used",
+    "href": "chapter-42-r2-r.html#r-packages-used",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.3 R packages used",
+    "text": "10.3 R packages used",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#data",
+    "href": "chapter-42-r2-r.html#data",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.4 Data",
+    "text": "10.4 Data",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#alternatives",
+    "href": "chapter-42-r2-r.html#alternatives",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.5 Alternatives",
+    "text": "10.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#glossary",
+    "href": "chapter-42-r2-r.html#glossary",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.6 Glossary",
+    "text": "10.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-42-r2-r.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "10.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#summary",
+    "href": "chapter-42-r2-r.html#summary",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "10.8 Summary",
+    "text": "10.8 Summary",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-42-r2-r.html#references",
+    "href": "chapter-42-r2-r.html#references",
+    "title": "10  Correlation and \\(R^2\\)",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Visualisation of data",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
     ]
   }
 ]
