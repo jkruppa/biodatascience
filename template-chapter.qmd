@@ -151,7 +151,7 @@ cor_high_tbl |>
   annotate("text", x = 20, y = 12.75, label = "33.21", fontface = 2, size = 4.5) +
   annotate("segment", x = 15, xend = 25, y = 9.5, yend = 9.5) +
   annotate("text", x = 20, y = 9, label = expression(5-1), size = 5) +
-  annotate("text", x = 25.5, y = 9.5, hjust = "left", label = expression("= 8.30"),
+  annotate("text", x = 25.5, y = 9.5, hjust = "left", label = expression("= 8.30 mg"%.%"cm"),
             size = 5) + 
   annotate("text", x = mean(cor_high_tbl$weight) + cor_high_tbl$sweight/2, 
            y = cor_high_tbl$jumplength + c(-0.45, 0.45, 0.45, 0.45, 0.45), 
@@ -163,6 +163,40 @@ cor_high_tbl |>
 
 ```
 
+
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-rabbit-shot
+
+ggplot() +
+  theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(0.5, 7.5), ylim = c(-5, 5)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  annotate("segment", x = c(2, 6), xend = c(2, 6), y = 0, yend = 1.25, size = 5, 
+           color = "#0D088780") +
+  annotate("point", x = c(2, 6), y = 1.5, shape = 23, size = 12, fill = "#0D0887FF") +
+  annotate("point", x = 4, y = 0.5, shape = 21, size = 9, fill = "#FCA636FF") +  
+  geom_ellipse(aes(x0 = 4.1, y0 = 1.4, a = 0.2, b = 0.05, angle = pi/2.15), fill = "#FCA636FF") + 
+  geom_ellipse(aes(x0 = 3.9, y0 = 1.4, a = 0.2, b = 0.05, angle = -pi/2.15), fill = "#FCA636FF") +   
+  annotate("point", x = 4, y = 1, shape = 21, size = 6, fill = "#FCA636FF") +  
+  scale_y_continuous(breaks = seq(-5, 5, 1)) +
+  annotate("segment", x = 0.5, xend = 7.5, y = 0, yend = 0) +
+  annotate("segment", x = 1:7, xend = 1:7, y = -0.25, yend = 0.25) +
+  annotate("text", x = 1:7, y = -1, label = 1:7) +
+  annotate("point", x = 4, y = -5, shape = 13, size = 5) +
+  annotate("segment", x = 4, xend = 6, y = -5, yend = 0.5, linetype = 2) +
+  annotate("segment", x = 4, xend = 2, y = -5, yend = 0.5, linetype = 2)
+  
+```
 
 
 ## Theoretical background
