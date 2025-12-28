@@ -4,5 +4,13 @@
 
 This will be a long journey... it's a hell of a time.
 
+I need to see it. Therefore, this book is a visualization whenever it is possible or feasible. Some more complex models will be described rather than visualized.
+
+There are better mathematical or theoretical books. I would recommend the book by Westfall and Arias (2020)@westfall2020understanding. It is an enjoyable read and provides a wealth of information on regression models. The visuals are mediocre at best. The R code is outdated and not state of the art for the 21st century.
+
+Some ideas are not new. I will present them in a different way. I think this is an effective approach to writing a book. The book aims to teach you and enable you to teach statistics to beginners. It may also be beneficial for more advanced classes, but my emphasis was always on the uninformed learners.
+
 
 > *"Ludwig Boltzman, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the work, died similarly in 1933. Now it is our turn to study statistical mechanics. Perhaps it will be wise to approach the subject cautiously." --- Opening lines of 'States of Matter', by D.L. Goodstein.*
+
+## References {.unlisted .unnumbered} 

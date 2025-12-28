@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Models of Reality",
     "section": "",
-    "text": "Welcome\n\n“Life is difficult.” — M. Scott Peck’s, The Road Less Traveled \n\nThis will be a long journey… it’s a hell of a time.\n\n“Ludwig Boltzman, who spent much of his life studying statistical mechanics, died in 1906, by his own hand. Paul Ehrenfest, carrying on the work, died similarly in 1933. Now it is our turn to study statistical mechanics. Perhaps it will be wise to approach the subject cautiously.” — Opening lines of ‘States of Matter’, by D.L. Goodstein.",
+    "text": "Welcome\nThis will be a long journey… it’s a hell of a time.\nI need to see it. Therefore, this book is a visualization whenever it is possible or feasible. Some more complex models will be described rather than visualized.\nThere are better mathematical or theoretical books. I would recommend the book by Westfall and Arias (2020)1. It is an enjoyable read and provides a wealth of information on regression models. The visuals are mediocre at best. The R code is outdated and not state of the art for the 21st century.\nSome ideas are not new. I will present them in a different way. I think this is an effective approach to writing a book. The book aims to teach you and enable you to teach statistics to beginners. It may also be beneficial for more advanced classes, but my emphasis was always on the uninformed learners.",
     "crumbs": [
       "Welcome"
     ]
@@ -1415,6 +1415,16 @@
     "crumbs": [
       "Visualisation of data",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Correlation and $R^2$</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Models of Reality",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n[1] Westfall PH, Arias AL. Understanding Regression Analysis: A Conditional Distribution Approach. Chapman; Hall/CRC; 2020.",
+    "crumbs": [
+      "Welcome"
     ]
   }
 ]
