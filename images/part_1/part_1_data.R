@@ -3,16 +3,16 @@ p_measured_flea <- ggplot() +
   coord_cartesian(xlim = c(-10, 15), ylim = c(-10, 10)) +
   geom_image(aes(x = 3, y = 0, image = "images/flea_00.png"), size = 1.05) +
   annotate("errorbar", xmin = -0.75, xmax = 9, x = 5, y = 9, color = "#FDC926FF") +
-  annotate("text", x = (-0.75 + 8.75)/2, y = 10, label = "Body length in [mm]", 
+  annotate("text", x = (-0.75 + 8.75)/2, y = 10, label = "Body length [mm]", 
            size = 3.75, fontface = 2, color = "#B12A90FF") +
   annotate("segment", x = seq(-0.75, 9, by = 0.25), xend = seq(-0.75, 9, by = 0.25),
            y = 8.8, yend = 9.2, color = "#FDC926FF") +
   geom_curve(aes(x = 3.5, y = -9.25, xend = 6, yend = -3.5),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "#FDC926FF", linewidth = 0.5) +
-  annotate("text", x = 3.3, y = -9.25, label = "Number of hairs on each back leg",
+  annotate("text", x = 3.3, y = -9.25, label = "Hairs on each back leg [count]",
            hjust = "right", size = 3.75, fontface = 2, color = "#0D0887FF") +
-  annotate("label", x = 6, y = 2, label = "Weight in [mg]", fill = "white", linewidth = 0, 
+  annotate("label", x = 6, y = 2, label = "Weight [mg]", fill = "white", linewidth = 0, 
            hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
   geom_ellipse(aes(x0 = -10, y0 = -6.1, a = 0.25, b = 0.15, angle = 0), 
                color = "gray20", fill = "#F0F92180") +
@@ -21,7 +21,7 @@ p_measured_flea <- ggplot() +
              curvature = 0.75, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
   annotate("point", x = 2.5, y = 3, size = 3, color = "#FDC926FF") +
   annotate("errorbar", xmin = 2.5, xmax = -10, x = 2.5, y = -7, color = "#FDC926FF") +
-  annotate("text", x = (2.5 + -10)/2, y = -6, label = "Jump length in [cm]", 
+  annotate("text", x = (2.5 + -10)/2, y = -6, label = "Jump length [cm]", 
            size = 3.75, fontface = 2, color = "#0D0887FF") +
   annotate("segment", x = seq(-10, 2.5, by = 0.25), xend = seq(-10, 2.5, by = 0.25),
            y = -6.8, yend = -7.2, color = "#FDC926FF") +
