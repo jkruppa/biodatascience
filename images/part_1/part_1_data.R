@@ -1,3 +1,70 @@
+p_measured_flea <- ggplot() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 15), ylim = c(-10, 10)) +
+  geom_image(aes(x = 3, y = 0, image = "images/flea_00.png"), size = 1.05) +
+  annotate("errorbar", xmin = -0.75, xmax = 9, x = 5, y = 9, color = "#FDC926FF") +
+  annotate("text", x = (-0.75 + 8.75)/2, y = 10, label = "Body length in [mm]", 
+           size = 3.75, fontface = 2, color = "#B12A90FF") +
+  annotate("segment", x = seq(-0.75, 9, by = 0.25), xend = seq(-0.75, 9, by = 0.25),
+           y = 8.8, yend = 9.2, color = "#FDC926FF") +
+  geom_curve(aes(x = 3.5, y = -9.25, xend = 6, yend = -3.5),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.3, color = "#FDC926FF", linewidth = 0.5) +
+  annotate("text", x = 3.3, y = -9.25, label = "Number of hairs on each back leg",
+           hjust = "right", size = 3.75, fontface = 2, color = "#0D0887FF") +
+  annotate("label", x = 6, y = 2, label = "Weight in [mg]", fill = "white", linewidth = 0, 
+           hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
+  geom_ellipse(aes(x0 = -10, y0 = -6.1, a = 0.25, b = 0.15, angle = 0), 
+               color = "gray20", fill = "#F0F92180") +
+  geom_curve(aes(x = 2.5, y = 3, xend = -10, yend = -6),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.75, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
+  annotate("point", x = 2.5, y = 3, size = 3, color = "#FDC926FF") +
+  annotate("errorbar", xmin = 2.5, xmax = -10, x = 2.5, y = -7, color = "#FDC926FF") +
+  annotate("text", x = (2.5 + -10)/2, y = -6, label = "Jump length in [cm]", 
+           size = 3.75, fontface = 2, color = "#0D0887FF") +
+  annotate("segment", x = seq(-10, 2.5, by = 0.25), xend = seq(-10, 2.5, by = 0.25),
+           y = -6.8, yend = -7.2, color = "#FDC926FF") +
+  annotate("text", x = -1.5, y = 1.5, label = "Infection [no/yes]", 
+           size = 3.75, fontface = 2, color = "#0D0887FF", hjust = "right") +
+  ## upper
+  geom_shape(data = tibble(x = c(9.4, 12.8, 12.8, 9.4), 
+                           y = c(3.5, 3.5, 10, 10)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "#B12A90FF", alpha = 0.1) +
+  annotate("text", hjust = "center", x = 11, y = 9, label = "Feeding",
+           size = 3.75, fontface = 2, color = "#B12A90FF")  +
+  annotate("text", hjust = "left", x = 9.5, y = c(7.5, 6, 4.5), 
+           label = c("(1) sugar", "(2) ketchup", "(3) blood"),
+           size = 3.25, fontface = 3, color = "gray35")  +
+  geom_shape(data = tibble(x = c(12.9, 16, 16, 12.9), 
+                           y = c(5, 5, 10, 10)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "#B12A90FF", alpha = 0.1) +
+  annotate("text", hjust = "center", x = 14.5, y = 9, label = "Stage",
+           size = 3.75, fontface = 2, color = "#B12A90FF") +
+  annotate("text", hjust = "left", x = 13, y = c(7.5, 6), 
+           label = c("(1) juvenile", "(2) adult"),
+           size = 3.25, fontface = 3, color = "gray35") +
+  ## lower
+  geom_shape(data = tibble(x = c(9.4, 12.8, 12.8, 9.4), 
+                           y = c(-8.5, -8.5, 1, 1)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "#0D0887FF", alpha = 0.1) +
+  annotate("text", hjust = "center", x = 11, y = 0, label = "Rating",
+           size = 3.75, fontface = 2, color = "#0D0887FF")  +
+  annotate("text", hjust = "left", x = 9.5, y = c(-1.5, -3, -4.5, -6, -7.5), 
+           label = c("(1) bad", "(2) poor", "(3) fair", "(4) good", "(5) excellent"),
+           size = 3.25, fontface = 3, color = "gray35")  +
+  geom_shape(data = tibble(x = c(12.9, 16, 16, 12.9), 
+                           y = c(-5.5, -5.5, 1, 1)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "#B12A90FF", alpha = 0.1) +
+  annotate("text", hjust = "center", x = 14.5, y = 0, label = "Host",
+           size = 3.75, fontface = 2, color = "#B12A90FF") +
+  annotate("text", hjust = "left", x = 13, y = c(-1.5, -3, -4.5), 
+           label = c("(1) cat", "(2) dog", "(3) fox"),
+           size = 3.25, fontface = 3, color = "gray35") 
+
+
+
+
 flea_jump_exp_p <- ggplot() +
   theme_void() +
   geom_ellipse(aes(x0 = 0, y0 = -5, a = 10.5, b = 4, angle = 0),
