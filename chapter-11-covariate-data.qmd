@@ -33,6 +33,89 @@ p_measured_flea
 Quality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.
 
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-01-flea-measure
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 12
+#| fig-cap: "foo **(A)** foo **(B)** foo **(C)** foo"
+
+p_single_obs_flea <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
+  geom_image(aes(x = c(-7, -6, 0, 5, 7, -5), y = c(8, -7, -5, 0, 6, 2), 
+                 image = rep("images/flea_00.png", 6)), size = 0.3) +
+  annotate("text", x = c(-7, -6, 0, 5, 7, -5),
+           y = c(8, -7, -5, 0, 6, 2)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron", "Chloe", "Cora", "Caleb")) +
+  labs(title = "Single observation - one time") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_mult_obs_flea <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-10, 10)) +
+  geom_image(aes(x = c(-7, -7, -7), y = c(8, 0, -8), 
+                 image = rep("images/flea_00.png", 3)), size = 0.3) +
+  annotate("text", x = c(-7, -7, -7),
+           y = c(8, 0, -8)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron")) +
+  annotate("segment", x = rep(-3.5, 3), y = c(8, 0, -8), xend = rep(7.75, 3), yend = c(8, 0, -8),
+           arrow = arrow(length = unit(0.03, "npc"), type = "closed")) +
+  annotate("segment", x = rep(c(-1, 2, 5), times = 3), 
+           y = c(7.8, 7.8, 7.8, -0.2, -0.2, -0.2, -8.2, -8.2, -8.2), 
+           xend = rep(c(-1, 2, 5), times = 3), 
+           yend = c(8.2, 8.2, 8.2, 0.2, 0.2, 0.2, -7.8, -7.8, -7.8)) +  
+  annotate("text", x = rep(c(-1, 2, 5), times = 3), 
+           y = c(7.8, 7.8, 7.8, -0.2, -0.2, -0.2, -8.2, -8.2, -8.2)-1,
+           label = rep(c("t1", "t2", "t3"), times = 3), 
+           fontface = 2, size = 4.5, color = "gray50") +
+  labs(title = "Single observation - many times") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+geom_cage <- function(x, y) {
+  list(
+    geom_image(aes(x = c(x + 1, x + 1, x + 2.5, x + 4, x + 4), 
+                   y = c(y + 1, y + 4, y + 2.5, y + 1, y + 4), 
+                   image = rep("images/flea_00.png", 5)), size = 0.1),
+    annotate("segment", x = x-0.25, y = y, xend = x + 5.25, yend = y),
+    annotate("segment", x = x-0.25, y = y + 5, xend = x + 5.25, yend = y + 5),
+    annotate("segment", x = x+seq(0, 5, by = 0.5), y = y, 
+             xend = x +seq(0, 5, by = 0.5), yend = y + 5)
+  )
+}
+
+p_block_obs_flea <- ggplot() +
+  ## theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-8, 8), ylim = c(-8, 8.5)) +
+  geom_cage(x = -7.5, y = -7.5) +
+  geom_cage(x = -7.5, y = 2.5) +
+  geom_cage(x = 2.5, y = -7.5) +
+  geom_cage(x = 2.5, y = 2.5) +
+  annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 2.5,
+           y = c(2.5, 2.5, -7.5, -7.5) + 6,
+           label = c("Cage 1", "Cage 2", "Cage 3", "Cage 4"), 
+           fontface = 2, size = 5, color = "gray50") +
+  annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 5.25,
+           y = c(2.5, 2.5, -7.5, -7.5) - 0.75,
+           label = c("n = 450", "n = 450", "n = 450", "n = 450"), 
+           fontface = 4, size = 3.5, color = "gray50", hjust = "right") +
+  labs(title = "Many observations combined") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_single_obs_flea + p_mult_obs_flea + p_block_obs_flea +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
 
 
 
