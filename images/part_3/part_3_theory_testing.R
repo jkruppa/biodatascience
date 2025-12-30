@@ -218,7 +218,7 @@ p_theory_random_full <- ggplot() +
              linetype = "33") +
   annotate("label", x = -5, y = 1, label = "Null is true", size = 8, fontface = 2) +
   annotate("label", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2,
-           fill = "gray95", label.size = NA) +
+           fill = "gray95", linewidth = 0) +
   geom_circle(aes(x0 = -9, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
   annotate("text", x = -9, y = -2-3.5, label = expression(T[1]), size = 7) +
   geom_circle(aes(x0 = -6.5, y0 = -3-3.5, r = 1), fill = "#FCA63680") +
@@ -261,7 +261,7 @@ p_theory_random_full <- ggplot() +
              curvature = 0.45, color = "black", linewidth = 0.5,
              linetype = "33") +
   annotate("label", x = -5, y = -4.7, label = "Statistical test", size = 6, 
-           fontface = 2, fill = "gray95", label.size = NA) +
+           fontface = 2, fill = "gray95", linewidth = 0) +
   ## dist to test
   geom_curve(aes(x = 4, y = -3, xend = -1.9, yend = 2),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),

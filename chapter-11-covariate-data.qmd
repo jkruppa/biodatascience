@@ -43,7 +43,7 @@ ggplot() +
              curvature = 0.3, color = "#FDC926FF", linewidth = 0.5) +
   annotate("text", x = 3.3, y = -9.25, label = "Number of hairs on each back leg",
            hjust = "right", size = 3.75, fontface = 2, color = "#0D0887FF") +
-  annotate("label", x = 6, y = 2, label = "Weight in [mg]", fill = "white", label.size = NA, 
+  annotate("label", x = 6, y = 2, label = "Weight in [mg]", fill = "white", linewidth = 0, 
            hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
   geom_ellipse(aes(x0 = -10, y0 = -6.1, a = 0.25, b = 0.15, angle = 0), 
                color = "gray20", fill = "#F0F92180") +
