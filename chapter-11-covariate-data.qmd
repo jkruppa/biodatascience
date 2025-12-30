@@ -74,7 +74,7 @@ p_mult_obs_flea <- ggplot() +
   annotate("text", x = rep(c(-1, 2, 5), times = 3), 
            y = c(7.8, 7.8, 7.8, -0.2, -0.2, -0.2, -8.2, -8.2, -8.2)-1,
            label = rep(c("t1", "t2", "t3"), times = 3), 
-           fontface = 2, size = 4.5, color = "gray50") +
+           fontface = 2, size = 4.5, color = "#B12A90FF") +
   labs(title = "Single observation - many times") +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"))
@@ -84,7 +84,7 @@ geom_cage <- function(x, y) {
     geom_image(aes(x = c(x + 1, x + 1, x + 2.5, x + 4, x + 4), 
                    y = c(y + 1, y + 4, y + 2.5, y + 1, y + 4), 
                    image = rep("images/flea_00.png", 5)), size = 0.1),
-    annotate("segment", x = x-0.25, y = y, xend = x + 5.25, yend = y),
+    annotate("segment", x = x-0.25, y = y, xend = x + 5.25, yend = y, size = 2),
     annotate("segment", x = x-0.25, y = y + 5, xend = x + 5.25, yend = y + 5),
     annotate("segment", x = x+seq(0, 5, by = 0.5), y = y, 
              xend = x +seq(0, 5, by = 0.5), yend = y + 5)
@@ -94,7 +94,7 @@ geom_cage <- function(x, y) {
 p_block_obs_flea <- ggplot() +
   ## theme_minimal() +
   theme_void() +
-  coord_cartesian(xlim = c(-8, 8), ylim = c(-8, 8.5)) +
+  coord_cartesian(xlim = c(-8, 8), ylim = c(-8, 9)) +
   geom_cage(x = -7.5, y = -7.5) +
   geom_cage(x = -7.5, y = 2.5) +
   geom_cage(x = 2.5, y = -7.5) +
@@ -102,11 +102,11 @@ p_block_obs_flea <- ggplot() +
   annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 2.5,
            y = c(2.5, 2.5, -7.5, -7.5) + 6,
            label = c("Cage 1", "Cage 2", "Cage 3", "Cage 4"), 
-           fontface = 2, size = 5, color = "gray50") +
+           fontface = 2, size = 5, color = "#B12A90FF") +
   annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 5.25,
            y = c(2.5, 2.5, -7.5, -7.5) - 0.75,
            label = c("n = 450", "n = 450", "n = 450", "n = 450"), 
-           fontface = 4, size = 3.5, color = "gray50", hjust = "right") +
+           fontface = 4, size = 3.5, color = "#B12A90FF", hjust = "right") +
   labs(title = "Many observations combined") +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"))
