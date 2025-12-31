@@ -60,7 +60,10 @@ p_measured_flea <- ggplot() +
            size = 3.75, fontface = 2, color = "#B12A90FF") +
   annotate("text", hjust = "left", x = 13, y = c(-1.5, -3, -4.5), 
            label = c("(1) cat", "(2) dog", "(3) fox"),
-           size = 3.25, fontface = 3, color = "gray35") 
+           size = 3.25, fontface = 3, color = "gray35") +
+  annotate("text", x = c(6.1, 12), y = c(-9.75, 0.4), label = "†", size = 2) +
+  annotate("text", x = 16, y = -10, hjust = "right", fontface = 3, color = "gray35", size = 2,
+           label = "Catalog of the Fédération Internationale de la Beauté des Puces (FIBP)")
 
 
 
