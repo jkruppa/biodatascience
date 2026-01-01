@@ -23,11 +23,12 @@ source("images/part_1/part_1_data.R")
 #| echo: false
 #| message: false
 #| warning: false
+#| eval: false
 #| label: fig-chap-11-cov-01-flea
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 7
-#| fig-cap: "Presentation of all measured and experimental values for a flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
+#| fig-cap: "Presentation of all measured and experimental values for a given flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
 
 p_measured_flea
 ```
@@ -38,6 +39,7 @@ Quality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.
 #| echo: false
 #| message: false
 #| warning: false
+#| eval: false
 #| label: fig-chap-11-cov-01-flea-measure
 #| fig-align: center
 #| fig-height: 3.5
@@ -118,6 +120,96 @@ p_single_obs_flea + p_mult_obs_flea + p_block_obs_flea +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-01-flea-bio-tech
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 12
+#| fig-cap: "foo **(A)** foo **(B)** foo **(C)** foo"
+
+p_bio_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = c(-7, -7, -7), y = c(8, 0, -8), 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = c(-7, -7, -7),
+           y = c(8, 0, -8)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron")) +
+  annotate("point", c(-7, -7, -7), y = c(8, 0, -8)+0.75, color = "#FDC926FF", size = 2) +
+  geom_ellipse(aes(x0 = 2.5, y0 = 7.75, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = 8.75, xend = 2.5, yend = 8),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.2, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
+  geom_ellipse(aes(x0 = 5, y0 = -0.25, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = 0.75, xend = 5, yend = 0),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.2, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
+  geom_ellipse(aes(x0 = 3.75, y0 = -8.25, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = -7.25, xend = 3.75, yend = -8),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.2, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +  
+  labs(title = "Biological replication") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_tech_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = -7, y = 0, 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = -7, y = -2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = "Charles") +
+  annotate("point", -7, y = 0.75, color = "#FDC926FF", size = 2) +
+  geom_ellipse(aes(x0 = 4.75, y0 = 7.75-4, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = 0.75, xend = 4.75, yend = 4),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
+  geom_ellipse(aes(x0 = 5, y0 = -0.25, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = 0.75, xend = 5, yend = 0),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
+  geom_ellipse(aes(x0 = 4.5, y0 = -8.25+4, a = 0.5, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#FDC92680") +
+  geom_curve(aes(x = -7, y = 0.75, xend = 4.5, yend = -4),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#FDC926FF", linewidth = 0.75, linetype = 1) + 
+  labs(title = "Technical replication") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_lab_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = -7, y = 0, 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = -7, y = -2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = "Charles") +
+  annotate("segment", x = -4, y = -2, xend = -4, yend = 2, lineend = "round", size = 5,
+           color = "gray25") +
+  geom_ellipse(aes(x0 = -4, y0 = 2.3, a = 0.425, b = 0.25, angle = 0), 
+               color = "gray25", fill = "#E16462FF") +
+  labs(title = "Cell culture replication") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_bio_rep + p_tech_rep + p_lab_rep +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
 
 
 ```{r}
