@@ -15,7 +15,7 @@ p_measured_flea <- ggplot() +
   annotate("label", x = 6, y = 2, label = "Weight [mg]", fill = "white", linewidth = 0, 
            hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
   geom_ellipse(aes(x0 = -10, y0 = -6.1, a = 0.25, b = 0.15, angle = 0), 
-               color = "gray20", fill = "#F0F92180") +
+               color = "gray20", fill = "#FDC92680") +
   geom_curve(aes(x = 2.5, y = 3, xend = -10, yend = -6),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.75, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
