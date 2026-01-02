@@ -1,5 +1,6 @@
-```{r echo = FALSE}
-pacman::p_load(tidyverse)
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+source("init.R")
+source("images/part_1/part_1_data.R")
 ```
 
 # Tales of data 
@@ -13,5 +14,59 @@ Once upon a time Cadiergues and his team won the Nobel Prize in Stockholm for th
 
 
 Unfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches @everett1957relative.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: true
+#| label: fig-chap-11-cov-01-flea
+#| fig-align: center
+#| fig-height: 3
+#| fig-width: 7
+#| fig-cap: "Presentation of all measured and experimental values for a given flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
+
+p_measured_flea
+```
+
+
+Quality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| eval: true
+#| label: fig-chap-11-cov-01-flea-measure
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 12
+#| fig-cap: "Different types of measurement of fleas as a biological unit. **(A)** Individual fleas are observed and measured. Each flea represents a single observation. **(B)** Individual fleas are observed and measured at different points in time. Each flea is measured multiple times. **(C)** Many fleas are placed in cages to obtain an average measurement. Individual observations are grouped into one block."
+
+p_single_obs_flea + p_mult_obs_flea + p_block_obs_flea +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
+How large is the sample size?
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-01-flea-bio-tech
+#| fig-align: center
+#| fig-height: 3.75
+#| fig-width: 12
+#| fig-cap: "Different types of replication in an experiment. **(A)** Biological replication. Three fleas jump, each one individually. Each jump length measurement is connected to an individual flea. The deviation is high between the measurements. **(B)** Technical replication. One flea jumps three times. The measurements of the three jumps are connected to one flea. The deviation is low between the measurements. **(C)** Cell culture replication. A laboratory probe is taken from one flea. The number of cells in the tube is increased threefold. The deviation can be zero between the measurements."
+
+p_bio_rep + p_tech_rep + p_lab_rep +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
 
 ## References {.unnumbered}

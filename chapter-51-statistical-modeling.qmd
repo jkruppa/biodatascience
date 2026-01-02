@@ -86,8 +86,8 @@ geom_coord_cross <- function(x, y, yticks = "numeric", xticks = "numeric", zero 
 }
 
 ggplot() +
-  ##theme_void() +
-  theme_minimal() +
+  theme_void() +
+  ##theme_minimal() +
   coord_cartesian(xlim = c(-1, 20), ylim = c(0, 27)) +
   annotate("segment", x = c(2, 8, 14, 20), xend = c(2, 8, 14, 20),
            y = c(0, 0, 0, 0), yend = c(25.75, 25.75, 24.75, 25.75)) +
@@ -238,7 +238,7 @@ ggplot() +
   geom_segment(aes(x = 12.775, xend = 12.775, y = c(14, 15.75), yend = c(14.25, 16.8))) +
   geom_shape(data = tibble(x = c(13.25, 13.1, 13.4), y = c(14.5, 16.5, 16.5)),
              aes(x, y), fill = "gray75", color = "black") +
-  annotate("text", x = 13.5, y = 15.5, label = "variance", angle = 90, fontface = 2) +
+  annotate("text", x = 13.5, y = 15.5, label = "Deviation", angle = 90, fontface = 2) +
   ### 2lvl
   geom_rect(aes(xmin = 10.1+6.25, xmax = 10.35+6.25, ymin = 13.5, ymax = 15.25), fill = "#0D088780",
             color = "black") +
@@ -262,7 +262,7 @@ ggplot() +
   geom_segment(aes(x = 11.775+6.75, xend = 11.775+6.75, y = c(13.5, 14.25), yend = c(13.6, 15))) +
   geom_shape(data = tibble(x = c(19.25, 19.1, 19.4), y = c(14.5, 16.5, 16.5)),
              aes(x, y), fill = "gray75", color = "black") +
-  annotate("text", x = 19.5, y = 15.5, label = "variance", angle = 90, fontface = 2) +
+  annotate("text", x = 19.5, y = 15.5, label = "Deviation", angle = 90, fontface = 2) +
   ## ordinal
   annotate("point", x = c(0.45, 0.7, 1.1, 1.25, 1.65, 1.87, 2.15, 2.5, 2.7, 3.2) + 3.5, 
            y = c(8.5, 8.5, 8.5, 9.5, 9.5, 9.5, 9.5, 10.5, 10.5, 10.5)-0.25, size = 1.5) +
