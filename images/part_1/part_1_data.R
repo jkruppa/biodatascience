@@ -14,8 +14,6 @@ p_measured_flea <- ggplot() +
            hjust = "right", size = 3.75, fontface = 2, color = "#0D0887FF") +
   annotate("label", x = 6, y = 2, label = "Weight [mg]", fill = "white", linewidth = 0, 
            hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
-  geom_ellipse(aes(x0 = -10, y0 = -6.1, a = 0.25, b = 0.15, angle = 0), 
-               color = "gray20", fill = "black") +
   geom_curve(aes(x = 2.5, y = 3, xend = -10, yend = -6),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.75, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
@@ -289,3 +287,201 @@ p_covariate_data_overview <- ggplot() +
   geom_curve(aes(x = 1.25, y = 5, xend = 1.25, yend = -0.75),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
              curvature = 0.5, color = "black", linewidth = 1.5, lineend = "round") 
+
+
+p_bio_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = c(-7, -7, -7), y = c(8, 0, -8), 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = c(-7, -7, -7),
+           y = c(8, 0, -8)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron")) +
+  annotate("point", c(-7, -7, -7), y = c(8, 0, -8)+0.75, color = "#B12A90FF", size = 2) +
+  geom_shape(data = tibble(x = c(0.25, 7.25, 7.25, 0.25), 
+                           y = c(-10, -10, 10, 10)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = 8, y = 0, label = "DEVIATION IS HIGH",
+           angle = -90, size = 4.5, fontface = 2) +
+  geom_curve(aes(x = -7, y = 8.75, xend = 1.5, yend = 8),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.2, color = "#B12A90FF", linewidth = 0.75, linetype = 1) +
+  geom_curve(aes(x = -7, y = 0.75, xend = 6, yend = 0),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#B12A90FF", linewidth = 0.75, linetype = 1) +
+  geom_curve(aes(x = -7, y = -7.25, xend = 3.75, yend = -8),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.2, color = "#B12A90FF", linewidth = 0.75, linetype = 1) +  
+  annotate("text", x = c(1.5, 6, 3.75), y = c(8, 0, -8)-1, label = c("9.24cm", "12.26cm", "10.72cm"),
+           color = "#B12A90FF", size = 2.5, fontface = 2) +
+  labs(title = "Biological",
+       subtitle = "Three jumps, each flea jumps ones") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_tech_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = -7, y = 0, 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = -7, y = -2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = "Charles") +
+  annotate("point", -7, y = 0.75, color = "#B12A90FF", size = 2) +
+  geom_shape(data = tibble(x = c(2.5, 6, 6, 2.5), 
+                           y = c(-10, -10, 10, 10)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = 6.75, y = 0, label = "DEVIATION IS LOW",
+           angle = -90, size = 4.5, fontface = 2) +
+  geom_curve(aes(x = -7, y = 0.75, xend = 4.75, yend = 4),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#B12A90FF", linewidth = 0.75, linetype = 1) +
+  geom_curve(aes(x = -7, y = 0.75, xend = 5, yend = 0),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#B12A90FF", linewidth = 0.75, linetype = 1) +
+  geom_curve(aes(x = -7, y = 0.75, xend = 3.5, yend = -4),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "#B12A90FF", linewidth = 0.75, linetype = 1) + 
+  annotate("text", x = c(4.75, 5, 3.5), y = c(4, 0, -4)-1, label = c("9.24cm", "12.26cm", "10.72cm"),
+           color = "#B12A90FF", size = 2.5, fontface = 2) +
+  labs(title = "Technical",
+       subtitle = "Three jumps, one flea jumps three times") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_lab_rep <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-11, 10)) +
+  geom_image(aes(x = -7, y = 0, 
+                 image = rep("images/flea_00_flip.png", 3)), size = 0.3) +
+  annotate("text", x = -7, y = -2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = "Charles") +
+  annotate("segment", x = -4, y = -2, xend = -4, yend = 2, lineend = "round", size = 5,
+           color = "gray25") +
+  geom_ellipse(aes(x0 = -4, y0 = 2.3, a = 0.4, b = 0.25, angle = 0), 
+               color = "gray25", fill = "#E16462FF") +
+  annotate("segment", x = rep(-3, 3), xend = rep(3.5, 3), 
+           y = c(0.25, 0, -0.25), yend = c(6, 0, -6),
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed"), 
+           color = "gray50", linewidth = 0.75) +
+  geom_shape(data = tibble(x = c(4, 6, 6, 4), 
+                           y = c(-10, -10, 10, 10)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = rep(5, 9), y = c(7.75, 6, 4.25, 1.75, 0, -1.75, -7.75, -6, -4.25)+0.75, 
+           label = c("1.2", "1.3", "1.2", "1.3", "1.2", "1.2", "1.4", "1.4", "1.4"),
+           color = "#B12A90FF", size = 2.5, fontface = 2) +  
+  annotate("text", x = 6.75, y = 0, label = "DEVIATION CAN BE ZERO",
+           angle = -90, size = 4.5, fontface = 2) +
+  ## upper
+  geom_ellipse(aes(x0 = 5, y0 = 6.75-0.1+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = 6-0.1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = 5.25-0.1-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = 6.75+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = 6, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = 5.25-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  ## mid
+  geom_ellipse(aes(x0 = 5, y0 = 0.75-0.1+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = 0-0.1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = -0.75-0.1-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = 0.75+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = 0, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = -0.75-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  ## low
+  geom_ellipse(aes(x0 = 5, y0 = -6.75-0.1-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = -6-0.1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = -5.25-0.1+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "gray20") +
+  geom_ellipse(aes(x0 = 5, y0 = -5.25+1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = -6, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +
+  geom_ellipse(aes(x0 = 5, y0 = -6.75-1, a = 0.75, b = 0.25, angle = 0), 
+               color = "gray20", fill = "#E16462FF") +  
+  labs(title = "Cell culture",
+       subtitle = "Cells of one flea are replicated 3x3 times") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_single_obs_flea <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
+  geom_image(aes(x = c(-7, -6, 0, 5, 7, -5), y = c(8, -7, -5, 0, 6, 2), 
+                 image = rep("images/flea_00.png", 6)), size = 0.3) +
+  annotate("text", x = c(-7, -6, 0, 5, 7, -5),
+           y = c(8, -7, -5, 0, 6, 2)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron", "Chloe", "Cora", "Caleb")) +
+  labs(title = "Single observation - one time") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p_mult_obs_flea <- ggplot() +
+  theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-10, 8), ylim = c(-10, 10)) +
+  geom_image(aes(x = c(-7, -7, -7), y = c(8, 0, -8), 
+                 image = rep("images/flea_00.png", 3)), size = 0.3) +
+  annotate("text", x = c(-7, -7, -7),
+           y = c(8, 0, -8)-2.5, fontface = 2, size = 4.5, color = "gray50",
+           label = c("Chris", "Charles", "Cameron")) +
+  annotate("segment", x = rep(-3.5, 3), y = c(8, 0, -8), xend = rep(7.75, 3), yend = c(8, 0, -8),
+           arrow = arrow(length = unit(0.03, "npc"), type = "closed")) +
+  annotate("segment", x = rep(c(-1, 2, 5), times = 3), 
+           y = c(7.8, 7.8, 7.8, -0.2, -0.2, -0.2, -8.2, -8.2, -8.2), 
+           xend = rep(c(-1, 2, 5), times = 3), 
+           yend = c(8.2, 8.2, 8.2, 0.2, 0.2, 0.2, -7.8, -7.8, -7.8)) +  
+  annotate("text", x = rep(c(-1, 2, 5), times = 3), 
+           y = c(7.8, 7.8, 7.8, -0.2, -0.2, -0.2, -8.2, -8.2, -8.2)-1,
+           label = rep(c("t1", "t2", "t3"), times = 3), 
+           fontface = 2, size = 4.5, color = "#B12A90FF") +
+  labs(title = "Single observation - many times") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+geom_cage <- function(x, y) {
+  list(
+    geom_image(aes(x = c(x + 1, x + 1, x + 2.5, x + 4, x + 4), 
+                   y = c(y + 1, y + 4, y + 2.5, y + 1, y + 4), 
+                   image = rep("images/flea_00.png", 5)), size = 0.1),
+    annotate("segment", x = x-0.25, y = y, xend = x + 5.25, yend = y, size = 2),
+    annotate("segment", x = x-0.25, y = y + 5, xend = x + 5.25, yend = y + 5),
+    annotate("segment", x = x+seq(0, 5, by = 0.5), y = y, 
+             xend = x +seq(0, 5, by = 0.5), yend = y + 5)
+  )
+}
+
+p_block_obs_flea <- ggplot() +
+  ## theme_minimal() +
+  theme_void() +
+  coord_cartesian(xlim = c(-8, 8), ylim = c(-8, 9)) +
+  geom_cage(x = -7.5, y = -7.5) +
+  geom_cage(x = -7.5, y = 2.5) +
+  geom_cage(x = 2.5, y = -7.5) +
+  geom_cage(x = 2.5, y = 2.5) +
+  annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 2.5,
+           y = c(2.5, 2.5, -7.5, -7.5) + 6,
+           label = c("Cage 1", "Cage 2", "Cage 3", "Cage 4"), 
+           fontface = 2, size = 5, color = "#B12A90FF") +
+  annotate("text", x = c(-7.5, 2.5, -7.5, 2.5) + 5.25,
+           y = c(2.5, 2.5, -7.5, -7.5) - 0.75,
+           label = c("n = 450", "n = 450", "n = 450", "n = 450"), 
+           fontface = 4, size = 3.5, color = "#B12A90FF", hjust = "right") +
+  labs(title = "Many observations combined") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
