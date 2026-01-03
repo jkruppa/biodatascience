@@ -51,9 +51,7 @@ book:
     - part: chapter-50-preface.qmd
       chapters:
       - chapter-51-statistical-modeling.qmd
-    - part: template-preface.qmd
-      chapters:
-      - template-chapter.qmd
+      - chapter-52-it-started-with-a-line.qmd
   appendices:
     - appendix-a.qmd
 

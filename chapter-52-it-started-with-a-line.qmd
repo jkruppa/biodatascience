@@ -1,0 +1,23 @@
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+source("init.R")
+```
+
+# It started with a line {#sec-started-line}
+
+*Last modified on `r format(fs::file_info("chapter-52-it-started-with-a-line.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [Hot Chocolate - It Started With A Kiss](https://www.youtube.com/watch?v=NosS1rpJ7tU)*
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Models of Reality" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}

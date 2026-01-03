@@ -44,7 +44,7 @@
     "href": "chapter-00-preface.html",
     "title": "From science to data by models",
     "section": "",
-    "text": "References\nLast modified on 22. November 2025 at 19:08:33\nIn 2008, Cadiergues and his team won the Ig Nobel Prize at Harvard University in Cambridge for their work with dog and cat fleas1. This book tells the story of what had happened if they won the Nobel Prize in Stockholm instead. The Nobel Prize sparked extensive research in many scientific fields. Fleas became all the rage. Lots of data was collected, fleas were measured, and questions were asked that no one had ever asked before. Let’s check out this data and see what it tells us about fleas. Come along to Adventure Land and get ready to be amazed.\nNone of this happened in our reality. At least not in our branch of reality, if you believe Everett2. But since this book is also about models of reality, we can question the whole of reality and create a new one that fits.",
+    "text": "References\nLast modified on 03. January 2026 at 19:53:56\nIn 2008, Cadiergues and his team won the Ig Nobel Prize at Harvard University in Cambridge for their work with dog and cat fleas1. This book tells the story of what had happened if they won the Nobel Prize in Stockholm instead. The Nobel Prize sparked extensive research in many scientific fields. Fleas became all the rage. Lots of data was collected, fleas were measured, and questions were asked that no one had ever asked before. Let’s check out this data and see what it tells us about fleas. Come along to Adventure Land and get ready to be amazed.\nNone of this happened in our reality. At least not in our branch of reality, if you believe Everett2. But since this book is also about models of reality, we can question the whole of reality and create a new one that fits.\n“Even if I ‘know nothing’, what is the first thing I need to understand?”",
     "crumbs": [
       "From science to data by models"
     ]
@@ -403,7 +403,7 @@
     "href": "chapter-11-covariate-data.html",
     "title": "4  Body weight of fleas",
     "section": "",
-    "text": "4.1 General background\nLast modified on 02. January 2026 at 20:40:36",
+    "text": "4.1 General background\nLast modified on 03. January 2026 at 19:55:28",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Body weight of fleas</span>"
@@ -1425,6 +1425,61 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html",
+    "href": "chapter-52-it-started-with-a-line.html",
+    "title": "12  It started with a line",
+    "section": "",
+    "text": "12.1 Glossary\nLast modified on 03. January 2026 at 20:03:20",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#glossary",
+    "href": "chapter-52-it-started-with-a-line.html#glossary",
+    "title": "12  It started with a line",
+    "section": "",
+    "text": "term\n\nwhat does it mean.",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-52-it-started-with-a-line.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "12  It started with a line",
+    "section": "12.2 The meaning of “Models of Reality” in this chapter.",
+    "text": "12.2 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#summary",
+    "href": "chapter-52-it-started-with-a-line.html#summary",
+    "title": "12  It started with a line",
+    "section": "12.3 Summary",
+    "text": "12.3 Summary",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#references",
+    "href": "chapter-52-it-started-with-a-line.html#references",
+    "title": "12  It started with a line",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
     ]
   }
 ]
