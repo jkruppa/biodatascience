@@ -1,12 +1,38 @@
-```{r echo = FALSE, warning = FALSE, message=FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
 source("init.R")
+source("images/part_5/part_5_model.R")
 ```
 
 # It started with a line {#sec-started-line}
 
 *Last modified on `r format(fs::file_info("chapter-52-it-started-with-a-line.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [Hot Chocolate - It Started With A Kiss](https://www.youtube.com/watch?v=NosS1rpJ7tU)*
+> *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [It Started With A Kiss by Hot Chocolate](https://www.youtube.com/watch?v=NosS1rpJ7tU)*
+
+In statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.
+
+## The hunter and the rabbit
+
+> *"Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead." --- Mike Krüger, German comedian*
+
+I first came across the joke on Tweedback, a tool for anonymous feedback in lectures. One student had written the joke, which intrigued me. At first, I could not understand why. Then I understood the deeper meaning. In statistics, it's all about lines. Or lines through points. A gunshot is a line. A mean is a line. Single shots deviate from the average shot, as do single observations from the mean. If we measure the distance from the mean to each observation, we will get positive and negative values. Ultimately, these values would sum to zero. I don't believe for a moment that the comedian truly understands the depth of the joke from a statistical perspective. 
+
+In the following @fig-rabbit-shot, I have illustrated the example with some numbers. The rabbit is sitting at position 5m. The hunter shoots at $3m$, which is $-2m$ to the left. The second shot goes to the right, at $7m$, which is a deviation of $+2m$. We can now calculate the average of the two shots. This is equal to $5m$. The hunter hits. When we calculate the deviation, we get zero: $(-2) + (+2) = 0$. Therefore, the whole hunt of two shots has no deviation at all. This is wrong. Our model of reality tells us something completely different compared to what our hunter experienced. Therefore, we need a better model.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2.25
+#| fig-width: 7
+#| fig-cap: "Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur."
+#| label: fig-rabbit-shot
+
+p_rabbit_joke
+```
+
+
 
 ## Glossary
 

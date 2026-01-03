@@ -80,6 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-91ab998088fdb9379258c89c0d63a71f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -379,9 +382,10 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link active" data-scroll-target="#glossary"><span class="header-section-number">12.1</span> Glossary</a></li>
-  <li><a href="#the-meaning-of-models-of-reality-in-this-chapter." id="toc-the-meaning-of-models-of-reality-in-this-chapter." class="nav-link" data-scroll-target="#the-meaning-of-models-of-reality-in-this-chapter."><span class="header-section-number">12.2</span> The meaning of “Models of Reality” in this chapter.</a></li>
-  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12.3</span> Summary</a></li>
+  <li><a href="#the-hunter-and-the-rabbit" id="toc-the-hunter-and-the-rabbit" class="nav-link active" data-scroll-target="#the-hunter-and-the-rabbit"><span class="header-section-number">12.1</span> The hunter and the rabbit</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary"><span class="header-section-number">12.2</span> Glossary</a></li>
+  <li><a href="#the-meaning-of-models-of-reality-in-this-chapter." id="toc-the-meaning-of-models-of-reality-in-this-chapter." class="nav-link" data-scroll-target="#the-meaning-of-models-of-reality-in-this-chapter."><span class="header-section-number">12.3</span> The meaning of “Models of Reality” in this chapter.</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">12.4</span> Summary</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jkruppa/biodatascience/edit/master/chapter-52-it-started-with-a-line.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/jkruppa/biodatascience/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/jkruppa/biodatascience/blob/master/chapter-52-it-started-with-a-line.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
@@ -408,12 +412,35 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 03. January 2026 at 20:03:20</em></p>
+<p><em>Last modified on 03. January 2026 at 21:00:25</em></p>
 <blockquote class="blockquote">
-<p><em>“It started with a <del>kiss</del> line; […] How could I resist?” — <a href="https://www.youtube.com/watch?v=NosS1rpJ7tU">Hot Chocolate - It Started With A Kiss</a></em></p>
+<p><em>“It started with a <del>kiss</del> line; […] How could I resist?” — <a href="https://www.youtube.com/watch?v=NosS1rpJ7tU">It Started With A Kiss by Hot Chocolate</a></em></p>
 </blockquote>
-<section id="glossary" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="glossary"><span class="header-section-number">12.1</span> Glossary</h2>
+<p>In statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.</p>
+<section id="the-hunter-and-the-rabbit" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="the-hunter-and-the-rabbit"><span class="header-section-number">12.1</span> The hunter and the rabbit</h2>
+<blockquote class="blockquote">
+<p><em>“Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.” — Mike Krüger, German comedian</em></p>
+</blockquote>
+<p>I first came across the joke on Tweedback, a tool for anonymous feedback in lectures. One student had written the joke, which intrigued me. At first, I could not understand why. Then I understood the deeper meaning. In statistics, it’s all about lines. Or lines through points. A gunshot is a line. A mean is a line. Single shots deviate from the average shot, as do single observations from the mean. If we measure the distance from the mean to each observation, we will get positive and negative values. Ultimately, these values would sum to zero. I don’t believe for a moment that the comedian truly understands the depth of the joke from a statistical perspective.</p>
+<p>In the following <a href="#fig-rabbit-shot" class="quarto-xref">Figure&nbsp;<span>12.1</span></a>, I have illustrated the example with some numbers. The rabbit is sitting at position 5m. The hunter shoots at <span class="math inline">\(3m\)</span>, which is <span class="math inline">\(-2m\)</span> to the left. The second shot goes to the right, at <span class="math inline">\(7m\)</span>, which is a deviation of <span class="math inline">\(+2m\)</span>. We can now calculate the average of the two shots. This is equal to <span class="math inline">\(5m\)</span>. The hunter hits. When we calculate the deviation, we get zero: <span class="math inline">\((-2) + (+2) = 0\)</span>. Therefore, the whole hunt of two shots has no deviation at all. This is wrong. Our model of reality tells us something completely different compared to what our hunter experienced. Therefore, we need a better model.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-rabbit-shot" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rabbit-shot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chapter-52-it-started-with-a-line_files/figure-html/fig-rabbit-shot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;12.1: Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur."><img src="chapter-52-it-started-with-a-line_files/figure-html/fig-rabbit-shot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rabbit-shot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12.1: Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="glossary" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="glossary"><span class="header-section-number">12.2</span> Glossary</h2>
 <dl>
 <dt>term</dt>
 <dd>
@@ -421,14 +448,14 @@ window.Quarto = {
 </dd>
 </dl>
 </section>
-<section id="the-meaning-of-models-of-reality-in-this-chapter." class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="the-meaning-of-models-of-reality-in-this-chapter."><span class="header-section-number">12.2</span> The meaning of “Models of Reality” in this chapter.</h2>
+<section id="the-meaning-of-models-of-reality-in-this-chapter." class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="the-meaning-of-models-of-reality-in-this-chapter."><span class="header-section-number">12.3</span> The meaning of “Models of Reality” in this chapter.</h2>
 <ul>
 <li>itemize with max. 5-6 words</li>
 </ul>
 </section>
-<section id="summary" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.3</span> Summary</h2>
+<section id="summary" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="summary"><span class="header-section-number">12.4</span> Summary</h2>
 </section>
 <section id="references" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="references">References</h2>
@@ -941,29 +968,56 @@ window.Quarto = {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, warning = FALSE, message=FALSE}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r echo = FALSE, warning = FALSE, message = FALSE}</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"init.R"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># It started with a line {#sec-started-line}</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>*Last modified on `r format(fs::file_info("chapter-52-it-started-with-a-line.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [Hot Chocolate - It Started With A Kiss](https://www.youtube.com/watch?v=NosS1rpJ7tU)*</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>term</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"images/part_5/part_5_model.R"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu"># It started with a line {#sec-started-line}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>*Last modified on `r format(fs::file_info("chapter-52-it-started-with-a-line.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"It started with a ~~kiss~~ line; [...] How could I resist?" --- [It Started With A Kiss by Hot Chocolate](https://www.youtube.com/watch?v=NosS1rpJ7tU)*</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>In statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## The hunter and the rabbit</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead." --- Mike Krüger, German comedian*</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>I first came across the joke on Tweedback, a tool for anonymous feedback in lectures. One student had written the joke, which intrigued me. At first, I could not understand why. Then I understood the deeper meaning. In statistics, it's all about lines. Or lines through points. A gunshot is a line. A mean is a line. Single shots deviate from the average shot, as do single observations from the mean. If we measure the distance from the mean to each observation, we will get positive and negative values. Ultimately, these values would sum to zero. I don't believe for a moment that the comedian truly understands the depth of the joke from a statistical perspective. </span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>In the following @fig-rabbit-shot, I have illustrated the example with some numbers. The rabbit is sitting at position 5m. The hunter shoots at $3m$, which is $-2m$ to the left. The second shot goes to the right, at $7m$, which is a deviation of $+2m$. We can now calculate the average of the two shots. This is equal to $5m$. The hunter hits. When we calculate the deviation, we get zero: $(-2) + (+2) = 0$. Therefore, the whole hunt of two shots has no deviation at all. This is wrong. Our model of reality tells us something completely different compared to what our hunter experienced. Therefore, we need a better model.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2.25</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur."</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-rabbit-shot</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>p_rabbit_joke</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -979,6 +1033,38 @@ window.Quarto = {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

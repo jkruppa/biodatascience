@@ -273,7 +273,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 General background\nLast modified on 19. December 2025 at 19:29:05\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling",
+    "text": "3.1 General background\nLast modified on 03. January 2026 at 20:02:15\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -295,7 +295,7 @@
     "href": "chapter-03-what-is-a-model.html#theoretical-background",
     "title": "3  What is a model?",
     "section": "3.2 Theoretical background",
-    "text": "3.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 3.1: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.8: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.9: foo\n\n\n\n\n\n\n\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 3.10: foo\n\n\n\n\n\n\n“Twistin’, shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La” — The Blues Brothers (1980) – Shake a Tail Feather\n\n\n“It started with a kiss line; […] How could I resist?” — Hot Chocolate – It Started With A Kiss",
+    "text": "3.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 3.1: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.2: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.8: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3.9: foo\n\n\n\n\n\n\n\n[1] \"#0D0887FF\" \"#6A00A8FF\" \"#B12A90FF\" \"#E16462FF\" \"#FCA636FF\" \"#F0F921FF\"\n\n\n[1] \"#0D088780\" \"#6A00A880\" \"#B12A9080\" \"#E1646280\" \"#FCA63680\" \"#F0F92180\"\n\n\n\n\n\n\n\n\nFigure 3.10: foo\n\n\n\n\n\n\n“Twistin’, shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La” — The Blues Brothers (1980) – Shake a Tail Feather",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -841,7 +841,7 @@
     "href": "chapter-31-statistical-testing.html",
     "title": "8  Statistical testing",
     "section": "",
-    "text": "8.1 General background\nLast modified on 02. January 2026 at 20:57:01\nStatistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.\nStatistics means: If the hunter misses the rabbit once to the left and once to the right, then on average, the rabbit’s a goner.\nFigure 8.1: foo\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo",
+    "text": "8.1 General background\nLast modified on 03. January 2026 at 20:13:29\nFigure 8.1: foo\nFigure 8.2: foo\nFigure 8.3: foo\nFigure 8.4: foo\nFigure 8.5: foo\nFigure 8.6: foo",
     "crumbs": [
       "Hypothese testing",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
@@ -1432,7 +1432,7 @@
     "href": "chapter-52-it-started-with-a-line.html",
     "title": "12  It started with a line",
     "section": "",
-    "text": "12.1 Glossary\nLast modified on 03. January 2026 at 20:03:20",
+    "text": "12.1 The hunter and the rabbit\nLast modified on 03. January 2026 at 21:00:25\nIn statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.\nI first came across the joke on Tweedback, a tool for anonymous feedback in lectures. One student had written the joke, which intrigued me. At first, I could not understand why. Then I understood the deeper meaning. In statistics, it’s all about lines. Or lines through points. A gunshot is a line. A mean is a line. Single shots deviate from the average shot, as do single observations from the mean. If we measure the distance from the mean to each observation, we will get positive and negative values. Ultimately, these values would sum to zero. I don’t believe for a moment that the comedian truly understands the depth of the joke from a statistical perspective.\nIn the following Figure 12.1, I have illustrated the example with some numbers. The rabbit is sitting at position 5m. The hunter shoots at \\(3m\\), which is \\(-2m\\) to the left. The second shot goes to the right, at \\(7m\\), which is a deviation of \\(+2m\\). We can now calculate the average of the two shots. This is equal to \\(5m\\). The hunter hits. When we calculate the deviation, we get zero: \\((-2) + (+2) = 0\\). Therefore, the whole hunt of two shots has no deviation at all. This is wrong. Our model of reality tells us something completely different compared to what our hunter experienced. Therefore, we need a better model.\nFigure 12.1: Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur.",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
@@ -1442,8 +1442,8 @@
     "objectID": "chapter-52-it-started-with-a-line.html#glossary",
     "href": "chapter-52-it-started-with-a-line.html#glossary",
     "title": "12  It started with a line",
-    "section": "",
-    "text": "term\n\nwhat does it mean.",
+    "section": "12.2 Glossary",
+    "text": "12.2 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
@@ -1453,8 +1453,8 @@
     "objectID": "chapter-52-it-started-with-a-line.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-52-it-started-with-a-line.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "12  It started with a line",
-    "section": "12.2 The meaning of “Models of Reality” in this chapter.",
-    "text": "12.2 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "12.3 The meaning of “Models of Reality” in this chapter.",
+    "text": "12.3 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
@@ -1464,8 +1464,8 @@
     "objectID": "chapter-52-it-started-with-a-line.html#summary",
     "href": "chapter-52-it-started-with-a-line.html#summary",
     "title": "12  It started with a line",
-    "section": "12.3 Summary",
-    "text": "12.3 Summary",
+    "section": "12.4 Summary",
+    "text": "12.4 Summary",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
@@ -1477,6 +1477,17 @@
     "title": "12  It started with a line",
     "section": "References",
     "text": "References",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
+    "href": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
+    "title": "12  It started with a line",
+    "section": "",
+    "text": "“Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.” — Mike Krüger, German comedian",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
