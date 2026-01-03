@@ -13,7 +13,7 @@ p_theory_random <- ggplot() +
                            y = c(-0.5, -0.5, 10.5, 10.5)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
-  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2, fill = "white") +
   annotate("text", x = 10.25, y = 5, label = "RANDOMIZED SAMPLES", size = 6, fontface = 2, 
            angle = -90) +
   annotate("text", x = -10.25, y = 5, label = "REALITY", size = 6, fontface = 2, 
@@ -44,7 +44,7 @@ p_theory_random <- ggplot() +
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "black", linewidth = 0.5) +
   annotate("label", x = 0, y = 5, label = "R\nA\nN\nD\nO\nM\nI\nZ\nA\nT\nI\nO\nN", 
-           size = 5.5, fontface = 2) +
+           size = 5.5, fontface = 2, fill = "white") +
   ## right
   geom_curve(aes(x = 4.2, y = 9, xend = 5.8, yend = 9),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
@@ -66,7 +66,7 @@ p_theory_random <- ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
   annotate("text", x = 7.75, y = 6.5, label = "Your\nexperiment", size = 6, 
            fontface = 2) +
-  annotate("label", x = 9.5, y = 5.5, label = expression(D), size = 6) +
+  annotate("label", x = 9.5, y = 5.5, label = expression(D), size = 6, fill = "white") +
   annotate("point", x = 7.75, y = c(4.8, 5, 5.2), shape = 18, size = 2) +
   geom_shape(data = tibble(x = c(6, 9.5, 9.5, 6), y = c(2.5, 2.5, 4.5, 4.5)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
@@ -75,7 +75,8 @@ p_theory_random <- ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "white", color = "black") +
   annotate("text", x = 7.75, y = 1, label = "Never\nobserved", size = 6, fontface = 3) 
 
-p_theory_random_upper <- ggplot() +
+p_theory_random_upper <- 
+  ggplot() +
   theme_void() +
   #theme_minimal() +
   coord_cartesian(xlim = c(-10, 10), ylim = c(0.5, 10)) +
@@ -87,7 +88,7 @@ p_theory_random_upper <- ggplot() +
                            y = c(0.5, 0.5, 9.75, 9.75)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
-  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2, fill = "white") +
   annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
   annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
   annotate("text", x = 10.25, y = 5, label = "YOUR EXPERIMENT", size = 6, fontface = 2, angle = -90) +
@@ -97,10 +98,10 @@ p_theory_random_upper <- ggplot() +
              curvature = -0.3, color = "black", linewidth = 0.5) +
   ## Sample
   geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1.5), fill = "white") +
-  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2) +
+  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2, fill = "white") +
   annotate("text", x = 7.5, y = 7.25, label = "Obvserved\ndata", size = 6, 
            fontface = 2) +
-  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6) +
+  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6, fill = "white") +
   geom_curve(aes(x = 6, y = 7, xend = 3, yend = 6),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.4, color = "black", linewidth = 0.5) +
@@ -110,7 +111,7 @@ p_theory_random_upper <- ggplot() +
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 0.5) +
   annotate("text", x = 7.5, y = 2.25, label = "Statistical\ntest", size = 6, fontface = 2) +
-  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6) +
+  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6, fill = "white") +
   annotate("text", x = 2, y = 1.25, label = "Conclusion", size = 5.5, fontface = 2) +
   annotate("text", x = 2, y = 0.55, label = "Is the null hypothesis valid?", 
            size = 5, fontface = 3) +
@@ -123,9 +124,10 @@ p_theory_random_upper <- ggplot() +
   annotate("text", x = 3, y = 5, label = "Descriptive\nstatistics", size = 6, 
            fontface = 2) +
   annotate("label", x = 3.65, y = 4, label = expression(bar(y)*","~s^2*","~s*","~n), 
-           size = 4, hjust = "left") 
+           size = 4, hjust = "left", fill = "white") 
 
-p_theory_random_full <- ggplot() +
+p_theory_random_full <- 
+  ggplot() +
   theme_void() +
   coord_cartesian(xlim = c(-10, 10), ylim = c(-10, 10)) +
   ## Population
@@ -136,7 +138,7 @@ p_theory_random_full <- ggplot() +
                            y = c(0.5, 0.5, 9.75, 9.75)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white") +
-  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2) +
+  annotate("label", x = -5, y = 9, label = "Population", size = 8, fontface = 2, fill = "white") +
   annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
   annotate("text", x = 2, y = 9.5, label = "Causes structural equality", size = 5, fontface = 3) +
   annotate("text", x = 10.25, y = 5, label = "YOUR EXPERIMENT", size = 6, fontface = 2, angle = -90) +
@@ -146,16 +148,16 @@ p_theory_random_full <- ggplot() +
              curvature = -0.3, color = "black", linewidth = 0.5) +
   ## Sample
   geom_circle(aes(x0 = 7.5, y0 = 7.5, r = 1.5), fill = "white") +
-  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2) +
+  annotate("label", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2, fill = "white") +
   annotate("text", x = 7.5, y = 7.25, label = "Obvserved\ndata", size = 6, fontface = 2) +
-  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6) +
+  annotate("label", x = 8.75, y = 6.35, label = expression(D), size = 6, fill = "white") +
   geom_curve(aes(x = 6, y = 7, xend = 3, yend = 6),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = 0.4, color = "black", linewidth = 0.5) +
   ## Test
   geom_circle(aes(x0 = 7.5, y0 = 2.5, r = 1.5), fill = "white") +
   annotate("text", x = 7.5, y = 2.25, label = "Statistical\ntest", size = 6, fontface = 2) +
-  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6) +
+  annotate("label", x = 8.75, y = 1.4, label = expression(T[D]), size = 6, fill = "white") +
   ## Desc stat
   geom_curve(aes(x = 3, y = 4, xend = 6, yend = 3),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
@@ -165,7 +167,7 @@ p_theory_random_full <- ggplot() +
   annotate("text", x = 3, y = 5, label = "Descriptive\nstatistics", size = 6, 
            fontface = 2) +
   annotate("label", x = 3.65, y = 4, label = expression(bar(y)*","~s^2*","~s*","~n), 
-           size = 4, hjust = "left") +
+           size = 4, hjust = "left", fill = "white") +
   ## Distribution
   geom_shape(data = tibble(x = c(-10.25, 10.25, 10.25, -10.25), 
                            y = c(-10.25, -10.25, -0.25, -0.25)),
@@ -216,7 +218,7 @@ p_theory_random_full <- ggplot() +
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = -0.2, color = "black", linewidth = 0.5,
              linetype = "33") +
-  annotate("label", x = -5, y = 1, label = "Null is true", size = 8, fontface = 2) +
+  annotate("label", x = -5, y = 1, label = "Null is true", size = 8, fontface = 2, fill = "white") +
   annotate("label", x = -5, y = -1, label = "Randomisation", size = 6, fontface = 2,
            fill = "gray95", linewidth = 0) +
   geom_circle(aes(x0 = -9, y0 = -2-3.5, r = 1), fill = "#FCA63680") +
@@ -281,7 +283,8 @@ p_val_tbl <- expand_grid(x = 1:50,
   pivot_longer(cols = fisher:newman)
 
 
-p_fisher_newman <- ggplot() +
+p_fisher_newman <- 
+  ggplot() +
   theme_void() +
   ##theme_minimal() +
   coord_cartesian(xlim = c(-2, 50), ylim = c(-2, 47)) +
@@ -306,9 +309,9 @@ p_fisher_newman <- ggplot() +
              curvature = 0, color = "black", linewidth = 1) +
   annotate("label", hjust = "center", x = 25, y = 47.15,
            label = "Less likely to observe your data under the Null",
-           fontface = 2, size = 4) +
+           fontface = 2, size = 4, fill = "white") +
   annotate("label", hjust = "left", x = 10, y = 22.5,
-           label = expression(alpha~"="~5*"%")) +
+           label = expression(alpha~"="~5*"%"), fill = "white") +
   geom_curve(aes(x = 9.8, y = 22.5, xend = 3, yend = 10.5),
              arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
              curvature = 0.3, color = "black", linewidth = 0.75) +
