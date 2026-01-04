@@ -848,17 +848,6 @@
     ]
   },
   {
-    "objectID": "chapter-31-statistical-testing.html#general-background",
-    "href": "chapter-31-statistical-testing.html#general-background",
-    "title": "8  Statistical testing",
-    "section": "",
-    "text": "“Statistik ist: Wenn der Jäger am Hasen einmal links und einmal rechts vorbeischießt, dann ist der Hase im Durchschnitt tot.” — Mike Krüger, German comedian",
-    "crumbs": [
-      "Hypothese testing",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Statistical testing</span>"
-    ]
-  },
-  {
     "objectID": "chapter-31-statistical-testing.html#theoretical-background",
     "href": "chapter-31-statistical-testing.html#theoretical-background",
     "title": "8  Statistical testing",
@@ -1275,164 +1264,22 @@
     ]
   },
   {
-    "objectID": "template-preface.html",
-    "href": "template-preface.html",
-    "title": "Template Preface",
-    "section": "",
-    "text": "Last modified on 09. December 2025 at 10:27:51\n\n“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — Dan Meyer in Math class needs a makeover\n\nHere comes the preface text",
-    "crumbs": [
-      "Template Preface"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html",
-    "href": "template-chapter.html",
-    "title": "12  Template chapter",
-    "section": "",
-    "text": "12.1 General background\nLast modified on 28. December 2025 at 17:34:59\nR Code [show / hide]\nset.seed(20251226) #20251226\ncor_high_tbl &lt;- tibble(weight = abs(rnorm(5, 3, 4)),\n                       jumplength = 10 + 1 * weight + rnorm(5, 0, 4)) |&gt; \n  mutate(sweight = weight - mean(weight),\n         sjump = jumplength - mean(jumplength),\n         ss_xy = sweight * sjump,\n         ss_x = sweight^2,\n         ss_y = sjump^2,\n         sign_xy = ifelse(sign(ss_xy) == -1, \"\\U2012\", \"+\"))\nset.seed(202511)\n\nsum(cor_high_tbl$ss_x)\n\n\n[1] 33.95848\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_x) |&gt; sqrt()\n\n\n[1] 5.82739\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y)\n\n\n[1] 47.94158\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_y) |&gt; sqrt()\n\n\n[1] 6.923986\n\n\nR Code [show / hide]\nsum(cor_high_tbl$ss_xy)\n\n\n[1] 33.21142\nR Code [show / hide]\ncor(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 0.8231087\nR Code [show / hide]\ncov(cor_high_tbl$weight, cor_high_tbl$jumplength)\n\n\n[1] 8.302855\nR Code [show / hide]\nlm_fit &lt;- lm(jumplength ~ weight, data = cor_high_tbl)\nR Code [show / hide]\nvcov(lm_fit)\n\n\n            (Intercept)     weight\n(Intercept)   3.4921715 -0.6111907\nweight       -0.6111907  0.1517616\nFigure 12.1: foo\nFigure 12.2: foo\nFigure 12.3: foo\nFigure 12.4: foo",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#theoretical-background",
-    "href": "template-chapter.html#theoretical-background",
-    "title": "12  Template chapter",
-    "section": "12.2 Theoretical background",
-    "text": "12.2 Theoretical background",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#r-packages-used",
-    "href": "template-chapter.html#r-packages-used",
-    "title": "12  Template chapter",
-    "section": "12.3 R packages used",
-    "text": "12.3 R packages used",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#data",
-    "href": "template-chapter.html#data",
-    "title": "12  Template chapter",
-    "section": "12.4 Data",
-    "text": "12.4 Data",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#alternatives",
-    "href": "template-chapter.html#alternatives",
-    "title": "12  Template chapter",
-    "section": "12.5 Alternatives",
-    "text": "12.5 Alternatives\nFurther tutorials and R packages on XXX",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#glossary",
-    "href": "template-chapter.html#glossary",
-    "title": "12  Template chapter",
-    "section": "12.6 Glossary",
-    "text": "12.6 Glossary\n\nterm\n\nwhat does it mean.",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "href": "template-chapter.html#the-meaning-of-models-of-reality-in-this-chapter.",
-    "title": "12  Template chapter",
-    "section": "12.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "12.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#summary",
-    "href": "template-chapter.html#summary",
-    "title": "12  Template chapter",
-    "section": "12.8 Summary",
-    "text": "12.8 Summary",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "template-chapter.html#references",
-    "href": "template-chapter.html#references",
-    "title": "12  Template chapter",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Template Preface",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Template chapter</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html",
-    "href": "appendix-a.html",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "",
-    "text": "A.1 Used R packages\nLast modified on 20. November 2025 at 10:01:22\nThis is a printout of the init.R file, which can be found on GitHub\nR Code [show / hide]\npacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork)",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#used-theme-of-the-visualitations",
-    "href": "appendix-a.html#used-theme-of-the-visualitations",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.2 Used theme of the visualitations",
-    "text": "A.2 Used theme of the visualitations\n\n\nR Code [show / hide]\ntheme_book &lt;- function() {\n  theme_minimal() +\n    theme(panel.grid.minor = element_blank(),\n          plot.title = element_text(size = 16, face = \"bold\"),\n          plot.subtitle = element_text(size = 12, face = \"italic\"),\n          plot.caption = element_text(face = \"italic\"),\n          axis.title = element_text(size = 12, face = \"bold\"),\n          axis.text = element_text(size = 11),\n          legend.title = element_text(face = \"bold\"))\n}",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#used-color-palettes",
-    "href": "appendix-a.html#used-color-palettes",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "A.3 Used color palettes",
-    "text": "A.3 Used color palettes\n\n\nR Code [show / hide]\ncol_pal &lt;- \\(n, alpha) plasma(n = n, alpha = alpha)\nc6_pal &lt;- col_pal(6, 1)",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
-    "objectID": "appendix-a.html#references",
-    "href": "appendix-a.html#references",
-    "title": "Appendix A — Why does it look like this?",
-    "section": "References",
-    "text": "References",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
-    ]
-  },
-  {
     "objectID": "chapter-52-it-started-with-a-line.html",
     "href": "chapter-52-it-started-with-a-line.html",
     "title": "12  It started with a line",
     "section": "",
     "text": "12.1 The hunter and the rabbit\nLast modified on 03. January 2026 at 21:00:25\nIn statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.\nI first came across the joke on Tweedback, a tool for anonymous feedback in lectures. One student had written the joke, which intrigued me. At first, I could not understand why. Then I understood the deeper meaning. In statistics, it’s all about lines. Or lines through points. A gunshot is a line. A mean is a line. Single shots deviate from the average shot, as do single observations from the mean. If we measure the distance from the mean to each observation, we will get positive and negative values. Ultimately, these values would sum to zero. I don’t believe for a moment that the comedian truly understands the depth of the joke from a statistical perspective.\nIn the following Figure 12.1, I have illustrated the example with some numbers. The rabbit is sitting at position 5m. The hunter shoots at \\(3m\\), which is \\(-2m\\) to the left. The second shot goes to the right, at \\(7m\\), which is a deviation of \\(+2m\\). We can now calculate the average of the two shots. This is equal to \\(5m\\). The hunter hits. When we calculate the deviation, we get zero: \\((-2) + (+2) = 0\\). Therefore, the whole hunt of two shots has no deviation at all. This is wrong. Our model of reality tells us something completely different compared to what our hunter experienced. Therefore, we need a better model.\nFigure 12.1: Illustration of the joke about the hunter and the rabbit. If the hunter shoots past the rabbit on the left and on the right, then on average the hunter will hit the rabbit. The deviation is zero. The joke illustrates the problem of measuring a statistical deviation when positive and negative values can occur.",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
+    "href": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
+    "title": "12  It started with a line",
+    "section": "",
+    "text": "“Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.” — Mike Krüger, German comedian",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
@@ -1483,14 +1330,47 @@
     ]
   },
   {
-    "objectID": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
-    "href": "chapter-52-it-started-with-a-line.html#the-hunter-and-the-rabbit",
-    "title": "12  It started with a line",
+    "objectID": "appendix-a.html",
+    "href": "appendix-a.html",
+    "title": "Appendix A — Why does it look like this?",
     "section": "",
-    "text": "“Statistics is: When the hunter misses the rabbit once to the left and once to the right, on average the rabbit is dead.” — Mike Krüger, German comedian",
+    "text": "A.1 Used R packages\nLast modified on 20. November 2025 at 10:01:22\nThis is a printout of the init.R file, which can be found on GitHub\nR Code [show / hide]\npacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork)",
     "crumbs": [
-      "Statistical modeling",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#used-theme-of-the-visualitations",
+    "href": "appendix-a.html#used-theme-of-the-visualitations",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.2 Used theme of the visualitations",
+    "text": "A.2 Used theme of the visualitations\n\n\nR Code [show / hide]\ntheme_book &lt;- function() {\n  theme_minimal() +\n    theme(panel.grid.minor = element_blank(),\n          plot.title = element_text(size = 16, face = \"bold\"),\n          plot.subtitle = element_text(size = 12, face = \"italic\"),\n          plot.caption = element_text(face = \"italic\"),\n          axis.title = element_text(size = 12, face = \"bold\"),\n          axis.text = element_text(size = 11),\n          legend.title = element_text(face = \"bold\"))\n}",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#used-color-palettes",
+    "href": "appendix-a.html#used-color-palettes",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "A.3 Used color palettes",
+    "text": "A.3 Used color palettes\n\n\nR Code [show / hide]\ncol_pal &lt;- \\(n, alpha) plasma(n = n, alpha = alpha)\nc6_pal &lt;- col_pal(6, 1)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "appendix-a.html#references",
+    "href": "appendix-a.html#references",
+    "title": "Appendix A — Why does it look like this?",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
     ]
   }
 ]
