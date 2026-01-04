@@ -32,7 +32,56 @@ In the following @fig-rabbit-shot, I have illustrated the example with some numb
 p_rabbit_joke
 ```
 
+### The square and the root
 
+> *"What you see, well, you might not know; You get the feelin', comin' after the glow" --- The joker & the thief by Wolfmother*
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-square-and-root
+
+p1_square <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1.25)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1)) +
+  geom_tile(aes(x = 0, y = 0, width = 2, height = 2),
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = 0, y = 0, label = expression(A~"="~(3-5)^2~"="~bold("4")), 
+           size = 7.5, color = "black") +
+  annotate("text", x = c(-1, 1), y = -1.15, label = c("3", "5"), color = "#FCA636FF", 
+           size = 6, fontface = 2) +
+  labs(title = "This is a square") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p2_square_root <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1.25)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1)) +
+  geom_tile(aes(x = 0, y = 0, width = 2, height = 2), linetype = 2,
+            fill = "#FCA63680", color = "#FCA63680", alpha = 0.1, linewidth = 0.75) +
+  annotate("segment", x = 1, y = -1, xend = 1, yend = 1, linewidth = 1.75, color = "#FCA636FF") +
+  annotate("text", x = 0, y = 0, label = "A = 4", fontface = 2, 
+           size = 7.5, color = "gray50") +
+  annotate("text", x = 1.2, y = 0, label = expression(sqrt(4)~"="~bold("2")), size = 6, 
+           color = "#FCA636FF", angle = -90) +
+  labs(title = "This is the root") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p1_square + p2_square_root +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
 
 ## Glossary
 
