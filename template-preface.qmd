@@ -1,4 +1,4 @@
-```{r echo = FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
 source("init.R")
 pacman::p_load(tidyverse)
 ```
@@ -26,7 +26,7 @@ If you first hear of a line, then you might think of a Euclidiean line.
 #| fig-align: center
 #| fig-height: 2
 #| fig-width: 5
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of a line through two points, also known as a Euclidean line. Most people think of such a line first when they think about lines through points. This is mathematically correct, but not in statistics."
 #| label: fig-euclidiean-line
 
 ggplot() +
@@ -64,9 +64,9 @@ A possible line through points. Is this the best possible line?
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 3.25
+#| fig-height: 3
 #| fig-width: 5
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations."
 #| label: fig-euclidiean-line-01
 
 ggplot() +
