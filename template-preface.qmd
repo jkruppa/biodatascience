@@ -1,4 +1,5 @@
 ```{r echo = FALSE}
+source("init.R")
 pacman::p_load(tidyverse)
 ```
 
@@ -53,7 +54,7 @@ A possible line through points. Is this the best possible line?
 #| fig-height: 5
 #| fig-width: 5
 #| fig-cap: "foo"
-#| label: fig-euclidiean-line
+#| label: fig-euclidiean-line-01
 
 ggplot() +
   theme_void() +
