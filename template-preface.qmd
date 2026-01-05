@@ -9,3 +9,35 @@ pacman::p_load(tidyverse)
 > *"What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don't have sufficient information and you have to go find some." --- [Dan Meyer in  Math class needs a makeover](https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover?language=en&subtitle=en&trigger=5s)*
 
 Here comes the preface text
+
+If square dancing is the peak of order, geometry, and external command, its perfect chaotic counterpart would be Moshing (or the "Mosh Pit").
+
+While square dancing relies on a "caller" to synchronize everyone into rigid patterns, moshing relies on individual impulse, physical impact, and organic flow.
+
+In a square dance, you are a component of a machine. If you fail to follow the caller, the machine stops. In a mosh pit, you are a molecule in a gas. You collide, bounce, and redirect based on the energy of the crowd. It is the ultimate expression of entropy in dance.
+
+If you first hear of a line, then you might think of a Euclidiean line.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 5
+#| fig-cap: "foo"
+#| label: fig-euclidiean-line
+
+ggplot() +
+  theme_void() +
+  ## coord_equal() +
+  ## theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
+  annotate("segment", x = 1, y = 1.5, xend = 4, yend = 4) +
+  annotate("point", x = c(1, 4), y = c(1.5, 4)) +
+  annotate("text", x = c(1, 4), y = c(1.5, 4) - 0.5, label = c("A", "B")) +
+  labs(title = "This is a Euclidean line")
+
+```
+
