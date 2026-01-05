@@ -1,16 +1,3 @@
-```{r echo = FALSE}
-source("init.R")
-pacman::p_load(tidyverse)
-```
-
-# Template Preface
-
-*Last modified on `r format(fs::file_info("template-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
-
-> *"What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don't have sufficient information and you have to go find some." --- [Dan Meyer in  Math class needs a makeover](https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover?language=en&subtitle=en&trigger=5s)*
-
-Here comes the preface text
-
 If square dancing is the peak of order, geometry, and external command, its perfect chaotic counterpart would be Moshing (or the "Mosh Pit").
 
 While square dancing relies on a "caller" to synchronize everyone into rigid patterns, moshing relies on individual impulse, physical impact, and organic flow.
@@ -46,8 +33,8 @@ ggplot() +
 
 
 A possible line through points. Is this the best possible line?
-
-
+  
+  
 ```{r}
 #| message: false
 #| echo: false
@@ -100,4 +87,3 @@ ggplot() +
   labs(title = "This is a linear line")
 
 ```
-
