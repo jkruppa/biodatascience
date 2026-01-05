@@ -139,7 +139,7 @@ p1_square_many + p2_square_sum +
 
 ### Normal distributed data
 
-> *"Can't explain all the feelings that you're making me feel; I believe in a thing called ~~love~~ normal distribution." --- I Believe in a Thing Called Love by The Darkness*
+> *"Can't explain all the feelings that you're making me feel; I believe in a thing called ~~love~~ normality." --- I Believe in a Thing Called Love by The Darkness*
 
 ## Glossary
 
