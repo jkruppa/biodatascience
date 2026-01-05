@@ -9,3 +9,86 @@ pacman::p_load(tidyverse)
 > *"What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don't have sufficient information and you have to go find some." --- [Dan Meyer in  Math class needs a makeover](https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover?language=en&subtitle=en&trigger=5s)*
 
 Here comes the preface text
+
+If square dancing is the peak of order, geometry, and external command, its perfect chaotic counterpart would be Moshing (or the "Mosh Pit").
+
+While square dancing relies on a "caller" to synchronize everyone into rigid patterns, moshing relies on individual impulse, physical impact, and organic flow.
+
+In a square dance, you are a component of a machine. If you fail to follow the caller, the machine stops. In a mosh pit, you are a molecule in a gas. You collide, bounce, and redirect based on the energy of the crowd. It is the ultimate expression of entropy in dance.
+
+If you first hear of a line, then you might think of a Euclidiean line.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 5
+#| fig-cap: "foo"
+#| label: fig-euclidiean-line
+
+ggplot() +
+  theme_void() +
+  ## coord_equal() +
+  ## theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
+  annotate("segment", x = 1, y = 1.5, xend = 4, yend = 4) +
+  annotate("point", x = c(1, 4), y = c(1.5, 4)) +
+  annotate("text", x = c(1, 4), y = c(1.5, 4) - 0.5, label = c("A", "B")) +
+  labs(title = "This is a Euclidean line")
+
+```
+
+
+A possible line through points. Is this the best possible line?
+
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 5
+#| fig-cap: "foo"
+#| label: fig-euclidiean-line
+
+ggplot() +
+  theme_void() +
+  coord_equal() +
+  theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  annotate("segment", x = 0.25, y = 0.5, xend = 5, yend = 0.5) +
+  annotate("segment", x = 0.5, y = 0.25, xend = 0.5, yend = 5) +
+  ## line
+  annotate("segment", x = 0.5, y = 2, xend = 5, yend = 4.5) +
+  ## points
+  annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
+  ## parameters
+  annotate("point", x = 0.5, y = 2, color = "red", size = 3) +
+  annotate("segment", x = 2.5, y = 2+1.111, xend = 3.5, yend = 2+1.111,
+           color = "red", size = 1) +
+  annotate("segment", x = 3.5, y = 2+1.111, xend = 3.5, yend = 2+1.666,
+           color = "red", size = 1) +
+  annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
+           xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
+           color = "red", size = 1, linetype = "11") +
+  ## box
+  geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
+                           y = c(0.75, 0.75, 2.75, 2.75)),
+             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
+  annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
+           fontface = 2) +
+  annotate("text", x = 3.25, y = c(2, 1.5, 1), 
+           label = c("1 Intercept", "1 Slope", "n Deviations"),
+           fontface = 3, hjust = "left") +
+  annotate("text", x = 4.5, y = c(2, 1.5, 1), 
+           label = c(expression(beta[0]), expression(beta[1]), expression(epsilon)),
+           fontface = 3, hjust = "left") +
+  labs(title = "This is a linear line")
+
+```
+
