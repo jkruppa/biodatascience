@@ -1,3 +1,5 @@
+Here comes the preface text
+
 If square dancing is the peak of order, geometry, and external command, its perfect chaotic counterpart would be Moshing (or the "Mosh Pit").
 
 While square dancing relies on a "caller" to synchronize everyone into rigid patterns, moshing relies on individual impulse, physical impact, and organic flow.
@@ -18,72 +20,88 @@ If you first hear of a line, then you might think of a Euclidiean line.
 
 ggplot() +
   theme_void() +
-  ## coord_equal() +
-  ## theme_minimal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0.5, 4.5)) +
-  #annotate("segment", x = 0.25, y = 0.5, xend = 5, yend = 0.5) +
-  #annotate("segment", x = 0.5, y = 0.25, xend = 0.5, yend = 5) +  
-  annotate("segment", x = 1, y = 1.5, xend = 4, yend = 4) +
-  annotate("point", x = c(1, 4), y = c(1.5, 4)) +
-  annotate("text", x = c(1, 4), y = c(1.5, 4) - 0.5, label = c("A", "B")) +
-  labs(title = "This is a Euclidean line")
+  ##coord_equal() +
+  ##theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-0.25, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-0.25, 2.25)) +
+  annotate("segment", x = -0.2, y = 0, xend = 5, yend = 0,
+           arrow = arrow(length = unit(0.04, "npc"), type = "closed")) +
+  annotate("segment", x = c(1, 2, 3, 4), xend = c(1, 2, 3, 4),
+           y = -0.05, yend = 0.05) +
+  annotate("segment", x = 0, y = -0.2, xend = 0, yend = 2.25,
+           arrow = arrow(length = unit(0.04, "npc"), type = "closed")) +  
+  annotate("segment", x = -0.05, xend = 0.05,
+           y = c(1, 2), yend = c(1, 2)) +
+  ## line
+  annotate("segment", x = 0.5, y = 0.5, xend = 4.5, yend = 1.5) +
+  annotate("point", x = c(0.5, 4.5), y = c(0.5, 1.5)) +
+  annotate("text", x = c(0.5, 4.5), y = c(0.5, 1.5) - 0.25, label = c("A", "B"),
+           size = 5, fontface = 2) +
+  labs(title = "This is a Euclidean line") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
 
 ```
 
 
 A possible line through points. Is this the best possible line?
-  
-  
+
+
 ```{r}
 #| message: false
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 5
-#| fig-width: 5
+#| fig-height: 3.75
+#| fig-width: 6
 #| fig-cap: "foo"
 #| label: fig-euclidiean-line-01
 
 ggplot() +
   theme_void() +
-  coord_equal() +
-  theme_minimal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  annotate("segment", x = 0.25, y = 0.5, xend = 5, yend = 0.5,
+  ##coord_equal() +
+  ##theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.25, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(.25, 5)) +
+  annotate("segment", x = 0.4, y = 0.5, xend = 5, yend = 0.5,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
   annotate("segment", x = c(1.5, 2.5, 3.5, 4.5), xend = c(1.5, 2.5, 3.5, 4.5),
            y = 0.45, yend = 0.55) +
-  annotate("segment", x = 0.5, y = 0.25, xend = 0.5, yend = 5,
+  annotate("segment", x = 0.5, y = 0.3, xend = 0.5, yend = 5,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
   annotate("segment", y = c(1.5, 2.5, 3.5, 4.5), yend = c(1.5, 2.5, 3.5, 4.5),
-           x = 0.45, xend = 0.55) +
+           x = 0.475, xend = 0.525) +
   ## line
-  annotate("segment", x = 0.5, y = 2, xend = 5, yend = 4.5) +
-  ## points
-  annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
+  annotate("segment", x = 0.5, y = 2, xend = 5, yend = 4.5, color = "gray50",
+           size = 1) +
   ## parameters
-  annotate("point", x = 0.5, y = 2, color = "red", size = 3) +
-  annotate("segment", x = 2.5, y = 2+1.111, xend = 3.5, yend = 2+1.111,
-           color = "red", size = 1) +
-  annotate("segment", x = 3.5, y = 2+1.111, xend = 3.5, yend = 2+1.666,
-           color = "red", size = 1) +
+  annotate("point", x = 0.5, y = 2, fill = "#0D0887FF", size = 3, shape = 21) +
+  annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(2.25-0.5)*0.55,
+           color = "#B12A9080", size = 1, linetype = "11") +
+  annotate("segment", x = 3.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
+           color = "#B12A9080", size = 1, linetype = "11") +
+  annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
+           color = "#B12A90FF", size = 1) +
+  annotate("point", x = 2.75, y = 2+(2.75-0.5)*0.55, fill = "#B12A90FF", size = 3, shape = 21) +  
   annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
            xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
-           color = "red", size = 1, linetype = "11") +
+           color = "#FCA636FF", size = 1, lineend = "round") +
+  ## points
+  annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
   ## box
   geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
                            y = c(0.75, 0.75, 2.75, 2.75)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
   annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
-           fontface = 2) +
-  annotate("text", x = 3.25, y = c(2, 1.5, 1), 
+           fontface = 2, size = 5.5) +
+  annotate("text", x = 3.1, y = c(2, 1.5, 1), size = 4.5,
            label = c("1 Intercept", "1 Slope", "n Deviations"),
-           fontface = 3, hjust = "left") +
+           fontface = 4, hjust = "left", color = c("#0D0887FF", "#B12A90FF", "#FCA636FF")) +
   annotate("text", x = 4.5, y = c(2, 1.5, 1), 
            label = c(expression(beta[0]), expression(beta[1]), expression(epsilon)),
-           fontface = 3, hjust = "left") +
-  labs(title = "This is a linear line")
+           size = 4, hjust = "center") +
+  labs(title = "This is a linear line")  +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
 
 ```
