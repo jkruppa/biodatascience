@@ -66,7 +66,7 @@ A possible line through points. Is this the best possible line?
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 5
-#| fig-cap: "Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations."
+#| fig-cap: "Visualisation of a line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. **(A)** Linear dependency. We observe one intercept, one slope and four deviations. **(B)** non linear dependency. We observe one intercept, up to $p$ slopes and four deviations."
 #| label: fig-euclidiean-line-01
 
 p1 <- ggplot() +
@@ -124,18 +124,6 @@ p1 <- ggplot() +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"))
 
-```
-
-
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 5
-#| fig-width: 10
-#| fig-cap: "foo."
-#| label: fig-euclidiean-line-02
 
 p2 <- ggplot() +
   theme_void() +
