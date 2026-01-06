@@ -62,7 +62,7 @@ lang: en
 format:
   html: 
     theme:
-      - simplex
+      - journal
       - bioscience.scss
     cover-image: cover2026.png
     code-annotations: hover
