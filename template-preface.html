@@ -36,6 +36,35 @@ ul.task-list li input[type="checkbox"] {
 <link href="template-preface_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="template-preface_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -50,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="template-preface" class="level1">
 <h1>Template Preface</h1>
-<p><em>Last modified on 06. January 2026 at 07:31:06</em></p>
+<p><em>Last modified on 06. January 2026 at 15:10:48</em></p>
 <blockquote class="blockquote">
 <p><em>“What problem have you solved, ever, that was worth solving where you knew all the given information in advance? No problem worth solving is like that. In the real world, you have a surplus of information and you have to filter it, or you don’t have sufficient information and you have to go find some.” — <a href="https://www.ted.com/talks/dan_meyer_math_class_needs_a_makeover?language=en&amp;subtitle=en&amp;trigger=5s">Dan Meyer in Math class needs a makeover</a></em></p>
 </blockquote>
@@ -79,10 +108,10 @@ Figure&nbsp;1: Visualisation of a line through two points, also known as a Eucli
 <div id="fig-euclidiean-line-01" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-euclidiean-line-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="template-preface_files/figure-html/fig-euclidiean-line-01-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="480">
+<img src="template-preface_files/figure-html/fig-euclidiean-line-01-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-euclidiean-line-01-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations.
+Figure&nbsp;2: Visualisation of a line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. <strong>(A)</strong> Linear dependency. We observe one intercept, one slope and four deviations. <strong>(B)</strong> non linear dependency. We observe one intercept, up to <span class="math inline">\(p\)</span> slopes and four deviations.
 </figcaption>
 </figure>
 </div>
