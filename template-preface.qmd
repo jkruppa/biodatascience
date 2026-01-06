@@ -95,6 +95,8 @@ ggplot() +
            size = 1) +
   ## parameters
   annotate("point", x = 0.5, y = 2, fill = "#0D0887FF", size = 3, shape = 21) +
+  annotate("text", x = 0.35, y = 2, color = "#0D0887FF",
+           label = expression(beta[0]))  +
   annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(2.25-0.5)*0.55,
            color = "#B12A9080", size = 1, linetype = "11") +
   annotate("segment", x = 3.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
@@ -102,6 +104,8 @@ ggplot() +
   annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
            color = "#B12A90FF", size = 1) +
   annotate("point", x = 2.75, y = 2+(2.75-0.5)*0.55, fill = "#B12A90FF", size = 3, shape = 21) +  
+  annotate("text", x = 2.75, y = 3.6, color = "#B12A90FF",
+           label = expression(beta[1]))  +
   ## points
   annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
   ## box
@@ -124,6 +128,15 @@ ggplot() +
 
 
 ```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3
+#| fig-width: 5
+#| fig-cap: "Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations."
+#| label: fig-euclidiean-line-02
+
 ggplot() +
   theme_void() +
   coord_equal() +
