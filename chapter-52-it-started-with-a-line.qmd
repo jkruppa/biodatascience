@@ -23,7 +23,7 @@ In statistics, everything is about a line. This is also a lie. More precisely, i
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of the relationship between a square and its square root. **(A)** The square consists of two sides of equal length. Therefore, the area of a square is the square of its side. **(B)** The square root of the area of a square is the length of its side."
 #| label: fig-square-and-root
 
 p1_square <- ggplot() +
@@ -72,7 +72,7 @@ p1_square + p2_square_root +
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of the calculation of the sum of squares. **(A)** The area of each square is determined. **(B)** All the areas are then combined to form one large square. The square root can then be used for further statistical analysis."
 #| label: fig-square-sum
 
 p1_square_many <- ggplot() +
