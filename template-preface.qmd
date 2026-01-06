@@ -69,17 +69,17 @@ A possible line through points. Is this the best possible line?
 #| fig-cap: "Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations."
 #| label: fig-euclidiean-line-01
 
-ggplot() +
+p1 <- ggplot() +
   theme_void() +
-  ##coord_equal() +
-  ##theme_minimal() +
+  coord_equal() +
+ ## theme_minimal() +
   scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.25, 5)) +
   scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0.25, 5)) +
   annotate("segment", x = 0.4, y = 0.5, xend = 5, yend = 0.5,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
   annotate("segment", x = c(1.5, 2.5, 3.5, 4.5), xend = c(1.5, 2.5, 3.5, 4.5),
            y = 0.45, yend = 0.55) +
-  annotate("segment", x = 0.5, y = 0.3, xend = 0.5, yend = 5,
+  annotate("segment", x = 0.5, y = 0.4, xend = 0.5, yend = 5,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
   annotate("segment", y = c(1.5, 2.5, 3.5, 4.5), yend = c(1.5, 2.5, 3.5, 4.5),
            x = 0.475, xend = 0.525) +
@@ -87,7 +87,7 @@ ggplot() +
   annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
            xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
            color = "#FCA636FF", size = 1, lineend = "round") +
-  annotate("text", x = c(1.5, 2, 3, 4.5)+0.1, 
+  annotate("text", x = c(1.5, 2, 3, 4.5)+0.2, 
            y = (c(2, 3.5, 4, 3.5) + (2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55))/2,
            color = "#FCA636FF", label = c(expression(epsilon[1]), expression(epsilon[2]),
                                           expression(epsilon[3]), expression(epsilon[4]))) +  
@@ -102,9 +102,9 @@ ggplot() +
   annotate("segment", x = 3.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
            color = "#B12A9080", size = 1, linetype = "11") +
   annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
-           color = "#B12A90FF", size = 1) +
+           color = "#B12A90FF", size = 1.25) +
   annotate("point", x = 2.75, y = 2+(2.75-0.5)*0.55, fill = "#B12A90FF", size = 3, shape = 21) +  
-  annotate("text", x = 2.75, y = 3.6, color = "#B12A90FF",
+  annotate("text", x = 2.75, y = 3.2375+0.2, color = "#B12A90FF",
            label = expression(beta[1]))  +
   ## points
   annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
@@ -132,53 +132,76 @@ ggplot() +
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 3
-#| fig-width: 5
-#| fig-cap: "Visualisation of a linear line through many points is a key concept in statistics. The line rarely hits all the points, so there is always a deviation between the line and the points. The line is described by two coefficients, or parameters: the intercept, where the line passes the y-axis, and the slope, which is the rate of change of the line. We observe one intercept, one slope and four deviations."
+#| fig-height: 5
+#| fig-width: 10
+#| fig-cap: "foo."
 #| label: fig-euclidiean-line-02
 
-ggplot() +
+p2 <- ggplot() +
   theme_void() +
-  coord_equal() +
-  theme_minimal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  annotate("segment", x = 0.25, y = 0.5, xend = 5, yend = 0.5,
+coord_equal() +
+ ## theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0.25, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0.25, 5)) +
+  annotate("segment", x = 0.4, y = 0.5, xend = 5, yend = 0.5,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
-  annotate("segment", x = 0.5, y = 0.25, xend = 0.5, yend = 5) +
+  annotate("segment", x = c(1.5, 2.5, 3.5, 4.5), xend = c(1.5, 2.5, 3.5, 4.5),
+           y = 0.45, yend = 0.55) +
+  annotate("segment", x = 0.5, y = 0.4, xend = 0.5, yend = 5,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
+  annotate("segment", y = c(1.5, 2.5, 3.5, 4.5), yend = c(1.5, 2.5, 3.5, 4.5),
+           x = 0.475, xend = 0.525) +
   ## line
+  annotate("segment", 
+           x = c(1.5, 2, 3, 4.5), 
+           y = c(2, 3.5, 4, 3.5), 
+           xend = c(1.5, 2, 3, 4.5), 
+           yend = c(2.9, 3.25, 3.55, 3.25),
+           color = "#FCA636FF", size = 1, lineend = "round") +
+  annotate("text", x = c(1.5, 2, 3, 4.5)+c(0.2, -0.2, 0.2, 0.2), 
+           y = (c(2, 3.5, 4, 3.5) + c(2.9, 3.25, 3.55, 3.25))/2,
+           color = "#FCA636FF", 
+           label = c(expression(epsilon[1]), expression(epsilon[2]),
+                     expression(epsilon[3]), expression(epsilon[4]))) +  
   geom_curve(aes(x = 0.5, y = 1, xend = 5, yend = 3),
-             curvature = -0.6, color = "black", linewidth = 0.5) +
+             curvature = -0.6, color = "gray50", size = 1) +
   ## points
   annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
   ## parameters
-  annotate("point", x = 0.5, y = 1, color = "red", size = 3) +
+  annotate("point", x = 0.5, y = 1, color = "#0D0887FF", size = 3) +
+  annotate("text", x = 0.35, y = 1, color = "#0D0887FF",
+           label = expression(beta[0]))  +
   annotate("segment", x = 0.75, y = 2.15, xend = 1.75, yend = 3.15,
-           color = "green", size = 1) +
-  annotate("point", x = 1.25, y = 2.65, color = "green") +
+           color = "#B12A90FF", size = 1.25) +
+  annotate("point", x = 1.25, y = 2.65, fill = "#B12A90FF", size = 3, shape = 21) +
   annotate("segment", x = 2.25, y = 3.4, xend = 3.25, yend = 3.6,
-           color = "green", size = 1) +
-  annotate("point", x = 2.75, y = 3.5, color = "green") +
+           color = "#B12A90FF", size = 1.25) +
+  annotate("point", x = 2.75, y = 3.5, fill = "#B12A90FF", size = 3, shape = 21) +
   annotate("segment", x = 3.75, y = 3.575, xend = 4.75, yend = 3.175,
-           color = "green", size = 1) +
-  annotate("point", x = 4.25, y = 3.38, color = "green") +
-#  annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
-#           xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
-#           color = "red", size = 1, linetype = "11") +
-  ## box
+           color = "#B12A90FF", size = 1.25) +
+  annotate("point", x = 4.25, y = 3.38, fill = "#B12A90FF", size = 3, shape = 21) +
+  annotate("text", x = c(1.25, 2.75, 4.25), y = c(2.65, 3.5, 3.38)+0.2, 
+           color = "#B12A90FF",
+           label = c(expression(beta[1]), expression(beta[2]), expression(beta[3])))  +
+ ## box
   geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
                            y = c(0.75, 0.75, 2.75, 2.75)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
   annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
-           fontface = 2) +
-  annotate("text", x = 3.25, y = c(2, 1.5, 1), 
+           fontface = 2, size = 5) +
+  annotate("text", x = 3.1, y = c(2, 1.5, 1), size = 4.5, 
            label = c("1 Intercept", "p Slopes", "n Deviations"),
-           fontface = 3, hjust = "left") +
+           fontface = 4, hjust = "left", color = c("#0D0887FF", "#B12A90FF", "#FCA636FF")) +
   annotate("text", x = 4.5, y = c(2, 1.5, 1), 
            label = c(expression(beta[0]), expression(beta[p]), expression(epsilon)),
-           fontface = 3, hjust = "left") +
-  labs(title = "This is a linear line")
+           size = 4.5, hjust = "center") +
+  labs(title = "This is a non linear line")  +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
 
 
-
+p1 + p2 +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
