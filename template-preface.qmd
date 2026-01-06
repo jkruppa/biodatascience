@@ -19,42 +19,6 @@ In a square dance, you are a component of a machine. If you fail to follow the c
 
 If you first hear of a line, then you might think of a Euclidiean line.
 
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 2
-#| fig-width: 5
-#| fig-cap: "Visualisation of a line through two points, also known as a Euclidean line. Most people think of such a line first when they think about lines through points. This is mathematically correct, but not in statistics."
-#| label: fig-euclidiean-line
-
-ggplot() +
-  theme_void() +
-  ##coord_equal() +
-  ##theme_minimal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-0.25, 5)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-0.25, 2.25)) +
-  annotate("segment", x = -0.15, y = 0, xend = 5, yend = 0,
-           arrow = arrow(length = unit(0.04, "npc"), type = "closed")) +
-  annotate("segment", x = c(1, 2, 3, 4), xend = c(1, 2, 3, 4),
-           y = -0.05, yend = 0.05) +
-  annotate("segment", x = 0, y = -0.2, xend = 0, yend = 2.25,
-           arrow = arrow(length = unit(0.04, "npc"), type = "closed")) +  
-  annotate("segment", x = -0.05, xend = 0.05,
-           y = c(1, 2), yend = c(1, 2)) +
-  ## line
-  annotate("segment", x = 0.5, y = 0.5, xend = 4.5, yend = 1.5, color = "gray50",
-           size = 1) +
-  annotate("point", x = c(0.5, 4.5), y = c(0.5, 1.5)) +
-  annotate("text", x = c(0.5, 4.5), y = c(0.5, 1.5) - 0.25, label = c("A", "B"),
-           size = 5, fontface = 2) +
-  labs(title = "This is a Euclidean line") +
-  theme(plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12, face = "italic"))
-
-```
-
 
 A possible line through points. Is this the best possible line?
 
@@ -88,14 +52,14 @@ p1 <- ggplot() +
            xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
            color = "#FCA636FF", size = 1, lineend = "round") +
   annotate("text", x = c(1.5, 2, 3, 4.5)+0.2, 
-           y = (c(2, 3.5, 4, 3.5) + (2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55))/2,
+           y = (c(2, 3.5, 4, 3.5) + (2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55))/2, size = 5,
            color = "#FCA636FF", label = c(expression(epsilon[1]), expression(epsilon[2]),
                                           expression(epsilon[3]), expression(epsilon[4]))) +  
   annotate("segment", x = 0.5, y = 2, xend = 5, yend = 4.5, color = "gray50",
            size = 1) +
   ## parameters
   annotate("point", x = 0.5, y = 2, fill = "#0D0887FF", size = 3, shape = 21) +
-  annotate("text", x = 0.3, y = 2, color = "#0D0887FF",
+  annotate("text", x = 0.3, y = 2, color = "#0D0887FF", size = 5,
            label = expression(beta[0]))  +
   annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(2.25-0.5)*0.55,
            color = "#B12A9080", size = 1, linetype = "11") +
@@ -104,20 +68,20 @@ p1 <- ggplot() +
   annotate("segment", x = 2.25, y = 2+(2.25-0.5)*0.55, xend = 3.25, yend = 2+(3.25-0.5)*0.55,
            color = "#B12A90FF", size = 1.25) +
   annotate("point", x = 2.75, y = 2+(2.75-0.5)*0.55, fill = "#B12A90FF", size = 3, shape = 21) +  
-  annotate("text", x = 2.75, y = 3.2375+0.2, color = "#B12A90FF",
+  annotate("text", x = 2.75, y = 3.2375+0.2, color = "#B12A90FF", size = 5,
            label = expression(beta[1]))  +
   ## points
   annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
   ## box
   geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
-                           y = c(0.75, 0.75, 2.75, 2.75)),
+                           y = c(0.75, 0.75, 2.45, 2.45)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
-  annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
+  annotate("text", x = (3+4.75)/2, y = 2.2, label = "Parameters",
            fontface = 2, size = 5) +
-  annotate("text", x = 3.1, y = c(2, 1.5, 1), size = 4.5,
+  annotate("text", x = 3.1, y = c(1.8, 1.4, 1), size = 4.5,
            label = c("1 Intercept", "1 Slope", "n Deviations"),
            fontface = 4, hjust = "left", color = c("#0D0887FF", "#B12A90FF", "#FCA636FF")) +
-  annotate("text", x = 4.5, y = c(2, 1.5, 1), 
+  annotate("text", x = 4.5, y = c(1.8, 1.4, 1), 
            label = c(expression(beta[0]), expression(beta[1]), expression(epsilon)),
            size = 4.5, hjust = "center") +
   labs(title = "This is a linear line")  +
@@ -148,7 +112,7 @@ coord_equal() +
            color = "#FCA636FF", size = 1, lineend = "round") +
   annotate("text", x = c(1.5, 2, 3, 4.5)+c(0.2, -0.2, 0.2, 0.2), 
            y = (c(2, 3.5, 4, 3.5) + c(2.9, 3.25, 3.55, 3.25))/2,
-           color = "#FCA636FF", 
+           color = "#FCA636FF", size = 5,
            label = c(expression(epsilon[1]), expression(epsilon[2]),
                      expression(epsilon[3]), expression(epsilon[4]))) +  
   geom_curve(aes(x = 0.5, y = 1, xend = 5, yend = 3),
@@ -157,7 +121,7 @@ coord_equal() +
   annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
   ## parameters
   annotate("point", x = 0.5, y = 1, color = "#0D0887FF", size = 3) +
-  annotate("text", x = 0.3, y = 1, color = "#0D0887FF",
+  annotate("text", x = 0.3, y = 1, color = "#0D0887FF", size = 5,
            label = expression(beta[0]))  +
   annotate("segment", x = 0.75, y = 2.15, xend = 1.75, yend = 3.15,
            color = "#B12A90FF", size = 1.25) +
@@ -169,18 +133,18 @@ coord_equal() +
            color = "#B12A90FF", size = 1.25) +
   annotate("point", x = 4.25, y = 3.38, fill = "#B12A90FF", size = 3, shape = 21) +
   annotate("text", x = c(1.25, 2.75, 4.25), y = c(2.65, 3.5, 3.38)+0.2, 
-           color = "#B12A90FF",
+           color = "#B12A90FF", size = 5,
            label = c(expression(beta[1]), expression(beta[2]), expression(beta[3])))  +
  ## box
   geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
-                           y = c(0.75, 0.75, 2.75, 2.75)),
+                           y = c(0.75, 0.75, 2.45, 2.45)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
-  annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
+  annotate("text", x = (3+4.75)/2, y = 2.2, label = "Parameters",
            fontface = 2, size = 5) +
-  annotate("text", x = 3.1, y = c(2, 1.5, 1), size = 4.5, 
+  annotate("text", x = 3.1, y = c(1.8, 1.4, 1), size = 4.5, 
            label = c("1 Intercept", "p Slopes", "n Deviations"),
            fontface = 4, hjust = "left", color = c("#0D0887FF", "#B12A90FF", "#FCA636FF")) +
-  annotate("text", x = 4.5, y = c(2, 1.5, 1), 
+  annotate("text", x = 4.5, y = c(1.8, 1.4, 1), 
            label = c(expression(beta[0]), expression(beta[p]), expression(epsilon)),
            size = 4.5, hjust = "center") +
   labs(title = "This is a non linear line")  +

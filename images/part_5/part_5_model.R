@@ -41,5 +41,48 @@ p_rabbit_joke <-
   annotate("text", x = 3.25, y = -3.5, 
            label = expression(bold(Average)~"="~frac(3+7,2)~"="~bold("5m")), 
            color = "#B12A90FF", size = 4.5, hjust = "right") +
-  annotate("text", x = 7.5, y = -1.4, label = "Position of the object", fontface = 4, hjust = "right") 
+  annotate("text", x = 7.5, y = -1.4, label = "Position of the object", fontface = 4, hjust = "right")
+
+
+p1_euclidean_line <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  ##theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  ## line
+  annotate("segment", x = 0.5, y = 2, xend = 4.5, yend = 3, color = "gray50",
+           size = 1) +
+  annotate("point", x = c(0.5, 4.5), y = c(2, 3), size = 2) +
+  annotate("text", x = c(0.5, 4.5), y = c(2, 3) - 0.35, label = c("A", "B"),
+           size = 5, fontface = 2) +
+  annotate("text", x = 2.5, y = 2.9, label = expression(d(A,B)),
+           size = 5, angle = 12) +
+  labs(title = "This is a line") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p2_line_squared <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  ##theme_minimal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
+  ## line
+  geom_tile(aes(x = 2.5, y = 2.5, width = 4, height = 4),
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75,
+            linetype = 2) +
+  annotate("segment", x = 0.5, y = 0.5, xend = 4.5, yend = 0.5, color = "gray50",
+           size = 1) +
+  annotate("segment", x = 4.5, y = 0.5, xend = 4.5, yend = 4.5, color = "gray50",
+           size = 1) +
+  annotate("text", x = 2.5, y = 2.5, label = expression(d(A,B)^2),
+           size = 5) +
+  annotate("text", x = 2.5, y = 0.1, label = expression(d(A,B)),
+           size = 5) +
+  annotate("text", x = 4.9, y = 2.5, label = expression(d(A,B)),
+           size = 5, angle = -90) +
+  labs(title = "This is a squared line") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
   
