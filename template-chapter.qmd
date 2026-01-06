@@ -166,52 +166,6 @@ cor_high_tbl |>
 
 
 
-```{r}
-ggplot() +
-  theme_void() +
-  coord_equal() +
-  theme_minimal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(0, 5)) +
-  annotate("segment", x = 0.25, y = 0.5, xend = 5, yend = 0.5,
-           arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
-  annotate("segment", x = 0.5, y = 0.25, xend = 0.5, yend = 5) +
-  ## line
-  geom_curve(aes(x = 0.5, y = 1, xend = 5, yend = 3),
-             curvature = -0.6, color = "black", linewidth = 0.5) +
-  ## points
-  annotate("point", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5)) +
-  ## parameters
-  annotate("point", x = 0.5, y = 1, color = "red", size = 3) +
-  annotate("segment", x = 0.75, y = 2.15, xend = 1.75, yend = 3.15,
-           color = "green", size = 1) +
-  annotate("point", x = 1.25, y = 2.65, color = "green") +
-  annotate("segment", x = 2.25, y = 3.4, xend = 3.25, yend = 3.6,
-           color = "green", size = 1) +
-  annotate("point", x = 2.75, y = 3.5, color = "green") +
-  annotate("segment", x = 3.75, y = 3.575, xend = 4.75, yend = 3.175,
-           color = "green", size = 1) +
-  annotate("point", x = 4.25, y = 3.38, color = "green") +
-#  annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
-#           xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
-#           color = "red", size = 1, linetype = "11") +
-  ## box
-  geom_shape(data = tibble(x = c(3, 4.75, 4.75, 3), 
-                           y = c(0.75, 0.75, 2.75, 2.75)),
-             aes(x, y), radius = unit(0.2, 'cm'), fill = "gray95") +
-  annotate("text", x = (3+4.75)/2, y = 2.5, label = "Parameters",
-           fontface = 2) +
-  annotate("text", x = 3.25, y = c(2, 1.5, 1), 
-           label = c("1 Intercept", "p Slopes", "n Deviations"),
-           fontface = 3, hjust = "left") +
-  annotate("text", x = 4.5, y = c(2, 1.5, 1), 
-           label = c(expression(beta[0]), expression(beta[p]), expression(epsilon)),
-           fontface = 3, hjust = "left") +
-  labs(title = "This is a linear line")
-
-
-
-```
 
 
 
