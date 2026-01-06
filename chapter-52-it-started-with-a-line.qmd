@@ -125,7 +125,7 @@ p1_square_many + p2_square_sum +
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "Visualisation of a line through two points, also known as a Euclidean line. Most people think of such a line first when they think about lines through points. This is mathematically correct, but not in statistics."
+#| fig-cap: "Visualisation of the dependency between a line and a square. **(A)** A line through two points, also known as a Euclidean line. Most people think of such a line first when they think about lines through points. This is mathematically correct, but not in statistics. **(B)** The distance between two points, also known as a line, is represented as a square."
 #| label: fig-euclidiean-line
 
 p1_euclidean_line + p2_line_squared +

@@ -1268,7 +1268,7 @@
     "href": "chapter-52-it-started-with-a-line.html",
     "title": "12  It started with a line",
     "section": "",
-    "text": "12.0.1 The square and the root\nLast modified on 06. January 2026 at 20:00:44\nIn statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.\nFigure 12.1: foo\nFigure 12.2: foo",
+    "text": "12.0.1 The square and the root\nLast modified on 06. January 2026 at 20:32:34\nIn statistics, everything is about a line. This is also a lie. More precisely, in parametric statistics, everything is about a line. In a later chapter, we will also explore nonparametric statistical analysis, which is different but somewhat outdated. We have better tools on your shelves to solve problems that were previously solved using nonparametric approaches.\nFigure 12.1: foo\nFigure 12.2: foo",
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>It started with a line</span>"
