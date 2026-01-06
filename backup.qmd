@@ -76,6 +76,9 @@ ggplot() +
   annotate("segment", x = c(1.5, 2, 3, 4.5), y = c(2, 3.5, 4, 3.5), 
            xend = c(1.5, 2, 3, 4.5), yend = 2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55,
            color = "#FCA636FF", size = 1, lineend = "round") +
+  annotate("text", x = c(1.5, 2, 3, 4.5), 
+           y = (c(2, 3.5, 4, 3.5) + (2 + (c(1.5, 2, 3, 4.5)-0.5) * 0.55))/2,
+           color = "#FCA636FF", label = "foo") +  
   annotate("segment", x = 0.5, y = 2, xend = 5, yend = 4.5, color = "gray50",
            size = 1) +
   ## parameters
