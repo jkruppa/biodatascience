@@ -14,6 +14,8 @@ In statistics, everything is about a line. This is also a lie. More precisely, i
 
 ## Geometry in statistics
 
+Before we go any deeper into statistics, we need to either learn or review some geometry. We need to understand what a line is and how this concept differs in statistics. I will then explain the geometry of a square and the square root. You should be familiar with what both look like in a visualisation. We will revisit such geometries repeatedly. Ultimately, we will bring them together. A line can be expressed as a square. This is a key concept in statistics. 
+
 ### The square and the root
 
 > *"What you see, well, you might not know; You get the feelin', comin' after the glow" --- The joker & the thief by Wolfmother*
@@ -168,45 +170,10 @@ p_rabbit_joke
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of the deviation from the hunter and rabbit example. **(A)** Each deviation is squared. Therefore, no sign is left. **(B)** The deviations are added up. The square root of the sum of squares has the same unit as the original measurement. The example was built in such a way that the root is the standard deviation."
 #| label: fig-rabbit-deviation
 
-p1_square_many <- ggplot() +
-  theme_void() +
-  ## theme_minimal() +
-  coord_equal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
-  geom_tile(aes(x = c(-0.5, 0.5), y = c(0, 0), 
-                width = c(0.75, 0.75), 
-                height = c(0.75, 0.75)), linetype = 1,
-            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
-  annotate("text", x = c(-0.5, 0.5), y = c(0, 0), 
-           label = c(expression(("-2")^2), expression(("+2")^2)), 
-           size = 6, color = "black") +
-  labs(title = "This are many squares") +
-  theme(plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12, face = "italic"))
-
-p2_square_sum <- ggplot() +
-  theme_void() +
-  ##theme_minimal() +
-  coord_equal() +
-  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
-  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
-  geom_tile(aes(x = 0, y = 0, width = 1.39, height = 1.39),
-            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
-  annotate("text", x = 0, y = 0, size = 7.5, color = "black", label = expression(sum()*8),
-           fontface = 2) +
-  annotate("text", x = 0, y = -0.825, label = expression(2.83), 
-           size = 5, color = "#FCA636FF") +
-  annotate("text", x = 0.825, y = 0, label = expression(2.83),
-           size = 5, color = "#FCA636FF", angle = -90) +
-  labs(title = "This is the sum of squares") +
-  theme(plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12, face = "italic"))
-
-p1_square_many + p2_square_sum +
+p1_square_many_rabbit + p2_square_sum_rabbit +
   plot_layout(ncol = 2) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))

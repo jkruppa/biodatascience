@@ -43,6 +43,41 @@ p_rabbit_joke <-
            color = "#B12A90FF", size = 4.5, hjust = "right") +
   annotate("text", x = 7.5, y = -1.4, label = "Position of the object", fontface = 4, hjust = "right")
 
+p1_square_many_rabbit <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-0.9, 1)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-0.9, 0.75)) +
+  geom_tile(aes(x = c(-0.5, 0.35), y = c(0, 0), 
+                width = c(0.75, 0.75), 
+                height = c(0.75, 0.75)), linetype = 1,
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = c(-0.5, 0.35), y = c(0, 0), 
+           label = c(expression(("-2m")^2), expression(("+2m")^2)), 
+           size = 7, color = "black") +
+  labs(title = "Squared deviation") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p2_square_sum_rabbit <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-0.75, 1)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-0.9, 0.75)) +
+  geom_tile(aes(x = 0, y = 0, width = 1.39, height = 1.39),
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = 0, y = 0, size = 7, color = "black", label = expression(sum()*8*"m²"),
+           fontface = 2) +
+  annotate("text", x = 0, y = -0.825, label = expression(2.83*"m"), 
+           size = 5, color = "#FCA636FF") +
+  annotate("text", x = 0.825, y = 0, label = expression(2.83*"m"),
+           size = 5, color = "#FCA636FF", angle = -90) +
+  labs(title = "Sum of squared deviation") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
 
 p1_euclidean_line <- ggplot() +
   theme_void() +
