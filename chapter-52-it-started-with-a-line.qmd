@@ -20,6 +20,8 @@ Before we go any deeper into statistics, we need to either learn or review some 
 
 > *"What you see, well, you might not know; You get the feelin', comin' after the glow" --- The joker & the thief by Wolfmother*
 
+If you have never studied statistics before, or have only covered the basics, you may be surprised to learn that everything in statistics revolves around squares. However, this is only true for parametric statistics, which is where we want to start. In the following figure on the left side, you can see a square. A square has the same side length $a$ on all sides, as well as a square area $a^2$. If we want to find the side length of a square and only know its area, we can take the square root $\sqrt{\phantom{a}}$ shown on the right side. This is a simple geometry, but an important one to remember. We will need to refer to squares repeatedly throughout this book.
+
 ```{r}
 #| message: false
 #| echo: false
@@ -67,7 +69,9 @@ p1_square + p2_square_root +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+Now, let's assume that there are lots of squares. Where these squares originate is not currently important. We have these squares and want to summarise them. A standard statistical procedure is to calculate the area of each square and then add up the areas. We call this new square the sum of squares. The sum of the squares is used so often that it is abbreviated to SS.
 
+The following figure shows four squares labelled $a_1, ..., a_4$ on the left. Each square has its own area, labelled $a_1^2, ..., a_4^2$. In order to work with these squares, we will now add up their areas. The sum of the squares is shown on the right. The square root describes the length of the side of the sum of squares. We will use the sum of squares and the square root of the sum of squares repeatedly in our further analysis. They may not appear under the same names, but we will see the squares again.
 
 ```{r}
 #| message: false
@@ -76,7 +80,7 @@ p1_square + p2_square_root +
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "Visualisation of the calculation of the sum of squares. **(A)** The area of each square is determined. **(B)** All the areas are then combined to form one large square. The square root can then be used for further statistical analysis."
+#| fig-cap: "Visualisation of the calculation of the sum of squares. **(A)** The area of each square is determined. **(B)** All the areas are then combined to form one large square and then called sum of squares. The square root can then be used for further statistical analysis."
 #| label: fig-square-sum
 
 p1_square_many <- ggplot() +
