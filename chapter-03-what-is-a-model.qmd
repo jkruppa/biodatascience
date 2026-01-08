@@ -73,11 +73,7 @@ A sentence why we use $y$ and not $x$ for mean and other stuff.
 #| fig-align: center
 #| fig-height: 5
 #| fig-width: 15
-#| fig-cap: "Das kausale und prädiktive Modell im statistischen Modellieren für den simplen Fall. In allen Fällen ist der Outcome $y$ normalverteilt. **(A)** *Explanatory model* -- Wie verändert sich der Outcome $y$, wenn sich die kontinuierliche Influencer $x$ ändert? Wie ist der numerische Zusammenhang zwischen $y$ und $x$? Eine Frage nach der Steigung der Graden. **(B)** *Explanatory model* -- Wie verändert sich der Outcome $y$, wenn sich die kategoriale Influencer als Faktor $f_A$ ändert? Wie ist der numerische Zusammenhang zwischen $y$ und $f_A$? Eine Frage nach der Steigung der Graden. **(C)** *Prädikitives Modell* -- Wenn $y$ und $x$ gemessen wurden, wie sehen dann die Werte von $y$ für neue $x$-Werte aus? Können wir mit der Influencer $x$ die neuen Outcomee in $y$ vorhersagen? *[Zum Vergrößern anklicken]*"
-
-set.seed(20240329)
-cbbPalette <- c("#000000", "#FCA636FF", "#0D0887FF", "#009E73", 
-                "#F0E442", "#0072B2", "#D55E00", "#B12A90FF")
+#| fig-cap: "Visualisation of the causal and predictive model in statistical modelling for a simple model. In all cases, the outcome $Y$ is normally distributed. **(A)** *Explanatory model:* How does the outcome y change when the continuous influencer $X$ changes? What is the numerical relationship between $Y$ and $X$? This is a question about the slope of the line. **(B)** *Explanatory model:* How does the outcome $Y$ change when the categorical influencer as factor $f_A$ changes? What is the numerical relationship between $Y$ and $f_A$? This is a question about the slope of the line and the difference between the predicted means of each group. **(C)** *Predictive model:* If $Y$ and $X$ have been measured, what are the values of $Y$ for new $X$ values? Can we use the influencer $X$ to predict new $Y$ outcomes?"
 
 simple_tbl <- tibble(jump_length = c(1.2, 1.5, 1.8, 1.3, 1.7, 2.6, 1.8, 2.7, 2.6),
                      weight = c(0.8, 0.9, 1, 1.2, 1.9, 2, 2.7, 2.8, 2.9),
@@ -98,7 +94,7 @@ group_tbl <- tibble(f = gl(2, 5, labels = c("A.1", "A.2")),
 
 group_fit <- lm(y ~f, data = group_tbl)
 
-p14 <- 
+p_explanatory_fct_model <- 
   group_tbl |> 
 ggplot(aes(as.numeric(f), y)) +
   theme_minimal() +
@@ -133,7 +129,7 @@ ggplot(aes(as.numeric(f), y)) +
        subtitle = "What are the group mean values of Y for A?") 
 
 
-p11 <- 
+p_explanatory_cov_model <- 
   ggplot(filter(pred_tbl, status == "observed"), 
               aes(weight, jump_length, color = status, shape = status)) +
   labs(x = expression(x[1]), y = "y", color = "", shape = "",
@@ -171,7 +167,7 @@ p11 <-
              curvature = -0.5, color = "#FCA636FF") +
   labs(x = "Influencer (X)", y = "Outcome (Y)")
 
-p12 <- ggplot(pred_tbl, aes(weight, jump_length, color = status, shape = status)) +
+p_predcited_cov_model <- ggplot(pred_tbl, aes(weight, jump_length, color = status, shape = status)) +
   stat_smooth(method = "lm", se = FALSE, fullrange = TRUE, 
               color = "gray", linetype = 1) +
   labs(x = expression(x[1]), y = "y", color = "", shape = "",
@@ -199,7 +195,7 @@ p12 <- ggplot(pred_tbl, aes(weight, jump_length, color = status, shape = status)
              curvature = -0.4, color = "#FCA636FF")  +
   labs(x = "Influencer (X)", y = "Outcome (Y)")
 
-p11 + p14 + p12 +
+p_explanatory_cov_model + p_explanatory_fct_model + p_predcited_cov_model +
   plot_layout(ncol = 3) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
