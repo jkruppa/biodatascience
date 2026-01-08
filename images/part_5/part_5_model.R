@@ -120,4 +120,72 @@ p2_line_squared <- ggplot() +
   labs(title = "This is a squared line") +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"))
+
+
+
+p1_square <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1.25)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1)) +
+  geom_tile(aes(x = 0, y = 0, width = 2, height = 2),
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = 0, y = 0, label = expression(a^2), 
+           size = 7.5, color = "black") +
+  annotate("text", x = 0, y = -1.15, label = expression("a"), color = "#FCA636FF", 
+           size = 6, fontface = 2) +
+  annotate("text", x = 1.15, y = 0, label = expression("a"), color = "#FCA636FF", 
+           size = 6, fontface = 2, angle = -90) +
+  labs(title = "This is a square") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p2_square_root <- ggplot() +
+  theme_void() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1.25)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1.25, 1)) +
+  geom_tile(aes(x = 0, y = 0, width = 2, height = 2), linetype = 2,
+            fill = "#FCA63680", color = "#FCA63680", alpha = 0.1, linewidth = 0.75) +
+  annotate("segment", x = 1, y = -1, xend = 1, yend = 1, linewidth = 1.75, color = "#FCA636FF") +
+  annotate("text", x = 1.15, y = 0, label = expression(sqrt(phantom(aa))), size = 6.5, 
+           color = "#FCA636FF", angle = -90) +
+  labs(title = "This is a square root") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p1_square_many <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
+  geom_tile(aes(x = c(-0.5, -0.5, 0.5, 0.5), y = c(-0.5, 0.5, -0.5, 0.5), 
+                width = c(0.5, 1, 0.75, 0.45), 
+                height = c(0.5, 1, 0.75, 0.45)), linetype = 1,
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = c(-0.5, -0.5, 0.5, 0.5), y = c(-0.5, 0.5, -0.5, 0.5), 
+           label = c(expression(a[1]^2), expression(a[2]^2), expression(a[3]^2), expression(a[4]^2)), 
+           size = 6, color = "black") +
+  labs(title = "This are many squares") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
+
+p2_square_sum <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_equal() +
+  scale_x_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
+  scale_y_continuous(breaks = seq(-5, 5, 1), limits = c(-1, 1)) +
+  geom_tile(aes(x = 0, y = 0, width = 1.39, height = 1.39),
+            fill = "#FCA63680", color = "#FCA636FF", alpha = 0.2, linewidth = 0.75) +
+  annotate("text", x = 0, y = 0, size = 7.5, color = "black", label = expression(sum()*a[i]^2),
+           fontface = 2) +
+  annotate("text", x = 0, y = -0.875, label = expression(sqrt(sum())), 
+           size = 5, color = "#FCA636FF") +
+  annotate("text", x = 0.875, y = 0, label = expression(sqrt(sum())),
+           size = 5, color = "#FCA636FF", angle = -90) +
+  labs(title = "This is the sum of squares") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"))
   

@@ -11,22 +11,21 @@ source("images/part_0/part_0_model.R")
 
 Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.
 
-
 ## General background
 
-| Symbol | Name | Application | Description |
-|:--------------:|:-------------------|:---------------|:-------------------|
-| $y$ | **outcome**, response, endpoint, dependent variable |  | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
-| $x$ | **influencer**, influential variable, risk factor, fixed effect, independent variable |  | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
-| $z$ | **random effect** |  | *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* |
-| $x$ | **explanator**, explanatory variable | Explanation | *The influencer is used to describe or explain the outcome.* |
-| $x$ | **predictor**, predictive variable | Prediction | *The influencer is used to predict the outcome.* |
-| $x$ | **focal explanator**, **focal predictor**, focal variable | Main effect | *In a model with multiple influencers, the focal variable is the variable of primary interest.* |
-| $c$ | **covariate**, covariable | Continuous $x$ | *The influencer is a numeric variable with continuous values.* |
-| $f_A$ | **factor A**, factorial variable, categorical variable | Categorical $x$ | *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* |
-| $A.1$ to $A.j$ | **levels**, groups, treatment groups | Factor $f_A$ | *The discrete groups included in one factor A.* |
+| Name | Symbol | Description |
+|:------------------|:----------------:|:------------------|
+| **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
+| **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
+| **random effect** | $z$ | *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* |
+| **explanator**, explanatory variable | $x$ | **Explanation** --- *The influencer is used to describe or explain the change of the outcome.* |
+| **predictor**, predictive variable | $x$ | **Prediction** --- *The influencer is used to predict values of the outcome.* |
+| **focal explanator**, **focal predictor**, focal variable | $x$ | **Main effect** --- *In a model with multiple influencers, the focal variable is the variable of primary interest.* |
+| **covariate**, covariable | $c$ | **Continuous $\boldsymbol{x}$** --- *The influencer is a numeric variable with continuous values.* |
+| **factor A**, factorial variable, categorical variable | $f_A$ | **Categorical $\boldsymbol{x}$** ---  *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* |
+| **levels**, groups, treatment groups | $A.1$ to $A.j$ | *The discrete groups included in one factor $\boldsymbol{f_A}$.* |
 
-: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression tbl-colwidths="$$20, 5, 30, 45$$"}
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
 
 A sentence why we use $y$ and not $x$ for mean and other stuff.
 
@@ -66,7 +65,6 @@ p_lhs_rhs
 p_model_abstract
 ```
 
-
 ```{r}
 #| message: false
 #| echo: false
@@ -79,7 +77,6 @@ p_model_abstract
 p_model_exp_simple_reg
 ```
 
-
 ```{r}
 #| message: false
 #| echo: false
@@ -91,6 +88,7 @@ p_model_exp_simple_reg
 #| label: fig-model-in-R-5
 p_simple_model
 ```
+
 ```{r}
 #| message: false
 #| echo: false
@@ -102,7 +100,6 @@ p_simple_model
 #| label: fig-model-in-R-6
 p_mult_model
 ```
-
 
 ```{r}
 #| message: false
@@ -167,9 +164,7 @@ c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
 c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
 ```
 
-> *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop
-Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*
-
+> *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*
 
 ## R packages used
 
