@@ -124,6 +124,8 @@ p1_square_many + p2_square_sum +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+So far, this has not been very complicated. You might already remember the geometry from seeing a square. The tricky part is that we will work with mathematical expressions that are essentially squares, but don't look like them. Now let's combine a line with a square. Or answer the question of why a line can be expressed by a square.
+
 ### The line as a square
 
 ```{r}
