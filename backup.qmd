@@ -70,4 +70,16 @@ p2_square_sum <- ggplot() +
         plot.subtitle = element_text(size = 12, face = "italic"))
 ```
 
+| Name | Symbol | Description |
+|:------------------|:----------------:|:------------------|
+| **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
+| **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
+| **random effect** | $z$ | *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* |
+| **explanator**, explanatory variable | $x$ | **Explanation** --- *The influencer is used to describe or explain the change of the outcome.* |
+| **predictor**, predictive variable | $x$ | **Prediction** --- *The influencer is used to predict values of the outcome.* |
+| **focal explanator**, **focal predictor**, focal variable | $x$ | **Main effect** --- *In a model with multiple influencers, the focal variable is the variable of primary interest.* |
+| **covariate**, covariable | $c$ | **Continuous $\boldsymbol{x}$** --- *The influencer is a numeric variable with continuous values.* |
+| **factor A**, factorial variable, categorical variable | $f_A$ | **Categorical $\boldsymbol{x}$** ---  *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* |
+| **levels**, groups, treatment groups | $A.1$ to $A.j$ | *The discrete groups included in one factor $\boldsymbol{f_A}$.* |
 
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}

@@ -1,4 +1,4 @@
-```{r echo = FALSE, warning = FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
 source("init.R")
 source("images/part_0/part_0_model.R")
 ```
@@ -13,19 +13,44 @@ Imagine you are standing on a globe but still believe it is flat. You are standi
 
 ## General background
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-1
+p_lhs_rhs
+```
+
 | Name | Symbol | Description |
-|:------------------|:----------------:|:------------------|
+|:----------------------|:------:|:----------------------------------------|
 | **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
 | **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
-| **random effect** | $z$ | *A factor that provides a description of an grouping variable, which is not part of the controlled experimental setting.* |
+
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
+
+text
+
+| Name | Symbol | Description |
+|:----------------------|:------:|:----------------------------------------|
 | **explanator**, explanatory variable | $x$ | **Explanation** --- *The influencer is used to describe or explain the change of the outcome.* |
 | **predictor**, predictive variable | $x$ | **Prediction** --- *The influencer is used to predict values of the outcome.* |
 | **focal explanator**, **focal predictor**, focal variable | $x$ | **Main effect** --- *In a model with multiple influencers, the focal variable is the variable of primary interest.* |
-| **covariate**, covariable | $c$ | **Continuous $\boldsymbol{x}$** --- *The influencer is a numeric variable with continuous values.* |
-| **factor A**, factorial variable, categorical variable | $f_A$ | **Categorical $\boldsymbol{x}$** ---  *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* |
-| **levels**, groups, treatment groups | $A.1$ to $A.j$ | *The discrete groups included in one factor $\boldsymbol{f_A}$.* |
 
-: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression-2}
+
+text
+
+| Name | Symbol | Description |
+|:----------------------|:------:|:----------------------------------------|
+| **covariate**, covariable | $c$ | **Continuous** $\boldsymbol{x}$ --- *The influencer is a numeric variable with continuous values.* |
+| **factor A**, factorial variable, categorical variable | $f_A$ | **Categorical** $\boldsymbol{x}$ --- *The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.* |
+| **levels**, groups, treatment groups | $A.1$ to $A.j$ | *The discrete groups included in one factor* $\boldsymbol{f_A}$. |
+
+: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression-3}
 
 A sentence why we use $y$ and not $x$ for mean and other stuff.
 
@@ -39,19 +64,149 @@ A sentence why we use $y$ and not $x$ for mean and other stuff.
 
 @gilchrist1984statistical [Statistical modelling](https://nzdr.ru/data/media/biblio/kolxoz/M/MV/MVsa/Gilchrist%20W.%20Statistical%20modelling%20with%20quantile%20functions%20(Chapman,%202000)(ISBN%201584881747)(317s)_MVsa_.pdf)
 
-## Theoretical background
 
 ```{r}
-#| message: false
 #| echo: false
+#| message: false
 #| warning: false
+#| label: fig-scatter-modeling-R-01
 #| fig-align: center
-#| fig-height: 2
-#| fig-width: 7
-#| fig-cap: "foo"
-#| label: fig-model-in-R-1
-p_lhs_rhs
+#| fig-height: 5
+#| fig-width: 15
+#| fig-cap: "Das kausale und prädiktive Modell im statistischen Modellieren für den simplen Fall. In allen Fällen ist der Outcome $y$ normalverteilt. **(A)** *Explanatory model* -- Wie verändert sich der Outcome $y$, wenn sich die kontinuierliche Influencer $x$ ändert? Wie ist der numerische Zusammenhang zwischen $y$ und $x$? Eine Frage nach der Steigung der Graden. **(B)** *Explanatory model* -- Wie verändert sich der Outcome $y$, wenn sich die kategoriale Influencer als Faktor $f_A$ ändert? Wie ist der numerische Zusammenhang zwischen $y$ und $f_A$? Eine Frage nach der Steigung der Graden. **(C)** *Prädikitives Modell* -- Wenn $y$ und $x$ gemessen wurden, wie sehen dann die Werte von $y$ für neue $x$-Werte aus? Können wir mit der Influencer $x$ die neuen Outcomee in $y$ vorhersagen? *[Zum Vergrößern anklicken]*"
+
+set.seed(20240329)
+cbbPalette <- c("#000000", "#FCA636FF", "#0D0887FF", "#009E73", 
+                "#F0E442", "#0072B2", "#D55E00", "#B12A90FF")
+
+simple_tbl <- tibble(jump_length = c(1.2, 1.5, 1.8, 1.3, 1.7, 2.6, 1.8, 2.7, 2.6),
+                     weight = c(0.8, 0.9, 1, 1.2, 1.9, 2, 2.7, 2.8, 2.9),
+                     grp = as_factor(c("Gruppe 1", "Gruppe 1", "Gruppe 1", "Gruppe 1", "Gruppe 2", "Gruppe 2", "Gruppe 2", "Gruppe 2", "Gruppe 2")))
+
+fit_1 <- lm(jump_length ~ weight, data = simple_tbl)
+
+pred_tbl <- bind_rows(mutate(simple_tbl, status = "observed"),
+                      tibble(weight = c(1.7, 1.4, 2.1, 3.0),
+                             jump_length = predict(fit_1, 
+                                                   newdata = tibble(weight)),
+                             status = "predicted")) |> 
+  mutate(status = factor(status, levels = c("predicted", "observed")))
+
+group_tbl <- tibble(f = gl(2, 5, labels = c("A.1", "A.2")),
+       y = c(0.9, 1.5, 1.7, 1.3, 1.2,  
+             2.7, 2.5, 2.8, 2.1, 2.0)) 
+
+group_fit <- lm(y ~f, data = group_tbl)
+
+p14 <- 
+  group_tbl |> 
+ggplot(aes(as.numeric(f), y)) +
+  theme_minimal() +
+  geom_line(aes(y = predict(group_fit)), color = "#B12A90FF", linewidth = 1) +
+  geom_point(color = "gray50", alpha = 0.5, size = 4) +
+  stat_summary(fun.data=mean_sdl, , fun.args = list(mult = 1), 
+               geom="pointrange", shape = 23, 
+               fill = c("#0D088780", "#0D088780"), size = 0.75) +
+  annotate("text", x = 0.75, y = 3, hjust = "left", color = "#B12A90FF", size = 4, 
+           label = "Slope as difference between\nmean values") +
+  geom_curve(x = 1.3, y = 2.95, xend = 1.75, yend = 2.2,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.4, color = "#B12A90FF") +
+  annotate("text", x = 1.5, y = 1, hjust = "left", color = "#0D0887FF", 
+           size = 5, label = "predicted", fontface = 2) +
+  geom_curve(x = 1.45, y = 1, xend = 1.025, yend = 1.25,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.25, color = "#0D0887FF")  +
+  geom_curve(x = 2, y = 1, xend = 2.05, yend = 2.35,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.5, color = "#0D0887FF")  +
+  ylim(0.25, 3.25) + 
+  xlim(0.5, 2.5) +
+  theme(legend.position = "none",
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text = element_text(size = 12),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        title = element_text(size = 14, face = "bold")) +
+  labs(x = "Factor A", y = "Outcome (Y)",
+       title = "Explanatory model",
+       subtitle = "What are the group mean values of Y for A?") 
+
+
+p11 <- 
+  ggplot(filter(pred_tbl, status == "observed"), 
+              aes(weight, jump_length, color = status, shape = status)) +
+  labs(x = expression(x[1]), y = "y", color = "", shape = "",
+       title = "Explanatory model",
+       subtitle = "If X changes, how does Y change?") +
+  geom_point(size = 4) +
+  theme_minimal() +
+  scale_color_okabeito() +
+  xlim(0.25, 3.25) + ylim(0.25, 3.25) +
+  theme(legend.position = "none",
+       axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+       plot.subtitle = element_text(size = 12, face = "italic"),
+        axis.text = element_text(size = 12),
+        title = element_text(size = 14, face = "bold")) +
+  annotate("text", x = 0.5, y = 3, hjust = "left", color = "#0D0887FF", size = 4, 
+           label = TeX(r"($y = 0.02 + 1.04 \cdot x$)")) +
+  annotate("text", x = 0.5, y = 2.8, hjust = "left", color = "#0D0887FF", size = 4, 
+           label = TeX(r"($r = 0.76\; (p<0.001)$)")) +
+  annotate("text", x = 0.5, y = 2.6, hjust = "left", color = "#0D0887FF", size = 4, 
+           label = TeX(r"($R^2 = 0.58$)")) +
+  geom_curve(x = 1.6, y = 3, xend = 2.5, yend = 2.3,
+             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
+             curvature = -0.5, color = "#0D0887FF") +
+  geom_smooth(method = "lm", se = FALSE, color = "#0D0887FF") +
+  geom_smooth(method = "loess", se = FALSE, color = "#FCA636FF") +    
+  annotate("text", x = 2, y = 1, hjust = "left", color = "#FCA636FF", size = 4, 
+           label = TeX(r"($y = 1.04 \cdot x - 2.11 \cdot x^2$)")) +
+  annotate("text", x = 2, y = 0.8, hjust = "left", color = "#FCA636FF", size = 4, 
+           label = TeX(r"($r = 0.89\; (p<0.001)$)")) +
+  annotate("text", x = 2, y = 0.6, hjust = "left", color ="#FCA636FF", size = 4, 
+           label = TeX(r"($R^2 = 0.71$)"))   +
+  geom_curve(aes(x = 1.9, y = 1, xend = 1.3, yend = 1.5),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.5, color = "#FCA636FF") +
+  labs(x = "Influencer (X)", y = "Outcome (Y)")
+
+p12 <- ggplot(pred_tbl, aes(weight, jump_length, color = status, shape = status)) +
+  stat_smooth(method = "lm", se = FALSE, fullrange = TRUE, 
+              color = "gray", linetype = 1) +
+  labs(x = expression(x[1]), y = "y", color = "", shape = "",
+       title = "Predictive model",
+       subtitle = "What values of Y does the model predict for X?") +
+  geom_point(size = 4) +
+  theme_minimal() +
+  scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.8) +
+  xlim(0.25, 3.25) + ylim(0.25, 3.25) +
+  theme(legend.position = "none",
+        axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        axis.text = element_text(size = 12),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        title = element_text(size = 14, face = "bold")) +
+  annotate("text", x = 0.65, y = 3, hjust = "left", color = "#0D0887FF", 
+           size = 5, label = "predicted", fontface = 2) +
+  annotate("text", x = 2, y = 0.5, hjust = "left", color = "#FCA636FF", 
+           size = 5, label = "observed", fontface = 2) +
+  geom_curve(x = 1.4, y = 3, xend = 2.1, yend = 2.2,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.5, color = "#0D0887FF") +
+  geom_curve(x = 1.9, y = 0.5, xend = 0.8, yend = 1.1,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.4, color = "#FCA636FF")  +
+  labs(x = "Influencer (X)", y = "Outcome (Y)")
+
+p11 + p14 + p12 +
+  plot_layout(ncol = 3) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+
+## Theoretical background
 
 ```{r}
 #| message: false

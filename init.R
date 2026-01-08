@@ -1,7 +1,6 @@
 ## load packages
 pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork, lme4,
-               #gghalves, 
-               ggdist, see, ggtext, ggimage, ggrepel,
+               Hmisc, ggdist, see, ggtext, ggimage, ggrepel, latex2exp,
                conflicted)
 conflicted::conflicts_prefer(dplyr::filter)
 ## global seed
@@ -24,7 +23,6 @@ col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
 c6_pal <- col_pal(10, 0.5)
 c6_a5_pal <- col_pal(6, 0.5)
 c2_end09 <- plasma(n = 2, end = 0.9)
-
 ##
 foo_pal_1 <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
 foo_pal_2 <- c("#0D088780", "#6A00A880", "#B12A9080", "#E1646280", "#FCA63680", "#F0F92180")
