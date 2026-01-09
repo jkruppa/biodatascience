@@ -331,38 +331,39 @@ p_lhs_rhs_detail <- ggplot() +
 
 p_problem_x <- ggplot() +
   theme_void() +
-  scale_x_continuous(limits = c(-10, 10)) +
-  scale_y_continuous(limits = c(-10, 10)) +
-  geom_tile(aes(x = 1.15, y = 0, width = 7.4, height = 7.4), fill = "#0D088780", alpha = 0.25,
-            color = "#0D0887FF", linewidth = 0.5) +
-  geom_curve(aes(x = 5.2, y = 0, xend = 7, yend = -5),
-             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
-             curvature = -0.3, color = "#0D0887FF") +
-  annotate("text", x = 5, y = -7, label = "Independence", size = 5, 
-           fontface = 3, color = "#0D0887FF", hjust = "left") +
-  geom_tile(aes(x = c(-1.5, 1.2, 3.9), y = 0, width = 1.5, height = 6), 
-            fill = "white", color = "white", linewidth = 0.5) +
-  geom_tile(aes(x = c(-1.5, 1.2, 3.9), y = 0, width = 1.5, height = 6), 
-            fill = "#FCA63680", color = "#FCA636FF", linewidth = 0.5) +
-  annotate("text", x = -10, y = -8, label = "Unit, missing values,\noutlier, variance homogeneity", size = 4.5, 
-           fontface = 3, color = "#FCA636FF", hjust = "left") +
-  geom_curve(aes(x = -1.5, y = -4.5, xend = -3, yend = -7),
+  ## theme_minimal() +
+  scale_x_continuous(limits = c(-10, 10), breaks = -10:10) +
+  scale_y_continuous(limits = c(-9.5, 8)) +
+  geom_shape(data = tibble(x = c(-3.5, 6.5, 6.5, -3.5), 
+                           y = c(-9.5, -9.5, 5, 5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", -3.75, 2.5, label = expression(bold(Y)~~"~"), size = 10, hjust = "right") +
+  annotate("text", 0, 2.5, label = expression(bold(X[1]^phantom(2))~~"+"), size = 10, hjust = "right") +
+  annotate("text", 3.75, 2.5, label = expression(bold(X[2]^phantom(2))~~"+"), size = 10, 
+           hjust = "right") +
+  annotate("text", 6.5, 2.5, label = expression(bold(X[3])^phantom(2)), size = 10, hjust = "right") +
+  annotate("text", 6, 2.5, label = expression(phantom(bold(X[3]))^2), size = 10, hjust = "right", 
+           color = "#B12A90FF") +
+  annotate("text", x = -3, y = 8, label = "additive", size = 4.5, 
+           fontface = 2, color = "#FCA636FF", hjust = "right") +
+  geom_curve(aes(x = -2.75, y = 8, xend = -0.5, yend = 3.75),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
              curvature = -0.3, color = "#FCA636FF") +
-  geom_curve(aes(x = 1.2, y = -4.5, xend = -3, yend = -7),
+  geom_curve(aes(x = -2.75, y = 8, xend = 3, yend = 3.75),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
-             curvature = -0.35, color = "#FCA636FF") +
-  geom_curve(aes(x = 3.8, y = -4.5, xend = -3, yend = -7),
+             curvature = -0.2, color = "#FCA636FF") +
+  annotate("text", x = 7.5, y = 7.25, label = "linear/\nnon linear", size = 4.5, 
+           fontface = 2, color = "#B12A90FF", hjust = "left") +
+  geom_curve(aes(x = 7.25, y = 7.25, xend = 6, yend = 4.5),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
-             curvature = -0.35, color = "#FCA636FF") +
-  annotate("text", x = -1.3, y = 9, label = "Confounder / collider / mediator", size = 5, 
-           fontface = 3, color = "#B12A90FF", hjust = "center") +
-  geom_curve(aes(x = 1.2, y = 4.5, xend = -1.5, yend = 4.5),
-             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
-             curvature = 0.5, color = "#B12A90FF") +
-  geom_curve(aes(x = 1.2, y = 4.5, xend = -4, yend = 3),
-             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
-             curvature = 0.5, color = "#B12A90FF")  +
-  annotate("text", 0, 0, 
-           label = expression(bold(Y)~"~"~~bold(X[1])~"+"~bold(X[2])~"+"~bold(X[3])), 
-           size = 10, fontface = 2, hjust = "center") 
+             curvature = 0.2, color = "#B12A90FF") +
+  annotate("text", x = -3, y = -1.5, label = "missing values", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "left") +
+  annotate("text", x = -3, y = -4.5, label = "unit of influencer", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "left") +
+  annotate("text", x = -3, y = -7.5, label = "outlier", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "left") +
+  annotate("text", x = 6, y = -3, label = "independence", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "right") +
+  annotate("text", x = 6, y = -7.5, label = "variance heterogenity", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "right") 

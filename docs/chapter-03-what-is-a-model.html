@@ -435,7 +435,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 09. January 2026 at 10:02:52</em></p>
+<p><em>Last modified on 09. January 2026 at 11:29:18</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -1589,72 +1589,38 @@ Figure&nbsp;3.11: foo
 <span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
 <span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2.5</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2.75</span></span>
 <span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
 <span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo"</span></span>
 <span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-model-in-R-11</span></span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">1.15</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">width =</span> <span class="fl">7.4</span>, <span class="at">height =</span> <span class="fl">7.4</span>), <span class="at">fill =</span> <span class="st">"#0D088780"</span>, <span class="at">alpha =</span> <span class="fl">0.25</span>,</span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>            <span class="at">color =</span> <span class="st">"#0D0887FF"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">5.2</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">7</span>, <span class="at">yend =</span> <span class="sc">-</span><span class="dv">5</span>),</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"#0D0887FF"</span>) <span class="sc">+</span></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">7</span>, <span class="at">label =</span> <span class="st">"Independence"</span>, <span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>           <span class="at">fontface =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#0D0887FF"</span>, <span class="at">hjust =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.2</span>, <span class="fl">3.9</span>), <span class="at">y =</span> <span class="dv">0</span>, <span class="at">width =</span> <span class="fl">1.5</span>, <span class="at">height =</span> <span class="dv">6</span>), </span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>            <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">1.2</span>, <span class="fl">3.9</span>), <span class="at">y =</span> <span class="dv">0</span>, <span class="at">width =</span> <span class="fl">1.5</span>, <span class="at">height =</span> <span class="dv">6</span>), </span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>            <span class="at">fill =</span> <span class="st">"#FCA63680"</span>, <span class="at">color =</span> <span class="st">"#FCA636FF"</span>, <span class="at">linewidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="dv">10</span>, <span class="at">y =</span> <span class="sc">-</span><span class="dv">8</span>, <span class="at">label =</span> <span class="st">"Unit, missing values,</span><span class="sc">\n</span><span class="st">outlier, variance homogeneity"</span>, <span class="at">size =</span> <span class="fl">4.5</span>, </span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>           <span class="at">fontface =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#FCA636FF"</span>, <span class="at">hjust =</span> <span class="st">"left"</span>) <span class="sc">+</span></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="sc">-</span><span class="fl">1.5</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">4.5</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">yend =</span> <span class="sc">-</span><span class="dv">7</span>),</span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="sc">-</span><span class="fl">0.3</span>, <span class="at">color =</span> <span class="st">"#FCA636FF"</span>) <span class="sc">+</span></span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">1.2</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">4.5</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">yend =</span> <span class="sc">-</span><span class="dv">7</span>),</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="sc">-</span><span class="fl">0.35</span>, <span class="at">color =</span> <span class="st">"#FCA636FF"</span>) <span class="sc">+</span></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">3.8</span>, <span class="at">y =</span> <span class="sc">-</span><span class="fl">4.5</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">yend =</span> <span class="sc">-</span><span class="dv">7</span>),</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="sc">-</span><span class="fl">0.35</span>, <span class="at">color =</span> <span class="st">"#FCA636FF"</span>) <span class="sc">+</span></span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="sc">-</span><span class="fl">1.3</span>, <span class="at">y =</span> <span class="dv">9</span>, <span class="at">label =</span> <span class="st">"Confounder / collider / mediator"</span>, <span class="at">size =</span> <span class="dv">5</span>, </span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>           <span class="at">fontface =</span> <span class="dv">3</span>, <span class="at">color =</span> <span class="st">"#B12A90FF"</span>, <span class="at">hjust =</span> <span class="st">"center"</span>) <span class="sc">+</span></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">1.2</span>, <span class="at">y =</span> <span class="fl">4.5</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="fl">1.5</span>, <span class="at">yend =</span> <span class="fl">4.5</span>),</span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"#B12A90FF"</span>) <span class="sc">+</span></span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_curve</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="fl">1.2</span>, <span class="at">y =</span> <span class="fl">4.5</span>, <span class="at">xend =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">yend =</span> <span class="dv">3</span>),</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>             <span class="at">arrow =</span> <span class="fu">arrow</span>(<span class="at">length =</span> <span class="fu">unit</span>(<span class="fl">0.03</span>, <span class="st">"npc"</span>), <span class="at">type =</span> <span class="st">"closed"</span>),</span>
-<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>             <span class="at">curvature =</span> <span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"#B12A90FF"</span>)  <span class="sc">+</span></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="dv">0</span>, <span class="dv">0</span>, </span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">expression</span>(<span class="fu">bold</span>(Y)<span class="sc">~</span><span class="st">"~"</span><span class="sc">~</span><span class="er">~</span><span class="fu">bold</span>(X[<span class="dv">1</span>])<span class="sc">~</span><span class="st">"+"</span><span class="sc">~</span><span class="fu">bold</span>(X[<span class="dv">2</span>])<span class="sc">~</span><span class="st">"+"</span><span class="sc">~</span><span class="fu">bold</span>(X[<span class="dv">3</span>])), </span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">10</span>, <span class="at">fontface =</span> <span class="dv">2</span>, <span class="at">hjust =</span> <span class="st">"center"</span>) </span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*</span></span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
-<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a>term</span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>:   what does it mean.</span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>itemize with max. 5-6 words</span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>p_problem_x </span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*</span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## R packages used</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>:   what does it mean.</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>itemize with max. 5-6 words</span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
