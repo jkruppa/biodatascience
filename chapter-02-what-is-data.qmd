@@ -102,6 +102,50 @@ ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
        title = "Science with data and model") 
 ```
 
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-model-in-R-11
+
+ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  scale_x_continuous(limits = c(-10, 10), breaks = -10:10) +
+  scale_y_continuous(limits = c(-9.5, 8)) +
+  geom_shape(data = tibble(x = c(-3.5, 6.5, 6.5, -3.5), 
+                           y = c(-9.5, -9.5, 5, 5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", -3.75, 2.5, label = expression(bold(Y)~~"~"), size = 10, hjust = "right") +
+  annotate("text", 0, 2.5, label = expression(bold(X[1]^phantom(2))~~"+"), size = 10, hjust = "right") +
+  annotate("text", 3.75, 2.5, label = expression(bold(X[2]^phantom(2))~~"+"), size = 10, 
+           hjust = "right") +
+  annotate("text", 6.5, 2.5, label = expression(bold(X[3])^phantom(2)), size = 10, hjust = "right") +
+  annotate("text", 6, 2.5, label = expression(phantom(bold(X[3]))^2), size = 10, hjust = "right", 
+           color = "#B12A90FF") +
+  annotate("text", x = -3, y = 8, label = "additive", size = 4.5, 
+           fontface = 2, color = "#FCA636FF", hjust = "right") +
+  geom_curve(aes(x = -2.75, y = 8, xend = -0.5, yend = 3.75),
+             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
+             curvature = -0.3, color = "#FCA636FF") +
+  geom_curve(aes(x = -2.75, y = 8, xend = 3, yend = 3.75),
+             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
+             curvature = -0.2, color = "#FCA636FF") +
+  annotate("text", x = 7.5, y = 7.25, label = "linear/\nnon linear", size = 4.5, 
+           fontface = 2, color = "#B12A90FF", hjust = "left") +
+  geom_curve(aes(x = 7.25, y = 7.25, xend = 6, yend = 4.5),
+             arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
+             curvature = 0.2, color = "#B12A90FF") +
+  annotate("text", x = -3, y = -2, label = "additive", size = 4.5, 
+           fontface = 2, color = "#0D0887FF", hjust = "left")   
+```
+
+
 ## Alternatives
 
 Further tutorials and R packages on XXX
