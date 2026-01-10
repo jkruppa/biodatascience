@@ -435,22 +435,22 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 10. January 2026 at 20:30:51</em></p>
+<p><em>Last modified on 10. January 2026 at 21:03:09</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
 <p>Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.</p>
 <section id="what-is-a-model-in-statistics" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="what-is-a-model-in-statistics"><span class="header-section-number">3.1</span> What is a model in statistics?</h2>
-<p>I would like to start with a general example. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (<em>LHS</em>) we find the outcome. The result of the experiment is the measured value. Sometimes, using these words can cause people confusion, but for now we’ll stick to the idea that the result of something is measured in an experiment. On the right side (<em>RHS</em>), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome.</p>
+<p>I would like to start with a simple example of a statistical model. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (<em>LHS</em>) we find the outcome. The result of an experiment is called the ‘outcome’. The outcome is the measured value. Sometimes, using these words can cause you confusion, but for now we’ll stick to the idea that the result of something is measured in an experiment. We will discover the outcome on the y-axis later on. Therefore, we abbreviate the outcome to Y. On the right side (<em>RHS</em>), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome. As the change will be on the x-axis, we abbreviate the influencer to X. More often than not, we have one outcome and multiple influencers. The following <a href="#fig-model-general" class="quarto-xref">Figure&nbsp;<span>3.1</span></a> shows how the left-hand side and the right-hand side are connected.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-model-in-R-1" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<div id="fig-model-general" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-model-in-R-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="chapter-03-what-is-a-model_files/figure-html/fig-model-in-R-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;3.1: Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde."><img src="chapter-03-what-is-a-model_files/figure-html/fig-model-in-R-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a>
+<div aria-describedby="fig-model-general-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="chapter-03-what-is-a-model_files/figure-html/fig-model-general-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;3.1: Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde."><img src="chapter-03-what-is-a-model_files/figure-html/fig-model-general-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-in-R-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-model-general-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3.1: Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde.
 </figcaption>
 </figure>
@@ -1298,7 +1298,7 @@ Figure&nbsp;3.11: foo
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## What is a model in statistics?</span></span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>I would like to start with a general example. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (*LHS*) we find the outcome. The result of the experiment is the measured value. Sometimes, using these words can cause people confusion, but for now we'll stick to the idea that the result of something is measured in an experiment. On the right side (*RHS*), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome.</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>I would like to start with a simple example of a statistical model. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (*LHS*) we find the outcome. The result of an experiment is called the 'outcome'. The outcome is the measured value. Sometimes, using these words can cause you confusion, but for now we'll stick to the idea that the result of something is measured in an experiment. We will discover the outcome on the y-axis later on. Therefore, we abbreviate the outcome to Y. On the right side (*RHS*), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome. As the change will be on the x-axis, we abbreviate the influencer to X. More often than not, we have one outcome and multiple influencers. The following @fig-model-general shows how the left-hand side and the right-hand side are connected.</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
@@ -1308,7 +1308,7 @@ Figure&nbsp;3.11: foo
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 2</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde."</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-model-in-R-1</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-model-general</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>p_lhs_rhs</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>

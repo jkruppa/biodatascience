@@ -13,7 +13,7 @@ Imagine you are standing on a globe but still believe it is flat. You are standi
 
 ## What is a model in statistics?
 
-I would like to start with a general example. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (*LHS*) we find the outcome. The result of the experiment is the measured value. Sometimes, using these words can cause people confusion, but for now we'll stick to the idea that the result of something is measured in an experiment. On the right side (*RHS*), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome.
+I would like to start with a simple example of a statistical model. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (*LHS*) we find the outcome. The result of an experiment is called the 'outcome'. The outcome is the measured value. Sometimes, using these words can cause you confusion, but for now we'll stick to the idea that the result of something is measured in an experiment. We will discover the outcome on the y-axis later on. Therefore, we abbreviate the outcome to Y. On the right side (*RHS*), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome. As the change will be on the x-axis, we abbreviate the influencer to X. More often than not, we have one outcome and multiple influencers. The following @fig-model-general shows how the left-hand side and the right-hand side are connected.
 
 ```{r}
 #| message: false
@@ -23,7 +23,7 @@ I would like to start with a general example. Perhaps you would like to see a mo
 #| fig-height: 2
 #| fig-width: 7
 #| fig-cap: "Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde."
-#| label: fig-model-in-R-1
+#| label: fig-model-general
 p_lhs_rhs
 ```
 
