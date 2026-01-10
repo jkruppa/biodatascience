@@ -11,7 +11,9 @@ source("images/part_0/part_0_model.R")
 
 Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.
 
-## General background
+## What is a model in statistics?
+
+I would like to start with a general example. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (*LHS*) we find the outcome. The result of the experiment is the measured value. Sometimes, using these words can cause people confusion, but for now we'll stick to the idea that the result of something is measured in an experiment. On the right side (*RHS*), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome.
 
 ```{r}
 #| message: false
@@ -20,7 +22,7 @@ Imagine you are standing on a globe but still believe it is flat. You are standi
 #| fig-align: center
 #| fig-height: 2
 #| fig-width: 7
-#| fig-cap: "foo"
+#| fig-cap: "Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde."
 #| label: fig-model-in-R-1
 p_lhs_rhs
 ```
@@ -30,7 +32,7 @@ p_lhs_rhs
 | **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
 | **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
 
-: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
+: Table of terms used in the statistical modelling for the left hand side and right hand side. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
 
 text
 
