@@ -20,7 +20,7 @@ theme_book <- function() {
 }
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
-c6_pal <- col_pal(10, 0.5)
+c6_pal <- col_pal(6, 1)
 c6_a5_pal <- col_pal(6, 0.5)
 c2_end09 <- plasma(n = 2, end = 0.9)
 ##

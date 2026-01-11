@@ -3,19 +3,18 @@ p_lhs_rhs <- ggplot() +
   annotate("text", 0, 0, label = "~", size = 10, fontface = 2, hjust = "center") +
   annotate("text", -1.5, 0, label = "Y", size = 10, fontface = 2, hjust = "center") +
   annotate("text", 1.5, 0, label = "X", size = 10, fontface = 2, hjust = "center") +
-  annotate("text", x = 4, y = -5, label = "Tilde", size = 6, 
+  annotate("text", x = 4, y = -4, label = "Tilde", size = 6, 
            fontface = 3, color = "gray50") +
   annotate("label", x = -4, y = 3, label = "LHS", size = 6, 
            fontface = 3, fill = "#FCA63680") +
   annotate("label", x = 4, y = 3, label = "RHS", size = 6, 
            fontface = 3, fill = "#FCA63680") +
-  geom_curve(aes(x = 3.1, y = -5.4, xend = 0, yend = -1),
+  geom_curve(aes(x = 3.1, y = -4.25, xend = 0, yend = -1),
              arrow = arrow(length = unit(0.03, "npc"), type = "closed"),
              curvature = -0.35, color = "gray50") +
   scale_x_continuous(limits = c(-10, 10)) +
   scale_y_continuous(limits = c(-6, 6)) +
-  labs(title = "Model notation",
-       caption = "LHS = left hand side\nRHS = right hand side")  +
+  #labs(caption = "LHS = left hand side\nRHS = right hand side")  +
   theme(plot.caption = element_text(face = "italic"),
         plot.title = element_text(size = 16, face = "bold"))
 

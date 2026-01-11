@@ -1,6 +1,5 @@
-```{r echo = FALSE, warning = FALSE}
+```{r echo = FALSE, warning = FALSE, message = FALSE}
 source("init.R")
-source("images/part_0/part_0_science.R")
 ```
 
 # What is science? {#sec-what-is-science}
@@ -9,55 +8,6 @@ source("images/part_0/part_0_science.R")
 
 > *"Reality is negotiable." --- Tim Ferriss*
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-vulcan
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-p_vulcan_observed + p_vulcan_model +
-  plot_layout(ncol = 2) +
-  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-habital
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-p_habital_observed + p_habital_model +
-  plot_layout(ncol = 2) +
-  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-hollow
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-
-
-p_hollow_observed + p_hollow_model +
-  plot_layout(ncol = 2) +
-  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
-```
 
 ## General background
 

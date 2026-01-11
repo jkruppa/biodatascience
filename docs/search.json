@@ -64,7 +64,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 General background\nLast modified on 27. November 2025 at 15:18:05\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\n2 What is this thing called Science?\n3 What is science\n4 What is science?\n5 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n6 Statistical Thinking for the 21st Century\n7 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "text": "1.1 General background\nLast modified on 11. January 2026 at 09:09:02\nFull quote\nIdea of hypotheses\nScience is guessing and falsification\n2 What is this thing called Science?\n3 What is science\n4 What is science?\n5 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n6 Statistical Thinking for the 21st Century\n7 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -273,7 +273,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.1 What is a model in statistics?\nLast modified on 10. January 2026 at 21:05:19\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nI would like to start with a simple example of a statistical model. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. On the left-hand side (LHS) we find the outcome. The result of an experiment is called the ‘outcome’. The outcome is the measured value. Sometimes, using these words can cause you confusion, but for now we’ll stick to the idea that the result of something is measured in an experiment. We will discover the outcome on the y-axis later on. Therefore, we abbreviate the outcome to Y. On the right side (RHS), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome. As the change will be on the x-axis, we abbreviate the influencer to X. More often than not, we have one outcome and multiple influencers. The following Figure 3.1 shows how the left-hand side and the right-hand side are connected.\nFigure 3.1: Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde.\ntext\ntext\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling\nFigure 3.2: Visualisation of the causal and predictive model in statistical modelling for a simple model. In all cases, the outcome \\(Y\\) is normally distributed. (A) Explanatory model: How does the outcome y change when the continuous influencer \\(X\\) changes? What is the numerical relationship between \\(Y\\) and \\(X\\)? This is a question about the slope of the line. (B) Explanatory model: How does the outcome \\(Y\\) change when the categorical influencer as factor \\(f_A\\) changes? What is the numerical relationship between \\(Y\\) and \\(f_A\\)? This is a question about the slope of the line and the difference between the predicted means of each group. (C) Predictive model: If \\(Y\\) and \\(X\\) have been measured, what are the values of \\(Y\\) for new \\(X\\) values? Can we use the influencer \\(X\\) to predict new \\(Y\\) outcomes?",
+    "text": "3.1 R packages used\nLast modified on 11. January 2026 at 16:35:41\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -316,8 +316,8 @@
     "objectID": "chapter-03-what-is-a-model.html#data",
     "href": "chapter-03-what-is-a-model.html#data",
     "title": "3  What is a model?",
-    "section": "3.4 Data",
-    "text": "3.4 Data",
+    "section": "3.2 Data",
+    "text": "3.2 Data",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -327,8 +327,8 @@
     "objectID": "chapter-03-what-is-a-model.html#alternatives",
     "href": "chapter-03-what-is-a-model.html#alternatives",
     "title": "3  What is a model?",
-    "section": "3.5 Alternatives",
-    "text": "3.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "3.3 Alternatives",
+    "text": "3.3 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -338,8 +338,8 @@
     "objectID": "chapter-03-what-is-a-model.html#glossary",
     "href": "chapter-03-what-is-a-model.html#glossary",
     "title": "3  What is a model?",
-    "section": "3.6 Glossary",
-    "text": "3.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "3.4 Glossary",
+    "text": "3.4 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -349,8 +349,8 @@
     "objectID": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "3  What is a model?",
-    "section": "3.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "3.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "3.5 The meaning of “Models of Reality” in this chapter.",
+    "text": "3.5 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -360,8 +360,8 @@
     "objectID": "chapter-03-what-is-a-model.html#summary",
     "href": "chapter-03-what-is-a-model.html#summary",
     "title": "3  What is a model?",
-    "section": "3.8 Summary",
-    "text": "3.8 Summary",
+    "section": "3.6 Summary",
+    "text": "3.6 Summary",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -372,7 +372,7 @@
     "href": "chapter-03-what-is-a-model.html#references",
     "title": "3  What is a model?",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\n[1] McCullagh P. What is a statistical model? The Annals of Statistics. 2002;30(5):1225-1310.\n\n\n[2] Appleton DR. What do we mean by a statistical model? Statistics in medicine. 1995;14(2):185-197.\n\n\n[3] Hand D. What is the purpose of statistical modeling? Harvard Data Science Review. 2019;1(1).\n\n\n[4] Spanos A. Where do statistical models come from? Revisiting the problem of specification. Lecture Notes-Monograph Series. Published online 2006:98-119.\n\n\n[5] Gilchrist W. Statistical Modelling. Wiley Chichester; 1984.",
+    "text": "References",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"

@@ -57,7 +57,7 @@ p_habital_observed <- ggplot() +
              color = "gray50", size = 1.5, curvature = 0.2,
   ) +
   annotate("label", x = 1.25, y = -3, hjust = "center", label = "Sunspots", size = 5,
-           color = "black") + 
+           color = "black", fill = "white") + 
   labs(title = "Observed",
        subtitle = "Black sunspots can be observed from Earth",
        caption = "The planets and their orbits are not drawn to scale") +
@@ -92,7 +92,7 @@ p_habital_model <- ggplot() +
              color = "gray50", size = 1.5, curvature = 0.3,
   ) +
   annotate("label", x = 0.1, y = -2.5, hjust = "center", label = "Cloud gaps", size = 5,
-           color = "black") + 
+           color = "black", fill = "white") + 
   labs(title = "Model",
        subtitle = "From the Moon, the black sunspots could look like cloud gaps,\nas they appear on Earth",
        caption = "The planets and their orbits are not drawn to scale") +

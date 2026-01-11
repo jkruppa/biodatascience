@@ -52,6 +52,7 @@ book:
       chapters:
       - chapter-51-statistical-modeling.qmd
       - chapter-52-it-started-with-a-line.qmd
+      - chapter-53-overview.qmd
   appendices:
     - appendix-a.qmd
 
