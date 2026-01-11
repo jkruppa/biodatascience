@@ -273,7 +273,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.0.1 Models in history\nLast modified on 11. January 2026 at 20:00:50\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nJohannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the centre and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits.\nYou might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.\nFollowing the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon’s orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.\nFigure 3.1: Deviation in Mercury’s orbit. (A) Observed orbit of Mercury, showing the deviation from the theoretical Newtonian model. (B) Model of the hypothetical planet Vulcan, which solved the deviation by pushing Mercury into the correct orbit.\nProblem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein’s theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.\nStill Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way.\nModels can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science.\nFigure 3.2: foo (A) foo (B) foo\nComing back to Newton.\nFigure 3.3: foo (A) foo (B) foo",
+    "text": "3.1 The difference between theory and model\nLast modified on 11. January 2026 at 20:42:44\nImagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometres below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometres above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation.\nWhat is a theory1\nReality can be seen through science by carrying out tiny experiments. These experiments are tiny in the sense that reality is overwhelmingly big, so every experiment is tiny in comparison.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -305,8 +305,8 @@
     "objectID": "chapter-03-what-is-a-model.html#r-packages-used",
     "href": "chapter-03-what-is-a-model.html#r-packages-used",
     "title": "3  What is a model?",
-    "section": "3.1 R packages used",
-    "text": "3.1 R packages used",
+    "section": "3.3 R packages used",
+    "text": "3.3 R packages used",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -316,8 +316,8 @@
     "objectID": "chapter-03-what-is-a-model.html#data",
     "href": "chapter-03-what-is-a-model.html#data",
     "title": "3  What is a model?",
-    "section": "3.2 Data",
-    "text": "3.2 Data",
+    "section": "3.4 Data",
+    "text": "3.4 Data",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -327,8 +327,8 @@
     "objectID": "chapter-03-what-is-a-model.html#alternatives",
     "href": "chapter-03-what-is-a-model.html#alternatives",
     "title": "3  What is a model?",
-    "section": "3.3 Alternatives",
-    "text": "3.3 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "3.5 Alternatives",
+    "text": "3.5 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -338,8 +338,8 @@
     "objectID": "chapter-03-what-is-a-model.html#glossary",
     "href": "chapter-03-what-is-a-model.html#glossary",
     "title": "3  What is a model?",
-    "section": "3.4 Glossary",
-    "text": "3.4 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "3.6 Glossary",
+    "text": "3.6 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -349,8 +349,8 @@
     "objectID": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-03-what-is-a-model.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "3  What is a model?",
-    "section": "3.5 The meaning of “Models of Reality” in this chapter.",
-    "text": "3.5 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "3.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "3.7 The meaning of “Models of Reality” in this chapter.\n\nModels of reality can exist in parallel.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -360,8 +360,8 @@
     "objectID": "chapter-03-what-is-a-model.html#summary",
     "href": "chapter-03-what-is-a-model.html#summary",
     "title": "3  What is a model?",
-    "section": "3.6 Summary",
-    "text": "3.6 Summary",
+    "section": "3.8 Summary",
+    "text": "3.8 Summary",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -372,7 +372,7 @@
     "href": "chapter-03-what-is-a-model.html#references",
     "title": "3  What is a model?",
     "section": "References",
-    "text": "References",
+    "text": "References\n\n\n\n\n\n\n[1] Fried EI. Theories and models: What they are, what they are for, and what they are about. Psychological Inquiry. 2020;31(4):336-344.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -1514,6 +1514,17 @@
     "crumbs": [
       "Statistical modeling",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-03-what-is-a-model.html#models-in-history",
+    "href": "chapter-03-what-is-a-model.html#models-in-history",
+    "title": "3  What is a model?",
+    "section": "3.2 Models in history",
+    "text": "3.2 Models in history\nJohannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits.\nYou might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.\nFollowing the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon’s orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.\n\n\n\n\n\n\n\n\nFigure 3.1: Deviation in Mercury’s orbit. (A) Observed orbit of Mercury, showing the deviation from the theoretical Newtonian model. (B) Model of the hypothetical planet Vulcan, which solved the deviation by pushing Mercury into the correct orbit.\n\n\n\n\n\nProblem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein’s theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.\nAlways remember that models of reality can exist in parallel. Newton’s laws of gravity can be used, even though we know they are wrong and general relativity is less wrong. Why not, right? This is science. We can only reject a model if new observations do not fit into it. Then we must find a new, improved model. However, Newton’s laws are useful in everyday life when we are not moving near the speed of light or relatively to a large mass. In contrast, your GPS only works because we know the General Theory of Relativity. Without this theory, it would not be possible to build and use satellite navigation systems. You can choose your reality and the models you apply.\n\nStill Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way.\n\n\n\n\n\n\n\n\nFigure 3.2: foo (A) foo (B) foo\n\n\n\n\n\nComing back to Newton.\n\n\n\n\n\n\n\n\nFigure 3.3: foo (A) foo (B) foo\n\n\n\n\n\n\n“Twistin’, shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La” — The Blues Brothers (1980) – Shake a Tail Feather",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
     ]
   }
 ]

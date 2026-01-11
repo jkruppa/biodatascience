@@ -9,11 +9,17 @@ source("images/part_0/part_0_science.R")
 
 > *"A quote." --- Dan Meyer*
 
-Imagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.
+Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometres below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometres above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation.
 
-### Models in history
+## The difference between theory and model
 
-Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the centre and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. 
+What is a theory @fried2020theories
+
+Reality can be seen through science by carrying out tiny experiments. These experiments are tiny in the sense that reality is overwhelmingly big, so every experiment is tiny in comparison.
+
+## Models in history
+
+Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. 
 
 You might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.
 
@@ -35,14 +41,16 @@ p_vulcan_observed + p_vulcan_model +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-Problem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein's theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.
+Problem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein's theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found. 
+
+Always remember that models of reality can exist in parallel. Newton's laws of gravity can be used, even though we know they are wrong and general relativity is less wrong. Why not, right? This is science. We can only reject a model if new observations do not fit into it. Then we must find a new, improved model. However, Newton's laws are useful in everyday life when we are not moving near the speed of light or relatively to a large mass. In contrast, your GPS only works because we know the General Theory of Relativity. Without this theory, it would not be possible to build and use satellite navigation systems. You can choose your reality and the models you apply.
+
 
 ---------
 
 
 Still Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way. 
 
-Models can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science. 
 
 
 ```{r}
@@ -100,7 +108,7 @@ term
 
 ## The meaning of "Models of Reality" in this chapter.
 
--   itemize with max. 5-6 words
+-   Models of reality can exist in parallel.
 
 ## Summary
 
