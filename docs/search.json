@@ -273,7 +273,7 @@
     "href": "chapter-03-what-is-a-model.html",
     "title": "3  What is a model?",
     "section": "",
-    "text": "3.0.1 Models in history\nLast modified on 11. January 2026 at 19:51:50\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nJohannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the centre and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits.\nYou might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.\nFollowing the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon’s orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.\nProblem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein’s theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.\nStill Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way.\nModels can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science.\nFigure 3.1: foo (A) foo (B) foo\nFigure 3.2: foo (A) foo (B) foo\nFigure 3.3: foo (A) foo (B) foo",
+    "text": "3.0.1 Models in history\nLast modified on 11. January 2026 at 20:00:50\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nJohannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the centre and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits.\nYou might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.\nFollowing the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon’s orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.\nFigure 3.1: Deviation in Mercury’s orbit. (A) Observed orbit of Mercury, showing the deviation from the theoretical Newtonian model. (B) Model of the hypothetical planet Vulcan, which solved the deviation by pushing Mercury into the correct orbit.\nProblem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein’s theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.\nStill Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way.\nModels can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science.\nFigure 3.2: foo (A) foo (B) foo\nComing back to Newton.\nFigure 3.3: foo (A) foo (B) foo",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
@@ -1404,6 +1404,116 @@
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>What is a model?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html",
+    "href": "chapter-53-overview.html",
+    "title": "13  Overview",
+    "section": "",
+    "text": "13.1 What is a model in statistics?\nLast modified on 11. January 2026 at 09:07:20\nImagine you are standing on a globe but still believe it is flat. You are standing on solid ground, with boiling rocks a few kilometers below you. A few kilometers above, you cannot breathe anymore. You are not moving, but the Earth is moving at speeds of up to 828,000 km/h, depending on the reference point. Your reality is a serious misinterpretation.\nI would like to start with a simple example of a statistical model. Perhaps you would like to see a more concrete example of a model. But first, I will show you the most general form of a statistical model. The model is simple and contains only two terms combined with a tilde. The following Figure 13.1 shows how the left-hand side and the right-hand side are connected.\nFigure 13.1: Visualisation of a theoretical statistical model with respect to the programming language R, with the outcome shown on the left-hand side (LHS) and the influencer pictured on the right-hand side (RHS). The two terms are combined by a tilde.\nOn the left-hand side (LHS) we find the outcome. The result of an experiment is called the outcome. The outcome is the measured value. Sometimes, using these words can cause you confusion, but for now we’ll stick to the idea that the result of something is measured in an experiment. We will discover the outcome on the y-axis later on. Therefore, we abbreviate the outcome to Y. On the right side (RHS), you will find the influencer. The influencer is the thing we are trying to change in the experiment. If you change the influencer, the statistical model will show you the change in the outcome. As the change will be on the x-axis, we abbreviate the influencer to X. More often than not, we have one outcome and multiple influencers.\nThe world would be much easier, if there would be only one term for the measures y-values and the influencial values on the x-axis. But this is not true. Each scientific field has its own wording and the wording is changing, if you change the algorithm. So it is a real mess. I decided to use the words outcome and influencer for the y-values and x-values throughout the book for the general usage.\ntext\ntext\nA sentence why we use \\(y\\) and not \\(x\\) for mean and other stuff.\n1 What is a statistical model?\n2 What do we mean by a statistical model?\n3 What Is the Purpose of Statistical Modeling?\n4 Where do statistical models come from? Revisiting the problem of specification\n5 Statistical modelling\nFigure 13.2: Visualisation of the causal and predictive model in statistical modelling for a simple model. In all cases, the outcome \\(Y\\) is normally distributed. (A) Explanatory model: How does the outcome y change when the continuous influencer \\(X\\) changes? What is the numerical relationship between \\(Y\\) and \\(X\\)? This is a question about the slope of the line. (B) Explanatory model: How does the outcome \\(Y\\) change when the categorical influencer as factor \\(f_A\\) changes? What is the numerical relationship between \\(Y\\) and \\(f_A\\)? This is a question about the slope of the line and the difference between the predicted means of each group. (C) Predictive model: If \\(Y\\) and \\(X\\) have been measured, what are the values of \\(Y\\) for new \\(X\\) values? Can we use the influencer \\(X\\) to predict new \\(Y\\) outcomes?",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#what-is-a-model-in-statistics",
+    "href": "chapter-53-overview.html#what-is-a-model-in-statistics",
+    "title": "13  Overview",
+    "section": "",
+    "text": "Table 13.1: Table of terms used in the statistical modelling for the left hand side and right hand side. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.\n\n\n\n\n\n\n\n\n\n\nName\nSymbol\nDescription\n\n\n\n\noutcome, response, endpoint, dependent variable\n\\(y\\)\nThe right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study. The majority of statistical models should typically have only one outcome variable.\n\n\ninfluencer, influential variable, risk factor, fixed effect, independent variable\n\\(x\\)\nThe left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study. A statistical model can include more than one influencer.\n\n\n\n\n\n\n\n\n\n\nTable 13.2: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.\n\n\n\n\n\n\n\n\n\n\nName\nSymbol\nDescription\n\n\n\n\nexplanator, explanatory variable\n\\(x\\)\nExplanation — The influencer is used to describe or explain the change of the outcome.\n\n\npredictor, predictive variable\n\\(x\\)\nPrediction — The influencer is used to predict values of the outcome.\n\n\nfocal explanator, focal predictor, focal variable\n\\(x\\)\nMain effect — In a model with multiple influencers, the focal variable is the variable of primary interest.\n\n\n\n\n\n\n\n\n\n\nTable 13.3: Table of terms used in the statistical modelling. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely.\n\n\n\n\n\n\n\n\n\n\nName\nSymbol\nDescription\n\n\n\n\ncovariate, covariable\n\\(c\\)\nContinuous \\(\\boldsymbol{x}\\) — The influencer is a numeric variable with continuous values.\n\n\nfactor A, factorial variable, categorical variable\n\\(f_A\\)\nCategorical \\(\\boldsymbol{x}\\) — The influencer is discrete, functioning as a grouping variable, such as an experimental group or a treatment.\n\n\nlevels, groups, treatment groups\n\\(A.1\\) to \\(A.j\\)\nThe discrete groups included in one factor \\(\\boldsymbol{f_A}\\).",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#theoretical-background",
+    "href": "chapter-53-overview.html#theoretical-background",
+    "title": "13  Overview",
+    "section": "13.2 Theoretical background",
+    "text": "13.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 13.3: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.4: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.5: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.6: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.7: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.8: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.9: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.10: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 13.11: foo\n\n\n\n\n\n\n“Twistin’, shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La” — The Blues Brothers (1980) – Shake a Tail Feather",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#r-packages-used",
+    "href": "chapter-53-overview.html#r-packages-used",
+    "title": "13  Overview",
+    "section": "13.3 R packages used",
+    "text": "13.3 R packages used",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#data",
+    "href": "chapter-53-overview.html#data",
+    "title": "13  Overview",
+    "section": "13.4 Data",
+    "text": "13.4 Data",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#alternatives",
+    "href": "chapter-53-overview.html#alternatives",
+    "title": "13  Overview",
+    "section": "13.5 Alternatives",
+    "text": "13.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#glossary",
+    "href": "chapter-53-overview.html#glossary",
+    "title": "13  Overview",
+    "section": "13.6 Glossary",
+    "text": "13.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-53-overview.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "13  Overview",
+    "section": "13.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "13.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#summary",
+    "href": "chapter-53-overview.html#summary",
+    "title": "13  Overview",
+    "section": "13.8 Summary",
+    "text": "13.8 Summary",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-53-overview.html#references",
+    "href": "chapter-53-overview.html#references",
+    "title": "13  Overview",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n[1] McCullagh P. What is a statistical model? The Annals of Statistics. 2002;30(5):1225-1310.\n\n\n[2] Appleton DR. What do we mean by a statistical model? Statistics in medicine. 1995;14(2):185-197.\n\n\n[3] Hand D. What is the purpose of statistical modeling? Harvard Data Science Review. 2019;1(1).\n\n\n[4] Spanos A. Where do statistical models come from? Revisiting the problem of specification. Lecture Notes-Monograph Series. Published online 2006:98-119.\n\n\n[5] Gilchrist W. Statistical Modelling. Wiley Chichester; 1984.",
+    "crumbs": [
+      "Statistical modeling",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Overview</span>"
     ]
   }
 ]

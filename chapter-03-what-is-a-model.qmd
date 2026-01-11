@@ -19,12 +19,6 @@ You might now be wondering what an arcminute is. It is a unit of measurement for
 
 Following the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon's orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.
 
-Problem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein's theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.
-
-Still Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way. 
-
-Models can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science. 
-
 ```{r}
 #| echo: false
 #| message: false
@@ -33,13 +27,23 @@ Models can exists in parallel. Newtons laws of gravity can be used knowing that 
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
+#| fig-cap: "Deviation in Mercury's orbit. **(A)** Observed orbit of Mercury, showing  the deviation from the theoretical Newtonian model. **(B)** Model of the hypothetical planet Vulcan, which solved the deviation by pushing Mercury into the correct orbit."
 
 p_vulcan_observed + p_vulcan_model +
   plot_layout(ncol = 2) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+Problem solved. There was only one small deviation. The orbit of Mercury was slightly off. Specifically, the deviation was 43 arcseconds, or 1.2%, between the observed and calculated orbits using the Newtonian model. Albert Einstein (1879–1955) found this deviation intriguing. His General Theory of Relativity solved this mystery by merging time and space. Before Einstein's theory was formulated, astronomers suggested the existence of a new planet. They suggested that the deviation would go away if a planet called Vulcan existed and circled the sun in a very narrow orbit. However, this planet was never found.
+
+---------
+
+
+Still Einstein believed that the solar system was in the middle of the galaxy. And there were no more galaxies than the milky way. 
+
+Models can exists in parallel. Newtons laws of gravity can be used knowing that Newtons laws are wrong and the general relativity is less wrong. Why not right? This is science. 
+
 
 ```{r}
 #| echo: false
@@ -56,6 +60,8 @@ p_habital_observed + p_habital_model +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+Coming back to Newton.
 
 ```{r}
 #| echo: false
