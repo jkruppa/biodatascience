@@ -15,6 +15,10 @@ Imagine you are standing on a globe but still believe it is flat. This globe is 
 
 What is a theory @fried2020theories
 
+There are different types of models. In this book we will mainly talk about statistical models, which are a very specific type of mathematical models. There are other models. There are individual models, like models of control. The way in which we understand and experience reality. There are also scientific theories that can be read as umbrellas above a set of models. Theories and models can be viewed as forming a hierarchical structure. Theories are more general, whereas models are very specific. In everyday language, the terms 'theory' and 'model' are interchangeable.
+
+As scientific workers, we work with models on a daily basis. Therefore, this book is about models. Although we may have a theory in the background, our daily life only sporadically touches such high levels.
+
 Reality can be seen through science by carrying out tiny experiments. These experiments are tiny in the sense that reality is overwhelmingly big, so every experiment is tiny in comparison.
 
 ## Models in history
