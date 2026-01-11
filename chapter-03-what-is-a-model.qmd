@@ -29,8 +29,8 @@ p_lhs_rhs
 
 | Name | Symbol | Description |
 |:----------------------|:------:|:----------------------------------------|
-| **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study.* |
-| **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study.* |
+| **outcome**, response, endpoint, dependent variable | $y$ | *The right-hand side (abbr. RHS) of the model. Describing the values measured in an experiment or study. The majority of statistical models should typically have only one outcome variable.* |
+| **influencer**, influential variable, risk factor, fixed effect, independent variable | $x$ | *The left-hand side (abbr. LHS) of the model. Describing the influential variables in an experiment or study. A statistical model can include more than one influencer.* |
 
 : Table of terms used in the statistical modelling for the left hand side and right hand side. The terms in bold are used here. Depending on the scientific background, the usage of these terms can vary widely. {#tbl-names-regression}
 
