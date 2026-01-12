@@ -7,9 +7,14 @@ source("images/part_0/part_0_science.R")
 
 *Last modified on `r format(fs::file_info("chapter-03-what-is-a-model.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"A quote." --- Dan Meyer*
+> *"Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission: to explore strange new worlds; to seek out new life and new civilizations; to boldly go where no one has gone before!" ---  Star Trek: The Next Generation, intro*
 
 Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometers below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometers above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation.
+
+## Models of the sun system
+
+This chapter tries to tell the story of different men. It also explores their sins. And their misinterpretations of reality. All had brilliant ideas and promoted humanity for the better, and their actions showed great compassion and understanding. History repeats itself, so you can learn a lot from these men. Later in the book, we will focus on fleas and their characteristics. This simple life form is used as a model organism in our search for meaning in statistical models. In this chapter, we look to the stars. Humans stare into the black night and ask many questions about the workings of nature. How do plants move? What are the forces and orbits? It took centuries to answer these questions, with many scientists working without telescopes or modern mathematics. Moreover, modern mathematics was invented as a tool for searching the sky. 
+
 
 ```{r}
 #| echo: false
@@ -24,34 +29,72 @@ Imagine you are standing on a globe but still believe it is flat. This globe is 
 p_sunsystem
 ```
 
+Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. Brahe was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. Brahe's observations of Mars included the collection of all significant data on the planet's position. 
 
-## The difference between theory and model
-
-Theory models and formulas
-
-Math and statistics, probabilistic worldview with quantum mechanics
-
-Calculate versus estimate
-
-What is a theory @fried2020theories
-
-There are different types of models. In this book we will mainly talk about statistical models, which are a very specific type of mathematical models. There are other models. There are individual models, like models of control. The way in which we understand and experience reality. There are also scientific theories that can be read as umbrellas above a set of models. Theories and models can be viewed as forming a hierarchical structure. Theories are more general, whereas models are very specific. In everyday language, the terms 'theory' and 'model' are interchangeable.
-
-As scientific workers, we work with models on a daily basis. Therefore, this book is about models. Although we may have a theory in the background, our daily life only sporadically touches such high levels.
-
-Reality can be seen through science by carrying out tiny experiments. These experiments are tiny in the sense that reality is overwhelmingly big, so every experiment is tiny in comparison.
-
-A model is a snapshot out of a bigger theory. Or to have another picture. A theory is a collage of different models. In each theory different models for a given problem exists. Hence, we can use different models in the Newotonian theory, like the formulas for the motion or gravity. Even if the formual ist wrong and a gravity force does not exists in reality.
-
-## Models in history
-
-Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. 
-
-This is also a early example for data acquisition and data science. Brahe produced the data and Kepler used data science to get the right ideas.
+Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. Deviation is a key concept in science. To see a deviation and believe that it is a systematic one and not one of pure randomness or measurement error. We will come back to this again and again. Kepler believed in a systematic effect of the deviation and developed the three laws of planetary motion from there. This is also an early example of data acquisition and data science. Brahe produced the data, which Kepler then used data science to interpret. 
 
 You might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.
 
-Following the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon's orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications. Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.
+Following the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) formulated the Newtonian theory of gravity. This new theory enabled humanity to calculate gravity on Earth, the Moon's orbit around Earth, and the movement of the planets around the Sun. This is just one of many applications but not the first one. Edmond Halley (1656–1742) paid for the printing of Newton's Principia, fascinated by the possibilities of Newton's findings. Therefore he made one of the first usage of the formulas of Newton. Newton discovered that the moon had a higher density than the earth. This could only be possible if the earth is hollow.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-hollow
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 10.5
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+p_hollow_observed + p_hollow_model +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
+
+First, we will follow the path of  and Sir Isaac Newton (1643–1727). 
+
+
+Journey to the Center of the Earth by Jules Verne
+
+
+Sir William Herschel (1738-1822)
+
+
+
+
+
+## Models in history
+
+Coming back to Newton.
+
+Hohlerde's theory is the first conclusion drawn from Newton's new theory of gravity in the Principia.
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-habital
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 10.5
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+p_habital_observed + p_habital_model +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
+
+
+
+Newton opened up a new field of classical physics. You might pause for a moment and ask yourself: if there is such a thing as classical physics, is there also modern physics? Yes and no. It depends on your perspective. Now, Newton became the benchmark for all new theories and models. Consequently, our observed data became increasingly detailed. We were able to determine the exact orbits of all planets. Everything seems to fit.
+
 
 ```{r}
 #| echo: false
@@ -81,39 +124,6 @@ Still Einstein believed that the solar system was in the middle of the galaxy. A
 
 
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-habital
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-p_habital_observed + p_habital_model +
-  plot_layout(ncol = 2) +
-  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
-```
-
-Coming back to Newton.
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-hollow
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-p_hollow_observed + p_hollow_model +
-  plot_layout(ncol = 2) +
-  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
-```
 
 
 
@@ -145,7 +155,33 @@ ggplot(atom_tbl, aes(a, b)) +
 
 
 
+## The difference between theory and model
 
+Theory models and formulas
+
+Math and statistics, probabilistic worldview with quantum mechanics
+
+Calculate versus estimate
+
+What is a theory @fried2020theories
+
+There are different types of models. In this book we will mainly talk about statistical models, which are a very specific type of mathematical models. There are other models. There are individual models, like models of control. The way in which we understand and experience reality. There are also scientific theories that can be read as umbrellas above a set of models. Theories and models can be viewed as forming a hierarchical structure. Theories are more general, whereas models are very specific. In everyday language, the terms 'theory' and 'model' are interchangeable.
+
+As scientific workers, we work with models on a daily basis. Therefore, this book is about models. Although we may have a theory in the background, our daily life only sporadically touches such high levels.
+
+Reality can be seen through science by carrying out tiny experiments. These experiments are tiny in the sense that reality is overwhelmingly big, so every experiment is tiny in comparison.
+
+A model is a snapshot out of a bigger theory. Or to have another picture. A theory is a collage of different models. In each theory different models for a given problem exists. Hence, we can use different models in the Newotonian theory, like the formulas for the motion or gravity. Even if the formual ist wrong and a gravity force does not exists in reality.
+
+
+## Determinism in a probabilistic reality
+
+> *"Nobody exists on purpose, nobody belongs anywhere, everybody's gonna die. Come watch TV." --- Rick and Morty in Rixty Minutes*
+
+Atoms are the basic foundation of reality. Everything what is possible should be arise of the possibilities of atoms @feynman2011six.
+
+Einstein don't wanted to believe, that the old man is throwing dice in the alley
+until Officer Leroy comes up.
 
 > *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*
 
