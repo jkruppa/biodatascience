@@ -17,6 +17,8 @@ Theory models and formulas
 
 Math and statistics, probabilistic worldview with quantum mechanics
 
+Calculate versus estimate
+
 What is a theory @fried2020theories
 
 There are different types of models. In this book we will mainly talk about statistical models, which are a very specific type of mathematical models. There are other models. There are individual models, like models of control. The way in which we understand and experience reality. There are also scientific theories that can be read as umbrellas above a set of models. Theories and models can be viewed as forming a hierarchical structure. Theories are more general, whereas models are very specific. In everyday language, the terms 'theory' and 'model' are interchangeable.
