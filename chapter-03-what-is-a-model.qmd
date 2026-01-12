@@ -11,6 +11,20 @@ source("images/part_0/part_0_science.R")
 
 Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometers below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometers above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation.
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-sunsystem
+#| fig-align: center
+#| fig-height: 3
+#| fig-width: 8
+#| fig-cap: "Illustration of a selection of celestial bodies in our solar system. All of these bodies can be observed and described using different attributes. The following sections discuss different models of these celestial bodies from previous centuries. First we discuss the deviation of the orbit of Mercury. Second the model of the habital sun. And as third example the hollow earth theory. Most of these models are wrong today, but they still cast shadows."
+
+p_sunsystem
+```
+
+
 ## The difference between theory and model
 
 Theory models and formulas
@@ -32,6 +46,8 @@ A model is a snapshot out of a bigger theory. Or to have another picture. A theo
 ## Models in history
 
 Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. He was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. In particular, Brahe observed the planet Mars. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. 
+
+This is also a early example for data acquisition and data science. Brahe produced the data and Kepler used data science to get the right ideas.
 
 You might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe.
 
@@ -93,13 +109,42 @@ Coming back to Newton.
 #| fig-width: 10.5
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
-
-
 p_hollow_observed + p_hollow_model +
   plot_layout(ncol = 2) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-atom
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 4.5
+#| fig-cap: "foo **(A)** foo **(B)** foo"
+
+N <- 10000
+hole <- 0.25
+
+atom_tbl <- tibble(r = hole + (1.0-hole)*rbeta(N, 2.0, 2.0),
+                   theta = 2.0*pi*runif(N),
+                   a = r * cos(theta),
+                   b = r * sin(theta))
+
+ggplot(atom_tbl, aes(a, b)) +
+  theme_void() +
+  geom_density_2d_filled(show.legend = FALSE, binwidth = 0.01) +
+  geom_density_2d(linewidth = 0.25, colour = "black", show.legend = FALSE, 
+                  binwidth = 0.01)
+
+```
+
+
+
 
 
 > *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*

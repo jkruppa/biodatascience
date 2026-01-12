@@ -1,3 +1,34 @@
+p_sunsystem <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  geom_ellipse(aes(x0 = -5, y0 = -3, a = 5, b = 4, angle = pi/4),
+               color = "#6A00A880") +
+  geom_ellipse(aes(x0 = 6.5, y0 = 4, a = 14, b = 10, angle = pi/4),
+               color = "#0D088780") +
+  geom_ellipse(aes(x0 = 14.5, y0 = 8, a = 14, b = 8, angle = pi/4),
+               color = "#B12A9080") +
+  annotate("point", x = 6, y = 4, size = 35, fill = "#F0F921FF", shape = 21) +
+  annotate("text", x = 5.25, y = -4, hjust = "left", label = "Mercury", size = 6) +
+  annotate("point", x = 5, y = -2.25, size = 8, fill = "#B12A90FF", shape = 21) +
+  ## comet
+  annotate("point", x = -7, y = 7, size = 5, shape = 23, fill = "#E16462FF") +
+  annotate("segment", x = -5, y = 10, xend = -10, yend = 2.5, color = "#E1646280") +
+  annotate("text", x = -6.7, y = 6.25, hjust = "left", label = "Halley", size = 6) +   
+  ## sun spots
+  annotate("point", x = c(5.5, 6, 6.4), y = c(3, 2, 1.8), size = c(2.5, 2, 1.5), 
+           shape = 21, color = "black", fill = "black") +
+  annotate("text", x = 7, y = 7.5, hjust = "left", label = "Sun", size = 6) + 
+  annotate("point", x = -5, y = -3, size = 25, fill = "#0D0887FF", shape = 21) +
+  annotate("text", x = -4.25, y = 0, hjust = "left", label = "Earth", size = 6) +   
+  annotate("point", x = -1, y = 0, size = 10, color = c6_pal[2]) +
+  annotate("text", x = -0.5, y = 1.5, hjust = "left", label = "Moon", size = 6) +
+  labs(#title = "Selection of celestrial bodies",
+       caption = "The celestial bodys are not drawn to scale") +
+  coord_cartesian(xlim = c(-8, 8), ylim = c(-9.5, 9.5)) +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        plot.caption = element_text(size = 12, face = "italic"))
+
 p_vulcan_observed <- ggplot() +
   theme_void() +
   geom_ellipse(aes(x0 = 0, y0 = 0, a = 10.5, b = 4.9, angle = pi/5.5),
@@ -17,7 +48,7 @@ p_vulcan_observed <- ggplot() +
   coord_cartesian(xlim = c(-9, 9), ylim = c(-8,6.5)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))
 
 p_vulcan_model <- ggplot() +
   theme_void() +
@@ -40,7 +71,7 @@ p_vulcan_model <- ggplot() +
   coord_cartesian(xlim = c(-9, 9), ylim = c(-8,6.5)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))
 
 p_habital_observed <- ggplot() +
   theme_void() +
@@ -64,7 +95,7 @@ p_habital_observed <- ggplot() +
   coord_cartesian(xlim = c(-7, 8.5), ylim = c(-9, 9)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))
 
 p_habital_model <- ggplot() +
   theme_void() +
@@ -99,7 +130,7 @@ p_habital_model <- ggplot() +
   coord_cartesian(xlim = c(-6, 8), ylim = c(-9, 9)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))
 
 p_hollow_observed <- 
   ggplot(tibble(x = 1:10, y = 1:10), aes(x,y )) +
@@ -110,7 +141,7 @@ p_hollow_observed <-
            size = 3, lineend = "round") +
   annotate("point", x = 4.5, y = 5.5, size = 25, shape = 21, fill = col_pal(1)) +  
   annotate("text", x = 5.5, y = 9, hjust = "left", label = "Earth", size = 6) + 
-  annotate("point", x = -5, y = -5.25, size = 15, shape = 21, fill = "gray50") +  
+  annotate("point", x = -5, y = -5.25, size = 15, shape = 21, fill = "#6A00A8FF") +  
   annotate("text", x = -4.25, y = -3, hjust = "left", label = "Moon", size = 6) + 
   annotate("point", x = 0, y = -2.5, size = 6, shape = 8, color = c6_pal[4]) + 
   annotate("label", x = 0, y = 5, 
@@ -122,7 +153,7 @@ p_hollow_observed <-
   coord_cartesian(xlim = c(-8, 8), ylim = c(-10, 10)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))
 
 p_hollow_model <- ggplot(tibble(x = 1:10, y = 1:10), aes(x,y )) +
   theme_void() +
@@ -136,7 +167,7 @@ p_hollow_model <- ggplot(tibble(x = 1:10, y = 1:10), aes(x,y )) +
   annotate("point", x = 5, y = 0.75, size = 10, shape = 21, fill = "white") + 
   annotate("point", x = 5, y = 0.75, size = 2.5, shape = 21, fill = c6_pal[6]) + 
   annotate("text", x = 6, y = 5, hjust = "left", label = "Earth", size = 6) + 
-  annotate("point", x = -5, y = -0.5, size = 15, shape = 21, fill = "gray50") +  
+  annotate("point", x = -5, y = -0.5, size = 15, shape = 21, fill = "#6A00A8FF") +  
   annotate("text", x = -4.25, y = 2.5, hjust = "left", label = "Moon", size = 6) + 
   annotate("point", x = 0, y = -2.5, size = 6, shape = 8, color = c6_pal[4]) + 
   annotate("label", x = 0, y = 5, 
@@ -148,4 +179,4 @@ p_hollow_model <- ggplot(tibble(x = 1:10, y = 1:10), aes(x,y )) +
   coord_cartesian(xlim = c(-8, 8), ylim = c(-10, 10)) +
   theme(plot.title = element_text(size = 16, face = "bold"),
         plot.subtitle = element_text(size = 12, face = "italic"),
-        plot.caption = element_text(face = "italic"))
+        plot.caption = element_text(size = 12, face = "italic"))

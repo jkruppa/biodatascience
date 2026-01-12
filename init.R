@@ -21,7 +21,7 @@ theme_book <- function() {
 ## colors
 col_pal <- \(n, alpha) plasma(n = n, alpha = alpha)
 c6_pal <- col_pal(6, 1)
-c6_a5_pal <- col_pal(6, 0.5)
+c6_a5_pal <- col_pal(6, 0.75)
 c2_end09 <- plasma(n = 2, end = 0.9)
 ##
 foo_pal_1 <- c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF", "#FCA636FF" ,"#F0F921FF")
