@@ -24,7 +24,7 @@ This chapter tries to tell the story of different men. It also explores their si
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 8
-#| fig-cap: "Illustration of a selection of celestial bodies in our solar system. All of these bodies can be observed and described using different attributes. The following sections discuss different models of these celestial bodies from previous centuries. First we discuss the deviation of the orbit of Mercury. Second the model of the habital sun. And as third example the hollow earth theory. Most of these models are wrong today, but they still cast shadows."
+#| fig-cap: "Illustration of a selection of celestial bodies in our solar system. All of these bodies can be observed and described using different attributes. The following sections discuss different models of these celestial bodies from previous centuries. First we discuss the hollow earth theory. Second the model of the habital sun. And as third example the deviation of the orbit of Mercury. Most of these models are wrong today, but they still cast shadows."
 
 p_sunsystem
 ```
@@ -45,7 +45,7 @@ Following the discovery of elliptical orbits, Sir Isaac Newton (1643–1727) for
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 10.5
-#| fig-cap: "foo **(A)** foo **(B)** foo"
+#| fig-cap: "The hollow Earth model was born from a miscalculation by Newton, which led to Herschel's theory. **(A)** Newton had calculated that the Moon was denser than the Earth. It was assumed that the two celestial bodies should have the same density. **(B)** Halley supposed that the Earth was hollow to make it lighter and achieve the same density ratio."
 
 p_hollow_observed + p_hollow_model +
   plot_layout(ncol = 2) +
@@ -53,6 +53,7 @@ p_hollow_observed + p_hollow_model +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+From there on thinks start to escalate quickly. When 80-year-old Halley was portrayed as Astronomer Royal, he had himself depicted with a diagram of the hollow earth. Halley believed, that the earth is hollow. Furthermore, he was fortunate enough to correctly predict the return of Halley's Comet, which, at the time, was considered a significant achievement of Newton's theory of gravity. However, this success was a one-off, since Newton's theory of gravity is incorrect, as we will discuss later.
 
 First, we will follow the path of  and Sir Isaac Newton (1643–1727). 
 
