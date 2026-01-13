@@ -74,6 +74,4 @@ format:
     code-block-border-left: true
     code-summary: "R Code [show / hide]"
     code-tools: true
-  pdf:
-    documentclass: scrreprt
 
