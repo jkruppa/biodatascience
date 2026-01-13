@@ -11,91 +11,23 @@ source("images/part_0/part_0_science.R")
 
 Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometers below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometers above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation. This chapter focuses on the important role of different models of reality. We will examine various historical examples of scientific work by humans. Theories were developed and predictions were made. Most of these predictions were incorrect. Only a few provided a satisfactory explanation of the reality we live in. We want to follow the historical paths and go where no one has gone before.
 
+Who are these humans, and what is their background? What have they achieved? The science in books loses its humanity. I am in your head, talking to you. You read about the achievements of men who created beautiful things. They had ideas that came out of nowhere. More or less, that's how it seems. But they were human, and therefore interconnected with other people of their time. Or with the knowledge of their ancestors. I think it's important to understand these connections in order to gain a better understanding of the theories scientists propose and how they should be judged from our perspective. All humans struggle when doing science. It takes a lot of courage to write down and publish something new. In @fig-chap-01-persons-sunsystem, you can see the people that we will cover in the first part of the chapter. We will focus on findings in our solar system. How does everything work behind the curtain of nature? Many people have spent a long time thinking about it and have invented marvellous things like telescopes and advanced mathematics to enlighten humanity.
+
 ```{r}
 #| echo: false
 #| message: false
 #| warning: false
 #| label: fig-chap-01-persons-sunsystem
 #| fig-align: center
-#| fig-height: 3.5
+#| fig-height: 3
 #| fig-width: 8
-#| fig-cap: "foo"
+#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
-people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
-  filter(short %in% c("Kepler", "Kopernikus", "Newton", "Halley",
-                      "Herschel", "Einstein", "Brahe"))
-
-birth_tbl <- people_tbl |>
-  arrange(birth) |> 
-  mutate(short = fct_rev(as_factor(short)),
-         long = fct_rev(as_factor(long))) |> 
-  pivot_longer(cols = birth:death)
-
-birth_tbl |> 
-  ggplot(aes(x = short, y = value, group = short)) +
-  theme_book() +
-  geom_path(color = "gray50") +
-  coord_flip() +
-  labs(x = "", y = "") +
-  scale_y_continuous(limits = c(1450, 1960),
-                     breaks = seq(1500, 1950, 100)) +
-  theme(axis.text = element_text(size = 12)) +
-  ## first
-  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
-  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
-            color = "#0D0887FF", position = position_nudge(x = 0.3), size = 3) +
-  ## second
-  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
-  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
-            color = "#B12A90FF", position = position_nudge(x = -0.3), size = 3) +
-  ## brahe
-  annotate("segment", x = 6, xend = 6, y = 1560, yend = 1601, color = "#0D0887FF",
-           size = 1) +
-  annotate("text", x = 6+0.3, xend = 6-0.3, y = 1580.5, yend = 1580.5, color = "#0D0887FF",
-           size = 3, label = "Orbital data") +
-  ## birth/death
-  geom_point(size = 1) 
+p_persons_sunsystem
 ```
 
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-persons-statistics
-#| fig-align: center
-#| fig-height: 4
-#| fig-width: 8
-#| fig-cap: "foo"
 
-people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
-  filter(birth > 1800)
-
-birth_tbl <- people_tbl |>
-  arrange(birth) |> 
-  mutate(short = fct_rev(as_factor(short)),
-         long = fct_rev(as_factor(long))) |> 
-  pivot_longer(cols = birth:death)
-
-birth_tbl |> 
-  ggplot(aes(x = short, y = value, group = short)) +
-  theme_book() +
-  geom_path(color = "gray50") +
-  geom_point(size = 1) +
-  coord_flip() +
-  labs(x = "", y = "") +
-  scale_y_continuous(limits = c(1790, 2010),
-                     breaks = seq(1800, 2000, 50)) +
-  theme(axis.text = element_text(size = 12)) +
-  ## first
-  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
-  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
-            color = "#0D0887FF", position = position_nudge(x = 0.3), size = 3) +
-  ## second
-  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
-  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
-            color = "#B12A90FF", position = position_nudge(x = -0.3), size = 3)     
-```
 
 
 
@@ -262,13 +194,20 @@ until Officer Leroy comes up.
 
 > *"Twistin', shake it, shake it, shake it, shake it, baby; Hey, we gonna Loop de Loop Shake it out, baby; Hey, we gonna Loop de La" --- [The Blues Brothers (1980) -- Shake a Tail Feather](https://www.youtube.com/watch?v=qdbrIrFxas0)*
 
-## R packages used
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-persons-statistics
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 8
+#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider scientists who have contributed to research in the fields of physics, quantum mechanics and statistics. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
-## Data
+p_persons_statistics
+```
 
-## Alternatives
 
-Further tutorials and R packages on XXX
 
 ## Glossary
 
