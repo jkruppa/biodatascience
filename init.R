@@ -1,5 +1,5 @@
 ## load packages
-pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork, lme4,
+pacman::p_load(tidyverse, ggforce, viridis, knitr, patchwork, lme4, readxl,
                Hmisc, ggdist, see, ggtext, ggimage, ggrepel, latex2exp,
                conflicted)
 conflicted::conflicts_prefer(dplyr::filter)

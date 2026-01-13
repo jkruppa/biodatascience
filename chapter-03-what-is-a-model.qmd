@@ -11,6 +11,94 @@ source("images/part_0/part_0_science.R")
 
 Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometers below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometers above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation. This chapter focuses on the important role of different models of reality. We will examine various historical examples of scientific work by humans. Theories were developed and predictions were made. Most of these predictions were incorrect. Only a few provided a satisfactory explanation of the reality we live in. We want to follow the historical paths and go where no one has gone before.
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-persons-sunsystem
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 8
+#| fig-cap: "foo"
+
+people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
+  filter(short %in% c("Kepler", "Kopernikus", "Newton", "Halley",
+                      "Herschel", "Einstein", "Brahe"))
+
+birth_tbl <- people_tbl |>
+  arrange(birth) |> 
+  mutate(short = fct_rev(as_factor(short)),
+         long = fct_rev(as_factor(long))) |> 
+  pivot_longer(cols = birth:death)
+
+birth_tbl |> 
+  ggplot(aes(x = short, y = value, group = short)) +
+  theme_book() +
+  geom_path(color = "gray50") +
+  coord_flip() +
+  labs(x = "", y = "") +
+  scale_y_continuous(limits = c(1450, 1960),
+                     breaks = seq(1500, 1950, 100)) +
+  theme(axis.text = element_text(size = 12)) +
+  ## first
+  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
+  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
+            color = "#0D0887FF", position = position_nudge(x = 0.3), size = 3) +
+  ## second
+  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
+  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
+            color = "#B12A90FF", position = position_nudge(x = -0.3), size = 3) +
+  ## brahe
+  annotate("segment", x = 6, xend = 6, y = 1560, yend = 1601, color = "#0D0887FF",
+           size = 1) +
+  annotate("text", x = 6+0.3, xend = 6-0.3, y = 1580.5, yend = 1580.5, color = "#0D0887FF",
+           size = 3, label = "Orbital data") +
+  ## birth/death
+  geom_point(size = 1) 
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-persons-statistics
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 8
+#| fig-cap: "foo"
+
+people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
+  filter(birth > 1800)
+
+birth_tbl <- people_tbl |>
+  arrange(birth) |> 
+  mutate(short = fct_rev(as_factor(short)),
+         long = fct_rev(as_factor(long))) |> 
+  pivot_longer(cols = birth:death)
+
+birth_tbl |> 
+  ggplot(aes(x = short, y = value, group = short)) +
+  theme_book() +
+  geom_path(color = "gray50") +
+  geom_point(size = 1) +
+  coord_flip() +
+  labs(x = "", y = "") +
+  scale_y_continuous(limits = c(1790, 2010),
+                     breaks = seq(1800, 2000, 50)) +
+  theme(axis.text = element_text(size = 12)) +
+  ## first
+  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
+  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
+            color = "#0D0887FF", position = position_nudge(x = 0.3), size = 3) +
+  ## second
+  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
+  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
+            color = "#B12A90FF", position = position_nudge(x = -0.3), size = 3)     
+```
+
+
+
 ## Models of the sun system
 
 This chapter tries to tell the story of different men. It also explores their sins. And their misinterpretations of reality. All had brilliant ideas and promoted humanity for the better, and their actions showed great compassion and understanding. History repeats itself, so you can learn a lot from these men. Later in the book, we will focus on fleas and their characteristics. This simple life form is used as a model organism in our search for meaning in statistical models. In this chapter, we look to the stars. Humans stare into the black night and ask many questions about the workings of nature. How do plants move? What are the forces and orbits? It took centuries to answer these questions, with many scientists working without telescopes or modern mathematics. Moreover, modern mathematics was invented as a tool for searching the sky. In the following @fig-chap-01-sunsystem, you will see celestial bodies that will be important in this chapter. 
@@ -30,9 +118,9 @@ p_sunsystem
 
 ### The hollow earth
 
-Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe. Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. Brahe was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. Brahe's observations of Mars included the collection of all significant data on the planet's position. 
+Johannes Kepler (1571–1630) was born into a world that believed the Earth was at the centre of the universe. The people of his time believed in a geocentric worldview. In 1543, Nikolaus Kopernikus (1473–1543) proposed a heliocentric model of the universe, with the Sun at the center and the Earth orbiting it in a circular path. Nevertheless, the heliocentric worldview was still under debate when Kepler began his work. He studied the data observed by the astronomer Tycho Brahe (1546-1601). Brahe produced detailed observations of planetary movements. He made his observations without the use of a telescope. Brahe was meticulous about the accuracy of his measurements of planetary orbits, and was one of the first people to recognise the importance of making multiple observations. Brahe's observations of Mars included the collection of all significant data on the planet's position. 
 
-It was only on his deathbed that Brahe ordered Kepler to evaluate and publish his data. Kepler complied with this request. Until then, Brahe had rejected many of Kepler's requests for access to the complete data tables.  This is an early example of the importance of open data in research. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. Deviation is a key concept in science. To see a deviation and believe that it is a systematic one and not one of pure randomness or measurement error. We will come back to this again and again. Kepler believed in a systematic effect of the deviation and developed the three laws of planetary motion from there. This is also an early example of data acquisition and data science. Brahe produced the data, which Kepler then used data science to interpret. 
+It was only on his deathbed that Brahe ordered Kepler to evaluate and publish his data. Kepler complied with this request. Until then, Brahe had rejected many of Kepler's requests for access to the complete data tables. This is an early example of the importance of open data in research. Kepler found that the positional data for Mars deviated by eight arc minutes from the Copernican circular orbit. This small deviation led Kepler to propose elliptical orbits. Deviation is a key concept in science. To see a deviation and believe that it is a systematic one and not one of pure randomness or measurement error. We will come back to this again and again. Kepler believed in a systematic effect of the deviation and developed the three laws of planetary motion from there. This is also an early example of data acquisition and data science. Brahe produced the data, which Kepler then used data science to interpret. 
 
 You might now be wondering what an arcminute is. It is a unit of measurement for degrees. Therefore, one degree has 60 arc minutes, and one arc minute has 60 arc seconds. If you look at the full moon, you will see that it covers 32 arc minutes. Kepler therefore believed that the eight-arc-minute deviation in the orbit of Mars was a systematic failure of the 2,000-year-old theory, rather than an error in the measurements taken by its mentor, Tycho Brahe. Nevertheless, it took nearly two centuries of ongoing debate and research for Kepler's work to take on its final, well-known form.
 
@@ -78,7 +166,7 @@ p_habital_observed + p_habital_model +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-
+Today @kutrovatz2024hearth
 
 ### The planet Vulcan
 
