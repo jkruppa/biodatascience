@@ -21,7 +21,7 @@ Who are these humans, and what is their background? What have they achieved? The
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 8
-#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public."
+#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. Here, we consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
 p_persons_sunsystem
 ```
@@ -166,6 +166,18 @@ ggplot(atom_tbl, aes(a, b)) +
 
 ## The difference between theory and model
 
+Science is a process of guessing in the search for a good explanation.
+
+If you can mathematically explain something, you can also mathematically predict something.
+
+mathematically using a algorithm
+
+A algorithm consists of mathematical formulas
+
+A theory consists of models 
+
+A simple model can look like a mathematical formula
+
 Theory models and formulas
 
 Math and statistics, probabilistic worldview with quantum mechanics
@@ -207,13 +219,22 @@ until Officer Leroy comes up.
 p_persons_statistics
 ```
 
+## Explanation vs. decision
 
+Explanation and prediction are interchangeable. First, you need a model to explain something; then, you can use the model to make predictions.
+
+Decision-making is slightly different. This could also be called a conclusion or, more technically, 'inference'.
 
 ## Glossary
 
-term
+Theory
 
 :   what does it mean.
+
+Model
+
+:   what does it mean.
+
 
 ## The meaning of "Models of Reality" in this chapter.
 
