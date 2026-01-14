@@ -142,9 +142,21 @@ Still Einstein believed that the solar system was in the middle of the galaxy. A
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 p_atom_bohr <- ggplot() +
-  coord_cartesian(xlim = c(-5, 5), ylim = c(-5, 5)) +
-  geom_circle(aes(x0 = 0, y0 = 0, r = c(4.5, 3, 1.5)), fill = "white") +
-  annotate("point", x = 0, y = 0) 
+  theme_void() +
+  coord_cartesian(xlim = c(-4.5, 4.5), ylim = c(-4.5, 4.5)) +
+  geom_circle(aes(x0 = 0, y0 = 0, r = c(4.5, 3, 1.5))) +
+  annotate("point", x = c(0.25, -0.25, -0.2, 0.2, 0.2, -0.3, 0, 0, 0), 
+           y = c(0, 0.25, -0.25, 0.2, -0.2, 0,  0, -0.3, 0.3), 
+           size = 5, shape = 21, fill = "#E16462FF") +
+  annotate("text", x = c(0.25, -0.25, -0.2, 0.2, 0.2, -0.3, 0, 0, 0), 
+           y = c(0, 0.25, -0.25, 0.2, -0.2, 0,  0, -0.3, 0.3),label = "+") +
+  annotate("point", x = c(-1.5, 1.5, -3, 3, 0, 0, -2.125, -2.125, 2.125, 2.125, 4.5), 
+           y = c(0, 0, 0, 0, -3, 3, -2.125, 2.125, -2.125, 2.125, 0), size = 5, shape = 21,
+           fill = "#F0F921FF") +
+  annotate("text", x = c(-1.5, 1.5, -3, 3, 0, 0, -2.125, -2.125, 2.125, 2.125, 4.5), 
+           y = c(0, 0, 0, 0, -3, 3, -2.125, 2.125, -2.125, 2.125, 0), label = "-") +
+  labs(caption = "The nuclei and the atomic shell are both hopelessly out of scale") +
+  theme(plot.caption = element_text(face = "italic"))
 
 N <- 10000
 hole <- 0.25
@@ -157,12 +169,14 @@ p_atom_dens <- ggplot(atom_tbl, aes(a, b)) +
   theme_void() +
   geom_density_2d_filled(show.legend = FALSE, binwidth = 0.01) +
   geom_density_2d(linewidth = 0.25, colour = "black", show.legend = FALSE, 
-                  binwidth = 0.01)
+                  binwidth = 0.01) +
+  labs(caption = "The nuclei and the cloud of electrons are both out of scale") +
+  theme(plot.caption = element_text(face = "italic"))
 
 p_atom_bohr + p_atom_dens +
   plot_layout(ncol = 2) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
-  theme(plot.tag = element_text(size = 16, face = "bold"))
+  theme(plot.tag = element_text(size = 16, face = "bold")) 
 ```
 
 
