@@ -214,7 +214,17 @@ p_persons_sunsystem <- birth_tbl |>
   annotate("text", x = 6+0.3, xend = 6-0.3, y = 1580.5, yend = 1580.5, color = "#0D0887FF",
            size = 3.5, label = "Orbital data") +
   ## birth/death
-  geom_point(size = 2, shape = "|") 
+  geom_point(size = 2, shape = "|") +
+  ## curve
+  geom_curve(aes(x = 6.5, y = 1610, xend = 5.6, yend = 1640),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
+  geom_curve(aes(x = 5.5, y = 1655, xend = 4.6, yend = 1685),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
+  geom_curve(aes(x = 4.5, y = 1710, xend = 3.4, yend = 1727),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 1) 
 
 people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
   filter(birth > 1800)

@@ -21,61 +21,10 @@ Who are these humans, and what is their background? What have they achieved? The
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 8
-#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. Here, we consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public."
-
-people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
-  filter(short %in% c("Kepler", "Kopernikus", "Newton", "Halley",
-                      "Herschel", "Einstein", "Brahe"))
-
-birth_tbl <- people_tbl |>
-  arrange(birth) |> 
-  mutate(short = fct_rev(as_factor(short)),
-         long = fct_rev(as_factor(long))) |> 
-  pivot_longer(cols = birth:death)
-
-p_persons_sunsystem <- birth_tbl |> 
-  ggplot(aes(x = short, y = value, group = short)) +
-  theme_book() +
-  geom_path(color = "gray25") +
-  coord_flip() +
-  labs(x = "", y = "") +
-  scale_y_continuous(limits = c(1450, 1960),
-                     breaks = seq(1500, 1950, 100)) +
-  theme(axis.text = element_text(size = 12)) +
-  ## first
-  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
-  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
-            color = "#0D0887FF", position = position_nudge(x = 0.35), size = 3.5) +
-  ## second
-  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
-  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
-            color = "#B12A90FF", position = position_nudge(x = -0.35), size = 3.5) +
-  ## brahe
-  annotate("segment", x = 6, xend = 6, y = 1560, yend = 1601, color = "#0D0887FF",
-           size = 1) +
-  annotate("text", x = 6+0.3, xend = 6-0.3, y = 1580.5, yend = 1580.5, color = "#0D0887FF",
-           size = 3.5, label = "Orbital data") +
-  ## birth/death
-  geom_point(size = 2, shape = "|") +
-  ## curve
-  geom_curve(aes(x = 6.5, y = 1610, xend = 5.6, yend = 1640),
-             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
-             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
-  geom_curve(aes(x = 5.5, y = 1655, xend = 4.6, yend = 1685),
-             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
-             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
-  geom_curve(aes(x = 4.5, y = 1710, xend = 3.4, yend = 1727),
-             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
-             color = "#0D0887FF", size = 0.5, curvature = 1) 
+#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. Here, we consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public. The arrows illustrate the connection between the findings."
 
 p_persons_sunsystem
-
 ```
-
-
-
-
-
 
 ## Models of the sun system
 
@@ -189,23 +138,31 @@ Still Einstein believed that the solar system was in the middle of the galaxy. A
 #| label: fig-chap-01-atom
 #| fig-align: center
 #| fig-height: 4.5
-#| fig-width: 4.5
+#| fig-width: 9
 #| fig-cap: "foo **(A)** foo **(B)** foo"
+
+p_atom_bohr <- ggplot() +
+  coord_cartesian(xlim = c(-5, 5), ylim = c(-5, 5)) +
+  geom_circle(aes(x0 = 0, y0 = 0, r = c(4.5, 3, 1.5)), fill = "white") +
+  annotate("point", x = 0, y = 0) 
 
 N <- 10000
 hole <- 0.25
-
 atom_tbl <- tibble(r = hole + (1.0-hole)*rbeta(N, 2.0, 2.0),
                    theta = 2.0*pi*runif(N),
                    a = r * cos(theta),
                    b = r * sin(theta))
 
-ggplot(atom_tbl, aes(a, b)) +
+p_atom_dens <- ggplot(atom_tbl, aes(a, b)) +
   theme_void() +
   geom_density_2d_filled(show.legend = FALSE, binwidth = 0.01) +
   geom_density_2d(linewidth = 0.25, colour = "black", show.legend = FALSE, 
                   binwidth = 0.01)
 
+p_atom_bohr + p_atom_dens +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
 
@@ -231,6 +188,12 @@ Math and statistics, probabilistic worldview with quantum mechanics
 Calculate versus estimate
 
 What is a theory @fried2020theories
+
+
+
+
+> *"Scientific knowledge, especially as stacked in textbooks, has an aura of objectivity - it is secure, uninfluenced by what we might hope or fear, and a solid assertion of what is true. Or, at least, that is what we are supposed to think. Knowledge, once formed, tends to become disembodied from its human origins. That is, while knowledge is preserved in the form of books, formulas, proofs, theorems, and such, we must not forget that before all this the formation of knowledge was the result of human thought, effort, and desire. Knowledge is a product of human hopes and fears; our emotions are crucial to its development, and its meaning cannot be truly understood if seen as some bloodless and emotionless enterprise." --- Joshua Schimel in Writing Science @schimel2012writing*
+
 
 There are different types of models. In this book we will mainly talk about statistical models, which are a very specific type of mathematical models. There are other models. There are individual models, like models of control. The way in which we understand and experience reality. There are also scientific theories that can be read as umbrellas above a set of models. Theories and models can be viewed as forming a hierarchical structure. Theories are more general, whereas models are very specific. In everyday language, the terms 'theory' and 'model' are interchangeable.
 
