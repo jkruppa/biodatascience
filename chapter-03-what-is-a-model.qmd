@@ -23,7 +23,53 @@ Who are these humans, and what is their background? What have they achieved? The
 #| fig-width: 8
 #| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. Here, we consider scientists who have contributed to research into the celestial bodies in the solar system. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
+people_tbl <- read_excel("data/people_of_intrest.xlsx") |> 
+  filter(short %in% c("Kepler", "Kopernikus", "Newton", "Halley",
+                      "Herschel", "Einstein", "Brahe"))
+
+birth_tbl <- people_tbl |>
+  arrange(birth) |> 
+  mutate(short = fct_rev(as_factor(short)),
+         long = fct_rev(as_factor(long))) |> 
+  pivot_longer(cols = birth:death)
+
+p_persons_sunsystem <- birth_tbl |> 
+  ggplot(aes(x = short, y = value, group = short)) +
+  theme_book() +
+  geom_path(color = "gray25") +
+  coord_flip() +
+  labs(x = "", y = "") +
+  scale_y_continuous(limits = c(1450, 1960),
+                     breaks = seq(1500, 1950, 100)) +
+  theme(axis.text = element_text(size = 12)) +
+  ## first
+  geom_point(data = people_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
+  geom_text(data = people_tbl, aes(short, date_1, group = short, label = finding_1), 
+            color = "#0D0887FF", position = position_nudge(x = 0.35), size = 3.5) +
+  ## second
+  geom_point(data = people_tbl, aes(short, date_2, group = short), color = "#B12A90FF") +
+  geom_text(data = people_tbl, aes(short, date_2, group = short, label = finding_2), 
+            color = "#B12A90FF", position = position_nudge(x = -0.35), size = 3.5) +
+  ## brahe
+  annotate("segment", x = 6, xend = 6, y = 1560, yend = 1601, color = "#0D0887FF",
+           size = 1) +
+  annotate("text", x = 6+0.3, xend = 6-0.3, y = 1580.5, yend = 1580.5, color = "#0D0887FF",
+           size = 3.5, label = "Orbital data") +
+  ## birth/death
+  geom_point(size = 2, shape = "|") +
+  ## curve
+  geom_curve(aes(x = 6.5, y = 1610, xend = 5.6, yend = 1640),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
+  geom_curve(aes(x = 5.5, y = 1655, xend = 4.6, yend = 1685),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 0.8) +
+  geom_curve(aes(x = 4.5, y = 1710, xend = 3.4, yend = 1727),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#0D0887FF", size = 0.5, curvature = 1) 
+
 p_persons_sunsystem
+
 ```
 
 
