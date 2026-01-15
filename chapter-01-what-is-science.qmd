@@ -10,15 +10,75 @@ source("init.R")
 
 The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here. Ultimately, decide for yourself what science truly is.
 
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-sience-non-science
+
+ggplot() +
+  #theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(0, 10)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  annotate("segment", x = 2, y = 0, xend = 2, yend = 10,
+           linetype = "21", size = 3, color = "gray50") +
+  annotate("text", x = 0.9, y = 5, label = "FALSIFICATION", size = 7.5, fontface = 2, 
+           angle = 90, color = "#6A00A8FF") +
+  annotate("text", x = 3.1, y = 5, label = "EXPERIMENT", size = 7.5, fontface = 2, 
+           angle = -90, color = "#6A00A8FF") +
+  ## right
+  geom_shape(data = tibble(x = c(4, 10, 10, 4), 
+                           y = c(0, 0, 10,10)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = 7, y = 9.25, label = "Science", size = 9.5, fontface = 2) +  
+  geom_shape(data = tibble(x = c(4.5, 9.5, 9.5, 4.5), 
+                           y = c(0.5, 0.5, 8.5, 8.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#FCA63680", alpha = 0.2) +
+  annotate("text", x = 7, y = 7.9, label = "Natural science", size = 6.5, fontface = 2,
+           color = "#FCA636FF") +  
+  annotate("text", x = 7, y = 7, label = "Study physical world", size = 5, fontface = 4,
+           color = "#FCA636FF") +  
+  annotate("text", x = 5, y = c(6, 5, 4), label = c("Physics", "Chemistry", "Biology"), 
+           size = 4.5, fontface = 4, hjust = "left",
+           color = "black") + 
+  annotate("segment", x = 8.45, y = 3.75, xend = 8.45, yend = 6.1,
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+           size = 1, color = "gray50") +
+  annotate("text", x = c(8, 8.9), y = 4.875, label = c("More pure", "Purity"), size = 4, 
+           fontface = 4, angle = -90, color = "gray50") +
+  annotate("text", x = 4.75, y = 2, label = c("Keywords:\nexperiments,\nobservations,\nevidence, empirical"), 
+           size = 4.5, fontface = 4, hjust = "left",
+           color = "#FCA636FF") + 
+  ## left
+  geom_shape(data = tibble(x = c(-10, 0, 0, -10), 
+                           y = c(0, 0, 10,10)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = -5, y = 9.25, label = "Non-Science", size = 9.5, fontface = 2) 
+
+
+```
+
+
 ### What is not science?
 
 Mathematics and psychoanalysis have no experiments
 
 ### What is the opposite of science?
 
+
+As I found out, there is no direct opposite of science. Which is interesting. Because sometimes you can define something by knowing what the think is not. Is mathematics the language of nature?
+
 Cargo cult science
 
 conspiracy theories @douglas2023conspiracy and @grimes2016viability
+
 
 ### How to do science?
 
