@@ -64,7 +64,7 @@
     "href": "chapter-01-what-is-science.html",
     "title": "1  What is science?",
     "section": "",
-    "text": "1.1 What is not science?\nLast modified on 15. January 2026 at 20:35:41\nThe first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as “taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results.” Therefore, I tried to read and find answers to the question of what science might be. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here. Ultimately, decide for yourself what science truly is.\nMathematics and psychoanalysis have no experiments.\nMathematics and logic are more like scientific tools to do science.",
+    "text": "1.1 What is not science?\nLast modified on 16. January 2026 at 10:41:35\nThe first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as “taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results.” Therefore, I tried to read and find answers to the question of what science might be. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here. Ultimately, decide for yourself what science truly is.\nMathematics and psychoanalysis have no experiments.\nMathematics and logic are more like scientific tools to do science.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -74,8 +74,8 @@
     "objectID": "chapter-01-what-is-science.html#general-background",
     "href": "chapter-01-what-is-science.html#general-background",
     "title": "1  What is science?",
-    "section": "1.7 General background",
-    "text": "1.7 General background\n\n“Any sufficiently advanced technology is indistinguishable from magic.” — Arthur C. Clarke’s Third Law6\n\nFull quote\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss\n\nIdea of hypotheses\nScience is guessing and falsification\n7 What is this thing called Science?\n8 What is science\n9 What is science?\n10 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n11 Statistical Thinking for the 21st Century\n12 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
+    "section": "1.8 General background",
+    "text": "1.8 General background\n\n“Any sufficiently advanced technology is indistinguishable from magic.” — Arthur C. Clarke’s Third Law6\n\nFull quote\n\n“Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.” — Tim Ferriss\n\nIdea of hypotheses\nScience is guessing and falsification\n7 What is this thing called Science?\n8 What is science\n9 What is science?\n10 Models Demystified: A Practical Guide from Linear Regression to Deep Learning\n11 Statistical Thinking for the 21st Century\n12 The beginning of infinity: Explanations that transform the world\nDavid Deutsch &gt; Quotes",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -85,8 +85,8 @@
     "objectID": "chapter-01-what-is-science.html#theoretical-background",
     "href": "chapter-01-what-is-science.html#theoretical-background",
     "title": "1  What is science?",
-    "section": "1.8 Theoretical background",
-    "text": "1.8 Theoretical background",
+    "section": "1.9 Theoretical background",
+    "text": "1.9 Theoretical background",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -96,8 +96,8 @@
     "objectID": "chapter-01-what-is-science.html#r-packages-used",
     "href": "chapter-01-what-is-science.html#r-packages-used",
     "title": "1  What is science?",
-    "section": "1.9 R packages used",
-    "text": "1.9 R packages used",
+    "section": "1.10 R packages used",
+    "text": "1.10 R packages used",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -107,8 +107,8 @@
     "objectID": "chapter-01-what-is-science.html#data",
     "href": "chapter-01-what-is-science.html#data",
     "title": "1  What is science?",
-    "section": "1.10 Data",
-    "text": "1.10 Data",
+    "section": "1.11 Data",
+    "text": "1.11 Data",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -118,8 +118,8 @@
     "objectID": "chapter-01-what-is-science.html#alternatives",
     "href": "chapter-01-what-is-science.html#alternatives",
     "title": "1  What is science?",
-    "section": "1.11 Alternatives",
-    "text": "1.11 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "1.12 Alternatives",
+    "text": "1.12 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -129,8 +129,8 @@
     "objectID": "chapter-01-what-is-science.html#glossary",
     "href": "chapter-01-what-is-science.html#glossary",
     "title": "1  What is science?",
-    "section": "1.12 Glossary",
-    "text": "1.12 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "1.13 Glossary",
+    "text": "1.13 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -140,8 +140,8 @@
     "objectID": "chapter-01-what-is-science.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-01-what-is-science.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "1  What is science?",
-    "section": "1.13 The meaning of “Models of Reality” in this chapter.",
-    "text": "1.13 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "1.14 The meaning of “Models of Reality” in this chapter.",
+    "text": "1.14 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -151,8 +151,8 @@
     "objectID": "chapter-01-what-is-science.html#summary",
     "href": "chapter-01-what-is-science.html#summary",
     "title": "1  What is science?",
-    "section": "1.14 Summary",
-    "text": "1.14 Summary",
+    "section": "1.15 Summary",
+    "text": "1.15 Summary",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -1586,8 +1586,8 @@
     "objectID": "chapter-01-what-is-science.html#what-is-a-good-explanation",
     "href": "chapter-01-what-is-science.html#what-is-a-good-explanation",
     "title": "1  What is science?",
-    "section": "1.5 What is a good explanation?",
-    "text": "1.5 What is a good explanation?",
+    "section": "1.6 What is a good explanation?",
+    "text": "1.6 What is a good explanation?",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -1598,7 +1598,7 @@
     "href": "chapter-01-what-is-science.html#how-to-do-science",
     "title": "1  What is science?",
     "section": "1.4 How to do science?",
-    "text": "1.4 How to do science?\n“As a scientist, you are a professional writer,” Joshua Schimel said.3\nPauli defined the scientific method as “taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results.”4. This is more or less about taking a chair and sitting in the middle of the room and getting bored as long as possible. Doing so sparks creativity.\n\n“Many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one’s thinking and relating them to other aspects.” — Otto Kruse5\n\n##. What is statistics?\nA toolbox of mathematical models to do science.",
+    "text": "1.4 How to do science?\n“As a scientist, you are a professional writer,” Joshua Schimel said.3\nPauli defined the scientific method as “taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results.”4. This is more or less about taking a chair and sitting in the middle of the room and getting bored as long as possible. Doing so sparks creativity.\n\n“Many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one’s thinking and relating them to other aspects.” — Otto Kruse5",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -1619,8 +1619,8 @@
     "objectID": "chapter-01-what-is-science.html#age-of-enlightment",
     "href": "chapter-01-what-is-science.html#age-of-enlightment",
     "title": "1  What is science?",
-    "section": "1.6 Age of enlightment",
-    "text": "1.6 Age of enlightment",
+    "section": "1.7 Age of enlightment",
+    "text": "1.7 Age of enlightment",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
@@ -1632,6 +1632,17 @@
     "title": "1  What is science?",
     "section": "1.3 Why do science?",
     "text": "1.3 Why do science?",
+    "crumbs": [
+      "From science to data by models",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-01-what-is-science.html#what-is-statistics",
+    "href": "chapter-01-what-is-science.html#what-is-statistics",
+    "title": "1  What is science?",
+    "section": "1.5 What is statistics?",
+    "text": "1.5 What is statistics?\nA toolbox of mathematical models to do science.\nIn this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.\nFisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.\nStatistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning.\n\n\n\n\n\n\n\n\nFigure 1.2: foo.",
     "crumbs": [
       "From science to data by models",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
