@@ -179,7 +179,7 @@ p_atom_bohr + p_atom_dens +
   theme(plot.tag = element_text(size = 16, face = "bold")) 
 ```
 
-Why is the nuclei so small? Considering quantum mechanics, we can only determine exactly the position or the momentum of an object. We see here momentum as speed. Therefore, if we know that the electron is near the nuclei, the speed must be very high. Therefore, the electron can not be very often near the nuclei. Hence, the electron does not fall into it. Due to quantum mechanis, the nuclei has to be so small to have a stable atom.
+Why is the nuclei so small? Considering quantum mechanics, we can only determine exactly the position or the momentum of an object. We see here momentum as speed. Therefore, if we know that the electron is near the nuclei, the speed must be very high. Therefore, the electron can not be very often near the nuclei. Hence, the electron does not fall into it. Due to quantum mechanics, the nuclei has to be so small to have a stable atom.
 
 ## The difference between theory and model
 
