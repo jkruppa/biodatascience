@@ -12,8 +12,8 @@ p_sience_inductive <- ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("text", x = -5, y = 1.25, label = "INDUCTIVE", size = 9, fontface = 2, 
            color = "#6A00A8FF") +
-  annotate("label", x = -5, y = 8.75, label = "Pattern finder", size = 7, fontface = 4, 
-           color = "#6A00A8FF", fill = "white") +
+  annotate("text", x = -5, y = 8.75, label = "Pattern finder", size = 7, fontface = 4, 
+           color = "gray50") +
   geom_shape(data = tibble(x = c(-1.5, -1, -2)+0.25, y = c(2, 8, 8)),
              aes(x, y), fill = "gray75", color = "black") +
   annotate("text", x = -1.25, y = c(1.5, 8.5), label = c("specific", "general"),
@@ -47,8 +47,8 @@ p_sience_inductive <- ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("text", x = 5, y = 8.75, label = "DEDUCTIVE", size = 9, fontface = 2, 
            color = "#B12A90FF") +
-  annotate("label", x = 5, y = 1.25, label = "Rule follower", size = 7, fontface = 4, 
-           color = "#B12A90FF", fill = "white") +
+  annotate("text", x = 5, y = 1.25, label = "Rule follower", size = 7, fontface = 4, 
+           color = "gray50") +
   geom_shape(data = tibble(x = c(-1.5, -1, -2)+0.25+10, y = c(2, 8, 8)),
              aes(x, y), fill = "gray75", color = "black") +
   annotate("text", x = -1.25+10, y = c(1.5, 8.5), label = c("specific", "general"),
