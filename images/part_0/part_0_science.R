@@ -1,4 +1,81 @@
 
+
+p_sience_inductive <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-9.5, 9.5), ylim = c(0.5, 9.5)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  ## left
+  geom_shape(data = tibble(x = c(-9.75, -0.25, -0.25, -9.75), 
+                           y = c(0.5, 0.5, 9.5, 9.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = -5, y = 1.25, label = "INDUCTIVE", size = 9, fontface = 2, 
+           color = "#6A00A8FF") +
+  annotate("label", x = -5, y = 8.75, label = "Pattern finder", size = 7, fontface = 4, 
+           color = "#6A00A8FF", fill = "white") +
+  geom_shape(data = tibble(x = c(-1.5, -1, -2)+0.25, y = c(2, 8, 8)),
+             aes(x, y), fill = "gray75", color = "black") +
+  annotate("text", x = -1.25, y = c(1.5, 8.5), label = c("specific", "general"),
+           size = 5, fontface = 2) +  
+  annotate("segment", x = -8.75, y = 2, xend = -8.75, yend = 8,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+           size = 2, color = "gray50") +
+  annotate("text", x = -8.75, y = c(1.5, 8.5), label = c("bottom", "up"),
+           size = 5, fontface = 2) +  
+  geom_circle(aes(x0 = c(-7.5, -7.5, -7.5), y0 = c(7.5, 5.5, 3.5), r = 0.4),
+              color = "#6A00A8FF") +
+  annotate("text", x = c(-7.5, -7.5, -7.5), y = c(7.5, 5.5, 3.5), label = 3:1,
+           size = 5, fontface = 2, color = "#6A00A8FF") +
+  annotate("text", x = c(-7.5, -7.5, -7.5)+0.6, y = c(7.5, 5.5, 3.5)+0.2, 
+           label = c("Conclusion", "Pattern (model)", "Observation (data)"),
+           size = 5, fontface = 2, hjust = "left", color = "#6A00A8FF") +
+  annotate("text", x = -7.5+0.6, y = c(7.5-0.4, 7.5-1),
+           label = c("The bus is always late",
+                     "in general"),
+           size = 5, fontface = 3, hjust = "left") +
+  annotate("text", x = -7.5+0.6, y = c(5.5-0.4, 5.5-1), 
+           label = c("The bus was also late on",
+                     "Tuesday and Wednesday"),
+           size = 5, fontface = 3, hjust = "left") +
+  annotate("text", x = -7.5+0.6, y = c(3.5-0.4, 3.5-1), 
+           label = c("The bus was late on", "Monday"),
+           size = 5, fontface = 3, hjust = "left") +
+  ## right
+  geom_shape(data = tibble(x = c(9.75, 0.25, 0.25, 9.75), 
+                           y = c(0.5, 0.5, 9.5, 9.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = 5, y = 8.75, label = "DEDUCTIVE", size = 9, fontface = 2, 
+           color = "#B12A90FF") +
+  annotate("label", x = 5, y = 1.25, label = "Rule follower", size = 7, fontface = 4, 
+           color = "#B12A90FF", fill = "white") +
+  geom_shape(data = tibble(x = c(-1.5, -1, -2)+0.25+10, y = c(2, 8, 8)),
+             aes(x, y), fill = "gray75", color = "black") +
+  annotate("text", x = -1.25+10, y = c(1.5, 8.5), label = c("specific", "general"),
+           size = 5, fontface = 2) +
+  annotate("segment", x = -8.75+10, y = 8, xend = -8.75+10, yend = 2,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+           size = 2, color = "gray50") +
+  annotate("text", x = -8.75+10, y = c(1.5, 8.5), label = c("down", "top"),
+           size = 5, fontface = 2) +  
+  geom_circle(aes(x0 = c(-7.5, -7.5, -7.5)+10, y0 = c(7.5, 5.5, 3.5), r = 0.4), color = "#B12A90FF") +
+  annotate("text", x = c(-7.5, -7.5, -7.5)+10, y = c(7.5, 5.5, 3.5), label = 1:3,
+           size = 5, fontface = 2, color = "#B12A90FF")  +
+  annotate("text", x = c(-7.5, -7.5, -7.5)+0.6+10, y = c(7.5, 5.5, 3.5)+0.2, 
+           label = c("Theory (general)", "Experiment (specific)", "Conclusion"),
+           size = 5, fontface = 2, hjust = "left", color = "#B12A90FF") +
+  annotate("text", x = -7.5+0.6+10, y = c(7.5-0.4, 7.5-1),
+           label = c("In a vacuum, everything",
+                     "falls equally"),
+           size = 5, fontface = 3, hjust = "left") +
+  annotate("text", x = -7.5+0.6+10, y = c(5.5-0.4, 5.5-1), 
+           label = c("Drop a hammer and",
+                     "a feather in a vacuum"),
+           size = 5, fontface = 3, hjust = "left") +
+  annotate("text", x = -7.5+0.6+10, y = c(3.5-0.4, 3.5-1), 
+           label = c("Both hit the ground at", "the same time"),
+           size = 5, fontface = 3, hjust = "left")
+
 p_science_overview <- ggplot() +
   theme_void() +
   ## theme_minimal() +
