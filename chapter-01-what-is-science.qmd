@@ -103,13 +103,16 @@ ggplot() +
   geom_shape(data = tibble(x = c(-0.5, 10.75, 10.75, -0.5), 
                            y = c(-8.25, -8.25, 0.25, 0.25)),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw, sd = 1)), 
+            aes(x = (x_raw*1.3 + 5.75), y = (y_raw*16 - 7.75)),
+            linewidth = 5, color = "gray80") +
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-2, -2, 0, 0)),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
   annotate("text", x = 2.25, y = -0.4, label = "Conclusion", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
-  annotate("text", x = 2.25, y = -1, label = "Decision making using inference", 
+  annotate("text", x = 2.25, y = -1, label = "Decision making using statistical inference", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1.6, label = "Explanation seeking including prediction", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
@@ -119,13 +122,13 @@ ggplot() +
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +  
   annotate("text", x = 2.25, y = -2.9, label = "Statistical modeling", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
-  annotate("text", x = 2.25, y = -3.5, label = "Mathematical tool to find a pattern in", 
+  annotate("text", x = 2.25, y = -3.5, label = "Mathematical tools to find patterns in", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
-  annotate("text", x = 2.25, y = -4.1, label = "the data by minimizing the noise/error.", 
+  annotate("text", x = 2.25, y = -4.1, label = "data by minimizing the noise/error", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
-  annotate("text", x = 2.25, y = -5, label = "Finds the most likly parameter for a line", 
+  annotate("text", x = 2.25, y = -5, label = "Finds the most likely/plausible parameter", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
-  annotate("text", x = 2.25, y = -5.6, label = "through points.", 
+  annotate("text", x = 2.25, y = -5.6, label = "for a line through points", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
