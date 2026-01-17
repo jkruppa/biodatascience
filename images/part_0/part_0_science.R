@@ -1,4 +1,70 @@
-
+p_statistic_inductive <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(0, 10.5), ylim = c(0.5, -9.5)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  ## 
+  geom_shape(data = tibble(x = c(-0.5, 10.75, 10.75, -0.5), 
+                           y = c(-8.25, -8.25, 0.25, 0.25)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") +
+  geom_line(data = tibble(x_raw = seq(-3.5, 3.5, 0.01), y_raw = dnorm(x_raw, sd = 1)), 
+            aes(x = (x_raw*1.3 + 5.75), y = (y_raw*16 - 7.75)),
+            linewidth = 5, color = "gray80") +
+  ##
+  geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
+                           y = c(-2, -2, 0, 0)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
+  annotate("text", x = 2.25, y = -0.4, label = "Conclusion", 
+           size = 4.5, fontface = 2, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -1, label = "Decision making using statistical inference", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -1.6, label = "Explanation seeking including prediction", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  ##
+  geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
+                           y = c(-6, -6, -2.5, -2.5)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +  
+  annotate("text", x = 2.25, y = -2.9, label = "Statistical modeling", 
+           size = 4.5, fontface = 2, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -3.5, label = "Mathematical tools to find patterns in", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -4.1, label = "data by minimizing the noise/error", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -5, label = "Finds the most likely/plausible parameter", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -5.6, label = "for a line through points", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") + 
+  ##
+  geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
+                           y = c(-8, -8, -6.5, -6.5)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
+  annotate("text", x = 2.25, y = -6.9, label = "Experimental data", 
+           size = 4.5, fontface = 2, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -7.5, label = "Random representation of observables", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") +
+  ##
+  geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
+                           y = c(-10, -10, -8.5, -8.5)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
+  annotate("text", x = 2.25, y = -8.9, label = "Hypothesis (often neqlected)", 
+           size = 4.5, fontface = 2, hjust = "left", color = "black") + 
+  annotate("text", x = 2.25, y = -9.5, label = "Testable question in an experiment", 
+           size = 4.25, fontface = 3, hjust = "left", color = "black") +
+  ## left
+  geom_circle(aes(x0 = c(1.5, 1.5, 1.5, 1.5)-0.1, y0 = c(-0.4, -2.9, -6.9, -8.9)-0.1, r = 0.4),
+              fill = "#6A00A880") +
+  annotate("text", x = c(1.5, 1.5, 1.5, 1.5)-0.1, y = c(-0.4, -2.9, -6.9, -8.9)-0.1, label = 3:0,
+           size = 5, fontface = 2, color = "black") +
+  annotate("text", x = 0, y = -8, angle = 90, hjust = "left", 
+           label = "PROBALISTIC", size = 5.75, fontface = 2, 
+           color = "#6A00A8FF") +
+  annotate("text", x = 0.5, y = -8, angle = 90, hjust = "left",
+           label = "Frequentist / Bayesian", size = 4.75, fontface = 4, 
+           color = "#6A00A8FF") +
+  annotate("text", x = 5.125, y = 0.75, 
+           label = "INDUCTIVE REASONING", size = 6, fontface = 2, 
+           color = "#6A00A8FF")
 
 p_sience_inductive <- ggplot() +
   theme_void() +
