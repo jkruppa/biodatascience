@@ -26,13 +26,7 @@ The following @fig-overview-sience-non-science shows the demarcation line betwee
 p_science_overview 
 ```
 
-## What is not science?
-
-Mathematics and psychoanalysis have no experiments.
-
-Mathematics and logic are more like scientific tools to do science.
-
-Romantic as the answer to enlightment.
+Perhaps we should start with the supposedly easy part. What is the opposite of science? In doing so, we will gain an understanding of the term "science" and what it means to us. This may be the deepest lesson for me: we cannot really grasp science. Science is connected to each person in a different emotional way. Science seems cold and rational, but humans are not. Therefore, our relationship with science is strange and complex.
 
 ## What is the opposite of science?
 
@@ -41,6 +35,18 @@ As I found out, there is no direct opposite of science. Which is interesting. Be
 Cargo cult science
 
 conspiracy theories @douglas2023conspiracy and @grimes2016viability
+
+Individual subjective romantic love
+
+
+## What is not science?
+
+Mathematics and psychoanalysis have no experiments.
+
+Mathematics and logic are more like scientific tools to do science.
+
+Romantic as the answer to enlightment.
+
 
 ## Why do science?
 
@@ -122,7 +128,7 @@ $m = 0.03kg$ and $d = 2m$ and $g = 9.81 m/s^2$
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "fooo."
+#| fig-cap: "Visualization of the relationship between energy and velocity. The points represent calculated velocities from different heights. Due to measurement errors, the points do not fit perfectly on a line. The blue line is the formula derived from the data using a nonlinear model. The shaded area shows the uncertainty caused by measurement errors. The purple line shows the true dependency using the formula for kinetic energy."
 #| label: fig-kenetic-energy
 
 m <- 0.03
