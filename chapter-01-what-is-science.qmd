@@ -32,6 +32,8 @@ Mathematics and psychoanalysis have no experiments.
 
 Mathematics and logic are more like scientific tools to do science.
 
+Romantic as the answer to enlightment.
+
 ## What is the opposite of science?
 
 As I found out, there is no direct opposite of science. Which is interesting. Because sometimes you can define something by knowing what the think is not. Is mathematics the language of nature?
@@ -111,7 +113,7 @@ $m = 0.03kg$ and $d = 2m$ and $g = 9.81 m/s^2$
 | $0.4$ | $0.118$ | $0.65$ | $3.09$ |
 | $0.5$ | $0.147$ | $0.72$ | $2.78$ |
 
-: test {#tbl-newton-data}
+: Results table from the experiment to determine the formula for kinetic energy. The height was changed five times. Using the acceleration due to gravity, the potential energy of the ball can be determined from its height and fixed weight. The ball's speed can be determined from the rolling time and the fixed ramp length. {#tbl-newton-data}
 
 ```{r}
 #| message: false
