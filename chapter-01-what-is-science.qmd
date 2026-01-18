@@ -78,7 +78,7 @@ p_sience_inductive
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 4.5
+#| fig-height: 4
 #| fig-width: 4.5
 #| fig-cap: "fooo."
 #| label: fig-statistic-inductive
@@ -99,7 +99,7 @@ p_statistic_inductive
 ggplot() +
   theme_void() +
   ## theme_minimal() +
-  coord_cartesian(xlim = c(0.5, 10), ylim = c(0, 6.5)) +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 6.5)) +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
   scale_y_continuous(breaks = seq(-10, 10, 1)) +
   annotate("segment", x = 1.5, xend = 2.5, y = 0.5, yend = 0.5, size = 12, color = "gray25",
@@ -108,9 +108,11 @@ ggplot() +
   annotate("segment", x = 2, xend = 2, y = 3, yend = 4.5, size = 10, color = "gray45") +
   annotate("segment", x = 1.5, xend = 2.5, y = 4.5, yend = 4.5, size = 5, color = "gray25",
            lineend = "round") +
-  annotate("segment", x = 2, xend = 10, y = 5, yend = 0.1, size = 2.5, color = "#0D0887FF",
+  annotate("segment", x = 2, xend = 10, y = 5, yend = 0.1, 
+           size = 2.5, color = "#0D0887FF",
            lineend = "round") +
-  annotate("text", x = 5.5, y = 3.25, label = "d = 0.6m", fontface = 2, size = 7, color = "#0D0887FF",
+  annotate("text", x = 5.5, y = 3.25, label = "d = 0.6m", fontface = 2, 
+           size = 6, color = "#0D0887FF",
            angle = -30) +
   annotate("segment", x = 2.4, y = 5.3, xend = 3, yend = 4.9,
            arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
@@ -122,11 +124,11 @@ ggplot() +
   annotate("segment", x = 1, xend = 1, y = 0.1, yend = 5, size = 1, color = "#FCA636FF") +
   annotate("segment", x = 0.9, xend = 1.1, y = c(0.1, 5), yend = c(0.1, 5), 
            size = 1, color = "#FCA636FF") +
-  annotate("text", x = 0.75, y = 2.45, label = "h", fontface = 2, size = 7, color = "#FCA636FF") +
-  annotate("text", x = 4.5, y = 1.5, label = expression(phantom(x) %up% bold(h) %down% bold(Delta*t)), fontface = 2, size = 8, 
+  annotate("text", x = 0.75, y = 2.45, label = "h", fontface = 2, size = 6, color = "#FCA636FF") +
+  annotate("text", x = 4.5, y = 1.5, label = expression(phantom(x) %up% bold(h) %down% bold(Delta*t)), fontface = 2, size = 7, 
            color = "black") +
   annotate("text", x = 7.5, y = 4.5, label = expression(bold(v)~"="~frac(bold(d),bold(Delta*t))),
-           fontface = 2, size = 8, color = "black") 
+           fontface = 2, size = 7, color = "black") 
 
 ```
 
@@ -143,6 +145,15 @@ $m = 0.03kg$ and $d = 2m$ and $g = 9.81 m/s^2$
 : test {#tbl-newton-data}
 
 ```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "fooo."
+#| label: fig-kenetic-energy
+
 m <- 0.03
 d <- 2
 t_func <- \(h) d/sqrt(2*9.81*h)
@@ -152,16 +163,25 @@ newton_tbl <- tibble(h = c(0.1, 0.2, 0.3, 0.4, 0.5),
        v = d/t,
        E = m * 9.81 * h) 
 
-nls(E ~ 0 + b0 * I(v^b1), data = newton_tbl, 
+nls_fit <- nls(E ~ b0 * I(v^b1), data = newton_tbl, 
            start = c(b0 = 0.1, b1 = 1))
-
-newton_tbl
 
 newton_tbl |> 
   ggplot(aes(v, E)) +
-  geom_point() +
-  geom_function(fun = \(x) 0.5 * 0.03 * x^2) +
-  geom_function(fun = \(x) 0 + 0.021 * x^(1.69), color = "red") 
+  theme_book() +
+  geom_function(fun = \(x) 0.5 * 0.03 * x^2, color = "#B12A90FF",  
+                size = 1) +
+  geom_function(fun = \(x) 0 + 0.021 * x^(1.69), color = "#0D0887FF",
+                size = 1) +
+  scale_x_continuous(limits = c(0, 3.5), breaks = seq(0, 3.5, 0.5)) +
+  scale_y_continuous(limits = c(0, 0.2), breaks = seq(0, 0.2, 0.05)) +
+  geom_point(size = 4) +
+  labs(x = "Velocity [m/s]", y = "Energy [J]") +
+  annotate("text", hjust = "left", x = 0.5, y = 0.15, size = 5,
+           label = expression("E"~"="~frac(1, 2) %.% m %.% v^2), color = "#B12A90FF") +
+  annotate("text", hjust = "left", x = 0.5, y = 0.1, size = 5,
+           label = expression("E"~"="~frac(1, 1.43) %.% m %.% v^1.69), 
+           color = "#0D0887FF")
 ```
 
 ## What is a good explanation?
