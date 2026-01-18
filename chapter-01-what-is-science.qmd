@@ -178,9 +178,9 @@ newton_tbl |>
   geom_point(size = 4) +
   labs(x = "Velocity [m/s]", y = "Energy [J]") +
   annotate("text", hjust = "left", x = 0.5, y = 0.15, size = 5,
-           label = expression("E"~"="~frac(1, 2) %.% m %.% v^2), color = "#B12A90FF") +
+           label = expression("E"[kinetic]~"="~frac(1, 2) %.% m %.% v^2), color = "#B12A90FF") +
   annotate("text", hjust = "left", x = 0.5, y = 0.1, size = 5,
-           label = expression("E"~"="~frac(1, 1.43) %.% m %.% v^1.69), 
+           label = expression("E"[model]~"="~frac(1, 1.43) %.% m %.% v^1.69), 
            color = "#0D0887FF")
 ```
 
