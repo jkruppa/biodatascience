@@ -1,3 +1,38 @@
+p_newton_example <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 6.5)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  annotate("segment", x = 1.5, xend = 2.5, y = 0.5, yend = 0.5, size = 12, color = "gray25",
+           lineend = "round") +
+  annotate("segment", x = 2, xend = 2, y = 0.5, yend = 3, size = 15, color = "gray25") +
+  annotate("segment", x = 2, xend = 2, y = 3, yend = 4.5, size = 10, color = "gray45") +
+  annotate("segment", x = 1.5, xend = 2.5, y = 4.5, yend = 4.5, size = 5, color = "gray25",
+           lineend = "round") +
+  annotate("segment", x = 2, xend = 10, y = 5, yend = 0.1, 
+           size = 2.5, color = "#0D0887FF",
+           lineend = "round") +
+  annotate("text", x = 5.5, y = 3.25, label = "d = 0.6m", fontface = 2, 
+           size = 6, color = "#0D0887FF",
+           angle = -30) +
+  annotate("segment", x = 2.4, y = 5.3, xend = 3, yend = 4.9,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+           size = 1.5, color = "#6A00A8FF") +
+  geom_circle(aes(x0 = 2, y0 = 5.5, r = 0.46), fill = "#6A00A880", size = 1.25) +
+  annotate("text", x = 2, y = 5.5, label = "m", fontface = 2, size = 6, color = "black") +
+  annotate("text", x = 2, y = 6.25, label = "0.03kg", fontface = 2, size = 6, color = "#6A00A8FF") +
+  ## error bars
+  annotate("segment", x = 1, xend = 1, y = 0.1, yend = 5, size = 1, color = "#FCA636FF") +
+  annotate("segment", x = 0.9, xend = 1.1, y = c(0.1, 5), yend = c(0.1, 5), 
+           size = 1, color = "#FCA636FF") +
+  annotate("text", x = 0.75, y = 2.45, label = "h", fontface = 2, size = 6, color = "#FCA636FF") +
+  annotate("text", x = 4.5, y = 1.5, label = expression(phantom(x) %up% bold(h) %down% bold(Delta*t)), fontface = 2, size = 7, 
+           color = "black") +
+  annotate("text", x = 7.5, y = 4.5, label = expression(bold(v)~"="~frac(bold(d),bold(Delta*t))),
+           fontface = 2, size = 7, color = "black") 
+
+
 p_statistic_inductive <- ggplot() +
   theme_void() +
   ##theme_minimal() +
@@ -57,7 +92,7 @@ p_statistic_inductive <- ggplot() +
   annotate("text", x = c(1.5, 1.5, 1.5, 1.5)-0.1, y = c(-0.4, -2.9, -6.9, -8.9)-0.1, label = 3:0,
            size = 5, fontface = 2, color = "black") +
   annotate("text", x = 0, y = -8, angle = 90, hjust = "left", 
-           label = "PROBALISTIC", size = 5.75, fontface = 2, 
+           label = "PROBABILISTIC PROCESS", size = 5.75, fontface = 2, 
            color = "#6A00A8FF") +
   annotate("text", x = 0.5, y = -8, angle = 90, hjust = "left",
            label = "Frequentist / Bayesian", size = 4.75, fontface = 4, 
