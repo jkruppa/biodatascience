@@ -30,13 +30,23 @@ Perhaps we should start with the supposedly easy part. What is the opposite of s
 
 ## What is the opposite of science?
 
-As I found out, there is no direct opposite of science. Which is interesting. Because sometimes you can define something by knowing what the think is not. Is mathematics the language of nature?
+As I found out, there is no direct opposite of science. That's interesting. Sometimes, you can define something by knowing what it is not. You might think this is not so problematic. Take a few minutes to ask yourself: "What is the opposite of science?" Okay, good to have your focus back on the page. Maybe you thought science was cold and rational. I will share my personal story with science. For me, science was Star Trek: Enterprise. But I'm too young for Kirk and Spock. So, I was socialized with Captain Jean-Luc Picard and Star Trek: The Next Generation (TNG). That's where I first encountered Shakespeare, but that's another story. In TNG, science was determined by the exploration of new worlds. I would sit comfortably on the open bridge in front of the gigantic viewscreen. Commander Data was the embodiment of science. He was an android. He was rational and cold, devoid of emotion and humor. Let's flip these attributes.
+
+If an android is science, then what is a human? Then is the human the opposite of science? Perhaps there is some truth to that. Humans have lived on this planet for thousands of years, but science as we know it began during the Enlightenment. So perhaps humans are the opposite of science. Human beings are full of emotions and feelings. Each one is very subjective and interested in their own development. They feel love and romance. Neither of these is very scientific. Humans also believe. Some believe in a more structured manner, like in big churches, while others believe in a more individual manner. However, believing in something has nothing to do with science. But humans do science. Therefore, science is part of humanity. As Joshua Schimel said, "Knowledge is a product of human hopes and fears. Our emotions are crucial to its development, and it cannot be truly understood as some bloodless, emotionless enterprise."@schimel2012writing Science is a human endeavor.  
+
+According to Arthur C. Clarke's Third Law, "Any sufficiently advanced technology is indistinguishable from magic."@clarke1968clarke Is magic therefore the opposite of science? We cannot perform magic. We do not have the power to do so. However, some humans believe that we can perform magic. Who is "we"? The advanced part of humankind. We come into contact with our brothers and sisters who are at a different technological level, such as tribal cultures on isolated islands in Indonesia. To a tribe with a primitive culture, our technology seems like magic. Here, we can observe the cargo cult. A cargo cult is named after its appearance in World War II. The US Army faced the challenge of determining the best island-hopping route to mainland Japan. Since no one knew and the tides of war were constantly changing, the US Army Logistics Corps decided to drop cargo everywhere. This way, if US soldiers approached an island, there would already be plenty of supplies. 
+
+What happened to the indigenous population? They believed that the gods had come to bring them cargo. They could not think of any other explanation for what they observed. They observed hardened silver birds dropping and landing on the islands. After a while, the gods stopped showing up. The war was over. But nobody told them. Therefore, the people of the islands copied the gods' behavior. They built the control room, and they made a radar station out of grass and wood. They even built plans out of grass. Nothing could work. They did everything perfectly, but they missed the point entirely. It was a cargo cult, not science. They copied someone else's routine and hoped to experience what the gods experienced when they did the same.
+
+Do you follow a cargo cult in your daily routines? Do you do things that you have seen but don't understand? Do you believe that they will work even though you don't know why? This is totally human and from my point of view totally necessary to be a working community member. Some stuff must be done, even if I don not really understand the why. But what if we do it in science? Then we will do cargo cult science @feynman1998cargo. It is a danger of enormous proportions if done in the wrong place with the wrong intentions. Still, most intentions are good and are twisted by the circumstances.
+
+atomic chamber fukushima
+
 
 Cargo cult science
 
 conspiracy theories @douglas2023conspiracy and @grimes2016viability
 
-Individual subjective romantic love
 
 
 ## What is not science?
@@ -50,7 +60,6 @@ Romantic as the answer to enlightment.
 
 ## Why do science?
 
-## What is real?
 
 
 ## How to do science?
@@ -173,6 +182,14 @@ cbind(newton_tbl, nls_ci) |>
 ```
 
 ## What is a good explanation?
+
+## What is real?
+
+
+Sometimes we need a model to know what is real.
+
+Fukusima @sevon2020analysis @sevon2023analyzing
+
 
 ## Age of enlightment
 
