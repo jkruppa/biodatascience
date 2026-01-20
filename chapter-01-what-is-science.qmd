@@ -52,12 +52,16 @@ What does the movement claim? In short, the US government kills all birds in the
 Here, we will not focus on conspiracy theories and how they work. That topic is beyond the scope of this book.
 
 
+What do conspiracy theories have in common? They all tell a good story. Personally, I find them more like fairy tales, with the standard Greek dramatic structure of one hero against an anonymous horde of evil.
+
+They all have a lack of experiment. They do not even do a tiny experiment or state a hypothesis to test. 
+
+Psychoanalysis have no experiments.
 
 
-Mathematics and psychoanalysis have no experiments.
+## What is science?
 
-Mathematics and logic are more like scientific tools to do science.
-
+We divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. This is one way to distinguish fields of science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
 
 
 
