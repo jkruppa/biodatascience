@@ -1,3 +1,44 @@
+
+##----------------------------------------------------------------------------
+m <- 0.03
+d <- 2
+t_func <- \(h) d/sqrt(2*9.81*h)
+
+newton_tbl <- tibble(h = c(0.1, 0.2, 0.3, 0.4, 0.5),
+                     t = t_func(h) + rnorm(5, 0, 0.1),
+                     v = d/t,
+                     E = m * 9.81 * h) 
+
+pacman::p_load(nlraa)
+
+nls_fit <- nls(E ~ b0 * I(v^b1), data = newton_tbl, 
+               start = c(b0 = 0.1, b1 = 1))
+
+nls_ci <- predict_nls(nls_fit, interval = "prediction")
+
+p_kenetic_energy <- cbind(newton_tbl, nls_ci) |> 
+  ggplot(aes(v, E)) +
+  theme_book() +
+  geom_function(fun = \(x) 0.5 * 0.03 * x^2, color = "#B12A90FF",  
+                size = 1) +
+  geom_function(fun = \(x) 0 + 0.021 * x^(1.69), color = "#0D0887FF",
+                size = 1) +
+  scale_x_continuous(limits = c(0, 3.5), breaks = seq(0, 3.5, 0.5)) +
+  scale_y_continuous(limits = c(-0.02, 0.25), breaks = seq(0, 0.25, 0.05)) +
+  geom_point(size = 4) +
+  labs(x = "Velocity [m/s]", y = "Energy [J]") +
+  annotate("text", hjust = "left", x = 0.5, y = 0.2, size = 5,
+           label = expression("E"[kinetic]~"="~frac(1, 2) %.% m %.% v^2), color = "#B12A90FF") +
+  annotate("text", hjust = "left", x = 0.5, y = 0.15, size = 5,
+           label = expression("E"[model]~"="~frac(1, 1.43) %.% m %.% v^1.69), 
+           color = "#0D0887FF") +
+  geom_ribbon(aes(ymin = Estimate - Est.Error, ymax = Estimate + Est.Error), 
+              fill = "#0D088780", alpha = 0.2) +
+  annotate("text", x = 2.5, y = 0.0325, label = "Uncertainty area",
+           color = "#0D0887FF", fontface = 4, size = 5)
+
+##----------------------------------------------------------------------------
+
 p_newton_example <- ggplot() +
   theme_void() +
   ## theme_minimal() +
