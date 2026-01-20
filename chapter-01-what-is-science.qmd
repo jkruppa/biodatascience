@@ -7,7 +7,7 @@ source("images/part_0/part_0_science.R")
 
 *Last modified on `r format(fs::file_info("chapter-01-what-is-science.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"Reality is negotiable." --- Tim Ferriss*
+> *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
 
 The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here. Ultimately, decide for yourself what science truly is.
 
@@ -26,7 +26,7 @@ The following @fig-overview-sience-non-science shows the demarcation line betwee
 p_science_overview 
 ```
 
-Perhaps we should start with the supposedly easy part. What is the opposite of science? In doing so, we will gain an understanding of the term "science" and what it means to us. This may be the deepest lesson for me: we cannot really grasp science. Science is connected to each person in a different emotional way. Science seems cold and rational, but humans are not. Therefore, our relationship with science is strange and complex.
+Perhaps we should start with the supposedly easy part. What is the opposite of science? In doing so, we will gain an understanding of the term "science" and what it means to us. This may be the deepest lesson for me: we cannot really grasp science. Science is connected to each person in a different emotional way. Science seems cold and rational, but humans are not. Therefore, our relationship with science is strange and complex. Science is its own way of thinking, perhaps a philosophy. Therefore, there are as many ways of thinking as there are human minds.
 
 ## What is the opposite of science?
 
@@ -38,13 +38,19 @@ According to Arthur C. Clarke's Third Law, "Any sufficiently advanced technology
 
 What happened to the indigenous population? They believed that the gods had come to bring them cargo. They could not think of any other explanation for what they observed. They observed hardened silver birds dropping and landing on the islands. After a while, the gods stopped showing up. The war was over. But nobody told them. Therefore, the people of the islands copied the gods' behavior. They built the control room, and they made a radar station out of grass and wood. They even built plans out of grass. Nothing could work. They did everything perfectly, but they missed the point entirely. It was a cargo cult, not science. They copied someone else's routine and hoped to experience what the gods experienced when they did the same.
 
-Do you follow a cargo cult in your daily routines? Do you do things that you have seen but don't understand? Do you believe that they will work even though you don't know why? This is totally human and from my point of view totally necessary to be a working community member. Some stuff must be done, even if I don not really understand the why. But what if we do it in science? Then we will do cargo cult science @feynman1998cargo. It is a danger of enormous proportions if done in the wrong place with the wrong intentions. Still, most intentions are good and are twisted by the circumstances. 
+Do you follow a cargo cult in your daily routines? Do you do things that you have seen but don't understand? Do you believe that they will work even though you don't know why? This is totally human and from my point of view totally necessary to be a working community member. Some stuff must be done, even if I don not really understand the why. But what if we do it in science? Then we will do cargo cult science @feynman1998cargo. It is a danger of enormous proportions if done in the wrong place with the wrong intentions. Still, most intentions are good and are twisted by the circumstances. There are several examples of following dogmatic rules and getting a catastrophic outcome. Later, we will explore different models of reality, including the Fukushima nuclear accident. 
 
-There are several examples of following the rules dogmatic and get a catastrophically  outcome. Later we will visit different models of the reality including the Fukushima nuclear accident. 
-
-Here I want to conclude, that the opposite of science is hard to grasp. On the one hand we can argue, that the emotions and feelings of humans are the opposite of the cold and rational science. But again, the emotions are the driving force of humans to do science. Therefore, we do something very scientific, we led the part open for further research and look for things that are not science. 
+For now, I would like to conclude that the opposite of science is difficult to grasp. On the one hand, we could argue that human emotions and feelings are the opposite of cold, rational science. However, emotions are also the driving force behind human scientific inquiry. Therefore, we are doing something scientific by leaving the topic open for further research and looking for things that are not science.
 
 ## What is not science?
+
+Besides things that are the opposite of science, there are things that are similar to science or that use attributes and tools in a distorted way to imitate science. Conspiracy theories [@douglas2023conspiracy; @grimes2016viability] look like science and use science terms and tools. They play on a stage that looks like science but has no deeper foundation. It's more like a nice story about humans harming other humans. However, conspiracy theories attempt to explain the world and often generate money for the storyteller. Therefore, I do not see conspiracy theories as the opposite of science. These conspiracy theories are non-science. Some theories have a historical basis, such as the hollow earth conspiracy theory. We will discuss the origin later. Conspiracy theories like to be retold, and in the process, they grow and multiply. To circumvent the proliferation of conspiracy theories, I will provide an illustration of the anti-conspiracy theory "Birds Aren't Real" by Peter McIndoe. 
+
+What does the movement claim? In short, the US government kills all birds in the US and replaces them with bird-looking drones. Birds sit on power lines to recharge and defecate on cars to mark them visually. The bird drones are there to spy on American citizens. The specifications are inconsistent and vary. This is a typical sign of a conspiracy theory. Finally, U.S. President John F. Kennedy was assassinated by the government due to his reluctance to kill all the birds as cherry on top.
+
+
+Here, we will not focus on conspiracy theories and how they work. That topic is beyond the scope of this book.
+
 
 
 
@@ -52,13 +58,8 @@ Mathematics and psychoanalysis have no experiments.
 
 Mathematics and logic are more like scientific tools to do science.
 
-Romantic as the answer to enlightment.
 
-Conspiracy theories @douglas2023conspiracy @grimes2016viability look like science and use also science terms and science tools. Therefore I do not see conspiracy theories as opposite of science. These theories are non-science. 
 
-We will here not focus on conspiracy theories and how they work. This is out of the scope of this book.
-
-Anti conspiracy theories as Birds Aren't Real from Peter McIndoe as an example.
 
 
 ## Why do science?
@@ -112,7 +113,7 @@ The measurement paradox. When there is no agent wo is measuring, does atoms exis
 
 ## What is statistics in science?
 
-On a warm spring day I was sitting in my first statistics lecture. I can not remember everything but one quote of the beginning of the lecture is still in my mind:  "Statistics is the engine room of science". And I thing, this quote might even not spoken in this form. It was the underlying feeling of the lecture.
+On a warm spring day, I was sitting in my first statistics lecture. I don't remember everything, but one quote from the beginning of the lecture has stuck with me:  "Statistics is the engine room of science." I think this quote might not have been spoken in this form. Rather, it was the underlying theme of the lecture.
 
 A toolbox of mathematical models to do science.
 
@@ -138,7 +139,7 @@ Statistical models are inductive
 p_statistic_inductive 
 ```
 
-The inductive reasoning seems a little bit hard to follow. Therefore I made a small experiment, so achieve the formula for the genetic energy of a object focusing on the velocity. We will keep the mass constant to make things easier. The formula is well known science Newton found them. The formula for the kinetic energy is $E_[kinetic] = \tfrac{1}{2}mv^2$. Therefore we take the mass of a object in kilogram and multiply it by the quadratic velocity. The velocity is defined by the following $v = \tfrac{d}{t}$. We divide the traveled distance by the needed time of the object. Now I want to find the dependency between the velocity and the kinetic energy. Therefore I build the following apparatus. A ball with a mass of $30g$ or $0.03kg$ lies on a height adjustable tower. The ball will travel without friction a ramp with a distance of $60cm$ or $0.6m$ to the ground. We will measure at different heights how long the ball will take to reach the ground. In each trail we can than calculate the velocity. We know the energy of the ball on the top. There we find the potential energy $E[potential] = mgh$. We multiply the mass of the ball with the earth acceleration of $9.81\tfrac{m}{s^2}$ and the height of the tower. Because we change the height, we also increase the energy of the ball.
+Inductive reasoning seems a bit difficult to follow. Therefore, I conducted a small experiment to derive the formula for an object's genetic energy, focusing on velocity. To make things easier, we will keep the mass constant. The formula is well-known; Newton discovered it. The formula for kinetic energy is $E_{kinetic} = \tfrac{1}{2}mv^2$. Therefore, we will take the mass of an object in kilograms and multiply it by the square of the velocity. Velocity is defined as follows: $v = \tfrac{d}{t}$. We divide the distance traveled by the time it takes the object to travel that distance. Now, I want to find the dependency between velocity and kinetic energy. To do so, I built the following apparatus. A $30$-gram ($0.03kg$) ball lies on a height-adjustable tower. The ball will travel a ramp without friction, covering a distance of $60cm$ ($0.6m$) to the ground. At different heights, we will measure how long it takes the ball to reach the ground. Then, we can calculate the velocity in each trial. We know the ball's energy at the top. At the top, we find the potential energy with $E_{potential} = mgh$. We will multiply the ball's mass by the acceleration due to gravity, which is $9.81 m/s^2$, and the height of the tower. Since we are changing the height, the ball's energy will also increase.
 
 ```{r}
 #| message: false
@@ -153,7 +154,7 @@ The inductive reasoning seems a little bit hard to follow. Therefore I made a sm
 p_newton_example
 ```
 
-Let write everything together. We have the mass of the ball $m = 0.03kg$ and the length of the ramp $d = 2m$ as well as the earth acceleration $g = 9.81 m/s^2$. Now we put the tower at five heights and let the ball roll. Surprisingly fast runs the ball. Because we can not perfectly adjust the height and the manual time measurement is error prone we get noisy measures of the velocity. We observe data and observed data has an error. The table @tbl-newton-data includes the measured and calculated data.
+Let's write everything down. We have the mass of the ball, $m = 0.03kg$, the length of the ramp, $d = 2m$, and the acceleration due to gravity, $g = 9.81 m/s^2$. We put the tower at five different heights and let the ball roll. The ball runs surprisingly fast. Because we cannot perfectly adjust the height, and manual time measurement is error-prone, we obtain noisy velocity measurements. The observed data has an error. The table @tbl-newton-data includes the measured and calculated data.
 
 | Height \[m\] | Potential energy \[J\] | Time \[s\] | Velocity \[m/s\] |
 |--------------|------------------|--------------|--------------|
@@ -165,7 +166,7 @@ Let write everything together. We have the mass of the ball $m = 0.03kg$ and the
 
 : Results table from the experiment to determine the formula for kinetic energy. The height was changed five times. Using the acceleration due to gravity, the potential energy of the ball can be determined from its height and fixed weight. The ball's speed can be determined from the rolling time and the fixed ramp length. {#tbl-newton-data}
 
-A table of data is nice, but most of us all can not really see anything in a table. Therefore, we will visualize our data through out the book. In the @fig-kenetic-energy we can see the five data points for the energy of the balls and the final velocity. The blue line indicates the result of a statistical model. I have run a nonlinear regression to find the perfect line through the points. How I did this? We will come to modelling later on in this book. In contrast you can see the purple line of the real dependency of velocity to energy. There is a deviation. We can visualize this deviation as a uncertainty area in our plot. Due to these deviation we do not find the perfect formula. 
+A table of data is nice, but most of us cannot really see anything in a table. Therefore, we will visualize our data throughout the book. The @fig-kenetic-energy displays the five data points for the energy of the balls and the final velocity. The blue line shows the result of a statistical model. I ran a nonlinear regression to find the perfect line through the points. How did I do this? We will discuss modeling later in the book. In contrast, the purple line shows the actual dependency of velocity on energy. There is a deviation in our statistical model. We can visualize this deviation as an area of uncertainty in our plot. Due to this deviation, we cannot find the perfect formula. There are different ways to show statistical deviation. In general, the deviation is related to how far the individual observations or points are from the line drawn by the model. This process is called fitting a line through points.
 
 ```{r}
 #| message: false
@@ -180,7 +181,7 @@ A table of data is nice, but most of us all can not really see anything in a tab
 p_kenetic_energy
 ```
 
-What can we learn from our small experiment? If we conduct an experiment, we will always have an error, noise or a deviation. There are different names for nearly the same concepts. This is the core of inductive reasoning using statistics. We will always have an error and we want to minimize this error. What is this error and how we describe these errors is the main topic of this book.
+What can we learn from our small experiment? No matter what we do, there will always be an error, noise, or deviation. There are different names for nearly identical concepts. This is the core of inductive reasoning using statistics. We will always have errors, and we want to minimize them. The main topic of this book is what this error is and how we describe these errors. Not really the errors themselves, but rather the concept of drawing lines through points by minimizing error.
 
 Randomization and random observations
 
@@ -196,13 +197,16 @@ Fukusima @sevon2020analysis @sevon2023analyzing
 
 ## Age of enlightment
 
-## General background
+Romantic as the answer to enlightment.
 
-> *"Any sufficiently advanced technology is indistinguishable from magic." --- Arthur C. Clarke's Third Law @clarke1968clarke*
+## General background
 
 Full quote
 
 > *"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical." --- Tim Ferriss*
+
+
+> *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
 
 Idea of hypotheses
 
@@ -222,11 +226,6 @@ Science is guessing and falsification
 
 [David Deutsch \> Quotes](https://www.goodreads.com/author/quotes/103190.David_Deutsch)
 
-## Theoretical background
-
-## R packages used
-
-## Data
 
 ## Alternatives
 
