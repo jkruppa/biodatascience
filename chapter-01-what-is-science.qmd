@@ -38,18 +38,15 @@ According to Arthur C. Clarke's Third Law, "Any sufficiently advanced technology
 
 What happened to the indigenous population? They believed that the gods had come to bring them cargo. They could not think of any other explanation for what they observed. They observed hardened silver birds dropping and landing on the islands. After a while, the gods stopped showing up. The war was over. But nobody told them. Therefore, the people of the islands copied the gods' behavior. They built the control room, and they made a radar station out of grass and wood. They even built plans out of grass. Nothing could work. They did everything perfectly, but they missed the point entirely. It was a cargo cult, not science. They copied someone else's routine and hoped to experience what the gods experienced when they did the same.
 
-Do you follow a cargo cult in your daily routines? Do you do things that you have seen but don't understand? Do you believe that they will work even though you don't know why? This is totally human and from my point of view totally necessary to be a working community member. Some stuff must be done, even if I don not really understand the why. But what if we do it in science? Then we will do cargo cult science @feynman1998cargo. It is a danger of enormous proportions if done in the wrong place with the wrong intentions. Still, most intentions are good and are twisted by the circumstances.
+Do you follow a cargo cult in your daily routines? Do you do things that you have seen but don't understand? Do you believe that they will work even though you don't know why? This is totally human and from my point of view totally necessary to be a working community member. Some stuff must be done, even if I don not really understand the why. But what if we do it in science? Then we will do cargo cult science @feynman1998cargo. It is a danger of enormous proportions if done in the wrong place with the wrong intentions. Still, most intentions are good and are twisted by the circumstances. 
 
-atomic chamber fukushima
+There are several examples of following the rules dogmatic and get a catastrophically  outcome. Later we will visit different models of the reality including the Fukushima nuclear accident. 
 
-
-Cargo cult science
-
-conspiracy theories @douglas2023conspiracy and @grimes2016viability
-
-
+Here I want to conclude, that the opposite of science is hard to grasp. On the one hand we can argue, that the emotions and feelings of humans are the opposite of the cold and rational science. But again, the emotions are the driving force of humans to do science. Therefore, we do something very scientific, we led the part open for further research and look for things that are not science. 
 
 ## What is not science?
+
+
 
 Mathematics and psychoanalysis have no experiments.
 
@@ -57,8 +54,23 @@ Mathematics and logic are more like scientific tools to do science.
 
 Romantic as the answer to enlightment.
 
+conspiracy theories @douglas2023conspiracy and @grimes2016viability
+
 
 ## Why do science?
+
+To find a good explanation
+
+To help people
+
+To reduce suffering and pain
+
+To make the plant earth more habitable 
+
+To live longer
+
+Because the human is lazy@price2021laziness
+
 
 
 
@@ -68,19 +80,9 @@ Romantic as the answer to enlightment.
 
 Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." @fischer2022stunde. This is more or less about taking a chair and sitting in the middle of the room and getting bored as long as possible. Doing so sparks creativity.
 
-> *"Many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects." --- Otto Kruse @kruse2007keine*
+Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
 
-## What is statistics?
-
-A toolbox of mathematical models to do science.
-
-In this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.
-
-Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
-
-Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
-
-Statistical models are inductive
+The two paths of logic.
 
 ```{r}
 #| message: false
@@ -95,6 +97,28 @@ Statistical models are inductive
 p_sience_inductive 
 ```
 
+
+Erst Mach and observational things.
+
+Karl Pearson what is reality.
+
+Quantum mechanics, we do not know what reality is.
+
+The measurement paradox. When there is no agent wo is measuring, does atoms exist? What does measuring mean? A interaction between a large and a small atomic object. Where is the border between large and quantum objects?
+
+## What is statistics?
+
+A toolbox of mathematical models to do science.
+
+In this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.
+
+Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
+
+Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
+
+Statistical models are inductive
+
+
 ```{r}
 #| message: false
 #| echo: false
@@ -107,6 +131,8 @@ p_sience_inductive
 
 p_statistic_inductive 
 ```
+
+The inductive reasoning seems a little bit hard to follow. Therefore I made a small experiment, so achieve the formula for the genetic energy of a object. The formula is well known science Newton found them. The formula for the kinetic energy is $E_[kinetic] = \tfrac{1}{2}mv^2$. Therefore we take the mass of a object in kilogram and multiply it by the quadratic velocity. The velocity is defined by the following $v = \tfrac{d}{t}$. We divide the traveled distance by the needed time of the object. Now I want to find the dependency between the velocity and the kinetic energy. Therefore I build the following apparatus. A ball with a mass of $30g$ or $0.03kg$ lies on a height adjustable tower. The ball will travel without friction a ramp with a distance of $60cm$ or $0.6m$ to the ground. We will measure at different heights how long the ball will take to reach the ground. In each trail we can than calculate the velocity. We know the energy of the ball on the top. There we find the potential energy $E[potential] = mgh$. We multiply the mass of the ball with the earth acceleration of $9.81\tfrac{m}{s^2}$ and the height of the tower. Because we change the height, we also increase the energy of the ball.
 
 ```{r}
 #| message: false
