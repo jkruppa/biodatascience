@@ -106,7 +106,9 @@ Quantum mechanics, we do not know what reality is.
 
 The measurement paradox. When there is no agent wo is measuring, does atoms exist? What does measuring mean? A interaction between a large and a small atomic object. Where is the border between large and quantum objects?
 
-## What is statistics?
+## What is statistics in science?
+
+On a warm spring day I was sitting in my first statistics lecture. I can not remember everything but one quote of the beginning of the lecture is still in my mind:  "Statistics is the engine room of science". And I thing, this quote might even not spoken in this form. It was the underlying feeling of the lecture.
 
 A toolbox of mathematical models to do science.
 
