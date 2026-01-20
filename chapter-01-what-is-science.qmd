@@ -147,7 +147,7 @@ The inductive reasoning seems a little bit hard to follow. Therefore I made a sm
 p_newton_example
 ```
 
-$m = 0.03kg$ and $d = 2m$ and $g = 9.81 m/s^2$
+Let write everything together. We have the mass of the ball $m = 0.03kg$ and the length of the ramp $d = 2m$ as well as the earth acceleration $g = 9.81 m/s^2$. Now we put the tower at five heights and let the ball roll. Surprisingly fast runs the ball. Because we can not perfectly adjust the height and the manual time measurement is error prone we get noisy measures of the velocity. We observe data. And obsserved data has an error.
 
 | Height \[m\] | Potential energy \[J\] | Time \[s\] | Velocity \[m/s\] |
 |--------------|------------------|--------------|--------------|
