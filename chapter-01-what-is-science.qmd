@@ -132,7 +132,7 @@ Statistical models are inductive
 p_statistic_inductive 
 ```
 
-The inductive reasoning seems a little bit hard to follow. Therefore I made a small experiment, so achieve the formula for the genetic energy of a object. The formula is well known science Newton found them. The formula for the kinetic energy is $E_[kinetic] = \tfrac{1}{2}mv^2$. Therefore we take the mass of a object in kilogram and multiply it by the quadratic velocity. The velocity is defined by the following $v = \tfrac{d}{t}$. We divide the traveled distance by the needed time of the object. Now I want to find the dependency between the velocity and the kinetic energy. Therefore I build the following apparatus. A ball with a mass of $30g$ or $0.03kg$ lies on a height adjustable tower. The ball will travel without friction a ramp with a distance of $60cm$ or $0.6m$ to the ground. We will measure at different heights how long the ball will take to reach the ground. In each trail we can than calculate the velocity. We know the energy of the ball on the top. There we find the potential energy $E[potential] = mgh$. We multiply the mass of the ball with the earth acceleration of $9.81\tfrac{m}{s^2}$ and the height of the tower. Because we change the height, we also increase the energy of the ball.
+The inductive reasoning seems a little bit hard to follow. Therefore I made a small experiment, so achieve the formula for the genetic energy of a object focusing on the velocity. We will keep the mass constant to make things easier. The formula is well known science Newton found them. The formula for the kinetic energy is $E_[kinetic] = \tfrac{1}{2}mv^2$. Therefore we take the mass of a object in kilogram and multiply it by the quadratic velocity. The velocity is defined by the following $v = \tfrac{d}{t}$. We divide the traveled distance by the needed time of the object. Now I want to find the dependency between the velocity and the kinetic energy. Therefore I build the following apparatus. A ball with a mass of $30g$ or $0.03kg$ lies on a height adjustable tower. The ball will travel without friction a ramp with a distance of $60cm$ or $0.6m$ to the ground. We will measure at different heights how long the ball will take to reach the ground. In each trail we can than calculate the velocity. We know the energy of the ball on the top. There we find the potential energy $E[potential] = mgh$. We multiply the mass of the ball with the earth acceleration of $9.81\tfrac{m}{s^2}$ and the height of the tower. Because we change the height, we also increase the energy of the ball.
 
 ```{r}
 #| message: false
@@ -147,7 +147,7 @@ The inductive reasoning seems a little bit hard to follow. Therefore I made a sm
 p_newton_example
 ```
 
-Let write everything together. We have the mass of the ball $m = 0.03kg$ and the length of the ramp $d = 2m$ as well as the earth acceleration $g = 9.81 m/s^2$. Now we put the tower at five heights and let the ball roll. Surprisingly fast runs the ball. Because we can not perfectly adjust the height and the manual time measurement is error prone we get noisy measures of the velocity. We observe data. And obsserved data has an error.
+Let write everything together. We have the mass of the ball $m = 0.03kg$ and the length of the ramp $d = 2m$ as well as the earth acceleration $g = 9.81 m/s^2$. Now we put the tower at five heights and let the ball roll. Surprisingly fast runs the ball. Because we can not perfectly adjust the height and the manual time measurement is error prone we get noisy measures of the velocity. We observe data and observed data has an error. The table @tbl-newton-data includes the measured and calculated data.
 
 | Height \[m\] | Potential energy \[J\] | Time \[s\] | Velocity \[m/s\] |
 |--------------|------------------|--------------|--------------|
@@ -158,6 +158,8 @@ Let write everything together. We have the mass of the ball $m = 0.03kg$ and the
 | $0.5$ | $0.147$ | $0.72$ | $2.78$ |
 
 : Results table from the experiment to determine the formula for kinetic energy. The height was changed five times. Using the acceleration due to gravity, the potential energy of the ball can be determined from its height and fixed weight. The ball's speed can be determined from the rolling time and the fixed ramp length. {#tbl-newton-data}
+
+A table of data is nice, but most of us all can not really see anything in a table. Therefore, we will visualize our data through out the book. In the @fig-kenetic-energy we can see the five data points for the energy of the balls and the final velocity. The blue line indicates the result of a statistical model. I have run a nonlinear regression to find the perfect line through the points. How I did this? We will come to modelling later on in this book. In contrast you can see the purple line of the real dependency of velocity to energy. There is a deviation. We can visualize this deviation as a uncertainty area in our plot. Due to these deviation we do not find the perfect formula. 
 
 ```{r}
 #| message: false
@@ -206,6 +208,8 @@ cbind(newton_tbl, nls_ci) |>
   annotate("text", x = 2.5, y = 0.0325, label = "Uncertainty area",
            color = "#0D0887FF", fontface = 4, size = 5)
 ```
+
+What can we learn from our small experiment? If we conduct an experiment, we will always have an error, noise or a deviation. There are different names for nearly the same concepts. This is the core of inductive reasoning using statistics. We will always have an error and we want to minimize this error. What is this error and how we describe these errors is the main topic of this book.
 
 ## What is a good explanation?
 
