@@ -211,6 +211,8 @@ cbind(newton_tbl, nls_ci) |>
 
 What can we learn from our small experiment? If we conduct an experiment, we will always have an error, noise or a deviation. There are different names for nearly the same concepts. This is the core of inductive reasoning using statistics. We will always have an error and we want to minimize this error. What is this error and how we describe these errors is the main topic of this book.
 
+Randomization and random observations
+
 ## What is a good explanation?
 
 ## What is real?
