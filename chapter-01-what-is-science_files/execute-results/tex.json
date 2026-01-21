@@ -1,0 +1,21 @@
+{
+  "hash": "a78a052424f353a712b493793f01cef1",
+  "result": {
+    "engine": "knitr",
+    "markdown": "\n::: {.cell}\n::: {.cell-output .cell-output-stderr}\n\n```\n[conflicted] Will prefer dplyr::filter over any other package.\n```\n\n\n:::\n:::\n\n\n# What is science? {#sec-what-is-science}\n\n*Last modified on 27. November 2025 at 15:18:05*\n\n> *\"Reality is negotiable.\" --- Tim Ferriss*\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![foo **(A)** foo **(B)** foo](chapter-01-what-is-science_files/figure-pdf/fig-chap-01-vulcan-1.pdf){#fig-chap-01-vulcan fig-align='center'}\n:::\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![foo **(A)** foo **(B)** foo](chapter-01-what-is-science_files/figure-pdf/fig-chap-01-habital-1.pdf){#fig-chap-01-habital fig-align='center'}\n:::\n:::\n\n\n\n::: {.cell layout-align=\"center\"}\n::: {.cell-output-display}\n![foo **(A)** foo **(B)** foo](chapter-01-what-is-science_files/figure-pdf/fig-chap-01-hollow-1.pdf){#fig-chap-01-hollow fig-align='center'}\n:::\n:::\n\n\n## General background\n\n> *\"Any sufficiently advanced technology is indistinguishable from magic.\" ---  @clarke1968clarke, Clarke's third law*\n\nFull quote\n\n> *\"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical.\" --- Tim Ferriss*\n\nIdea of hypotheses\n\nScience is guessing and falsification\n\n@chalmers2013thing [What is this thing called Science?](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)\n\n@feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)\n\n@campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)\n\n@clark2025models [Models Demystified: A Practical Guide from Linear Regression to Deep Learning](https://m-clark.github.io/book-of-models/)\n\n@cox2017statistical [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)\n\n@deutsch2011beginning [The beginning of infinity: Explanations that transform the world](https://www.academia.edu/download/106176299/rtx120400544p.pdf)\n\n[David Deutsch > Quotes](https://www.goodreads.com/author/quotes/103190.David_Deutsch)\n\n## Theoretical background\n\n## R packages used\n\n## Data\n\n## Alternatives \n\nFurther tutorials and R packages on XXX\n\n## Glossary\n\nterm\n\n: what does it mean.\n\n## The meaning of \"Models of Reality\" in this chapter.\n\n- itemize with max. 5-6 words\n\n## Summary\n\n## References {.unnumbered}",
+    "supporting": [
+      "chapter-01-what-is-science_files/figure-pdf"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {
+      "knitr": [
+        "{\"type\":\"list\",\"attributes\":{},\"value\":[]}"
+      ]
+    },
+    "preserve": null,
+    "postProcess": false
+  }
+}
