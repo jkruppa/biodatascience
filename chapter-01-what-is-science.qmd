@@ -48,23 +48,17 @@ Besides things that are the opposite of science, there are things that are simil
 
 What does the movement claim? In short, the US government kills all birds in the US and replaces them with bird-looking drones. Birds sit on power lines to recharge and defecate on cars to mark them visually. The bird drones are there to spy on American citizens. The specifications are inconsistent and vary. This is a typical sign of a conspiracy theory. Finally, U.S. President John F. Kennedy was assassinated by the government due to his reluctance to kill all the birds as cherry on top.
 
+What do conspiracy theories have in common? They all tell a good story. I personally find them more similar to fairy tales, with the standard Greek dramatic structure of one hero against an anonymous horde of evil. In addition, they all have in common a lack of experiment. They don't even conduct a small experiment or propose a hypothesis to test. A testable hypothesis is rarely claimed. Even if a hypothesis is present, the story can easily be changed to maintain its purpose: to tell a good story. Here, we will not focus on conspiracy theories and how they work. This topic is beyond the scope of this book.
 
-Here, we will not focus on conspiracy theories and how they work. That topic is beyond the scope of this book.
-
-
-What do conspiracy theories have in common? They all tell a good story. Personally, I find them more like fairy tales, with the standard Greek dramatic structure of one hero against an anonymous horde of evil.
-
-They all have a lack of experiment. They do not even do a tiny experiment or state a hypothesis to test. 
-
-Psychoanalysis have no experiments.
-
+There is another field in which personal stories are the focus. Psychoanalysis uses direct dialogue between two people to help one of them. In psychoanalysis, there are also no experiments. History knows of long debates about whether psychoanalysis is a science or not, or to what extent. Psychoanalysis shares a similar fate to the Humanities in general. They are not considered science in the scope of this book either. Just because something is not a science does not make it bad. Many important things in life have nothing to do with science.
 
 ## What is science?
 
-We divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. This is one way to distinguish fields of science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
+I have discussed what the opposite of science could be. We have thought about what science not to meant. Know I want to make a little bit more clear, what science supposedly is. We divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
 
+Experimentation and falsification lie at the core of science. We cannot reject an experiment. An experiment either takes place or it does not. However, a testable hypothesis can be rejected. This is sometimes referred to as the demarcation line of science, which is used to determine whether a field belongs to the natural sciences. In this book, we will use formal science to study the natural sciences. We need formal science as a tool.
 
-
+We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
 
 ## Why do science?
 
@@ -198,6 +192,12 @@ Sometimes we need a model to know what is real.
 
 Fukusima @sevon2020analysis @sevon2023analyzing
 
+
+## What is the replication crisis?
+
+@romero2019philosophy
+
+Not here, move to p-value chapter: @benjamin2018redefine
 
 ## Age of enlightment
 
