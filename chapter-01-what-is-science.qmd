@@ -58,13 +58,23 @@ I have discussed what the opposite of science could be. We have thought about wh
 
 Experimentation and falsification lie at the core of science. We cannot reject an experiment. An experiment either takes place or it does not. However, a testable hypothesis can be rejected. This is sometimes referred to as the demarcation line of science, which is used to determine whether a field belongs to the natural sciences. In this book, we will use formal science to study the natural sciences. We need formal science as a tool.
 
-Meters of books have been written about the sciences.
+Meters of books have been written about the sciences. As at the beginning stated, there are different version and definitions. While I was writing what you are now reading, I found some literature I party read and find intriguing. We meet Karl Pearson again as a founder of statistics, but in 1892 he wrote the book  "The grammar of science" @pearson1892grammar, which also inspired Einstein on his way to relativity.
 
-Karl Pearson (1892) with  "The grammar of science" @pearson1892grammar
+Can sciene be objective? "Science is in reality a classification and analysis of the contents of the mind. […] In truth, the field of science is much more consciousness than an external world."
 
-Ersnt Mach (1838-1916)
+"The classification of facts, the recognition of their sequence and relative significance is the function of science, and the habit of forming a judgment upon these facts unbiased by personal feeling is characteristic of what may be termed the scientific frame of mind." Karl
+
+Ersnt Mach (1838-1916) "Ernst Mach’s positivism is a subjective, anti-metaphysical philosophy of science that restricts legitimate knowledge exclusively to directly observable sensations and measurements. He rejected unobservable entities like atoms as "hypothetical fictions","
 
 @chalmers2013thing [What is this thing called Science?](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)
+
+"In the same way, it is
+possible to follow form and call it science, but that is pseudo-science."
+
+"It should not be "science has shown" but "this experiment, this effect, has shown." 
+
+"the result of the discovery that it is worthwhile rechecking by new direct experience, and not
+necessarily trusting the [human] race['s] experience from the past."
 
 @feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)
 
@@ -78,6 +88,22 @@ David Deutsch claimed that science is guessing and falsification. Or in his word
 We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
 
 
+## Observables and beables
+
+ Liebig war Pettenkofer ein Positivist
+ 
+ Pettenkofer vs. Koch
+
+Definition: Beables sind Elemente der Realität, die existieren, unabhängig davon, ob sie beobachtet werden oder nicht.
+Unterschied zu Observablen: Während Observable Messwerte (z.B. Position oder Impuls) sind, die ein Beobachter erhält, sind Beables die grundlegenden physikalischen Fakten, aus denen die Welt besteht.
+
+Experiment vs real world data
+
+Clinical study vs observable study
+
+An experiment has the randomisation included. 
+
+Why not observe something and than do science?
 
 ## Why do science?
 
@@ -97,6 +123,8 @@ Because the human is lazy@price2021laziness
 
 
 ## How to do science?
+
+From now on I had to do a harsh decision. Science is broad, this book is in contrast slim. Therefore I will focus on the natural science. Especially, the life science, which includes all living things. Yes, some parts will also applicable to more technical fields like mechanical engineering and engineering sciences but only in a limited way. A building and the humans inside does not accept a error in its structure.
 
 "As a scientist, you are a professional writer," Joshua Schimel said. @schimel2012writing
 
@@ -216,6 +244,7 @@ Sometimes we need a model to know what is real.
 
 Fukusima @sevon2020analysis @sevon2023analyzing
 
+## What is a probability?
 
 ## What is the replication crisis?
 
