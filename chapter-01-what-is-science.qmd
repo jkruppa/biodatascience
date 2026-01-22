@@ -92,6 +92,39 @@ We conclude the following: A hypothesis should be testable through experimentati
 
  Liebig war Pettenkofer ein Positivist
  
+ 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-petten
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 10
+#| fig-cap: "foo. **(A)** . **(B)** ."
+
+p_cholera <- ggplot() +
+  ## theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 10)) +
+  scale_x_continuous(breaks = seq(0, 10, 1)) +
+  scale_y_continuous(breaks = seq(0, 10, 1)) +
+  annotate("point", x = 0, y = 0)
+
+p_wall <- ggplot() +
+  ## theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0, 10)) +
+  scale_x_continuous(breaks = seq(0, 10, 1)) +
+  scale_y_continuous(breaks = seq(0, 10, 1)) +
+  annotate("point", x = 0, y = 0)
+
+p_cholera + p_wall +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+ 
  Pettenkofer vs. Koch
 
 Definition: Beables sind Elemente der Realität, die existieren, unabhängig davon, ob sie beobachtet werden oder nicht.
@@ -104,6 +137,9 @@ Clinical study vs observable study
 An experiment has the randomisation included. 
 
 Why not observe something and than do science?
+
+
+
 
 ## Why do science?
 
