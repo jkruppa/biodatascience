@@ -305,7 +305,7 @@ ggplot() +
   annotate("text", hjust = "center", x = 0, y = -3.3, fontface = 2, size = 7,
            label = "Data + Model") +
   annotate("text", hjust = "left", x = -1.8, y = -3.8, fontface = 2, size = 5.25,
-           label = "Theories guided by observation") +
+           label = "Find pattern in observations") +
   annotate("text", hjust = "left", x = -1.8, y = -4.2, fontface = 3, size = 5.25,
            label = "bar bara bar bar") +
   ## right
@@ -331,7 +331,7 @@ ggplot() +
   annotate("text", hjust = "center", x = -3.65, y = 2.1, fontface = 2, size = 7,
            label = "Science + Data", angle = 60) +    
   annotate("text", hjust = "left", x = -2.3-1.9, y = 3.5-3.2, fontface = 2, size = 5.25,
-           label = "Theories guided by observation", angle = 60) +
+           label = "Theories guided by observations", angle = 60) +
   annotate("text", hjust = "left", x = -1.95-1.9, y = 3.25-3.2, fontface = 3, 
            size = 5.25,
            label = "bar bara bar bar", angle = 60) 
