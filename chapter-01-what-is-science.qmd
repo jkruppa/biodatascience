@@ -250,6 +250,7 @@ p_cholera + p_wall +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+Wheel of fortune 
 
 ```{r}
 #| echo: false
@@ -259,7 +260,7 @@ p_cholera + p_wall +
 #| fig-align: center
 #| fig-height: 9
 #| fig-width: 10.5
-#| fig-cap: "vaaa. Standard quantum mechanics refers to the Copenhagen interpretation of quantum mechanics."
+#| fig-cap: "The wheel of knowledge combines science (the why), data (the what), and models (the how) in a framework. In an ideal world, all three would be active in generating knowledge. However, at least two must be chosen. Combining science and data is done in exploratory data analysis, where storytelling and visualization guide the explanation. The combination of science and models is used in theoretical works, such as general and special relativity. At its core, it is a thought experiment that generates laws and models. Most likely, data is combined with a model. The models reveal patterns in the data. These models can be used for prediction and inference. For example, standard quantum mechanics can be used as a powerful tool even though the reality of atoms, which the models predict, is unknown."
 
 
 rad <- function(degrees) degrees*pi/180
@@ -311,10 +312,13 @@ ggplot() +
              fill = "gray95", color = "gray50") +
   annotate("text", hjust = "center", x = 0, y = -3.3, fontface = 2, size = 7,
            label = "Data + Model") +
-  annotate("text", hjust = "left", x = -1.8, y = -3.8, fontface = 2, size = 5.25,
+  annotate("text", hjust = "left", x = -1.9, y = -3.7, fontface = 2, size = 5.25,
            label = "Pattern and explanation of data") +
-  annotate("text", hjust = "left", x = -1.8, y = -4.2, fontface = 3, size = 5.25,
-           label = "Standard quantum mechanics") +
+  annotate("text", hjust = "left", x = -1.9, y = -4, fontface = 3, size = 5.25,
+           label = "Kepler's laws; Quantum mechanics") +
+  annotate("text", hjust = "left", x = -1.9, y = -4.3, fontface = 1, size = 4.5,
+           label = "Danger of spurious correlations without cause",
+           color = "black") +
   ## right
   geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
                            y = c(-4.5, -4.5, -3, -3)+7.5,
@@ -324,10 +328,12 @@ ggplot() +
              fill = "gray95", color = "gray50") +
   annotate("text", hjust = "center", x = 3.65, y = 2.1, fontface = 2, size = 7,
            label = "Science + Model", angle = -60) +  
-  annotate("text", hjust = "left", x = 2.3, y = 3.5, fontface = 2, size = 5.25,
+  annotate("text", hjust = "left", x = 2.4, y = 3.55, fontface = 2, size = 5.25,
            label = "Thought experiment to find pattern", angle = -60) +
-  annotate("text", hjust = "left", x = 1.95, y = 3.25, fontface = 3, size = 5.25,
+  annotate("text", hjust = "left", x = 2.15, y = 3.4, fontface = 3, size = 5.25,
            label = "General and special relativity theory", angle = -60) +
+  annotate("text", hjust = "left", x = 1.9, y = 3.25, fontface = 1, size = 4.5,
+           label = "Danger of describing non-existent realities", angle = -60) +
   ## left
   geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
                            y = c(-4.5, -4.5, -3, - 3)+7.5,
@@ -337,11 +343,14 @@ ggplot() +
              fill = "gray95", color = "gray50") +
   annotate("text", hjust = "center", x = -3.65, y = 2.1, fontface = 2, size = 7,
            label = "Science + Data", angle = 60) +    
-  annotate("text", hjust = "left", x = -2.3-1.9, y = 3.5-3.2, fontface = 2, size = 5.25,
-           label = "Theory guided by observations", angle = 60) +
-  annotate("text", hjust = "left", x = -1.95-1.9, y = 3.25-3.2, fontface = 3, 
+  annotate("text", hjust = "left", x = -2.4-1.8, y = 3.55-3.25, fontface = 2, 
            size = 5.25,
-           label = "Story telling and visualisation on data", angle = 60) 
+           label = "Theory guided by observations", angle = 60) +
+  annotate("text", hjust = "left", x = -2.15-1.8, y = 3.4-3.25, fontface = 3, 
+           size = 5.25,
+           label = "Exploratory Data Analysis (EDA)", angle = 60) +
+  annotate("text", hjust = "left", x = -1.9-1.8, y = 3.25-3.25, fontface = 1, size = 4.5,
+           label = "Danger of too specific and not general", angle = 60) 
 ```
 
  
