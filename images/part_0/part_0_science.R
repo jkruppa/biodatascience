@@ -1,3 +1,236 @@
+##----------------------------------------------------------------------------
+
+rad <- function(degrees) degrees*pi/180
+rotate_x <- \(x,y, angle) {x * cos(rad(angle)) - y * sin(rad(angle))}
+rotate_y <- \(x,y, angle) {x * sin(rad(angle)) + y * cos(rad(angle))}
+
+p_wheel_knowledge <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-5.1, 5.1), ylim = c(-4.25, 4.75)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  geom_circle(aes(x0 = -3.5, y0 = -2, r = 4), size = 0.75, color = "gray50",
+              fill = "#B12A9080", alpha = 0.3) +
+  geom_circle(aes(x0 = 3.5, y0 = -2, r = 4), size = 0.75, color = "gray50",
+              fill = "#FCA63680", alpha = 0.3) +
+  geom_circle(aes(x0 = 0, y0 = 4, r = 4), size = 0.75, color = "gray50",
+              fill = "#2F059680", alpha = 0.3) +
+  geom_shape(data = tibble(x = c(-3.5, 3.5, 0), 
+                           y = c(-2, -2, 4.025)),
+             aes(x, y), radius = unit(0.1, 'cm'), fill = "gray95", color = "gray50") +
+  geom_circle(aes(x0 = 0, y0 = 0, r = 4), size = 1, color = "gray50") +
+  geom_circle(aes(x0 = 0, y0 = 0.01, r = 2), color = "gray50") +
+  annotate("text", x = 0, y = c(0.65, 0, -0.65), 
+           label = c("Choose", "at least", "two!"),
+           fontface = 2 , size = 12.5) +
+  #annotate("point", x = c(0, 3.5, -3.5), y = c(4, -2, -2), size = 3) +
+  annotate("text", x = 0, y = 4.35, label = "SCIENCE", angle = 0, size = 12.5,
+           fontface = 2) +
+  annotate("text", x = 0, y = 2.25, label = "The why", size = 10,
+           color = "#0D0887FF", fontface = 2) + 
+  annotate("text", x = 0, y = 4.9, label = "Theory & Reality", angle = 0, 
+           size = 8.5, fontface = 3) +
+  annotate("text", x = 3.75, y = -2.25, label = "MODEL", angle = 60, size = 12.5,
+           fontface = 2) +
+  annotate("text", x = 1.95, y = -1.1, label = "The how", angle = 60, size = 10,
+           color = "#FCA636FF", fontface = 2) +   
+  annotate("text", x = 4.25, y = -2.5, label = "Prediction & Inference", angle = 60, 
+           size = 8.5, fontface = 3) +
+  annotate("text", x = -3.75, y = -2.25, label = "DATA", angle = -60, size = 12.5,
+           fontface = 2) +
+  annotate("text", x = -1.9, y = -1.05, label = "The what", angle = -60, size = 10,
+           color = "#B12A90FF", fontface = 2) +   
+  annotate("text", x = -4.25, y = -2.5, label = "Observation & Information", 
+           angle = -60, size = 8.5, fontface = 3) +
+  ## lower
+  geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
+                           y = c(-4.5, -4.5, -3, - 3)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  annotate("text", hjust = "center", x = 0, y = -3.3, fontface = 2, size = 7,
+           label = "Data + Model") +
+  annotate("text", hjust = "left", x = -1.9, y = -3.7, fontface = 2, size = 5.25,
+           label = "Pattern and explanation of data") +
+  annotate("text", hjust = "left", x = -1.9, y = -4, fontface = 3, size = 5.25,
+           label = "Kepler's laws; Quantum mechanics") +
+  annotate("text", hjust = "left", x = -1.9, y = -4.3, fontface = 1, size = 4.5,
+           label = "Danger of spurious correlations without cause",
+           color = "black") +
+  ## right
+  geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
+                           y = c(-4.5, -4.5, -3, -3)+7.5,
+                           x_dash = rotate_x(x, y, -60),
+                           y_dash = rotate_y(x, y, -60)),
+             aes(x_dash, y_dash), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  annotate("text", hjust = "center", x = 3.65, y = 2.1, fontface = 2, size = 7,
+           label = "Science + Model", angle = -60) +  
+  annotate("text", hjust = "left", x = 2.4, y = 3.55, fontface = 2, size = 5.25,
+           label = "Thought experiment to find pattern", angle = -60) +
+  annotate("text", hjust = "left", x = 2.15, y = 3.4, fontface = 3, size = 5.25,
+           label = "General and special relativity theory", angle = -60) +
+  annotate("text", hjust = "left", x = 1.9, y = 3.25, fontface = 1, size = 4.5,
+           label = "Danger of describing non-existent realities", angle = -60) +
+  ## left
+  geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
+                           y = c(-4.5, -4.5, -3, - 3)+7.5,
+                           x_dash = rotate_x(x, y, 60),
+                           y_dash = rotate_y(x, y, 60)),
+             aes(x_dash, y_dash), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  annotate("text", hjust = "center", x = -3.65, y = 2.1, fontface = 2, size = 7,
+           label = "Science + Data", angle = 60) +    
+  annotate("text", hjust = "left", x = -2.4-1.8, y = 3.55-3.25, fontface = 2, 
+           size = 5.25,
+           label = "Theory guided by observations", angle = 60) +
+  annotate("text", hjust = "left", x = -2.15-1.8, y = 3.4-3.25, fontface = 3, 
+           size = 5.25,
+           label = "Exploratory Data Analysis (EDA)", angle = 60) +
+  annotate("text", hjust = "left", x = -1.9-1.8, y = 3.25-3.25, fontface = 1, size = 4.5,
+           label = "Danger of too specific and not general", angle = 60) 
+##----------------------------------------------------------------------------
+
+p_cholera <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(1, 9), ylim = c(1, 9)) +
+  scale_x_continuous(breaks = seq(0, 10, 1)) +
+  scale_y_continuous(breaks = seq(0, 10, 1)) +
+  geom_shape(data = tibble(x = c(6.25, 9.25, 9.25, 6.25), 
+                           y = c(0.75, 0.75, 9.25, 9.25)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") +
+  geom_shape(data = tibble(x = c(1.25, 5.75, 5.75, 1.25), 
+                           y = c(0.75, 0.75, 9.25, 9.25)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") +
+  annotate("segment", x = 2, xend = 2, y = 1, yend = 9, size = 2) +
+  annotate("segment", x = 5, xend = 6.5, y = 8, yend = 8, size = 2) +
+  annotate("segment", x = 2, xend = 2, y = 1, yend = 9, size = 5, 
+           color = "#0D088780") +
+  annotate("segment", x = 5, xend = 5, y = 1, yend = 9, size = 2) +
+  annotate("segment", x = 5, xend = 5, y = 1, yend = 9, size = 5, 
+           color = "#0D088780") +
+  annotate("segment", x = 8, xend = 8, y = 1, yend = 9, size = 2) +
+  annotate("segment", x = 6.5, xend = 6.5, y = 4, yend = 9, size = 2) +
+  annotate("segment", x = 1, xend = 9, y = 2, yend = 2, size = 2) +
+  annotate("segment", x = 1, xend = 6, y = 2, yend = 2, size = 5, 
+           color = "#0D088780") +
+  annotate("segment", x = 1, xend = 5, y = 7, yend = 7, size = 2) +
+  annotate("segment", x = 1, xend = 5, y = 7, yend = 7, size = 5, 
+           color = "#0D088780") +
+  annotate("segment", x = 5, xend = 8, y = 4, yend = 4, size = 2) +
+  annotate("segment", x = 6.5, xend = 9, y = 6, yend = 6, size = 2) +
+  ## right horizontal
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(8.3, 8.6, 8.9), 3), y = rep(c(8, 5.5, 3), each = 3)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(6.8, 7.1), 2), y = rep(c(7.5, 5), each = 2)) +
+  ## middle
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(8.3, 8.6), 2), y = rep(c(8.5, 4), each = 2)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(6.8), 2), y = rep(c(4.5, 6.5), each = 1)) +
+  ## left
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(2.3), 4), y = rep(c(1.5, 3.5, 6.25, 8.5), each = 1)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(5.3), 2), y = rep(c(5, 7), each = 1)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = rep(c(2.3, 2.6), 1), y = rep(c(4.5), each = 1)) +
+  ## vertical
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = 3.5, y = c(6.7, 6.4)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = 7, y = c(3.7, 3.4, 3.1)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = 7.5, y = c(3.7, 3.4)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = 7.5, y = c(1.7, 1.4)) +
+  annotate("point", shape = 21, fill = "#E16462FF", size = 4, 
+           x = 8.5, y = c(6.3, 6.6, 6.9)) +
+  ## small
+  annotate("segment", x = 2, xend = 6.5, y = 6, yend = 6, size = 0.5) +
+  annotate("segment", x = 2, xend = 5, y = 3, yend = 3, size = 0.5) +
+  annotate("segment", x = 2, xend = 8, y = 8, yend = 8, size = 0.5) +
+  annotate("segment", x = 3.5, xend = 3.5, y = 3, yend = 6, size = 0.5) +
+  annotate("segment", x = 6.5, xend = 6.5, y = 2, yend = 4, size = 0.5) +
+  ## number
+  annotate("label", x = c(3.5, 7.25), y = 8.5, label = c("n=10", "n=29"),
+           fontface = 2, size = 5, fill = "white")
+
+p_wall <- ggplot() +
+  theme_void() +
+  ## theme_ipsum() +
+  coord_cartesian(xlim = c(0.75, 9.25), ylim = c(2, 10)) +
+  scale_x_continuous(breaks = seq(0, 10, 1)) +
+  scale_y_continuous(breaks = seq(0, 10, 1)) +
+  geom_shape(data = tibble(x = c(2.5, 7.5, 7.5, 2.5), 
+                           y = c(3.5, 3.5, 6.5, 6.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "gray75", color = "black") + 
+  geom_shape(data = tibble(x = c(1, 2.5, 2.5, 1), 
+                           y = c(2, 3.5, 6.5, 8)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "gray95", color = "black") + 
+  geom_shape(data = tibble(x = c(7.5, 9, 9, 7.5), 
+                           y = c(3.5, 2, 8, 6.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "gray85", color = "black") + 
+  geom_shape(data = tibble(x = c(1, 9, 7.5, 2.5), 
+                           y = c(2, 2, 3.5, 3.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "#B12A9080", color = "black") + 
+  geom_shape(data = tibble(x = c(1, 9, 7.5, 2.5), 
+                           y = c(8, 8, 6.5, 6.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "gray65", color = "black") + 
+  ## door
+  geom_shape(data = tibble(x = c(5.75, 6.75, 6.75, 5.75), 
+                           y = c(3.5, 3.5, 5.5, 5.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "#E16462FF", color = "black") +
+  annotate("point", x = 6, y = 4.25, size = 3) +
+  ## window
+  geom_shape(data = tibble(x = c(3.25, 4.75, 4.75, 3.25), 
+                           y = c(4.5, 4.5, 5.5, 5.5)),
+             aes(x, y), radius = unit(0, 'cm'), fill = "#0D088780", color = "black") +
+  annotate("segment", x = 3.25, xend = 4.75, y = 5, yend = 5, size = 1) +
+  annotate("segment", x = 4, xend = 4, y = 4.5, yend = 5.5, size = 1) +
+  ## holes
+  annotate("point", shape = 21, size = 4.5, x = c(1.5, 1.5, 1.5), y = c(4, 5, 6), 
+           fill = "white") +
+  annotate("point", shape = 21, size = 4.5, x = c(2, 2), y = c(4.5, 5.5), 
+           fill = "white") +
+  ## arrows / in
+  annotate("segment", x = 0.5, xend = 1,color = "#6A00A8FF", 
+           y = c(4, 4.5, 5, 5.5, 6), yend = c(4, 4.5, 5, 5.5, 6), size = 0.75) + 
+  annotate("segment", x = c(1.5, 1.5, 1.5, 2, 2), xend = c(1.5, 1.5, 1.5, 2, 2) + 0.75, 
+           arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+           y = c(4, 5, 6, 4.5, 5.5), yend = c(4, 5, 6, 4.5, 5.5), size = 0.75,
+           color = "#6A00A8FF") +
+  ## holes
+  annotate("point", shape = 21, size = 4.5, x = c(1.5, 1.5, 1.5)+7, y = c(4, 5, 6), 
+           fill = "white") +
+  annotate("point", shape = 21, size = 4.5, x = c(2, 2)+6, y = c(4.5, 5.5), 
+           fill = "white") +
+  ## arrows / out
+  annotate("segment", x = 9, xend = 9.5, color = "#6A00A8FF", 
+           arrow = arrow(length = unit(0.01, "npc"), type = "closed"),
+           y = c(4, 4.5, 5, 5.5, 6), yend = c(4, 4.5, 5, 5.5, 6), size = 0.75) + 
+  annotate("segment", x = c(1.5, 1.5, 1.5, 1, 1)+7, 
+           xend = c(1.5, 1.5, 1.5, 1, 1)+7 - 0.75, 
+           y = c(4, 5, 6, 4.5, 5.5), yend = c(4, 5, 6, 4.5, 5.5), size = 0.75,
+           color = "#6A00A8FF") +
+  annotate("segment", x = 1, xend = 9, y = 2, yend = 2, size = 2, lineend = "round") +
+  annotate("segment", x = 1, xend = 9, y = 8, yend = 8, size = 2, lineend = "round") +
+  annotate("segment", x = 1, xend = 1, y = 2, yend = 8, size = 2, lineend = "round") +
+  annotate("segment", x = 9, xend = 9, y = 2, yend = 8, size = 2, lineend = "round") +
+  ## flowrate
+  geom_shape(data = tibble(x = c(1, 9, 9, 1), 
+                           y = c(8.5, 8.5, 10.25, 10.25)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") + 
+  annotate("text", hjust = "left", x = 1.25, y = 9.75, fontface = 2, size = 5.5,
+           label = "Observed values") +
+  annotate("text", x = c(2.35, 7.75), y = 9, size = 5.5,
+           label = c(expression(Q[IN] > 0), expression(Q[OUT] > 0))) +
+  annotate("text", x = c(1.75, 8.25), y = 6.5, size = 4.5, color = "#6A00A8FF",
+           label = c(expression(bold(Q[IN])), expression(bold(Q[OUT])))) +
+  annotate("text", x = c(5), y = 9, size = 5.5,
+           label = c(expression(p~"="~"const")))
 
 ##----------------------------------------------------------------------------
 m <- 0.03
