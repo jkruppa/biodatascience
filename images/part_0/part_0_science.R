@@ -6,7 +6,7 @@ rotate_y <- \(x,y, angle) {x * sin(rad(angle)) + y * cos(rad(angle))}
 
 p_wheel_knowledge <- ggplot() +
   theme_void() +
-  ##theme_minimal() +
+  ## theme_minimal() +
   coord_cartesian(xlim = c(-5.1, 5.1), ylim = c(-4.25, 4.75)) +
   scale_x_continuous(breaks = seq(-10, 10, 1)) +
   scale_y_continuous(breaks = seq(-10, 10, 1)) +
@@ -17,10 +17,21 @@ p_wheel_knowledge <- ggplot() +
   geom_circle(aes(x0 = 0, y0 = 4, r = 4), size = 0.75, color = "gray50",
               fill = "#2F059680", alpha = 0.3) +
   geom_shape(data = tibble(x = c(-3.5, 3.5, 0), 
-                           y = c(-2, -2, 4.025)),
+                           y = c(-2, -2, 4.025)), size = 1,
              aes(x, y), radius = unit(0.1, 'cm'), fill = "gray95", color = "gray50") +
+  ## small triangle
+  geom_shape(data = tibble(x = c(-3.5, 0, -1.75), 
+                           y = c(-2, -2, 1)),
+             aes(x, y), radius = unit(0.1, 'cm'), fill = "#B12A9080", alpha = 0.4) +
+  geom_shape(data = tibble(x = c(3.5, 0, 1.75), 
+                           y = c(-2, -2, 1)),
+             aes(x, y), radius = unit(0.1, 'cm'), fill = "#FCA63680", alpha = 0.4) +
+  geom_shape(data = tibble(x = c(-1.75, 1.75, 0), 
+                           y = c(1, 1, 4.025)),
+             aes(x, y), radius = unit(0.1, 'cm'), fill = "#0D088780", alpha = 0.4) +
+  ## circle 
   geom_circle(aes(x0 = 0, y0 = 0, r = 4), size = 1, color = "gray50") +
-  geom_circle(aes(x0 = 0, y0 = 0.01, r = 2), color = "gray50") +
+  geom_circle(aes(x0 = 0, y0 = 0.01, r = 2), color = "gray50", fill = "gray95") +
   annotate("text", x = 0, y = c(0.65, 0, -0.65), 
            label = c("Choose", "at least", "two!"),
            fontface = 2 , size = 12.5) +
