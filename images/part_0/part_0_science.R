@@ -54,6 +54,8 @@ p_wheel_knowledge <- ggplot() +
            color = "#B12A90FF", fontface = 2) +   
   annotate("text", x = -4.25, y = -2.5, label = "Observation & Information", 
            angle = -60, size = 8.5, fontface = 3) +
+  annotate("text", x = -4.65, y = -2.9, label = "Empirical", 
+           angle = -60, size = 8.5, fontface = 3) +
   ## lower
   geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
                            y = c(-4.5, -4.5, -3, - 3)),
@@ -497,7 +499,7 @@ p_science_overview <- ggplot() +
   annotate("text", x = c(8, 8.9), y = 4.875, label = c("More pure", "Purity"), size = 4, 
            fontface = 4, angle = -90, color = "gray50") +
   annotate("text", x = 4.9, y = 2, 
-           label = c("Keywords:\nexperiments,\nobservations,\nevidence, empirical"), 
+           label = c("Keywords:\nexperiments,\nobservations, local\nevidence, empirical"), 
            size = 4.5, fontface = 4, hjust = "left",
            color = "#FCA636FF") + 
   ## left
