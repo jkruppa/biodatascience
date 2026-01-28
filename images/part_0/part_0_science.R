@@ -499,7 +499,7 @@ p_science_overview <- ggplot() +
   annotate("text", x = c(8, 8.9), y = 4.875, label = c("More pure", "Purity"), size = 4, 
            fontface = 4, angle = -90, color = "gray50") +
   annotate("text", x = 4.9, y = 2, 
-           label = c("Keywords:\nexperiments,\nobservations, local\nevidence, empirical"), 
+           label = c("Keywords:\nexperiments,\nobservations, local,\nevidence, empirical\ncompleteness"), 
            size = 4.5, fontface = 4, hjust = "left",
            color = "#FCA636FF") + 
   ## left
