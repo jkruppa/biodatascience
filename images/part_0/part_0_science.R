@@ -1,3 +1,55 @@
+
+p_io_speed_of_light <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-5, 5), ylim = c(-1.25, 1.25)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  geom_ellipse(aes(x0 = 0, y0 = 0, a = 4.5, b = 1.25, angle = 0), color = "gray50") +
+  geom_ellipse(aes(x0 = 0, y0 = 0, a = 1.5, b = 0.5, angle = 0), color = "gray50") +
+  ## lines
+  annotate("segment", x = -4.5, xend = -1.5, y = 0, yend = 0, linetype = 2) +
+  # annotate("segment", x = -3.5, xend = 1.5, y = -0.79, yend = 0, linetype = 2) +
+  ## sun
+  annotate("point", x = 0, y = 0, size = 8, shape = 21, fill = "#F0F921FF") + 
+  ## lines
+  annotate("segment", x = -3.5, xend = -1, y = -0.79, yend = -0.4, linetype = 2,
+           color = "black") +
+  annotate("segment", x = -1, xend = 1.5, y = -0.4, yend = 0, linetype = 2,
+           color = "#FCA636FF") +
+  ## earth
+  annotate("point", x = c(-1.5, 1.5), y = 0, size = 3, color = "#0D0887FF") +
+  ## jupiter
+  annotate("point", x = c(-4.5, -3.5), y = c(0, -0.79), size = 5, color = "#B12A90FF") + 
+  ## io
+  annotate("point", x = -4.5, y = 0.3, size = 2, color = "#FCA63680") +
+  geom_curve(aes(x = -4.6, y = 0.3, xend = -4.6, yend = -0.3),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#FCA63680", size = 0.75, curvature = 0.9)+ 
+  annotate("point", x = -4.5, y = -0.3, size = 2, color = "#FCA63680") +
+  annotate("point", x = -3.5, y = -0.49, size = 2, color = "#FCA636FF") +
+  geom_curve(aes(x = -3.6, y = -0.49, xend = -3.6, yend = -1.09),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#FCA636FF", size = 0.5, curvature = 0.9)+ 
+  annotate("point", x = -3.5, y = -1.09, size = 2, color = "#FCA636FF") +
+  annotate("text", hjust = "right", x = -3.9, y = -0.79, label = "+1320s", 
+           color = "#FCA636FF") +  
+  ## distance
+  geom_curve(aes(x = 1.45, y = -0.6, xend = 0.3, yend = -0.25),
+             arrow = arrow(length = unit(0.1, "cm"), type = "closed"),
+             color = "#FCA636FF", size = 0.5, curvature = -0.3) + 
+  annotate("text", hjust = "left", x = 1.5, y = -0.5, 
+           label = expression(d %~~% 3 %.% 10^8*"km"), 
+           color = "#FCA636FF") + 
+  ## c
+  annotate("label", fill = "white", hjust = "left", x = 2, y = 0.5, color = "black",
+           label = expression(c~"="~frac(3 %.% 10^8*"km", 1320*"s")~"="~ 227227~frac("km", "s"))) +
+  labs(caption = "The planets and their orbits are not drawn to scale") +
+  theme(plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12, face = "italic"),
+        plot.caption = element_text(size = 10, face = "italic"))
+
+
 ##----------------------------------------------------------------------------
 
 rad <- function(degrees) degrees*pi/180
@@ -99,7 +151,7 @@ p_wheel_knowledge <- ggplot() +
            label = "Theory guided by observations", angle = 60) +
   annotate("text", hjust = "left", x = -2.15-1.8, y = 3.4-3.25, fontface = 3, 
            size = 5.25,
-           label = "Exploratory Data Analysis (EDA)", angle = 60) +
+           label = "Exploratory Data Analysis; DataViz", angle = 60) +
   annotate("text", hjust = "left", x = -1.9-1.8, y = 3.25-3.25, fontface = 1, size = 4.5,
            label = "Danger of too specific and not general", angle = 60) 
 ##----------------------------------------------------------------------------
@@ -499,7 +551,7 @@ p_science_overview <- ggplot() +
   annotate("text", x = c(8, 8.9), y = 4.875, label = c("More pure", "Purity"), size = 4, 
            fontface = 4, angle = -90, color = "gray50") +
   annotate("text", x = 4.9, y = 2, 
-           label = c("Keywords:\nexperiments,\nobservations, local,\nevidence, empirical\ncompleteness"), 
+           label = c("Keywords:\nprediction, inference,\nobservations, [locality],\nevidence, empirical\ncompleteness"), 
            size = 4.5, fontface = 4, hjust = "left",
            color = "#FCA636FF") + 
   ## left
