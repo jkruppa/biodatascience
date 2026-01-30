@@ -50,14 +50,21 @@ ggplot() +
                            y = c(1, 1, 2.5, 2.5)+0.25),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
-  geom_curve(aes(x = 2.1, y = 2, xend = 4.25, yend = 0.85),
+  annotate("text", x = 0, y = 2.5, label = "Normal science", fontface = 2, size = 5) +
+  geom_curve(aes(x = 2.1, y = 2.1, xend = 4.35, yend = 0.85),
              arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = -0.35) +
+  geom_curve(aes(x = 4.15, y = 0.85, xend = 2.1, yend = 1.9),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0.35) +
+  annotate("text", hjust = "center", 
+           x = 4.25, y = 2, label = "Back &\nforth", fontface = 2, size = 4) +
   ## right
   geom_shape(data = tibble(x = c(3, 5.5, 5.5, 3), 
                            y = c(-0.75, -0.75, 0.75, 0.75)),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = 4.25, y = 0.5, label = "Model drift", fontface = 2, size = 5) +
   geom_curve(aes(x = 4.25, y = -0.85, xend = 3.1, yend = -2),
              arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = -0.35) +
@@ -66,6 +73,7 @@ ggplot() +
                            y = c(-1, -1, -2.5, -2.5)-0.25),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = 1.75, y = -1.5, label = "Model crisis", fontface = 2, size = 5) +
   geom_curve(aes(x = 0.4, y = -2, xend = -0.4, yend = -2),
              arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = 0) +
@@ -73,6 +81,7 @@ ggplot() +
                            y = c(-1, -1, -2.5, -2.5)-0.25),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = -1.75, y = -1.5, label = "Model revolution", fontface = 2, size = 5) +
   geom_curve(aes(x = -3.1, y = -2, xend = -4.25, yend = -0.85),
              arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = -0.35) +
@@ -81,6 +90,7 @@ ggplot() +
                            y = c(-0.75, -0.75, 0.75, 0.75)),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = -4.25, y = 0.5, label = "Paradigm shift", fontface = 2, size = 5) +
   geom_curve(aes(x = -4.25, y = 0.85, xend = -2.1, yend = 2),
              arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = -0.35) 
