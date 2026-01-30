@@ -13,6 +13,79 @@ source("images/part_0/part_0_science.R")
 
 > *"I fully agree with you about the significance and educational value of as well as history and philosophy of science. So many people today - and even professional - seem to me like someone who has seen thousands of trees but has never seen a forest. A knowledge of the historic and philosophical background gives that kind of independence from prejudices of his generation from which most scientists are suffering. This independence created by philosophical insight is - in my opinion - the mark of distinction between a mere artisan or specialist and a real seeker after truth." --- Albert Einstein*
 
+Three fields of science Theoretical	Experimental	Instrumental
+
+Paradigm shift @kuhn1970structure
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-kuhn
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 7
+#| fig-cap: "fooo"
+
+ggplot() +
+  theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-5, 5), ylim = c(-2.5, 2.75)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1)) +
+  scale_y_continuous(breaks = seq(-10, 10, 1)) +
+  annotate("text", x = 0, y = 0, label = "The Kuhn Cycle", fontface = 2, size = 10) +
+  ## upper left
+  geom_shape(data = tibble(x = c(-5.5, -3, -3, -5.5), 
+                           y = c(2.5, 2.5, 3, 3)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  annotate("text", hjust = "center", x = -4.25, y = 2.75, 
+           label = "Pre-science", fontface = 2, size = 6) +
+  geom_curve(aes(x = -4.5, y = 2.4, xend = -4.5, yend = 0.85),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0.2) +
+  ## normal
+  geom_shape(data = tibble(x = c(-2, 2, 2, -2), 
+                           y = c(1, 1, 2.5, 2.5)+0.25),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  geom_curve(aes(x = 2.1, y = 2, xend = 4.25, yend = 0.85),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) +
+  ## right
+  geom_shape(data = tibble(x = c(3, 5.5, 5.5, 3), 
+                           y = c(-0.75, -0.75, 0.75, 0.75)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  geom_curve(aes(x = 4.25, y = -0.85, xend = 3.1, yend = -2),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) +
+  ## bottom
+  geom_shape(data = tibble(x = c(0.5, 3, 3, 0.5), 
+                           y = c(-1, -1, -2.5, -2.5)-0.25),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  geom_curve(aes(x = 0.4, y = -2, xend = -0.4, yend = -2),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0) +
+  geom_shape(data = tibble(x = c(-3, -0.5, -0.5, -3), 
+                           y = c(-1, -1, -2.5, -2.5)-0.25),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  geom_curve(aes(x = -3.1, y = -2, xend = -4.25, yend = -0.85),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) +
+  ## left
+  geom_shape(data = tibble(x = c(-3, -5.5, -5.5, -3), 
+                           y = c(-0.75, -0.75, 0.75, 0.75)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "gray95", color = "gray50") +
+  geom_curve(aes(x = -4.25, y = 0.85, xend = -2.1, yend = 2),
+             arrow = arrow(length = unit(0.25, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) 
+```
+
 
 ## Old start
 
