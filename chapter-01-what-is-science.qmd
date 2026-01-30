@@ -17,6 +17,9 @@ Three fields of science Theoretical	Experimental	Instrumental
 
 Paradigm shift @kuhn1970structure
 
+Even witchcraft has an paradigm 
+
+Not piling up knowledge but a process thorough knowledge
 
 ```{r}
 #| echo: false
@@ -38,7 +41,7 @@ ggplot() +
   geom_shape(data = tibble(x = c(-2.1, 2.9, 2.9, 5.6, 5.6, -2.1), 
                            y = c(1.15, 1.15, -0.85, -0.85, 2.85, 2.85)),
              aes(x, y), radius = unit(0.1, 'cm'), fill = "#B12A9080", alpha = 0.3) +
-  annotate("label", hjust = "right", x = 5.6, y = 2.825, fontface = 2, color = "#B12A90FF", 
+  annotate("label", hjust = "right", x = 5.6-0.025, y = 2.825, fontface = 2, color = "#B12A90FF", 
            label = "Your science / this book is about", size = 3.25,
            fill = "white") +
   ## upper left
@@ -98,6 +101,9 @@ ggplot() +
            fontface = 3, size = 3.5) +
   annotate("text", x = 1.75, y = -2.5, label = "Tension and frustration", 
            fontface = 3, size = 3.5) +
+  annotate("label", hjust = "right", x = 3.25-0.025, y = -1.25 + -0.025, fontface = 2, color = "#FCA636FF", 
+           label = "CRACK", size = 3.25,
+           fill = "white") +
   geom_curve(aes(x = 0.15, y = -2, xend = -0.15, yend = -2),
              arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
              color = "gray50", size = 1.25, curvature = 0) +
@@ -123,9 +129,9 @@ ggplot() +
   annotate("text", x = -4.25, y = 0.5, label = "Shift & change", fontface = 2, size = 4.5) +
   annotate("text", x = -4.25, y = 0.1, label = "New paradigm of reality", 
            fontface = 3, size = 3.5) +
-  annotate("text", x = -4.25, y = -0.2, label = "New language usage", 
+  annotate("text", x = -4.25, y = -0.2, label = "New language & social", 
            fontface = 3, size = 3.5) +
-  annotate("text", x = -4.25, y = -0.5, label = "New box of knowing", 
+  annotate("text", x = -4.25, y = -0.5, label = "Framework of knowing", 
            fontface = 3, size = 3.5) +
   geom_curve(aes(x = -4.25, y = 0.85, xend = -2.1, yend = 2),
              arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
