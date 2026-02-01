@@ -28,7 +28,7 @@ Not piling up knowledge but a process thorough knowledge
 #| label: fig-chap-01-types-science
 #| fig-align: center
 #| fig-height: 3.5
-#| fig-width: 8
+#| fig-width: 7
 #| fig-cap: "Also Kuhn Cycle"
 
 ggplot() +
@@ -42,16 +42,36 @@ ggplot() +
                            y = c(0, 0, -3, -3)),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = 0, y = -0.5, label = "Theory", fontface = 2, size = 5) +
+  geom_curve(aes(x = 3.1, y = -1.5, xend = 4, yend = -3.8),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) +
+  annotate("text", angle = 50, x = -4, y = -2, label = "suggest", fontface = 2, size = 4) +
+  geom_curve(aes(x = -3.1, y = -1.5, xend = -4, yend = -3.8),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0.35) +
+  annotate("text", angle = -50, x = 4, y = -2, label = "blueprint", fontface = 2, size = 4) +
   ## left
   geom_shape(data = tibble(x = c(-5, -1, -1, -5), 
                            y = c(-4, -4, -9, -9)),
              aes(x, y), radius = unit(0.1, 'cm'), 
              fill = "gray95", color = "gray50") +
+  annotate("text", x = -3, y = -4.5, label = "Experimental", fontface = 2, size = 5) +
   ## right
   geom_shape(data = tibble(x = c(5, 1, 1, 5), 
                            y = c(-4, -4, -9, -9)),
              aes(x, y), radius = unit(0.1, 'cm'), 
-             fill = "gray95", color = "gray50") 
+             fill = "gray95", color = "gray50") +
+  annotate("text", x = 3, y = -4.5, label = "Instrumental", fontface = 2, size = 5) +
+  ## arrows
+  geom_curve(aes(x = -0.9, y = -6, xend = 0.9, yend = -6),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0) +
+  annotate("text", x = 0, y = -5.5, label = "needed", fontface = 2, size = 4) +
+  geom_curve(aes(x = 0.9, y = -7, xend = -0.9, yend = -7),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0) +
+  annotate("text", x = 0, y = -7.5, label = "measured", fontface = 2, size = 4) 
 ```
 
 
