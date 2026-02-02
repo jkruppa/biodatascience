@@ -68,7 +68,7 @@ Observation = Sensory Input + Theoretical Framework
 
 ggplot() +
   ##theme_minimal() +
-  coord_cartesian(xlim = c(-10.5, 10.5)) +
+  coord_cartesian(xlim = c(-10.25, 10.5)) +
   theme_void() +
   annotate("text", -4.8, 0, label = "~", size = 7, fontface = 2, hjust = "center") +
   annotate("text", -10.25, 0, label = "Observation", size = 7, fontface = 2, hjust = "left") +
