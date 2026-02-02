@@ -1,4 +1,70 @@
 
+p_theo_exper_instr <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(-5.1, 5.1), ylim = c(-8, 0.25)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10, 10, 1), expand = expansion(mult = c(0, 0))) +
+  ## top
+  geom_shape(data = tibble(x = c(-3, 3, 3, -3), 
+                           y = c(0, 0, -3, -3)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#2F059680", alpha = 0.3, color = "gray50") +
+  annotate("text", x = 0, y = -0.5, label = "Theoretical Science", fontface = 2, size = 4.5,
+           color = "black") +
+  annotate("text", x = 0, y = -1.2, fontface = 3, size = 4,
+           label = "The brain of the knowlegde generation procedure") +
+  annotate("text", x = 0, y = -1.85, fontface = 1, size = 4,
+           label = "Based on thought experiments and guessing ideas") +
+  annotate("text", x = 0, y = -2.5, fontface = 1, size = 4,
+           label = "Math formulas, simulations, and conceptual models") +
+  geom_curve(aes(x = 3.1, y = -1.5, xend = 4, yend = -3.8),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = -0.35) +
+  annotate("text", angle = 50, x = -4, y = -2, label = "suggest", fontface = 3, size = 4) +
+  geom_curve(aes(x = -3.1, y = -1.5, xend = -4, yend = -3.8),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0.35) +
+  annotate("text", angle = -50, x = 4, y = -2, label = "blueprint", fontface = 3, size = 4) +
+  ## left
+  geom_shape(data = tibble(x = c(-5, -1, -1, -5), 
+                           y = c(-4, -4, -7.75, -7.75)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#B12A9080", alpha = 0.3, color = "gray50") +
+  annotate("text", x = -3, y = -4.5, label = "Experimental Science", fontface = 2, size = 4.5,
+           color = "black") +
+  annotate("text", x = -3, y = -5.2, fontface = 3, size = 4,
+           label = "The hands of the procedure") +
+  annotate("text", x = -3, y = -5.85, fontface = 1, size = 4,
+           label = "Gather empirical evidence as data") +
+  annotate("text", x = -3, y = -6.5, fontface = 1, size = 4,
+           label = "Falsification of models and theories") +
+  annotate("text", x = -3, y = -7.25, fontface = 2, size = 4,
+           label = "Goal: effects and differences") +
+  ## right
+  geom_shape(data = tibble(x = c(5, 1, 1, 5), 
+                           y = c(-4, -4, -7.75, -7.75)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#F0F92180", alpha = 0.3, color = "gray50") +
+  annotate("text", x = 3, y = -4.5, label = "Instrumental Science", fontface = 2, size = 4.5) +
+  annotate("text",  x = 3, y = -5.2, fontface = 3, size = 4,
+           label = "The ears and eyes of the procedure") +
+  annotate("text", x = 3, y = -5.85, fontface = 1, size = 4,
+           label = "Development of the technology") +
+  annotate("text", x = 3, y = -6.5, fontface = 1, size = 4,
+           label = "Measure invisible or immeasurable") +
+  annotate("text", x = 3, y = -7.25, fontface = 2, size = 4,
+           label = "Goal: precision and equality") +
+  ## arrows
+  geom_curve(aes(x = -0.9, y = -5, xend = 0.9, yend = -5),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0) +
+  annotate("text", x = 0, y = -4.5, label = "demand", fontface = 3, size = 4) +
+  geom_curve(aes(x = 0.9, y = -6, xend = -0.9, yend = -6),
+             arrow = arrow(length = unit(0.2, "cm"), type = "closed"),
+             color = "gray50", size = 1.25, curvature = 0) +
+  annotate("text", x = 0, y = -6.5, label = "support", fontface = 3, size = 4) 
+
 p_kuhn_cycle <- ggplot() +
   theme_void() +
   ## theme_minimal() +
@@ -210,7 +276,7 @@ p_wheel_knowledge <- ggplot() +
            fontface = 2) +
   annotate("text", x = -1.9, y = -1.05, label = "The what", angle = -60, size = 10,
            color = "#B12A90FF", fontface = 2) +   
-  annotate("text", x = -4.25, y = -2.5, label = "Observation & Information", 
+  annotate("text", x = -4.25, y = -2.5, label = "Observation & Theory laden", 
            angle = -60, size = 8.5, fontface = 3) +
   annotate("text", x = -4.65, y = -2.9, label = "Empirical", 
            angle = -60, size = 8.5, fontface = 3) +
