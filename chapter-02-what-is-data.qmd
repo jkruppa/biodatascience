@@ -10,6 +10,8 @@ source("init.R")
 
 ## General background
 
+More to simulation and artificial data. Artificial data is model-laden
+
 ## Theoretical background
 
 ## R packages used
@@ -103,7 +105,31 @@ ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
 ```
 
 
+observations are theory-laden
 
+Observation = Sensory Input + Theoretical Framework
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 0.75
+#| fig-width: 7.5
+#| fig-cap: "foo"
+#| label: fig-observation
+
+ggplot() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-10.25, 10.5)) +
+  theme_void() +
+  annotate("text", -4.8, 0, label = "~", size = 7, fontface = 2, hjust = "center") +
+  annotate("text", -10.25, 0, label = "Observation", size = 7, fontface = 2, hjust = "left") +
+  annotate("text", -4.3, 0, label = "Sensory Input", size = 7, fontface = 2, hjust = "left") +
+  annotate("text", 1.9, 0, label = "+", size = 7, fontface = 2, hjust = "center") +
+  annotate("text", 2.25, 0, label = "Theoretical Framework", size = 7, fontface = 2, hjust = "left") +
+  scale_y_continuous(limits = c(-2, 2)) 
+```
 
 ## Alternatives
 
