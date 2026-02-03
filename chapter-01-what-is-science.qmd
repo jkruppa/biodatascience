@@ -9,9 +9,21 @@ source("images/part_0/part_0_science.R")
 
 > *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
 
+"Anything goes" is Paul Feyerabend's famous dictum. Therefore, you can stop here. If you are not interested in the historical or philosophical background of what we call science, then skip ahead to the next chapter. You don't really need the background. Think of a theater actor. The actor doesn't need to know how the stage is built, how the lights work, or where the music comes from. The actor just performs the play. Nothing more is required. Or, to say it in the words of David Mermin, "Shut up and calculate!" @david1989s
+
 ## Why history and philosophy?
 
 > *"I fully agree with you about the significance and educational value of as well as history and philosophy of science. So many people today - and even professional - seem to me like someone who has seen thousands of trees but has never seen a forest. A knowledge of the historic and philosophical background gives that kind of independence from prejudices of his generation from which most scientists are suffering. This independence created by philosophical insight is - in my opinion - the mark of distinction between a mere artisan or specialist and a real seeker after truth." --- Albert Einstein*
+
+
+Science is hard to pinpoint. I thought it would be easy to define. What could be the problem? Then I thought about it, read about it, and thought about it again. There are three big books. The fact that there are three big books alone shows you that it cannot be so easy to define science. Yes, it is complicated. In the end, I will give you all the sources, but for now, there are three books: *The Logic of Scientific Discovery* by Karl Popper @popper1959logic, *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure, and *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against. 
+
+
+
+
+Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
+
+"Shut up and calculate" is a philosophy in quantum physics advocating a focus on mathematical results over interpreting foundational, philosophical questions. @david1989s
 
 Three fields of science Theoretical	Experimental	Instrumental
 
@@ -393,7 +405,7 @@ Science is guessing and falsification
 
 Further tutorials and R packages on XXX
 
-*Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend2020against
+*Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against
 
 *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure
 
