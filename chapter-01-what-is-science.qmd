@@ -421,13 +421,19 @@ Science is guessing and falsification
 
 ## Alternatives
 
-Further tutorials and R packages on XXX
+> *"The truth is out there." --- The X files
+
+Disappointed about this chapter? You wanted more but have gotten less? There are other books and ideas outside. 
 
 *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against
 
 *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure
 
 *The Logic of Scientific Discovery* by critical rationalism by Karl Popper @popper1959logic
+
+*The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
+
+## Dramatis personae
 
 ## Glossary
 

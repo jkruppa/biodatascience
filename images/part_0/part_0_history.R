@@ -89,7 +89,8 @@ p_persons_positiv <- persons_positiv_tbl |>
   coord_flip() +
   labs(x = "", y = "") +
   scale_y_continuous(limits = c(1805, 2040),
-                     breaks = seq(1800, 2040, 50)) +
+                     breaks = c(seq(1800, 2040, 50), 2026),
+                     labels = c(1800, 1850, 1900, 1950, 2000, 2026)) +
   theme(axis.text = element_text(size = 12)) +
   ## first
   geom_point(data = persons_positiv_tbl, aes(short, date_1, group = short), color = "#0D0887FF") +
