@@ -38,6 +38,7 @@ Positivism is not positive thinking
 p_persons_positiv
 ```
 
+epistemically
 
 Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
 
