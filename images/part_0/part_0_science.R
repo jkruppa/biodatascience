@@ -331,7 +331,7 @@ p_wheel_knowledge <- ggplot() +
 p_cholera <- ggplot() +
   theme_void() +
   ## theme_minimal() +
-  coord_cartesian(xlim = c(1, 9), ylim = c(1, 9)) +
+  coord_cartesian(xlim = c(1, 9), ylim = c(0.9, 9)) +
   scale_x_continuous(breaks = seq(0, 10, 1)) +
   scale_y_continuous(breaks = seq(0, 10, 1)) +
   geom_shape(data = tibble(x = c(6.25, 9.25, 9.25, 6.25), 
@@ -393,7 +393,9 @@ p_cholera <- ggplot() +
   annotate("segment", x = 6.5, xend = 6.5, y = 2, yend = 4, size = 0.5) +
   ## number
   annotate("label", x = c(3.5, 7.25), y = 8.5, label = c("n=10", "n=29"),
-           fontface = 2, size = 5, fill = "white")
+           fontface = 2, size = 5, fill = "white") +
+  annotate("label", x = c(3.5, 7.75), y = 0.9, size = 6, fontface = 3, fill = "white",
+           label = c("hygienic", "filthy")) 
 
 p_wall <- ggplot() +
   theme_void() +
