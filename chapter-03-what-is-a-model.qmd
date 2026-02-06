@@ -1,6 +1,7 @@
 ```{r echo = FALSE, warning = FALSE, message = FALSE}
 source("init.R")
 source("images/part_0/part_0_science.R")
+source("images/part_0/part_0_history.R")
 ```
 
 # What is a model? {#sec-what-is-a-model}
@@ -251,6 +252,12 @@ p_persons_statistics
 Explanation and prediction are interchangeable. First, you need a model to explain something; then, you can use the model to make predictions.
 
 Decision-making is slightly different. This could also be called a conclusion or, more technically, 'inference'.
+
+## Alternatives
+
+*An Incomplete Theory: The Search for Quantum Gravity (a Story)* by Megan Henry
+
+The The End of the Theory-Driven Era @boddenberg2025end
 
 ## Glossary
 

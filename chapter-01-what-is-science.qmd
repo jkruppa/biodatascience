@@ -58,11 +58,9 @@ Now, we will learn about the philosophy of science. We will use Pettenkofer as a
 
 ### Logical positivism
 
-It is a common linguistic trap, but Positivism and Positive Thinking have absolutely nothing to do with each other. One is a rigorous (though, according to Deutsch, flawed) philosophy of science, while the other is a psychological mindset or self-help technique.
+First, we must distinguish between two completely different concepts. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
-Positivism is not positive thinking
-
-Wiener circle.
+The Vienna Circle was a group of philosophers who met at the University of Vienna from 1924 to 1936. They had a big influence on the study of philosophy and science. In 1929, the Vienna Circle wrote "The Scientific Conception of the World", also known as "The Manifesto." The manifesto had two aims. First, it introduces the group and Vienna. At the beginning of the text, it reads more like an advertisement for Vienna and the Vienna Circle. More scientists should join the club. The philosophical main points are somewhat buried in the text. The Vienna Circle proposed that science is both empirical and positivist; knowledge comes only from experience. Furthermore, the process of scientific world conception involves applying logical analysis to observed objects, or, in other words, experience.
 
 
 ```{r}
@@ -71,7 +69,7 @@ Wiener circle.
 #| warning: false
 #| label: fig-chap-01-person-positiv
 #| fig-align: center
-#| fig-height: 3.5
+#| fig-height: 4
 #| fig-width: 8
 #| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider a selection of scientists who have contributed to the philosophical background of science and positivism. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
@@ -463,9 +461,13 @@ Disappointed about this chapter? You wanted more but have gotten less? There are
 
 ## Glossary
 
-Experiment
+experiment
 
 :   what does it mean.
+
+epistemic
+
+:   Counterpart of aesthetic. Keep in mind the saying, "It is too beautiful ('aesthetic') to be true ('epistemic')."
 
 ## The meaning of "Models of Reality" in this chapter.
 
