@@ -58,12 +58,13 @@ Now, we will learn about the philosophy of science. We will use Pettenkofer as a
 
 ### From empiricism to logical positivism
 
-How does the human learn?
+How does the human mind learn? How do we gather information? Humans are born in a blank state. No ideas are implanted in the brain; only instincts guide the infant through the first weeks and months. Shortly after, the infant begins to learn through the senses. This is mostly true and forms the basis of empiricism. I will not focus on human development. Therefore, we will only focus on the origin of empiricism as a basis for generating knowledge.
 
 Empiricism
 
 : The source of knowledge comes from observation and sensory experience. We learn through the five senses, which guide our ideas. The focus is on the human mind.
 
+Next, we expand the scope of empiricism and ask how science and society should function.
 
 First, we must distinguish between two completely different concepts. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
