@@ -56,11 +56,26 @@ That's where we come to a halt. What is Pettenkofer doing? He was a very success
 
 Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. Now, let's take a closer look at the concept of positivism. 
 
-### Logical positivism
+### From empiricism to logical positivism
+
+How does the human learn?
+
+Empiricism
+
+: The source of knowledge comes from observation and sensory experience. We learn through the five senses, which guide our ideas. The focus is on the human mind.
+
 
 First, we must distinguish between two completely different concepts. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
-The Vienna Circle was a group of philosophers who met at the University of Vienna from 1924 to 1936. They had a big influence on the study of philosophy and science. In 1929, the Vienna Circle wrote "The Scientific Conception of the World", also known as "The Manifesto." The manifesto had two aims. First, it introduces the group and Vienna. At the beginning of the text, it reads more like an advertisement for Vienna and the Vienna Circle. More scientists should join the club. The philosophical main points are somewhat buried in the text. The Vienna Circle proposed that science is both empirical and positivist; knowledge comes only from experience. Furthermore, the process of scientific world conception involves applying logical analysis to observed objects, or, in other words, experience.
+Positivism
+
+: The validity of knowledge comes from observation and sensory experience by ignores everything invisible or immeasurable. If you cannot measure it or observe it, it shouldn't be part of a serious discussion.
+
+Now, let's turn the wheel of positivism a bit further towards the extreme. Therefore, we must visit Vienna in the early 19th century. The Vienna Circle was a group of philosophers who met at the University of Vienna from 1924 to 1936. They had a big influence on the study of philosophy and science. In 1929, the Vienna Circle wrote "The Scientific Conception of the World", also known as "The Manifesto." The manifesto had two aims. First, it introduces the group and Vienna. At the beginning of the text, it reads more like an advertisement for Vienna and the Vienna Circle. More scientists should join the club. The philosophical main points are somewhat buried in the text. The Vienna Circle proposed that science is both empirical and positivist; knowledge comes only from experience. Furthermore, the process of scientific world conception involves applying logical analysis to observed objects, or, in other words, experience.
+
+Logical Positivism
+
+: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
 
 
 ```{r}
