@@ -1,4 +1,47 @@
 
+p_emp_to_logical <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-3.5, 3.5), ylim = c(-0.1, 7.1)) +
+  scale_x_continuous(breaks = seq(-10, 10, 1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10, 10, 1), expand = expansion(mult = c(0, 0))) +
+  ## top
+  geom_shape(data = tibble(x = c(-3.2, 3.2, 3.2, -3.2), 
+                           y = c(0, 0, 7, 7)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#6A00A880", alpha = 0.3, color = "gray50") +
+  annotate("text", x = 0, y = 6.5, label = "Empiricism", fontface = 2, size = 4.5,
+           color = "black") +
+  annotate("text", x = 0, y = 5.7, fontface = 3, size = 4,
+           label = "Source of knowledge comes from observation and sensory experience.") +
+  geom_shape(data = tibble(x = c(-3.1, 3.1, 3.1, -3.1), 
+                           y = c(0.25, 0.25, 5, 5)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "white", alpha = 1, color = "gray50") +
+  geom_shape(data = tibble(x = c(-3.1, 3.1, 3.1, -3.1), 
+                           y = c(0.25, 0.25, 5, 5)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#FCA63680", alpha = 0.3, color = "gray50") +
+  annotate("text", x = 0, y = 4.5, label = "Positivism", fontface = 2, size = 4.5,
+           color = "black") +
+  annotate("text", x = 0, y = 3.7, fontface = 3, size = 4,
+           label = "Source of knowledge ignores everything invisible or immeasurable.") +
+  geom_shape(data = tibble(x = c(-3, 3, 3, -3), 
+                           y = c(0.5, 0.5, 3, 3)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "white", alpha = 1, color = "gray50") +
+  geom_shape(data = tibble(x = c(-3, 3, 3, -3), 
+                           y = c(0.5, 0.5, 3, 3)),
+             aes(x, y), radius = unit(0.1, 'cm'), 
+             fill = "#0D088780", alpha = 0.3, color = "gray50") +
+  annotate("text", x = 0, y = 2.5, label = "Logical Positivism", fontface = 2, size = 4.5,
+           color = "black") +
+  annotate("text", x = 0, y = 1.7, fontface = 3, size = 4,
+           label = "For a source of knowledge to be meaningful, it must be testable.") +
+  annotate("text", x = 0, y = 1, fontface = 3, size = 4,
+           label = "Verification principle demands truth either by logic or by experimentation.")
+
+
 p_theo_exper_instr <- ggplot() +
   theme_void() +
   ## theme_minimal() +

@@ -54,19 +54,17 @@ p_cholera + p_wall +
 
 That's where we come to a halt. What is Pettenkofer doing? He was a very successful scientist. But he was sometimes wrong. Interestingly, Pettenkofer came up with one of the precursors to the periodic table of elements. He had to stop his work due to a lack of funding from the Bavarian state. In 1869, however, Dmitri Mendeleev, the discoverer of the periodic system, mentioned Pettenkofer in his articles as one of the few who influenced his work. Pettenkofer only looked at what he could see. His thought process was bound to the observable. 
 
-Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. Now, let's take a closer look at the concept of positivism. 
+Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. Now, let's take a closer look at the concepts of empiricism to logical positivism. 
 
 ### From empiricism to logical positivism
 
-How does the human mind learn? How do we gather information? Humans are born in a blank state. No ideas are implanted in the brain; only instincts guide the infant through the first weeks and months. Shortly after, the infant begins to learn through the senses. This is mostly true and forms the basis of empiricism. I will not focus on human development. Therefore, we will only focus on the origin of empiricism as a basis for generating knowledge.
+How does the human mind learn? How do we gather information? Humans are born in a blank state. No ideas are implanted in the brain; only instincts guide the infant through the first weeks and months. Shortly after, the infant begins to learn through the senses. This is mostly true and forms the basis of empiricism. I will not focus on human development. Therefore, we will only focus on the origin of empiricism as a basis for generating knowledge. The idea of empiricism is simple and appealing. In my experience, common sense often begins with empiricism to gather knowledge. Therefore, we will start with this simple idea and explain its history. 
 
 Empiricism
 
 : The source of knowledge comes from observation and sensory experience. We learn through the five senses, which guide our ideas. The focus is on the human mind.
 
-Next, we expand the scope of empiricism and ask how science and society should function.
-
-First, we must distinguish between two completely different concepts. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
+Next, we will broaden the scope of empiricism by asking how science and society should function. Since we have learned through our senses, we can apply this idea to science and society in general. Since we will focus only on observable things and dismiss invisible entities, we will call our concept "positivism." Positivism comes from the Latin word *positum*, meaning "that which is given" or "laid down." No, this does not make it any better. Furthermore, we must distinguish between two completely different concepts that often pop up in our minds. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
 Positivism
 
@@ -76,8 +74,23 @@ Now, let's turn the wheel of positivism a bit further towards the extreme. There
 
 Logical Positivism
 
-: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
+: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable by observation. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-emp-to-logical
+#| fig-align: center
+#| fig-height: 2.25
+#| fig-width: 7
+#| fig-cap: "D"
+
+p_emp_to_logical
+```
+
+Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be."
 
 ```{r}
 #| echo: false
