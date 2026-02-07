@@ -63,7 +63,7 @@ lang: en
 format:
   html: 
     theme:
-      - journal
+      - litera
       - bioscience.scss
     cover-image: cover_2026_b.png
     code-annotations: hover
