@@ -65,7 +65,7 @@ format:
     theme:
       - journal
       - bioscience.scss
-    cover-image: cover2026.png
+    cover-image: cover_2026_b.png
     code-annotations: hover
     lightbox: true
     toc-expand: 2
