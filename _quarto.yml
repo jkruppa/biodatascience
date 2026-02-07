@@ -65,7 +65,7 @@ format:
     theme:
       - litera
       - bioscience.scss
-    cover-image: cover_2026_b.png
+    cover-image: cover_2026_c.png
     code-annotations: hover
     lightbox: true
     toc-expand: 2
