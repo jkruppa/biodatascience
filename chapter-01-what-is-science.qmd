@@ -22,7 +22,7 @@ What could possibly be a better argument for something than the thought of a gen
 
 Don't worry, we won't start with the science of the Stone Age. Instead, we will focus on the modern era and the knowledge gathered during this time. In this section, we will also focus on science itself. We will discuss data and models later. For now, we will focus solely on the meaning of science. Science is hard to pinpoint. I thought it would be easy to define. What could be the problem? Then I thought about it, read about it, and thought about it again. There are three big books. The fact that there are three big books alone shows you that it cannot be so easy to define science. Yes, it is complicated. In the end, I will give you all the sources, but for now, there are three books: *The Logic of Scientific Discovery* by Karl Popper @popper1959logic, *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure, and *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against. You can read these books or not. I will give you a brief introduction and refer to them. As always, a brief summary cannot encompass all the ideas of these books.
 
-Before we continue, I would like to present a brief example of knowledge generation. How can we obtain enterprise knowledge? In this case, we will explore cholera as a human curse through the lens of a famous German scientist and his concepts.
+Before we continue, I would like to present a brief example of knowledge generation. How can we obtain enterprise knowledge? We will explore the appealing ideas and concepts from the beginning of the last century. In our case, we will explore cholera as a human curse through the lens of a renowned German scientist and his theories. In science, everything starts with an observation. As Isaac Asimov said, "In science, everything new begins with someone muttering: 'Hmm, that's strange!'"
 
 ### Cholera and breathing walls
 
@@ -60,22 +60,17 @@ Now, we will learn about the philosophy of science. We will use Pettenkofer as a
 
 How does the human mind learn? How do we gather information? Humans are born in a blank state. No ideas are implanted in the brain; only instincts guide the infant through the first weeks and months. Shortly after, the infant begins to learn through the senses. This is mostly true and forms the basis of empiricism. I will not focus on human development. Therefore, we will only focus on the origin of empiricism as a basis for generating knowledge. The idea of empiricism is simple and appealing. In my experience, common sense often begins with empiricism to gather knowledge. Therefore, we will start with this simple idea and explain its history. 
 
-Empiricism
-
-: The source of knowledge comes from observation and sensory experience. We learn through the five senses, which guide our ideas. The focus is on the human mind.
+We conclude that empiricism is the source of knowledge, and that observation and sensory experience provide that source. We learn through our five senses, which shape our ideas. The focus is on the human mind.
 
 Next, we will broaden the scope of empiricism by asking how science and society should function. Since we have learned through our senses, we can apply this idea to science and society in general. Since we will focus only on observable things and dismiss invisible entities, we will call our concept "positivism." Positivism comes from the Latin word *positum*, meaning "that which is given" or "laid down." No, this does not make it any better. Furthermore, we must distinguish between two completely different concepts that often pop up in our minds. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
-Positivism
+In positivism, we can say that the validity of knowledge comes from observation and sensory experience, but it ignores everything invisible or immeasurable. In other words, if you cannot measure or observe something, it shouldn't be part of a serious discussion.
 
-: The validity of knowledge comes from observation and sensory experience by ignores everything invisible or immeasurable. If you cannot measure it or observe it, it shouldn't be part of a serious discussion.
+Now, let's turn the wheel of positivism a bit further towards the extreme. Therefore, we must visit Vienna in the early 19th century. The Vienna Circle was a group of philosophers who met at the University of Vienna from 1924 to 1936. They had a big influence on the study of philosophy and science. In 1929, the Vienna Circle wrote "The Scientific Conception of the World", also known as "The Manifesto." The manifesto had two aims. First, it introduces the group and Vienna. At the beginning of the text, it reads more like an advertisement for Vienna and the Vienna Circle. More scientists should join the club. The philosophical main points are somewhat buried in the text. The Vienna Circle proposed that science is both empirical and positivist; knowledge comes only from experience. Furthermore, the process of scientific world conception involves applying logical analysis to observed objects, or, in other words, experience. A statement can only be meaningful if it is testable. This is called the verification principle.
 
-Now, let's turn the wheel of positivism a bit further towards the extreme. Therefore, we must visit Vienna in the early 19th century. The Vienna Circle was a group of philosophers who met at the University of Vienna from 1924 to 1936. They had a big influence on the study of philosophy and science. In 1929, the Vienna Circle wrote "The Scientific Conception of the World", also known as "The Manifesto." The manifesto had two aims. First, it introduces the group and Vienna. At the beginning of the text, it reads more like an advertisement for Vienna and the Vienna Circle. More scientists should join the club. The philosophical main points are somewhat buried in the text. The Vienna Circle proposed that science is both empirical and positivist; knowledge comes only from experience. Furthermore, the process of scientific world conception involves applying logical analysis to observed objects, or, in other words, experience.
+In logical positivism, we conclude that knowledge is valid when acquired through sensory experience by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable through observation. It must either be proven true by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced.
 
-Logical Positivism
-
-: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable by observation. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
-
+In the following figure we see the three concepts from empiricism to logical positivism
 
 ```{r}
 #| echo: false
@@ -85,10 +80,12 @@ Logical Positivism
 #| fig-align: center
 #| fig-height: 2.25
 #| fig-width: 7
-#| fig-cap: "D"
+#| fig-cap: "The intertwining of the three concepts from empiricism to logical positivism. First, there is empiricism, which is based on individual observations and experiences. Positivism attempts to apply this to society and science by disregarding the invisible and immeasurable. Only measurable things should be used in serious scientific discussions. Finally, logical positivism incorporates testable statements and the verification principle into the validity of knowledge."
 
 p_emp_to_logical
 ```
+
+From a casual point of view this all makes perfectly sense. Also later in this book we will focus on the experiment and the observervation called data.
 
 Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be."
 
@@ -490,13 +487,25 @@ Disappointed about this chapter? You wanted more but have gotten less? There are
 
 ## Glossary
 
-experiment
+Experiment
 
 :   what does it mean.
 
-epistemic
+Epistemic
 
 :   Counterpart of aesthetic. Keep in mind the saying, "It is too beautiful ('aesthetic') to be true ('epistemic')."
+
+Empiricism
+
+: The source of knowledge comes from observation and sensory experience. We learn through the five senses, which guide our ideas. The focus is on the human mind.
+
+Positivism
+
+: The validity of knowledge comes from observation and sensory experience by ignores everything invisible or immeasurable. If you cannot measure it or observe it, it shouldn't be part of a serious discussion.
+
+Logical Positivism
+
+: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable by observation. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
 
 ## The meaning of "Models of Reality" in this chapter.
 
