@@ -88,7 +88,7 @@ p_persons_positiv <- persons_positiv_tbl |>
   geom_point(size = 2, shape = "|") +
   coord_flip() +
   labs(x = "", y = "") +
-  scale_y_continuous(limits = c(1805, 2040),
+  scale_y_continuous(limits = c(1795, 2040),
                      breaks = c(seq(1800, 2025, 25)),
                      labels = c(seq(1800, 2025, 25))) +
   theme(axis.text = element_text(size = 12)) +
