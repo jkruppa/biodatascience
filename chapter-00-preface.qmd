@@ -6,6 +6,19 @@ pacman::p_load(tidyverse)
 
 *Last modified on `r format(fs::file_info("chapter-00-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
+The horizon was dark. The stage stretched into infinity. Or so it seemed. The only light was in the center, where Emma stood. She saw the shadows of set pieces looming in the darkness. Even though she was standing, she felt a slight movement. Were the seats reddish or gray? Was everything old? Old as the universe itself? 
+
+"Jeff, what are we playing? What's the drama about?" Emma asked the empty seats.
+
+Below her, deep out of the darkness, came Jeff's voice. "It depends on your perspective. What do you want to play? What do you want to discover? What are your beliefs?" Jeff exhaled wearily and sat down on a seat to her right. She could not see him. 
+
+"Can we start and see what comes to mind? Let's make the best of it."
+
+"You know nothing, Emma." Jeff changed his position again.
+
+--------------------------------------------------------------------------------
+
+
 > *"I'd like to solve the puzzle." --- Wheel of Fortune*
 
 In 2008, Cadiergues and his team won the Ig Nobel Prize at Harvard University in Cambridge for their work with dog and cat fleas @cadiergues2000comparison. This book tells the story of what had happened if they won the Nobel Prize in Stockholm instead. The Nobel Prize sparked extensive research in many scientific fields. Fleas became all the rage. Lots of data was collected, fleas were measured, and questions were asked that no one had ever asked before. Let's check out this data and see what it tells us about fleas. Come along to Adventure Land and get ready to be amazed.
