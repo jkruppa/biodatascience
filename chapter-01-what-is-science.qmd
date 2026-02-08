@@ -16,7 +16,11 @@ The stage. The stage was where everything was happening. Emma had been an actor 
 
 "Hundreds of years, I suppose. Why is it important to you? You've been playing the game for years, and I think you will continue to do so for many more years. The stage doesn't matter if you do a good job. Just perform the play. What does it matter how the stage is build, the light works, or where the music comes from?" Jeff answered sharply, only moving slightly in his red chair. 
 
-"Something has changed. Something is different. By understanding the stage, I will become a better actor. My work will be more influential and richer." Emma starts to look behind the stage curtains. 
+"Sometimes I don't like you, Jeff."
+
+“How can you dislike someone you can’t even observe?”
+
+Emma ignored Jeff for a moment and mumbled, "Something has changed. Something is different. By understanding the stage, I will become a better actor. My work will be more influential and richer." Emma starts to look behind the stage curtains. 
 
 Jeff grumbles. "You won't like what you see..." But Emma had gone too far.
 
@@ -186,6 +190,8 @@ Observation = Sensory Input + Theoretical Framework
 
 
 Language shapes data: We use theoretical words to describe what we see. If you say, "The electron moved," you are already assuming the "theory" that electrons exist and are particles that move.
+
+Or feget eveything what I have written and go with Paul Feyerabend. Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
 
 @boyd2009theory
 
