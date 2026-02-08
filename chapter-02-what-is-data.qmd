@@ -18,6 +18,10 @@ More to simulation and artificial data. Artificial data is model-laden
 
 ## Data
 
+Experiment vs observed data
+
+Is your data the fuel of discovery or the test of discovery?
+
 ```{r}
 jump_weight_tbl <- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),
                           y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |>

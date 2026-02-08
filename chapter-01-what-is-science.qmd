@@ -14,20 +14,19 @@ The stage. The stage was where everything was happening. Emma had been an actor 
 
 "Jeff, how old is this stage where I'm supposed to play?" She asked, walking and looking around.
 
-"Hundreds of years, I suppose. Why is it important to you? You've been playing the game for years, and I think you will continue to do so for many more years. The stage doesn't matter if you do a good job." Jeff answered sharply, only moving slightly in his red chair. 
+"Hundreds of years, I suppose. Why is it important to you? You've been playing the game for years, and I think you will continue to do so for many more years. The stage doesn't matter if you do a good job. Just perform the play. What does it matter how the stage is build, the light works, or where the music comes from?" Jeff answered sharply, only moving slightly in his red chair. 
 
-"Something has changed. Something is different. By understanding the stage, I will become a better actor. My work will be more influential and richer."
-Emma starts to look behind the stage curtains. 
+"Something has changed. Something is different. By understanding the stage, I will become a better actor. My work will be more influential and richer." Emma starts to look behind the stage curtains. 
 
-Jeff grumbles. "You won't like what you find..." But Emma had gone too far.
+Jeff grumbles. "You won't like what you see..." But Emma had gone too far.
 
 --------------------------------------------------------------------------------
 
-"Anything goes" is Paul Feyerabend's famous dictum @feyerabend1970against. Therefore, you can stop here. If you are not interested in the historical or philosophical background of what we call science, then skip ahead to the next chapter. You don't really need the background. Think of a theater actor. The actor doesn't need to know how the stage is built, how the lights work, or where the music comes from. The actor just performs the play. Nothing more is required. Or, to say it in the words of David Mermin, "Shut up and calculate!" @david1989s With this statement, Mermin describes the Copenhagen interpretation as a philosophy of quantum physics that prioritizes mathematical results over foundational philosophical questions.
+"Anything goes" is Paul Feyerabend's famous dictum @feyerabend1970against. Therefore, you can stop here. If you are not interested in the historical or philosophical background of what we call science, then skip ahead to the next chapter. You don't really need the background. Or, to say it in the words of David Mermin, "Shut up and calculate!" @david1989s With this statement, Mermin describes the Copenhagen interpretation as a philosophy of quantum physics that prioritizes mathematical results over foundational philosophical questions. Even if you don't have a theoretical background, you can work on knowledge generation and new devices. Therefore, if your time is limited, go on, brave seeker after truth.
 
 For everyone else, I have written this introduction chapter. Maybe you're puzzled about what this science thing is all about. That's perfectly normal. Today, education strips away the historical and philosophical context and jumps directly into biological, chemical, or physical topics. History tells the story of countries and people, not the combination of history and the natural sciences. There is so much to learn. Therefore, there is seldom room for philosophy in any rushed school schedule. However, humans do science. What humans do becomes history. The reasons and ways in which humans do things are strongly connected to their thoughts and beliefs. Therefore, they have a philosophy, even if they are not aware of it. So, if you do science, you do so with a particular way of thinking. Therefore, you have a philosophy, whether you are aware of it or not. It's time to talk about it a little bit.
 
-## Why history and philosophy?
+## The importance of history and philosophy in science
 
 What could possibly be a better argument for something than the thought of a genius and Nobel Prize winner? Therefore, we begin this section with a quote from Albert Einstein.
 
@@ -37,7 +36,7 @@ Don't worry, we won't start with the science of the Stone Age. Instead, we will 
 
 Before we continue, I would like to present a brief example of knowledge generation. How can we obtain enterprise knowledge? We will explore the appealing ideas and concepts from the beginning of the last century. In our case, we will explore cholera as a human curse through the lens of a renowned German scientist and his theories. In science, everything starts with an observation. As Isaac Asimov said, "In science, everything new begins with someone muttering: 'Hmm, that's strange!'"
 
-### Cholera and breathing walls
+### Observing cholera and breathing walls
 
 In 1854, cholera visited the city of Munich in Bavaria, Germany. This was not a pleasant visit, as many citizens died of cholera and its consequences. However, not all parts of the city were affected equally. By the end of the 19th century, Munich would become one of the cleanest cities in Europe. Max von Pettenkofer achieved this by building and renovating the canalization system. When cholera arrived, not all parts of the city had equal access to the canalization and fresh water supply. Some parts of the city had easy access to fresh water and working toilets. In other parts of the city, sometimes only divided by a street, construction of the canalization had not yet begun. It was observed that the death toll from cholera varied by district.
 
@@ -75,7 +74,7 @@ How does the human mind learn? How do we gather information? Humans are born in 
 
 We conclude that empiricism is the source of knowledge, and that observation and sensory experience provide that source. We learn through our five senses, which shape our ideas. The focus is on the human mind.
 
-Next, we will broaden the scope of empiricism by asking how science and society should function. Since we have learned through our senses, we can apply this idea to science and society in general. Since we will focus only on observable things and dismiss invisible entities, we will call our concept "positivism." Positivism comes from the Latin word *positum*, meaning "that which is given" or "laid down." No, this does not make it any better. Positivism was founded by Auguste Comte in the early nineteenth century. Comte also favored the idea of the verifiability criterion of meaning. According to this criterion, a statement must be empirically verifiable. We will meet this criterion again soon. Furthermore, we must distinguish between two completely different concepts that often pop up in our minds. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
+Next, we will broaden the scope of empiricism by asking how science and society should function. Since we have learned through our senses, we can apply this idea to science and society in general. Since we will focus only on observable things and dismiss invisible entities, we will call our concept "positivism." Positivism comes from the Latin word *positum*, meaning "that which is given" or "laid down." No, this does not make it any better. Positivism was founded by Auguste Comte (1798-1857) in the early nineteenth century. Comte also favored the idea of the verifiability criterion of meaning. According to this criterion, a statement must be empirically verifiable. We will meet this criterion again soon. Furthermore, we must distinguish between two completely different concepts that often pop up in our minds. Positivism is often confused with positive thinking. This is a common linguistic mistake, but positivism and positive thinking are not related. One is a rigorous philosophy of science, while the other is a psychological mindset or self-help technique.
 
 In positivism, we can say that the validity of knowledge comes from observation and sensory experience, but it ignores everything invisible or immeasurable. In other words, if you cannot measure or observe something, it shouldn't be part of a serious discussion.
 
@@ -83,7 +82,9 @@ Now, let's turn the wheel of positivism a bit further towards the extreme. There
 
 In logical positivism, we conclude that knowledge is valid when acquired through sensory experience by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable through observation. It must either be proven true by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced.
 
-The following figure shows the three concepts, from empiricism to logical positivism. There is significant overlap between these concepts. However, the concepts become stricter and focus more on science emerging from the individual human in empiricism. We remember that truth comes from observable things and that statements must be verified by tests.
+Positivism has a strong influence on the social structures of science and, consequently, on individual scientists. One such scientist was Ernst Mach (1838-1916). Mach greatly impacted the philosophy of knowledge generation with his Machian physics. Machian physics rejects Newtonian theories of space and time, supporting a relative approach to motion instead. Mach's work inspired Albert Einstein in his search for the theory of general relativity. Machian physics is based entirely on directly observable phenomena. During his lifetime, Mach rejected the existence of atoms. Ultimately, Einstein rejected the positivist aspect of Machian physics, yet many scientists still considered him a positivist. The thinking goes that, since he supported Mach, he also supported the philosophy behind it. Science is always done in a social context.
+
+The following figure summaries the three concepts, from empiricism to logical positivism. There is significant overlap between these concepts. However, the concepts become stricter and focus more on science emerging from the individual human in empiricism. We remember that truth comes from observable things and that statements must be verified by tests.
 
 ```{r}
 #| echo: false
@@ -98,11 +99,30 @@ The following figure shows the three concepts, from empiricism to logical positi
 p_emp_to_logical
 ```
 
-From a casual point of view this all makes perfectly sense. Also later in this book we will focus on the experiment and the observervation called data.
+Why does it matter? From a casual point of view, most parts of positivism makes perfect sense. We see something, come up with an explanation, and test if the explanation is true. This is a very casual concept in science. We are seeker after truth. Later in this book, we will focus on experiments and observations from experiments. These observations are called data. We don't always need an experiment to gather data; we can also observe nature and draw inferences from it. 
+
+**In our daily scientific work, we produce data that consists of observations. Therefore, we are drawn to the logical positivism approach.**
+
+However, there is a problem. Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be." If logical positivism is no longer working, then it never was. Then, we will need a different philosophy on which to base our science. Therefore, we will proceed with logical reasoning. The logical part must also be examined and discussed.
+
+## The two paths of logic.
+
+Pure deductive reasoning starts with a true assumed to be true and move toward a certain conclusion. Here we start with guessing.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 10
+#| fig-cap: "The difference between the two logical pathways: On the left is the inductive logic, which is a bottom-up approach that goes from specific to general. First, we observe and collect data, then we look for patterns in the data. Then, we draw a general conclusion about the pattern. After observing something a few times, we conclude that it is probably a rule. On the right is the deductive logic, a top-down approach from general to specific. We have a general theory and conduct an experiment to test it. Then, we draw a conclusion. From a more common perspective, the two logical pathways have things in common but differ in their train of thought."
+#| label: fig-sience-inductive
+
+p_sience_inductive 
+```
 
 
-
-Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be."
 
 ```{r}
 #| echo: false
@@ -119,9 +139,7 @@ p_persons_positiv
 
 epistemically
 
-Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
 
-"Shut up and calculate" is a philosophy in quantum physics advocating a focus on mathematical results over interpreting foundational, philosophical questions. @david1989s
 
 Three fields of science Theoretical	Experimental	Instrumental
 
@@ -338,20 +356,6 @@ Pauli defined the scientific method as "taking up a subject repeatedly. Thinking
 
 Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
 
-The two paths of logic.
-
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 4.5
-#| fig-width: 10
-#| fig-cap: "The difference between the two logical pathways: On the left is the inductive logic, which is a bottom-up approach that goes from specific to general. First, we observe and collect data, then we look for patterns in the data. Then, we draw a general conclusion about the pattern. After observing something a few times, we conclude that it is probably a rule. On the right is the deductive logic, a top-down approach from general to specific. We have a general theory and conduct an experiment to test it. Then, we draw a conclusion. From a more common perspective, the two logical pathways have things in common but differ in their train of thought."
-#| label: fig-sience-inductive
-
-p_sience_inductive 
-```
 
 
 Erst Mach and observational things.
