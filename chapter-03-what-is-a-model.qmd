@@ -10,6 +10,24 @@ source("images/part_0/part_0_history.R")
 
 > *"Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission: to explore strange new worlds; to seek out new life and new civilizations; to boldly go where no one has gone before!" ---  Star Trek: The Next Generation, intro*
 
+"Is this limestone?" Emma asked, looking through the narrow window in the castle wall. She pushed the wall slightly with her hand. It was massive and stable.
+
+"No, it's plastic. Pure plastic," Jeff answered from the darkness. "But it feels real. Sometimes your senses tricked you."
+
+She moved to the opposite side of the wall where the battlement walk was located. The castle was meant to be situated near Prague in Old Europe. The play was to concern the drama between Tycho Brahe and Nicolaus Copernicus. She wondered who would play them, but another question came to her mind first.
+
+"Why is it dark at night, Jeff?"
+
+There was a long pause of silence and breathing. "Because the universe is expanding. The light was stretched out. The wavelength became longer and longer until the light could no longer be seen," Jeff answered in a stoic undertone.
+   
+Emma looked surprised. "Yesterday, I explained the issue with a stick, an orange, and a flashlight."
+
+A pause of silence followed. "Your model was wrong," Jeff stated.
+
+"It was useful and a lot of fun," Emma answered, sounding annoyed. Her view was captured by the castle's long walls, which stretched away like curved lines.
+
+--------------------------------------------------------------------------------
+
 Imagine you are standing on a globe but still believe it is flat. This globe is called Earth. It is your home planet. So far, you know that you belong to the only existing intelligent species. You are standing on solid ground, with boiling rocks just a few kilometers below you. If you shrink the Earth to the size of an egg, the shell would represent the solid ground. A few kilometers above that, you would not be able to breathe. You are not moving right now, but the Earth is moving at speeds of up to 828,000 km/h depending on the reference point. Your reality is a serious misinterpretation. This chapter focuses on the important role of different models of reality. We will examine various historical examples of scientific work by humans. Theories were developed and predictions were made. Most of these predictions were incorrect. Only a few provided a satisfactory explanation of the reality we live in. We want to follow the historical paths and go where no one has gone before.
 
 ## rewrite
