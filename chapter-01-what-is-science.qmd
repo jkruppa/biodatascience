@@ -109,6 +109,13 @@ Why does it matter? From a casual point of view, most parts of positivism makes 
 
 However, there is a problem. Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be." If logical positivism is no longer working, then it never was. Then, we will need a different philosophy on which to base our science. Therefore, we will proceed with logical reasoning. The logical part must also be examined and discussed.
 
+### From instrumentalism to objectivism
+
+
+### Critical Rationalism
+
+
+
 ## The two paths of logic.
 
 Pure deductive reasoning starts with a true assumed to be true and move toward a certain conclusion. Here we start with guessing.
@@ -500,13 +507,12 @@ Science is guessing and falsification
 
 Disappointed about this chapter? You wanted more but have gotten less? There are other books and ideas outside. 
 
-*Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against
+-   *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against
+-   *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure
+-   *The Logic of Scientific Discovery* by critical rationalism by Karl Popper @popper1959logic
+-   *The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
+-   *An Incomplete Theory: The Search for Quantum Gravity (a Story)* by Megan Henry @henry2024incomplete
 
-*The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure
-
-*The Logic of Scientific Discovery* by critical rationalism by Karl Popper @popper1959logic
-
-*The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
 
 ## Dramatis personae
 
