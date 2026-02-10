@@ -10,9 +10,13 @@ source("images/part_0/part_0_history.R")
 
 > *"Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission: to explore strange new worlds; to seek out new life and new civilizations; to boldly go where no one has gone before!" ---  Star Trek: The Next Generation, intro*
 
-"Is this limestone?" Emma asked, looking through the narrow window in the castle wall. She pushed the wall slightly with her hand. It was massive and stable.
+"Is this limestone?" Emma asked, looking through the narrow window in the castle wall. She pushed the wall slightly with her hand. It was massive and stable. 
 
 "No, it's plastic. Pure plastic," Jeff answered from the darkness. "But it feels real. Sometimes your senses tricked you."
+
+Emma leaned over the wall. "The stones are perfect squares in the basement, but they're getting smaller here in the walkway, like tiny dice," Emma wondered. 
+
+"It's the optimum. The optimum." Jeff spoke quietly.
 
 She moved to the opposite side of the wall where the battlement walk was located. The castle was meant to be situated near Prague in Old Europe. The play was to concern the drama between Tycho Brahe and Nicolaus Copernicus. She wondered who would play them, but another question came to her mind first.
 

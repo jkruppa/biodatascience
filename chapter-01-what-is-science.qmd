@@ -36,7 +36,7 @@ What could possibly be a better argument for something than the thought of a gen
 
 > *"I fully agree with you about the significance and educational value of as well as history and philosophy of science. So many people today - and even professional - seem to me like someone who has seen thousands of trees but has never seen a forest. A knowledge of the historic and philosophical background gives that kind of independence from prejudices of his generation from which most scientists are suffering. This independence created by philosophical insight is - in my opinion - the mark of distinction between a mere craftsman or specialist and a real seeker after truth." --- Albert Einstein*
 
-Don't worry, we won't start with the science of the Stone Age. Instead, we will focus on the modern era and the knowledge gathered during this time. In this section, we will also focus on science itself. We will discuss data and models later. For now, we will focus solely on the meaning of science. Science is hard to pinpoint. I thought it would be easy to define. What could be the problem? Then I thought about it, read about it, and thought about it again. There are three big books. The fact that there are three big books alone shows you that it cannot be so easy to define science. Yes, it is complicated. In the end, I will give you all the sources, but for now, there are three books: *The Logic of Scientific Discovery* by Karl Popper @popper1959logic, *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure, and *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against. You can read these books or not. I will give you a brief introduction and refer to them. As always, a brief summary cannot encompass all the ideas of these books.
+Don't worry, we won't start with the science of the Stone Age. Instead, we will focus on the modern era and the knowledge gathered during this time. In this section, we will also focus on science itself. We will discuss data and models later. For now, we will focus solely on the meaning of science. Science is hard to pinpoint. I thought it would be easy to define. What could be the problem? Then I thought about it, read about it, and thought about it again. There are three big books. The fact that there are four big books alone shows you that it cannot be so easy to define science. Yes, it is complicated. In the end, I will give you all the sources, but for now, there are four books: *The Logic of Scientific Discovery* by Karl Popper @popper1959logic, *The Structure of Scientific Revolutions* by Thomas S. Kuhn @kuhn1970structure, *The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning and *Against Method: Outline of an Anarchistic Theory of Knowledge* by Paul Karl Feyerabend @feyerabend1970against. You can read these books or not. I will give you a brief introduction and refer to them. As always, a brief summary cannot encompass all the ideas of these books.
 
 Before we continue, I would like to present a brief example of knowledge generation. How can we obtain enterprise knowledge? We will explore the appealing ideas and concepts from the beginning of the last century. In our case, we will explore cholera as a human curse through the lens of a renowned German scientist and his theories. In science, everything starts with an observation. As Isaac Asimov said, "In science, everything new begins with someone muttering: 'Hmm, that's strange!'"
 
@@ -68,7 +68,7 @@ p_cholera + p_wall +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-That's where we come to a halt. What is Pettenkofer doing? He was a very successful scientist. But he was sometimes wrong. Interestingly, Pettenkofer came up with one of the precursors to the periodic table of elements. He had to stop his work due to a lack of funding from the Bavarian state. In 1869, however, Dmitri Mendeleev, the discoverer of the periodic system, mentioned Pettenkofer in his articles as one of the few who influenced his work. Pettenkofer only looked at what he could see. His thought process was bound to the observable. 
+That's where we come to a halt. What is Pettenkofer doing? He was a very successful scientist. But he was sometimes wrong. Interestingly, Pettenkofer came up with one of the precursors to the periodic table of elements. He had to stop his work due to a lack of funding from the Bavarian state. In 1869, however, Dmitri Mendeleev, the discoverer of the periodic system, mentioned Pettenkofer in his articles as one of the few who influenced his work. Pettenkofer only looked at what he could see. His thought process was bound to the observable and the instruments he uses.
 
 Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. Now, let's take a closer look at the concepts of empiricism to logical positivism. 
 
@@ -111,19 +111,24 @@ Why does it matter? From a casual point of view, most parts of positivism makes 
 
 However, there is a problem. Or to write it in the words of John Passmore, who said: "Logical positivism is dead—or as dead as a philosophical movement can be." If logical positivism is no longer working, then it never was. Then, we will need a different philosophy on which to base our science. As scientific workers, we could also adopt another philosophy. Statistics is a basket of flowers full of algorithms and models. We can choose from many of them and apply them to data. In this case, the focus is on the algorithm or model. If we only care about them, we follow a different philosophy. Instead of focusing on the observable, we focus on the algorithm that works best as a tool or instrument.
 
-"Shut up and calculate!" @david1989s, it is more or less its origin in the philosophy of **instrumentalism**. The idea of instrumentalism is not far from logical positivism. Positivism is based on the observable. We only believe in knowledge gathered from visible things. Therefore, we focus on the what. Instrumentalism also looks at things and tries to describe them. This philosophy uses mathematical models or logic to predict and explain nature. However, it doesn't matter if the mathematics describe some type of truth. As long as the mathematics or models work, everything is fine. If there is a deviation, the math can be adapted through knowledge generation. Instrumentalism only focuses on the how and does not ask if there is a theoretical background behind a model as long as the model works. Maybe particles exist or maybe they don't. Everything is merely a means to make predictions. Even if the model fails, it is only a technical hiccup that must be repaired. A scientific theory is merely a tool that humans use to predict observations in a particular domain of nature by formulating rules. Therefore, instrumentalism is also a prominent form of **anti-realism** in science. We have useful models that produce successful predictions. We do not need to know whether something like atoms or genes actually exists. A theory can work perfectly well even if it is false. Something is true because it works. In anti-realism, we also focus on what we can measure and use to make predictions. The existence of the moon is irrelevant if there is no one to witness it.
+"Shut up and calculate!" @david1989s, it is more or less its origin in the philosophy of **instrumentalism**. The idea of instrumentalism is not far from logical positivism. Positivism is based on the observable. We only believe in knowledge gathered from visible things. Therefore, we focus on the what. Instrumentalism also looks at things and tries to describe them. Pierre Duhem (1861-1916) first developed the idea of instrumentalism. This philosophy uses mathematical models or logic to predict and explain nature. However, it doesn't matter if the mathematics describe some type of truth. As long as the mathematics or models work, everything is fine. If there is a deviation, the math can be adapted through knowledge generation. Instrumentalism only focuses on the how and does not ask if there is a theoretical background behind a model as long as the model works. Maybe particles exist or maybe they don't. Everything is merely a means to make predictions. Even if the model fails, it is only a technical hiccup that must be repaired. A scientific theory is merely a tool that humans use to predict observations in a particular domain of nature by formulating rules. Therefore, instrumentalism is also a prominent form of **anti-realism** in science. We have useful models that produce successful predictions. We do not need to know whether something like atoms or genes actually exists. A theory can work perfectly well even if it is false. Something is true because it works. In anti-realism, we also focus on what we can measure and use to make predictions. The existence of the moon is irrelevant if there is no one to witness it.
 
 In instrumentalism, we conclude that a theory of knowledge should be useful. We use rules as instruments and tools to predict observations. The statements do not need to describe reality or unobservables as long as the rules produce stable success. It's not worth asking what would happen if nobody was watching.
 
 *As a statistical worker, the danger of instrumentalism is believing in our models too much. It is to love the process of testing and evaluating models and benchmarks. We find the functional tools, but it doesn't matter if these tools are based in reality. Statistical models should be useful and work.*
 
-At this point, we can finally reference a famous saying in statistics: Georg Box said, "All models are wrong, but some are useful." I don't know why, but the saying always annoyed me in a subtle way. Now that I understand the connection between instrumentalism and anti-realism, I know why I dislike them. 
+In 1943, Ayn Rand (1905-1982) introduced **objectivism** as a philosophy of strong realism and a rejection of mysticism, and all forms of religion. At the heart of her philosophy is the heroic human, capable of anything through the power of the mind. At its core, objectivism is optimistic and guided by reason. Rand chose the name because objectivism is bound to reality. Objects exist independently of consciousness, and knowledge can be attained through inductive logic. Therefore, whether or not something can be measured or observed is irrelevant. The philosophy has a drawback in that it uses a verification principle derived from induction. Therefore, we observe and discover the truth. This is not ideal by any means. Finally, objectivism puts humans at the center, and humans are able to understand reality through reason. As a non-academic, Rand's philosophy lived a niche existence.  
+
+Do you remember Pettenkofer and his fight against cholera? He focused on observable factors, such as who died and who stayed healthy, and discovered the importance of sanitation. He used the sewage and freshwater systems to cure cholera. Or maybe to just prevent it? Science works. Where is the problem?
+
+At this point, we can finally reference a famous saying in statistics: Georg Box said, "All models are wrong, but some are useful." I don't know why, but the saying always annoyed me in a subtle way. Now that I understand the connection between instrumentalism and anti-realism, I know why I dislike them. From my perspective, there is a reality, even if no one is watching. Therefore, not all models can be wrong. The moon exists, and it follows a trajectory described by a formula, or more generally, by a statement or law. The movement does not stop and the moon does not vanish if no one is watching. Therefore, there is a true model of the moon's movement. This brings us to the final philosophy I would like to introduce. I will address all its problems in the context of statistical modeling for the rest of the book.
+
+In his 1959 book *The Logic of Scientific Discovery* @popper1959logic, Karl Popper introduced one big idea: The falsification principle states that statements should be falsifiable. Falsifiability was introduced. We will call it falsification in this book. 
 
 
-From my point of view there is a reality even if nobody watching. Therefore all models can not be wrong. And this brings us to the final phiosophy I would like to introcude
 
 
-
+*The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
 
 ---
 
@@ -153,18 +158,7 @@ p_sience_inductive
 
 
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-person-positiv
-#| fig-align: center
-#| fig-height: 4.5
-#| fig-width: 8.25
-#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider a selection of scientists who have contributed to the philosophical background of science and positivism. The dates refer roughly to the year of publication or when the discovery became known to the public."
 
-p_persons_positiv
-```
 
 epistemically
 
@@ -537,6 +531,19 @@ Disappointed about this chapter? You wanted more but have gotten less? There are
 
 ## Dramatis personae
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-person-positiv
+#| fig-align: center
+#| fig-height: 4.75
+#| fig-width: 8.25
+#| fig-cap: "Dramatis personae in this chapter and their biographical details, as well as important scientific discoveries or hypotheses. We consider a selection of scientists who have contributed to the philosophical background of science and positivism. The dates refer roughly to the year of publication or when the discovery became known to the public."
+
+p_persons_positiv
+```
+
 ## Glossary
 
 Experiment
@@ -557,7 +564,15 @@ Positivism
 
 Logical Positivism
 
-: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable by observation. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced. 
+: The validity of knowledge is acquired through sensory experience, by integrating modern methods of mathematics and logic. For a statement to be meaningful, it must be testable by observation. It must be proven true either by logic (an analytic statement) or by experimentation (a synthetic statement). Thus, the verification principle is introduced.
+
+Instrumentalism
+
+: foo
+
+Objectivism 
+
+: foo
 
 ## The meaning of "Models of Reality" in this chapter.
 
@@ -565,6 +580,9 @@ Logical Positivism
 -   Formal sciences provide tools for natural sciences
 -   Science and non-science is divided by experiment and falsification
 -   An experiment must include testable hypothesis
+-   Science is a human endeavor
+-   Reality exists, even if nobody is watching
+-   In statistics, logical positivism and instrumentalism are appealing because they provide a way to make sense of data and to make predictions.
 
 ## Summary
 
