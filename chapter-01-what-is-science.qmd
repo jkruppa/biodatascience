@@ -117,7 +117,12 @@ In instrumentalism, we conclude that a theory of knowledge should be useful. We 
 
 *As a statistical worker, the danger of instrumentalism is believing in our models too much. It is to love the process of testing and evaluating models and benchmarks. We find the functional tools, but it doesn't matter if these tools are based in reality. Statistical models should be useful and work.*
 
-At this point, we can finally reference a famous saying in statistics: Georg Box said, "All models are wrong, but some are useful." I don't know why, but the saying always annoyed me in a subtle way. Now that I understand the connection between instrumentalism and anti-realism, I know why I dislike them.
+At this point, we can finally reference a famous saying in statistics: Georg Box said, "All models are wrong, but some are useful." I don't know why, but the saying always annoyed me in a subtle way. Now that I understand the connection between instrumentalism and anti-realism, I know why I dislike them. 
+
+
+From my point of view there is a reality even if nobody watching. Therefore all models can not be wrong. And this brings us to the final phiosophy I would like to introcude
+
+
 
 
 ---
