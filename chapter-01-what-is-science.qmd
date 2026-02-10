@@ -70,7 +70,32 @@ p_cholera + p_wall +
 
 That's where we come to a halt. What is Pettenkofer doing? He was a very successful scientist. But he was sometimes wrong. Interestingly, Pettenkofer came up with one of the precursors to the periodic table of elements. He had to stop his work due to a lack of funding from the Bavarian state. In 1869, however, Dmitri Mendeleev, the discoverer of the periodic system, mentioned Pettenkofer in his articles as one of the few who influenced his work. Pettenkofer only looked at what he could see. His thought process was bound to the observable and the instruments he uses.
 
-Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. Now, let's take a closer look at the concepts of empiricism to logical positivism. 
+Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. 
+
+Before explaining different philosophies in science, we will take a brief detour into logical reasoning. Logic is necessary from time to time, so we will first cover the basics of inductive and deductive reasoning.
+
+### Two paths of logic
+
+Logic is a tool for finding truth. The word "logic" originated from the Greek word *logos*, meaning "word," "reason," or "discourse." Therefore, logic is essentially the art of making sense. But be careful. Logic is merely a tool and is not the ultimate determiner of truth. Logic is built up in chains of statements. There are two ways to form logical chains: One is from the bottom up, and the other is from the top down. We call the bottom-up approach inductive reasoning and the top-down approach deductive reasoning.
+
+
+Pure deductive reasoning starts with a true assumed to be true and move toward a certain conclusion. Here we start with guessing.
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4.5
+#| fig-width: 10
+#| fig-cap: "The difference between the two logical pathways: On the left is the inductive logic, which is a bottom-up approach that goes from specific to general. First, we observe and collect data, then we look for patterns in the data. Then, we draw a general conclusion about the pattern. After observing something a few times, we conclude that it is probably a rule. On the right is the deductive logic, a top-down approach from general to specific. We have a general theory and conduct an experiment to test it. Then, we draw a conclusion. From a more common perspective, the two logical pathways have things in common but differ in their train of thought."
+#| label: fig-sience-inductive
+
+p_sience_inductive 
+```
+
+Now, let's take a closer look at the concepts of empiricism to logical positivism. 
+
 
 ### A maze of knowledge generation
 
@@ -130,39 +155,16 @@ In his 1959 book *The Logic of Scientific Discovery* @popper1959logic, Karl Popp
 
 *The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
 
----
-
-Therefore, we will proceed with logical reasoning. The logical part must also be examined and discussed.
-
-
-### Critical Rationalism
+- Good explanation
+- Reach
+- Theory-laden
 
 
+Finally, we forget everything we have learned so far and throw it out the window. Verification, falsification, reach, good explanations, and all the rest are torn down. Follow Paul Karl Feyerabend and his anarchy model from the book *Against Method: Outline of an Anarchistic Theory of Knowledge* @feyerabend1970against. In short, there is no scientific model. Everything goes.
 
-## The two paths of logic.
-
-Pure deductive reasoning starts with a true assumed to be true and move toward a certain conclusion. Here we start with guessing.
-
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 4.5
-#| fig-width: 10
-#| fig-cap: "The difference between the two logical pathways: On the left is the inductive logic, which is a bottom-up approach that goes from specific to general. First, we observe and collect data, then we look for patterns in the data. Then, we draw a general conclusion about the pattern. After observing something a few times, we conclude that it is probably a rule. On the right is the deductive logic, a top-down approach from general to specific. We have a general theory and conduct an experiment to test it. Then, we draw a conclusion. From a more common perspective, the two logical pathways have things in common but differ in their train of thought."
-#| label: fig-sience-inductive
-
-p_sience_inductive 
-```
-
-
-
-
+## The theory and the experiment
 
 epistemically
-
-
 
 Three fields of science Theoretical	Experimental	Instrumental
 
