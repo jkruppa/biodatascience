@@ -78,8 +78,9 @@ Before explaining different philosophies in science, we will take a brief detour
 
 Logic is a tool for finding truth. The word "logic" originated from the Greek word *logos*, meaning "word," "reason," or "discourse." Therefore, logic is essentially the art of making sense. But be careful. Logic is merely a tool and is not the ultimate determiner of truth. Logic is built up in chains of statements. There are two ways to form logical chains: One is from the bottom up, and the other is from the top down. We call the bottom-up approach inductive reasoning and the top-down approach deductive reasoning.
 
+The following @fig-sience-inductive illustrates both logical pathways. On the left is **inductive reasoning**. We start with an observation, or data, and try to find a pattern in it. These patterns are called laws or models. These patterns can be thought of as mathematical formulas or statements that describe the patterns in the observations. From these patterns, we try to find an overarching theme. This theme is our conclusion or theory. Therefore, we start with specific numbers and spreadsheets and try to derive general rules from them. This is how you do inductive reasoning.
 
-Pure deductive reasoning starts with a true assumed to be true and move toward a certain conclusion. Here we start with guessing.
+On the right, we find **deductive reasoning**. First, we have a general theory, and then we deduce an experiment from it. In other words, we have a theory and then imagine an experiment to test it. This experiment can be a thought experiment or a physical experiment as large as a particle collider. Based on the results of the experiment, we can then draw conclusions about our theory. Therefore, we can see deductive reasoning as a top-down approach. We start with a general theory and draw more specific conclusions from experiments.
 
 ```{r}
 #| message: false
@@ -94,8 +95,9 @@ Pure deductive reasoning starts with a true assumed to be true and move toward a
 p_sience_inductive 
 ```
 
-Now, let's take a closer look at the concepts of empiricism to logical positivism. 
+Logic is a tool, not a science. This is important for this chapter. We can create any logical chain, but that does not mean the chain contains truth or describes reality. Often, we do not know which reasoning we are applying, but it is usually inductive reasoning. In statistical modeling, we often use inductive reasoning. We start with data and try to find patterns in our observations. Conversely, pure deductive reasoning starts with an assumed truth and moves toward a conclusion. Sometimes, in science, the starting point is pure creative guesswork. Therefore, some scientific approaches use parts of deductive reasoning, but they do not start with a truth; rather, they start with a guess.
 
+Now, let's take a closer look at knowledge generation concepts. There are many different ideas out there. Some are outdated, some have had a huge impact, and some have lived on in other philosophies. Most scientists don't have a philosophy at hand, but they do science. Philosophy is often not taught in schools, so everyone is doing something as long as it works. Therefore, I tried to provide an overview of the most important philosophies that you might follow in part or that might have an impact on this book.
 
 ### A maze of knowledge generation
 
