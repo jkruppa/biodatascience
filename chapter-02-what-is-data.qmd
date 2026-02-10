@@ -8,6 +8,22 @@ source("init.R")
 
 > *"The limits of my language mean the limits of my world." --- Ludwig Wittgenstein*
 
+Emma sat on the wooden stage. She had to recover from what she had seen behind the curtains. What she had seen beneath the wood had now become reality. Dust danced in the light. Single light beams hit some dust particles from time to time and exploded into golden rain. Sparkles dropped on the wood.
+
+"How is gold made?" Emma asked.
+
+"This was a long break. I'm a bit surprised by your question. I thought we should discuss your findings from behind the stage. Not gold." Jeff answers from his seat on the left. 
+
+"Gold cannot be formed through fusion in a star. This is only possible up to iron. You need a supernova or a collision of two neutron stars." Emma spoke absently into the darkness.
+
+"Interesting topic. Was this observed? The collision of two neutron stars and the resulting gold spewing out," Jeff laughed.
+
+"No, it was a computer simulation. Artificial data, if you will." Emma looked around. She decided that it was time to begin the play.
+
+"Then it's not real, and it's not an explanation for me at all." Jeff stated.
+
+"But the simulation was based on real observations." Emma stood up and started building the scene for the play.
+
 ## General background
 
 More to simulation and artificial data. Artificial data is model-laden

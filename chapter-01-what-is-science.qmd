@@ -160,6 +160,9 @@ Deutsch suggests a deductive scientific approach. We should make a bold guess ab
 
 Why does Deutsch prefer deductive reasoning over inductive reasoning? First, there is no logical link between something happening before and it happening again. Just because something happened and was observed does not mean that the observation will always occur in the future. Past patterns of observations do not create future laws. Without an explanation of why something happened, the pattern you observe may be misleading. Furthermore, you cannot simply make an observation. Each observation is **theory-laden**. This is a somewhat cumbersome term that claims you must have an idea about what you want to observe in order to make an observation. This idea of what to observe is a pre-existing theory that allows you to see the data as meaningful. Sometimes the explicit theory is hidden from the scientist.
 
+Feynman and science
+
+Inside out science
 
 Finally, we forget everything we have learned so far and throw it out the window. Verification, falsification, reach, good explanations, and all the rest are torn down. Follow Paul Karl Feyerabend and his anarchy model from the book *Against Method: Outline of an Anarchistic Theory of Knowledge* @feyerabend1970against. In short, there is no scientific model. Everything goes.
 
