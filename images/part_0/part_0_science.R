@@ -83,7 +83,7 @@ p_theo_exper_instr <- ggplot() +
   annotate("text", x = -3, y = -6.5, fontface = 1, size = 4,
            label = "Falsification of models and theories") +
   annotate("text", x = -3, y = -7.25, fontface = 2, size = 4,
-           label = "Goal: effects and differences") +
+           label = "Goal: effects and prediction") +
   ## right
   geom_shape(data = tibble(x = c(5, 1, 1, 5), 
                            y = c(-4, -4, -7.75, -7.75)),
@@ -97,7 +97,7 @@ p_theo_exper_instr <- ggplot() +
   annotate("text", x = 3, y = -6.5, fontface = 1, size = 4,
            label = "Measure invisible or immeasurable") +
   annotate("text", x = 3, y = -7.25, fontface = 2, size = 4,
-           label = "Goal: precision and equality") +
+           label = "Goal: precision and efficiency") +
   ## arrows
   geom_curve(aes(x = -0.9, y = -5, xend = 0.9, yend = -5),
              arrow = arrow(length = unit(0.2, "cm"), type = "closed"),

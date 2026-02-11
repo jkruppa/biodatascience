@@ -197,8 +197,11 @@ Okay, this sounds very theoretical. But what is science, and how do we do it? I 
 
 ### The three pillars of scientific research
 
-Everyone likes pillars, so we have three pillars of scientific research. The first is theoretical science, the second is experimental science, and the third is instrumental science. All three types are more or less interconnected. Don't ask me how the pillars can be interconnected, but sometimes pictures are misleading. @fig-chap-01-types-science shows the interaction between the three fields.
+Everyone likes pillars, so we have three pillars of scientific research. The first is theoretical science, the second is experimental science, and the third is instrumental science. All three types are more or less interconnected. Don't ask me how the pillars can be interconnected, but sometimes pictures are misleading. @fig-chap-01-types-science shows the interaction between the three fields. 
 
+So far, we have mainly discussed theoretical science and its underlying philosophy. Theoretical science is the brain of knowledge generation. We conduct thought experiments and generate ideas. We also produce new algorithms, mathematical tools, and conceptual models. However, we don't build or test anything in the physical realm. Therefore, theoretical science suggests experiments for experimental science and provides blueprints for instrumental science to test and build. 
+
+Experimental science is the daily work of most scientists. We gather empirical data and test models and theories. Often, the work is much smaller in scale, and theories are not touched. Our goal is to observe effects or differences between groups, predict outcomes, and explain systems by identifying patterns in data. Therefore, we need the support of instrumental science if we want to observe new parts of reality that were not technically available until now. We often use devices that have already been built.
 
 
 ```{r}
