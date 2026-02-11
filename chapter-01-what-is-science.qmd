@@ -28,7 +28,7 @@ Jeff grumbles. "You won't like what you see..." But Emma had gone too far.
 
 "Anything goes" is Paul Feyerabend's famous dictum @feyerabend1970against. Therefore, you can stop here. If you are not interested in the historical or philosophical background of what we call science, then skip ahead to the next chapter. You don't really need the background. Or, to say it in the words of David Mermin, "Shut up and calculate!" @david1989s With this statement, Mermin describes the Copenhagen interpretation as a philosophy of quantum physics that prioritizes mathematical results over foundational philosophical questions. Even if you don't have a theoretical background, you can work on knowledge generation and new devices. Therefore, if your time is limited, go on, brave seeker after truth.
 
-For everyone else, I have written this introduction chapter. Maybe you're puzzled about what this science thing is all about. That's perfectly normal. Today, education strips away the historical and philosophical context and jumps directly into biological, chemical, or physical topics. History tells the story of countries and people, not the combination of history and the natural sciences. There is so much to learn. Therefore, there is seldom room for philosophy in any rushed school schedule. However, humans do science. What humans do becomes history. The reasons and ways in which humans do things are strongly connected to their thoughts and beliefs. Therefore, they have a philosophy, even if they are not aware of it. So, if you do science, you do so with a particular way of thinking. Therefore, you have a philosophy, whether you are aware of it or not. It's time to talk about it a little bit.
+For everyone else, I have written this introduction chapter. Maybe you're puzzled about what this science thing is all about. That's perfectly normal. Today, education strips away the historical and philosophical context and jumps directly into biological, chemical, or physical topics. History tells the story of countries and people, not the combination of history and the natural sciences. There is so much to learn. Therefore, there is seldom room for philosophy in any rushed school schedule. However, humans do science. What humans do becomes history. The reasons and ways in which humans do things are strongly connected to their thoughts and beliefs. Therefore, they have a philosophy, even if they are not aware of it. So, if you do science, you do so with a particular way of thinking. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here.  Therefore, you have a philosophy, whether you are aware of it or not. It's time to talk about it a little bit. Ultimately, decide for yourself what science truly is.
 
 ## Philosophies of science
 
@@ -220,11 +220,9 @@ p_theo_exper_instr
 
 Experimental and instrumental science are less influenced by philosophy than theoretical science. Experimental and instrumental science is essentially the working force of science. They would have nothing to do without an overarching theoretical idea of how instruments should be built and experiments carried out. The theory determines how an experiment must be designed to be testable and falsifiable. This gives us an idea of which instruments we need and how we can build them. On the other hand, we discover interesting anomalies when we build things. Things that should theoretically work do not. Solving such anomalies in the building process can generate new ideas about why things happen. Therefore, all three pillars require a constant flow of ideas and interconnection.
 
-## Practical considerations
+## Typology of science
 
-Now we can start with paractical consideration if we want to do science.
-
-The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. Perhaps science is, at its core, something personal. However, science also has objective aspects that I want to present here. Ultimately, decide for yourself what science truly is.
+Now, we can shift our focus to the practical considerations of how we want to conduct our research. We have already discussed the theoretical background. However, the topology of science is still open to debate. What is science? What types of science are there? What is the opposite of science? These are all questions I like to consider. Next, we will discuss how to do science. One topic I will leave open is the reason why we do science. I assume that you are interested in science or feel the need to do it. You will do science regardless of the arguments. Then, let's start with the distinction between science and non-science.
 
 The following @fig-overview-sience-non-science shows the demarcation line between science and non-science. In the next sections, we will discuss each specific part, but I think it's important to start with a clear overview. Science is distinguished from non-science through experimentation and falsification. This is true in this book. There are many subtle definitions, but I will keep it simple here. If an experiment is not possible, then it is not science. We also need the ability to build a falsification framework. Therefore, we need hypotheses that can be rejected by experimentation. These two requirements are met by the natural sciences, including physics, chemistry, and biology, in order of their purity. Biology includes medicine and all other fields of knowledge gathered from living things. In addition to natural science, there is formal science, which can be seen as a tool of science. This is due to the lack of experimentation, falsification, or both. Therefore, we will not include mathematics, logic, or theoretical computer science as sciences. True non-science fields are intuition-based or subjective at their core. There are many of these fields, and we will discuss them shortly. The humanities are undoubtedly different from non-science, but this book is not about the humanities, so we will put them aside.        
 
@@ -243,7 +241,7 @@ p_science_overview
 
 Perhaps we should start with the supposedly easy part. What is the opposite of science? In doing so, we will gain an understanding of the term "science" and what it means to us. This may be the deepest lesson for me: we cannot really grasp science. Science is connected to each person in a different emotional way. Science seems cold and rational, but humans are not. Therefore, our relationship with science is strange and complex. Science is its own way of thinking, perhaps a philosophy. Therefore, there are as many ways of thinking as there are human minds.
 
-### What is the opposite of science?
+### The opposite of science
 
 As I found out, there is no direct opposite of science. That's interesting. Sometimes, you can define something by knowing what it is not. You might think this is not so problematic. Take a few minutes to ask yourself: "What is the opposite of science?" Okay, good to have your focus back on the page. Maybe you thought science was cold and rational. I will share my personal story with science. For me, science was Star Trek: Enterprise. But I'm too young for Kirk and Spock. So, I was socialized with Captain Jean-Luc Picard and Star Trek: The Next Generation (TNG). That's where I first encountered Shakespeare, but that's another story. In TNG, science was determined by the exploration of new worlds. I would sit comfortably on the open bridge in front of the gigantic viewscreen. Commander Data was the embodiment of science. He was an android. He was rational and cold, devoid of emotion and humor. Let's flip these attributes.
 
@@ -257,7 +255,7 @@ Do you follow a cargo cult in your daily routines? Do you do things that you hav
 
 For now, I would like to conclude that the opposite of science is difficult to grasp. On the one hand, we could argue that human emotions and feelings are the opposite of cold, rational science. However, emotions are also the driving force behind human scientific inquiry. Therefore, we are doing something scientific by leaving the topic open for further research and looking for things that are not science.
 
-### What is not science?
+### Pseudoscience as a chimera
 
 Besides things that are the opposite of science, there are things that are similar to science or that use attributes and tools in a distorted way to imitate science. Conspiracy theories [@douglas2023conspiracy; @grimes2016viability] look like science and use science terms and tools. They play on a stage that looks like science but has no deeper foundation. It's more like a nice story about humans harming other humans. However, conspiracy theories attempt to explain the world and often generate money for the storyteller. Therefore, I do not see conspiracy theories as the opposite of science. These conspiracy theories are non-science. Some theories have a historical basis, such as the hollow earth conspiracy theory. We will discuss the origin later. Conspiracy theories like to be retold, and in the process, they grow and multiply. To circumvent the proliferation of conspiracy theories, I will provide an illustration of the anti-conspiracy theory "Birds Aren't Real" by Peter McIndoe. 
 
@@ -267,9 +265,11 @@ What do conspiracy theories have in common? They all tell a good story. I person
 
 There is another field in which personal stories are the focus. Psychoanalysis uses direct dialogue between two people to help one of them. In psychoanalysis, there are also no experiments. History knows of long debates about whether psychoanalysis is a science or not, or to what extent. Psychoanalysis shares a similar fate to the Humanities in general. They are not considered science in the scope of this book either. Just because something is not a science does not make it bad. Many important things in life have nothing to do with science.
 
-### What is science?
+### An approach to "real" science
 
-I have discussed what the opposite of science could be. We have thought about what science not to meant. Know I want to make a little bit more clear, what science supposedly is. We divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
+So far, I have discussed the opposites of science and pseudoscience. We have considered what science is not. However, I must be careful because, as Paul Feyerabend correctly stated, science should be anti-dogma. Therefore, science is a beautiful, messy, human adventure that cannot be put in a box or a closed framework. Perhaps he is right, yet I will do my best to achieve this goal for the book you are reading. Ultimately, you are free to choose your own worldview and science.
+
+Know I want to make a little bit more clear, what science supposedly is. We divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
 
 Experimentation and falsification lie at the core of science. We cannot reject an experiment. An experiment either takes place or it does not. However, a testable hypothesis can be rejected. This is sometimes referred to as the demarcation line of science, which is used to determine whether a field belongs to the natural sciences. In this book, we will use formal science to study the natural sciences. We need formal science as a tool.
 
@@ -302,7 +302,7 @@ David Deutsch claimed that science is guessing and falsification. Or in his word
 
 We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
 
-### How to do science?
+## Get science done
 
 ```{r}
 #| echo: false
@@ -344,7 +344,7 @@ Problem solving How to solve problems -> Also scientific wiki article Polya Math
 
 
 
-### What is statistics in science?
+## Statistics as a toolbox 
 
 On a warm spring day, I was sitting in my first statistics lecture. I don't remember everything, but one quote from the beginning of the lecture has stuck with me:  "Statistics is the engine room of science." I think this quote might not have been spoken in this form. Rather, it was the underlying theme of the lecture.
 
@@ -357,6 +357,9 @@ Fisher switched from a mathematical deductive reasoning to a inductive reasoning
 Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
 
 Statistical models are inductive
+
+
+Randomization and random observations
 
 
 ```{r}
@@ -421,22 +424,6 @@ What can we learn from our small experiment? No matter what we do, there will al
 :::
 
 
-Randomization and random observations
-
-## Stuff to sort...
-
-epistemically
-
-observations are theory-laden
-
-Observation = Sensory Input + Theoretical Framework
-
-Language shapes data: We use theoretical words to describe what we see. If you say, "The electron moved," you are already assuming the "theory" that electrons exist and are particles that move.
-
-Or feget eveything what I have written and go with Paul Feyerabend. Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
-
-@boyd2009theory
-
 
 
 ## Observables and beables
@@ -497,10 +484,6 @@ Because the human is lazy@price2021laziness
 
 
 
-
-
-## What is a good explanation?
-
 ## What is real?
 
 
@@ -516,13 +499,27 @@ Fukusima @sevon2020analysis @sevon2023analyzing
 
 Not here, move to p-value chapter: @benjamin2018redefine
 
+
+## Stuff to sort...
+
+epistemically
+
+observations are theory-laden
+
+Observation = Sensory Input + Theoretical Framework
+
+Language shapes data: We use theoretical words to describe what we see. If you say, "The electron moved," you are already assuming the "theory" that electrons exist and are particles that move.
+
+Or feget eveything what I have written and go with Paul Feyerabend. Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
+
+@boyd2009theory
+
+The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. 
+
 ## Age of enlightment
 
 Romantic as the answer to enlightment.
 
-## General background
-
-Full quote
 
 > *"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical." --- Tim Ferriss*
 
@@ -530,8 +527,6 @@ Full quote
 > *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
 
 Idea of hypotheses
-
-Science is guessing and falsification
 
 
 @clark2025models [Models Demystified: A Practical Guide from Linear Regression to Deep Learning](https://m-clark.github.io/book-of-models/)
@@ -544,7 +539,7 @@ Science is guessing and falsification
 
 ## Alternatives
 
-> *"The truth is out there." --- The X files
+> *"The truth is out there." --- The X files*
 
 Disappointed about this chapter? You wanted more but have gotten less? There are other books and ideas outside. 
 
