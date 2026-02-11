@@ -203,6 +203,7 @@ So far, we have mainly discussed theoretical science and its underlying philosop
 
 Experimental science is the daily work of most scientists. We gather empirical data and test models and theories. Often, the work is much smaller in scale, and theories are not touched. Our goal is to observe effects or differences between groups, predict outcomes, and explain systems by identifying patterns in data. Therefore, we need the support of instrumental science if we want to observe new parts of reality that were not technically available until now. We often use devices that have already been built.
 
+Instrumental science is the driving force. There, we produce new machines with better sensors that can observe things that were previously unobservable. We use the ideas and blueprints of theoretical science to build machinery. However, the daily work of scientists involves the small parts and technical implementation. Our goal is to produce new, more precise, or more efficient devices than those already in existence. Sometimes, we need smaller or more reliable machines to conduct better experiments and prove theories.
 
 ```{r}
 #| echo: false
@@ -217,9 +218,12 @@ Experimental science is the daily work of most scientists. We gather empirical d
 p_theo_exper_instr 
 ```
 
+Experimental and instrumental science are less influenced by philosophy than theoretical science. Experimental and instrumental science is essentially the working force of science. They would have nothing to do without an overarching theoretical idea of how instruments should be built and experiments carried out. The theory determines how an experiment must be designed to be testable and falsifiable. This gives us an idea of which instruments we need and how we can build them. On the other hand, we discover interesting anomalies when we build things. Things that should theoretically work do not. Solving such anomalies in the building process can generate new ideas about why things happen. Therefore, all three pillars require a constant flow of ideas and interconnection.
+
+
+## Stuff to sort...
 
 epistemically
-
 
 observations are theory-laden
 
@@ -230,9 +234,6 @@ Language shapes data: We use theoretical words to describe what we see. If you s
 Or feget eveything what I have written and go with Paul Feyerabend. Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
 
 @boyd2009theory
-
-
-## Philosophy of statistics
 
 ## Old start
 
