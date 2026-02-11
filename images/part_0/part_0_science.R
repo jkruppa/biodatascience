@@ -161,7 +161,7 @@ p_kuhn_cycle <- ggplot() +
            fontface = 3, size = 3.5) +
   annotate("text", x = 4.25, y = -0.2, label = "Experimental error/noise", 
            fontface = 3, size = 3.5) +
-  annotate("text", x = 4.25, y = -0.5, label = "Social pushback ", 
+  annotate("text", x = 4.25, y = -0.5, label = "Social pushback weaker", 
            fontface = 3, size = 3.5) +
   geom_curve(aes(x = 4.25, y = -0.85, xend = 3.35, yend = -2),
              arrow = arrow(length = unit(0.2, "cm"), type = "closed"),

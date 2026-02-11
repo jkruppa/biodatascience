@@ -30,7 +30,7 @@ Jeff grumbles. "You won't like what you see..." But Emma had gone too far.
 
 For everyone else, I have written this introduction chapter. Maybe you're puzzled about what this science thing is all about. That's perfectly normal. Today, education strips away the historical and philosophical context and jumps directly into biological, chemical, or physical topics. History tells the story of countries and people, not the combination of history and the natural sciences. There is so much to learn. Therefore, there is seldom room for philosophy in any rushed school schedule. However, humans do science. What humans do becomes history. The reasons and ways in which humans do things are strongly connected to their thoughts and beliefs. Therefore, they have a philosophy, even if they are not aware of it. So, if you do science, you do so with a particular way of thinking. Therefore, you have a philosophy, whether you are aware of it or not. It's time to talk about it a little bit.
 
-## The importance of history and philosophy in science
+## Philosophies of science
 
 What could possibly be a better argument for something than the thought of a genius and Nobel Prize winner? Therefore, we begin this section with a quote from Albert Einstein.
 
@@ -40,7 +40,8 @@ Don't worry, we won't start with the science of the Stone Age. Instead, we will 
 
 Before we continue, I would like to present a brief example of knowledge generation. How can we obtain enterprise knowledge? We will explore the appealing ideas and concepts from the beginning of the last century. In our case, we will explore cholera as a human curse through the lens of a renowned German scientist and his theories. In science, everything starts with an observation. As Isaac Asimov said, "In science, everything new begins with someone muttering: 'Hmm, that's strange!'"
 
-### Observing cholera and breathing walls
+:::callout-note
+## Cholera and breathing walls
 
 In 1854, cholera visited the city of Munich in Bavaria, Germany. This was not a pleasant visit, as many citizens died of cholera and its consequences. However, not all parts of the city were affected equally. By the end of the 19th century, Munich would become one of the cleanest cities in Europe. Max von Pettenkofer achieved this by building and renovating the canalization system. When cholera arrived, not all parts of the city had equal access to the canalization and fresh water supply. Some parts of the city had easy access to fresh water and working toilets. In other parts of the city, sometimes only divided by a street, construction of the canalization had not yet begun. It was observed that the death toll from cholera varied by district.
 
@@ -69,6 +70,7 @@ p_cholera + p_wall +
 ```
 
 That's where we come to a halt. What is Pettenkofer doing? He was a very successful scientist. But he was sometimes wrong. Interestingly, Pettenkofer came up with one of the precursors to the periodic table of elements. He had to stop his work due to a lack of funding from the Bavarian state. In 1869, however, Dmitri Mendeleev, the discoverer of the periodic system, mentioned Pettenkofer in his articles as one of the few who influenced his work. Pettenkofer only looked at what he could see. His thought process was bound to the observable and the instruments he uses.
+:::
 
 Now, we will learn about the philosophy of science. We will use Pettenkofer as an example. We will meet other people with strange ideas later on. Strange ideas are also science. It's thinking outside the box. From a philosophical point of view, who was Pettenkofer? He was a positivist. This is a specific philosophical approach to acquiring knowledge. Positivists only believe in what can be seen or observed. If you wear glasses, you may notice a slight flaw in the argument about what is and isn't observable while reading this book. 
 
@@ -150,7 +152,7 @@ Do you remember Pettenkofer and his fight against cholera? He focused on observa
 
 At this point, we can finally reference a famous saying in statistics: Georg Box said, "All models are wrong, but some are useful." I don't know why, but the saying always annoyed me in a subtle way. Now that I understand the connection between instrumentalism and anti-realism, I know why I dislike them. From my perspective, there is a reality, even if no one is watching. Therefore, not all models can be wrong. The moon exists, and it follows a trajectory described by a formula, or more generally, by a statement or law. The movement does not stop and the moon does not vanish if no one is watching. Therefore, there is a true model of the moon's movement. This brings us to the final philosophy I would like to introduce. I will address all its problems in the context of statistical modeling for the rest of the book.
 
-Now we will learn the philosophy of **critical realism**. Critical realism asks: "What must the world be like for science to be possible?" For science to be possible, the world cannot be a collection of random events. Reality must be understandable, orderly, and accessible to the human mind through observation and reason. Science depends on a realistic worldview. We believe that the world is real, not just a dream, but a structured place waiting to be understood. If the world were a chaotic jumble of "useful models," as instrumentalism suggests, or a series of perceptions, as positivism claims, science would not function as well as it does. We can conduct experiments in a laboratory and apply them to a star millions of miles away. This suggests that there are objective, universal mechanisms at work.
+Now we will learn the philosophy of **critical realism** or **critical rationalism**. Sometimes, the lines between different philosophies become blurred. Here, we need the core principles of the philosophies, not their minor differences. Critical realism asks: "What must the world be like for science to be possible?" For science to be possible, the world cannot be a collection of random events. Reality must be understandable, orderly, and accessible to the human mind through observation and reason. Science depends on a realistic worldview. We believe that the world is real, not just a dream, but a structured place waiting to be understood. If the world were a chaotic jumble of "useful models," as instrumentalism suggests, or a series of perceptions, as positivism claims, science would not function as well as it does. We can conduct experiments in a laboratory and apply them to a star millions of miles away. This suggests that there are objective, universal mechanisms at work.
 
 In his 1959 book *The Logic of Scientific Discovery* @popper1959logic, Karl Popper introduced one big idea: The **falsification** principle states that statements should be falsifiable. Falsifiability was introduced. We will call it falsification in this book. The idea behind the falsification principle is simple. You cannot prove any theory by induction. This is because induction is based on observations. It is impossible to observe all possible instances. A classic example is the idea that all swans are white. It is impossible to observe all swans, so you can never be sure that all swans are truly white. However, if you observe one black swan, you can reject your statement. Again, there is a drawback here. All of our statements or hypotheses must be testable and falsifiable. If our statement cannot be tested, or if no experiment can produce a false result, we cannot make a decision about our statement. Ultimately, falsification means there is no truth in science. Knowledge is not verified. Knowledge grows by proving us wrong, not right. This is an unpleasant idea in common sense. As scientists, we actively try to disprove our theories, searching for the weak points that will break them. In doing so, we hope to find a better explanation or theory.
 
@@ -166,6 +168,12 @@ Finally, you can forget everything we have learned so far and throw it out the w
 
 ### Wheel of knowledge
 
+So far, we have explored several different scientific philosophies. Besides the question of which philosophy is true—which is a different question altogether—we want to ask: Is there a process in science? Is the generation of knowledge a linear process, a piling up of knowledge, or more of a journey through knowledge?
+
+In his book *The Structure of Scientific Revolutions* @kuhn1970structure, Thomas S. Kuhn proposed a revolutionary idea about how knowledge is generated. @fig-chap-01-kuhn shows that knowledge generation runs through cycles. There are stable states of science, known as normal science. In this state, scientists solve puzzles and problems within the existing framework of knowledge. These ideas are socially accepted, and fundamental novelties are passively suppressed by the system itself. Everyone is doing their work, and that's fine. From time to time, however, anomalies in models or observations occur. We see a drift away from stable science. At first, it is a back-and-forth, but as more and more anomalies pile up, it becomes clear that something is going on. These anomalies cannot be explained by experimental errors or noise in the measurements anymore. There is social pushback, but it becomes weaker. 
+
+Then, we observed a crack in the system. A crisis arose. This is the breaking point of the theory. The observed anomalies became so severe that they could no longer be ignored. Tension and frustration spread through the scientific community. Next, new candidates of reality emerge. We see new tools and theories from mostly young scientists who want to start a revolution. Science shifts into a new state of reality, adopting a new language, social structures such as journals and conferences, and a new framework of knowledge. We establish a new **paradigm**. From there, we enter another stable phase of science. This cycle runs endlessly. We are not just piling up knowledge; it is a process of moving through it.
+
 ```{r}
 #| echo: false
 #| message: false
@@ -179,23 +187,19 @@ Finally, you can forget everything we have learned so far and throw it out the w
 p_kuhn_cycle
 ```
 
+Therefore, the central idea of Kuhn is the **paradigm shift**. Every science has a paradigm that holds everything together. The social aspect is also important. Science is done by humans within a social structure. Within a paradigm, some thoughts are permitted, while others are considered fundamentally wrong. Therefore, in a stable, normal scientific environment, new fundamental changes do not occur. Scientific careers are shaped by the paradigm, as are funding and resources. If you want to do something new, you will have to face resistance.
+
+Another key point of Kuhn's idea of the paradigm shift is the **incommensurability** of paradigms. Incommensurability is a difficult word that means something cannot be compared. "Incomparable" is a simpler word that means the same thing. We can compare Newtonian mechanics to Einstein's general relativity. Both paradigms describe the effects of gravity on bodies in space. However, Newtonian mechanics does not explain why gravity works. Einstein introduced a geometric view of the effects of gravity in four-dimensional space, introducing not only space, but also spacetime. The two theories are incomparable and cannot be used together. Only one can be true. Einstein's theory produces better predictions in extreme situations and is therefore better. But, returning to Deutsch, Newtonian gravity still works and provides explanations for everyday problems. We can use both.   
+
+So far, we have not clearly defined what science is. However, in Kuhn's cycle, there is also a state of pre-science. For humankind, this would be the phase before the Age of Enlightenment (1687–1789), when myths, alchemy, cults, and witchcraft dominated. There were rules of thumb and other farmers' rules that structured some knowledge. If something worked, it was more or less due to luck. However, even witchcraft has rules and, therefore, a paradigm for working with its statements. Later in this chapter, we will introduce some cults of pseudoscience and their structures. 
+
+Okay, this sounds very theoretical. But what is science, and how do we do it? I see your point. Now, we will take a step further and find out what the three pillars of scientific research are. Then, we will determine in which pillar your daily scientific work mostly falls. Then, we will talk about science and how to practice it. I know it's a long journey.
+
+### The three pillars of scientific research
+
+Everyone likes pillars, so we have three pillars of scientific research. The first is theoretical science, the second is experimental science, and the third is instrumental science. All three types are more or less interconnected. Don't ask me how the pillars can be interconnected, but sometimes pictures are misleading. @fig-chap-01-types-science shows the interaction between the three fields.
 
 
-
-
-
-
-## The theory and the experiment
-
-epistemically
-
-Three fields of science Theoretical	Experimental	Instrumental
-
-Paradigm shift @kuhn1970structure
-
-Even witchcraft has an paradigm 
-
-Not piling up knowledge but a process thorough knowledge
 
 ```{r}
 #| echo: false
@@ -211,15 +215,12 @@ p_theo_exper_instr
 ```
 
 
+epistemically
 
-
-
-Incommensurability, a terrible word, meaning that something can not be compared. Maybe incomparable
 
 observations are theory-laden
 
 Observation = Sensory Input + Theoretical Framework
-
 
 Language shapes data: We use theoretical words to describe what we see. If you say, "The electron moved," you are already assuming the "theory" that electrons exist and are particles that move.
 
@@ -313,10 +314,6 @@ We conclude the following: A hypothesis should be testable through experimentati
 
 ## Observables and beables
 
- Liebig war Pettenkofer ein Positivist
- 
-
-
 Wheel of fortune 
 
 ```{r}
@@ -328,7 +325,6 @@ Wheel of fortune
 #| fig-height: 9
 #| fig-width: 10.5
 #| fig-cap: "The wheel of knowledge combines science (the why), data (the what), and models (the how) in a framework. In an ideal world, all three would be active in generating knowledge. However, at least two must be chosen. Combining science and data is done in exploratory data analysis, where storytelling and visualization guide the explanation. The combination of science and models is used in theoretical works, such as general and special relativity. At its core, it is a thought experiment that generates laws and models. Most likely, data is combined with a model. The models reveal patterns in the data. These models can be used for prediction and inference. For example, standard quantum mechanics can be used as a powerful tool even though the reality of atoms, which the models predict, is unknown."
-
 
 p_wheel_knowledge
 ```
@@ -398,6 +394,8 @@ Pauli defined the scientific method as "taking up a subject repeatedly. Thinking
 Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
 
 Knowlegde is evolution by Deutsch and Feynman
+
+Comparision from induction to critical rationalism
 
 Erst Mach and observational things.
 
