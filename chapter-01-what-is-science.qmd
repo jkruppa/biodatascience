@@ -99,7 +99,7 @@ Logic is a tool, not a science. This is important for this chapter. We can creat
 
 Now, let's take a closer look at knowledge generation concepts. There are many different ideas out there. Some are outdated, some have had a huge impact, and some have lived on in other philosophies. Most scientists don't have a philosophy at hand, but they do science. Philosophy is often not taught in schools, so everyone is doing something as long as it works. Therefore, I tried to provide an overview of the most important philosophies that you might follow in part or that might have an impact on this book.
 
-### A maze of knowledge generation
+### Scientific philosophies
 
 We will discuss statistical modeling later in this book. Statistical modeling does not come from nowhere; it includes parts of knowledge generation. However, it is susceptible to other philosophies and can be used in different ways. We want to explore these philosophies because they occasionally touch topics related to statistics. Statistics are founded in a historical context, so we will take a closer look at that. In statistics, it is common to observe things and then generate data. Statistics can also be seen as data analysis. Therefore, we start with the observable.
 
@@ -160,11 +160,30 @@ Deutsch suggests a deductive scientific approach. We should make a bold guess ab
 
 Why does Deutsch prefer deductive reasoning over inductive reasoning? First, there is no logical link between something happening before and it happening again. Just because something happened and was observed does not mean that the observation will always occur in the future. Past patterns of observations do not create future laws. Without an explanation of why something happened, the pattern you observe may be misleading. Furthermore, you cannot simply make an observation. Each observation is **theory-laden**. This is a somewhat cumbersome term that claims you must have an idea about what you want to observe in order to make an observation. This idea of what to observe is a pre-existing theory that allows you to see the data as meaningful. Sometimes the explicit theory is hidden from the scientist.
 
-Feynman and science
+If science operated on an inductive basis, we would be limited by observations and measurements alone. We would not be able to explore the unobservable realms of reality. Knowledge is creative and can therefore explain things we may never see, such as black holes or atoms. We don't need to see them; we only need a good explanation for them. According to induction, knowledge comes from outside the world. However, Deutsch argues that it is the other way around. According to him, knowledge comes from within the human mind through the process of formulating and falsifying theories.
 
-Inside out science
+Finally, you can forget everything we have learned so far and throw it out the window. Verification, falsification, reach, good explanations, and all the rest are torn down. Follow Paul Karl Feyerabend and his anarchy model from the book *Against Method: Outline of an Anarchistic Theory of Knowledge* @feyerabend1970against. In short, there is no scientific model. Everything goes. Feyerabend believed that falsification can kill great ideas before they have a chance to flourish. Additionally, many explanations offer more possibilities, providing more room for new thoughts and knowledge generation. Generally, it was the outlaws, such as Galileo, Einstein, and Newton, who brought new ideas and theories into being. Therefore, any structure in science is false. Science is an anachronistic process.  
 
-Finally, we forget everything we have learned so far and throw it out the window. Verification, falsification, reach, good explanations, and all the rest are torn down. Follow Paul Karl Feyerabend and his anarchy model from the book *Against Method: Outline of an Anarchistic Theory of Knowledge* @feyerabend1970against. In short, there is no scientific model. Everything goes.
+### Wheel of knowledge
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-01-kuhn
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 8
+#| fig-cap: "The paradigm shift cycle, also known as the Kuhn Cycle after its inventor. The cycle describes how science evolves over time. Normal science is stable and attempts to solve puzzles and problems within a given framework. From time to time, anomalies occur that do not fit the common sense of the current science. These anomalies are usually seen as experimental error, resulting in a social pushback. Eventually, the anomalies pile up, and a crisis occurs. This marks a crack in the stable science. From there, a revolution occurs, and candidates of reality comes into being. Finally, a new paradigm of reality emerges. In this new paradigm, new languages and a new framework of science are established. Then, normal science begins again. There is a strong social component to this cycle because humans often resist fundamental changes."
+
+p_kuhn_cycle
+```
+
+
+
+
+
+
 
 ## The theory and the experiment
 
@@ -193,18 +212,6 @@ p_theo_exper_instr
 
 
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-01-kuhn
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 8
-#| fig-cap: "The paradigm shift cycle, also known as the Kuhn Cycle after its inventor. The cycle describes how science evolves over time. Normal science is stable and attempts to solve puzzles and problems within a given framework. From time to time, anomalies occur that do not fit the common sense of the current science. These anomalies are usually seen as experimental error, resulting in a social pushback. Eventually, the anomalies pile up, and a crisis occurs. This marks a crack in the stable science. From there, a revolution occurs, and candidates of reality comes into being. Finally, a new paradigm of reality emerges. In this new paradigm, new languages and a new framework of science are established. Then, normal science begins again. There is a strong social component to this cycle because humans often resist fundamental changes."
-
-p_kuhn_cycle
-```
 
 
 Incommensurability, a terrible word, meaning that something can not be compared. Maybe incomparable
@@ -390,7 +397,7 @@ Pauli defined the scientific method as "taking up a subject repeatedly. Thinking
 
 Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
 
-
+Knowlegde is evolution by Deutsch and Feynman
 
 Erst Mach and observational things.
 
