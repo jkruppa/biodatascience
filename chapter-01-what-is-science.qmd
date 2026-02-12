@@ -302,15 +302,17 @@ Experimentation and falsification are at the core of science. Together, they for
 
 I know this distinction between formal and natural science seems unpleasant. However, we now have a clearer definition of science and its properties. Most of these properties are not shared by formal sciences. Therefore, with this distinction, we have a clearer picture of what we are doing. Again, the humanities are a victim of these definitions, but I will pay the price for the gained structure.
 
-reproducibility
-prediction
-inference
-observations
-locality @garisto2022universe Caution physics still respects the cosmic speed limit for data
-evidence
-empirical
-completeness
+If we repeat an experiment, we should see the same results. The **reproducibility** of an experiment is crucial for science.
 
+In an experiment, we are interested in **prediction** of future observations, or we want to perform **inference** and explain causal effects. We need **evidence**.
+
+Our conclusions are based on **observations** and measurable results from an experiment or data collection. 
+
+We are performing **empirical** science. We have the following empirical cycle: First, an observation causes a scientific question, followed by a hypothesis, experiments, data analysis, and a conclusion. This is often referred to as the scientific method. There are many different cycles and processes. They all have one thing in common: we first encounter something curious, which sparks a hypothesis about it. Then, we conduct experiments to test the hypothesis and reach a conclusion through data analysis.
+
+The last two are slightly more rare and have already been rejected. They are the **completeness** and **locality** criteria @smolin2019einstein. By completeness, we mean that every element of physical reality must have a counterpart in physical theory. Locality describes how only local effects can influence one another. There is no possibility of faster-than-light interaction between particles. Both have been shown to be incorrect in nature @garisto2022universe. However, physics still respects the cosmic speed limit for data and information transmission. If you work in a typical laboratory that has no connection to quantum effects or gravity at near the speed of light, you can disregard these facts for your research. But it's still fascinating to me.
+
+---
 
 Meters of books have been written about the sciences. As at the beginning stated, there are different version and definitions. While I was writing what you are now reading, I found some literature I party read and find intriguing. We meet Karl Pearson again as a founder of statistics, but in 1892 he wrote the book  "The grammar of science" @pearson1892grammar, which also inspired Einstein on his way to relativity.
 
@@ -342,6 +344,9 @@ Mendel and Fisher?
 We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
 
 ## Get science done
+
+https://en.wikipedia.org/wiki/Scientific_method#
+https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
 
 ```{r}
 #| echo: false
