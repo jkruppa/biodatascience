@@ -194,21 +194,28 @@ Another key point of Kuhn's idea of the paradigm shift is the **incommensurabili
 So far, we have not clearly defined what science is. However, in Kuhn's cycle, there is also a state of pre-science. For humankind, this would be the phase before the Age of Enlightenment (1687–1789), when myths, alchemy, cults, and witchcraft dominated. There were rules of thumb and other farmers' rules that structured some knowledge. If something worked, it was more or less due to luck. However, even witchcraft has rules and, therefore, a paradigm for working with its statements. Later in this chapter, we will introduce some cults of pseudoscience and their structures. 
 
 ::: callout-note
-## Actual crisis
+## Current crises in science in the 21st century
 
-### What is the replication crisis?
+##### What is the replication crisis? {.unnumbered}
 
 @romero2019philosophy
 
-Not here, move to p-value chapter: @benjamin2018redefine
 
-### Particle model 
+##### Particle model{.unnumbered}
 
 @boddenberg2025end
 
-### Dark matter
+##### Dark matter {.unnumbered}
 
 https://youtu.be/BHAOsbzaat0?si=BmRJ_dbdjMczKiUQ
+
+@misiaszek2024direct
+
+##### p-value {.unnumbered}
+
+In 2019, The American Statistician published a special issue in Volume 73 about *Statistical Inference in the 21st Century: A World Beyond p < 0.05* @wasserstein2019moving
+
+@benjamin2018redefine
 
 :::
 
@@ -289,9 +296,21 @@ There is another field in which personal stories are the focus. Psychoanalysis u
 
 So far, I have discussed the opposites of science and pseudoscience. We have considered what science is not. However, I must be careful because, as Paul Feyerabend correctly stated, science should be anti-dogma. Therefore, science is a beautiful, messy, human adventure that cannot be put in a box or a closed framework. Perhaps he is right, yet I will do my best to achieve this goal for the book you are reading. Ultimately, you are free to choose your own worldview and science.
 
-Know I want to make a little bit more clear, what science supposedly is. In @fig-overview-sience-non-science we divide science into two parts. The natural sciences, which include beside others physics, chemistry and biology. With biology we include all the life sciences. The other part is the formal science. We see here the formal science as tools to do science. As formal science we have as the main fields the mathematics, logic and theoretical computer science. 
+Now, I would like to clarify what science is. Figure 1 shows that science is divided into two parts: natural science and formal science. The natural sciences include physics, chemistry, and biology, among others. Biology encompasses all life sciences. The other category is formal science. Here, we see formal science as the tools used to do science. The main fields of formal science are mathematics, logic, and theoretical computer science. Why is there a difference? We decided that science must have experiments and follow the falsification principle. In doing so, we distinguish mathematics and other theoretical sciences as tools from natural science. This is now our working stance.
 
-Experimentation and falsification lie at the core of science. We cannot reject an experiment. An experiment either takes place or it does not. However, a testable hypothesis can be rejected. This is sometimes referred to as the demarcation line of science, which is used to determine whether a field belongs to the natural sciences. In this book, we will use formal science to study the natural sciences. We need formal science as a tool.
+Experimentation and falsification are at the core of science. Together, they form the demarcation line that determines whether a field or activity can be considered scientific. This line is used to determine if a field belongs to the natural sciences. However, we cannot reject an experiment. Either an experiment takes place or it does not. A testable hypothesis, however, can be rejected. In this book, we will use formal sciences, such as mathematics and logic, to study the natural sciences. We need formal science as a tool. 
+
+I know this distinction between formal and natural science seems unpleasant. However, we now have a clearer definition of science and its properties. Most of these properties are not shared by formal sciences. Therefore, with this distinction, we have a clearer picture of what we are doing. Again, the humanities are a victim of these definitions, but I will pay the price for the gained structure.
+
+reproducibility
+prediction
+inference
+observations
+locality @garisto2022universe Caution physics still respects the cosmic speed limit for data
+evidence
+empirical
+completeness
+
 
 Meters of books have been written about the sciences. As at the beginning stated, there are different version and definitions. While I was writing what you are now reading, I found some literature I party read and find intriguing. We meet Karl Pearson again as a founder of statistics, but in 1892 he wrote the book  "The grammar of science" @pearson1892grammar, which also inspired Einstein on his way to relativity.
 
