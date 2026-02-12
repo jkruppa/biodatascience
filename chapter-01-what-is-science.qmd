@@ -193,6 +193,26 @@ Another key point of Kuhn's idea of the paradigm shift is the **incommensurabili
 
 So far, we have not clearly defined what science is. However, in Kuhn's cycle, there is also a state of pre-science. For humankind, this would be the phase before the Age of Enlightenment (1687–1789), when myths, alchemy, cults, and witchcraft dominated. There were rules of thumb and other farmers' rules that structured some knowledge. If something worked, it was more or less due to luck. However, even witchcraft has rules and, therefore, a paradigm for working with its statements. Later in this chapter, we will introduce some cults of pseudoscience and their structures. 
 
+::: callout-note
+## Actual crisis
+
+### What is the replication crisis?
+
+@romero2019philosophy
+
+Not here, move to p-value chapter: @benjamin2018redefine
+
+### Particle model 
+
+@boddenberg2025end
+
+### Dark matter
+
+https://youtu.be/BHAOsbzaat0?si=BmRJ_dbdjMczKiUQ
+
+:::
+
+
 Okay, this sounds very theoretical. But what is science, and how do we do it? I see your point. Now, we will take a step further and find out what the three pillars of scientific research are. Then, we will determine in which pillar your daily scientific work mostly falls. Then, we will talk about science and how to practice it. I know it's a long journey.
 
 ### The three pillars of scientific research
@@ -298,7 +318,7 @@ necessarily trusting the [human] race['s] experience from the past."
 
 David Deutsch claimed that science is guessing and falsification. Or in his words, "Tte whole [scientific] process resembles biological evolution. A problem is like an ecological niche, and a theory is like a gene or a species which is being tested for viability in that niche." @deutsch2011beginning
 
-
+Mendel and Fisher?
 
 We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
 
@@ -466,38 +486,8 @@ An experiment has the randomisation included.
 Why not observe something and than do science?
 
 
-
-
-## Why do science?
-
-To find a good explanation
-
-To help people
-
-To reduce suffering and pain
-
-To make the plant earth more habitable 
-
-To live longer
-
-Because the human is lazy@price2021laziness
-
-
-
-## What is real?
-
-
-Sometimes we need a model to know what is real.
-
-Fukusima @sevon2020analysis @sevon2023analyzing
-
 ## What is a probability?
 
-## What is the replication crisis?
-
-@romero2019philosophy
-
-Not here, move to p-value chapter: @benjamin2018redefine
 
 
 ## Stuff to sort...
