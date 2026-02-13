@@ -302,13 +302,15 @@ Experimentation and falsification are at the core of science. Together, they for
 
 I know this distinction between formal and natural science seems unpleasant. However, we now have a clearer definition of science and its properties. Most of these properties are not shared by formal sciences. Therefore, with this distinction, we have a clearer picture of what we are doing. Again, the humanities are a victim of these definitions, but I will pay the price for the gained structure.
 
-If we repeat an experiment, we should see the same results. The **reproducibility** of an experiment is crucial for science.
+If we repeat an experiment, we should see the same results. The **reproducibility** of an experiment is crucial for science. We have a severe problem if we cannot replicate the results of an experiment elsewhere or with someone else. The conclusions of experiments should be generalizable across time, space, and the individuals conducting the experiment. Here, we have the restriction that, although better technology might increase precision, the fundamentals should stay the same.
 
-In an experiment, we are interested in **prediction** of future observations, or we want to perform **inference** and explain causal effects. We need **evidence**.
+In an experiment, we are interested in **prediction** of future observations, or we want to perform **inference** and explain causal effects. This is our goal. We want to determine algorithms that can predict observations with partially unknown properties, or explain measurements. We use objective, numeric approaches to make decisions. Our connected experiments limit us to a small range of testable hypotheses. Therefore, we must know what we want to test and report. Is our scientific approach relevant to our work, patients, or other areas?
 
-Our conclusions are based on **observations** and measurable results from an experiment or data collection. 
+We need **evidence**. An evidence-based approach means making decisions based on solid scientific evidence, the latest research findings, and expertise rather than relying solely on opinions, traditions, or personal experience. We reject storytelling and myths from various sources, even if those sources are considered authoritative. A scientist's status is meaningless to us. Only experiments and their results are important. However, science has a hierarchy, so fraud and theft will happen. 
 
-We are performing **empirical** science. We have the following empirical cycle: First, an observation causes a scientific question, followed by a hypothesis, experiments, data analysis, and a conclusion. This is often referred to as the scientific method. There are many different cycles and processes. They all have one thing in common: we first encounter something curious, which sparks a hypothesis about it. Then, we conduct experiments to test the hypothesis and reach a conclusion through data analysis.
+Our conclusions are based on **observations** and measurable results from an experiment or data collection. Therefore, we are limited to the available or collected data. If we forget to measure something, we will have a missing piece of information. Sometimes, information is lost accidentally. This may cause us to repeat the experiment many times. We believe that the observables in our experiment are beables in reality. Therefore, an observed thing has a real physical representation. Although we may observe random representations of populations or probabilistic realizations, there are still real beables behind these measures. This distinction may seem overly sophisticated most of the time, but it is important to a realist that observations are real.
+
+We are performing **empirical** science. We have the following empirical cycle: First, an observation causes a scientific question, followed by a hypothesis, experiments, data analysis, and a conclusion. This is often referred to as the scientific method. There are many different cycles and processes. They all have one thing in common: we first encounter something curious, which sparks a hypothesis about it. Then, we conduct experiments to test the hypothesis and reach a conclusion through data analysis. A hypothesis should be testable through experimentation. The experiment should be designed so that the hypothesis can be rejected. We need falsification. Additionally, the experiment should be reproducible.
 
 The last two are slightly more rare and have already been rejected. They are the **completeness** and **locality** criteria @smolin2019einstein. By completeness, we mean that every element of physical reality must have a counterpart in physical theory. Locality describes how only local effects can influence one another. There is no possibility of faster-than-light interaction between particles. Both have been shown to be incorrect in nature @garisto2022universe. However, physics still respects the cosmic speed limit for data and information transmission. If you work in a typical laboratory that has no connection to quantum effects or gravity at near the speed of light, you can disregard these facts for your research. But it's still fascinating to me.
 
@@ -337,7 +339,7 @@ necessarily trusting the [human] race['s] experience from the past."
 @campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)
 
 
-David Deutsch claimed that science is guessing and falsification. Or in his words, "Tte whole [scientific] process resembles biological evolution. A problem is like an ecological niche, and a theory is like a gene or a species which is being tested for viability in that niche." @deutsch2011beginning
+
 
 Mendel and Fisher?
 
@@ -371,6 +373,8 @@ Pauli defined the scientific method as "taking up a subject repeatedly. Thinking
 Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
 
 Knowlegde is evolution by Deutsch and Feynman
+
+David Deutsch claimed that science is guessing and falsification. Or in his words, "Tte whole [scientific] process resembles biological evolution. A problem is like an ecological niche, and a theory is like a gene or a species which is being tested for viability in that niche." @deutsch2011beginning
 
 Comparision from induction to critical rationalism
 
