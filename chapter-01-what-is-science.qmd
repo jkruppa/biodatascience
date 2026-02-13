@@ -382,6 +382,10 @@ ggplot() +
   geom_shape(data = tibble(x = c(0.75, 10.75, 10.75, 0.75), 
                            y = c(-7.75, -7.75, -11.75, -11.75)),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95") +
+  annotate("label", hjust = "left", x = 0.75, y = -7.75, fontface = 2, 
+           color = "gray25", 
+           label = "This book is about", size = 3.25,
+           fill = "white") +
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)),
@@ -389,65 +393,65 @@ ggplot() +
   annotate("text", x = 2.25, y = -0.4, label = "Define a scientific question", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1, 
-           label = "Decision making using statistical inference", 
+           label = "Do you have encounter something suspicious?", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-2),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-2, label = "Gather information and reources", 
+  annotate("text", x = 2.25, y = -0.4-2, label = "Gather information and resources", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-2, 
-           label = "Decision making using statistical inference", 
+           label = "What have others done? Don't overcommit!", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-4),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-4, label = "Form a hypothesis", 
+  annotate("text", x = 2.25, y = -0.4-4, label = "Define testable hypotheses", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-4, 
-           label = "Decision making using statistical inference", 
+           label = "What can be measured, tested, and observed?", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-6),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-6, label = "Do the experiment", 
+  annotate("text", x = 2.25, y = -0.4-6, label = "Do the experiment and gather data", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-6, 
-           label = "Decision making using statistical inference", 
+           label = "Is your experiment reproducible and unbiased?", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-8),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-8, label = "Analyse the data", 
+  annotate("text", x = 2.25, y = -0.4-8, label = "Analyse the data with statistical models", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-8, 
-           label = "Decision making using statistical inference", 
+           label = "Visualize! Do the models align with the data?", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-10),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-10, label = "Interpret the data", 
+  annotate("text", x = 2.25, y = -0.4-10, label = "Interpret the data with model output", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-10, 
-           label = "Decision making using statistical inference", 
+           label = "Consider hypotheses and the scientific question", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-12),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-12, label = "Publish results", 
+  annotate("text", x = 2.25, y = -0.4-12, label = "Write it down! Publish your results", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-12, 
-           label = "Decision making using statistical inference", 
+           label = "Discuss your findings critical. Consider literatur.", 
            size = 4.25, fontface = 3, hjust = "left", color = "black") + 
   annotate("label", hjust = "right", x = 10.5, y = -13.5, fontface = 2, 
-           color = "#B12A90FF", 
-           label = "STOP and leave science", size = 3.75,
+           color = "gray25", 
+           label = "Point to STOP and leave science", size = 3.25,
            fill = "white") +
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
