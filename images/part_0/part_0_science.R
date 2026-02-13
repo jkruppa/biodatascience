@@ -18,7 +18,7 @@ p_scientific_process <- ggplot() +
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#B12A9080", alpha = 0.3) +
   annotate("label", hjust = "left", x = 0.75, y = -7.75+0.25, fontface = 2, 
            color = "#B12A90FF", 
-           label = "This book is about", size = 4,
+           label = "Models of Reality is about", size = 4,
            fill = "white") +
   ##
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
@@ -97,7 +97,7 @@ p_scientific_process <- ggplot() +
   geom_shape(data = tibble(x = c(2, 10.5, 10.5, 2), 
                            y = c(-1.5, -1.5, 0, 0)-14),
              aes(x, y), radius = unit(0.25, 'cm'), fill = "#6A00A880", alpha = 0.2) +
-  annotate("text", x = 2.25, y = -0.4-14, label = "Retesting of your findings and claims", 
+  annotate("text", x = 2.25, y = -0.4-14, label = "Validation of your findings and claims", 
            size = 4.5, fontface = 2, hjust = "left", color = "black") + 
   annotate("text", x = 2.25, y = -1-14, 
            label = "Can the scientific community reproduce results?", 
@@ -105,13 +105,13 @@ p_scientific_process <- ggplot() +
   ## arrow
   geom_curve(aes(x = 10.85, y = -10.45+0.25, xend = 10.6, yend = -7.05+2+0.25),
              arrow = arrow(length = unit(0.125, "cm"), type = "closed"),
-             color = "gray50", size = 0.75, curvature = 0.3) +
+             color = "#B12A90FF", size = 0.75, curvature = 0.3) +
   geom_curve(aes(x = 10.85, y = -11.05+0.25, xend = 10.6, yend = -6.45+2+0.25),
              arrow = arrow(length = unit(0.125, "cm"), type = "closed"),
-             color = "gray50", size = 0.75, curvature = 0.36) +
+             color = "#B12A90FF", size = 0.75, curvature = 0.36) +
   geom_curve(aes(x = 10.85, y = -10.75+0.25, xend = 10.6, yend = -6.75+2+0.25),
              arrow = arrow(length = unit(0.125, "cm"), type = "closed"),
-             color = "gray50", size = 0.75, curvature = 0.33) +
+             color = "#B12A90FF", size = 0.75, curvature = 0.33) +
   annotate("label", hjust = "center", x = 11.55, y = -7.75+0.125, fontface = 2, 
            color = "#B12A90FF", angle = -90,  
            label = "Hypotheses hydra", size = 4.25,
@@ -250,7 +250,7 @@ p_kuhn_cycle <- ggplot() +
                            y = c(1.15, 1.15, -0.85, -0.85, 2.85, 2.85)),
              aes(x, y), radius = unit(0.1, 'cm'), fill = "#B12A9080", alpha = 0.3) +
   annotate("label", hjust = "right", x = 5.6-0.025, y = 2.825, fontface = 2, color = "#B12A90FF", 
-           label = "This book is about", size = 3.75,
+           label = "Models of Reality is about", size = 3.75,
            fill = "white") +
   ## upper left
   geom_shape(data = tibble(x = c(-5.5, -3, -3, -5.5), 

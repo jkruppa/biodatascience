@@ -351,16 +351,9 @@ How should science be done? There might not be a bigger question. It's the eleph
 
 From now on I had also to do a harsh decision. Science is broad, this book is in contrast slim. Therefore I will focus on the natural science. Especially, the life science, which includes all living things. Yes, some parts will also applicable to more technical fields like mechanical engineering and engineering sciences but only in a limited way. A building and the humans inside does not accept a error in its structure.
 
-::: callout-note
-## The scientific method in a nutshell
-
 Sometimes a structure is necessary because starting from scratch with no ideas is the most difficult. However, there are dozens of pathways for doing science that have been described. If you are new to the field, it might help to consider one of the more modern approaches. Often, beginners feel overwhelmed by the available information in one field. Therefore, it might be better advice to start by *doing something* instead of thinking about a topic for weeks and getting lost.
 
-- Characterizations (observations, definitions, and measurements of the subject of inquiry)
-- Hypotheses (theoretical, hypothetical explanations of observations and measurements of the subject)
-- Predictions (inductive and deductive reasoning from the hypothesis or theory)
-- Experiments (tests of all of the above)
-
+The following figure illustrates the scientific method within a stable scientific environment, as defined by Kuhn @kuhn1970structure. The paradigm is set. There is a closed framework within which we will conduct our research. Therefore, we are more or less safe. At the academic level of final theses, we often receive the scientific topic externally. Thus, scientific work focuses on steps two through seven. Often, many new hypotheses arise after we finish our first analysis. It's normal for an experiment to produce more questions than answers, like a beheaded Hydra. In an ideal world, your findings would always be externally validated by other scientists. Often, this takes much longer than your original work. If you leave science after step seven, you may never hear about validation from others. These steps are highly structured, and, in my opinion, very helpful for beginners. Real scientific breakthroughs do not happen on such a safe, structured path. I fully agree with Feyerabend's anarchist views @feyerabend1970against.
 
 ```{r}
 #| message: false
@@ -368,16 +361,19 @@ Sometimes a structure is necessary because starting from scratch with no ideas i
 #| warning: false
 #| fig-align: center
 #| fig-height: 7
-#| fig-width: 5.3
-#| fig-cap: "foo"
+#| fig-width: 5.5
+#| fig-cap: "The scientific method is used in a normal, stable scientific environment with the goal of solving puzzles and problems within a closed framework. The process is highly structured and safe. Therefore, there is little room for creativity or thinking outside the box. Steps two through seven are the academic level of final theses, where a scientific question is usually delivered. In a normal process, a number of new questions and ideas arise after step six. An experiment produces more questions than answers. Validation of the findings and claims is done externally through peer review or by other scientists. The book will focus on the analysis and interpretation of experimental data."
 #| label: fig-science-path-process
 
 p_scientific_process
 ```
 
 
+- Characterizations (observations, definitions, and measurements of the subject of inquiry)
+- Hypotheses (theoretical, hypothetical explanations of observations and measurements of the subject)
+- Predictions (inductive and deductive reasoning from the hypothesis or theory)
+- Experiments (tests of all of the above)
 
-:::
 
 https://en.wikipedia.org/wiki/Scientific_method#
 https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
@@ -395,7 +391,7 @@ https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
 p_wheel_knowledge
 ```
 
-
+*How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve
 
 
 "As a scientist, you are a professional writer," Joshua Schimel said. @schimel2012writing
