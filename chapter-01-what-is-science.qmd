@@ -374,8 +374,7 @@ I must admit that there are other scientific processes out there. The scientific
 
 Furthermore, we can combine science with a model. Therefore, we don't produce data from experiments; we only conduct thought experiments. We think about dependencies. We also consider what we observe. Then, we use logic to find patterns and make predictions. Another strength of this approach is that we can focus on the unobservable and the unmeasurable during our thought experiments. We are not limited to observed data. Our creative process is free, and we can later test our predictions using experimental data. However, our theories and models must be testable, and our hypotheses must be falsifiable.
 
-So choose at least two start with the work!
-
+Finally, we can look at the data and the analysis with models. We have data, and we have algorithms that can identify patterns within it. We do not really know why things work, but our predictions work on actual and future data sets. This is fine, as David Mermin said, "Shut up and calculate!"@david1989s The greatest danger here is doing things without understanding them. We are not making progress because we do not truly understand why our models work with the data. Nevertheless, we can continue this way for a long time before our current working models might reach their limits. To change our algorithms and tools, we will need a new paradigm. Models and data alone will not provide us with a new one. So choose at least two and start with the work!
 
 ```{r}
 #| echo: false
