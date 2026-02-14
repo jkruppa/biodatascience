@@ -372,6 +372,8 @@ I must admit that there are other scientific processes out there. The scientific
 
 @fig-chap-01-triangle attempts to categorize the three fields of knowledge generation. At the top is science, in the lower left corner is data, and in the lower right corner is the model. To generate knowledge, you must select at least two of these three categories. While you can use all three, often two are enough to make meaningful progress in your daily work. You can practice science only with data. Therefore, you are doing data visualization or exploratory data analysis. You visualize your data points, dependencies, and patterns, and try to make sense of them. This is very common nowadays because we have the computational power to draw these plots repeatedly. In the 19th century, this was not possible. Drawings would take too much time and were only used to get an idea of the data. This is a remarkable development. 
 
+Furthermore, we can combine science with a model. Therefore, we don't produce data from experiments; we only conduct thought experiments. We think about dependencies. We also consider what we observe. Then, we use logic to find patterns and make predictions. Another strength of this approach is that we can focus on the unobservable and the unmeasurable during our thought experiments. We are not limited to observed data. Our creative process is free, and we can later test our predictions using experimental data. However, our theories and models must be testable, and our hypotheses must be falsifiable.
+
 So choose at least two start with the work!
 
 
