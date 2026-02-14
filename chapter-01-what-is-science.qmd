@@ -353,7 +353,7 @@ From now on I had also to do a harsh decision. Science is broad, this book is in
 
 Sometimes a structure is necessary because starting from scratch with no ideas is the most difficult. However, there are dozens of pathways for doing science that have been described. If you are new to the field, it might help to consider one of the more modern approaches. Often, beginners feel overwhelmed by the available information in one field. Therefore, it might be better advice to start by *doing something* instead of thinking about a topic for weeks and getting lost.
 
-The following figure illustrates the scientific method within a stable scientific environment, as defined by Kuhn @kuhn1970structure. The paradigm is set. There is a closed framework within which we will conduct our research. Therefore, we are more or less safe. At the academic level of final theses, we often receive the scientific topic externally. Thus, scientific work focuses on steps two through seven. Often, many new hypotheses arise after we finish our first analysis. It's normal for an experiment to produce more questions than answers, like a beheaded Hydra. In an ideal world, your findings would always be externally validated by other scientists. Often, this takes much longer than your original work. If you leave science after step seven, you may never hear about validation from others. These steps are highly structured, and, in my opinion, very helpful for beginners. Real scientific breakthroughs do not happen on such a safe, structured path. I fully agree with Feyerabend's anarchist views @feyerabend1970against.
+The following figure illustrates the scientific method within a stable scientific environment, as defined by Kuhn @kuhn1970structure. The paradigm is set. There is a closed framework within which we will conduct our research. Therefore, we are more or less safe. At the academic level of final theses, we often receive the scientific topic externally. Thus, scientific work focuses on steps two through seven. Often, many new hypotheses arise after we finish our first analysis. It's normal for an experiment to produce more questions than answers, like a beheaded Hydra. In an ideal world, your findings would always be externally validated by other scientists. Often, this takes much longer than your original work. If you leave science after step seven, you may never hear about validation from others. These steps are highly structured, and, in my opinion, very helpful for beginners. Real scientific breakthroughs do not happen on such a safe, structured path. I fully agree with Feyerabend's anarchist views @feyerabend1970against. If you aim to create a scientific earthquake that shatters people's beliefs, do not use patterns like the following.
 
 ```{r}
 #| message: false
@@ -368,15 +368,12 @@ The following figure illustrates the scientific method within a stable scientifi
 p_scientific_process
 ```
 
+I must admit that there are other scientific processes out there. The scientific method has many faces, which is another sign that science and working with science will never fit neatly into a bureaucratic framework. It makes sense to provide some guidelines for undergraduates. The above structure provides a framework for what you can do in a stable scientific environment.
 
-- Characterizations (observations, definitions, and measurements of the subject of inquiry)
-- Hypotheses (theoretical, hypothetical explanations of observations and measurements of the subject)
-- Predictions (inductive and deductive reasoning from the hypothesis or theory)
-- Experiments (tests of all of the above)
+@fig-chap-01-triangle attempts to categorize the three fields of knowledge generation. At the top is science, in the lower left corner is data, and in the lower right corner is the model. To generate knowledge, you must select at least two of these three categories. While you can use all three, often two are enough to make meaningful progress in your daily work. You can practice science only with data. Therefore, you are doing data visualization or exploratory data analysis. You visualize your data points, dependencies, and patterns, and try to make sense of them. This is very common nowadays because we have the computational power to draw these plots repeatedly. In the 19th century, this was not possible. Drawings would take too much time and were only used to get an idea of the data. This is a remarkable development. 
 
+So choose at least two start with the work!
 
-https://en.wikipedia.org/wiki/Scientific_method#
-https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
 
 ```{r}
 #| echo: false
@@ -392,6 +389,9 @@ p_wheel_knowledge
 ```
 
 *How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve
+
+https://en.wikipedia.org/wiki/Scientific_method#
+https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
 
 
 "As a scientist, you are a professional writer," Joshua Schimel said. @schimel2012writing
