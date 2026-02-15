@@ -389,6 +389,9 @@ Finally, we can look at the data and the analysis with models. We have data, and
 p_wheel_knowledge
 ```
 
+Often, a beginner will start by doing something, observing the data, and trying to find a pattern. Then, you can follow the path of Figure 1 and try to make sense of your measurements. But what if you really want to discover something new outside the existing framework of knowledge? If you strictly follow paths and rules, then you have a problem. Creativity doesn't follow structure or bureaucratic ideas. You must do things differently. Since this is very individual, I can only offer suggestions I found in literature and quotes from others who broke the rules and sought the truth.
+
+
 *How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve
 
 https://en.wikipedia.org/wiki/Scientific_method#
