@@ -362,23 +362,17 @@ Often, a beginner will start by doing something, observing the data, and trying 
 
 Let's start with Wolfgang Pauli, a pioneer of quantum mechanics and a close friend of Carl Jung. Jung founded the school of analytical psychology and the concept of the unconscious. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." @fischer2022stunde. It's essentially about sitting in the middle of a room in a chair and allowing yourself to get bored for as long as possible. Doing so sparks creativity. Boredom is a way to come up with good ideas @hawkins2016power. This might not be the only way, but many people come up with ideas during their breaks after an intense work period.
 
-"As a scientist, you are a professional writer," Joshua Schimel said @schimel2012writing. Maybe this is the way to do it. Write it down, as William Zinsser suggested in his book *Writing to Learn* @zinsser1988writing. Therefore, we use the writing process to organize our thoughts and discover new ways of thinking about what we know and don't know. Otto Kruse stated in his book @kruse2007keine, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects." Clear writing is often associated with clear thinking. Therefore, we use writing as a process to organize our thoughts. This process may also spark creativity.
+"As a scientist, you are a professional writer," Joshua Schimel said @schimel2012writing. Maybe this is the way to do it. Write it down, as William Zinsser suggested in his book *Writing to Learn* @zinsser1988writing. Therefore, we use the writing process to organize our thoughts and discover new ways of thinking about what we know and don't know. Otto Kruse stated in his book @kruse2007keine, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects." Clear writing is often associated with clear thinking. Therefore, we use writing as a process to organize our thoughts. This process may also spark creativity. I use a physical scientific journal in which I draw and write. In it, I organize my thoughts and keep all my printed quotes. I use it as an external brain to create something new from the bits and pieces.
 
+Maybe a more mathematical approach would suit you better. In that case, I recommend the book *How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve. The general idea is to understand the problem and devise a plan to solve it by finding connections between the unknown and the available data. Here, the data can also be seen as information. Then, we carry out the plan and reflect on what we have learned after trying to solve the problem. The last point is especially important because we want to know what we have learned on the journey. Polya wrote his book for teachers who want to help their students and students who want to solve mathematical problems. The focus is on mathematics, not science in general. However, I found the ideas in the book appealing. Life is somehow about problem solving. The book helps with that.
 
-
-
-*How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve
-
-
-
-
-
+Perhaps this section lacks a hands-on approach. A guide on how to do science? But I don't know of any. There are helpful structures from all over that might help at the beginning. Like a colored alphabet with funny animals might help learning letters. So, I can only encourage you to create something. Anything goes!
 
 ## Statistics as a toolbox 
 
-On a warm spring day, I was sitting in my first statistics lecture. I don't remember everything, but one quote from the beginning of the lecture has stuck with me:  "Statistics is the engine room of science." I think this quote might not have been spoken in this form. Rather, it was the underlying theme of the lecture.
+On a warm spring day, I was sitting in my first statistics lecture. It was my second semester, and I didn't really understood the scientific workflow. I don't remember everything, but one quote from the beginning of the lecture has stuck with me:  "Statistics is the engine room of science." I think this quote might not have even been spoken in this form. Rather, it was the underlying theme of the lecture.
 
-A toolbox of mathematical models to do science.
+Is statistics science? Or is statistics more a toolbox of mathematical models to do science.
 
 In this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.
 
@@ -388,9 +382,7 @@ Statistics by Fisher and quantum mechanics have in common that both do inductive
 
 Statistical models are inductive
 
-
 Randomization and random observations
-
 
 ```{r}
 #| message: false
