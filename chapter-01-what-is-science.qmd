@@ -314,37 +314,6 @@ We are performing **empirical** science. We have the following empirical cycle: 
 
 The last two are slightly more rare and have already been rejected. They are the **completeness** and **locality** criteria @smolin2019einstein. By completeness, we mean that every element of physical reality must have a counterpart in physical theory. Locality describes how only local effects can influence one another. There is no possibility of faster-than-light interaction between particles. Both have been shown to be incorrect in nature @garisto2022universe. However, physics still respects the cosmic speed limit for data and information transmission. If you work in a typical laboratory that has no connection to quantum effects or gravity at near the speed of light, you can disregard these facts for your research. But it's still fascinating to me.
 
----
-
-Meters of books have been written about the sciences. As at the beginning stated, there are different version and definitions. While I was writing what you are now reading, I found some literature I party read and find intriguing. We meet Karl Pearson again as a founder of statistics, but in 1892 he wrote the book  "The grammar of science" @pearson1892grammar, which also inspired Einstein on his way to relativity.
-
-Can science be objective? "Science is in reality a classification and analysis of the contents of the mind. […] In truth, the field of science is much more consciousness than an external world."
-
-"The classification of facts, the recognition of their sequence and relative significance is the function of science, and the habit of forming a judgment upon these facts unbiased by personal feeling is characteristic of what may be termed the scientific frame of mind." Karl
-
-Ersnt Mach (1838-1916) "Ernst Mach’s positivism is a subjective, anti-metaphysical philosophy of science that restricts legitimate knowledge exclusively to directly observable sensations and measurements. He rejected unobservable entities like atoms as "hypothetical fictions","
-
-@chalmers2013thing [What is this thing called Science?](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)
-
-"In the same way, it is
-possible to follow form and call it science, but that is pseudo-science."
-
-"It should not be "science has shown" but "this experiment, this effect, has shown." 
-
-"the result of the discovery that it is worthwhile rechecking by new direct experience, and not
-necessarily trusting the [human] race['s] experience from the past."
-
-@feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)
-
-@campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)
-
-
-
-
-Mendel and Fisher?
-
-We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
-
 ## Get science done
 
 How should science be done? There might not be a bigger question. It's the elephant in the room. Perhaps you are already doing scientific work, or perhaps you want to start doing science, which is why you are reading this book. Either way, I will now try to help you answer it. First, science is a human endeavor and therefore very individual. Everyone has their own way of figuring things out. My approach is Zinsser's "writing to learn" method @zinsser1988writing. But you only see the final result. Most of the thinking is done on paper through drawing and writing. The pen is mightier than the keyboard @mueller2014pen. However, this doesn't explain where my ideas come from. I must admit that most of my ideas emerge during my free time. This happens when I'm doing boring tasks and thinking about this or that. Sometimes, an idea hits me. I write them down and think about them some more. I conceptualized most of this book on playgrounds and at children's gymnastics, where my presence was required, but not my acting skills.
@@ -391,34 +360,15 @@ p_wheel_knowledge
 
 Often, a beginner will start by doing something, observing the data, and trying to find a pattern. Then, you can follow the path of Figure 1 and try to make sense of your measurements. But what if you really want to discover something new outside the existing framework of knowledge? If you strictly follow paths and rules, then you have a problem. Creativity doesn't follow structure or bureaucratic ideas. You must do things differently. Since this is very individual, I can only offer suggestions I found in literature and quotes from others who broke the rules and sought the truth.
 
+Let's start with Wolfgang Pauli, a pioneer of quantum mechanics and a close friend of Carl Jung. Jung founded the school of analytical psychology and the concept of the unconscious. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." @fischer2022stunde. It's essentially about sitting in the middle of a room in a chair and allowing yourself to get bored for as long as possible. Doing so sparks creativity. Boredom is a way to come up with good ideas @hawkins2016power. This might not be the only way, but many people come up with ideas during their breaks after an intense work period.
+
+"As a scientist, you are a professional writer," Joshua Schimel said @schimel2012writing. Maybe this is the way to do it. Write it down, as William Zinsser suggested in his book *Writing to Learn* @zinsser1988writing. Therefore, we use the writing process to organize our thoughts and discover new ways of thinking about what we know and don't know. Otto Kruse stated in his book @kruse2007keine, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects." Clear writing is often associated with clear thinking. Therefore, we use writing as a process to organize our thoughts. This process may also spark creativity.
+
+
+
 
 *How to solve it: A new aspect of mathematical method* by Goerg Polya @polya1945solve
 
-https://en.wikipedia.org/wiki/Scientific_method#
-https://en.wikipedia.org/wiki/Scientific_method#Relationship_with_mathematics
-
-
-"As a scientist, you are a professional writer," Joshua Schimel said. @schimel2012writing
-
-Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." @fischer2022stunde. This is more or less about taking a chair and sitting in the middle of the room and getting bored as long as possible. Doing so sparks creativity.
-
-Otto Kruse stated in his book, "many scientific topics can only be solved once all aspects have been explicitly formulated. The mind is not sufficiently prepared for this, as it can only ever focus on small sections at a time. Systematic thinking is only possible when writing, i.e. recording the results of one's thinking and relating them to other aspects."@kruse2007keine
-
-Knowlegde is evolution by Deutsch and Feynman
-
-David Deutsch claimed that science is guessing and falsification. Or in his words, "Tte whole [scientific] process resembles biological evolution. A problem is like an ecological niche, and a theory is like a gene or a species which is being tested for viability in that niche." @deutsch2011beginning
-
-Comparision from induction to critical rationalism
-
-Erst Mach and observational things.
-
-Karl Pearson what is reality.
-
-Quantum mechanics, we do not know what reality is.
-
-The measurement paradox. When there is no agent wo is measuring, does atoms exist? What does measuring mean? A interaction between a large and a small atomic object. Where is the border between large and quantum objects?
-
-Problem solving How to solve problems -> Also scientific wiki article Polya Math method <> Science method
 
 
 
@@ -503,15 +453,46 @@ p_kenetic_energy
 What can we learn from our small experiment? No matter what we do, there will always be an error, noise, or deviation. There are different names for nearly identical concepts. This is the core of inductive reasoning using statistics. We will always have errors, and we want to minimize them. The main topic of this book is what this error is and how we describe these errors. Not really the errors themselves, but rather the concept of drawing lines through points by minimizing error.
 :::
 
+## [Broken ideas]
 
+Meters of books have been written about the sciences. As at the beginning stated, there are different version and definitions. While I was writing what you are now reading, I found some literature I party read and find intriguing. We meet Karl Pearson again as a founder of statistics, but in 1892 he wrote the book  "The grammar of science" @pearson1892grammar, which also inspired Einstein on his way to relativity.
 
+Can science be objective? "Science is in reality a classification and analysis of the contents of the mind. […] In truth, the field of science is much more consciousness than an external world."
 
-## Observables and beables
+"The classification of facts, the recognition of their sequence and relative significance is the function of science, and the habit of forming a judgment upon these facts unbiased by personal feeling is characteristic of what may be termed the scientific frame of mind." Karl
 
-Wheel of fortune 
+Ersnt Mach (1838-1916) "Ernst Mach’s positivism is a subjective, anti-metaphysical philosophy of science that restricts legitimate knowledge exclusively to directly observable sensations and measurements. He rejected unobservable entities like atoms as "hypothetical fictions","
 
+@chalmers2013thing [What is this thing called Science?](https://www.pmf.unizg.hr/_download/repository/1._Dodatna_literatura_%28filozofija_znanosti%29%5B3%5D.pdf)
 
- 
+"In the same way, it is
+possible to follow form and call it science, but that is pseudo-science."
+
+"It should not be "science has shown" but "this experiment, this effect, has shown." 
+
+"the result of the discovery that it is worthwhile rechecking by new direct experience, and not
+necessarily trusting the [human] race['s] experience from the past."
+
+@feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)
+
+@campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)
+
+Knowlegde is evolution by Deutsch and Feynman
+
+David Deutsch claimed that science is guessing and falsification. Or in his words, "Tte whole [scientific] process resembles biological evolution. A problem is like an ecological niche, and a theory is like a gene or a species which is being tested for viability in that niche." @deutsch2011beginning
+
+Mendel and Fisher?
+
+We conclude the following: A hypothesis should be testable through experimentation. The experiment should be designed in such a way that the hypothesis can be rejected. We need falsification. The experiment should also be reproducible; we will come to this point later.
+
+The measurement paradox. When there is no agent wo is measuring, does atoms exist? What does measuring mean? A interaction between a large and a small atomic object. Where is the border between large and quantum objects?
+
+Erst Mach and observational things.
+
+Karl Pearson what is reality.
+
+Quantum mechanics, we do not know what reality is.
+
 Ole Roemer (1644-1710) 
  
 https://www.amnh.org/learn-teach/curriculum-collections/cosmic-horizons-book/ole-roemer-speed-of-light
@@ -530,9 +511,8 @@ Eleven minutes (Cosmic Horizons: Astronomy at the Cutting Edge)
 
 p_io_speed_of_light
 ```
- 
- 
- Pettenkofer vs. Koch
+
+Pettenkofer vs. Koch
 
 Definition: Beables sind Elemente der Realität, die existieren, unabhängig davon, ob sie beobachtet werden oder nicht.
 Unterschied zu Observablen: Während Observable Messwerte (z.B. Position oder Impuls) sind, die ein Beobachter erhält, sind Beables die grundlegenden physikalischen Fakten, aus denen die Welt besteht.
@@ -545,13 +525,6 @@ An experiment has the randomisation included.
 
 Why not observe something and than do science?
 
-
-## What is a probability?
-
-
-
-## Stuff to sort...
-
 epistemically
 
 observations are theory-laden
@@ -562,30 +535,27 @@ Language shapes data: We use theoretical words to describe what we see. If you s
 
 Or feget eveything what I have written and go with Paul Feyerabend. Paul Feyerabend's famous dictum ‘Anything goes’ is at the heart of his methodological anarchism, which states that there are no universally valid rules in science. Feyerabend argued that progress often arises from breaking rules, which is why rigid methodology hinders rather than promotes the acquisition of knowledge. @feyerabend1970against
 
-@boyd2009theory
-
-The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. 
-
-## Age of enlightment
+Age of enlightment
 
 Romantic as the answer to enlightment.
 
-
-> *"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical." --- Tim Ferriss*
-
-
-> *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
+@boyd2009theory
 
 Idea of hypotheses
-
 
 @clark2025models [Models Demystified: A Practical Guide from Linear Regression to Deep Learning](https://m-clark.github.io/book-of-models/)
 
 @cox2017statistical [Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-core-site/index.html)
 
-
 [David Deutsch \> Quotes](https://www.goodreads.com/author/quotes/103190.David_Deutsch)
 
+> *"Reality is negotiable. Outside of science and law, all rules can be bent or broken, and it doesn’t require being unethical." --- Tim Ferriss*
+
+What is a probability?
+
+- Frequentist
+- Bayes
+- Propensity
 
 ## Alternatives
 
@@ -598,7 +568,6 @@ Disappointed about this chapter? You wanted more but have gotten less? There are
 -   *The Logic of Scientific Discovery* by critical rationalism by Karl Popper @popper1959logic
 -   *The beginning of infinity: Explanations that transform the world* by David Deutsch @deutsch2011beginning
 -   *An Incomplete Theory: The Search for Quantum Gravity (a Story)* by Megan Henry @henry2024incomplete
-
 
 ## Dramatis personae
 
@@ -656,5 +625,7 @@ Objectivism
 -   In statistics, logical positivism and instrumentalism are appealing because they provide a way to make sense of data and to make predictions.
 
 ## Summary
+
+The first chapter of this book is already the hardest. I started writing this chapter very early on, perhaps even before any of the others. Yet it took the longest to finish. The question is simple: What is science? The more I researched, the more complicated the answer became. Or the other way around. I followed the advice of Wolfgang Pauli. Pauli defined the scientific method as "taking up a subject repeatedly. Thinking about it. Setting it aside. Gathering new empirical material. And continuing this process for years if necessary. In this way, the conscious mind stimulates the unconscious mind. If anything, this is the only way to achieve results." Therefore, I tried to read and find answers to the question of what science might be. 
 
 ## References {.unnumbered}
