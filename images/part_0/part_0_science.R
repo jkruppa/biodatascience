@@ -915,7 +915,7 @@ p_science_overview <- ggplot() +
            color = "#FCA636FF") +  
   annotate("text", x = -5, y = 3.2, label = "Study abstract structures", size = 5, fontface = 4,
            color = "#FCA636FF") +
-  annotate("text", x = -5, y = 2.3, label = c("Mathematics,\n Logic, Theoretical computer science"), 
+  annotate("text", x = -5, y = 2.3, label = c("Mathematics, Statistics,\n Logic, Theoretical computer science"), 
            size = 4.5, fontface = 4, color = "black") +
   annotate("text", x = -5, y = 1.1, 
            label = c("Internal rules of logic and schemas\nMore like scientific tools to do science"), size = 4.5, fontface = 4, 
