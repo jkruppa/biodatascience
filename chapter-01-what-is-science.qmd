@@ -374,6 +374,12 @@ On a warm spring day, I was sitting in my first statistics lecture. It was my se
 
 Is statistics a science? Or is it more of a toolbox of mathematical models used for scientific research? Statistics is a formal science that primarily connects the formal sciences to the natural sciences. At its core, we have randomization and the experiment in which the randomization occurs. Statistics uses two logical and mathematical tools: inductive reasoning and a probabilistic framework.
 
+This book is about statistics. It's about models that try to find patterns in data and explain dependencies. We use statistics to explain biological processes or predict new observations. We utilize statistics as a mathematical tool and apply logic to make decisions between different treatments or, more broadly, hypotheses. All of this takes place within a probabilistic framework, where we must understand and handle probabilities. 
+
+Therefore, I must apologize. This chapter was about science, but we will not really be doing science in this book. Following my own definition of science, statistics does not belong to the natural sciences. To be honest, common sense says that natural science is a science. However, you can do science in your field.
+
+---
+
 In this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.
 
 Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
@@ -384,7 +390,7 @@ Statistical models are inductive
 
 Randomization and random observations
 
-Data science uses statistics to make predictions, even when the underlying reasons are unclear. Here, we must distinguish between data from planned experiments and data from observed real-world phenomena. Real-world data does not emerge from a planned experiment and must be treated differently.
+Data science uses statistics to make predictions, even when the underlying reasons are unclear. Here, we must distinguish between data from planned experiments and data from observed real-world phenomena. Real-world data does not emerge from a planned experiment and must be treated differently. The following chapter provides more information on this topic.
 
 ```{r}
 #| message: false
