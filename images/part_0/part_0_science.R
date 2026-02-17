@@ -888,7 +888,7 @@ p_science_overview <- ggplot() +
              aes(x, y), radius = unit(0.5, 'cm'), fill = "#FCA63680", alpha = 0.2) +
   annotate("text", x = 7, y = 7.9, label = "Natural science", size = 6.5, fontface = 2,
            color = "#FCA636FF") +  
-  annotate("text", x = 7, y = 7.2, label = "Study physical world", size = 5, fontface = 4,
+  annotate("text", x = 7, y = 7.2, label = "Study physical reality", size = 5, fontface = 4,
            color = "#FCA636FF") +  
   annotate("text", x = 5, y = c(6, 5, 4), label = c("Physics", "Chemistry", "Biology"), 
            size = 4.5, fontface = 4, hjust = "left",
