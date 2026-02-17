@@ -370,7 +370,7 @@ Maybe a more mathematical approach would suit you better. In that case, I recomm
 
 Perhaps this section lacks a hands-on approach. A guide on how to do science? But I don't know of any. There are helpful structures from all over that might help at the beginning. Like a colored alphabet with funny animals might help learning letters. So, I can only encourage you to create something. Anything goes!
 
-## Statistics as a toolbox 
+## Statistics in science
 
 On a warm spring day, I was sitting in my first statistics lecture. It was my second semester, and I didn't really understood the scientific workflow. I don't remember everything, but one quote from the beginning of the lecture has stuck with me:  "Statistics is the engine room of science." I think this quote might not have even been spoken in this form. Rather, it was the underlying theme of the lecture.
 
@@ -380,9 +380,7 @@ This book is about statistics. It's about models that try to find patterns in da
 
 Therefore, I must apologize. This chapter was about science, but we will not really be doing science in this book. Following my own definition of science, statistics does not belong to the natural sciences. To be honest, common sense says that natural science is a science. However, you can do science in your field.
 
----
-
-In this book we will use Fisherian statistics, which is inductive logic reasoning. Or in other words the logic of inductive inference.
+What will we do? We will learn how to model data. We will try to understand how to find patterns or meaning in data. Ideally, we will have a scientific background, meaning we will have a "why." Other times, we only do the modeling and are happy if we find any pattern. Sometimes, patterns are rare, or the relationships are more complicated than we thought. Life is difficult, and science is no better. In this book, we will use Fisherian statistics, which is inductive reasoning based on logic. In other words, it is the logic of inductive inference. Because we use repeated samples and a special type of probability, it is called frequentist statistics. There is also an older branch of statistics called Bayesian statistics. Bayesian statistics predates Fisherian statistics, but it is not as simple mathematically. Bayesian statistics is based on inverse probability and can only be solved with modern 21st-century computer power. Fisher rejected the subjectiveness of inverse probability.
 
 Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
 
