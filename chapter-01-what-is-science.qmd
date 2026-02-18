@@ -382,6 +382,8 @@ Therefore, I must apologize. This chapter was about science, but we will not rea
 
 What will we do? We will learn how to model data. We will try to understand how to find patterns or meaning in data. Ideally, we will have a scientific background, meaning we will have a "why." Other times, we only do the modeling and are happy if we find any pattern. Sometimes, patterns are rare, or the relationships are more complicated than we thought. Life is difficult, and science is no better. In this book, we will use Fisherian statistics, which is inductive reasoning based on logic. In other words, it is the logic of inductive inference. Because we use repeated samples and a special type of probability, it is called frequentist statistics. There is also an older branch of statistics called Bayesian statistics. Bayesian statistics predates Fisherian statistics, but it is not as simple mathematically. Bayesian statistics is based on inverse probability and can only be solved with modern 21st-century computer power. Fisher rejected the subjectiveness of inverse probability.
 
+Scentence to the computer power of women.
+
 Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
 
 Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
