@@ -6,6 +6,14 @@ source("images/part_0/part_0_history.R")
 
 # What is science? {#sec-what-is-science}
 
+:::callout-caution
+## Open issues
+
+- Cross references to the other chapters
+- Cleaning of the broken ideas section after rereading
+
+:::
+
 *Last modified on `r format(fs::file_info("chapter-01-what-is-science.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"This is your last chance. After this, there is no turning back. You take the blue pill - the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill - you stay in Wonderland and I show you how deep the rabbit hole goes." --- Morpheus, Matrix*
@@ -378,21 +386,13 @@ Is statistics a science? Or is it more of a toolbox of mathematical models used 
 
 This book is about statistics. It's about models that try to find patterns in data and explain dependencies. We use statistics to explain biological processes or predict new observations. We utilize statistics as a mathematical tool and apply logic to make decisions between different treatments or, more broadly, hypotheses. All of this takes place within a probabilistic framework, where we must understand and handle probabilities. 
 
-Therefore, I must apologize. This chapter was about science, but we will not really be doing science in this book. Following my own definition of science, statistics does not belong to the natural sciences. To be honest, common sense says that natural science is a science. However, you can do science in your field.
+What will we do? We will learn how to model data. We will try to understand how to find patterns or meaning in data. Ideally, we will have a scientific background, meaning we will have a "why." Other times, we only do the modeling and are happy if we find any pattern. Sometimes, patterns are rare, or the relationships are more complicated than we thought. Life is difficult, and science is no better. In this book, we will use Fisherian statistics, which is inductive reasoning based on logic. In other words, it is the logic of inductive inference. Because we use repeated samples and a special type of probability, it is called frequentist statistics. There is also an older branch of statistics called Bayesian statistics. Bayesian statistics predates Fisherian statistics, but it is not as simple mathematically. Bayesian statistics is based on inverse probability and can only be solved with modern 21st-century computer power. Fisher rejected the subjectiveness of inverse probability @fisher1935design. However, I don't think he ever used them, so we could reject them as well. Nevertheless, Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science. We will come back to these topics later in the book.
 
-What will we do? We will learn how to model data. We will try to understand how to find patterns or meaning in data. Ideally, we will have a scientific background, meaning we will have a "why." Other times, we only do the modeling and are happy if we find any pattern. Sometimes, patterns are rare, or the relationships are more complicated than we thought. Life is difficult, and science is no better. In this book, we will use Fisherian statistics, which is inductive reasoning based on logic. In other words, it is the logic of inductive inference. Because we use repeated samples and a special type of probability, it is called frequentist statistics. There is also an older branch of statistics called Bayesian statistics. Bayesian statistics predates Fisherian statistics, but it is not as simple mathematically. Bayesian statistics is based on inverse probability and can only be solved with modern 21st-century computer power. Fisher rejected the subjectiveness of inverse probability.
-
-Scentence to the computer power of women.
-
-Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science.
-
-Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
+Data science is a bridge between formal and natural science. The term can be misleading. It is not the combination of data and science, but rather the combination of data and models. In the following chapters, we will learn more about data and then statistical modeling. Data science uses statistics to make predictions even when the underlying reasons are unclear. It is important to distinguish between data from planned experiments and data from observed real-world phenomena. Real-world data does not emerge from a planned experiment and must be treated differently. The next chapter provides more information on this topic.
 
 Statistical models are inductive
 
 Randomization and random observations
-
-Data science uses statistics to make predictions, even when the underlying reasons are unclear. Here, we must distinguish between data from planned experiments and data from observed real-world phenomena. Real-world data does not emerge from a planned experiment and must be treated differently. The following chapter provides more information on this topic.
 
 ```{r}
 #| message: false
@@ -406,6 +406,8 @@ Data science uses statistics to make predictions, even when the underlying reaso
 
 p_statistic_inductive 
 ```
+
+In this chapter, we will not discuss the topics of Fisher and statistics or probability in depth. We will address these interesting topics later.  Therefore, I must apologize. This chapter was about science, but we will not really be doing science in this book. Following my own definition of science, statistics does not belong to the natural sciences. To be honest, common sense says that natural science is a science. However, you can do science in your field.
 
 ::: callout-note
 ## Derivation of the formula for kinetic energy
@@ -478,6 +480,9 @@ necessarily trusting the [human] race['s] experience from the past."
 @feynman1966science [What is science](https://www-oc.chemie.uni-regensburg.de/diaz/media/docs/feynman_what-is-science_68.pdf)
 
 @campbell1952science [What is science?](https://www.whatisscience.info/files/what_is_science_rd1.pdf)
+
+
+Statistics by Fisher and quantum mechanics have in common that both do inductive probabilistic reasoning. Scientific models are deductive
 
 Knowlegde is evolution by Deutsch and Feynman
 
