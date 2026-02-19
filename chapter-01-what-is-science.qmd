@@ -401,7 +401,16 @@ Bayesian
 
 Propensity
 
-: It will rain or not rain this hour, regardless of whether you are observing and measuring. There is an internal probability of rain under the current weather conditions, which include temperature, wind, clouds, season, and air pressure. In reality, this probability changes every second because all of these conditions are constantly changing. *There is always a tendency for it to rain. You can describe it using probability.* 
+: It will rain or not rain this hour, regardless of whether you are observing and measuring. There is an internal probability of rain under the current weather conditions, which include temperature, wind, clouds, season, and air pressure. In reality, this probability changes every second because all of these conditions are constantly changing. *There is an inherent tendency for it to rain. You can describe this tendency using probability.* 
+
+Because it is helpful to have a different approach to ratios, we can also define the odds or chance. It's similar to probability, but the interpretation is different.
+
+Chance or odds
+
+: The chance of rain is defined as the ratio of observed rainy hours to non-rainy hours under current weather conditions. Unlike a probability, we are not interested in the number of events divided by the total, but rather the ratio of events to non-events. *In order to determine the odds of rain versus no rain, we need observations. It is impossible to determine the odds of rain based on one observation.* 
+ 
+To make matters worse, there is another aspect of statistics to consider. It is not a mathematical probability, but it is very important in statistics. We call it the likelihood, which I prefer to translate as "plausibility." So far, we have examined the data and observations of rainy days, as well as the conditions on those days.
+ 
 :::
 
 What will we do? We will learn how to model data. We will try to understand how to find patterns or meaning in data. Ideally, we will have a scientific background, meaning we will have a "why." Other times, we only do the modeling and are happy if we find any pattern. Sometimes, patterns are rare, or the relationships are more complicated than we thought. Life is difficult, and science is no better. In this book, we will use Fisherian statistics, which is inductive reasoning based on logic. In other words, it is the logic of inductive inference. Because we use repeated samples and a special type of probability, it is called frequentist statistics. There is also an older branch of statistics called Bayesian statistics. Bayesian statistics predates Fisherian statistics, but it is not as simple mathematically. Bayesian statistics is based on inverse probability and can only be solved with modern 21st-century computer power. Fisher rejected the subjectiveness of inverse probability @fisher1935design. However, I don't think he ever used them, so we could reject them as well. Nevertheless, Fisher switched from a mathematical deductive reasoning to a inductive reasoning in science. This is remarkable for me, because he changed the way he does science. We will come back to these topics later in the book.
