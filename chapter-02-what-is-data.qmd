@@ -26,6 +26,8 @@ Emma sat on the wooden stage. She need time to recover from what she had seen be
 
 ## General background
 
+What is data?
+
 More to simulation and artificial data. Artificial data is model-laden
 
 ## Theoretical background
