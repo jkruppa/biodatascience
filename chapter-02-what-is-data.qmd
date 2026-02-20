@@ -76,47 +76,91 @@ Do we want here to simulate data?
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 5
-#| fig-width: 6
+#| fig-height: 3
+#| fig-width: 4
 #| fig-cap: "foo."
 #| label: fig-02-cabbinet
 
-geom_fire_alarm <- function(x, y, alarm = FALSE, fire = FALSE) {
+geom_cabin <- function(x, y) {
   list(
-    annotate("segment", x = x, xend = x, y = y, yend = y+0.5),
-    annotate("segment", x = x+8, xend = x+8, y = y, yend = y+0.5),
-    annotate("segment", x = x+9, xend = x+9, y = y+1, yend = y+1.5),
+    annotate("segment", x = x+0.1, xend = x+0.1, y = y, yend = y+0.5, size = 1.5),
+    annotate("segment", x = x+7.9, xend = x+7.9, y = y, yend = y+0.5, size = 1.5),
+    annotate("segment", x = x+8.9, xend = x+8.9, y = y+1, yend = y+1.5, size = 1.5),
     # bottom
     geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
                              y = c(y+0.5, y+0.5, y+1.5, y+1.5)),
-               aes(x, y), fill = "gray50"), 
+               aes(x, y), fill = "gray70"), 
     # top
     geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
                              y = c(y+8.5, y+8.5, y+9.5, y+9.5)),
-               aes(x, y), fill = "gray50"), 
+               aes(x, y), fill = "#E16462FF", alpha = 0.8), 
     # left
     geom_shape(data = tibble(x = c(x, x+1, x+1, x), 
-                             y = c(y+0.5, y+1.5, y+9.5, y+8.5)),
-               aes(x, y), fill = "gray50"), 
+                             y = c(y+0.5, y+1.5, y+8.5, y+8.5)),
+               aes(x, y), fill = "gray75"), 
+    ## back
+    annotate("rect", xmin = x +1, xmax = x + 8, ymin = y+1.5, ymax = y +8.5, fill = "gray85"),
+    ## line
+    annotate("point", x =  x +0.5, y = y + 7.75, size = 2.75, color = "gray50"),
+    annotate("segment", x =  x +0.5, xend = x+8, y = y + 7.75, yend = y +7.75, size = 2,
+             lineend = "round"),
     # right
     geom_shape(data = tibble(x = c(x+8, x+9, x+9, x+8), 
                              y = c(y+0.5, y+1.5, y+9.5, y+8.5)),
-               aes(x, y), fill = "gray50"),
-    ## back
-    annotate("rect", xmin = x +1, xmax = x + 8, ymin = y+1.5, ymax = y +8.5, fill = "gray80"),
-    ## line
-    annotate("segment", x =  x +0.5, xend = x+8, y = y + 8, yend = y +8)
+               aes(x, y), fill = "#E16462FF")
   )
 }
 
+geom_hook <- function(x, y, width = 0.6, hook_text = "hook_text", hook_fill = "#0D088780",
+                      angle = 90, label = TRUE, label_text = "label_text"){
+  w <- width/2
+  list(
+    geom_shape(data = tibble(x = c(x -w, x -w, x + w, x + w), 
+                             y = c(y -0.5, y - 6.5, y -6.5, y -0.5)),
+               aes(x, y), radius = unit(0.1, 'cm'), fill = "white"), 
+    geom_shape(data = tibble(x = c(x -w, x -w, x + w, x + w), 
+                             y = c(y -0.5, y - 6.5, y -6.5, y -0.5)),
+               aes(x, y), radius = unit(0.1, 'cm'), fill = hook_fill), 
+    annotate("segment", x = c(x, x), xend = c(x-w+0.1, x +w-0.1), y = y, yend = y -0.5),
+    annotate("text", angle = angle, x = x, y = y - 3.5, label = hook_text),
+    if(label){
+      list(
+        annotate("label", hjust = "left", angle = 45, x = x, y = y +0.25, label = label_text,
+                    fill = "white"),
+        annotate("text", x = x, y = y, label = "$", fontface = 2, color = "#FCA636FF", size = 5)
+      )
+    }
+  )  
+}
 
 ggplot() +
   theme_void() +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, 10), ylim = c(0, 10)) +
-  scale_x_continuous(breaks = seq(-10,10,1)) +
-  scale_y_continuous(breaks = seq(-10,10,1)) +
-  geom_fire_alarm(x = 0.5, y = 0.5, alarm = "TRUE")
+ # theme_minimal() +
+  coord_cartesian(xlim = c(0, 10), ylim = c(0.5, 10)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_cabin(x = 0.5, y = 0.5) +
+  geom_hook(x = 1.5, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 2.75, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 4, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 5.25, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 5.25, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 6.5, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust") +
+  geom_hook(x = 7.75, y = 8.25, width = 0.8, angle = 0,
+            hook_text = str_c(c(2.1, 3.2, 2.1, 3.2, 2.1, 3.2, 2.1, 3.2), collapse = "\n"), 
+            label_text = "hust")
 ```
 
 
