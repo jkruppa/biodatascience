@@ -83,13 +83,29 @@ Do we want here to simulate data?
 
 geom_fire_alarm <- function(x, y, alarm = FALSE, fire = FALSE) {
   list(
-    annotate("rect", xmin = x +1.5, xmax = x + 4.5, ymin = y, ymax = y - 2, fill = "gray80"),
-    geom_shape(data = tibble(x = c(x+4.5, x+5, x+5, x+4.5), 
-                             y = c(y+0, y+0.5, y-1.5, y-2)),
+    annotate("segment", x = x, xend = x, y = y, yend = y+0.5),
+    annotate("segment", x = x+8, xend = x+8, y = y, yend = y+0.5),
+    annotate("segment", x = x+9, xend = x+9, y = y+1, yend = y+1.5),
+    # bottom
+    geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
+                             y = c(y+0.5, y+0.5, y+1.5, y+1.5)),
+               aes(x, y), fill = "gray50"), 
+    # top
+    geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
+                             y = c(y+8.5, y+8.5, y+9.5, y+9.5)),
+               aes(x, y), fill = "gray50"), 
+    # left
+    geom_shape(data = tibble(x = c(x, x+1, x+1, x), 
+                             y = c(y+0.5, y+1.5, y+9.5, y+8.5)),
+               aes(x, y), fill = "gray50"), 
+    # right
+    geom_shape(data = tibble(x = c(x+8, x+9, x+9, x+8), 
+                             y = c(y+0.5, y+1.5, y+9.5, y+8.5)),
                aes(x, y), fill = "gray50"),
-    geom_shape(data = tibble(x = c(x+1.5, x+2, x+5, x+4.5), 
-                             y = c(y+0, y+0.5, y+0.5, y+0)),
-               aes(x, y), fill = "gray65")
+    ## back
+    annotate("rect", xmin = x +1, xmax = x + 8, ymin = y+1.5, ymax = y +8.5, fill = "gray80"),
+    ## line
+    annotate("segment", x =  x +0.5, xend = x+8, y = y + 8, yend = y +8)
   )
 }
 
@@ -100,7 +116,7 @@ ggplot() +
   coord_cartesian(xlim = c(0, 10), ylim = c(0, 10)) +
   scale_x_continuous(breaks = seq(-10,10,1)) +
   scale_y_continuous(breaks = seq(-10,10,1)) +
-  geom_fire_alarm(x = 4, y = 4, alarm = "TRUE")
+  geom_fire_alarm(x = 0.5, y = 0.5, alarm = "TRUE")
 ```
 
 
