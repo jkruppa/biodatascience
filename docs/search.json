@@ -317,7 +317,7 @@
     "href": "chapter-02-what-is-data.html",
     "title": "2  What is data?",
     "section": "",
-    "text": "2.1 General background\nLast modified on 19. February 2026 at 13:34:11\nEmma sat on the wooden stage. She need time to recover from what she had seen behind the curtains. What she had seen beneath the wood had now become reality. Dust danced in the light. Single light beams hit some dust particles from time to time and exploded into golden rain. Sparkles dropped on the wood.\n“How is gold made?” Emma asked.\n“This was a long break. I’m a bit surprised by your question. I thought we should discuss your findings from behind the stage. Not gold.” Jeff answers from his seat on the left.\n“Gold cannot be formed through fusion in a star. This is only possible up to iron. You need a supernova or a collision of two neutron stars.” Emma spoke absently into the darkness.\n“Interesting topic. Was this observed? The collision of two neutron stars and the resulting gold spewing out,” Jeff laughed.\n“No, it was a computer simulation. Artificial data, if you will.” Emma looked around. She decided that it was time to begin the play.\n“Then it’s not real, and it’s not an explanation for me at all.” Jeff stated.\n“But the simulation was based on real observations.” Emma stood up and started building the scene for the play.\nWhat is data?\nMore to simulation and artificial data. Artificial data is model-laden",
+    "text": "2.1 General background\nLast modified on 19. February 2026 at 20:50:18\nEmma sat on the wooden stage. She need time to recover from what she had seen behind the curtains. What she had seen beneath the wood had now become reality. Dust danced in the light. Single light beams hit some dust particles from time to time and exploded into golden rain. Sparkles dropped on the wood.\n“How is gold made?” Emma asked.\n“This was a long break. I’m a bit surprised by your question. I thought we should discuss your findings from behind the stage. Not gold.” Jeff answers from his seat on the left.\n“Gold cannot be formed through fusion in a star. This is only possible up to iron. You need a supernova or a collision of two neutron stars.” Emma spoke absently into the darkness.\n“Interesting topic. Was this observed? The collision of two neutron stars and the resulting gold spewing out,” Jeff laughed.\n“No, it was a computer simulation. Artificial data, if you will.” Emma looked around. She decided that it was time to begin the play.\n“Then it’s not real, and it’s not an explanation for me at all.” Jeff stated.\n“But the simulation was based on real observations.” Emma stood up and started building the scene for the play.\nWe will now think about data. This will happen after we have talked about science. It will also happen if you have skipped the chapter entirely. What is data? If you had asked me when I was a teenager, I would have referred to Star Trek: The Next Generation and Commander Data. He was an android without any emotions. Pure objectivity. He was an artificial being. However, this is not the type of data we want to discuss. We want to discuss data that has been observed and measured. Furthermore, our data is numeric or has a numeric counterpart. We use descriptive words, but rarely. Later on, we want to run algorithms and calculations with our data. Therefore, the data must be open to calculations.\nCan we use data in any format? No, you cannot. There is a general format for how data should be stored. In our case, we have observations in the rows and variables of measurement in the columns. There can only be one observation per row. This format is called the long format. Another possibility is the wide format, where the observations are scattered around and do not share the same rows. The wide format may be useful for time series, but I do not recommend it.\nIn this book, we will follow an inductive approach. First, we make observations, then we try to find patterns in them. Therefore, our data is the fuel of discovery. Conversely, we can also use data to test a hypothesis. Both are valid and are used. Since this book is about statistics and data science, we cannot generate new theories. We are limited by the tools we have and the data available to us. This book may be read by those with a background in natural science. Then, you can use the statistical tools differently.\nobservations are theory-laden\nObservation = Sensory Input + Theoretical Framework\nFigure 2.1: foo",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -327,8 +327,8 @@
     "objectID": "chapter-02-what-is-data.html#theoretical-background",
     "href": "chapter-02-what-is-data.html#theoretical-background",
     "title": "2  What is data?",
-    "section": "2.2 Theoretical background",
-    "text": "2.2 Theoretical background",
+    "section": "2.9 Theoretical background",
+    "text": "2.9 Theoretical background",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -338,8 +338,8 @@
     "objectID": "chapter-02-what-is-data.html#r-packages-used",
     "href": "chapter-02-what-is-data.html#r-packages-used",
     "title": "2  What is data?",
-    "section": "2.3 R packages used",
-    "text": "2.3 R packages used",
+    "section": "2.10 R packages used",
+    "text": "2.10 R packages used\nDo we want here to simulate data?\n\n\n\n\n\n\n\n\nFigure 2.2: foo.",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -349,8 +349,8 @@
     "objectID": "chapter-02-what-is-data.html#data",
     "href": "chapter-02-what-is-data.html#data",
     "title": "2  What is data?",
-    "section": "2.4 Data",
-    "text": "2.4 Data\nExperiment vs observed data\nIs your data the fuel of discovery or the test of discovery?\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n8.5\n\n\n1.0\n9.6\n\n\n2.3\n13.7\n\n\n3.5\n13.2\n\n\n5.2\n11.0\n\n\n7.1\n8.3\n\n\n8.4\n10.9\n\n\n9.2\n14.3\n\n\n10.0\n21.1\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.1: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: foo.\n\n\n\n\n\nobservations are theory-laden\nObservation = Sensory Input + Theoretical Framework\n\n\n\n\n\n\n\n\nFigure 2.3: foo",
+    "section": "2.11 Data",
+    "text": "2.11 Data\nIs your data the fuel of discovery or the test of discovery?\n\n\nR Code [show / hide]\njump_weight_tbl &lt;- tibble(x = c(0.6, 1, 2.3, 3.5, 5.2, 7.1, 8.4, 9.2, 10),\n                          y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(9, 0, 0.5)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(weight_mg = x, jump_length_cm = y)\n\n\n\n\n\n\nTable 2.1: foo.\n\n\n\n\n\n\nweight_mg\njump_length_cm\n\n\n\n\n0.6\n8.5\n\n\n1.0\n9.6\n\n\n2.3\n13.7\n\n\n3.5\n13.2\n\n\n5.2\n11.0\n\n\n7.1\n8.3\n\n\n8.4\n10.9\n\n\n9.2\n14.3\n\n\n10.0\n21.1\n\n\n\n\n\n\n\n\nEquation 2.1\n\\[\ny = 0.15\\cdot x^3 - 2.2\\cdot x^2 + 8.8 \\cdot x + 3.2\n\\tag{2.1}\\]\n\n\n\n\n\n\n\n\nFigure 2.3: foo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.4: foo.",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -360,8 +360,8 @@
     "objectID": "chapter-02-what-is-data.html#alternatives",
     "href": "chapter-02-what-is-data.html#alternatives",
     "title": "2  What is data?",
-    "section": "2.5 Alternatives",
-    "text": "2.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "section": "2.12 Alternatives",
+    "text": "2.12 Alternatives\nFurther tutorials and R packages on XXX",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -371,8 +371,8 @@
     "objectID": "chapter-02-what-is-data.html#glossary",
     "href": "chapter-02-what-is-data.html#glossary",
     "title": "2  What is data?",
-    "section": "2.6 Glossary",
-    "text": "2.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "section": "2.13 Glossary",
+    "text": "2.13 Glossary\n\nterm\n\nwhat does it mean.",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -382,8 +382,8 @@
     "objectID": "chapter-02-what-is-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "href": "chapter-02-what-is-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
     "title": "2  What is data?",
-    "section": "2.7 The meaning of “Models of Reality” in this chapter.",
-    "text": "2.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "section": "2.14 The meaning of “Models of Reality” in this chapter.",
+    "text": "2.14 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -393,8 +393,8 @@
     "objectID": "chapter-02-what-is-data.html#summary",
     "href": "chapter-02-what-is-data.html#summary",
     "title": "2  What is data?",
-    "section": "2.8 Summary",
-    "text": "2.8 Summary",
+    "section": "2.15 Summary",
+    "text": "2.15 Summary",
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
@@ -1789,6 +1789,83 @@
     "crumbs": [
       "The stage to be set",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>What is science?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#simulation-and-artificial-data",
+    "href": "chapter-02-what-is-data.html#simulation-and-artificial-data",
+    "title": "2  What is data?",
+    "section": "2.2 Simulation and artificial data",
+    "text": "2.2 Simulation and artificial data\nArtificial data is model-laden",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#technical-vs.-biological-replication",
+    "href": "chapter-02-what-is-data.html#technical-vs.-biological-replication",
+    "title": "2  What is data?",
+    "section": "2.3 Technical vs. biological replication",
+    "text": "2.3 Technical vs. biological replication",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#experimental-vs.-observed-data",
+    "href": "chapter-02-what-is-data.html#experimental-vs.-observed-data",
+    "title": "2  What is data?",
+    "section": "2.4 Experimental vs. observed data",
+    "text": "2.4 Experimental vs. observed data",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#clinical-studies",
+    "href": "chapter-02-what-is-data.html#clinical-studies",
+    "title": "2  What is data?",
+    "section": "2.5 Clinical studies",
+    "text": "2.5 Clinical studies",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#long-format-vs.-wide-format",
+    "href": "chapter-02-what-is-data.html#long-format-vs.-wide-format",
+    "title": "2  What is data?",
+    "section": "2.6 Long format vs. wide format",
+    "text": "2.6 Long format vs. wide format",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#the-elephant-in-the-room-is-excel",
+    "href": "chapter-02-what-is-data.html#the-elephant-in-the-room-is-excel",
+    "title": "2  What is data?",
+    "section": "2.7 The elephant in the room is Excel",
+    "text": "2.7 The elephant in the room is Excel",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-02-what-is-data.html#tidy-data",
+    "href": "chapter-02-what-is-data.html#tidy-data",
+    "title": "2  What is data?",
+    "section": "2.8 Tidy data",
+    "text": "2.8 Tidy data",
+    "crumbs": [
+      "The stage to be set",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is data?</span>"
     ]
   }
 ]
