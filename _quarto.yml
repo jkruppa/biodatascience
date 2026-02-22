@@ -33,6 +33,7 @@ book:
       - chapter-01-what-is-science.qmd
       - chapter-02-what-is-data.qmd
       - chapter-03-what-is-a-model.qmd
+    - part: interlude-I-gummibaers.qmd
     - part: chapter-10-preface.qmd  
       chapters:
       - chapter-11-covariate-data.qmd
