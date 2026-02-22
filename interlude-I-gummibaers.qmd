@@ -16,6 +16,11 @@ source("init.R")
 
 ## Data
 
+```{r}
+gummi_tbl <- read_excel("data/gummibears.xlsx")
+```
+
+
 ## Alternatives 
 
 Further tutorials and R packages on XXX

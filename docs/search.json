@@ -1873,7 +1873,7 @@
     "href": "interlude-I-gummibaers.html",
     "title": "Interlude I - Gummy bears",
     "section": "",
-    "text": "General background\nLast modified on 22. February 2026 at 14:55:57",
+    "text": "General background\nLast modified on 22. February 2026 at 19:01:37",
     "crumbs": [
       "Interlude I - Gummy bears"
     ]
@@ -1903,7 +1903,7 @@
     "href": "interlude-I-gummibaers.html#data",
     "title": "Interlude I - Gummy bears",
     "section": "Data",
-    "text": "Data",
+    "text": "Data\n\n\nR Code [show / hide]\ngummi_tbl &lt;- read_excel(\"data/gummibears.xlsx\")",
     "crumbs": [
       "Interlude I - Gummy bears"
     ]
