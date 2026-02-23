@@ -20,6 +20,60 @@ source("init.R")
 gummi_tbl <- read_excel("data/gummibears.xlsx")
 ```
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-bears
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+gummi_bears_tbl <- read_excel("data/gummibears.xlsx") |> 
+  select(year:white)
+
+rbind(head(gummi_bears_tbl, n = 4),
+      rep("...", times = ncol(gummi_bears_tbl)),
+      tail(gummi_bears_tbl, n = 4)) |> 
+  kable(align = "c", "pipe")
+```
+
+```{r}
+gummi_count_tbl <- gummi_bears_tbl %>%
+  rowwise() %>% 
+  mutate(count_bear = sum(c_across(darkred:white)),
+         count_color = sum(c_across(darkred:white) > 0)) |> 
+  ungroup() |> 
+  select(year, count_bear, count_color)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-bears-count
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+rbind(head(gummi_count_tbl, n = 4),
+      rep("...", times = ncol(gummi_count_tbl)),
+      tail(gummi_count_tbl, n = 4)) |> 
+  kable(align = "c", "pipe")
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-sudent
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+gummi_student_tbl <- read_excel("data/gummibears.xlsx") |> 
+  select(year, most_liked:semester) 
+
+rbind(head(gummi_student_tbl, n = 4),
+      rep("...", times = ncol(gummi_student_tbl)),
+      tail(gummi_student_tbl, n = 4)) |> 
+  kable(align = "c", "pipe")
+```
 
 ## Alternatives 
 

@@ -1873,7 +1873,7 @@
     "href": "interlude-I-gummibaers.html",
     "title": "Interlude I - Gummy bears",
     "section": "",
-    "text": "General background\nLast modified on 22. February 2026 at 19:01:37",
+    "text": "General background\nLast modified on 23. February 2026 at 12:03:51",
     "crumbs": [
       "Interlude I - Gummy bears"
     ]
@@ -1903,7 +1903,7 @@
     "href": "interlude-I-gummibaers.html#data",
     "title": "Interlude I - Gummy bears",
     "section": "Data",
-    "text": "Data\n\n\nR Code [show / hide]\ngummi_tbl &lt;- read_excel(\"data/gummibears.xlsx\")",
+    "text": "Data\n\n\nR Code [show / hide]\ngummi_tbl &lt;- read_excel(\"data/gummibears.xlsx\")\n\n\n\n\n\n\nTable 1: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\ndarkred\nlightred\norange\nyellow\ngreen\nwhite\n\n\n\n\n2018\n0\n0\n5\n4\n0\n0\n\n\n2018\n0\n3\n1\n4\n1\n1\n\n\n2018\n1\n2\n2\n2\n1\n1\n\n\n2018\n2\n0\n2\n1\n2\n3\n\n\n…\n…\n…\n…\n…\n…\n…\n\n\n2025\n0\n0\n0\n3\n2\n4\n\n\n2025\n3\n0\n0\n2\n0\n3\n\n\n2025\n2\n1\n2\n3\n1\n1\n\n\n2025\n1\n0\n2\n2\n2\n2\n\n\n\n\n\n\n\n\n\n\nR Code [show / hide]\ngummi_count_tbl &lt;- gummi_bears_tbl %&gt;%\n  rowwise() %&gt;% \n  mutate(count_bear = sum(c_across(darkred:white)),\n         count_color = sum(c_across(darkred:white) &gt; 0)) |&gt; \n  ungroup() |&gt; \n  select(year, count_bear, count_color)\n\n\n\n\n\n\nTable 2: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\ncount_bear\ncount_color\n\n\n\n\n2018\n9\n2\n\n\n2018\n10\n5\n\n\n2018\n9\n6\n\n\n2018\n10\n5\n\n\n…\n…\n…\n\n\n2025\n9\n3\n\n\n2025\n8\n3\n\n\n2025\n10\n6\n\n\n2025\n9\n5\n\n\n\n\n\n\n\n\n\n\n\n\nTable 3: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\nmost_liked\ngender\nage\nheight\nsemester\n\n\n\n\n2018\nlightred\nmale\n35\n193\n10\n\n\n2018\nyellow\nfemale\n21\n159\n6\n\n\n2018\nwhite\nfemale\n21\n159\n6\n\n\n2018\nwhite\nfemale\n36\n180\n10\n\n\n…\n…\n…\n…\n…\n…\n\n\n2025\nwhite\nfemale\n28\nNA\nNA\n\n\n2025\nyellow\nfemale\n21\n178\n1\n\n\n2025\norange\nmale\n22\n176\n1\n\n\n2025\ndarkred\nfemale\n24\n170\n1",
     "crumbs": [
       "Interlude I - Gummy bears"
     ]
