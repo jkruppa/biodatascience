@@ -89,25 +89,25 @@ geom_cabin <- function(x, y) {
     # bottom
     geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
                              y = c(y+0.5, y+0.5, y+1.5, y+1.5)),
-               aes(x, y), fill = "gray70"), 
+               aes(x, y), fill = "gray70", color = "black"), 
     # top
     geom_shape(data = tibble(x = c(x, x+8, x+9, x+1), 
                              y = c(y+8.5, y+8.5, y+9.5, y+9.5)),
-               aes(x, y), fill = "#E16462FF", alpha = 0.8), 
+               aes(x, y), fill = "#E16462FF", alpha = 0.8, color = "black"), 
     # left
     geom_shape(data = tibble(x = c(x, x+1, x+1, x), 
                              y = c(y+0.5, y+1.5, y+8.5, y+8.5)),
-               aes(x, y), fill = "gray75"), 
+               aes(x, y), fill = "gray75", color = "black"), 
     ## back
     annotate("rect", xmin = x +1, xmax = x + 8, ymin = y+1.5, ymax = y +8.5, fill = "gray85"),
     ## line
     annotate("point", x =  x +0.5, y = y + 7.75, size = 2.75, color = "gray50"),
-    annotate("segment", x =  x +0.5, xend = x+8, y = y + 7.75, yend = y +7.75, size = 2,
+    annotate("segment", x =  x +0.5, xend = x+8, y = y + 7.75, yend = y +7.75, size = 1.25,
              lineend = "round"),
     # right
     geom_shape(data = tibble(x = c(x+8, x+9, x+9, x+8), 
                              y = c(y+0.5, y+1.5, y+9.5, y+8.5)),
-               aes(x, y), fill = "#E16462FF")
+               aes(x, y), fill = "#E16462FF", color = "black")
   )
 }
 
