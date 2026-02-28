@@ -282,6 +282,10 @@ Explanation and prediction are interchangeable. First, you need a model to expla
 
 Decision-making is slightly different. This could also be called a conclusion or, more technically, 'inference'.
 
+@breiman2001statistical
+
+@berger2026daten -> There might be some ideas...
+
 ## Alternatives
 
 *An Incomplete Theory: The Search for Quantum Gravity (a Story)* by Megan Henry @henry2024incomplete

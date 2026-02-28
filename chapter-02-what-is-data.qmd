@@ -50,6 +50,11 @@ Observation = Sensory Input + Theoretical Framework
 p_observation_data
 ```
 
+
+@hassenstein2025ten
+
+@wilkinson2016fair
+
 ## Simulation and artificial data
 Artificial data is model-laden
 
