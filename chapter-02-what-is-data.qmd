@@ -66,11 +66,26 @@ In this book, we will follow an inductive approach. First, we make observations,
 ggplot() +
   theme_void() +
   theme_minimal() +
-  coord_cartesian(xlim = c(0, 8), ylim = c(0, 5)) +
+  coord_cartesian(xlim = c(0, 6), ylim = c(0, 5)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(1.1, 2.9, 2.9, 1.1), 
+                           y = c(0.1, 0.1, 4.9, 4.9)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("segment", x = 0, xend = 10, y = 1:4, yend = 1:4) +
-  annotate("segment", x = 1:7, xend = 1:7, y = 0, yend = 5)
+  annotate("segment", x = 1:5, xend = 1:5, y = 0, yend = 5) +
+  annotate("text", x = seq(1.5, 4.5, 1), y = 4.5,
+           label = c(1, 2, 3, "...")) +
+  annotate("text", x = 5.5, y = 4.5, label = "p", fontface = 2, size = 5) +
+  annotate("text", y = seq(3.5, 1.5, -1), x = 0.5,
+           label = c(1, 2, "...")) +
+  annotate("text", x = 0.5, y = 0.5, label = "n", fontface = 2, size = 5) +
+  annotate("segment", x = 0, xend = 1, y = 5, yend = 4) +
+  annotate("text", x = 0.25, y = 4.25, label = "[i, ]", fontface = 2, size = 5) +
+  annotate("text", x = 0.75, y = 4.75, label = "[ , j]", fontface = 2, size = 5) +
+  annotate("text", x = 3.5, y = 4.75, label = "Columns", size = 10, fontface = 3) +
+  annotate("text", x = 0.25, y = 2.5, label = "Rows", size = 10, fontface = 3, angle = 90)
+  
 
 
 
