@@ -65,31 +65,82 @@ In this book, we will follow an inductive approach. First, we make observations,
 
 ggplot() +
   theme_void() +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, 6), ylim = c(0, 5)) +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(-0.45, 6), ylim = c(0, 5.8)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  geom_shape(data = tibble(x = c(1.1, 2.9, 2.9, 1.1), 
-                           y = c(0.1, 0.1, 4.9, 4.9)),
+  geom_shape(data = tibble(x = c(1.1, 5.9, 5.9, 1.1), 
+                           y = c(0.1, 0.1, 3.9, 3.9)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
   annotate("segment", x = 0, xend = 10, y = 1:4, yend = 1:4) +
   annotate("segment", x = 1:5, xend = 1:5, y = 0, yend = 5) +
   annotate("text", x = seq(1.5, 4.5, 1), y = 4.5,
-           label = c(1, 2, 3, "...")) +
+           label = c(1, 2, 3, "..."), fontface = 2, size = 5) +
   annotate("text", x = 5.5, y = 4.5, label = "p", fontface = 2, size = 5) +
   annotate("text", y = seq(3.5, 1.5, -1), x = 0.5,
-           label = c(1, 2, "...")) +
+           label = c(1, 2, "..."), fontface = 2, size = 5) +
   annotate("text", x = 0.5, y = 0.5, label = "n", fontface = 2, size = 5) +
   annotate("segment", x = 0, xend = 1, y = 5, yend = 4) +
-  annotate("text", x = 0.25, y = 4.25, label = "[i, ]", fontface = 2, size = 5) +
-  annotate("text", x = 0.75, y = 4.75, label = "[ , j]", fontface = 2, size = 5) +
-  annotate("text", x = 3.5, y = 4.75, label = "Columns", size = 10, fontface = 3) +
-  annotate("text", x = 0.25, y = 2.5, label = "Rows", size = 10, fontface = 3, angle = 90)
-  
-
-
-
+  annotate("text", x = 0.25, y = 4.3, label = "[i, ]", fontface = 2, size = 5) +
+  annotate("text", x = 0.8, y = 4.75, label = "[ , j]", fontface = 2, size = 5) +
+  annotate("text", x = 3.5, y = 5.5, label = "Columns", size = 7, fontface = 2) +
+  annotate("text", x = -0.25, y = 2.5, label = "Rows", size = 7, fontface = 2, angle = 90) +
+  annotate("text", x = c(seq(1.5, 3.5, 1), 5.5), y = 1.5, label = "...") +
+  annotate("text", x = 4.5, y = c(0.5, 2.5, 3.5), label = "...") +
+  annotate("text", x = c(1.5, 2.5, 3.5, 5.5, 1.5, 2.5, 3.5, 5.5, 1.5, 2.5, 3.5, 5.5, 4.5),
+           y = c(3.5, 3.5, 3.5, 3.5, 2.5, 2.5, 2.5, 2.5, 0.5, 0.5, 0.5, 0.5, 1.5),
+           label = c("[1, 1]", "[1, 2]", "[1, 3]", "[1, p]",
+                     "[2, 1]", "[2, 2]", "[2, 3]", "[2, p]",
+                     "[n, 1]", "[n, 2]", "[n, 3]", "[n, p]", "[i, j]"), size = 4.5)
 ```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 7
+#| fig-cap: "foo. **(A)** foo. **(B)**"
+#| label: fig-02-data-complex
+
+ggplot() +
+  theme_void() +
+  #theme_minimal() +
+  coord_cartesian(xlim = c(-0.45, 6), ylim = c(0, 5.8)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(0.1, 0.9, 0.9, 0.1), 
+                           y = c(0.1, 0.1, 4.6, 4.6)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#6A00A880", alpha = 0.2) +
+  geom_shape(data = tibble(x = c(1.1, 2.9, 2.9, 1.1), 
+                           y = c(0.1, 0.1, 4.6, 4.6)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#B12A9080", alpha = 0.2) +
+  geom_shape(data = tibble(x = c(3.1, 5.9, 5.9, 3.1), 
+                           y = c(0.1, 0.1, 4.6, 4.6)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#FCA63680", alpha = 0.2) +
+  annotate("segment", x = 0, xend = 10, y = 1:4, yend = 1:4) +
+  annotate("segment", x = 1:5, xend = 1:5, y = 0, yend = c(5, 4.6, 5, 4.6, 4.6)) +
+  annotate("text", x = seq(0.5, 5.5, 1), y = 4.3,
+           label = c(expression(bold(ID)), expression(bold(X[1])), expression(bold(X[2])), 
+                     expression(bold(Y[1])), expression(bold(Y[2])), expression(bold(Y[3]))), 
+           fontface = 2, size = 5) +
+  annotate("label", x = c(0.5, 2, 4.5), y = 4.9,
+           label = c("Individual", "Experimental", "Measurement"),
+           fill = c("#6A00A880", "#B12A9080", "#FCA63680"), size = 4, fontface = 2) +
+  annotate("text", y = seq(3.5, 1.5, -1), x = 0.5,
+           label = c(1, 2, "..."), fontface = 2, size = 5) +
+  annotate("text", x = 0.5, y = 0.5, label = "n", fontface = 2, size = 5) +
+  annotate("text", x = 3.5, y = 5.5, label = "Columns", size = 7, fontface = 2) +
+  annotate("text", x = -0.25, y = 2.5, label = "Rows", size = 7, fontface = 2, angle = 90) +
+  annotate("text", x = rep(c(1.5, 2.5, 3.5, 4.5, 5.5), each = 4),
+           y = rep(c(0.5, 1.5, 2.5, 3.5), times = 5), 
+           label = c(2.1, 4.1, 3.2, 6.2, "cat", "cat", "cat", "dog", 
+                     2, 2, 4, 1, 3.21, 4.71, 5.82, 2.73, 1, 1, 0, 1),
+           size = 4.5)
+```
+
+What is with time series?
 
 
 @hassenstein2025ten
