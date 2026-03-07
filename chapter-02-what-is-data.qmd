@@ -48,9 +48,10 @@ This book requires a highly specific type of observation. We need data. Very rar
 
 We will now think about data. This will happen after we have discussed the science in the chapter. It will also happen if you have skipped the chapter entirely. What is data? If you had asked me when I was a teenager, I would have referred to Star Trek: The Next Generation and Commander Data. He was an android without any emotions. Pure objectivity. He was an artificial being. However, this is not the type of data we want to discuss. We want to discuss data that has been observed and measured. Furthermore, our data is numeric or has a numeric counterpart. We use descriptive words, but rarely. Later on, we want to run algorithms and calculations with our data. Therefore, the data must be open to calculations.
 
+In this book, we will follow an inductive approach. First, we make observations, then we try to find patterns in them. Therefore, our data is the fuel of discovery. Conversely, we can also use data to test a hypothesis. Both are valid and are used. Since this book is about statistics and data science, we cannot generate new theories. We are limited by the tools we have and the data available to us. This book may be read by those with a background in natural science. Then, you can use the statistical tools differently.
+
 Can we use data in any format? No, you cannot. There is a general format for how data should be stored. In our case, we have observations in the rows and variables of measurement in the columns. There can only be one observation per row. This format is called the long format. Another possibility is the wide format, where the observations are scattered around and do not share the same rows. The wide format may be useful for time series, but I do not recommend it.
 
-In this book, we will follow an inductive approach. First, we make observations, then we try to find patterns in them. Therefore, our data is the fuel of discovery. Conversely, we can also use data to test a hypothesis. Both are valid and are used. Since this book is about statistics and data science, we cannot generate new theories. We are limited by the tools we have and the data available to us. This book may be read by those with a background in natural science. Then, you can use the statistical tools differently.
 
 
 ```{r}
@@ -135,8 +136,8 @@ ggplot() +
   annotate("text", x = -0.25, y = 2.5, label = "Rows", size = 7, fontface = 2, angle = 90) +
   annotate("text", x = rep(c(1.5, 2.5, 3.5, 4.5, 5.5), each = 4),
            y = rep(c(0.5, 1.5, 2.5, 3.5), times = 5), 
-           label = c(2.1, 4.1, 3.2, 6.2, "cat", "cat", "cat", "dog", 
-                     2, 2, 4, 1, 3.21, 4.71, 5.82, 2.73, 1, 1, 0, 1),
+           label = c(10.1, 12.4, 15.6, 22.4, "cat", "cat", "cat", "dog", 
+                     2, 2, 4, 1, 22.1, 19.7, 24.3, 33.2, 1, 1, 0, 1),
            size = 4.5)
 ```
 
