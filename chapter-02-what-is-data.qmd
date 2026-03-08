@@ -52,7 +52,7 @@ In this book, we will follow an inductive approach. First, we make observations,
 
 Can we use data in any format? No, you cannot. There is a general format for how data should be stored. In our case, we have observations in the rows and variables of measurement in the columns. There can only be one observation per row. This format is called the long format. Another possibility is the wide format, where the observations are scattered around and do not share the same rows. The wide format may be useful for time series, but I do not recommend it.
 
-
+Data are observations represented by numbers and letters.
 
 ```{r}
 #| message: false
