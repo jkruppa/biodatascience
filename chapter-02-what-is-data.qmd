@@ -50,7 +50,7 @@ We will now think about data. This will happen after we have discussed the scien
 
 Data are observations represented by numbers and letters. Can we use data in any format? No, you cannot. There is a general format for how data should be stored. In our case, we have observations in the rows and variables of measurement in the columns. There can only be one observation per row. This format is called the long format. Another possibility is the wide format, where the observations are scattered around and do not share the same rows. The wide format may be useful for time series, but I do not recommend it.
 
-The following figure @fig-02-data-2d-matrix shows a typical data set used in data science and statistics. It is also typical for those working in the life sciences. The matrix has $n$ rows and $p$ columns. To select a cell, we can write the row and column information in brackets. The rows are indicated by $i$ and the columns by $j$. This is a simple way of extracting information from a data table. However, these manipulations are not normally used anymore because they are very error-prone. This is a simple yet powerful way of storing information. We translate our observations into numbers and letters, which we then put into a two-dimensional matrix.
+The following @fig-02-data-2d-matrix shows a typical data set used in data science and statistics. It is also typical for those working in the life sciences. The matrix has $n$ rows and $p$ columns. To select a cell, we can write the row and column information in brackets. The rows are indicated by $i$ and the columns by $j$. This is a simple way of extracting information from a data table. However, these manipulations are not normally used anymore because they are very error-prone. This is a simple yet powerful way of storing information. We translate our observations into numbers and letters, which we then put into a two-dimensional matrix.
 
 ```{r}
 #| message: false
@@ -64,7 +64,7 @@ The following figure @fig-02-data-2d-matrix shows a typical data set used in dat
 p_data_2d_matrix
 ```
 
-Figure @fig-02-data-2d-matrix-annotated might be interesting, but it is not very helpful in the daily working process. Therefore, I will show you an annotated data table with example observations labelled with numbers and letters. The first columns contain an identifier for each observation, or ID. I always include one in my data sets because I always want to know which individual is which. This is even more important when working with time series or repeated measurements. After the ID column, we find the experimental variables. We can also refer to these as 'X' variables, as we will plot them on the x-axis in our visualisations later on. We will often set the experimental variables before we start the experiment. Then, we find the measurements on the individuals. These variables are called outcomes or 'Y' variables, as they will be the variables on our y-axis later on. The terminology used varies from scientific field to scientific field. I will therefore talk about terminology in a separate chapter later on.
+@fig-02-data-2d-matrix-annotated might be interesting, but it is not very helpful in the daily working process. Therefore, I will show you an annotated data table with example observations labelled with numbers and letters. The first columns contain an identifier for each observation, or ID. I always include one in my data sets because I always want to know which individual is which. This is even more important when working with time series or repeated measurements. After the ID column, we find the experimental variables. We can also refer to these as 'X' variables, as we will plot them on the x-axis in our visualizations later on. We will often set the experimental variables before we start the experiment. Then, we find the measurements on the individuals. These variables are called outcomes or 'Y' variables, as they will be the variables on our y-axis later on. The terminology used varies from scientific field to scientific field. I will therefore talk about terminology in a separate chapter later on.
 
 ```{r}
 #| message: false
@@ -78,35 +78,38 @@ Figure @fig-02-data-2d-matrix-annotated might be interesting, but it is not very
 p_data_2d_matrix_annotated
 ```
 
+Can we live with this two-dimensional representation of data? Not really. If you look at different fields, you will find a variety of other data tables. In genetics, we do not have data sets of this kind when we look at thousands of genes. Therefore, we have at least two data files: One contains all the information on the patients or individuals, and the other contains all the genetic information. Most of the time, the genetic file is saved in a transposed form. This means that the variables or genes are in the rows and the individuals are in the columns. This is because it is easier to change rows in a data set than columns. This gives us an advantage when it comes to saving and manipulating the data. However, this makes it slightly more complicated to work with such data. Further, geology has its own data format, while other fields use different ways of storing data. Storage methods sometimes depend on the analysis software used or the storage and calculation capacities required.
 
-In genetics, we do not have data sets of this kind when we look at thousands of genes. Therefore, we have at least two data files: One contains all the information on the patients or individuals, and the other contains all the genetic information. Most of the time, the genetic file is saved in a transposed form. This means that the variables or genes are in the rows and the individuals are in the columns. This is because it is easier to change rows in a dataset than columns. This gives us an advantage when it comes to saving and manipulating the data. However, this makes it slightly more complicated to work with such data.
+Here, we will focus on the presented data set in @fig-02-data-2d-matrix-annotated, making some modifications to the columns if we are working with time series or repeated measurements. However, we will stick to one data set and will not consider complicated representations. We will talk about the experimental variables and the different types of measurements, both of which are represented by different numbers and letters. There are still many topics to consider if we want to work with data to obtain information and knowledge. In the following sections, we will cover different attributes and limitations of data that are important for successful work.
 
-What is with time series?
+## Things to consider
 
+### Simulation and artificial data
+
+You might be surprised to learn that, in statistical research, we statisticians work with simulated data. This data is also known as artificial data. This data has no experimental background and is entirely simulated. We simulate our measured values based on the experimental values. Therefore, we need to make some assumptions about the simulation process. Consequently, we can conclude that our artificial data is model-laden. We need a model to connect the experimental and measured variables. We can call this connection a model. If we change the model, the generated data will also change.
+
+In this book, we will simulate our data. This may seem counterintuitive, as we will use data with predefined effects and differences. What is the point of such data? What can we learn from it?
+
+@dormann2025statistics
+
+In vivo versus in silico.
+
+### Technical vs. biological replication
+
+### Experimental vs. observed data
+
+### Clinical studies
+
+### Long format vs. wide format
+
+### The elephant in the room is Excel
 
 @hassenstein2025ten
 
 @wilkinson2016fair
 
-In this book, we will follow an inductive approach. First, we make observations, then we try to find patterns in them. Therefore, our data is the fuel of discovery. Conversely, we can also use data to test a hypothesis. Both are valid and are used. Since this book is about statistics and data science, we cannot generate new theories. We are limited by the tools we have and the data available to us. This book may be read by those with a background in natural science. Then, you can use the statistical tools differently.
+### Tidy data
 
-## Simulation and artificial data
-
-Artificial data is model-laden
-
-## Technical vs. biological replication
-
-## Experimental vs. observed data
-
-## Clinical studies
-
-## Long format vs. wide format
-
-## The elephant in the room is Excel
-
-## Tidy data
-
-## Theoretical background
 
 ## R packages used
 
@@ -299,6 +302,8 @@ ggplot(jump_weight_tbl, aes(x = weight_mg, y = jump_length_cm)) +
 
 What do we want to do in this book? We want to perform inductive reasoning based on data. Statistical modeling is inductive reasoning, so it is also based on data. Therefore, we will need data to perform statistical analyses in any possible combination. In other words, we live in a data-driven world.
 
+
+In this book, we will follow an inductive approach. First, we make observations, then we try to find patterns in them. Therefore, our data is the fuel of discovery. Conversely, we can also use data to test a hypothesis. Both are valid and are used. Since this book is about statistics and data science, we cannot generate new theories. We are limited by the tools we have and the data available to us. This book may be read by those with a background in natural science. Then, you can use the statistical tools differently.
 
 ## Alternatives
 
