@@ -88,7 +88,7 @@ Here, we will focus on the presented data set in @fig-02-data-2d-matrix-annotate
 
 You might be surprised to learn that, in statistical research, we statisticians work with simulated data. This data is also known as artificial data. This data has no experimental background and is entirely simulated. We simulate our measured values based on the experimental values. Therefore, we need to make some assumptions about the simulation process. Consequently, we can conclude that our artificial data is model-laden. We need a model to connect the experimental and measured variables. We can call this connection a model. If we change the model, the generated data will also change.
 
-In this book, we will simulate our data. This may seem counterintuitive, as we will use data with predefined effects and differences. What is the point of such data? What can we learn from it?
+In this book, we will simulate our data. This may seem counterintuitive, as we will use data with predefined effects and differences. What is the point of such data? What can we learn from it? The advantage of simulated data is that we already know what we want to find with our statistical algorithms. The advantage of using simulated data is that we already know what we are looking for with our statistical algorithms. Otherwise, we would not know whether there were no patterns in the data or whether our algorithm was unable to detect them.
 
 @dormann2025statistics
 
@@ -99,6 +99,8 @@ In vivo versus in silico.
 ### Experimental vs. observed data
 
 ### Clinical studies
+
+What is your target? Human, animal, mice or plant? Cell culture could also be. 
 
 ### Long format vs. wide format
 
