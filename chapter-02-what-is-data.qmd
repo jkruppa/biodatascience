@@ -27,7 +27,7 @@ Emma sat on the wooden stage. She need time to recover from what she had seen be
 
 ## What is observed?
 
-![Test](images/data_window_view.png){fig-align="center" width="373" #fig-data-window-view}
+![My son and I are observing the people riding bicycles on an early spring day. Given their clothing and headwear, my son tried to guess what season it really was. Some cyclists seem to be dressed for spring, others for winter, and one young woman for summer. He was very confused because it was really hard to guess. Why was there such a wide variation?](images/data_window_view.png){fig-align="center" width="373" #fig-data-window-view}
 
 Can we observe anything? What does it mean to observe? We see things, but our vision is already influenced by our understanding of what they are. Additionally, by naming things and processes, we are already following a theory. "The sun is rising" is a popular example of a saying connected with the geocentric theory, which states that the Earth is at the center of the solar system. Therefore, our language is already influenced by our observations. We cannot speak about something we observe without giving the observation some meaning. It is possible, but it demands a high level of concentration.
 
