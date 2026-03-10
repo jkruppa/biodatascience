@@ -96,13 +96,23 @@ In this book, we will simulate our data. This may seem counterintuitive, as we w
 
 In vivo versus in silico.
 
-### Technical vs. biological replication
-
 ### Experimental vs. observed data
 
-### Clinical studies
+Experimental data comes from a controlled experiment.
+
+Observed data is real world data which can be come from everywhere. We live in a data driven world. 
+
+### Biological vs. technical replication
+
+Do we need randomization here?
+
+We need replication, because we need a probabilistic process to do statistics in science. By the probabilistic process we can then calculate probabilities. Without a probabilistic process and replication we cannot have any probabilities. 
+
+### Human vs. the rest
 
 What is your target? Human, animal, mice or plant? Cell culture could also be.
+
+Clinical studies, animal experiments
 
 ### Long format vs. wide format
 
