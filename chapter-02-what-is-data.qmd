@@ -84,17 +84,23 @@ Can we live with this two-dimensional representation of data? Not really. If you
 
 Here, we will focus on the presented data set in @fig-02-data-2d-matrix-annotated, making some modifications to the columns if we are working with time series or repeated measurements. However, we will stick to one data set and will not consider complicated representations. We will talk about the experimental variables and the different types of measurements, both of which are represented by different numbers and letters. There are still many topics to consider if we want to work with data to obtain information and knowledge. In the following sections, we will cover different attributes and limitations of data that are important for successful work.
 
-## Things to consider
+## Stories of interest
 
-### Simulation and artificial data
+The data seems easy enough. We have a two-dimensional table with numbers and letters. That could be it. However, there are some things to consider. 
 
-You might be surprised to learn that, in statistical research, we statisticians work with simulated data. This data is also known as artificial data. This data has no experimental background and is entirely simulated. We simulate our measured values based on the experimental values. Therefore, we need to make some assumptions about the simulation process. Consequently, we can conclude that our artificial data is model-laden. We need a model to connect the experimental and measured variables. We can call this connection a model. If we change the model, the generated data will also change.
+First, we need to consider the source of the data. Depending on where you obtain your data, there may be more regularities to consider than in other fields. 
 
-In this book, we will simulate our data. This may seem counterintuitive, as we will use data with predefined effects and differences. What is the point of such data? What can we learn from it? The advantage of simulated data is that we already know what we want to find with our statistical algorithms. The advantage of using simulated data is that we already know what we are looking for with our statistical algorithms. Otherwise, we would not know whether there were no patterns in the data or whether our algorithm was unable to detect them.
+Second, we must discuss how the data is generated. Are you conducting a controlled experiment where you only change one influential variable and observe what happens? Or are you doing nothing and only observing the data? Does your role in the generation process play an important role?
 
-@dormann2025statistics
+Third, we would like to discuss the replication. We need replications in our data in order to perform statistical analyses later on. However, there are two types of replication. They can appear similar in a dataset, but they have a significant impact on your analysis and the answers to your questions.
 
-In vivo versus in silico.
+Next, we will examine artificial or simulated data. This special type of data is used mainly in statistical research and teaching, and we will use it in this book. Non-statisticians should not use artificial data in their daily research to cheat their data sheets. 
+
+
+
+### Source of data
+
+Where does your data come from? Does it matter? Yes, because it has a huge influence on your work and how you share it. First, let's define the different sources of data. One type is human data, such as blood samples or questionnaires. Humans can share information about social, economic, and other factors. Human data is often used in medicine and the social sciences. Then, we can examine data from animals. Mice are a special case because much basic research is conducted on mice before moving on to humans. The rest of the animal studies include all animals relevant to agriculture and leisure activities, such as dogs and horses. Naturally, there is a great deal of interest in chickens, pigs, and cows because of their role in food production. Finally, we have plants, including fungi and other plant-based sources. Our focus is mostly on crops that are interesting to agriculture, but the field is broad. On the sidelines, we have cell cultures, which have their own problems and limitations.
 
 ### Experimental vs. observed data
 
@@ -108,11 +114,18 @@ Do we need randomization here?
 
 We need replication, because we need a probabilistic process to do statistics in science. By the probabilistic process we can then calculate probabilities. Without a probabilistic process and replication we cannot have any probabilities. 
 
-### Human vs. the rest
+### Simulation and artificial data
 
-What is your target? Human, animal, mice or plant? Cell culture could also be.
+You might be surprised to learn that, in statistical research, we statisticians work with simulated data. This data is also known as artificial data. This data has no experimental background and is entirely simulated. We simulate our measured values based on the experimental values. Therefore, we need to make some assumptions about the simulation process. Consequently, we can conclude that our artificial data is model-laden. We need a model to connect the experimental and measured variables. We can call this connection a model. If we change the model, the generated data will also change.
 
-Clinical studies, animal experiments
+In this book, we will simulate our data. This may seem counterintuitive, as we will use data with predefined effects and differences. What is the point of such data? What can we learn from it? The advantage of simulated data is that we already know what we want to find with our statistical algorithms. The advantage of using simulated data is that we already know what we are looking for with our statistical algorithms. Otherwise, we would not know whether there were no patterns in the data or whether our algorithm was unable to detect them.
+
+@dormann2025statistics
+
+In vivo versus in silico.
+
+## Ways to work with data
+
 
 ### Long format vs. wide format
 
