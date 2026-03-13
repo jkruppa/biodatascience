@@ -114,6 +114,56 @@ Do we need randomization here?
 
 We need replication, because we need a probabilistic process to do statistics in science. By the probabilistic process we can then calculate probabilities. Without a probabilistic process and replication we cannot have any probabilities. 
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2.75
+#| fig-width: 5.5
+#| fig-cap: "fooo"
+#| label: fig-replicate
+
+ggplot() +
+  #theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(0.75, 5.75), ylim = c(-0.75, 5.25)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(1.75, 4.25, 4.25, 1.75), 
+                           y = c(0.5, 0.5, 4.75, 4.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = c(1, 2, 3, 4, 5), y = 4, 
+           label = c("ID", "t", "t", "t", "Y"), fontface = 2, size = 6) +
+  annotate("text", x = c(2, 3, 4, 5)+0.05, y = 3.75, hjust = "left",
+           label = c("1", "2", "3", "combined"), fontface = 2) +
+  annotate("text", x = 1, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
+  annotate("point", x = c(2,3,4), y = c(1, 2, 3), shape = 21, 
+           fill = c("white"), size = 7)+
+  annotate("point", x = 2, y = c(1, 2, 3), shape = 21, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 3, y = c(1, 2, 3), shape = 21, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 4, y = c(1, 2, 3), shape = 21, , 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 5, y = c(1, 2, 3), shape = 21,, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("label", x = 3, y = 4.75, label = "Measured outcome Y", size = 5) +
+  annotate("label", x = 3, y = -0.25, label = expression(Delta~"t"~"="~0),
+           size = 7) +
+  geom_curve(aes(x = 4.15, y = 3, xend = 4.85, yend = 3),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = 4.15, y = 2, xend = 4.85, yend = 2),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = 4.15, y = 1, xend = 4.85, yend = 1),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.5) 
+```
+
+
+
 ### Simulation and artificial data
 
 You might be surprised to learn that, in statistical research, we statisticians work with simulated data. This data is also known as artificial data. This data has no experimental background and is entirely simulated. We simulate our measured values based on the experimental values. Therefore, we need to make some assumptions about the simulation process. Consequently, we can conclude that our artificial data is model-laden. We need a model to connect the experimental and measured variables. We can call this connection a model. If we change the model, the generated data will also change.
