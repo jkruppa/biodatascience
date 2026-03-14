@@ -119,47 +119,104 @@ We need replication, because we need a probabilistic process to do statistics in
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 2.75
-#| fig-width: 5.5
+#| fig-height: 3
+#| fig-width: 8.5
 #| fig-cap: "fooo"
 #| label: fig-replicate
 
-ggplot() +
-  #theme_void() +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0.75, 5.75), ylim = c(-0.75, 5.25)) +
+p_tech_rep <- ggplot() +
+  theme_void() +
+  #theme_minimal() +
+  coord_cartesian(xlim = c(1, 5.75), ylim = c(-0.5, 5.25)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   geom_shape(data = tibble(x = c(1.75, 4.25, 4.25, 1.75), 
                            y = c(0.5, 0.5, 4.75, 4.75)),
              aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  annotate("text", x = c(1, 2, 3, 4, 5), y = 4, 
-           label = c("ID", "t", "t", "t", "Y"), fontface = 2, size = 6) +
-  annotate("text", x = c(2, 3, 4, 5)+0.05, y = 3.75, hjust = "left",
+  annotate("text", x = c(1.35, 2, 3, 4, 4.75), y = 4, 
+           label = c("ID", "r", "r", "r", "Y"), fontface = 2, size = 6) +
+  annotate("text", x = c(2, 3, 4, 4.75)+0.05, y = 3.75, hjust = "left",
            label = c("1", "2", "3", "combined"), fontface = 2) +
-  annotate("text", x = 1, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
-  annotate("point", x = c(2,3,4), y = c(1, 2, 3), shape = 21, 
-           fill = c("white"), size = 7)+
+  annotate("text", x = 1.35, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
+  annotate("point", x = rep(c(2,3,4), times = 3), y = rep(c(1, 2, 3), each = 3), shape = 21, 
+           fill = c("white"), size = 7) +
   annotate("point", x = 2, y = c(1, 2, 3), shape = 21, 
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
   annotate("point", x = 3, y = c(1, 2, 3), shape = 21, 
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
   annotate("point", x = 4, y = c(1, 2, 3), shape = 21, , 
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-  annotate("point", x = 5, y = c(1, 2, 3), shape = 21,, 
+  ## combined
+  annotate("point", x = 4.75+0.15, y = c(1, 2, 3), shape = 21,, 
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-  annotate("label", x = 3, y = 4.75, label = "Measured outcome Y", size = 5) +
-  annotate("label", x = 3, y = -0.25, label = expression(Delta~"t"~"="~0),
-           size = 7) +
-  geom_curve(aes(x = 4.15, y = 3, xend = 4.85, yend = 3),
+  annotate("point", x = 4.95+0.15, y = c(1, 2, 3), shape = 21,, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 5.15+0.15, y = c(1, 2, 3), shape = 21,, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("text", x = 5.45+0.15, y = c(1, 2, 3), label = "/3", size = 6, fontface = 1) +
+  annotate("label", x = 3, y = 4.75, label = "Measured Y", size = 5, 
+           fill = "white", fontface = 2) +
+  annotate("label", x = 3, y = -0.15, label = expression(Delta~"r" %~~% 0),
+           size = 6) 
+
+p_repeat_measure <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(1, 4.5), ylim = c(-0.5, 5.25)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(1.75, 4.25, 4.25, 1.75), 
+                           y = c(0.5, 0.5, 4.75, 4.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = c(1.35, 2, 3, 4), y = 4, 
+           label = c("ID", "t", "t", "t"), fontface = 2, size = 6) +
+  annotate("text", x = c(2, 3, 4)+0.05, y = 3.75, hjust = "left",
+           label = c("1", "2", "3"), fontface = 2) +
+  annotate("text", x = 1.35, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
+  geom_curve(aes(x = 2.25, y = 3, xend = 3.75, yend = 3),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 0.5) +
-  geom_curve(aes(x = 4.15, y = 2, xend = 4.85, yend = 2),
+             curvature = 0, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = 2.25, y = 2, xend = 3.75, yend = 2),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 0.5) +
-  geom_curve(aes(x = 4.15, y = 1, xend = 4.85, yend = 1),
+             curvature = 0, color = "black", linewidth = 0.5) +
+  geom_curve(aes(x = 2.25, y = 1, xend = 3.75, yend = 1),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 0.5) 
+             curvature = 0, color = "black", linewidth = 0.5) +
+  annotate("point", x = rep(c(2,3,4), times = 3), y = rep(c(1, 2, 3), each = 3), shape = 21, 
+           fill = c("white"), size = 7) +
+  annotate("point", x = 2, y = c(1, 2, 3), shape = 21, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 3, y = c(1, 2, 3), shape = 21, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("point", x = 4, y = c(1, 2, 3), shape = 21, , 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
+  annotate("label", x = 3, y = 4.75, label = "Measured Y", size = 5, fontface = 2,
+           fill = "white") +
+  annotate("label", x = 3, y = -0.15, label = expression(Delta~"t"~">"~0),
+           size = 6) 
+
+p_measure <- ggplot() +
+  theme_void() +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(0.75, 2.75), ylim = c(-0.5, 5.25)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(1.5, 2.5, 2.5, 1.5), 
+                           y = c(0.5, 0.5, 4.5, 4.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  annotate("text", x = c(1, 2), y = 4, 
+           label = c("ID", "Y"), fontface = 2, size = 6) +
+  annotate("text", x = 1, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
+  annotate("point", x = rep(c(2), times = 3), y = rep(c(1, 2, 3), each = 1), shape = 21, 
+           fill = c("white"), size = 7) +
+  annotate("point", x = 2, y = c(1, 2, 3), shape = 21, 
+           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) 
+
+
+p_measure + p_repeat_measure + p_tech_rep +
+  plot_layout(width = c(0.3,0.75,1)) +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
 
