@@ -32,14 +32,14 @@ p_source_data <- ggplot() +
   annotate("text", x = 3, y = 2.5, 
            label = "Cell culture", fontface = 2, size = 6) +
   geom_shape(data = tibble(x = c(0.25, 7.6, 7.6), 
-                           y = c(1.25, 1, 1.5)),
+                           y = c(1.25, 0.9, 1.6)),
              aes(x, y), fill = "#B12A9080") +
   geom_shape(data = tibble(x = c(0.25, 0.25, 7.6), 
-                           y = c(5, 5.5, 5.25)),
+                           y = c(4.9, 5.6, 5.25)),
              aes(x, y), fill = "#6A00A880") +
   annotate("label", x = 4, y = c(1.25, 5.25), fontface = 3, size = 4, fill = "white", 
            label = c("Shareability / Openness", "Regulation")) +
-  annotate("text", x = c(0.5, 7.5, 0.5, 7.5), y = c(0.8, 0.8, 5.7, 5.7), fontface = 3, size = 4, 
+  annotate("text", x = c(0.5, 7.5, 0.5, 7.5), y = c(1, 0.7, 5.8, 5.5), fontface = 3, size = 4, 
            label = c("less", "more", "more", "less")) +
   annotate("text", x = 0.15, y = 3.25, , fontface = 2, size = 3, 
            label = "IN VIVO", angle = 90) +

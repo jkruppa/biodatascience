@@ -102,6 +102,8 @@ Next, we will examine artificial or simulated data. This special type of data is
 
 Where does your data come from? Does it matter? Yes, because it has a huge influence on your work and how you share it. First, let's define the different sources of data. One type is human data, such as blood samples or questionnaires. Humans can share information about social, economic, and other factors. Human data is often used in medicine and the social sciences. Then, we can examine data from animals. Mice are a special case because much basic research is conducted on mice before moving on to humans. The rest of the animal studies include all animals relevant to agriculture and leisure activities, such as dogs and horses. Naturally, there is a great deal of interest in chickens, pigs, and cows because of their role in food production. Finally, we have plants, including fungi and other plant-based sources. Our focus is mostly on crops that are interesting to agriculture, but the field is broad. On the sidelines, we have cell cultures, which have their own problems and limitations.
 
+Figure X shows
+
 ```{r}
 #| message: false
 #| echo: false
@@ -109,12 +111,11 @@ Where does your data come from? Does it matter? Yes, because it has a huge influ
 #| fig-align: center
 #| fig-height: 2.25
 #| fig-width: 7
-#| fig-cap: "fooo"
+#| fig-cap: "Figure showing examples of sources of data. On the left are the three main *in vivo* sources of data: human, animal and plant, in order of decreasing regulatory requirements. Cell cultures can be conducted from each of these sources. On the left is the *in silico* source of data, which uses artificial or simulated data. The openness and shareability of data moves in the opposite direction to the level of regulation."
 #| label: fig-source
 
 p_source_data
 ```
-
 
 
 ### Experimental vs. observed data
@@ -136,7 +137,7 @@ We need replication, because we need a probabilistic process to do statistics in
 #| fig-align: center
 #| fig-height: 3
 #| fig-width: 8.5
-#| fig-cap: "fooo"
+#| fig-cap: "Different types of replication can be observed in data tables and experiments. **(A)** First, there is biological replication, where a measured $Y$ is repeatedly observed in different biological individuals. **(B)** The second type is repeated measurement, where a measured Y is observed on each individual at different points in time. The time between each measurement is long. **(C)** Third, technical replication involves measuring individuals in a row at one point in time. The time between each observation is negligible. The values measured for each individual are mostly combined into a single measure."
 #| label: fig-replicate
 
 p_measure + p_repeat_measure + p_tech_rep +
