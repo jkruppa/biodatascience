@@ -1,4 +1,49 @@
-
+p_data_garbage <- ggplot() +
+  theme_void() +
+  ##theme_minimal() +
+  coord_cartesian(xlim = c(0, 8), ylim = c(1, 5)) +
+  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
+  geom_shape(data = tibble(x = c(3, 5, 5, 3), 
+                           y = c(1.25, 1.25, 4.75, 4.75)),
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95",
+             color = "black") +
+  annotate("text", x = 4, y = 4, fontface = 2, size = 6, 
+           label = "Statistical") +
+  annotate("text", x = 4, y = 3, fontface = 2, size = 6, 
+           label = "Algorithm") +
+  annotate("text", x = 4, y = 2, fontface = 3, size = 6, 
+           label = '"Blackbox"') +
+  ## left
+  geom_ellipse(aes(x0 = 1, y0 = 3, a = 0.75, b = 1.5, angle = 0),
+               fill = "#B12A9080") +
+  annotate("text", x = 1, y = 3.5, fontface = 2, size = 6, 
+           label = "Garbage") +
+  annotate("text", x = 1, y = 2.5, fontface = 2, size = 6, 
+           label = "data") +
+  geom_curve(aes(x = 1.7, y = 2, xend = 2.9, yend = 2),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", linewidth = 1) +
+  geom_curve(aes(x = 1.7, y = 4, xend = 2.9, yend = 4),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 1) +
+  annotate("label", x = 2.35, y = 3, fontface = 3, size = 6, fill = "#F0F921FF", 
+           label = "IN") +
+  ## right
+  geom_ellipse(aes(x0 = 7, y0 = 3, a = 0.75, b = 1.5, angle = 0),
+               fill = "#6A00A880") +
+  annotate("text", x = 7, y = 3.5, fontface = 2, size = 6, 
+           label = "Garbage") +
+  annotate("text", x = 7, y = 2.5, fontface = 2, size = 6, 
+           label = "pattern") +
+  geom_curve(aes(xend = 6.3, y = 2, x = 5.1, yend = 2),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", linewidth = 1) +
+  geom_curve(aes(xend = 6.3, y = 4, x = 5.1, yend = 4),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 1) +
+  annotate("label", x = 5.65, y = 3, fontface = 3, size = 6, fill = "#F0F921FF", 
+           label = "OUT")
 
 p_source_data <- ggplot() +
   theme_void() +

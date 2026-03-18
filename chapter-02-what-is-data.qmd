@@ -86,7 +86,7 @@ Here, we will focus on the presented data set in @fig-02-data-2d-matrix-annotate
 
 ## Information hidden 
 
-The data seems easy enough. We have a two-dimensional table with numbers and letters. That could be it. However, there are some things to consider. Information is often hidden in data. Where does the data come from? What are the internal generation processes? Are there unknown or known structures beneath the numbers and letters that cannot be seen by the row and column names?
+The data seems easy enough. We have a two-dimensional table with numbers and letters. That could be it. However, there are some things to consider. Information is often hidden in data. Where does the data come from? What are the internal generation processes? Are there unknown or known structures beneath the numbers and letters that cannot be seen by the row and column names? 
 
 First, we need to consider the source of the data. Depending on where you obtain your data, there may be more regularities to consider than in other fields. 
 
@@ -96,7 +96,9 @@ Third, we would like to discuss the replication. We need replications in our dat
 
 Next, we will examine artificial or simulated data. This special type of data is used mainly in statistical research and teaching, and we will use it in this book. Non-statisticians should not use artificial data in their daily research to cheat their data sheets. 
 
+Is all this information lost or hidden? In a sense, yes, because if you don't have any information on the generation process, or if you can only see some cryptic column names, it might be impossible for you to gain any deeper knowledge of the data. However, it is always possible to find a pattern in anything.
 
+Garbage in garbage out
 
 ### Source of data
 
@@ -117,7 +119,7 @@ Where does your data come from? Does it matter? Yes, because it has a huge influ
 p_source_data
 ```
 
-Ethitical considerations. Can I do want I want?
+Ethical considerations. Can I do want I want?
 
 ### Experimental vs. observed data
 
@@ -128,6 +130,18 @@ Observed data is real world data which can be come from everywhere. We live in a
 Bias
 
 Real world data vs randomized clinical trails (RCT)
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 1.2
+#| fig-width: 7
+#| fig-cap: "Visualisation of the saying 'garbage in, garbage out'. In other words, if the input data is bad, the statistical algorithm cannot work miracles. The output will also be garbage, regardless of the statistical algorithm. In such a setting, the algorithm is also seen as a black box because, if the data is not understood, neither will the algorithm be."
+#| label: fig-data-garbage
+p_data_garbage
+```
 
 ### Biological vs. technical replication
 
