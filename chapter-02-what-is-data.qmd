@@ -84,7 +84,7 @@ Can we live with this two-dimensional representation of data? Not really. If you
 
 Here, we will focus on the presented data set in @fig-02-data-2d-matrix-annotated, making some modifications to the columns if we are working with time series or repeated measurements. However, we will stick to one data set and will not consider complicated representations. We will talk about the experimental variables and the different types of measurements, both of which are represented by different numbers and letters. There are still many topics to consider if we want to work with data to obtain information and knowledge. In the following sections, we will cover different attributes and limitations of data that are important for successful work.
 
-## Information hidden 
+## Meta information of data 
 
 The data seems easy enough. We have a two-dimensional table with numbers and letters. That could be it. However, there are some things to consider. Information is often hidden in data. Where does the data come from? What are the internal generation processes? Are there unknown or known structures beneath the numbers and letters that cannot be seen by the row and column names? 
 
