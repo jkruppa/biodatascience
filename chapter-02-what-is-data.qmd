@@ -191,6 +191,13 @@ In vivo versus in silico.
 
 @wilkinson2016fair
 
+What problems are there with Excel?
+
+- Reach and shareability. If we do something in Excel by point and click, nobody else can do it if they are not observing us.
+- Scalability and efficiency. If we have one task, it will take some time. If we have the same task with different numbers, it will take twice as long. We cannot really automate any processes.
+- Excel is error-prone. If we make a mistake, we will not really understand why things did not work. We can click again, but we have no protocol to follow. Others cannot understand what we have done.
+- Excel is neither open nor free to use. We need a licence to use Excel and are unable to share any files with people who do not have access to Microsoft products.
+
 ### Tidy data
 
 ## R packages used
