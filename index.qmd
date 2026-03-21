@@ -33,6 +33,9 @@ Machine room of science
 
 Bloody beginners and the curse of knowledge
 
+Which book should I read if I want to experience the feeling of watching the History Channel? Joachim Krauth's book, *Experimental Design: A Handbook and Dictionary for Medical and Behavioural Research*, is a good starting point @krauth2000experimental.
+
+
 > *"To write a book you must become the book." — Naval Ravikant*
 
 > *"Those among us who are unwilling to expose their ideas to the hazard of refutation do not take part in the game of science." --- Karl Popper*
