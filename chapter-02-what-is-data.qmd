@@ -121,7 +121,7 @@ Where does your data come from? Does it matter? Yes, because it has a huge influ
 p_source_data
 ```
 
-Ethical considerations. Can I do want I want?
+Finally, we must consider the ethical and cultural issues involved. You cannot do whatever you want with patients and animals. Depending on your location and nationality, the process of working with or sharing human or animal data is highly regulated. You may need an ethical vote from an Ethics Committee at your institution or approval for an animal experiment from a different committee. Sometimes cultural borders hinder work with specific animal breeds. All of this is beyond the scope of this book. If you are unsure whether your experiment can be conducted and data collected, please contact a statistician at your institution or a nearby university. As a general rule, never upload any human patient data, with or without personal identifiers, to an open database without consulting the relevant legal authorities first.
 
 ### Experimental vs. observed data
 
