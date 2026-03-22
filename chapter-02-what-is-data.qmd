@@ -125,9 +125,11 @@ Finally, we must consider the ethical and cultural issues involved. You cannot d
 
 ### Experimental vs. observed data
 
-Experimental data comes from a controlled experiment.
+A lot could be written about experimental and observed data. The wording might be a little confusing because experimental data consists of observations that are clearly observed. Therefore, I prefer to refer to experimental data as data that comes from a controlled experiment. On the other hand, observed data is data that is generated without any influence from an experimenter. 
 
-Observed data is real world data which can be come from everywhere. We live in a data driven world. 
+In a clinical context, we often refer to observed data as real-world data, which can come from anywhere. This can be data collected from wearable devices such as clocks and smartphones. It can also be collected from operations or other examinations of patients during normal clinical processes. This data is merely observed; there is no controlled assignment of patients to treatments or other controlled activities. In this context, we can also speak of experimental data from randomised clinical trials (RCTs) and observational data as real-world data from clinical routine.
+
+We live in a data driven world. 
 
 Bias
 
@@ -146,6 +148,8 @@ p_data_garbage
 ```
 
 ### Biological vs. technical replication
+
+
 
 Do we need randomization here?
 
