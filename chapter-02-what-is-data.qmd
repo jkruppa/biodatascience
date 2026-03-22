@@ -125,15 +125,9 @@ Finally, we must consider the ethical and cultural issues involved. You cannot d
 
 ### Experimental vs. observed data
 
-A lot could be written about experimental and observed data. The wording might be a little confusing because experimental data consists of observations that are clearly observed. Therefore, I prefer to refer to experimental data as data that comes from a controlled experiment. On the other hand, observed data is data that is generated without any influence from an experimenter. 
+There is a lot that could be written about experimental and observed data. The terminology can be a little confusing because 'experimental data' consists of observations that have been clearly recorded. Therefore, I prefer to refer to it as data that comes from a controlled experiment. Conversely, observed data is data generated without any influence from an experimenter. In this book, we will focus primarily on experimental data. However, many of the algorithms introduced can also be used with observed data. There are no real limitations to their application. The problem lies in interpretation. With experimental data, you know which influencers are changing because you are the one changing them. With observed data, however, you can never be sure whether you are observing correlation or causality because you are not controlling any of the influencing factors. If you are missing information, you may draw the wrong conclusions.
 
-In a clinical context, we often refer to observed data as real-world data, which can come from anywhere. This can be data collected from wearable devices such as clocks and smartphones. It can also be collected from operations or other examinations of patients during normal clinical processes. This data is merely observed; there is no controlled assignment of patients to treatments or other controlled activities. In this context, we can also speak of experimental data from randomised clinical trials (RCTs) and observational data as real-world data from clinical routine.
-
-We live in a data driven world. 
-
-Bias
-
-Real world data vs randomized clinical trails (RCT)
+From there, we have the famous saying 'garbage in, garbage out', which is illustrated in @fig-data-garbage. If we input garbage data into a statistical algorithm, we will find a pattern. The pattern will usually be of poor quality too. Quite often, we do this in a setting where we don't even understand the algorithm. Therefore, we put something into an algorithm and hope that something useful will come out. If we get something, we are very happy and continue changing nothing in case everything is lost. Welcome to one possible cause of the replication crisis.
 
 ```{r}
 #| message: false
@@ -146,6 +140,16 @@ Real world data vs randomized clinical trails (RCT)
 #| label: fig-data-garbage
 p_data_garbage
 ```
+
+In a clinical context, we often refer to observed data as real-world data, which can come from anywhere. This can be data collected from wearable devices such as clocks and smartphones. It can also be collected from operations or other examinations of patients during normal clinical processes. This data is merely observed; there is no controlled assignment of patients to treatments or other controlled activities. In this context, we can also speak of experimental data from randomised clinical trials (RCTs) and observational data as real-world data from clinical routine.
+
+We live in a data driven world. 
+
+Bias
+
+Real world data vs randomized clinical trails (RCT)
+
+
 
 ### Biological vs. technical replication
 
