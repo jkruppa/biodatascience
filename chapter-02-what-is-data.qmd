@@ -145,18 +145,9 @@ In a clinical context, we often refer to observed data as real-world data, which
 
 We live in a data-driven world. Or, we could say that we live in an information-driven world. There is so much information available that we believe everything is clear and well known. Sometimes, however, we realise that this is not the case. We only have partial information in very specific areas where we gather it. Someone might think that weather forecasting should be easy. We have satellites, we know past temperatures, wind speeds and air pressure. Yet we still have problems predicting the weather a week in advance or thunderstorms a few hours in advance. We know that the conditions are right for a thunderstorm, but we only find out where it will build up once we observe it.
 
-Bias
-
-
-
-
 ### Biological vs. technical replication
 
-
-
-Do we need randomization here?
-
-We need replication, because we need a probabilistic process to do statistics in science. By the probabilistic process we can then calculate probabilities. Without a probabilistic process and replication we cannot have any probabilities. 
+When I first started studying statistics, I found the replications a little irritating. I was familiar with numbers and calculations from school mathematics lessons. There we had a formula or equation and I put in numbers to calculate something. I never did this more than once. Why should I calculate the same thing again and again? Why is there replication in statistical data? We need replication, because we need a probabilistic process to do statistics in science. By the probabilistic process we can then calculate probabilities. Without a probabilistic process and replication we cannot have any probabilities. Perhaps the explanation comes a little early, but we will revisit this topic throughout the book. It is important to remember here that we want to calculate probabilities. Therefore, we need replications in order to calculate these probabilities. 
 
 The following @fig-replicate-data illustrates the various types of replication. In general, we divide replication into biological and technical replication. We are also able to conduct biological replication at many points in time. This may sound confusing, but the difference lies in the time between the measurements. Let us start with biological replication. We measure an outcome Y on different biological individuals. Depending on our research question, we might measure only a few individuals or hundreds to thousands. These individuals can be humans, plants or mice. Technical replication involves taking measurements many times on the same individual at the same time. This allows us to ensure that the measurement was correct. For example, you could take your body weight three times and then combine the three measurements to give one overall result. If a large amount of time passes between the individual measurements, we speak of a repeated measurement. In this case, we are still measuring the same individual, but at different points in time. We want to know how body weight changes in humans over weeks. This is a biological replication at different points in time.
 
