@@ -143,11 +143,10 @@ p_data_garbage
 
 In a clinical context, we often refer to observed data as real-world data, which can come from anywhere. This can be data collected from wearable devices such as clocks and smartphones. It can also be collected from operations or other examinations of patients during normal clinical processes. This data is merely observed; there is no controlled assignment of patients to treatments or other controlled activities. In this context, we can also speak of experimental data from randomised clinical trials (RCTs) and observational data as real-world data from clinical routine.
 
-We live in a data driven world. 
+We live in a data-driven world. Or, we could say that we live in an information-driven world. There is so much information available that we believe everything is clear and well known. Sometimes, however, we realise that this is not the case. We only have partial information in very specific areas where we gather it. Someone might think that weather forecasting should be easy. We have satellites, we know past temperatures, wind speeds and air pressure. Yet we still have problems predicting the weather a week in advance or thunderstorms a few hours in advance. We know that the conditions are right for a thunderstorm, but we only find out where it will build up once we observe it.
 
 Bias
 
-Real world data vs randomized clinical trails (RCT)
 
 
 
