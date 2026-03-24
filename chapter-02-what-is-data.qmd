@@ -192,6 +192,12 @@ There are two types of arranging your data in a 2D data table. If we put each ob
 
 A question of time
 
+[Entity–attribute–value model](https://en.wikipedia.org/wiki/Entity%E2%80%93attribute%E2%80%93value_model)
+
+Wide, or unstacked data is presented with each different data variable in a separate column.
+
+Narrow, stacked, or long data is presented with one column containing all the values and another column listing the context of the value
+
 ```{r}
 #| message: false
 #| echo: false
