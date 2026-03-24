@@ -203,15 +203,15 @@ Narrow, stacked, or long data is presented with one column containing all the va
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 4
+#| fig-height: 3.75
 #| fig-width: 6.5
 #| fig-cap: "foo."
 #| label: fig-long-wide
 
 p_wide <- ggplot() +
   theme_void() +
- ## theme_minimal() +
-  coord_cartesian(xlim = c(1, 4.5), ylim = c(-5.5, 5.25)) +
+  #theme_minimal() +
+  coord_cartesian(xlim = c(1, 4.5), ylim = c(-5.5, 5)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   geom_shape(data = tibble(x = c(1.75, 4.25, 4.25, 1.75), 
@@ -239,13 +239,23 @@ p_wide <- ggplot() +
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
   annotate("point", x = 4, y = c(1, 2, 3), shape = 21, , 
            fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-  annotate("label", x = 3, y = 4.75, label = "Measured Y", size = 5, 
-           fill = "white", fontface = 2)
-
+#  annotate("label", x = 3, y = 4.75, label = "Measured Y", size = 5, 
+#           fill = "white", fontface = 2)
+  geom_curve(aes(x = 2.8, y = -0.25, xend = 4.5, yend = -3),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.3, color = "black", linewidth = 0.75) +
+  geom_curve(aes(xend = 3.2, yend = -0.25, x = 4.5, y = -2),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 0.75) +
+  annotate("text", x = 4, y = -1, fontface = 3, size = 5,
+           label = "to wide") +
+  annotate("text", x = 3.15, y = -2.95, fontface = 3, size = 5,
+           label = "to long")
+  
 p_long <- ggplot() +
   theme_void() +
  ## theme_minimal() +
-  coord_cartesian(xlim = c(0.75, 3.75), ylim = c(-5.5, 5.25)) +
+  coord_cartesian(xlim = c(0.75, 3.75), ylim = c(-5.5, 5)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   geom_shape(data = tibble(x = c(2.5, 3.5, 3.5, 2.5), 
