@@ -208,79 +208,10 @@ Narrow, stacked, or long data is presented with one column containing all the va
 #| fig-cap: "foo."
 #| label: fig-long-wide
 
-p_wide <- ggplot() +
-  theme_void() +
-  #theme_minimal() +
-  coord_cartesian(xlim = c(1, 4.5), ylim = c(-5.5, 5)) +
-  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  geom_shape(data = tibble(x = c(1.75, 4.25, 4.25, 1.75), 
-                           y = c(0.5, 0.5, 4.75, 4.75)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  annotate("text", x = c(1.35, 2, 3, 4), y = 4, 
-           label = c("ID", "t", "t", "t"), fontface = 2, size = 6) +
-  annotate("text", x = c(2, 3, 4)+0.05, y = 3.75, hjust = "left",
-           label = c("1", "2", "3"), fontface = 2) +
-  annotate("text", x = 1.35, y = c(1, 2, 3), label = c(3:1), size = 6, fontface = 2) +
-  geom_curve(aes(x = 2.25, y = 3, xend = 3.75, yend = 3),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0, color = "black", linewidth = 0.5) +
-  geom_curve(aes(x = 2.25, y = 2, xend = 3.75, yend = 2),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0, color = "black", linewidth = 0.5) +
-  geom_curve(aes(x = 2.25, y = 1, xend = 3.75, yend = 1),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0, color = "black", linewidth = 0.5) +
-  annotate("point", x = rep(c(2,3,4), times = 3), y = rep(c(1, 2, 3), each = 3), shape = 21, 
-           fill = c("white"), size = 7) +
-  annotate("point", x = 2, y = c(1, 2, 3), shape = 21, 
-           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-  annotate("point", x = 3, y = c(1, 2, 3), shape = 21, 
-           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-  annotate("point", x = 4, y = c(1, 2, 3), shape = 21, , 
-           fill = c("#0D088780", "#B12A9080", "#E1646280"), size = 7) +
-#  annotate("label", x = 3, y = 4.75, label = "Measured Y", size = 5, 
-#           fill = "white", fontface = 2)
-  geom_curve(aes(x = 2.8, y = -0.25, xend = 4.5, yend = -3),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0.3, color = "black", linewidth = 0.75) +
-  geom_curve(aes(xend = 3.2, yend = -0.25, x = 4.5, y = -2),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 0.75) +
-  annotate("text", x = 4, y = -1, fontface = 3, size = 5,
-           label = "to wide") +
-  annotate("text", x = 3.15, y = -2.95, fontface = 3, size = 5,
-           label = "to long")
-  
-p_long <- ggplot() +
-  theme_void() +
- ## theme_minimal() +
-  coord_cartesian(xlim = c(0.75, 3.75), ylim = c(-5.5, 5)) +
-  scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  geom_shape(data = tibble(x = c(2.5, 3.5, 3.5, 2.5), 
-                           y = c(-5.5, -5.5, 4.5, 4.5)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  annotate("text", x = c(1, 2, 3), y = 4, 
-           label = c("ID", "t", "Y"), fontface = 2, size = 6) +
-  annotate("text", x = 1, y = c(-5, -4, -3, -2, -1, 0, 1, 2, 3), 
-           label = rep(c(3:1), each = 3), size = 6, fontface = 2) +
-  annotate("point", x = 3, y = c(-5, -4, -3, -2, -1, 0, 1, 2, 3), shape = 21, 
-           fill = c("white"), size = 7) +
-  annotate("point", x = 3, y = c(-5, -4, -3, -2, -1, 0, 1, 2, 3), shape = 21, 
-           fill = rep(c("#0D088780", "#B12A9080", "#E1646280"), each = 3), size = 7) +
-  annotate("text", x = 2, y = c(-5, -4, -3, -2, -1, 0, 1, 2, 3), size = 6, fontface = 2,
-           ## color = rep(c("#0D0887FF", "#B12A90FF", "#E16462FF"), times = 3),
-           label = rep(3:1, times = 3)) +
-  geom_curve(aes(x = 3.3, y = 3, xend = 3.3, yend = -5),
-             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0, color = "black", linewidth = 0.5) 
-
 p_wide + p_long + 
   plot_layout(width = c(0.6,0.4)) +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
-
 ```
 
 
