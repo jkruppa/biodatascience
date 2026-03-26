@@ -205,7 +205,7 @@ Narrow, stacked, or long data is presented with one column containing all the va
 #| fig-align: center
 #| fig-height: 3.75
 #| fig-width: 6.5
-#| fig-cap: "foo."
+#| fig-cap: "Two types of data storage exist in the wide and long format. It is important to remember that we need the long format for visualization and analysis in R. **(A)** The wide format is also called unstacked data. We use this type of data if we are measuring time series or changing data from the same subject. This format is very efficient for storage but difficult to analyze. **(B)** The long format is also called stacked or narrow data. The long format is the standard for data analysis. The measured variable Y is contained in only one column."
 #| label: fig-long-wide
 
 p_wide + p_long + 
@@ -214,7 +214,7 @@ p_wide + p_long +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-
+Two types of data storage in the wide and long format. It is important to remeber, that we need the long format for the visualitation and analysis in R. The wide format is also called unstacked data. We use this type of data, if we measure time series data or data which is changing in the same subject. In this applications, the format is very effiecent to store but difficult to analyse. The long format is also called stacked or narrow data. The long format is the standard format for the analysis of data. The measured variable Y is only contained in one column. 
 
 ### The elephant in the room is Excel
 

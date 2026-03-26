@@ -41,7 +41,7 @@ p_wide <- ggplot() +
            label = "to wide") +
   annotate("text", x = 3.15, y = -2.95, fontface = 3, size = 5,
            label = "to long") +
-  labs(title = "Wide format") +
+ # labs(title = "Wide format") +
   theme(plot.title = element_text(size = 16, face = "bold"))
 
 p_long <- ggplot() +
@@ -67,7 +67,7 @@ p_long <- ggplot() +
   geom_curve(aes(x = 3.3, y = 3, xend = 3.3, yend = -5),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0, color = "black", linewidth = 0.5) +
-  labs(title = "Long format") +
+ # labs(title = "Long format") +
   theme(plot.title = element_text(size = 16, face = "bold"))
 
 
