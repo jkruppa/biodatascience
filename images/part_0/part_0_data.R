@@ -73,7 +73,7 @@ p_long <- ggplot() +
 
 p_data_garbage <- ggplot() +
   theme_void() +
-  ##theme_minimal() +
+  #theme_minimal() +
   coord_cartesian(xlim = c(0, 8), ylim = c(1, 5)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
