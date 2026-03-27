@@ -166,58 +166,113 @@ Internal validity is often considered a prerequisite for external validity, as a
 #| echo: false
 #| warning: false
 #| fig-align: center
-#| fig-height: 5
-#| fig-width: 7
+#| fig-height: 4.25
+#| fig-width: 8
 #| fig-cap: "fooo"
 #| label: fig-data-internal-external
 
-
 ggplot() +
   theme_void() +
-  theme_minimal() +
-  coord_cartesian(xlim = c(0, 8), ylim = c(0, 8)) +
+  ## theme_minimal() +
+  coord_cartesian(xlim = c(0, 8), ylim = c(0.5, 7.75)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  geom_shape(data = tibble(x = c(3, 5, 5, 3), 
-                           y = c(1.25, 1.25, 4.75, 4.75)),
-             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray95",
-             color = "black") +
-  annotate("text", x = 4, y = 4, fontface = 2, size = 6, 
-           label = "Statistical") +
-  annotate("text", x = 4, y = 3, fontface = 2, size = 6, 
-           label = "Algorithm") +
-  annotate("text", x = 4, y = 2, fontface = 3, size = 6, 
-           label = '"Blackbox"') +
+  geom_circle(aes(x0 = 4, y0 = 4, r = 0.75), fill = "#FCA63680") +
+  annotate("text", x = 4, y = 4, fontface = 2, size = 9,
+           label = "DATA") +
+  annotate("segment", x = 2.75, y = 7, xend = 5.25, yend = 7, size = 1,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
+  annotate("segment", xend = 2.75, y = 7, x = 5.25, yend = 7, size = 1,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
+  annotate("text", x = 4, y = 7.35, fontface = 3, size = 6,
+           label = "Trade off") +  
+  annotate("label", x = c(2.8, 5.2), y = 7.5, fontface = 3, size = 4, fill = "#F0F92180",
+           label = c("Lab", "Field")) +  
   ## left
-  geom_ellipse(aes(x0 = 1, y0 = 3, a = 0.75, b = 1.5, angle = 0),
-               fill = "#B12A9080") +
-  annotate("text", x = 1, y = 3.5, fontface = 2, size = 6, 
-           label = "Garbage") +
-  annotate("text", x = 1, y = 2.5, fontface = 2, size = 6, 
-           label = "data") +
-  geom_curve(aes(x = 1.7, y = 2, xend = 2.9, yend = 2),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
-             curvature = 0.3, color = "black", linewidth = 1) +
-  geom_curve(aes(x = 1.7, y = 4, xend = 2.9, yend = 4),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+  geom_shape(data = tibble(x = c(0, 2.5, 2.5, 0), 
+                           y = c(0.5, 0.5, 7.5, 7.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_curve(aes(x = 2.6, y = 5.5, xend = 3.5, yend = 4.7),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = -0.3, color = "black", linewidth = 1) +
-  annotate("label", x = 2.35, y = 3, fontface = 3, size = 6, fill = "#F0F921FF", 
-           label = "IN") +
+  annotate("text", x = 1.25, y = 7.1, fontface = 2, size = 7,
+           label = "Internal") +
+  annotate("text", x = 0.1, y = 6.5, fontface = 2, size = 5, hjust = "left", 
+           label = "Aspects") +  
+  annotate("text", x = 0.1, y = 6.1, fontface = 3, size = 4, hjust = "left", 
+           label = "Causality of study variables") +  
+  annotate("text", x = 0.1, y = 5.7, fontface = 3, size = 4, hjust = "left", 
+           label = "Experimental control") +  
+  annotate("text", x = 0.1, y = 5.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Measurement accuracy") +  
+  annotate("text", x = 0.1, y = 4.7, fontface = 2, size = 5, hjust = "left", 
+           label = "Threats to consider") +  
+  annotate("text", x = 0.1, y = 4.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Confounding variables") +  
+  annotate("text", x = 0.1, y = 3.9, fontface = 3, size = 4, hjust = "left", 
+           label = "History and events occurring") +  
+  annotate("text", x = 0.1, y = 3.5, fontface = 3, size = 4, hjust = "left", 
+           label = "Everyone matures and learns") +  
+  annotate("text", x = 0.1, y = 2.9, fontface = 2, size = 5, hjust = "left", 
+           label = "Improvements") +  
+  annotate("text", x = 0.1, y = 2.5, fontface = 3, size = 4, hjust = "left", 
+           label = "Blinding of the researcher") +  
+  annotate("text", x = 0.1, y = 2.1, fontface = 3, size = 4, hjust = "left", 
+           label = "Random selection of samples") +  
+  annotate("text", x = 0.1, y = 1.7, fontface = 3, size = 4, hjust = "left", 
+           label = "Randomization of the samples") +
+  annotate("text", x = 0.1, y = 1.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Strict experimental protocol") +
+  annotate("text", x = 0.1, y = 0.9, fontface = 3, size = 4, hjust = "left", 
+           label = "Experimental manipulation") + 
   ## right
-  geom_ellipse(aes(x0 = 7, y0 = 3, a = 0.75, b = 1.5, angle = 0),
-               fill = "#6A00A880") +
-  annotate("text", x = 7, y = 3.5, fontface = 2, size = 6, 
-           label = "Garbage") +
-  annotate("text", x = 7, y = 2.5, fontface = 2, size = 6, 
-           label = "pattern") +
-  geom_curve(aes(xend = 6.3, y = 2, x = 5.1, yend = 2),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+  geom_shape(data = tibble(x = c(5.5, 8, 8, 5.5), 
+                           y = c(0.5, 0.5, 7.5, 7.5)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
+  geom_curve(aes(x = 5.4, y = 5.5, xend = 4.5, yend = 4.7),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "black", linewidth = 1) +
-  geom_curve(aes(xend = 6.3, y = 4, x = 5.1, yend = 4),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 1) +
-  annotate("label", x = 5.65, y = 3, fontface = 3, size = 6, fill = "#F0F921FF", 
-           label = "OUT")
+  annotate("text", x = 6.75, y = 7.1, fontface = 2, size = 7,
+           label = "External") +
+  annotate("text", x = 5.6, y = 6.5, fontface = 2, size = 5, hjust = "left", 
+           label = "Aspects") +  
+  annotate("text", x = 5.6, y = 6.1, fontface = 3, size = 4, hjust = "left", 
+           label = "Population & cultural influence") +  
+  annotate("text", x = 5.6, y = 5.7, fontface = 3, size = 4, hjust = "left", 
+           label = "Ecological & spatial influence") +  
+  annotate("text", x = 5.6, y = 5.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Temporal & historical influence") +  
+  annotate("text", x = 5.6, y = 4.7, fontface = 2, size = 5, hjust = "left", 
+           label = "Threats to consider") +  
+  annotate("text", x = 5.6, y = 4.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Selection bias can occur") +  
+  annotate("text", x = 5.6, y = 3.9, fontface = 3, size = 4, hjust = "left", 
+           label = "Effect of the researcher") +  
+  annotate("text", x = 5.6, y = 3.5, fontface = 3, size = 4, hjust = "left", 
+           label = "Situational factors of the study") +  
+  annotate("text", x = 5.6, y = 2.9, fontface = 2, size = 5, hjust = "left", 
+           label = "Improvements") +  
+  annotate("text", x = 5.6, y = 2.5, fontface = 3, size = 4, hjust = "left", 
+           label = "Field experiment / real world") +  
+  annotate("text", x = 5.6, y = 2.1, fontface = 3, size = 4, hjust = "left", 
+           label = "Representative sampling") +  
+  annotate("text", x = 5.6, y = 1.7, fontface = 3, size = 4, hjust = "left", 
+           label = "Randomization of the samples") +
+  annotate("text", x = 5.6, y = 1.3, fontface = 3, size = 4, hjust = "left", 
+           label = "Biological replication") +
+  annotate("text", x = 5.6, y = 0.9, fontface = 3, size = 4, hjust = "left", 
+           label = "Temporal & spatial replication") +
+  ## bottom
+  geom_shape(data = tibble(x = c(2.75, 5.25, 5.25, 2.75), 
+                           y = c(0.5, 0.5, 1.75, 1.75)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#B12A9080", color = "black") +
+  annotate("text", x = 4, y = 1.4, fontface = 2, size = 6,
+           label = "Generalization") +
+  annotate("segment", xend = 4, y = 3, x = 4, yend = 1.9, size = 1,
+           arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +
+  annotate("text", x = 4, y = 0.9, fontface = 3, size = 5, 
+           label = "Truthworthy in real life")  
+
 ```
 
 
@@ -228,6 +283,10 @@ https://en.wikipedia.org/wiki/External_validity
 https://www.researchgate.net/profile/Jolaine-Draugalis/publication/260267611_Establishing_the_internal_and_external_validity_of_experimental_studies/links/56c2042208ae44da37ff4feb/Establishing-the-internal-and-external-validity-of-experimental-studies.pdf
 
 https://journals.sagepub.com/doi/pdf/10.1177/17456916221136117
+
+https://www.verywellmind.com/internal-and-external-validity-4584479#:~:text=External%20validity%20relates%20to%20how%20applicable%20the,*%20Maturation%20*%20Statistical%20regression%20*%20Testing
+
+https://dovetail.com/research/internal-validity/
 
 Threats to internal data validity
 
