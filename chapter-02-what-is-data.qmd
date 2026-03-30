@@ -161,6 +161,8 @@ Where is the replication in the technical replication?
 ::: callout-note
 ## A word of caution: Should be all the values the same?
 
+Should we not measure always the same value?
+
 :::
 
 ### Internal and external validity
