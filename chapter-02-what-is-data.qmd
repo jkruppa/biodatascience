@@ -235,6 +235,8 @@ From there, we have the famous saying 'garbage in, garbage out', which is illust
 p_data_garbage
 ```
 
+[Guidance on Validity of Clinical Studies](https://health.ec.europa.eu/document/download/9f9dbfe4-078b-4959-9a07-df9167258772_en?filename=hta_clinical-studies-validity_guidance_en.pdf)@EC2024HTA and @toumi2025clinical
+
 
 ### Simulation and artificial data
 
