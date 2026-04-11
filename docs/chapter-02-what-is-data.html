@@ -460,7 +460,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 31. March 2026 at 10:21:06</em></p>
+<p><em>Last modified on 11. April 2026 at 20:00:36</em></p>
 <blockquote class="blockquote">
 <p><em>“The limits of my language mean the limits of my world.” — Ludwig Wittgenstein</em></p>
 </blockquote>
@@ -592,7 +592,7 @@ Figure&nbsp;2.6: Different types of replication can be observed in data tables a
 </div>
 </div>
 </div>
-<p>Where is the replication in the technical replication?</p>
+<p>Sometimes cell cultures can become a bit strange. Where is the statistical replication in the technical replication? If we replicate the same cell three times, we have a clone. This is not a biological replicate, which is usually considered a statistical replicate. We need variance to run our statistical algorithms. One solution would be to add or subtract a small random value, such as <span class="math inline">\(\pm0.001\)</span>, to each measured value, but I cannot recommend this approach. This solution is only feasible if nothing else is possible and a running statistical test is really necessary. In reality, our experimental design does not align with the statistical theory framework. You will need to design your experiment differently and repeat it.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -603,7 +603,8 @@ Figure&nbsp;2.6: Different types of replication can be observed in data tables a
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Should we not measure always the same value?</p>
+<p>If you are new to science and experiments, you might think that the best outcome of a measurement would be the same value each time you measure something. In this case, you are muddling up biological and technical replication. If you measure the same thing on the same object, you should always get the same value. If you step on your personal scale three times in the morning, you should get the same value each time. However, if you, your potential partner and your offspring each step on the scale once, you should get three different body weight values.</p>
+<p>Later in the book, we will run statistical algorithms that depend on a concept called ‘variance’. If you always measure the same value in your experiment, the variance will be zero. In this case, you will quickly realise that you need to divide your summary statistics of your data by the variance. However, if all the values are the same, you will divide by zero, which is a severe mathematical problem that will cause most algorithms to crash and return an error message.</p>
 </div>
 </div>
 </section>
@@ -1555,30 +1556,30 @@ Figure&nbsp;2.13: foo.
 <span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>The following @fig-replicate-data illustrates the various types of replication. In general, we divide replication into biological and technical replication. We are also able to conduct biological replication at many points in time. This may sound confusing, but the difference lies in the time between the measurements. Let us start with biological replication. We measure an outcome Y on different biological individuals. Depending on our research question, we might measure only a few individuals or hundreds to thousands. These individuals can be humans, plants or mice. Technical replication involves taking measurements many times on the same individual at the same time. This allows us to ensure that the measurement was correct. For example, you could take your body weight three times and then combine the three measurements to give one overall result. If a large amount of time passes between the individual measurements, we speak of a repeated measurement. In this case, we are still measuring the same individual, but at different points in time. We want to know how body weight changes in humans over weeks. This is a biological replication at different points in time.</span>
 <span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8.5</span></span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Different types of replication can be observed in data tables and experiments. **(A)** First, there is biological replication, where a measured $Y$ is repeatedly observed in different biological individuals. **(B)** The second type is repeated measurement, where a measured Y is observed on each individual at different points in time. The time between each measurement is long. **(C)** Third, technical replication involves measuring individuals in a row at one point in time. The time between each observation is negligible. The values measured for each individual are mostly combined into a single measure."</span></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-replicate-data</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>p_measure <span class="sc">+</span> p_repeat_measure <span class="sc">+</span> p_tech_rep <span class="sc">+</span></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">width =</span> <span class="fu">c</span>(<span class="fl">0.3</span>,<span class="fl">0.75</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="st">'A'</span>, <span class="at">tag_prefix =</span> <span class="st">'('</span>, <span class="at">tag_suffix =</span> <span class="st">')'</span>) <span class="sc">&amp;</span></span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.tag =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 8.5</span></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Different types of replication can be observed in data tables and experiments. **(A)** First, there is biological replication, where a measured $Y$ is repeatedly observed in different biological individuals. **(B)** The second type is repeated measurement, where a measured Y is observed on each individual at different points in time. The time between each measurement is long. **(C)** Third, technical replication involves measuring individuals in a row at one point in time. The time between each observation is negligible. The values measured for each individual are mostly combined into a single measure."</span></span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-replicate-data</span></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>p_measure <span class="sc">+</span> p_repeat_measure <span class="sc">+</span> p_tech_rep <span class="sc">+</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">width =</span> <span class="fu">c</span>(<span class="fl">0.3</span>,<span class="fl">0.75</span>,<span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_annotation</span>(<span class="at">tag_levels =</span> <span class="st">'A'</span>, <span class="at">tag_prefix =</span> <span class="st">'('</span>, <span class="at">tag_suffix =</span> <span class="st">')'</span>) <span class="sc">&amp;</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.tag =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>))</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>Sometimes cell cultures can become a bit strange. Where is the statistical replication in the technical replication? If we replicate the same cell three times, we have a clone. This is not a biological replicate, which is usually considered a statistical replicate. We need variance to run our statistical algorithms. One solution would be to add or subtract a small random value, such as $\pm0.001$, to each measured value, but I cannot recommend this approach. This solution is only feasible if nothing else is possible and a running statistical test is really necessary. In reality, our experimental design does not align with the statistical theory framework. You will need to design your experiment differently and repeat it.</span>
 <span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>Where is the replication in the technical replication?</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a><span class="fu">## A word of caution: Should be all the values the same?</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a><span class="fu">## A word of caution: Should be all the values the same?</span></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>If you are new to science and experiments, you might think that the best outcome of a measurement would be the same value each time you measure something. In this case, you are muddling up biological and technical replication. If you measure the same thing on the same object, you should always get the same value. If you step on your personal scale three times in the morning, you should get the same value each time. However, if you, your potential partner and your offspring each step on the scale once, you should get three different body weight values. </span>
 <span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>Should we not measure always the same value?</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>Later in the book, we will run statistical algorithms that depend on a concept called 'variance'. If you always measure the same value in your experiment, the variance will be zero. In this case, you will quickly realise that you need to divide your summary statistics of your data by the variance. However, if all the values are the same, you will divide by zero, which is a severe mathematical problem that will cause most algorithms to crash and return an error message.</span>
 <span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a></span>

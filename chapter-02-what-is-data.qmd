@@ -138,7 +138,6 @@ When I first started studying statistics, I found the replications a little irri
 
 The following @fig-replicate-data illustrates the various types of replication. In general, we divide replication into biological and technical replication. We are also able to conduct biological replication at many points in time. This may sound confusing, but the difference lies in the time between the measurements. Let us start with biological replication. We measure an outcome Y on different biological individuals. Depending on our research question, we might measure only a few individuals or hundreds to thousands. These individuals can be humans, plants or mice. Technical replication involves taking measurements many times on the same individual at the same time. This allows us to ensure that the measurement was correct. For example, you could take your body weight three times and then combine the three measurements to give one overall result. If a large amount of time passes between the individual measurements, we speak of a repeated measurement. In this case, we are still measuring the same individual, but at different points in time. We want to know how body weight changes in humans over weeks. This is a biological replication at different points in time.
 
-
 ```{r}
 #| message: false
 #| echo: false
@@ -155,13 +154,14 @@ p_measure + p_repeat_measure + p_tech_rep +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-
-Where is the replication in the technical replication?
+Sometimes cell cultures can become a bit strange. Where is the statistical replication in the technical replication? If we replicate the same cell three times, we have a clone. This is not a biological replicate, which is usually considered a statistical replicate. We need variance to run our statistical algorithms. One solution would be to add or subtract a small random value, such as $\pm0.001$, to each measured value, but I cannot recommend this approach. This solution is only feasible if nothing else is possible and a running statistical test is really necessary. In reality, our experimental design does not align with the statistical theory framework. You will need to design your experiment differently and repeat it.
 
 ::: callout-note
 ## A word of caution: Should be all the values the same?
 
-Should we not measure always the same value?
+If you are new to science and experiments, you might think that the best outcome of a measurement would be the same value each time you measure something. In this case, you are muddling up biological and technical replication. If you measure the same thing on the same object, you should always get the same value. If you step on your personal scale three times in the morning, you should get the same value each time. However, if you, your potential partner and your offspring each step on the scale once, you should get three different body weight values. 
+
+Later in the book, we will run statistical algorithms that depend on a concept called 'variance'. If you always measure the same value in your experiment, the variance will be zero. In this case, you will quickly realise that you need to divide your summary statistics of your data by the variance. However, if all the values are the same, you will divide by zero, which is a severe mathematical problem that will cause most algorithms to crash and return an error message.
 
 :::
 
