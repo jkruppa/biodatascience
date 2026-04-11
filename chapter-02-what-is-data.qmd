@@ -162,7 +162,6 @@ Sometimes cell cultures can become a bit strange. Where is the statistical repli
 If you are new to science and experiments, you might think that the best outcome of a measurement would be the same value each time you measure something. In this case, you are muddling up biological and technical replication. If you measure the same thing on the same object, you should always get the same value. If you step on your personal scale three times in the morning, you should get the same value each time. However, if you, your potential partner and your offspring each step on the scale once, you should get three different body weight values. 
 
 Later in the book, we will run statistical algorithms that depend on a concept called 'variance'. If you always measure the same value in your experiment, the variance will be zero. In this case, you will quickly realise that you need to divide your summary statistics of your data by the variance. However, if all the values are the same, you will divide by zero, which is a severe mathematical problem that will cause most algorithms to crash and return an error message.
-
 :::
 
 ### Internal and external validity
@@ -178,7 +177,7 @@ Internal validity is often considered a prerequisite for external validity, as a
 #| fig-align: center
 #| fig-height: 4.25
 #| fig-width: 8
-#| fig-cap: "fooo"
+#| fig-cap: "Aspects, threats and possible improvements of the internal and external validation of data. There may be a trade-off between the two. If internal validity is high, the environment is highly controlled, as in a laboratory; therefore, external validity in the field might be low, and vice versa. The ultimate goal is to generate data that can be generalised and considered truthful in real-life situations."
 #| label: fig-data-internal-external
 p_internal_external
 ```
