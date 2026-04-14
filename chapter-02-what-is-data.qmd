@@ -170,7 +170,7 @@ Can we trust the data we are working with? Is it valid, and what can we do with 
 
 For example, it is well known that men are generally larger than women. Therefore, we would expect male patients to be larger on average than female patients in a data set of patients. However, this is only partly true. The height distribution also depends on age, so in a clinical study of younger patients, the girls may be taller than the boys. Therefore, I would advise against using general rules without considering the context of the data.
 
-Internal validity is often considered a prerequisite for external validity, as a study must first be true for its participants before it can be generalized to the broader population.
+Internal validity is often considered a prerequisite for external validity, as a experiment must first be true for its included observations before it can be generalized to the broader population.
 
 ```{r}
 #| message: false
