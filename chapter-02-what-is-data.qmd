@@ -187,17 +187,21 @@ p_internal_external
 ::: callout-note
 ## Examples of failures in internal validity
 
-**Moving plants**
+Why doesn't my experiment work? Or why can't other scientists reproduce my results? Why do I make observations that cannot be explained and still don't feel real? There can be different reasons for this, and here I will give you three examples from my consulting work and literature to inspire you and give you food for thought.
 
-foo
+Moving plants
 
-**Mice with big ears**
+: You might say that the biggest difference between plant, animal and human experiments is that plants cannot move, whereas animals can and humans run away. Therefore, you might assume that plants always stay in one place. This may be true for field experiments, but anything else that can move will move. Some strange things have happened in my many years of statistical consulting. For example, plants in pots move because the janitor had to do some repairs and thought he had put the plants back in the same spot. Plants move because visitors might rearrange them. This happened with pupils from a visiting class. They find it appealing to sort the pots in increasing order of plant height. Sometimes, even the tubes move the plants because they were in the wrong position, causing the plants to move when the tubes were moved.
 
-bar
+Mice with big ears
+
+: During another consultation, we observed strange patterns in the mice under observation. Large mice in particular exhibited unusual behaviour during the treatment regime. We started to investigate and found that one of the laboratory staff had been a little too practical. When there were more than nine mice to be numbered on the ears with a pen, she found it easier to write large two-digit numbers on the mice with larger ears. Intuitively, the mice with larger ears were also larger. Unknowingly, she had introduced a selection bias into the data. This was not due to laziness, as the writing was very neat and the selection process took much longer than randomly selecting a mouse and writing a number on its ear. This is a good example of the need for statistical education and experimental design, even among laboratory staff who mainly conduct experiments. If procedures become a cargo cult with no meaning, everyone will try to optimise the workflow at some point. 
+
+
 
 **Electrified children**
 
-hust
+A final example comes directly from human science. Every new discovery opens up new possibilities for humanity. This is also true of the discovery of electricity. In 1912, the Swedish chemist Svante Arrhenius exposed newborn infants in an orphanage to high-frequency electric currents to see if they would become stronger @boese2011electrified. This teaches us two things: first, that if not regulated, humans will do strange things to other humans. Ethics are fundamental to clinical studies. Secondly, parents do not want their children to be involved in such experiments. Therefore, Arrhenius had to use an orphanage as a source of participants. He thought that if there were no parents around, no one would intervene. Arrhenius was able to stimulate the growth and development of children using electricity. At first glance, this seems like a stunning result. However, there were always heroes around, and in this case, the nurses had placed the healthier babies in the electrified group and the weaker, malnourished ones in the control group. 
 
 :::
 
