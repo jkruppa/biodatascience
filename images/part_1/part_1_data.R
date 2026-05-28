@@ -12,8 +12,10 @@ p_measured_flea <- ggplot() +
              curvature = 0.3, color = "#FDC926FF", linewidth = 0.5) +
   annotate("text", x = 3.3, y = -9.25, label = "Hairs on each back leg [count]",
            hjust = "right", size = 3.75, fontface = 2, color = "#0D0887FF") +
-  annotate("label", x = 6, y = 2, label = "Weight [mg]", fill = "white", linewidth = 0, 
-           hjust = "center", color = "#B12A90FF", size = 3.75, fontface = 2) +
+  annotate("label", x = 5.6, y = 2.8, label = "Blood meal [ml/mg]", fill = "white", linewidth = 0, 
+           hjust = "center", color = "#B12A90FF", size = 3.5, fontface = 2) +
+  annotate("label", x = 6, y = 1, label = "Weight [mg]", fill = "white", linewidth = 0, 
+           hjust = "center", color = "#B12A90FF", size = 3.5, fontface = 2) +
   geom_curve(aes(x = 2.5, y = 3, xend = -10, yend = -6),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.75, color = "#FDC926FF", linewidth = 0.75, linetype = 1) +
