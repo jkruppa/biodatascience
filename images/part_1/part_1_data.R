@@ -1,6 +1,6 @@
 p_measured_flea <- ggplot() +
   theme_void() +
-  coord_cartesian(xlim = c(-10, 15), ylim = c(-10, 10)) +
+  coord_cartesian(xlim = c(-10, 15), ylim = c(-11, 10)) +
   geom_image(aes(x = 3, y = 0, image = "images/flea_00.png"), size = 1.05) +
   annotate("errorbar", xmin = -0.75, xmax = 9, x = 5, y = 9, color = "#FDC926FF") +
   annotate("text", x = (-0.75 + 8.75)/2, y = 10, label = "Body length [mm]", 
@@ -56,14 +56,16 @@ p_measured_flea <- ggplot() +
   geom_shape(data = tibble(x = c(12.9, 16, 16, 12.9), 
                            y = c(-5.5, -5.5, 1, 1)),
              aes(x, y), radius = unit(0.2, 'cm'), fill = "#B12A90FF", alpha = 0.1) +
-  annotate("text", hjust = "center", x = 14.5, y = 0, label = "Host",
+  annotate("text", hjust = "center", x = 14.5, y = 0, label = "Craving",
            size = 3.75, fontface = 2, color = "#B12A90FF") +
   annotate("text", hjust = "left", x = 13, y = c(-1.5, -3, -4.5), 
-           label = c("(1) cat", "(2) dog", "(3) fox"),
+           label = c("(1) hungry", "(2) full", "(3) overeat"),
            size = 3.25, fontface = 3, color = "gray35") +
   annotate("text", x = c(6.1, 12), y = c(-9.75, 0.4), label = "†", size = 2) +
   annotate("text", x = 16, y = -10, hjust = "right", fontface = 3, color = "gray35", size = 2,
-           label = "Catalog of the Fédération Internationale de la Beauté des Puces (FIBP)")
+           label = "Catalog of the Fédération Internationale de la Beauté des Puces (FIBP)") +
+  annotate("text", x = 16, y = -11, hjust = "right", fontface = 3, color = "gray35", size = 2,
+           label = "Bloodmeal: [0ml - 4ml) - hungry; [4ml - 8ml) - full; [8ml - 12ml) - overeat")
 
 
 
