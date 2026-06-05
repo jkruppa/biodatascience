@@ -22,7 +22,7 @@ Unfortunately, none of this ever happened in our branch of reality. But it might
 #| eval: true
 #| label: fig-chap-11-cov-01-flea
 #| fig-align: center
-#| fig-height: 3
+#| fig-height: 3.25
 #| fig-width: 7
 #| fig-cap: "Presentation of all measured and experimental values for a given flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
 

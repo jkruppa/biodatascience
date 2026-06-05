@@ -64,6 +64,7 @@ p_measured_flea <- ggplot() +
   annotate("text", x = c(6.1, 12), y = c(-9.75, 0.4), label = "†", size = 2) +
   annotate("text", x = 16, y = -10, hjust = "right", fontface = 3, color = "gray35", size = 2,
            label = "Catalog of the Fédération Internationale de la Beauté des Puces (FIBP)") +
+  annotate("text", x = c(6.1, 15.7), y = c(-10.75, 0.4), label = "‡", size = 2) +
   annotate("text", x = 16, y = -11, hjust = "right", fontface = 3, color = "gray35", size = 2,
            label = "Bloodmeal: [0ml - 4ml) - hungry; [4ml - 8ml) - full; [8ml - 12ml) - overeat")
 
