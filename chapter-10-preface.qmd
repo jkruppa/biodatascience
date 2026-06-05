@@ -9,6 +9,7 @@ source("images/part_1/part_1_data.R")
 
 > *"X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes." --- German intro of Beyond Belief: Fact or Fiction*
 
+![Canelo and I are sitting on the sofa. Canelo was a transgender guinea pig. This may sound strange, but he looked male on the outside but had a uterus on the inside. Despite this anomaly, he was a very cosy friend. His species might be the source of the main character in this book: the human flea, Pulex irritans. The human flea jumped from guinea pigs to cross the species barrier and infect humans. Pulex irritans has come to stay.](images/canelo_cut.png){fig-align="center" width="300" #fig-data-window-view}
 
 Once upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas @cadiergues2000comparison. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?
 
@@ -24,7 +25,7 @@ Unfortunately, none of this ever happened in our branch of reality. But it might
 #| fig-align: center
 #| fig-height: 3.25
 #| fig-width: 7
-#| fig-cap: "Presentation of all measured and experimental values for a given flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
+#| fig-cap: "Presentation of all measured and experimental values for a given flea of the species *Pulex irritans*, also known as the common human flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
 
 p_measured_flea
 ```
