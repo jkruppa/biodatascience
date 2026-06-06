@@ -62,7 +62,7 @@ pacman::p_load(tidyverse, conflicted)
 
 Small data and grid
 
-### Jump performances of fleas
+### Fleas with feeding habits
 
 @cadiergues2000comparison
 
@@ -192,24 +192,9 @@ jump_animals_tbl |>
 ```
 
 
-### Measurements on animal fleas
-
-- Jump length in [cm] called `jump_length`
-- Number of hairs on each leg called `count_leg_left` and `count_leg_right`
-- Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating` on a Likert scale from 1 to 5, with 5 being the strongest expression.
-- The infection status with the flea cold is called `infected`, with a value of 0/1 for no/yes.
-
-```{r}
-tibble(jumplength = rnorm(7, 5, 1),
-       counthairleg_left = rpois(7, 4),
-       counthairleg_right = rpois(7, 4),
-       counthairleg = (counthairleg_left + counthairleg_right)/2,
-       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),
-       infectd = rbinom(7, prob = 0.5, size = 1))
-```
 
 
-### Fleas in urban and rural habitats
+### Fleas at stages of development
 
 Why so complex?
 
@@ -278,6 +263,23 @@ jump_habitat_tbl |>
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   coord_cartesian(ylim = c(0, NA))
 ```
+
+### Measurements on animal fleas
+
+- Jump length in [cm] called `jump_length`
+- Number of hairs on each leg called `count_leg_left` and `count_leg_right`
+- Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called `rating` on a Likert scale from 1 to 5, with 5 being the strongest expression.
+- The infection status with the flea cold is called `infected`, with a value of 0/1 for no/yes.
+
+```{r}
+tibble(jumplength = rnorm(7, 5, 1),
+       counthairleg_left = rpois(7, 4),
+       counthairleg_right = rpois(7, 4),
+       counthairleg = (counthairleg_left + counthairleg_right)/2,
+       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),
+       infectd = rbinom(7, prob = 0.5, size = 1))
+```
+
 
 ## Data availability
 

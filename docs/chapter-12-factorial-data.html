@@ -416,9 +416,9 @@ window.Quarto = {
   <li><a href="#r-packages-used" id="toc-r-packages-used" class="nav-link" data-scroll-target="#r-packages-used"><span class="header-section-number">5.3</span> R packages used</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">5.4</span> Data</a>
   <ul class="collapse">
-  <li><a href="#jump-performances-of-fleas" id="toc-jump-performances-of-fleas" class="nav-link" data-scroll-target="#jump-performances-of-fleas"><span class="header-section-number">5.4.1</span> Jump performances of fleas</a></li>
-  <li><a href="#measurements-on-animal-fleas" id="toc-measurements-on-animal-fleas" class="nav-link" data-scroll-target="#measurements-on-animal-fleas"><span class="header-section-number">5.4.2</span> Measurements on animal fleas</a></li>
-  <li><a href="#fleas-in-urban-and-rural-habitats" id="toc-fleas-in-urban-and-rural-habitats" class="nav-link" data-scroll-target="#fleas-in-urban-and-rural-habitats"><span class="header-section-number">5.4.3</span> Fleas in urban and rural habitats</a></li>
+  <li><a href="#fleas-with-feeding-habits" id="toc-fleas-with-feeding-habits" class="nav-link" data-scroll-target="#fleas-with-feeding-habits"><span class="header-section-number">5.4.1</span> Fleas with feeding habits</a></li>
+  <li><a href="#fleas-at-stages-of-development" id="toc-fleas-at-stages-of-development" class="nav-link" data-scroll-target="#fleas-at-stages-of-development"><span class="header-section-number">5.4.2</span> Fleas at stages of development</a></li>
+  <li><a href="#measurements-on-animal-fleas" id="toc-measurements-on-animal-fleas" class="nav-link" data-scroll-target="#measurements-on-animal-fleas"><span class="header-section-number">5.4.3</span> Measurements on animal fleas</a></li>
   </ul></li>
   <li><a href="#data-availability" id="toc-data-availability" class="nav-link" data-scroll-target="#data-availability"><span class="header-section-number">5.5</span> Data availability</a></li>
   <li><a href="#alternatives" id="toc-alternatives" class="nav-link" data-scroll-target="#alternatives"><span class="header-section-number">5.6</span> Alternatives</a>
@@ -455,7 +455,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 06. June 2026 at 20:22:52</em></p>
+<p><em>Last modified on 06. June 2026 at 20:42:16</em></p>
 <blockquote class="blockquote">
 <p><em>“A quote.” — Dan Meyer</em></p>
 </blockquote>
@@ -507,8 +507,8 @@ Figure&nbsp;5.2: foo
 <section id="data" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="data"><span class="header-section-number">5.4</span> Data</h2>
 <p>Small data and grid</p>
-<section id="jump-performances-of-fleas" class="level3" data-number="5.4.1">
-<h3 data-number="5.4.1" class="anchored" data-anchor-id="jump-performances-of-fleas"><span class="header-section-number">5.4.1</span> Jump performances of fleas</h3>
+<section id="fleas-with-feeding-habits" class="level3" data-number="5.4.1">
+<h3 data-number="5.4.1" class="anchored" data-anchor-id="fleas-with-feeding-habits"><span class="header-section-number">5.4.1</span> Fleas with feeding habits</h3>
 <p><span class="citation" data-cites="cadiergues2000comparison"><sup><a href="#ref-cadiergues2000comparison" role="doc-biblioref">2</a></sup></span></p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -629,51 +629,19 @@ Figure&nbsp;5.5: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 </div>
 </div>
 </section>
-<section id="measurements-on-animal-fleas" class="level3" data-number="5.4.2">
-<h3 data-number="5.4.2" class="anchored" data-anchor-id="measurements-on-animal-fleas"><span class="header-section-number">5.4.2</span> Measurements on animal fleas</h3>
-<ul>
-<li>Jump length in [cm] called <code>jump_length</code></li>
-<li>Number of hairs on each leg called <code>count_leg_left</code> and <code>count_leg_right</code></li>
-<li>Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called <code>rating</code> on a Likert scale from 1 to 5, with 5 being the strongest expression.</li>
-<li>The infection status with the flea cold is called <code>infected</code>, with a value of 0/1 for no/yes.</li>
-</ul>
-<div class="cell">
-<details open="" class="code-fold">
-<summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 × 6
-  jumplength counthairleg_left counthairleg_right counthairleg rating infectd
-       &lt;dbl&gt;             &lt;int&gt;              &lt;int&gt;        &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;
-1       6.17                 4                  8          6        3       1
-2       5.03                 5                  5          5        4       0
-3       6.51                 6                  1          3.5      3       0
-4       4.38                 2                  1          1.5      3       1
-5       2.62                 0                  3          1.5      3       0
-6       6.64                 3                  3          3        2       0
-7       3.82                 3                  3          3        3       0</code></pre>
-</div>
-</div>
-</section>
-<section id="fleas-in-urban-and-rural-habitats" class="level3" data-number="5.4.3">
-<h3 data-number="5.4.3" class="anchored" data-anchor-id="fleas-in-urban-and-rural-habitats"><span class="header-section-number">5.4.3</span> Fleas in urban and rural habitats</h3>
+<section id="fleas-at-stages-of-development" class="level3" data-number="5.4.2">
+<h3 data-number="5.4.2" class="anchored" data-anchor-id="fleas-at-stages-of-development"><span class="header-section-number">5.4.2</span> Fleas at stages of development</h3>
 <p>Why so complex?</p>
 <p><span class="citation" data-cites="rpkg_purrr"><sup><a href="#ref-rpkg_purrr" role="doc-biblioref">4</a></sup></span></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">feeding =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">stage =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_feeding =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_stage =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_feeding <span class="sc">+</span> mean_stage,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">feeding =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">stage =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_feeding =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_stage =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_feeding <span class="sc">+</span> mean_stage,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 6
@@ -690,42 +658,42 @@ Figure&nbsp;5.5: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jumplength =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jumplength)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jumplength =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jumplength)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(feeding, stage, jumplength) <span class="sc">|&gt;</span> </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar water"</span>, <span class="st">"tomato ketchup"</span>, <span class="st">"human blood"</span>)),</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">stage =</span> <span class="fu">factor</span>(stage, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"juvenile"</span>, <span class="st">"adult"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(feeding, stage, jumplength) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar water"</span>, <span class="st">"tomato ketchup"</span>, <span class="st">"human blood"</span>)),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">stage =</span> <span class="fu">factor</span>(stage, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"juvenile"</span>, <span class="st">"adult"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>R Code [show / hide]</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jumplength),</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jumplength)) <span class="sc">|&gt;</span> </span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jumplength),</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jumplength)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 4
 # Groups:   feeding [3]
   feeding        stage    `mean(jumplength)` `sd(jumplength)`
   &lt;fct&gt;          &lt;fct&gt;                 &lt;dbl&gt;            &lt;dbl&gt;
-1 sugar water    juvenile               21.8             9.26
-2 sugar water    adult                  23.6             7.23
-3 tomato ketchup juvenile               35.2             9.1 
-4 tomato ketchup adult                  27.9            12.8 
-5 human blood    juvenile               19.2             1.85
-6 human blood    adult                  12.8             3.74</code></pre>
+1 sugar water    juvenile               25.1            13.8 
+2 sugar water    adult                  14.9            11.4 
+3 tomato ketchup juvenile               29.9             6.32
+4 tomato ketchup adult                  27.3             9.26
+5 human blood    juvenile               22.0             3.65
+6 human blood    adult                  10.1             4.6 </code></pre>
 </div>
 </div>
 <div class="cell" data-layout-align="center">
@@ -740,6 +708,38 @@ Figure&nbsp;5.6: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</section>
+<section id="measurements-on-animal-fleas" class="level3" data-number="5.4.3">
+<h3 data-number="5.4.3" class="anchored" data-anchor-id="measurements-on-animal-fleas"><span class="header-section-number">5.4.3</span> Measurements on animal fleas</h3>
+<ul>
+<li>Jump length in [cm] called <code>jump_length</code></li>
+<li>Number of hairs on each leg called <code>count_leg_left</code> and <code>count_leg_right</code></li>
+<li>Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called <code>rating</code> on a Likert scale from 1 to 5, with 5 being the strongest expression.</li>
+<li>The infection status with the flea cold is called <code>infected</code>, with a value of 0/1 for no/yes.</li>
+</ul>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>R Code [show / hide]</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 6
+  jumplength counthairleg_left counthairleg_right counthairleg rating infectd
+       &lt;dbl&gt;             &lt;int&gt;              &lt;int&gt;        &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;
+1       5.02                 3                  5          4        2       0
+2       4.73                 6                  4          5        3       0
+3       5.91                 4                  5          4.5      3       0
+4       3.38                 6                  3          4.5      2       1
+5       3.10                 3                  4          3.5      5       0
+6       7.02                 4                  3          3.5      1       1
+7       3.95                 4                  3          3.5      1       0</code></pre>
 </div>
 </div>
 </section>
@@ -1384,7 +1384,7 @@ Figure&nbsp;5.6: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb20-68"><a href="#cb20-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-69"><a href="#cb20-69" aria-hidden="true" tabindex="-1"></a>Small data and grid</span>
 <span id="cb20-70"><a href="#cb20-70" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a><span class="fu">### Jump performances of fleas</span></span>
+<span id="cb20-71"><a href="#cb20-71" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fleas with feeding habits</span></span>
 <span id="cb20-72"><a href="#cb20-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-73"><a href="#cb20-73" aria-hidden="true" tabindex="-1"></a>@cadiergues2000comparison</span>
 <span id="cb20-74"><a href="#cb20-74" aria-hidden="true" tabindex="-1"></a></span>
@@ -1514,155 +1514,157 @@ Figure&nbsp;5.6: foo <strong>(A)</strong> foo <strong>(B)</strong> foo
 <span id="cb20-216"><a href="#cb20-216" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-217"><a href="#cb20-217" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-218"><a href="#cb20-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-219"><a href="#cb20-219" aria-hidden="true" tabindex="-1"></a><span class="fu">### Measurements on animal fleas</span></span>
+<span id="cb20-219"><a href="#cb20-219" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-220"><a href="#cb20-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jump length in <span class="co">[</span><span class="ot">cm</span><span class="co">]</span> called <span class="in">`jump_length`</span></span>
-<span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Number of hairs on each leg called <span class="in">`count_leg_left`</span> and <span class="in">`count_leg_right`</span></span>
-<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called <span class="in">`rating`</span> on a Likert scale from 1 to 5, with 5 being the strongest expression.</span>
-<span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The infection status with the flea cold is called <span class="in">`infected`</span>, with a value of 0/1 for no/yes.</span>
-<span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-228"><a href="#cb20-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
-<span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
-<span id="cb20-232"><a href="#cb20-232" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
-<span id="cb20-233"><a href="#cb20-233" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
-<span id="cb20-234"><a href="#cb20-234" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
-<span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-221"><a href="#cb20-221" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fleas at stages of development</span></span>
+<span id="cb20-222"><a href="#cb20-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-223"><a href="#cb20-223" aria-hidden="true" tabindex="-1"></a>Why so complex?</span>
+<span id="cb20-224"><a href="#cb20-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-225"><a href="#cb20-225" aria-hidden="true" tabindex="-1"></a>@rpkg_purrr</span>
+<span id="cb20-226"><a href="#cb20-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-229"><a href="#cb20-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-230"><a href="#cb20-230" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">feeding =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">stage =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-231"><a href="#cb20-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_feeding =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
+<span id="cb20-232"><a href="#cb20-232" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_stage =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
+<span id="cb20-233"><a href="#cb20-233" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_feeding <span class="sc">+</span> mean_stage,</span>
+<span id="cb20-234"><a href="#cb20-234" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
+<span id="cb20-235"><a href="#cb20-235" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span>
+<span id="cb20-236"><a href="#cb20-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-237"><a href="#cb20-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-238"><a href="#cb20-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Fleas in urban and rural habitats</span></span>
-<span id="cb20-239"><a href="#cb20-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a>Why so complex?</span>
-<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-242"><a href="#cb20-242" aria-hidden="true" tabindex="-1"></a>@rpkg_purrr</span>
-<span id="cb20-243"><a href="#cb20-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-246"><a href="#cb20-246" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-247"><a href="#cb20-247" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid <span class="ot">&lt;-</span> <span class="fu">expand_grid</span>(<span class="at">feeding =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="at">stage =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-248"><a href="#cb20-248" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean_feeding =</span> <span class="fu">c</span>(<span class="fl">19.9</span>, <span class="fl">19.9</span>, <span class="fl">30.4</span>, <span class="fl">30.4</span>, <span class="fl">15.2</span>, <span class="fl">15.2</span>),</span>
-<span id="cb20-249"><a href="#cb20-249" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean_stage =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
-<span id="cb20-250"><a href="#cb20-250" aria-hidden="true" tabindex="-1"></a>         <span class="at">mean =</span> mean_feeding <span class="sc">+</span> mean_stage,</span>
-<span id="cb20-251"><a href="#cb20-251" aria-hidden="true" tabindex="-1"></a>         <span class="at">sd =</span> <span class="fu">c</span>(<span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">9.1</span>, <span class="fl">4.6</span>, <span class="fl">4.6</span>))</span>
-<span id="cb20-252"><a href="#cb20-252" aria-hidden="true" tabindex="-1"></a>jump_habitat_grid</span>
-<span id="cb20-253"><a href="#cb20-253" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-257"><a href="#cb20-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-258"><a href="#cb20-258" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
-<span id="cb20-259"><a href="#cb20-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb20-260"><a href="#cb20-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jumplength =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
-<span id="cb20-261"><a href="#cb20-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jumplength)</span>
-<span id="cb20-262"><a href="#cb20-262" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-263"><a href="#cb20-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-264"><a href="#cb20-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-265"><a href="#cb20-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-268"><a href="#cb20-268" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-269"><a href="#cb20-269" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-270"><a href="#cb20-270" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(feeding, stage, jumplength) <span class="sc">|&gt;</span> </span>
-<span id="cb20-271"><a href="#cb20-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar water"</span>, <span class="st">"tomato ketchup"</span>, <span class="st">"human blood"</span>)),</span>
-<span id="cb20-272"><a href="#cb20-272" aria-hidden="true" tabindex="-1"></a>         <span class="at">stage =</span> <span class="fu">factor</span>(stage, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"juvenile"</span>, <span class="st">"adult"</span>))) <span class="sc">|&gt;</span> </span>
-<span id="cb20-273"><a href="#cb20-273" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
-<span id="cb20-274"><a href="#cb20-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-275"><a href="#cb20-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-276"><a href="#cb20-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-279"><a href="#cb20-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-280"><a href="#cb20-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb20-281"><a href="#cb20-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb20-282"><a href="#cb20-282" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-283"><a href="#cb20-283" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
-<span id="cb20-284"><a href="#cb20-284" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jumplength),</span>
-<span id="cb20-285"><a href="#cb20-285" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jumplength)) <span class="sc">|&gt;</span> </span>
-<span id="cb20-286"><a href="#cb20-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
-<span id="cb20-287"><a href="#cb20-287" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-288"><a href="#cb20-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-291"><a href="#cb20-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-292"><a href="#cb20-292" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb20-293"><a href="#cb20-293" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb20-294"><a href="#cb20-294" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb20-295"><a href="#cb20-295" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-fac-03</span></span>
-<span id="cb20-296"><a href="#cb20-296" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
-<span id="cb20-298"><a href="#cb20-298" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
+<span id="cb20-240"><a href="#cb20-240" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-241"><a href="#cb20-241" aria-hidden="true" tabindex="-1"></a>jump_habitat_raw_tbl <span class="ot">&lt;-</span> jump_habitat_grid <span class="sc">|&gt;</span> </span>
+<span id="cb20-242"><a href="#cb20-242" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb20-243"><a href="#cb20-243" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">jumplength =</span> <span class="fu">lst</span>(<span class="fu">rnorm</span>(<span class="dv">7</span>, mean, sd))) <span class="sc">|&gt;</span> </span>
+<span id="cb20-244"><a href="#cb20-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(<span class="at">cols =</span> jumplength)</span>
+<span id="cb20-245"><a href="#cb20-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-246"><a href="#cb20-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-247"><a href="#cb20-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-248"><a href="#cb20-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-251"><a href="#cb20-251" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-252"><a href="#cb20-252" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="ot">&lt;-</span> jump_habitat_raw_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-253"><a href="#cb20-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(feeding, stage, jumplength) <span class="sc">|&gt;</span> </span>
+<span id="cb20-254"><a href="#cb20-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"sugar water"</span>, <span class="st">"tomato ketchup"</span>, <span class="st">"human blood"</span>)),</span>
+<span id="cb20-255"><a href="#cb20-255" aria-hidden="true" tabindex="-1"></a>         <span class="at">stage =</span> <span class="fu">factor</span>(stage, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"juvenile"</span>, <span class="st">"adult"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb20-256"><a href="#cb20-256" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
+<span id="cb20-257"><a href="#cb20-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-258"><a href="#cb20-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-259"><a href="#cb20-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-262"><a href="#cb20-262" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-263"><a href="#cb20-263" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb20-264"><a href="#cb20-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb20-265"><a href="#cb20-265" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-266"><a href="#cb20-266" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
+<span id="cb20-267"><a href="#cb20-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">mean</span>(jumplength),</span>
+<span id="cb20-268"><a href="#cb20-268" aria-hidden="true" tabindex="-1"></a>            <span class="fu">sd</span>(jumplength)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-269"><a href="#cb20-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>)</span>
+<span id="cb20-270"><a href="#cb20-270" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-271"><a href="#cb20-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-274"><a href="#cb20-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-275"><a href="#cb20-275" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb20-276"><a href="#cb20-276" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb20-277"><a href="#cb20-277" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb20-278"><a href="#cb20-278" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-11-fac-03</span></span>
+<span id="cb20-279"><a href="#cb20-279" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb20-280"><a href="#cb20-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
+<span id="cb20-281"><a href="#cb20-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb20-282"><a href="#cb20-282" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "foo **(A)** foo **(B)** foo"</span></span>
+<span id="cb20-283"><a href="#cb20-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-284"><a href="#cb20-284" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-285"><a href="#cb20-285" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> feeding, <span class="at">y =</span> jumplength, <span class="at">fill =</span> stage)) <span class="sc">+</span></span>
+<span id="cb20-286"><a href="#cb20-286" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
+<span id="cb20-287"><a href="#cb20-287" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.5</span>),</span>
+<span id="cb20-288"><a href="#cb20-288" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
+<span id="cb20-289"><a href="#cb20-289" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_sdl, <span class="at">fun.args =</span> <span class="fu">list</span>(<span class="at">mult =</span> <span class="dv">1</span>), </span>
+<span id="cb20-290"><a href="#cb20-290" aria-hidden="true" tabindex="-1"></a>               <span class="at">geom=</span><span class="st">"pointrange"</span>, <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
+<span id="cb20-291"><a href="#cb20-291" aria-hidden="true" tabindex="-1"></a>               <span class="at">show.legend =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>)) <span class="sc">+</span></span>
+<span id="cb20-292"><a href="#cb20-292" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"label"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(..y..,<span class="dv">2</span>)),</span>
+<span id="cb20-293"><a href="#cb20-293" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">1.8</span>), </span>
+<span id="cb20-294"><a href="#cb20-294" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb20-295"><a href="#cb20-295" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flea feeding"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
+<span id="cb20-296"><a href="#cb20-296" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Development stage"</span>) <span class="sc">+</span></span>
+<span id="cb20-297"><a href="#cb20-297" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>) <span class="sc">+</span></span>
+<span id="cb20-298"><a href="#cb20-298" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span>
+<span id="cb20-299"><a href="#cb20-299" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-300"><a href="#cb20-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-301"><a href="#cb20-301" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-302"><a href="#cb20-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> feeding, <span class="at">y =</span> jumplength, <span class="at">fill =</span> stage)) <span class="sc">+</span></span>
-<span id="cb20-303"><a href="#cb20-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
-<span id="cb20-304"><a href="#cb20-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.5</span>),</span>
-<span id="cb20-305"><a href="#cb20-305" aria-hidden="true" tabindex="-1"></a>             <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">shape =</span> <span class="dv">21</span>) <span class="sc">+</span></span>
-<span id="cb20-306"><a href="#cb20-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun.data=</span>mean_sdl, <span class="at">fun.args =</span> <span class="fu">list</span>(<span class="at">mult =</span> <span class="dv">1</span>), </span>
-<span id="cb20-307"><a href="#cb20-307" aria-hidden="true" tabindex="-1"></a>               <span class="at">geom=</span><span class="st">"pointrange"</span>, <span class="at">shape =</span> <span class="dv">23</span>, <span class="at">size =</span> <span class="dv">1</span>,</span>
-<span id="cb20-308"><a href="#cb20-308" aria-hidden="true" tabindex="-1"></a>               <span class="at">show.legend =</span> <span class="cn">TRUE</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">0.9</span>)) <span class="sc">+</span></span>
-<span id="cb20-309"><a href="#cb20-309" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_summary</span>(<span class="at">fun =</span> mean, <span class="at">geom =</span> <span class="st">"label"</span>, <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">round</span>(..y..,<span class="dv">2</span>)),</span>
-<span id="cb20-310"><a href="#cb20-310" aria-hidden="true" tabindex="-1"></a>               <span class="at">size =</span> <span class="dv">4</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="fl">1.8</span>), </span>
-<span id="cb20-311"><a href="#cb20-311" aria-hidden="true" tabindex="-1"></a>               <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb20-312"><a href="#cb20-312" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flea feeding"</span>, <span class="at">y =</span> <span class="st">"Jump length in [cm]"</span>,</span>
-<span id="cb20-313"><a href="#cb20-313" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Development stage"</span>) <span class="sc">+</span></span>
-<span id="cb20-314"><a href="#cb20-314" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">option =</span> <span class="st">"plasma"</span>) <span class="sc">+</span></span>
-<span id="cb20-315"><a href="#cb20-315" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span>
-<span id="cb20-316"><a href="#cb20-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-317"><a href="#cb20-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-318"><a href="#cb20-318" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data availability</span></span>
+<span id="cb20-301"><a href="#cb20-301" aria-hidden="true" tabindex="-1"></a><span class="fu">### Measurements on animal fleas</span></span>
+<span id="cb20-302"><a href="#cb20-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-303"><a href="#cb20-303" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Jump length in <span class="co">[</span><span class="ot">cm</span><span class="co">]</span> called <span class="in">`jump_length`</span></span>
+<span id="cb20-304"><a href="#cb20-304" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Number of hairs on each leg called <span class="in">`count_leg_left`</span> and <span class="in">`count_leg_right`</span></span>
+<span id="cb20-305"><a href="#cb20-305" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ratings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called <span class="in">`rating`</span> on a Likert scale from 1 to 5, with 5 being the strongest expression.</span>
+<span id="cb20-306"><a href="#cb20-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The infection status with the flea cold is called <span class="in">`infected`</span>, with a value of 0/1 for no/yes.</span>
+<span id="cb20-307"><a href="#cb20-307" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-310"><a href="#cb20-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-311"><a href="#cb20-311" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(<span class="at">jumplength =</span> <span class="fu">rnorm</span>(<span class="dv">7</span>, <span class="dv">5</span>, <span class="dv">1</span>),</span>
+<span id="cb20-312"><a href="#cb20-312" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_left =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb20-313"><a href="#cb20-313" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg_right =</span> <span class="fu">rpois</span>(<span class="dv">7</span>, <span class="dv">4</span>),</span>
+<span id="cb20-314"><a href="#cb20-314" aria-hidden="true" tabindex="-1"></a>       <span class="at">counthairleg =</span> (counthairleg_left <span class="sc">+</span> counthairleg_right)<span class="sc">/</span><span class="dv">2</span>,</span>
+<span id="cb20-315"><a href="#cb20-315" aria-hidden="true" tabindex="-1"></a>       <span class="at">rating =</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="dv">7</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.4</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>)),</span>
+<span id="cb20-316"><a href="#cb20-316" aria-hidden="true" tabindex="-1"></a>       <span class="at">infectd =</span> <span class="fu">rbinom</span>(<span class="dv">7</span>, <span class="at">prob =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">1</span>))</span>
+<span id="cb20-317"><a href="#cb20-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-318"><a href="#cb20-318" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-319"><a href="#cb20-319" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a>The data is available as txt-Files under <span class="ot">&lt;https://github.com/jkruppa/biodatascience&gt;</span>.</span>
+<span id="cb20-320"><a href="#cb20-320" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data availability</span></span>
 <span id="cb20-321"><a href="#cb20-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-324"><a href="#cb20-324" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-325"><a href="#cb20-325" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-327"><a href="#cb20-327" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding) <span class="sc">|&gt;</span> </span>
-<span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
-<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding) <span class="sc">|&gt;</span> </span>
-<span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-335"><a href="#cb20-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
-<span id="cb20-336"><a href="#cb20-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-337"><a href="#cb20-337" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb20-338"><a href="#cb20-338" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
-<span id="cb20-339"><a href="#cb20-339" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-340"><a href="#cb20-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_habitat.txt"</span>)</span>
-<span id="cb20-341"><a href="#cb20-341" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-342"><a href="#cb20-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-343"><a href="#cb20-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-322"><a href="#cb20-322" aria-hidden="true" tabindex="-1"></a>The data is available as txt-Files under <span class="ot">&lt;https://github.com/jkruppa/biodatascience&gt;</span>.</span>
+<span id="cb20-323"><a href="#cb20-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-326"><a href="#cb20-326" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-327"><a href="#cb20-327" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb20-328"><a href="#cb20-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-329"><a href="#cb20-329" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-330"><a href="#cb20-330" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding) <span class="sc">|&gt;</span> </span>
+<span id="cb20-331"><a href="#cb20-331" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-332"><a href="#cb20-332" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_fleas.txt"</span>)</span>
+<span id="cb20-333"><a href="#cb20-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-334"><a href="#cb20-334" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-335"><a href="#cb20-335" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding) <span class="sc">|&gt;</span> </span>
+<span id="cb20-336"><a href="#cb20-336" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-337"><a href="#cb20-337" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_animals.txt"</span>)</span>
+<span id="cb20-338"><a href="#cb20-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-339"><a href="#cb20-339" aria-hidden="true" tabindex="-1"></a>jump_habitat_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb20-340"><a href="#cb20-340" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(feeding, stage) <span class="sc">|&gt;</span> </span>
+<span id="cb20-341"><a href="#cb20-341" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(is.numeric, round, <span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-342"><a href="#cb20-342" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write_delim</span>(<span class="st">"data/jump_habitat.txt"</span>)</span>
+<span id="cb20-343"><a href="#cb20-343" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-344"><a href="#cb20-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-345"><a href="#cb20-345" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
+<span id="cb20-345"><a href="#cb20-345" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-346"><a href="#cb20-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-347"><a href="#cb20-347" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb20-347"><a href="#cb20-347" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives </span></span>
 <span id="cb20-348"><a href="#cb20-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-349"><a href="#cb20-349" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why linear is a bad idea?</span></span>
+<span id="cb20-349"><a href="#cb20-349" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
 <span id="cb20-350"><a href="#cb20-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-353"><a href="#cb20-353" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-354"><a href="#cb20-354" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">feeding =</span> <span class="fu">rep</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">each =</span> <span class="dv">7</span>),</span>
-<span id="cb20-355"><a href="#cb20-355" aria-hidden="true" tabindex="-1"></a>                        <span class="at">jump_length =</span> <span class="fl">19.9</span> <span class="sc">+</span> <span class="fl">10.5</span> <span class="sc">*</span> feeding <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">14</span>, <span class="dv">0</span>, <span class="fl">9.1</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb20-356"><a href="#cb20-356" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>)))</span>
-<span id="cb20-357"><a href="#cb20-357" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-358"><a href="#cb20-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-359"><a href="#cb20-359" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why is a `tibble()` bad idea?</span></span>
+<span id="cb20-351"><a href="#cb20-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why linear is a bad idea?</span></span>
+<span id="cb20-352"><a href="#cb20-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-355"><a href="#cb20-355" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-356"><a href="#cb20-356" aria-hidden="true" tabindex="-1"></a>jump_flea_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">feeding =</span> <span class="fu">rep</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>, <span class="at">each =</span> <span class="dv">7</span>),</span>
+<span id="cb20-357"><a href="#cb20-357" aria-hidden="true" tabindex="-1"></a>                        <span class="at">jump_length =</span> <span class="fl">19.9</span> <span class="sc">+</span> <span class="fl">10.5</span> <span class="sc">*</span> feeding <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">14</span>, <span class="dv">0</span>, <span class="fl">9.1</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-358"><a href="#cb20-358" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">factor</span>(feeding, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"cat"</span>, <span class="st">"dog"</span>)))</span>
+<span id="cb20-359"><a href="#cb20-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb20-360"><a href="#cb20-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-363"><a href="#cb20-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb20-364"><a href="#cb20-364" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">cat =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">19.9</span>, <span class="at">sd =</span> <span class="fl">9.1</span>),</span>
-<span id="cb20-365"><a href="#cb20-365" aria-hidden="true" tabindex="-1"></a>                           <span class="at">fox =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">35.2</span>, <span class="at">sd =</span> <span class="fl">10.3</span>),</span>
-<span id="cb20-366"><a href="#cb20-366" aria-hidden="true" tabindex="-1"></a>                           <span class="at">rat =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">15.2</span>, <span class="at">sd =</span> <span class="fl">4.6</span>),</span>
-<span id="cb20-367"><a href="#cb20-367" aria-hidden="true" tabindex="-1"></a>                           <span class="at">dog =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">30.4</span>, <span class="at">sd =</span> <span class="fl">9.1</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb20-368"><a href="#cb20-368" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> cat<span class="sc">:</span>dog, <span class="at">values_to =</span> <span class="st">"jump_length"</span>, <span class="at">names_to =</span> <span class="st">"feeding"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">as_factor</span>(feeding))</span>
-<span id="cb20-370"><a href="#cb20-370" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-372"><a href="#cb20-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-373"><a href="#cb20-373" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb20-361"><a href="#cb20-361" aria-hidden="true" tabindex="-1"></a><span class="fu">### Why is a `tibble()` bad idea?</span></span>
+<span id="cb20-362"><a href="#cb20-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-365"><a href="#cb20-365" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb20-366"><a href="#cb20-366" aria-hidden="true" tabindex="-1"></a>jump_animals_tbl <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">cat =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">19.9</span>, <span class="at">sd =</span> <span class="fl">9.1</span>),</span>
+<span id="cb20-367"><a href="#cb20-367" aria-hidden="true" tabindex="-1"></a>                           <span class="at">fox =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">35.2</span>, <span class="at">sd =</span> <span class="fl">10.3</span>),</span>
+<span id="cb20-368"><a href="#cb20-368" aria-hidden="true" tabindex="-1"></a>                           <span class="at">rat =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">15.2</span>, <span class="at">sd =</span> <span class="fl">4.6</span>),</span>
+<span id="cb20-369"><a href="#cb20-369" aria-hidden="true" tabindex="-1"></a>                           <span class="at">dog =</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">7</span>, <span class="at">mean =</span> <span class="fl">30.4</span>, <span class="at">sd =</span> <span class="fl">9.1</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb20-370"><a href="#cb20-370" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> cat<span class="sc">:</span>dog, <span class="at">values_to =</span> <span class="st">"jump_length"</span>, <span class="at">names_to =</span> <span class="st">"feeding"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-371"><a href="#cb20-371" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">feeding =</span> <span class="fu">as_factor</span>(feeding))</span>
+<span id="cb20-372"><a href="#cb20-372" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb20-373"><a href="#cb20-373" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-374"><a href="#cb20-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-375"><a href="#cb20-375" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb20-375"><a href="#cb20-375" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
 <span id="cb20-376"><a href="#cb20-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-377"><a href="#cb20-377" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb20-377"><a href="#cb20-377" aria-hidden="true" tabindex="-1"></a>term</span>
 <span id="cb20-378"><a href="#cb20-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-379"><a href="#cb20-379" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb20-379"><a href="#cb20-379" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
 <span id="cb20-380"><a href="#cb20-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-381"><a href="#cb20-381" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb20-381"><a href="#cb20-381" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
 <span id="cb20-382"><a href="#cb20-382" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-383"><a href="#cb20-383" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb20-383"><a href="#cb20-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
 <span id="cb20-384"><a href="#cb20-384" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-385"><a href="#cb20-385" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb20-385"><a href="#cb20-385" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb20-386"><a href="#cb20-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-387"><a href="#cb20-387" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
