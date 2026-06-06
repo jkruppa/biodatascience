@@ -83,6 +83,10 @@ flea_jump_exp_p
 
 *C. canis* jump was longer $30.4 \pm 9.1cm$  with a range from $3$ to $50cm$
 
+The jump length of *P. irritans* has to be derived from the work of Cadiergues et al. (2000) @cadiergues2000comparison because no mean or standard deviation for the human flea was available. 
+
+Miarinjara (2025) et al. @miarinjara2025establishing demonstrate the impact of sheep's blood on the jumping ability of human fleas.
+
 
 ```{r}
 jump_flea_grid <- expand_grid(host = c("cat", "dog")) |> 
