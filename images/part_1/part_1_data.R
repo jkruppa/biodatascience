@@ -142,7 +142,7 @@ p_factorial_data_overview <- ggplot() +
   geom_segment(aes(x = 2.8, xend = 11, y = -3, yend = -3)) +
   geom_segment(aes(x = 3, xend = 3, y = -3.2, yend = 2)) +
   annotate("text", x = c(4, 6, 8, 10), y = c(-3.5, -3.5, -3.5, -3.5), 
-           label = c("Dog", "Cat", "Dog", "Cat"), 
+           label = c("Sugar", "Blood", "Sugar", "Blood"), 
            fontface =2, size = 3.5) +
   annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length in [cm]"), 
            angle = 90, fontface =2, size = 3.5) +
@@ -162,14 +162,14 @@ p_factorial_data_overview <- ggplot() +
   annotate("text", x = -11.5, y = 5-2.25, label = "DATA", size = 5, fontface = 2, 
            angle = 90) +
   geom_segment(aes(x = -11, xend = -2, y = 8-2.25, yend = 8-2.25)) +
-  geom_segment(aes(x = -6, xend = -6, y = 9-2.25, yend = 1-2.25)) +
-  geom_segment(aes(x = -8, xend = -8, y = 9-2.25, yend = 1-2.25)) + 
+  geom_segment(aes(x = -5.75, xend = -5.75, y = 9-2.25, yend = 1-2.25)) +
+  geom_segment(aes(x = -8-0.25, xend = -8-0.25, y = 9-2.25, yend = 1-2.25)) + 
   annotate("text", x = c(-9.5, -7, -4), y = c(8.5)-2.25,
-           label = c("id", "host", "jumplength"), fontface = 2) + 
+           label = c("id", "feeding", "jumplength"), fontface = 2) + 
   annotate("text", x = c(-9.5), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
-           label = c("Diana", "Doris", "Daniel", "Chloe", "Cora", "Caleb")) +
+           label = c("Scarlett", "Stella", "Summer", "Bella", "Beverly", "Bridget")) +
   annotate("text", x = c(-7), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
-           label = c("dog", "dog", "dog", "cat", "cat", "cat")) +
+           label = c("sugar", "sugar", "sugar", "blood", "blood", "blood")) +
   annotate("text", x = c(-4), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
            label = c("33.2", "31.7", "36.8", "22.1", "19.7", "24.3")) +
   annotate("point", x = c(-9.5, -9.5, -9.5, -7, -7, -7, -4, -4, -4), 
@@ -190,8 +190,8 @@ p_factorial_data_overview <- ggplot() +
   geom_segment(aes(x = 11, xend = 2, y = 8, yend = 8)) +
   geom_segment(aes(x = 4.75, xend = 4.75, y = 9, yend = 4)) +
   annotate("text", x = c(3.5, 8), y = c(8.5),
-           label = c("Host", "Descriptive statistics"), fontface = 2) +
-  annotate("text", x = c(3.5), y = c(7.5, 6.5, 5.5, 4.5), label = c("dog", "cat", "dog", "cat")) +
+           label = c("Feeding", "Descriptive statistics"), fontface = 2) +
+  annotate("text", x = c(3.5), y = c(7.5, 6.5, 5.5, 4.5), label = c("sugar", "blood", "sugar", "blood")) +
   annotate("text", x = c(8), y = c(7.5, 6.5, 5.5, 4.5), 
            label = c(expression(33.9 %+-% 2.6), 
                      expression("22.0" %+-% 2.3),
@@ -234,7 +234,7 @@ p_covariate_data_overview <- ggplot() +
   ### coords
   geom_segment(aes(x = 2.8, xend = 11, y = -3, yend = -3)) +
   geom_segment(aes(x = 3, xend = 3, y = -3.2, yend = 2)) +
-  annotate("text", x = c(7), y = c(-3.5), label = c("Weight in [mg]"), 
+  annotate("text", x = c(7), y = c(-3.5), label = c("Body weight in [mg]"), 
            fontface =2, size = 3.5) +
   annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length in [cm]"), 
            angle = 90, fontface =2, size = 3.5) +
@@ -250,7 +250,7 @@ p_covariate_data_overview <- ggplot() +
   annotate("text", x = c(-9.5, -6.875, -3.875), y = c(8.5)-2.25,
            label = c("id", "weight", "jumplength"), fontface = 2) + 
   annotate("text", x = c(-9.5), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
-           label = c("Chris", "Charles", "Cameron", "Chloe", "Cora", "Caleb")) +
+           label = c("Brian", "Bella", "Benjamin", "Bradley", "Betty", "Billie")) +
   annotate("text", x = c(-6.875), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
            label = c("10.1", "12.4", "15.6", "22.4", "18.1", "25.6")) +
   annotate("text", x = c(-3.875), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,

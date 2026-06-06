@@ -3,7 +3,7 @@ source("init.R")
 source("images/part_1/part_1_data.R")
 ```
 
-# Body weight of fleas {#sec-temp}
+# Blood meal of fleas {#sec-temp}
 
 *Last modified on `r format(fs::file_info("chapter-11-covariate-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
@@ -40,7 +40,7 @@ jump_weight_tbl |>
   ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
   theme_book() +
   geom_point(show.legend = FALSE, shape = 21) +
-  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
+  labs(x = "Body weight [mg]", y = "Jump length in [cm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   scale_x_continuous(breaks = 0:10) +
@@ -72,7 +72,7 @@ x |>
   ggplot(aes(x = weight, y = bodylength, fill = col_pal(1, 0.5))) +
   theme_book() +
   geom_point(show.legend = FALSE, shape = 21) +
-  labs(x = "Cat flea weight [mg]", y = "Cat flea body length [mm]",
+  labs(x = "Body weight [mg]", y = "Body length [mm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") #+
   # scale_x_continuous(breaks = 0:10) +
@@ -103,7 +103,7 @@ jump_weight_non_linear_tbl |>
   ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
   theme_book() +
   geom_point(show.legend = FALSE, shape = 21) +
-  labs(x = "Cat flea weight [mg]", y = "Jump length in [cm]",
+  labs(x = "Body weight [mg]", y = "Jump length in [cm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   scale_x_continuous(breaks = 0:10) +

@@ -3,7 +3,7 @@ source("init.R")
 source("images/part_1/part_1_data.R")
 ```
 
-# Fleas of animals {#sec-data-examples}
+# Eating habits of fleas {#sec-data-examples}
 
 *Last modified on `r format(fs::file_info("chapter-12-factorial-data.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
