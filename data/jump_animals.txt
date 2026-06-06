@@ -1,29 +1,29 @@
-host mean sd jumplength
-cat 19.9 9.1 27.62
-cat 19.9 9.1 7.7
-cat 19.9 9.1 14.43
-cat 19.9 9.1 35.68
-cat 19.9 9.1 23.84
-cat 19.9 9.1 23.45
-cat 19.9 9.1 15.3
-fox 35.2 10.3 41.41
-fox 35.2 10.3 37.7
-fox 35.2 10.3 36.56
-fox 35.2 10.3 24.67
-fox 35.2 10.3 51.16
-fox 35.2 10.3 21.54
-fox 35.2 10.3 29.36
-rat 15.2 4.6 13.54
-rat 15.2 4.6 13.92
-rat 15.2 4.6 15.51
-rat 15.2 4.6 9.86
-rat 15.2 4.6 14.11
-rat 15.2 4.6 16.74
-rat 15.2 4.6 10.44
-dog 30.4 9.1 23.52
-dog 30.4 9.1 54.77
-dog 30.4 9.1 60.79
-dog 30.4 9.1 30.06
-dog 30.4 9.1 12.4
-dog 30.4 9.1 28.47
-dog 30.4 9.1 27.81
+feeding mean sd jumplength
+"sugar water" 19.9 9.1 27.62
+"sugar water" 19.9 9.1 7.7
+"sugar water" 19.9 9.1 14.43
+"sugar water" 19.9 9.1 35.68
+"sugar water" 19.9 9.1 23.84
+"sugar water" 19.9 9.1 23.45
+"sugar water" 19.9 9.1 15.3
+"tomato ketchup" 35.2 10.3 41.41
+"tomato ketchup" 35.2 10.3 37.7
+"tomato ketchup" 35.2 10.3 36.56
+"tomato ketchup" 35.2 10.3 24.67
+"tomato ketchup" 35.2 10.3 51.16
+"tomato ketchup" 35.2 10.3 21.54
+"tomato ketchup" 35.2 10.3 29.36
+"fake blood" 15.2 4.6 13.54
+"fake blood" 15.2 4.6 13.92
+"fake blood" 15.2 4.6 15.51
+"fake blood" 15.2 4.6 9.86
+"fake blood" 15.2 4.6 14.11
+"fake blood" 15.2 4.6 16.74
+"fake blood" 15.2 4.6 10.44
+"human blood" 30.4 9.1 23.52
+"human blood" 30.4 9.1 54.77
+"human blood" 30.4 9.1 60.79
+"human blood" 30.4 9.1 30.06
+"human blood" 30.4 9.1 12.4
+"human blood" 30.4 9.1 28.47
+"human blood" 30.4 9.1 27.81

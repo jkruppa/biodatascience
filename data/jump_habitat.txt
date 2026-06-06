@@ -1,43 +1,43 @@
-host site jumplength
-cat urban 21.1
-cat urban 14.02
-cat urban 25.61
-cat urban 25.46
-cat urban 7.19
-cat urban 36.36
-cat urban 22.6
-cat rural 30.72
-cat rural 12.35
-cat rural 22.89
-cat rural 30.5
-cat rural 27.93
-cat rural 25.03
-cat rural 15.4
-dog urban 24.49
-dog urban 37.85
-dog urban 26.39
-dog urban 39.24
-dog urban 51.72
-dog urban 33.02
-dog urban 33.43
-dog rural 30.56
-dog rural 27.93
-dog rural 38.65
-dog rural 15.66
-dog rural 13.08
-dog rural 48.74
-dog rural 20.81
-rat urban 17.2
-rat urban 21.59
-rat urban 18.6
-rat urban 19.82
-rat urban 21.58
-rat urban 17.54
-rat urban 17.91
-rat rural 10.79
-rat rural 7.06
-rat rural 15.29
-rat rural 16.87
-rat rural 9.12
-rat rural 14.97
-rat rural 15.21
+feeding stage jumplength
+"sugar water" juvenile 21.1
+"sugar water" juvenile 14.02
+"sugar water" juvenile 25.61
+"sugar water" juvenile 25.46
+"sugar water" juvenile 7.19
+"sugar water" juvenile 36.36
+"sugar water" juvenile 22.6
+"sugar water" adult 30.72
+"sugar water" adult 12.35
+"sugar water" adult 22.89
+"sugar water" adult 30.5
+"sugar water" adult 27.93
+"sugar water" adult 25.03
+"sugar water" adult 15.4
+"tomato ketchup" juvenile 24.49
+"tomato ketchup" juvenile 37.85
+"tomato ketchup" juvenile 26.39
+"tomato ketchup" juvenile 39.24
+"tomato ketchup" juvenile 51.72
+"tomato ketchup" juvenile 33.02
+"tomato ketchup" juvenile 33.43
+"tomato ketchup" adult 30.56
+"tomato ketchup" adult 27.93
+"tomato ketchup" adult 38.65
+"tomato ketchup" adult 15.66
+"tomato ketchup" adult 13.08
+"tomato ketchup" adult 48.74
+"tomato ketchup" adult 20.81
+"human blood" juvenile 17.2
+"human blood" juvenile 21.59
+"human blood" juvenile 18.6
+"human blood" juvenile 19.82
+"human blood" juvenile 21.58
+"human blood" juvenile 17.54
+"human blood" juvenile 17.91
+"human blood" adult 10.79
+"human blood" adult 7.06
+"human blood" adult 15.29
+"human blood" adult 16.87
+"human blood" adult 9.12
+"human blood" adult 14.97
+"human blood" adult 15.21

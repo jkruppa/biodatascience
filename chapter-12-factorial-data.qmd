@@ -89,7 +89,7 @@ Miarinjara (2025) et al. @miarinjara2025establishing demonstrate the impact of s
 
 
 ```{r}
-jump_flea_grid <- expand_grid(host = c("cat", "dog")) |> 
+jump_flea_grid <- expand_grid(feeding = c("sugar water", "human blood")) |> 
   mutate(mean = c(19.9, 30.4), 
          sd = c(9.1))
 ```
@@ -99,13 +99,13 @@ jump_flea_tbl <- jump_flea_grid |>
   rowwise() |> 
   mutate(jumplength = lst(rnorm(7, mean, sd))) |> 
   unnest(cols = jumplength) |> 
-  mutate(host = as_factor(host))
+  mutate(feeding = as_factor(feeding))
 ```
 
 
 ```{r}
 jump_flea_tbl |> 
-  group_by(host) |> 
+  group_by(feeding) |> 
   summarise(mean(jumplength),
             sd(jumplength)) |> 
   mutate_if(is.numeric, round, 2)
@@ -123,7 +123,7 @@ jump_flea_tbl |>
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 jump_flea_tbl |> 
-  ggplot(aes(x = host, y = jumplength, fill = host)) +
+  ggplot(aes(x = feeding, y = jumplength, fill = feeding)) +
   theme_book() +
   geom_point(position = position_nudge(-0.075),
              show.legend = FALSE, shape = 21) +
@@ -133,8 +133,8 @@ jump_flea_tbl |>
   stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
                size = 4, position = position_nudge(x = 0.05), alpha = 0.5,
                show.legend = FALSE, hjust = "left") +
-  labs(x = "Flea host", y = "Jump length in [cm]",
-       fill = "Host") +
+  labs(x = "Flea feeding", y = "Jump length in [cm]",
+       fill = "feeding") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   coord_cartesian(ylim = c(0, NA))
 ```
@@ -142,7 +142,7 @@ jump_flea_tbl |>
 
 
 ```{r}
-jump_animals_grid <- expand_grid(host = c("cat", "fox", "rat", "dog")) |> 
+jump_animals_grid <- expand_grid(feeding = c("sugar water", "tomato ketchup", "fake blood", "human blood")) |> 
   mutate(mean = c(19.9, 35.2, 15.2, 30.4), 
          sd = c(9.1, 10.3, 4.6, 9.1))
 ```
@@ -152,13 +152,13 @@ jump_animals_tbl <- jump_animals_grid |>
   rowwise() |> 
   mutate(jumplength = lst(rnorm(7, mean, sd))) |> 
   unnest(cols = jumplength) |> 
-  mutate(host = as_factor(host))
+  mutate(feeding = as_factor(feeding))
 ```
 
 
 ```{r}
 jump_animals_tbl |> 
-  group_by(host) |> 
+  group_by(feeding) |> 
   summarise(mean(jumplength),
             sd(jumplength)) |> 
   mutate_if(is.numeric, round, 2)
@@ -175,7 +175,7 @@ jump_animals_tbl |>
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 jump_animals_tbl |> 
-  ggplot(aes(x = host, y = jumplength, fill = host)) +
+  ggplot(aes(x = feeding, y = jumplength, fill = feeding)) +
   theme_book() +
   geom_point(position = position_nudge(-0.075),
              show.legend = FALSE, shape = 21) +
@@ -185,8 +185,8 @@ jump_animals_tbl |>
   stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
                size = 4, position = position_nudge(x = 0.075), alpha = 0.5,
                show.legend = FALSE, hjust = "left") +
-  labs(x = "Flea host", y = "Jump length in [cm]",
-       fill = "Host") +
+  labs(x = "Flea feeding", y = "Jump length in [cm]",
+       fill = "feeding") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   coord_cartesian(ylim = c(0, NA))
 ```
@@ -216,10 +216,10 @@ Why so complex?
 @rpkg_purrr
 
 ```{r}
-jump_habitat_grid <- expand_grid(host = 1:3, site = 1:2) |> 
-  mutate(mean_host = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),
-         mean_site = c(5, 0, 5, 0, 5, -5),
-         mean = mean_host + mean_site,
+jump_habitat_grid <- expand_grid(feeding = 1:3, stage = 1:2) |> 
+  mutate(mean_feeding = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),
+         mean_stage = c(5, 0, 5, 0, 5, -5),
+         mean = mean_feeding + mean_stage,
          sd = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6))
 jump_habitat_grid
 ```
@@ -235,9 +235,9 @@ jump_habitat_raw_tbl <- jump_habitat_grid |>
 
 ```{r}
 jump_habitat_tbl <- jump_habitat_raw_tbl |> 
-  select(host, site, jumplength) |> 
-  mutate(host = factor(host, labels = c("cat", "dog", "rat")),
-         site = factor(site, labels = c("urban", "rural"))) |> 
+  select(feeding, stage, jumplength) |> 
+  mutate(feeding = factor(feeding, labels = c("sugar water", "tomato ketchup", "human blood")),
+         stage = factor(stage, labels = c("juvenile", "adult"))) |> 
   mutate_if(is.numeric, round, 2)
 ```
 
@@ -246,7 +246,7 @@ jump_habitat_tbl <- jump_habitat_raw_tbl |>
 #| warning: false
 #| message: false
 jump_habitat_tbl |> 
-  group_by(host, site) |> 
+  group_by(feeding, stage) |> 
   summarise(mean(jumplength),
             sd(jumplength)) |> 
   mutate_if(is.numeric, round, 2)
@@ -263,7 +263,7 @@ jump_habitat_tbl |>
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
 jump_habitat_tbl |> 
-  ggplot(aes(x = host, y = jumplength, fill = site)) +
+  ggplot(aes(x = feeding, y = jumplength, fill = stage)) +
   theme_book() +
   geom_point(position = position_dodge(0.5),
              show.legend = FALSE, shape = 21) +
@@ -273,8 +273,8 @@ jump_habitat_tbl |>
   stat_summary(fun = mean, geom = "label", aes(label = round(..y..,2)),
                size = 4, position = position_dodge(1.8), 
                alpha = 0.5, show.legend = FALSE) +
-  labs(x = "Flea host", y = "Jump length in [cm]",
-       fill = "Host") +
+  labs(x = "Flea feeding", y = "Jump length in [cm]",
+       fill = "Development stage") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") +
   coord_cartesian(ylim = c(0, NA))
 ```
@@ -287,17 +287,17 @@ The data is available as txt-Files under <https://github.com/jkruppa/biodatascie
 #| echo: false
 
 jump_flea_tbl |> 
-  arrange(host) |> 
+  arrange(feeding) |> 
   mutate_if(is.numeric, round, 2) |> 
   write_delim("data/jump_fleas.txt")
 
 jump_animals_tbl |> 
-  arrange(host) |> 
+  arrange(feeding) |> 
   mutate_if(is.numeric, round, 2) |> 
   write_delim("data/jump_animals.txt")
 
 jump_habitat_tbl |> 
-  arrange(host, site) |> 
+  arrange(feeding, stage) |> 
   mutate_if(is.numeric, round, 2) |> 
   write_delim("data/jump_habitat.txt")
 ```
@@ -311,9 +311,9 @@ Further tutorials and R packages on XXX
 ### Why linear is a bad idea?
 
 ```{r}
-jump_flea_tbl <- tibble(host = rep(0:1, each = 7),
-                        jump_length = 19.9 + 10.5 * host + rnorm(14, 0, 9.1)) |> 
-  mutate(host = factor(host, labels = c("cat", "dog")))
+jump_flea_tbl <- tibble(feeding = rep(0:1, each = 7),
+                        jump_length = 19.9 + 10.5 * feeding + rnorm(14, 0, 9.1)) |> 
+  mutate(feeding = factor(feeding, labels = c("cat", "dog")))
 ```
 
 ### Why is a `tibble()` bad idea?
@@ -323,8 +323,8 @@ jump_animals_tbl <- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),
                            fox = rnorm(n = 7, mean = 35.2, sd = 10.3),
                            rat = rnorm(n = 7, mean = 15.2, sd = 4.6),
                            dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |>
-  pivot_longer(cols = cat:dog, values_to = "jump_length", names_to = "host") |> 
-  mutate(host = as_factor(host))
+  pivot_longer(cols = cat:dog, values_to = "jump_length", names_to = "feeding") |> 
+  mutate(feeding = as_factor(feeding))
 ```
 
 
