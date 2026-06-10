@@ -76,7 +76,12 @@ ggplot() +
   annotate("segment", x = c(3, 3), xend = c(2.75, 3.3), y = c(5.25, 5.25), yend = c(4.8, 5.5),
            size = 3, lineend = "round") +
   annotate("segment", x = c(7.5, 7.5), xend = c(7.25, 7.75), y = c(5.25, 5.25), yend = c(5.2, 4.8),
-           size = 3, lineend = "round") 
+           size = 3, lineend = "round") +
+  ## points 
+  annotate("point", x = c(4.8, 5.7, 4.8, 5.7), y = c(4.6, 4.6, 5.7, 5.7), size = 1, 
+           fill = "#F0F921FF", shape = 21) +
+  annotate("segment", x = 4.75, xend = 5.75, y = 5.75, yend = 4.5, color = "#E16462FF",
+           size = 0.75, lineend = "round") 
   
 
 ```
