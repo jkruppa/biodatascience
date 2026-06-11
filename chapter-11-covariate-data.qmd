@@ -17,6 +17,9 @@ source("images/part_1/part_1_data.R")
 
 ## Data
 
+@samuel2021myths
+@lakoff2008metaphors
+
 ```{r}
 #| message: false
 #| echo: false
