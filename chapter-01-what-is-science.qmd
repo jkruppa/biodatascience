@@ -12,7 +12,8 @@ source("images/part_0/part_0_history.R")
 - Cross references to the other chapters
 - Cleaning of the broken ideas section after rereading
 
-@samuel2021myths and @lakoff2008metaphors
+Samuel und Thompson (2021) @samuel2021myths 
+Lakoff and Johnson (2008) @lakoff2008metaphors
 
 ```{r}
 #| message: false
