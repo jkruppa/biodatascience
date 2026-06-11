@@ -32,13 +32,25 @@ source("images/part_1/part_1_data.R")
 
 ggplot() +
   theme_void() +
-  ##theme_minimal() +
+  ## theme_minimal() +
   coord_cartesian(xlim = c(0.9, 9.25), ylim = c(0.9, 9.25)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
-  annotate("segment", x = 1.05, y = 1, xend = 1.05, yend = 3, size = 2) +
-  annotate("segment", x = 7.95, y = 1, xend = 7.95, yend = 3, size = 2) +
-  annotate("segment", x = 8.95, y = 3, xend = 8.95, yend = 5, size = 2) +
+  geom_shape(data = tibble(x = c(0, 10, 10, 0), 
+                           y = c(0, 0, 10, 10)),
+             aes(x, y), fill = "gray85") +
+  geom_shape(data = tibble(x = c(0, 10, 10, 0), 
+                           y = c(0, 0, 3.5, 3.5)),
+             aes(x, y), fill = "gray75") +
+  geom_shape(data = tibble(x = c(8, 9, 9), 
+                           y = c(3, 3, 5)),
+             aes(x, y), fill = "gray50") +
+  annotate("segment", x = 1.05, y = 1, xend = 1.05, yend = 3, size = 2,
+           lineend = "round") +
+  annotate("segment", x = 7.95, y = 1, xend = 7.95, yend = 3, size = 2,
+           lineend = "round") +
+  annotate("segment", x = 8.95, y = 3, xend = 8.95, yend = 5, size = 2,
+           lineend = "round") +
   geom_shape(data = tibble(x = c(2, 9, 9, 2), 
                            y = c(5, 5, 9, 9)),
              aes(x, y), fill = "gray95", color = "black", size = 1) +
@@ -49,17 +61,24 @@ ggplot() +
   geom_shape(data = tibble(x = c(1, 8, 9, 2), 
                            y = c(3, 3, 5, 5)),
              aes(x, y), fill = "gray95", color = "black", size = 1) +
+  annotate("segment", x = 8, y = 3, xend = 9, yend = 5, size = 2,
+           lineend = "round") +
   ## vorhang
   annotate("segment", x = c(9, 9.2), y = 3.5, xend = c(9, 9.2), yend = 9, size = 2,
            color = c("#0D0887FF")) +
   annotate("segment", x = c(9.1), y = 3.5, xend = c(9.1), yend = 9, size = 2,
            color = c("#0D088780")) +
   ## balken
-  annotate("segment", x = 1.75, y = 9, xend = 9.3, yend = 9, size = 2) +
+  annotate("segment", x = 1.75, y = 9, xend = 9.3, yend = 9, size = 2,
+           lineend = "round") +
+  annotate("segment", x = 1.025, y = 3, xend = 8, yend = 3, size = 2,
+           lineend = "round") +
   geom_shape(data = tibble(x = c(1.5, 7.5, 7.5, 1.5), 
                            y = c(1.2, 1.2, 2.8, 2.8)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "#B12A9080", color =  "#B12A90FF",
-             alpha = 0.1) +
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "white") +
+  geom_shape(data = tibble(x = c(1.5, 7.5, 7.5, 1.5), 
+                           y = c(1.2, 1.2, 2.8, 2.8)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "#B12A9080", color =  "#B12A90FF", alpha = 0.1) +
   annotate("text", x = 1.75, y = 2.3, label = "Todays play:", size = 6, fontface = 3,
            color = "#B12A90FF", hjust = "left") +  
   annotate("text", x = 4.3, y = 2, label = "Science", size = 11, fontface = 4,
