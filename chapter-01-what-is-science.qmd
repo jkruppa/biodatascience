@@ -12,6 +12,21 @@ source("images/part_0/part_0_history.R")
 - Cross references to the other chapters
 - Cleaning of the broken ideas section after rereading
 
+@samuel2021myths and @lakoff2008metaphors
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 5
+#| fig-cap: "Interplay between myths, metaphors, and science is demonstrated. Science is a play performed on a stage built from myths. Scientists exchange complex ideas through metaphors. Myths provide the cultural context in which every scientist works. Metaphors are word images of complex thoughts. For example, the metaphor *model is a line* is shown on the stage."
+#| label: fig-science-myth
+p_science_myth
+```
+
+
 :::
 
 *Last modified on `r format(fs::file_info("chapter-01-what-is-science.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
