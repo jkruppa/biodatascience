@@ -2,7 +2,7 @@
 p_science_myth <- ggplot() +
   theme_void() +
   ## theme_minimal() +
-  coord_cartesian(xlim = c(0.9, 9.25), ylim = c(0.9, 9.25)) +
+  coord_cartesian(xlim = c(0.9, 9.4), ylim = c(0.9, 9.25)) +
   scale_x_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   scale_y_continuous(breaks = seq(-10,10,1), expand = expansion(mult = c(0, 0))) +
   geom_shape(data = tibble(x = c(0, 10, 10, 0), 
