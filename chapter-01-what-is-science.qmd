@@ -27,6 +27,7 @@ Lakoff and Johnson (2008) @lakoff2008metaphors
 p_science_myth
 ```
 
+- Foerster and radical constructivism @glanville2001observing and @von2018constructing
 
 :::
 
