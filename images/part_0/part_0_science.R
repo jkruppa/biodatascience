@@ -90,7 +90,14 @@ p_science_myth <- ggplot() +
   annotate("segment", x = 4.75, xend = 5.75, y = 5.4, yend = 4.7, color = "#E16462FF",
            size = 0.75, lineend = "round") +
   annotate("label", x = 5.3, y = 5.8, label = "Model", fontface = 2, color = "#E16462FF",
-           size = 3)
+           size = 3) +
+  ## cultue
+  annotate("segment", x = c(3, 7.5), xend = c(3, 7.5), y = c(5.3, 5.2), yend = c(4.4, 4.4),
+           size = 6, lineend = "round", color = "black") +
+  annotate("text", x = 3, y = 4.85, label = "CULTURE", angle = -90, color = "white",
+           size = 2.5, fontface = 2) +
+  annotate("text", x = 7.5, y = 4.8, label = "CULTURE", angle = -90, color = "white",
+           size = 2.4, fontface = 2)
 
 ## -------------------------------------------------
 

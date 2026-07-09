@@ -22,7 +22,7 @@ Lakoff and Johnson (2008) @lakoff2008metaphors
 #| fig-align: center
 #| fig-height: 3.25
 #| fig-width: 5.25
-#| fig-cap: "Interplay between myths, metaphors, and science is demonstrated. Science is a play performed on a stage built from myths. Scientists exchange complex ideas through metaphors. Myths provide the cultural context in which every scientist works. Metaphors are word images of complex thoughts. For example, the metaphor *model is a line* is shown on the stage."
+#| fig-cap: "Interplay between myths, culture, metaphors, and science is demonstrated. Science is a play performed on a stage built from myths. Metaphors are used by scientists in a given culture to exchange complex ideas. Myths provide the cultural context in which every scientist works. Metaphors are word images of complex thoughts. For example, the metaphor *model is a line* is shown on the stage."
 #| label: fig-science-myth
 p_science_myth
 ```

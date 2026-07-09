@@ -20,7 +20,6 @@ Unfortunately, none of this ever happened in our branch of reality. But it might
 #| echo: false
 #| message: false
 #| warning: false
-#| eval: true
 #| label: fig-chap-11-cov-01-flea
 #| fig-align: center
 #| fig-height: 3.25
@@ -38,7 +37,6 @@ Quality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.
 #| echo: false
 #| message: false
 #| warning: false
-#| eval: true
 #| label: fig-chap-11-cov-01-flea-measure
 #| fig-align: center
 #| fig-height: 3.5
@@ -68,6 +66,8 @@ p_bio_rep + p_tech_rep + p_lab_rep +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+
 
 
 ## References {.unnumbered}
