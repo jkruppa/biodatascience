@@ -29,6 +29,8 @@ Some ideas are not new. I will present them in a different way. I think this is 
 
 Lying to children or some angels will be hurt. Sometimes math is a shield to hide behind. Not really the math itself but the mathematical notations. If you cant speak the math language you cannot follow the train of thought. Because communication the the search for compliance, misunderstanding a language can be barrier. 
 
+Ultimately, I wanted to write a book with a moderate Hawking Index that people would read from cover to cover. The Hawking index is a mathematical measure based on Kindle reader highlights and therefore on how far people will, on average, read a book before giving up.
+
 Machine room of science
 
 Bloody beginners and the curse of knowledge
