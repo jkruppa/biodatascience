@@ -37,6 +37,17 @@ Bloody beginners and the curse of knowledge
 
 Which book should I read if I want to experience the feeling of watching the History Channel? Joachim Krauth's book, *Experimental Design: A Handbook and Dictionary for Medical and Behavioural Research*, is a good starting point @krauth2000experimental.
 
+:::callout-note
+## Noteworthy statements
+
+- Science makes model-based decisions based on data.
+- Data are observations expressed as numbers.
+- Decisions are, by their very nature, undecidable; otherwise, they would be computable.
+- There are digital and analog tools that require skills to use them, as well as knowledge to evaluate the results.
+- Rule-based decisions differ from human decisions. Computers make rule-based decisions. Rule-based decisions are objective.
+- In statistical data analysis, we can examine correlations or make predictions.
+:::
+
 
 > *"To write a book you must become the book." — Naval Ravikant*
 
