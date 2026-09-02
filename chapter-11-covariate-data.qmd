@@ -13,6 +13,20 @@ source("images/part_1/part_1_data.R")
 
 ## Theoretical background
 
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 7
+#| fig-cap: "foo"
+#| label: fig-covariate-data-overview 
+p_covariate_data_overview 
+```
+
+
+
 ## R packages used
 
 ## Data

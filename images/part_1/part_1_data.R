@@ -151,7 +151,7 @@ p_factorial_data_overview <- ggplot() +
   annotate("text", x = c(4, 6, 8, 10), y = c(-3.5, -3.5, -3.5, -3.5), 
            label = c("Sugar", "Blood", "Sugar", "Blood"), 
            fontface =2, size = 3.5) +
-  annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length in [cm]"), 
+  annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length [cm]"), 
            angle = 90, fontface =2, size = 3.5) +
   annotate("point", x = c(4, 6, 8, 10), y = c(0,-1, -0.25, -1), shape = 23, 
            fill = "#E16462FF", size = 2) +
@@ -241,9 +241,9 @@ p_covariate_data_overview <- ggplot() +
   ### coords
   geom_segment(aes(x = 2.8, xend = 11, y = -3, yend = -3)) +
   geom_segment(aes(x = 3, xend = 3, y = -3.2, yend = 2)) +
-  annotate("text", x = c(7), y = c(-3.5), label = c("Body weight in [mg]"), 
+  annotate("text", x = c(7), y = c(-3.5), label = c("Blood meal [ml]"), 
            fontface =2, size = 3.5) +
-  annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length in [cm]"), 
+  annotate("text", x = c(2.5), y = c(-0.5), label = c("Jump length [cm]"), 
            angle = 90, fontface =2, size = 3.5) +
   ## upper left
   geom_shape(data = tibble(x = c(-11.5, -1.5, -1.5, -11.5), 
@@ -252,15 +252,15 @@ p_covariate_data_overview <- ggplot() +
   annotate("text", x = -11.5, y = 5-2.25, label = "DATA", size = 5, fontface = 2, 
            angle = 90) +
   geom_segment(aes(x = -11, xend = -2, y = 8-2.25, yend = 8-2.25)) +
-  geom_segment(aes(x = -5.75, xend = -5.75, y = 9-2.25, yend = 1-2.25)) +
-  geom_segment(aes(x = -8, xend = -8, y = 9-2.25, yend = 1-2.25)) + 
-  annotate("text", x = c(-9.5, -6.875, -3.875), y = c(8.5)-2.25,
-           label = c("id", "weight", "jumplength"), fontface = 2) + 
-  annotate("text", x = c(-9.5), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
+  geom_segment(aes(x = -5.3, xend = -5.3, y = 9-2.25, yend = 1-2.25)) +
+  geom_segment(aes(x = -8.5, xend = -8.5, y = 9-2.25, yend = 1-2.25)) + 
+  annotate("text", x = c(-9.75, -6.875, -3.6), y = c(8.5)-2.25,
+           label = c("id", "bloodmeal", "jumplength"), fontface = 2) + 
+  annotate("text", x = c(-9.75), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
            label = c("Brian", "Bella", "Benjamin", "Bradley", "Betty", "Billie")) +
   annotate("text", x = c(-6.875), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
            label = c("10.1", "12.4", "15.6", "22.4", "18.1", "25.6")) +
-  annotate("text", x = c(-3.875), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
+  annotate("text", x = c(-3.6), y = c(7.5, 6.5, 5.5, 3.5, 2.5, 1.5)-2.25,
            label = c("33.2", "31.7", "36.8", "22.1", "19.7", "24.3")) +
   annotate("point", x = c(-9.5, -9.5, -9.5, -6.875, -6.875, -6.875, -3.875, -3.875, -3.875), 
            y = c(4.3, 4.5, 4.7, 4.3, 4.5, 4.7, 4.3, 4.5, 4.7)-2.25, 
@@ -280,7 +280,7 @@ p_covariate_data_overview <- ggplot() +
   geom_segment(aes(x = 11, xend = 2, y = 8, yend = 8)) +
   geom_segment(aes(x = 5.25, xend = 5.25, y = 9, yend = 4)) +
   annotate("text", x = c(3.5, 8), y = c(8.5),
-           label = c("Weight", "Model statistics"), fontface = 2) +
+           label = c("Blood meal", "Model statistics"), fontface = 2) +
   annotate("label", x = c(3.5, 3.5), y = c(7.5, 5.5), 
            label = c("Coefficents", "Predicted")) +
   annotate("text", x = c(3.5, 3.5), y = c(6.5, 4.5), 

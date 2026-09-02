@@ -33,18 +33,6 @@ p_factorial_data_overview
 ```
 
 
-```{r}
-#| message: false
-#| echo: false
-#| warning: false
-#| fig-align: center
-#| fig-height: 4
-#| fig-width: 7
-#| fig-cap: "foo"
-#| label: fig-covariate-data-overview 
-p_covariate_data_overview 
-```
-
 
 
 ## R packages used
