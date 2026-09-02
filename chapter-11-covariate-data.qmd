@@ -29,6 +29,20 @@ weight_bloodmeal_n14_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1,
   rename(bloodmeal = x, weight = y)
 ```
 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-weight-bloodmeal-n14
+#| tbl-cap: "foo."
+
+weight_bloodmeal_n14_tbl |> 
+  kable(align = "c", theme = "striped")
+```
+
+
+
 ```{r}
 #| echo: false
 #| message: false
@@ -37,7 +51,7 @@ weight_bloodmeal_n14_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1,
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "foo **(A)** foo **(B)** foo"
+#| fig-cap: "Relationship between blood meal and body weight."
 
 weight_bloodmeal_n14_tbl |> 
   ggplot(aes(x = bloodmeal, y = weight)) +
@@ -47,6 +61,55 @@ weight_bloodmeal_n14_tbl |>
   scale_x_continuous(breaks = 0:10) +
   coord_cartesian(xlim = c(0, 8), ylim = c(0, 15))
 ```
+
+
+
+### Non-linear
+
+$$
+y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353
+$$
+
+```{r}
+jump_bloodmeal_n21_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, 
+                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,
+                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),
+                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |>
+  mutate_all(round, 1) |> 
+  rename(bloodmeal = x, jumplength = y)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-jump-bloodmeal-n21
+#| tbl-cap: "foo."
+
+jump_bloodmeal_n21_tbl |> 
+  kable(align = "c", theme = "striped")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-11-cov-04
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "Relationship between blood meal and jumping length."
+
+jump_bloodmeal_n21_tbl |> 
+  ggplot(aes(x = bloodmeal, y = jumplength)) +
+  theme_book() +
+  geom_point(show.legend = FALSE, shape = 21, fill = "#0D0887FF") +
+  labs(x = "Blood meal [ml]", y = "Jump length [cm]") +
+  scale_x_continuous(breaks = 0:12) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(0, NA))
+```
+
+### Not independent
 
 ```{r}
 library(mvtnorm)
@@ -76,40 +139,6 @@ x |>
   labs(x = "Body weight [mg]", y = "Body length [mm]",
        fill = "Host") +
   scale_fill_viridis(discrete = TRUE, option = "plasma") 
-```
-
-
-### Non-linear
-
-$$
-y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353
-$$
-
-```{r}
-jump_bloodmeal_n21_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, 
-                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,
-                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),
-                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |>
-  rename(bloodmeal = x, jumplength = y)
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-11-cov-04
-#| fig-align: center
-#| fig-height: 3.5
-#| fig-width: 7
-#| fig-cap: "foo **(A)** foo **(B)** foo"
-
-jump_bloodmeal_n21_tbl |> 
-  ggplot(aes(x = bloodmeal, y = jumplength)) +
-  theme_book() +
-  geom_point(show.legend = FALSE, shape = 21, fill = "#0D0887FF") +
-  labs(x = "Blood meal [ml]", y = "Jump length [cm]") +
-  scale_x_continuous(breaks = 0:12) +
-  coord_cartesian(xlim = c(0, 12), ylim = c(0, NA))
 ```
 
 

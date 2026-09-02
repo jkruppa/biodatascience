@@ -682,7 +682,7 @@
     "href": "chapter-11-covariate-data.html",
     "title": "5  Blood meal of fleas",
     "section": "",
-    "text": "5.1 General background\nLast modified on 02. September 2026 at 20:04:17",
+    "text": "5.1 General background\nLast modified on 02. September 2026 at 20:15:59",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
@@ -715,7 +715,7 @@
     "href": "chapter-11-covariate-data.html#data",
     "title": "5  Blood meal of fleas",
     "section": "5.4 Data",
-    "text": "5.4 Data\n\n5.4.1 Linear\n\n\nR Code [show / hide]\nweight_bloodmeal_n14_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6),\n                                 y = 2 + 1.2*x + rnorm(14, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(bloodmeal = x, weight = y)\n\n\n\n\n\n\n\n\n\n\nFigure 5.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\nlibrary(mvtnorm)\n\nsigma &lt;- matrix(c(4,2,2,3), ncol=2)\nx &lt;- rmvnorm(n = 21, mean=c(1,2), sigma=sigma) |&gt; \n  as_tibble() |&gt; \n  rename(weight = V1, bodylength = V2)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nR Code [show / hide]\ncolMeans(x)\n\n\n    weight bodylength \n 0.7257394  1.9197076 \n\n\nR Code [show / hide]\nvar(x)\n\n\n             weight bodylength\nweight     5.651795   3.110626\nbodylength 3.110626   5.175713\n\n\n\n\n\n\n\n\n\n\nFigure 5.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n5.4.2 Non-linear\n\\[\ny = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353\n\\]\n\n\nR Code [show / hide]\njump_bloodmeal_n21_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,\n                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),\n                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |&gt;\n  rename(bloodmeal = x, jumplength = y)\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
+    "text": "5.4 Data\n\n5.4.1 Linear\n\n\nR Code [show / hide]\nweight_bloodmeal_n14_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6),\n                                 y = 2 + 1.2*x + rnorm(14, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(bloodmeal = x, weight = y)\n\n\n\n\n\n\nTable 5.1: foo.\n\n\n\n\n\n\nbloodmeal\nweight\n\n\n\n\n1.2\n6.5\n\n\n2.4\n3.6\n\n\n3.5\n6.6\n\n\n3.9\n5.4\n\n\n2.8\n7.0\n\n\n1.8\n3.4\n\n\n3.1\n6.0\n\n\n5.1\n6.2\n\n\n4.6\n7.1\n\n\n5.5\n9.6\n\n\n6.2\n10.3\n\n\n7.1\n12.4\n\n\n6.5\n10.0\n\n\n7.6\n13.5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.1: Relationship between blood meal and body weight.\n\n\n\n\n\n\n\n5.4.2 Non-linear\n\\[\ny = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353\n\\]\n\n\nR Code [show / hide]\njump_bloodmeal_n21_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,\n                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),\n                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(bloodmeal = x, jumplength = y)\n\n\n\n\n\n\nTable 5.2: foo.\n\n\n\n\n\n\nbloodmeal\njumplength\n\n\n\n\n1.2\n28.4\n\n\n2.4\n22.7\n\n\n3.5\n20.6\n\n\n3.9\n25.7\n\n\n2.8\n26.8\n\n\n1.8\n28.6\n\n\n3.1\n22.8\n\n\n5.1\n17.4\n\n\n4.6\n18.1\n\n\n5.5\n15.0\n\n\n6.2\n10.9\n\n\n7.1\n20.0\n\n\n6.5\n10.2\n\n\n7.6\n15.5\n\n\n8.6\n21.5\n\n\n9.3\n26.3\n\n\n10.5\n33.8\n\n\n9.8\n26.7\n\n\n11.8\n32.8\n\n\n11.1\n36.0\n\n\n10.2\n29.2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5.2: Relationship between blood meal and jumping length.\n\n\n\n\n\n\n\n5.4.3 Not independent\n\n\nR Code [show / hide]\nlibrary(mvtnorm)\n\nsigma &lt;- matrix(c(4,2,2,3), ncol=2)\nx &lt;- rmvnorm(n = 21, mean=c(1,2), sigma=sigma) |&gt; \n  as_tibble() |&gt; \n  rename(weight = V1, bodylength = V2)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nR Code [show / hide]\ncolMeans(x)\n\n\n    weight bodylength \n 0.6196407  1.8279247 \n\n\nR Code [show / hide]\nvar(x)\n\n\n             weight bodylength\nweight     6.432148   2.761048\nbodylength 2.761048   4.428079\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
@@ -895,6 +895,17 @@
     "crumbs": [
       "Tales of data",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#not-independent",
+    "href": "chapter-11-covariate-data.html#not-independent",
+    "title": "5  Blood meal of fleas",
+    "section": "5.5 Not independent",
+    "text": "5.5 Not independent\n\n\nR Code [show / hide]\nlibrary(mvtnorm)\n\nsigma &lt;- matrix(c(4,2,2,3), ncol=2)\nx &lt;- rmvnorm(n = 21, mean=c(1,2), sigma=sigma) |&gt; \n  as_tibble() |&gt; \n  rename(weight = V1, bodylength = V2)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nR Code [show / hide]\ncolMeans(x)\n\n\n    weight bodylength \n 0.6196407  1.8279247 \n\n\nR Code [show / hide]\nvar(x)\n\n\n             weight bodylength\nweight     6.432148   2.761048\nbodylength 2.761048   4.428079\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
     ]
   }
 ]
