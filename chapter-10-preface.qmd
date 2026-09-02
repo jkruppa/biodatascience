@@ -13,6 +13,7 @@ source("images/part_1/part_1_data.R")
 
 Once upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas @cadiergues2000comparison. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?
 
+Panagiotakopulu and Buckland (2017) @panagiotakopulu2017thousand 
 
 Unfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches @everett1957relative.
 
@@ -24,7 +25,7 @@ Unfortunately, none of this ever happened in our branch of reality. But it might
 #| fig-align: center
 #| fig-height: 3.25
 #| fig-width: 7
-#| fig-cap: "Presentation of all measured and experimental values for a given flea of the species *Pulex irritans*, also known as the common human flea. The dark blue variables represent outcomes $(Y)$ with the jump distance in [cm], the number of hairs on the hind legs, the grade and the infection status with flea cold. The purple variables represent the influencing variables $(X)$ with the covariates body weight in [mg] and body length in [mm], as well as the factors of feeding, stage of development and host of the flea."
+#| fig-cap: "Presentation of all measured and experimental values for a given flea of the species Pulex irritans, also known as the common human flea. The dark blue variables represent the outcomes (Y), which include jump distance (in cm), number of hairs on the hind legs, grade, and infection status with flea cold. The orange variables represent the influencing variables, with body weight [mg] and body length [mm] as the covariates. The purple variables represent factors relating to feeding, the stage of development and the host of the flea."
 
 p_measured_flea
 ```

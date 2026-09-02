@@ -547,5 +547,354 @@
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Why does it look like this?</span>"
     ]
+  },
+  {
+    "objectID": "interlude-I.html",
+    "href": "interlude-I.html",
+    "title": "Interlude I",
+    "section": "",
+    "text": "Last modified on 02. September 2026 at 09:53:32\nText",
+    "crumbs": [
+      "Interlude I"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html",
+    "href": "interlude-I-gummibaers.html",
+    "title": "4  Gummy bears",
+    "section": "",
+    "text": "4.1 General background\nLast modified on 02. September 2026 at 10:02:14",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#theoretical-background",
+    "href": "interlude-I-gummibaers.html#theoretical-background",
+    "title": "4  Gummy bears",
+    "section": "4.2 Theoretical background",
+    "text": "4.2 Theoretical background",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#r-packages-used",
+    "href": "interlude-I-gummibaers.html#r-packages-used",
+    "title": "4  Gummy bears",
+    "section": "4.3 R packages used",
+    "text": "4.3 R packages used",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#data",
+    "href": "interlude-I-gummibaers.html#data",
+    "title": "4  Gummy bears",
+    "section": "4.4 Data",
+    "text": "4.4 Data\n\n\nR Code [show / hide]\ngummi_tbl &lt;- read_excel(\"data/gummibears.xlsx\")\n\n\n\n\n\n\nTable 4.1: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\ndarkred\nlightred\norange\nyellow\ngreen\nwhite\n\n\n\n\n2018\n0\n0\n5\n4\n0\n0\n\n\n2018\n0\n3\n1\n4\n1\n1\n\n\n2018\n1\n2\n2\n2\n1\n1\n\n\n2018\n2\n0\n2\n1\n2\n3\n\n\n…\n…\n…\n…\n…\n…\n…\n\n\n2025\n0\n0\n0\n3\n2\n4\n\n\n2025\n3\n0\n0\n2\n0\n3\n\n\n2025\n2\n1\n2\n3\n1\n1\n\n\n2025\n1\n0\n2\n2\n2\n2\n\n\n\n\n\n\n\n\n\n\nR Code [show / hide]\ngummi_count_tbl &lt;- gummi_bears_tbl %&gt;%\n  rowwise() %&gt;% \n  mutate(count_bear = sum(c_across(darkred:white)),\n         count_color = sum(c_across(darkred:white) &gt; 0)) |&gt; \n  ungroup() |&gt; \n  select(year, count_bear, count_color)\n\n\n\n\n\n\nTable 4.2: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\ncount_bear\ncount_color\n\n\n\n\n2018\n9\n2\n\n\n2018\n10\n5\n\n\n2018\n9\n6\n\n\n2018\n10\n5\n\n\n…\n…\n…\n\n\n2025\n9\n3\n\n\n2025\n8\n3\n\n\n2025\n10\n6\n\n\n2025\n9\n5\n\n\n\n\n\n\n\n\n\n\n\n\nTable 4.3: Extract of the Gummi Bears dataset.\n\n\n\n\n\n\nyear\nmost_liked\ngender\nage\nheight\nsemester\n\n\n\n\n2018\nlightred\nmale\n35\n193\n10\n\n\n2018\nyellow\nfemale\n21\n159\n6\n\n\n2018\nwhite\nfemale\n21\n159\n6\n\n\n2018\nwhite\nfemale\n36\n180\n10\n\n\n…\n…\n…\n…\n…\n…\n\n\n2025\nwhite\nfemale\n28\nNA\nNA\n\n\n2025\nyellow\nfemale\n21\n178\n1\n\n\n2025\norange\nmale\n22\n176\n1\n\n\n2025\ndarkred\nfemale\n24\n170\n1",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#alternatives",
+    "href": "interlude-I-gummibaers.html#alternatives",
+    "title": "4  Gummy bears",
+    "section": "4.5 Alternatives",
+    "text": "4.5 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#glossary",
+    "href": "interlude-I-gummibaers.html#glossary",
+    "title": "4  Gummy bears",
+    "section": "4.6 Glossary",
+    "text": "4.6 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "interlude-I-gummibaers.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "4  Gummy bears",
+    "section": "4.7 The meaning of “Models of Reality” in this chapter.",
+    "text": "4.7 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#summary",
+    "href": "interlude-I-gummibaers.html#summary",
+    "title": "4  Gummy bears",
+    "section": "4.8 Summary",
+    "text": "4.8 Summary",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "interlude-I-gummibaers.html#references",
+    "href": "interlude-I-gummibaers.html#references",
+    "title": "4  Gummy bears",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Interlude I",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Gummy bears</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-10-preface.html",
+    "href": "chapter-10-preface.html",
+    "title": "Tales of data",
+    "section": "",
+    "text": "References\nLast modified on 02. September 2026 at 14:01:14\nOnce upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas1. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?\nPanagiotakopulu and Buckland (2017)2\nUnfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches3.\nQuality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.\nHow large is the sample size?",
+    "crumbs": [
+      "Tales of data"
+    ]
+  },
+  {
+    "objectID": "chapter-10-preface.html#references",
+    "href": "chapter-10-preface.html#references",
+    "title": "Tales of data",
+    "section": "",
+    "text": "[1] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[2] Panagiotakopulu E, Buckland PC. A thousand bites–insect introductions and late holocene environments. Quaternary Science Reviews. 2017;156:23-35.\n\n\n[3] Everett III H. ’Relative state’ formulation of quantum mechanics. Reviews of modern physics. 1957;29(3):454.",
+    "crumbs": [
+      "Tales of data"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html",
+    "href": "chapter-11-covariate-data.html",
+    "title": "5  Blood meal of fleas",
+    "section": "",
+    "text": "5.1 General background\nLast modified on 02. September 2026 at 20:04:17",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#theoretical-background",
+    "href": "chapter-11-covariate-data.html#theoretical-background",
+    "title": "5  Blood meal of fleas",
+    "section": "5.2 Theoretical background",
+    "text": "5.2 Theoretical background",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#r-packages-used",
+    "href": "chapter-11-covariate-data.html#r-packages-used",
+    "title": "5  Blood meal of fleas",
+    "section": "5.3 R packages used",
+    "text": "5.3 R packages used",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#data",
+    "href": "chapter-11-covariate-data.html#data",
+    "title": "5  Blood meal of fleas",
+    "section": "5.4 Data",
+    "text": "5.4 Data\n\n5.4.1 Linear\n\n\nR Code [show / hide]\nweight_bloodmeal_n14_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6),\n                                 y = 2 + 1.2*x + rnorm(14, 0, 2)) |&gt;\n  mutate_all(round, 1) |&gt; \n  rename(bloodmeal = x, weight = y)\n\n\n\n\n\n\n\n\n\n\nFigure 5.1: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\nlibrary(mvtnorm)\n\nsigma &lt;- matrix(c(4,2,2,3), ncol=2)\nx &lt;- rmvnorm(n = 21, mean=c(1,2), sigma=sigma) |&gt; \n  as_tibble() |&gt; \n  rename(weight = V1, bodylength = V2)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nR Code [show / hide]\ncolMeans(x)\n\n\n    weight bodylength \n 0.7257394  1.9197076 \n\n\nR Code [show / hide]\nvar(x)\n\n\n             weight bodylength\nweight     5.651795   3.110626\nbodylength 3.110626   5.175713\n\n\n\n\n\n\n\n\n\n\nFigure 5.2: foo (A) foo (B) foo\n\n\n\n\n\n\n\n5.4.2 Non-linear\n\\[\ny = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353\n\\]\n\n\nR Code [show / hide]\njump_bloodmeal_n21_tbl &lt;- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, \n                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,\n                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),\n                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |&gt;\n  rename(bloodmeal = x, jumplength = y)\n\n\n\n\n\n\n\n\n\n\nFigure 5.3: foo (A) foo (B) foo",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#data-availability",
+    "href": "chapter-11-covariate-data.html#data-availability",
+    "title": "5  Blood meal of fleas",
+    "section": "5.5 Data availability",
+    "text": "5.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#alternatives",
+    "href": "chapter-11-covariate-data.html#alternatives",
+    "title": "5  Blood meal of fleas",
+    "section": "5.6 Alternatives",
+    "text": "5.6 Alternatives\nFurther tutorials and R packages on XXX",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#glossary",
+    "href": "chapter-11-covariate-data.html#glossary",
+    "title": "5  Blood meal of fleas",
+    "section": "5.7 Glossary",
+    "text": "5.7 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-11-covariate-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "5  Blood meal of fleas",
+    "section": "5.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "5.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#summary",
+    "href": "chapter-11-covariate-data.html#summary",
+    "title": "5  Blood meal of fleas",
+    "section": "5.9 Summary",
+    "text": "5.9 Summary",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-11-covariate-data.html#references",
+    "href": "chapter-11-covariate-data.html#references",
+    "title": "5  Blood meal of fleas",
+    "section": "References",
+    "text": "References",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Blood meal of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html",
+    "href": "chapter-12-factorial-data.html",
+    "title": "6  Eating habits of fleas",
+    "section": "",
+    "text": "6.1 General background\nLast modified on 06. June 2026 at 20:42:16\nWhat is a data grid?",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#theoretical-background",
+    "href": "chapter-12-factorial-data.html#theoretical-background",
+    "title": "6  Eating habits of fleas",
+    "section": "6.2 Theoretical background",
+    "text": "6.2 Theoretical background\n\n\n\n\n\n\n\n\nFigure 6.1: foo\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6.2: foo",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#r-packages-used",
+    "href": "chapter-12-factorial-data.html#r-packages-used",
+    "title": "6  Eating habits of fleas",
+    "section": "6.3 R packages used",
+    "text": "6.3 R packages used\n\n\nR Code [show / hide]\npacman::p_load(tidyverse, conflicted)\n\n\n1",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#data",
+    "href": "chapter-12-factorial-data.html#data",
+    "title": "6  Eating habits of fleas",
+    "section": "6.4 Data",
+    "text": "6.4 Data\nSmall data and grid\n\n6.4.1 Fleas with feeding habits\n2\n\n\n\n\n\n\n\n\nFigure 6.3: foo (A) foo (B) foo\n\n\n\n\n\nC. felis felis jump was \\(19.9 \\pm 9.1cm\\) with a range from \\(2\\) to \\(48cm\\)\nC. canis jump was longer \\(30.4 \\pm 9.1cm\\) with a range from \\(3\\) to \\(50cm\\)\nThe jump length of P. irritans has to be derived from the work of Cadiergues et al. (2000)2 because no mean or standard deviation for the human flea was available.\nMiarinjara (2025) et al.3 demonstrate the impact of sheep’s blood on the jumping ability of human fleas.\n\n\nR Code [show / hide]\njump_flea_grid &lt;- expand_grid(feeding = c(\"sugar water\", \"human blood\")) |&gt; \n  mutate(mean = c(19.9, 30.4), \n         sd = c(9.1))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- jump_flea_grid |&gt; \n  rowwise() |&gt; \n  mutate(jumplength = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jumplength) |&gt; \n  mutate(feeding = as_factor(feeding))\n\n\n\n\nR Code [show / hide]\njump_flea_tbl |&gt; \n  group_by(feeding) |&gt; \n  summarise(mean(jumplength),\n            sd(jumplength)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 2 × 3\n  feeding     `mean(jumplength)` `sd(jumplength)`\n  &lt;fct&gt;                    &lt;dbl&gt;            &lt;dbl&gt;\n1 sugar water               21.2             7.3 \n2 human blood               33.0             6.57\n\n\n\n\n\n\n\n\n\n\nFigure 6.4: foo (A) foo (B) foo\n\n\n\n\n\n\n\nR Code [show / hide]\njump_animals_grid &lt;- expand_grid(feeding = c(\"sugar water\", \"tomato ketchup\", \"fake blood\", \"human blood\")) |&gt; \n  mutate(mean = c(19.9, 35.2, 15.2, 30.4), \n         sd = c(9.1, 10.3, 4.6, 9.1))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- jump_animals_grid |&gt; \n  rowwise() |&gt; \n  mutate(jumplength = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jumplength) |&gt; \n  mutate(feeding = as_factor(feeding))\n\n\n\n\nR Code [show / hide]\njump_animals_tbl |&gt; \n  group_by(feeding) |&gt; \n  summarise(mean(jumplength),\n            sd(jumplength)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 4 × 3\n  feeding        `mean(jumplength)` `sd(jumplength)`\n  &lt;fct&gt;                       &lt;dbl&gt;            &lt;dbl&gt;\n1 sugar water                  21.2             9.36\n2 tomato ketchup               34.6            10.2 \n3 fake blood                   13.4             2.51\n4 human blood                  34.0            17.4 \n\n\n\n\n\n\n\n\n\n\nFigure 6.5: foo (A) foo (B) foo\n\n\n\n\n\n\n\n6.4.2 Fleas at stages of development\nWhy so complex?\n4\n\n\nR Code [show / hide]\njump_habitat_grid &lt;- expand_grid(feeding = 1:3, stage = 1:2) |&gt; \n  mutate(mean_feeding = c(19.9, 19.9, 30.4, 30.4, 15.2, 15.2),\n         mean_stage = c(5, 0, 5, 0, 5, -5),\n         mean = mean_feeding + mean_stage,\n         sd = c(9.1, 9.1, 9.1, 9.1, 4.6, 4.6))\njump_habitat_grid\n\n\n# A tibble: 6 × 6\n  feeding stage mean_feeding mean_stage  mean    sd\n    &lt;int&gt; &lt;int&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1       1     1         19.9          5  24.9   9.1\n2       1     2         19.9          0  19.9   9.1\n3       2     1         30.4          5  35.4   9.1\n4       2     2         30.4          0  30.4   9.1\n5       3     1         15.2          5  20.2   4.6\n6       3     2         15.2         -5  10.2   4.6\n\n\n\n\nR Code [show / hide]\njump_habitat_raw_tbl &lt;- jump_habitat_grid |&gt; \n  rowwise() |&gt; \n  mutate(jumplength = lst(rnorm(7, mean, sd))) |&gt; \n  unnest(cols = jumplength)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl &lt;- jump_habitat_raw_tbl |&gt; \n  select(feeding, stage, jumplength) |&gt; \n  mutate(feeding = factor(feeding, labels = c(\"sugar water\", \"tomato ketchup\", \"human blood\")),\n         stage = factor(stage, labels = c(\"juvenile\", \"adult\"))) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n\n\nR Code [show / hide]\njump_habitat_tbl |&gt; \n  group_by(feeding, stage) |&gt; \n  summarise(mean(jumplength),\n            sd(jumplength)) |&gt; \n  mutate_if(is.numeric, round, 2)\n\n\n# A tibble: 6 × 4\n# Groups:   feeding [3]\n  feeding        stage    `mean(jumplength)` `sd(jumplength)`\n  &lt;fct&gt;          &lt;fct&gt;                 &lt;dbl&gt;            &lt;dbl&gt;\n1 sugar water    juvenile               25.1            13.8 \n2 sugar water    adult                  14.9            11.4 \n3 tomato ketchup juvenile               29.9             6.32\n4 tomato ketchup adult                  27.3             9.26\n5 human blood    juvenile               22.0             3.65\n6 human blood    adult                  10.1             4.6 \n\n\n\n\n\n\n\n\n\n\nFigure 6.6: foo (A) foo (B) foo\n\n\n\n\n\n\n\n6.4.3 Measurements on animal fleas\n\nJump length in [cm] called jump_length\nNumber of hairs on each leg called count_leg_left and count_leg_right\nRatings of each flea, as listed in the catalog of the Fédération Internationale de la Beauté des Puces (FIBP) called rating on a Likert scale from 1 to 5, with 5 being the strongest expression.\nThe infection status with the flea cold is called infected, with a value of 0/1 for no/yes.\n\n\n\nR Code [show / hide]\ntibble(jumplength = rnorm(7, 5, 1),\n       counthairleg_left = rpois(7, 4),\n       counthairleg_right = rpois(7, 4),\n       counthairleg = (counthairleg_left + counthairleg_right)/2,\n       rating = sample(1:5, 7, replace = TRUE, prob = c(0.1, 0.2, 0.4, 0.2, 0.1)),\n       infectd = rbinom(7, prob = 0.5, size = 1))\n\n\n# A tibble: 7 × 6\n  jumplength counthairleg_left counthairleg_right counthairleg rating infectd\n       &lt;dbl&gt;             &lt;int&gt;              &lt;int&gt;        &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt;\n1       5.02                 3                  5          4        2       0\n2       4.73                 6                  4          5        3       0\n3       5.91                 4                  5          4.5      3       0\n4       3.38                 6                  3          4.5      2       1\n5       3.10                 3                  4          3.5      5       0\n6       7.02                 4                  3          3.5      1       1\n7       3.95                 4                  3          3.5      1       0",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#data-availability",
+    "href": "chapter-12-factorial-data.html#data-availability",
+    "title": "6  Eating habits of fleas",
+    "section": "6.5 Data availability",
+    "text": "6.5 Data availability\nThe data is available as txt-Files under https://github.com/jkruppa/biodatascience.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#alternatives",
+    "href": "chapter-12-factorial-data.html#alternatives",
+    "title": "6  Eating habits of fleas",
+    "section": "6.6 Alternatives",
+    "text": "6.6 Alternatives\nFurther tutorials and R packages on XXX\n\n6.6.1 Why linear is a bad idea?\n\n\nR Code [show / hide]\njump_flea_tbl &lt;- tibble(feeding = rep(0:1, each = 7),\n                        jump_length = 19.9 + 10.5 * feeding + rnorm(14, 0, 9.1)) |&gt; \n  mutate(feeding = factor(feeding, labels = c(\"cat\", \"dog\")))\n\n\n\n\n6.6.2 Why is a tibble() bad idea?\n\n\nR Code [show / hide]\njump_animals_tbl &lt;- tibble(cat = rnorm(n = 7, mean = 19.9, sd = 9.1),\n                           fox = rnorm(n = 7, mean = 35.2, sd = 10.3),\n                           rat = rnorm(n = 7, mean = 15.2, sd = 4.6),\n                           dog = rnorm(n = 7, mean = 30.4, sd = 9.1)) |&gt;\n  pivot_longer(cols = cat:dog, values_to = \"jump_length\", names_to = \"feeding\") |&gt; \n  mutate(feeding = as_factor(feeding))",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#glossary",
+    "href": "chapter-12-factorial-data.html#glossary",
+    "title": "6  Eating habits of fleas",
+    "section": "6.7 Glossary",
+    "text": "6.7 Glossary\n\nterm\n\nwhat does it mean.",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "href": "chapter-12-factorial-data.html#the-meaning-of-models-of-reality-in-this-chapter.",
+    "title": "6  Eating habits of fleas",
+    "section": "6.8 The meaning of “Models of Reality” in this chapter.",
+    "text": "6.8 The meaning of “Models of Reality” in this chapter.\n\nitemize with max. 5-6 words",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#summary",
+    "href": "chapter-12-factorial-data.html#summary",
+    "title": "6  Eating habits of fleas",
+    "section": "6.9 Summary",
+    "text": "6.9 Summary",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
+  },
+  {
+    "objectID": "chapter-12-factorial-data.html#references",
+    "href": "chapter-12-factorial-data.html#references",
+    "title": "6  Eating habits of fleas",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n[1] Wickham H, Çetinkaya-Rundel M, Grolemund G. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. \" O’Reilly Media, Inc.\"; 2023.\n\n\n[2] Cadiergues MC, Joubert C, Franc M. A comparison of jump performances of the dog flea, ctenocephalides canis (curtis, 1826) and the cat flea, ctenocephalides felis felis (bouché, 1835). Veterinary parasitology. 2000;92(3):239-241.\n\n\n[3] Miarinjara A, Raveloson AO, Rajaonarimanana M, Ayala D, Girod R, Gillespie TR. Establishing a laboratory colony of the human flea, pulex irritans: Methods for collecting, rearing, and feeding. Parasites & Vectors. 2025;18(1):363.\n\n\n[4] Wickham H, Henry L. Purrr: Functional Programming Tools.; 2025. https://purrr.tidyverse.org/",
+    "crumbs": [
+      "Tales of data",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Eating habits of fleas</span>"
+    ]
   }
 ]

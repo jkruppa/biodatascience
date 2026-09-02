@@ -2,7 +2,7 @@
 source("init.R")
 ```
 
-# Interlude I - Gummy bears {#sec-temp}
+# Gummy bears {#sec-temp}
 
 *Last modified on `r format(fs::file_info("interlude-I-gummibaers.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 

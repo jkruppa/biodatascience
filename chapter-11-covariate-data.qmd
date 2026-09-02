@@ -22,10 +22,11 @@ source("images/part_1/part_1_data.R")
 ### Linear
 
 ```{r}
-jump_weight_tbl <- tibble(x = abs(rnorm(21, 3, 4)),
-                          y = 10 + 1.2 * x + rnorm(21, 0, 2)) |>
+weight_bloodmeal_n14_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, 
+                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6),
+                                 y = 2 + 1.2*x + rnorm(14, 0, 2)) |>
   mutate_all(round, 1) |> 
-  rename(weight = x, jumplength = y)
+  rename(bloodmeal = x, weight = y)
 ```
 
 ```{r}
@@ -38,15 +39,13 @@ jump_weight_tbl <- tibble(x = abs(rnorm(21, 3, 4)),
 #| fig-width: 7
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
-jump_weight_tbl |> 
-  ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
+weight_bloodmeal_n14_tbl |> 
+  ggplot(aes(x = bloodmeal, y = weight)) +
   theme_book() +
-  geom_point(show.legend = FALSE, shape = 21) +
-  labs(x = "Body weight [mg]", y = "Jump length in [cm]",
-       fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma") +
+  geom_point(show.legend = FALSE, shape = 21, fill = "#0D0887FF") +
+  labs(x = "Blood meal [ml]", y = "Body weight [mg]") +
   scale_x_continuous(breaks = 0:10) +
-  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
+  coord_cartesian(xlim = c(0, 8), ylim = c(0, 15))
 ```
 
 ```{r}
@@ -76,19 +75,22 @@ x |>
   geom_point(show.legend = FALSE, shape = 21) +
   labs(x = "Body weight [mg]", y = "Body length [mm]",
        fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma") #+
-  # scale_x_continuous(breaks = 0:10) +
-  # coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
+  scale_fill_viridis(discrete = TRUE, option = "plasma") 
 ```
 
 
 ### Non-linear
 
+$$
+y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353
+$$
 
 ```{r}
-jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 4)),
-                                     y = 0.15*x^3 - 2.2*x^2 + 8.8*x + 3.2 + rnorm(32, 0, 1)) |>
-  rename(weight = x, jumplength = y)
+jump_bloodmeal_n21_tbl <- tibble(x = c(1.2, 2.4, 3.5, 3.9, 2.8, 1.8, 3.1, 
+                                       5.1, 4.6, 5.5, 6.2, 7.1, 6.5, 7.6,
+                                       8.6, 9.3, 10.5, 9.8, 11.8, 11.1, 10.2),
+                                 y = -0.0365*x^4 + 0.9348*x^3 - 7.396*x^2 + 18.876*x + 12.353 + rnorm(21, 0, 3)) |>
+  rename(bloodmeal = x, jumplength = y)
 ```
 
 ```{r}
@@ -101,15 +103,13 @@ jump_weight_non_linear_tbl <- tibble(x = abs(rnorm(32, 3, 4)),
 #| fig-width: 7
 #| fig-cap: "foo **(A)** foo **(B)** foo"
 
-jump_weight_non_linear_tbl |> 
-  ggplot(aes(x = weight, y = jumplength, fill = col_pal(1, 0.5))) +
+jump_bloodmeal_n21_tbl |> 
+  ggplot(aes(x = bloodmeal, y = jumplength)) +
   theme_book() +
-  geom_point(show.legend = FALSE, shape = 21) +
-  labs(x = "Body weight [mg]", y = "Jump length in [cm]",
-       fill = "Host") +
-  scale_fill_viridis(discrete = TRUE, option = "plasma") +
-  scale_x_continuous(breaks = 0:10) +
-  coord_cartesian(xlim = c(0, NA), ylim = c(0, NA))
+  geom_point(show.legend = FALSE, shape = 21, fill = "#0D0887FF") +
+  labs(x = "Blood meal [ml]", y = "Jump length [cm]") +
+  scale_x_continuous(breaks = 0:12) +
+  coord_cartesian(xlim = c(0, 12), ylim = c(0, NA))
 ```
 
 
@@ -119,14 +119,15 @@ The data is available as txt-Files under <https://github.com/jkruppa/biodatascie
 
 ```{r}
 #| echo: false
+#| eval: false
 
-jump_weight_tbl |> 
+weight_bloodmeal_n14_tbl |> 
   mutate_if(is.numeric, round, 2) |> 
-  write_delim("data/jump_weight.txt")
+  write_delim("data/weight_bloodmeal_n14.txt")
 
-jump_weight_non_linear_tbl |> 
+jump_bloodmeal_n21_tbl |> 
   mutate_if(is.numeric, round, 2) |> 
-  write_delim("data/jump_weight_non_linear.txt")
+  write_delim("data/jump_bloodmeal_n21.txt")
 ```
 
 
