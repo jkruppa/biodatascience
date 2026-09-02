@@ -1,0 +1,9 @@
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+source("init.R")
+```
+
+# Interlude I
+
+*Last modified on `r format(fs::file_info("interlude-I.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+Text

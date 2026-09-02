@@ -40,7 +40,7 @@ p_population_sample
 ggplot() +
   theme_book() +
   coord_cartesian(xlim = c(0, 5), ylim = c(0, 60)) +
-  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_point(data = jump_blood_tbl, aes(x = 0, y = jumplength), size = 2) +
   geom_path(data = tibble(x_raw = seq(-15, 15, 0.1), 
                           y_raw = dnorm(x_raw, sd = 5)), 
             aes(y = -(x_raw*1.4)+20, x = (y_raw*15)), 
@@ -57,37 +57,38 @@ ggplot() +
 ```{r}
 #| message: false
 #| warning: false
-jump_dog_tbl <- read_delim("data/jump_fleas.txt") |> 
-  select(host, jumplength) |> 
-  filter(host == "dog") 
+jump_blood_tbl <- read_delim("data/jump_fleas.txt") |> 
+  select(feeding, jumplength) |> 
+  filter(feeding == "human blood") 
 ```
 
 ```{r}
-jump_dog_tbl
+jump_blood_tbl
 
 ```
 
 ```{r}
 sem <- \(x) sd(x)/sqrt(length(x))
 
-sem(jump_dog_tbl$jumplength)
+sem(jump_blood_tbl$jumplength)
 
 sem <- \(x) sqrt(var(x)/length(x))
 
-sem(jump_dog_tbl$jumplength)
+sem(jump_blood_tbl$jumplength)
 
 sem <- \(x) sqrt(sum((x-mean(x))^2)/(length(x)*(length(x)-1)))
 
-sem(jump_dog_tbl$jumplength)
+sem(jump_blood_tbl$jumplength)
 
 sem <- \(x) sqrt(sum((x-mean(x))^2))/sqrt(length(x)*(length(x)-1))
 
-sem(jump_dog_tbl$jumplength)
+sem(jump_blood_tbl$jumplength)
 ```
 
 $$
 SE = \cfrac{s}{\sqrt{n}}
 $$
+
 $$
 SE = \sqrt{\cfrac{s^2}{n}}
 $$
@@ -107,8 +108,8 @@ SE = \cfrac{\sqrt{\sum_{i=1}^n (y_i - \bar{y})^2}}{\sqrt{n^2}} = \cfrac{\sqrt{\s
 $$
 
 ```{r}
-jump_dog_tbl |> 
-  group_by(host) |> 
+jump_blood_tbl |> 
+  group_by(feeding) |> 
   summarise(mean(jumplength), var(jumplength), sd(jumplength), sem(jumplength)) |> 
   mutate_if(is.numeric, round, 2)
 ```
@@ -118,13 +119,13 @@ jump_dog_tbl |>
 #| message: false
 #| warning: false
 #| echo: false
-mean_dog_jump <- mean(jump_dog_tbl$jumplength)
+mean_blood_jump <- mean(jump_blood_tbl$jumplength)
 
-jump_dog_plot_tbl <- jump_dog_tbl |>
-  mutate(e = jumplength - mean_dog_jump,
+jump_blood_plot_tbl <- jump_blood_tbl |>
+  mutate(e = jumplength - mean_blood_jump,
          sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")))
 
-sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
+sum_e_blood_jump <- sum(abs(jump_blood_plot_tbl$e))
 ```
 
 
@@ -141,57 +142,57 @@ sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
 #| fig-cap: "foo"
 #| label: fig-mean-dist
 
-mean_dog_jump <- mean(jump_dog_tbl$jumplength)
-sd_dog_jump <- sd(jump_dog_tbl$jumplength)
+mean_blood_jump <- mean(jump_blood_tbl$jumplength)
+sd_blood_jump <- sd(jump_blood_tbl$jumplength)
 
 p1_fig_dist_example <- ggplot() +
   theme_book() +
   coord_cartesian(xlim = c(-0.25, 0.25), ylim = c(0, 60)) +
-  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
-  geom_text_repel(data = jump_dog_tbl, aes(x = 0, y = jumplength, label = 1:7)) +
-  scale_x_continuous(breaks = 0, labels = "dog") +
-  scale_y_continuous(breaks = c(0, 20, mean_dog_jump, 40, 60),
-                     labels = c("0", "20", round(mean_dog_jump,1), "40", "60")) +
+  geom_point(data = jump_blood_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_text_repel(data = jump_blood_tbl, aes(x = 0, y = jumplength, label = 1:7)) +
+  scale_x_continuous(breaks = 0, labels = "blood") +
+  scale_y_continuous(breaks = c(0, 20, mean_blood_jump, 40, 60),
+                     labels = c("0", "20", round(mean_blood_jump,1), "40", "60")) +
   labs(x = "", y = "Jump length in [cm]")
 
 p3_fig_dist_example <- ggplot() +
   theme_book() +
   coord_cartesian(xlim = c(0, 1.4), ylim = c(0, 60)) +
-  geom_rect(aes(xmin = 0.4, xmax = 1.1, ymin = 0, ymax = mean_dog_jump), fill = "#B12A9080",
+  geom_rect(aes(xmin = 0.4, xmax = 1.1, ymin = 0, ymax = mean_blood_jump), fill = "#B12A9080",
             color = "black") +
   geom_segment(aes(x = 0.75, xend = 0.75, 
-               y = mean_dog_jump, yend = mean_dog_jump+ sd_dog_jump), 
+               y = mean_blood_jump, yend = mean_blood_jump+ sd_blood_jump), 
                color = "#E16462FF", size = 1) +
   geom_segment(aes(x = 0.6, xend = 0.9, 
-               y = mean_dog_jump+ sd_dog_jump, yend = mean_dog_jump+ sd_dog_jump), 
+               y = mean_blood_jump+ sd_blood_jump, yend = mean_blood_jump+ sd_blood_jump), 
                color = "#E16462FF", size = 1) +
-  scale_x_continuous(breaks = 0.75, labels = "dog") +
-  scale_y_continuous(breaks = c(0, 20, mean_dog_jump, 40, 60),
-                     labels = c("0", "20", round(mean_dog_jump,1), "40", "60")) +
+  scale_x_continuous(breaks = 0.75, labels = "blood") +
+  scale_y_continuous(breaks = c(0, 20, mean_blood_jump, 40, 60),
+                     labels = c("0", "20", round(mean_blood_jump,1), "40", "60")) +
   labs(x = "Flea host", y = "")  
 
 p2_fig_dist_example <- ggplot() +
   theme_book() +
   coord_cartesian(xlim = c(-0.25, 1.5), ylim = c(0, 60)) +
-  geom_point(data = jump_dog_tbl, aes(x = 0, y = jumplength), size = 2) +
+  geom_point(data = jump_blood_tbl, aes(x = 0, y = jumplength), size = 2) +
   geom_segment(aes(x = 0.75, xend = 0.75, 
-               y = mean_dog_jump, yend = mean_dog_jump+ sd_dog_jump), 
+               y = mean_blood_jump, yend = mean_blood_jump+ sd_blood_jump), 
                color = "#E16462FF", size = 1) +
-  annotate("text", x = 0.8, y = mean_dog_jump+ sd_dog_jump/2-0.5, hjust = "left", 
+  annotate("text", x = 0.8, y = mean_blood_jump+ sd_blood_jump/2-0.5, hjust = "left", 
            label = expression(bold(s)), size = 5, color = "#E16462FF") +
-  geom_path(data = tibble(x_raw = seq(mean_dog_jump-mean_dog_jump/1.5, 
-                                      mean_dog_jump+mean_dog_jump/1.5, 0.1), 
-                          y_raw = dnorm(x_raw, mean = mean_dog_jump, sd = sd_dog_jump)), 
+  geom_path(data = tibble(x_raw = seq(mean_blood_jump-mean_blood_jump/1.5, 
+                                      mean_blood_jump+mean_blood_jump/1.5, 0.1), 
+                          y_raw = dnorm(x_raw, mean = mean_blood_jump, sd = sd_blood_jump)), 
             aes(y = x_raw, x = y_raw*20), 
             linewidth = 1, color = "black", angle = 90) +
   geom_segment(aes(x = -0.03, xend = 1.35, 
-               y = mean_dog_jump, yend = mean_dog_jump), color = "#B12A90FF", size = 1) +
+               y = mean_blood_jump, yend = mean_blood_jump), color = "#B12A90FF", size = 1) +
   annotate("text", x = 1.4, y = 33, hjust = "left", label = expression(bold(bar(y))),
            size = 5, color = "#B12A90FF") + 
-  geom_text_repel(data = jump_dog_tbl, aes(x = 0, y = jumplength, label = 1:7)) +
-  scale_x_continuous(breaks = 0, labels = "dog") +
-  scale_y_continuous(breaks = c(0, 20, mean_dog_jump, 40, 60),
-                     labels = c("0", "20", round(mean_dog_jump,1), "40", "60")) +
+  geom_text_repel(data = jump_blood_tbl, aes(x = 0, y = jumplength, label = 1:7)) +
+  scale_x_continuous(breaks = 0, labels = "blood") +
+  scale_y_continuous(breaks = c(0, 20, mean_blood_jump, 40, 60),
+                     labels = c("0", "20", round(mean_blood_jump,1), "40", "60")) +
   labs(x = "", y = "")
 
 p1_fig_dist_example + p3_fig_dist_example + p2_fig_dist_example +
@@ -213,29 +214,29 @@ p1_fig_dist_example + p3_fig_dist_example + p2_fig_dist_example +
 #| fig-cap: "foo"
 #| label: fig-mean-example
 
-mean_dog_jump <- mean(jump_dog_tbl$jumplength)
-sd_dog_jump <- sd(jump_dog_tbl$jumplength)
+mean_blood_jump <- mean(jump_blood_tbl$jumplength)
+sd_blood_jump <- sd(jump_blood_tbl$jumplength)
 
 
-jump_dog_plot_tbl <- jump_dog_tbl |>
-  mutate(e = round(jumplength - mean_dog_jump, 1),
+jump_blood_plot_tbl <- jump_blood_tbl |>
+  mutate(e = round(jumplength - mean_blood_jump, 1),
          sign = as_factor(ifelse(sign(e) == -1, "\U2012", "+")),
          e_label = str_c(sign, abs(e)))
 
-p1_fig_mean_example <- jump_dog_plot_tbl |> 
+p1_fig_mean_example <- jump_blood_plot_tbl |> 
   ggplot(aes(x = 1:7, y = jumplength)) +
   theme_book() +
-  geom_segment(aes(x = 1:7, xend = 1:7, y = jumplength, yend = mean_dog_jump, 
+  geom_segment(aes(x = 1:7, xend = 1:7, y = jumplength, yend = mean_blood_jump, 
                    color = sign), show.legend = FALSE, size = 1) +
   geom_text(aes(x = 1:7, y = jumplength - e/2, label = e_label, color = sign),
             size = 4, position = position_nudge(0.3), fontface = 2, show.legend = FALSE) +
-  geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
+  geom_hline(yintercept = mean_blood_jump, color = "#B12A90FF", size = 1) +
   geom_point(size = 2) +
   scale_x_continuous(breaks = c(0:7), labels = c("All", 1:7)) +
-  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
-                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
+  scale_y_continuous(breaks = c(25, 30, mean_blood_jump, 35, 40),
+                     labels = c("25", "30", round(mean_blood_jump,1), "35", "40"),
                      limits = c(19, 44)) +
-  labs(x = "Dog flea ID", y = "") +
+  labs(x = "blood flea ID", y = "") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
   geom_shape(data = tibble(x = c(4.6, 5.6, 5.6, 4.6), 
                            y = c(19, 19, 28.5, 28.5)),
@@ -247,18 +248,18 @@ p1_fig_mean_example <- jump_dog_plot_tbl |>
            fill = "#0D0887FF", alpha = 0.5) +
   annotate("label", x = 6.45, y = 29, label = "Positive", fontface = 2, 
            fill = "#FCCE25FF", alpha = 0.5) +
-  geom_segment(data = filter(jump_dog_plot_tbl, sign == "\U2012"),
+  geom_segment(data = filter(jump_blood_plot_tbl, sign == "\U2012"),
                aes(x = 4.8 + c(0, 0.3, 0.6), xend = 4.8 + c(0, 0.3, 0.6), 
-                   y = (jumplength+20)/2, yend = (mean_dog_jump+20)/2, 
+                   y = (jumplength+20)/2, yend = (mean_blood_jump+20)/2, 
                    color = sign), show.legend = FALSE, size = 1) +
-  geom_segment(data = filter(jump_dog_plot_tbl, sign == "+"),
+  geom_segment(data = filter(jump_blood_plot_tbl, sign == "+"),
                aes(x = 6 + c(0, 0.3, 0.6, 0.9), xend = 6 + c(0, 0.3, 0.6, 0.9), 
-                   y = (jumplength+13)/2, yend = (mean_dog_jump+13)/2, 
+                   y = (jumplength+13)/2, yend = (mean_blood_jump+13)/2, 
                    color = sign), show.legend = FALSE, size = 1) +
-  geom_text(data = filter(jump_dog_plot_tbl, sign == "\U2012"),
+  geom_text(data = filter(jump_blood_plot_tbl, sign == "\U2012"),
             aes(x = 4.8 + c(0, 0.3, 0.6), y = (jumplength+20)/2-0.5, 
                 label = e_label, color = sign), fontface = 2, show.legend = FALSE, size = 3) +  
-  geom_text(data = filter(jump_dog_plot_tbl, sign == "+"),
+  geom_text(data = filter(jump_blood_plot_tbl, sign == "+"),
             aes(x = 6 + c(0, 0.3, 0.6, 0.9), y = (jumplength+13)/2+0.5,  
                 label = e_label, color = sign), fontface = 2, show.legend = FALSE, size = 3) + 
   annotate("text", x = 5.7, y = 24, label = "=", size = 6) +
@@ -268,9 +269,9 @@ p1_fig_mean_example <- jump_dog_plot_tbl |>
 
 p1_fig_dist_example + 
   coord_cartesian(xlim = c(-0.25, 0.25), ylim = c(19, 44)) +
-  geom_hline(yintercept = mean_dog_jump, color = "#B12A90FF", size = 1) +
-  scale_y_continuous(breaks = c(25, 30, mean_dog_jump, 35, 40),
-                     labels = c("25", "30", round(mean_dog_jump,1), "35", "40"),
+  geom_hline(yintercept = mean_blood_jump, color = "#B12A90FF", size = 1) +
+  scale_y_continuous(breaks = c(25, 30, mean_blood_jump, 35, 40),
+                     labels = c("25", "30", round(mean_blood_jump,1), "35", "40"),
                      limits = c(19, 44)) +
   p1_fig_mean_example +
   plot_layout(ncol = 2, widths = c(1, 10)) +
@@ -294,10 +295,10 @@ p1_fig_dist_example +
 #| fig-cap: "foo"
 #| label: fig-var-2-example
 
-mean_dog_jump <- mean(jump_dog_tbl$jumplength)
-sum_e_dog_jump <- sum(abs(jump_dog_plot_tbl$e))
+mean_blood_jump <- mean(jump_blood_tbl$jumplength)
+sum_e_blood_jump <- sum(abs(jump_blood_plot_tbl$e))
 
-jump_dog_plot_tbl |> 
+jump_blood_plot_tbl |> 
   ggplot(aes(x = 1:7, y = jumplength)) +
   theme_book() +
   coord_equal() +
@@ -321,20 +322,20 @@ jump_dog_plot_tbl |>
             fontface = 2) +
   annotate("text", x = 50, y = 40.5, label = expression(sum()*258.5), size = 5) +
   annotate("tile", x = 28.25, y = 20, 
-           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           width = sum_e_blood_jump/2.5, height = sum_e_blood_jump/2.5, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   annotate("text", x = 28.25, y = 20, label = "258.5 cm²", fontface = 2, size = 4.5) +
   geom_segment(x = -2, xend = 13, 
-               y = mean_dog_jump, yend = mean_dog_jump, color = "#B12A90FF", size = 1) +
+               y = mean_blood_jump, yend = mean_blood_jump, color = "#B12A90FF", size = 1) +
   annotate("text", x = 13.5, y = 33, hjust = "left", label = expression(bold(bar(y))),
            size = 5, color = "#B12A90FF") + 
   geom_point() +
   scale_x_continuous(breaks = 1:7, limits = c(NA, 54),
                      expand = expand_scale(mult = 0)) +
-  scale_y_continuous(breaks = c(15, 20, 25, 30, mean_dog_jump, 35, 40),
-                     labels = c("15", "20", "25", "30", round(mean_dog_jump,1), "35", "40"),
+  scale_y_continuous(breaks = c(15, 20, 25, 30, mean_blood_jump, 35, 40),
+                     labels = c("15", "20", "25", "30", round(mean_blood_jump,1), "35", "40"),
                      limits = c(NA, NA)) +
-  labs(x = str_pad("Dog flea ID", 122.5, "right"), y = "Jump length in [cm]") +
+  labs(x = str_pad("blood flea ID", 122.5, "right"), y = "Jump length in [cm]") +
   scale_color_viridis(discrete = TRUE, option = "plasma", end = 0.9) +
   annotate("text", x = 20.5, y = 36, hjust = "right", label = expression(SS~"="),
            size = 5) + 
@@ -359,7 +360,7 @@ ggplot() +
   scale_x_continuous(breaks = -10:10, expand = expansion(mult = 0), limits = c(-8.5, 17)) +
   scale_y_continuous(breaks = -10:15, expand = expansion(mult = 0), limits = c(-5.5, 12)) +
   annotate("tile", x = 2, y = 5, 
-           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           width = sum_e_blood_jump/2.5, height = sum_e_blood_jump/2.5, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   annotate("text", x = 2, y = 5, label = "258.5 cm²", fontface = 2, size = 4.5) +
   annotate("text", x = -6, y = -2.4, hjust = "right", label = expression(s^2~"="),
@@ -369,7 +370,7 @@ ggplot() +
   annotate("text", x = 10, y = -2.4, hjust = "left", label = expression("="),
            size = 6) +
   annotate("tile", x = 14, y = -2.5, 
-           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+           width = sum_e_blood_jump/7, height = sum_e_blood_jump/7, fill = "#FCA63680",
            alpha = 0.2, color = "#FCA636FF", linewidth = 0.5) +
   annotate("text", x = 14, y = -2.5, label = "43.08 cm²", fontface = 2, size = 4.5) 
 ```
@@ -392,7 +393,7 @@ ggplot() +
   annotate("text", x = -5.75, y = -2.6, hjust = "right", label = expression(s~"="),
            size = 6.5) +
   annotate("tile", x = -3, y = -2.5, 
-           width = sum_e_dog_jump/7, height = sum_e_dog_jump/7, fill = "#FCA63680",
+           width = sum_e_blood_jump/7, height = sum_e_blood_jump/7, fill = "#FCA63680",
            alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
   annotate("segment", x = -0.5, xend = -0.5, y = -5, yend = 0, size = 1.5, color = "#E16462FF") +
   annotate("text", x = 0, y = -2.5, hjust = "center", label = "6.56 cm", color = "#E16462FF",
@@ -420,7 +421,7 @@ ggplot() +
   annotate("text", x = -5.5, y = 5, hjust = "right", label = expression(SE~"="),
            size = 6.5) +
   annotate("tile", x = 2, y = 5, 
-           width = sum_e_dog_jump/2.5, height = sum_e_dog_jump/2.5, fill = "#FCA63680",
+           width = sum_e_blood_jump/2.5, height = sum_e_blood_jump/2.5, fill = "#FCA63680",
            alpha = 0.1, color = "#FCA636FF", linewidth = 0.5, linetype = "33") +
   annotate("text", x = 2, y = 5, label = "258.5 cm²", fontface = 2, size = 4.5) +
   annotate("segment", x = 9, xend = 9, y = -2, yend = 12, size = 1.5, color = "#E16462FF") +
