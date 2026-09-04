@@ -40,6 +40,7 @@ Which book should I read if I want to experience the feeling of watching the His
 :::callout-note
 ## Noteworthy statements
 
+- Science is an iterative process.
 - Science makes model-based decisions based on data.
 - Data are observations expressed as numbers.
 - Decisions are, by their very nature, undecidable; otherwise, they would be computable.
