@@ -40,6 +40,7 @@ rbind(head(gummi_bears_tbl, n = 4),
 ```
 
 ```{r}
+#| echo: false
 gummi_count_tbl <- gummi_bears_tbl %>%
   rowwise() %>% 
   mutate(bear_exp = sum(c_across(darkred:white)),
@@ -81,7 +82,7 @@ janitor::tabyl(bear_exp) |>
 #| warning: false
 #| label: fig-chap-interlude-I-count-bears-year
 #| fig-align: center
-#| fig-height: 3.25
+#| fig-height: 3.5
 #| fig-width: 7
 #| fig-cap: "."
 
@@ -98,7 +99,7 @@ gummi_count_tbl |>
   labs(x = "Number of bears in a bag", y = "Year") +
   theme(legend.position = "none") +
   geom_vline(xintercept = c(7, 8, 9, 10, 11, 12), linetype = 2, alpha = 0.5) +
-  scale_fill_okabeito() +
+  scale_fill_viridis(option = "plasma", discrete = TRUE) +
   annotate("label", x = 12.5, y = c(1, 2, 3, 4, 5, 6, 7, 8) + 0.7, 
            label = str_c("n = ", rev(count_tbl$n))) +
   theme(panel.grid.minor.x = element_blank())
