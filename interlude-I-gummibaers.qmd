@@ -1,5 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
+pacman::p_load(ggridges)
 ```
 
 # Gummy bears {#sec-temp}
@@ -28,7 +29,9 @@ gummi_tbl <- read_excel("data/gummibears.xlsx")
 #| tbl-cap: "Extract of the Gummi Bears dataset."
 
 gummi_bears_tbl <- read_excel("data/gummibears.xlsx") |> 
-  select(year:white)
+  select(year:count_color) |> 
+  rename(color_obs = count_color,
+         bear_obs = count_bears)
 
 rbind(head(gummi_bears_tbl, n = 4),
       rep("...", times = ncol(gummi_bears_tbl)),
@@ -39,11 +42,93 @@ rbind(head(gummi_bears_tbl, n = 4),
 ```{r}
 gummi_count_tbl <- gummi_bears_tbl %>%
   rowwise() %>% 
-  mutate(count_bear = sum(c_across(darkred:white)),
-         count_color = sum(c_across(darkred:white) > 0)) |> 
+  mutate(bear_exp = sum(c_across(darkred:white)),
+         color_exp = sum(c_across(darkred:white) > 0),
+         bear_diff = bear_obs - bear_exp,
+         color_diff = color_obs - color_exp) |> 
   ungroup() |> 
-  select(year, count_bear, count_color)
+  select(year, bear_obs, bear_exp, bear_diff, color_obs, color_exp, color_diff)
 ```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-color-exp
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+gummi_count_tbl |> 
+janitor::tabyl(color_exp) |> 
+  kable(align = "c", "pipe")
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-bear-exp
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+gummi_count_tbl |> 
+janitor::tabyl(bear_exp) |> 
+  kable(align = "c", "pipe")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-count-bears-year
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 7
+#| fig-cap: "."
+
+count_tbl <- gummi_count_tbl |> 
+  pull(year) |> 
+  janitor::tabyl()
+
+gummi_count_tbl |> 
+  ggplot(aes(x = bear_exp, y = fct_rev(as_factor(year)),
+             fill = fct_rev(as_factor(year)))) +
+  theme_book() +
+  stat_density_ridges() +
+  scale_x_continuous(breaks = seq(6, 15, by = 1), limits = c(6, 13)) +
+  labs(x = "Number of bears in a bag", y = "Year") +
+  theme(legend.position = "none") +
+  geom_vline(xintercept = c(7, 8, 9, 10, 11, 12), linetype = 2, alpha = 0.5) +
+  scale_fill_okabeito() +
+  annotate("label", x = 12.5, y = c(1, 2, 3, 4, 5, 6, 7, 8) + 0.7, 
+           label = str_c("n = ", rev(count_tbl$n))) +
+  theme(panel.grid.minor.x = element_blank())
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-diff
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 7
+#| fig-cap: "."
+
+gummi_count_tbl |> 
+  select(bear_diff, color_diff) |> 
+  stack() |> 
+  mutate(ind = factor(ind, labels = c("Difference in bears", "Difference in color"))) |> 
+  ggplot(aes(x = values)) +
+  theme_book() +
+  facet_wrap(~ ind, scale = "free_x") +
+  geom_bar() +
+  geom_label(stat='count', aes(label=..count..), size = 3) +
+  scale_x_continuous(breaks = seq(-5, 5,1)) +
+  labs(x = "Difference observed and expected", y = "Count")
+```
+
+
 
 ```{r}
 #| echo: false
@@ -67,7 +152,7 @@ rbind(head(gummi_count_tbl, n = 4),
 #| tbl-cap: "Extract of the Gummi Bears dataset."
 
 gummi_student_tbl <- read_excel("data/gummibears.xlsx") |> 
-  select(year, most_liked:semester) 
+  select(most_liked:height) 
 
 rbind(head(gummi_student_tbl, n = 4),
       rep("...", times = ncol(gummi_student_tbl)),
