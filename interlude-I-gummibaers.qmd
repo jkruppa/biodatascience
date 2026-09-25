@@ -1,6 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges)
+pacman::p_load(ggridges, ggbeeswarm)
 ```
 
 # Gummy bears {#sec-temp}
@@ -18,7 +18,8 @@ pacman::p_load(ggridges)
 ## Data
 
 ```{r}
-gummi_tbl <- read_excel("data/gummibears.xlsx")
+gummi_tbl <- read_excel("data/gummibears.xlsx") |> 
+  mutate(gender = factor(gender, levels = c("w", "m"), labels = c("female", "male"))) 
 ```
 
 ```{r}
@@ -28,7 +29,7 @@ gummi_tbl <- read_excel("data/gummibears.xlsx")
 #| label: tbl-gummi-bears
 #| tbl-cap: "Extract of the Gummi Bears dataset."
 
-gummi_bears_tbl <- read_excel("data/gummibears.xlsx") |> 
+gummi_bears_tbl <- gummi_tbl |> 
   select(year:count_color) |> 
   rename(color_obs = count_color,
          bear_obs = count_bears)
@@ -91,18 +92,19 @@ count_tbl <- gummi_count_tbl |>
   janitor::tabyl()
 
 gummi_count_tbl |> 
-  ggplot(aes(x = bear_exp, y = fct_rev(as_factor(year)),
-             fill = fct_rev(as_factor(year)))) +
+  ggplot(aes(x = bear_exp, y = as_factor(year),
+             fill = as_factor(year))) +
   theme_book() +
   stat_density_ridges() +
-  scale_x_continuous(breaks = seq(6, 15, by = 1), limits = c(6, 13)) +
+  scale_x_continuous(breaks = seq(6, 15, by = 1), limits = c(6, 14),
+                     sec.axis = sec_axis(~., breaks = seq(6, 15, by = 1))) +
   labs(x = "Number of bears in a bag", y = "Year") +
   theme(legend.position = "none") +
-  geom_vline(xintercept = c(7, 8, 9, 10, 11, 12), linetype = 2, alpha = 0.5) +
   scale_fill_viridis(option = "plasma", discrete = TRUE) +
-  annotate("label", x = 12.5, y = c(1, 2, 3, 4, 5, 6, 7, 8) + 0.7, 
+  annotate("label", x = 14, y = c(1, 2, 3, 4, 5, 6, 7, 8), 
            label = str_c("n = ", rev(count_tbl$n))) +
-  theme(panel.grid.minor.x = element_blank())
+  theme(panel.grid.minor.x = element_blank()) +
+  coord_flip()
 ```
 
 
@@ -152,8 +154,8 @@ rbind(head(gummi_count_tbl, n = 4),
 #| label: tbl-gummi-sudent
 #| tbl-cap: "Extract of the Gummi Bears dataset."
 
-gummi_student_tbl <- read_excel("data/gummibears.xlsx") |> 
-  select(most_liked:height) 
+gummi_student_tbl <- gummi_tbl |> 
+  select(most_liked, gender, height) 
 
 rbind(head(gummi_student_tbl, n = 4),
       rep("...", times = ncol(gummi_student_tbl)),
@@ -161,6 +163,72 @@ rbind(head(gummi_student_tbl, n = 4),
   kable(align = "c", "pipe")
 ```
 
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-hist-height
+#| fig-align: center
+#| fig-height: 4
+#| fig-width: 8.5
+#| fig-cap: "."
+
+mean_tbl <- gummi_student_tbl |> 
+  group_by(gender) |> 
+  summarise(mean = round(mean(height, na.rm = TRUE), 1)) |> 
+  na.omit()
+
+p1 <- gummi_student_tbl |> 
+ggplot(aes(x = height, fill = gender)) +
+  theme_minimal() +
+  geom_histogram(position = "dodge", color = "black") +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.7, direction = -1) +
+  labs(x = "", y = "Anzahl", fill = "Geschlecht") +
+  scale_x_continuous(breaks = seq(150, 215, by = 5)) +
+  scale_y_continuous(breaks = seq(0, 55, 5), limits = c(0, 55)) +
+  theme(legend.position = "none")
+
+p2 <- gummi_student_tbl |> 
+ggplot(aes(x = height, fill = gender)) +
+  theme_minimal() +
+  geom_density(alpha = 0.75) +
+  labs(x = "", y = "", fill = "Geschlecht") +
+  scale_x_continuous(breaks = seq(145, 210, by = 5), limits = c(145, 210)) +
+  scale_y_continuous(breaks = seq(0, 0.055, 0.01), limits = c(0, 0.057)) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.7, direction = -1) +
+  geom_vline(xintercept = mean_tbl$mean, color = "black",
+             size = 1) +
+  annotate("label", x = mean_tbl$mean, y = 0.057, label = mean_tbl$mean) +
+  theme(legend.position = "none") #c(0.85, 0.8))
+
+p1 + p2 +
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A') +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-beeswarm-height
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 6
+#| fig-cap: "."
+
+gummi_student_tbl |> 
+  na.omit() |> 
+  ggplot(aes(x = gender, y = height, color = gender)) +
+  geom_beeswarm(size = 1) +
+  theme_minimal() +
+  scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.7, direction = -1) +
+  labs(x = "Geschlecht", y = "Körpergröße in [cm]") +
+  theme(legend.position = "none") +
+  scale_y_continuous(breaks = seq(140, 214, 5))
+```
 ## Alternatives 
 
 Further tutorials and R packages on XXX
