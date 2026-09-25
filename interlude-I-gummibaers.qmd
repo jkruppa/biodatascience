@@ -1,6 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges, ggbeeswarm, janitor)
+pacman::p_load(ggridges, ggbeeswarm, janitor, data.table)
 ```
 
 # Gummy bears {#sec-temp}
@@ -270,27 +270,61 @@ p1 + p2 +
 
 
 ```{r}
+#| eval: false
 col <- c("D", "L", "G", "W", "O", "Y")
 
-grid_tbl <- expand_grid(a = col, b = col, c = col, d = col) |> 
+grid_tbl <- expand_grid(a = col, col, col, col) |> 
   rowwise() |> 
   mutate(foo = list(table(c_across(a:last_col()))),
          bar = length(foo))
 
 tabyl(grid_tbl$bar)
- 
 
-expand_grid(foo = matrix(rep(col, 2), byrow = FALSE, ncol = 2))
+grid_tbl <- CJ(a = col, b = col, c = col, 
+               d = col, e = col, f = col,
+               g = col, h = col, i = col,
+               j = col) |> 
+  rowwise() |> 
+  mutate(foo = list(table(c_across(a:last_col()))),
+         bar = length(foo))
 
-expand_grid(x1 = matrix(1:4, nrow = 2), x2 = matrix(5:8, nrow = 2))
-
+tabyl(grid_tbl$bar)
 
 ```
 
+$$
+Pr = \cfrac{1}{6}^{b-1}
+$$
 
 ```{r}
-1/6^2
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-grid
+#| fig-align: center
+#| fig-height: 3.5
+#| fig-width: 7
+#| fig-cap: "."
+
+grid_table_tbl <- read_excel("data/grid_table.xlsx") |> 
+  pivot_longer(cols = b1:b9,
+               values_to = "percent",
+               names_to = "bears") |> 
+  mutate(c = as_factor(c),
+         bears = as.numeric(as.factor(bears)))
+
+grid_table_tbl |> 
+  ggplot(aes(x = bears, y = percent, color = c)) +
+  theme_book() +
+  geom_line() +
+  scale_x_continuous(breaks = 1:9) +
+  labs(color = "Number of colors", x = "Number of bears in a bag",
+       y = "Probability") +
+  scale_color_viridis(option = "plasma", discrete = TRUE) +
+  guides(color = guide_legend(nrow = 1, byrow = TRUE))
+  
 ```
+
 
 
 ## Alternatives 
