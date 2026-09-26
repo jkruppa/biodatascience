@@ -1,6 +1,14 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
 pacman::p_load(ggridges, ggbeeswarm, janitor, data.table)
+
+## gummi stats
+gummi_tbl <- read_excel("data/gummibears.xlsx") 
+gummi_color_tbl <- gummi_tbl |> 
+  select(darkred:white) |> 
+  gather(color, count)
+count_bears <- sum(gummi_color_tbl$count)
+full_person <- gummi_tbl |> na.omit() |> nrow()
 ```
 
 # Gummy bears {#sec-temp}
@@ -12,6 +20,10 @@ pacman::p_load(ggridges, ggbeeswarm, janitor, data.table)
 ## General background
 
 Like any good research story, this one begins in a gay club in Berlin with mirrored bathrooms, where you can see everything. Nothing stays hidden. When you can observe everything, no questions remain unanswered. This is somehow boring and not worthwhile for a truth-seeker. However, if you cannot see the truth before you, then you must draw conclusions based on your incomplete observations of reality. There was a bag of gummy bears lying on the table. As the comedian performing this evening was from Scotland, I didn't understand much of what was said. Therefore, I focused on the bag. It had all six colours of bear. How disappointing. I asked myself, 'What is the probability of getting only one bag with the same colour?' Was it even possible? Or does Haribo, the company that produced these sweets, secretly rig the packing process so that there will always be a variety of colours and flavours in a bag?
+
+Therefore, I started a survey in 2018. Had I ever imagined how long it would go on for, or how many gummy bears I would end up counting, I would have stopped immediately. However, I was unaware of this, so I created a simple spreadsheet in Google Spreadsheets, shared the shortened link with every new lecture I gave, and counted the number of gummy bears, as well as collecting some demographic data about the students. From the beginning, one idea was good: I only collected some demographic data, such as body height, age, and the most popular flavour of gummy bear. Therefore, the data is from real people, but is anonymised as much as possible. 
+
+While you are reading these lines, the dataset is still growing. Currently, we have $`r nrow(gummi_tbl)`$ bags containing $`r count_bears`$ bears, counted by $`r full_person`$ people. There are more bags of gummy bears than people who have counted them because some people counted the bears but did not enter any demographic information, or only entered it in part. Therefore, there is a lack of data. The beauty lies in the numbers: over one thousand bags and people, as well as over ten thousand bears counted in nearly ten years.
 
 ## Theoretical background
 
