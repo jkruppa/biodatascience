@@ -37,6 +37,8 @@ Bloody beginners and the curse of knowledge
 
 Which book should I read if I want to experience the feeling of watching the History Channel? Joachim Krauth's book, *Experimental Design: A Handbook and Dictionary for Medical and Behavioural Research*, is a good starting point @krauth2000experimental.
 
+This book was written using KI to avoid French and Latin words that nobody understands or can pronounce. We use plain and simple English words.
+
 :::callout-note
 ## Noteworthy statements
 
