@@ -19,7 +19,9 @@ full_person <- gummi_tbl |> na.omit() |> nrow()
 
 ## General background
 
-Like any good research story, this one begins in a gay club in Berlin with mirrored bathrooms, where you can see everything. Nothing stays hidden. When you can observe everything, no questions remain unanswered. This is somehow boring and not worthwhile for a truth-seeker. However, if you cannot see the truth before you, then you must draw conclusions based on your incomplete observations of reality. There was a bag of gummy bears lying on the table. As the comedian performing this evening was from Scotland, I didn't understand much of what was said. Therefore, I focused on the bag. It had all six colours of bear. How disappointing. I asked myself, 'What is the probability of getting only one bag with the same colour?' Was it even possible? Or does Haribo, the company that produced these sweets, secretly rig the packing process so that there will always be a variety of colours and flavours in a bag?
+Like any good research story, this one begins in a gay club in Berlin with mirrored bathrooms, where you can see everything. Nothing stays hidden. When you can observe everything, no questions remain unanswered. This is somehow boring and not worthwhile for a truth-seeker. However, if you cannot see the truth before you, then you must draw conclusions based on your incomplete observations of reality. 
+
+There was a bag of gummy bears lying on the table. As the comedian performing this evening was from Scotland, I didn't understand much of what was said. Therefore, I focused on the bag. It had all six colours of bear. How disappointing. I asked myself, 'What is the probability of getting only one bag with the same colour?' Was it even possible? Or does Haribo, the company that produced these sweets, secretly rig the packing process so that there will always be a variety of colours and flavours in a bag?
 
 Therefore, I started a survey in 2018. Had I ever imagined how long it would go on for, or how many gummy bears I would end up counting, I would have stopped immediately. However, I was unaware of this, so I created a simple spreadsheet in Google Spreadsheets, shared the shortened link with every new lecture I gave, and counted the number of gummy bears, as well as collecting some demographic data about the students. From the beginning, one idea was good: I only collected some demographic data, such as body height, age, and the most popular flavour of gummy bear. Therefore, the data is from real people, but is anonymised as much as possible. 
 
@@ -162,6 +164,10 @@ rbind(head(gummi_count_tbl, n = 4),
 ```
 
 
+
+
+
+
 ```{r}
 #| echo: false
 #| message: false
@@ -201,7 +207,7 @@ ggplot(aes(x = height, fill = gender)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
   labs(x = "Body height in [cm]", y = "Number of people", fill = "Geschlecht") +
   scale_x_continuous(breaks = seq(145, 215, by = 10), limits = c(145, 210)) +
-  scale_y_continuous(breaks = seq(0, 55, 5), limits = c(0, 55)) +
+  scale_y_continuous(breaks = seq(0, 90, 10), limits = c(0, 90)) +
   theme(legend.position = "none")
 
 p2 <- gummi_student_tbl |> 
@@ -243,7 +249,7 @@ p3 <- gummi_student_tbl |>
 #| fig-align: center
 #| fig-height: 4
 #| fig-width: 9.5
-#| fig-cap: "."
+#| fig-cap: "Does Haribo know the common people's preferences for gummy bears? Yes, but does Haribo care? Have they changed the production cycle to prioritise the most popular bears? **(A)** The number of people split by gender who liked which taste the most. **(B)** The number of gummy bears in all opened bags, split by colour. In the case of a uniform distribution, the same number of colours are produced, and each colour has an equal chance of being chosen. Therefore, the number of colours should be the dotted line."
 
 gummi_taste_tbl <- gummi_student_tbl |> 
   mutate(most_liked = factor(most_liked, 
@@ -278,6 +284,8 @@ p2 <- ggplot(count_bag_tbl, aes(value)) +
   geom_bar(position = "dodge", color = "black", 
            fill = c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF" ,"#F0F921FF", "#FCA636FF")) +
   labs(x = "Color of gummi bears", y = "Number of gummi bears")  +
+  geom_hline(yintercept = floor(nrow(count_bag_tbl)/6), 
+             linetype = 2, size = 1) +
   geom_label(stat='count', aes(label=..count..), size = 4) 
 
 p1 + p2 + 
@@ -336,7 +344,59 @@ filter(grid_table_tbl, bears %in% 1:9) |>
 ```
 
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-obs-exp
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 7
+#| fig-cap: "**(A)** . **(B)**."
 
+bear_8_vec <- gummi_count_tbl |> 
+  filter(bear_exp == 8) |> 
+  tabyl(color_exp) |> 
+  pull("percent")
+
+bear_9_vec <- gummi_count_tbl |> 
+  filter(bear_exp == 9) |> 
+  tabyl(color_exp) |> 
+  pull("percent") 
+
+bear_10_vec <- gummi_count_tbl |> 
+  filter(bear_exp == 10) |> 
+  tabyl(color_exp) |> 
+  pull("percent") 
+
+rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
+             color = rep(1:6, 2),
+             percent = c(c(0, 0, bear_8_vec),
+                         0, 0.002268376, 0.069015775, 0.364583333, 0.450102881, 0.114026063),
+             bears = "8 bears in a bag"),
+      tibble(type = gl(2, 6, labels = c("observed", "expected")),
+             color = rep(1:6, 2),
+             percent = c(c(0, bear_9_vec),
+                         0, 0.000759102, 0.036020138, 0.277563443, 0.496613512, 0.18904321),
+             bears = "9 bears in a bag"),
+      tibble(type = gl(2, 6, labels = c("observed", "simulated")),
+             color = rep(1:6, 2),
+             percent = c(c(0, 0, bear_10_vec),
+                         0, 0.0002601, 0.0185012, 0.2029175, 0.5064902, 0.271831),
+             bears = "10 bears in a bag")
+)  |> 
+  mutate(bears = as_factor(bears)) |> 
+  ggplot(aes(x = color, y = percent, fill = type)) +
+  theme_book() +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  scale_x_continuous(breaks = 1:6) +
+  scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, 0.1)) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.8) +
+  labs(fill = "", y = "Percentage", x = "Number of colors in a bag") +
+  theme(legend.position = c(0.1, 0.85)) +
+  facet_wrap(~bears)
+
+```
 
 
 ## Alternatives 
