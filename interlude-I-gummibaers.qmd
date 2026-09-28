@@ -101,7 +101,7 @@ janitor::tabyl(bear_exp) |>
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "."
+#| fig-cap: "Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves."
 
 count_tbl <- gummi_count_tbl |> 
   pull(year) |> 
@@ -118,7 +118,7 @@ gummi_count_tbl |>
   theme(legend.position = "none") +
   scale_fill_viridis(option = "plasma", discrete = TRUE) +
   annotate("label", x = 14, y = c(1, 2, 3, 4, 5, 6, 7, 8), 
-           label = str_c("n = ", rev(count_tbl$n))) +
+           label = str_c("n = ", count_tbl$n)) +
   theme(panel.grid.minor.x = element_blank()) +
   coord_flip()
 ```

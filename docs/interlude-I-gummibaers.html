@@ -442,7 +442,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 28. September 2026 at 20:49:23</em></p>
+<p><em>Last modified on 28. September 2026 at 20:54:10</em></p>
 <blockquote class="blockquote">
 <p><em>“Gummi Bears! Bouncing here and there and everywhere; High adventure that’s beyond compare; They are the Gummi Bears.” — Gummi Bears Theme, Adventures of the Gummi Bears</em></p>
 </blockquote>
@@ -741,10 +741,10 @@ Table&nbsp;4.3: Extract of the Gummi Bears dataset.
 <div id="fig-chap-interlude-I-count-bears-year" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-chap-interlude-I-count-bears-year-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="interlude-I-gummibaers_files/figure-html/fig-chap-interlude-I-count-bears-year-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;4.1: ."><img src="interlude-I-gummibaers_files/figure-html/fig-chap-interlude-I-count-bears-year-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a>
+<a href="interlude-I-gummibaers_files/figure-html/fig-chap-interlude-I-count-bears-year-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;4.1: Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves."><img src="interlude-I-gummibaers_files/figure-html/fig-chap-interlude-I-count-bears-year-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chap-interlude-I-count-bears-year-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: .
+Figure&nbsp;4.1: Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves.
 </figcaption>
 </figure>
 </div>
@@ -1647,7 +1647,7 @@ Figure&nbsp;4.6: Percentage of observed numbers of colours in a bag given differ
 <span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
 <span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.5</span></span>
 <span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "."</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves."</span></span>
 <span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>count_tbl <span class="ot">&lt;-</span> gummi_count_tbl <span class="sc">|&gt;</span> </span>
 <span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(year) <span class="sc">|&gt;</span> </span>
@@ -1664,7 +1664,7 @@ Figure&nbsp;4.6: Percentage of observed numbers of colours in a bag given differ
 <span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
 <span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
 <span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="dv">14</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>), </span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">str_c</span>(<span class="st">"n = "</span>, <span class="fu">rev</span>(count_tbl<span class="sc">$</span>n))) <span class="sc">+</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">str_c</span>(<span class="st">"n = "</span>, count_tbl<span class="sc">$</span>n)) <span class="sc">+</span></span>
 <span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
 <span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span>
 <span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
