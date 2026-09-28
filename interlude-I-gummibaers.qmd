@@ -310,7 +310,7 @@ $$
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "."
+#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues."
 
 grid_table_tbl <- read_excel("data/grid_table.xlsx") |> 
   pivot_longer(cols = b01:b12,
@@ -352,7 +352,7 @@ filter(grid_table_tbl, bears %in% 1:9) |>
 #| fig-align: center
 #| fig-height: 3.25
 #| fig-width: 7
-#| fig-cap: "**(A)** . **(B)**."
+#| fig-cap: "Percentage of observed numbers of colours in a bag given different bag sizes. On the left are the observed and expected percentages of eight bears in a bag. In the middle, the observed and expected numbers of colours in a bag containing nine bears. On the right, the observed and simulated percentages for a bag containing 10 bears. The simulation was necessary because calculating the expected values would take too long."
 
 bear_8_vec <- gummi_count_tbl |> 
   filter(bear_exp == 8) |> 
