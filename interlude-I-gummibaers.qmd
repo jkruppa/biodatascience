@@ -338,7 +338,7 @@ filter(grid_table_tbl, bears %in% 1:9) |>
   scale_x_continuous(breaks = 1:12) +
   labs(color = "Number of colors", x = "Number of bears in a bag",
        y = "Probability") +
-  scale_color_viridis(option = "plasma", discrete = TRUE) +
+  scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.9) +
   guides(color = guide_legend(nrow = 1, byrow = TRUE)) 
   
 ```
