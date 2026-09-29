@@ -193,7 +193,7 @@ rbind(head(gummi_student_tbl, n = 4),
 #| fig-align: center
 #| fig-height: 8
 #| fig-width: 9
-#| fig-cap: "."
+#| fig-cap: "Information regarding the internal data integration of the individual reported height. No measuring tape was used to determine body size. The different heights for both genders are shown.  **(A)** The top left shows body size as a histogram for both genders, with a bin size of 5 cm.  **(B)** The top right shows density plots of body height for both genders. The line indicates the mean. There is a shift to the right for both genders.  **(C)** The lower figure shows a beeswarm plot divided by gender. Men with a body height of 179 cm are especially rare. Men of this height have only started to appear in recent years."
 
 mean_tbl <- gummi_student_tbl |> 
   group_by(gender) |> 
@@ -223,7 +223,8 @@ ggplot(aes(x = height, fill = gender)) +
   annotate("label", x = mean_tbl$mean, y = 0.057, label = mean_tbl$mean) +
   theme(legend.position = "none") #c(0.85, 0.8))
 
-p3 <- gummi_student_tbl |> 
+p3 <- 
+  gummi_student_tbl |> 
   na.omit() |> 
   ggplot(aes(x = gender, y = height, color = gender)) +
   theme_book() +
@@ -231,7 +232,21 @@ p3 <- gummi_student_tbl |>
   scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
   labs(x = "Gender", y = "Body height in [cm]") +
   theme(legend.position = "none") +
-  scale_y_continuous(breaks = seq(140, 214, 5))
+  scale_y_continuous(breaks = seq(140, 214, 5)) +
+  geom_shape(data = tibble(x = c(0.9, 1.6, 1.6, 0.9), 
+                           y = c(199, 199, 212, 212)), alpha = 0.25,
+             aes(x, y), radius = unit(0.25, 'cm'), fill = "gray", inherit.aes = FALSE) +
+  annotate("segment", x = 1, y = 205, xend = 1.5, yend = 205) +
+  annotate("segment", x = seq(1, 1.5, 0.0625), xend = seq(1, 1.5, 0.0625), y = 204.5, yend = 205.5) +
+  annotate("text", x = c(1, 1.25, 1.5), y = 202, label = c("2018", "2022", "2026")) +
+  annotate("point", x = c(3*0.0625+1, 5*0.0625+1, 7*0.0625+1, 8*0.0625+1), y = c(206.5),
+           color = "#0D0887FF") +
+  annotate("point", x = c(5*0.0625+1, 8*0.0625+1), y = c(208), color = "#0D0887FF")  +
+  annotate("point", x = c(5*0.0625+1), y = c(209.5), color = "#0D0887FF") +
+  geom_curve(aes(x = 1.25, y = 199, xend = 1.92, yend = 179),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = 0.4, color = "gray25", linewidth = 0.25) +
+  annotate("label", hjust = "left", x = 0.925, y = 209, label = "179cm", size = 3)
 
 (p1 | p2) / 
   p3 +
@@ -239,6 +254,13 @@ p3 <- gummi_student_tbl |>
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+```{r}
+gummi_tbl |> 
+  filter(height == 179 & gender == "male") |> 
+  select(year, height, gender)
+```
+
 
 
 ```{r}
