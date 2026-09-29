@@ -13,7 +13,7 @@ full_person <- gummy_tbl |> na.omit() |> nrow()
 
 # Gummy bears {#sec-temp}
 
-*Last modified on `r format(fs::file_info("interlude-I-gummybaers.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+*Last modified on `r format(fs::file_info("interlude-I-gummibaers.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"gummy Bears! Bouncing here and there and everywhere; High adventure that's beyond compare; They are the gummy Bears." --- gummy Bears Theme, Adventures of the gummy Bears*
 
