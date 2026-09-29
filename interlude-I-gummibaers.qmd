@@ -100,7 +100,8 @@ rbind(head(gummi_count_tbl, n = 3),
 
 gummi_count_tbl |> 
 janitor::tabyl(color_exp) |> 
-  set_names(c("Expected colors", "Number [n]", "Percent [%]")) |> 
+  mutate(percent = scales::percent(round(percent, 4))) |> 
+  set_names(c("Expected colors", "Number [n]", "Percentage [%]")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -114,7 +115,8 @@ janitor::tabyl(color_exp) |>
 
 gummi_count_tbl |> 
 janitor::tabyl(bear_exp) |> 
-  set_names(c("Expected bears", "Number [n]", "Percent [%]")) |> 
+  mutate(percent = scales::percent(round(percent, 4))) |> 
+  set_names(c("Expected bears", "Number [n]", "Percentage [%]")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -132,9 +134,14 @@ janitor::tabyl(bear_exp) |>
 gummi_student_tbl <- gummi_tbl |> 
   select(most_liked, gender, height) 
 
-rbind(head(gummi_student_tbl, n = 4),
-      rep("...", times = ncol(gummi_student_tbl)),
-      tail(gummi_student_tbl, n = 4)) |> 
+gummi_student_raw_tbl <- gummi_tbl |> 
+  select(most_liked, gender, height) |> 
+  mutate(gender = as.character(gender))
+
+rbind(head(gummi_student_raw_tbl, n = 3),
+      rep("...", times = ncol(gummi_student_raw_tbl)),
+      tail(gummi_student_raw_tbl, n = 3)) |> 
+  set_names(c("Most liked taste", "Gender", "Body height [cm]")) |> 
   kable(align = "c", "pipe")
 ```
 
