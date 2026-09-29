@@ -1,6 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges, ggbeeswarm, janitor, data.table)
+pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra)
 
 ## gummi stats
 gummi_tbl <- read_excel("data/gummibears.xlsx") 
@@ -29,11 +29,15 @@ While you are reading these lines, the dataset is still growing. Currently, we h
 
 ## Theoretical background
 
-## R packages used
-
 ## Data
 
+### Characteristics of gummy bears
+
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
 gummi_tbl <- read_excel("data/gummibears.xlsx") |> 
   mutate(gender = factor(gender, levels = c("w", "m"), labels = c("female", "male"))) 
 ```
@@ -50,11 +54,14 @@ gummi_bears_tbl <- gummi_tbl |>
   rename(color_obs = count_color,
          bear_obs = count_bears)
 
-rbind(head(gummi_bears_tbl, n = 4),
+rbind(head(gummi_bears_tbl, n = 3),
       rep("...", times = ncol(gummi_bears_tbl)),
-      tail(gummi_bears_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
+      tail(gummi_bears_tbl, n = 3)) |>
+  set_names(c("Year", "Darkred", "Lightred", "Orange", "Yellow", "Green", "White", "Bears", "Colors")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Gummi bear colors" = 6, "Observed" = 2))
 ```
+
 
 ```{r}
 #| echo: false
@@ -72,11 +79,28 @@ gummi_count_tbl <- gummi_bears_tbl %>%
 #| echo: false
 #| message: false
 #| warning: false
+#| label: tbl-gummi-bears-count
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+rbind(head(gummi_count_tbl, n = 3),
+      rep("...", times = ncol(gummi_count_tbl)),
+      tail(gummi_count_tbl, n = 3)) |> 
+  set_names(c("Year", "Observed", "Expected", "Deviation", "Observed", "Expected", "Deviation")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Number of bears" = 3, "Number of colors" = 3))
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
 #| label: tbl-gummi-color-exp
 #| tbl-cap: "Extract of the Gummi Bears dataset."
 
 gummi_count_tbl |> 
 janitor::tabyl(color_exp) |> 
+  set_names(c("Expected colors", "Number [n]", "Percent [%]")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -90,8 +114,34 @@ janitor::tabyl(color_exp) |>
 
 gummi_count_tbl |> 
 janitor::tabyl(bear_exp) |> 
+  set_names(c("Expected bears", "Number [n]", "Percent [%]")) |> 
   kable(align = "c", "pipe")
 ```
+
+
+
+### Characteristics of the counters
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummi-sudent
+#| tbl-cap: "Extract of the Gummi Bears dataset."
+
+gummi_student_tbl <- gummi_tbl |> 
+  select(most_liked, gender, height) 
+
+rbind(head(gummi_student_tbl, n = 4),
+      rep("...", times = ncol(gummi_student_tbl)),
+      tail(gummi_student_tbl, n = 4)) |> 
+  kable(align = "c", "pipe")
+```
+
+
+## Results
+
+### Gummi bears over the years of the survey
 
 ```{r}
 #| echo: false
@@ -123,6 +173,7 @@ gummi_count_tbl |>
   coord_flip()
 ```
 
+### Bias in the counting of bears and color
 
 ```{r}
 #| echo: false
@@ -148,42 +199,7 @@ gummi_count_tbl |>
   labs(x = "Deviation observed and expected", y = "Count")
 ```
 
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummi-bears-count
-#| tbl-cap: "Extract of the Gummi Bears dataset."
-
-rbind(head(gummi_count_tbl, n = 4),
-      rep("...", times = ncol(gummi_count_tbl)),
-      tail(gummi_count_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
-```
-
-
-
-
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummi-sudent
-#| tbl-cap: "Extract of the Gummi Bears dataset."
-
-gummi_student_tbl <- gummi_tbl |> 
-  select(most_liked, gender, height) 
-
-rbind(head(gummi_student_tbl, n = 4),
-      rep("...", times = ncol(gummi_student_tbl)),
-      tail(gummi_student_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
-```
-
+### Self reported body height by gender
 
 ```{r}
 #| echo: false
@@ -255,13 +271,7 @@ p3 <-
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-```{r}
-gummi_tbl |> 
-  filter(height == 179 & gender == "male") |> 
-  select(year, height, gender)
-```
-
-
+### Most liked gummi bear taste by gender
 
 ```{r}
 #| echo: false
@@ -317,8 +327,7 @@ p1 + p2 +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-
-
+### Gummi bear lottery
 
 $$
 Pr = \cfrac{1}{6}^{b-1}
