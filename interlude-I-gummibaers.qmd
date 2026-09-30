@@ -59,7 +59,7 @@ rbind(head(gummy_bears_tbl, n = 3),
       tail(gummy_bears_tbl, n = 3)) |>
   set_names(c("Year", "Darkred", "Lightred", "Orange", "Yellow", "Green", "White", "Bears", "Colors")) |> 
   kable(align = "c", "pipe") |> 
-  add_header_above(c(" " = 1, "gummy bear colors" = 6, "Observed" = 2))
+  add_header_above(c(" " = 1, "Gummy bear color" = 6, "Observed" = 2))
 ```
 
 
@@ -87,7 +87,7 @@ rbind(head(gummy_count_tbl, n = 3),
       tail(gummy_count_tbl, n = 3)) |> 
   set_names(c("Year", "Observed", "Expected", "Deviation", "Observed", "Expected", "Deviation")) |> 
   kable(align = "c", "pipe") |> 
-  add_header_above(c(" " = 1, "Number of bears" = 3, "Number of colors" = 3))
+  add_header_above(c(" " = 1, "Number of bears (b)" = 3, "Number of colors (c)" = 3))
 ```
 
 ```{r}
