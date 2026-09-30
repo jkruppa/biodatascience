@@ -103,7 +103,7 @@ rbind(head(gummy_count_tbl, n = 3),
 gummy_count_tbl |> 
   select(bear_diff, color_diff) |> 
   stack() |> 
-  mutate(ind = factor(ind, labels = c("Number of bears", "Number of colors"))) |> 
+  mutate(ind = factor(ind, labels = c("Number of bears (b)", "Number of colors (c)"))) |> 
   ggplot(aes(x = values)) +
   theme_book() +
   facet_wrap(~ ind, scale = "free_x") +
@@ -128,7 +128,7 @@ janitor::tabyl(color_exp)
 rbind(tibble(color_exp = 1, n = 0, percent = 0), 
       lower_gummy_count_tbl) |> 
   mutate(percent = scales::percent(round(percent, 4))) |> 
-  set_names(c("Expected colors", "Number [n]", "Percentage [%]")) |> 
+  set_names(c("Expected colors (c)", "Number", "Percentage")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -143,7 +143,7 @@ rbind(tibble(color_exp = 1, n = 0, percent = 0),
 gummy_count_tbl |> 
 janitor::tabyl(bear_exp) |> 
   mutate(percent = scales::percent(round(percent, 4))) |> 
-  set_names(c("Expected bears", "Number [n]", "Percentage [%]")) |> 
+  set_names(c("Expected bears (b)", "Number", "Percentage")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -229,7 +229,7 @@ ggplot(aes(x = height, fill = gender)) +
   theme_book() +
   geom_histogram(position = "dodge", color = "black") +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
-  labs(x = "Body height in [cm]", y = "Number of people", fill = "Geschlecht") +
+  labs(x = "Body height [cm]", y = "Number of people", fill = "Geschlecht") +
   scale_x_continuous(breaks = seq(145, 215, by = 10), limits = c(145, 210)) +
   scale_y_continuous(breaks = seq(0, 90, 10), limits = c(0, 90)) +
   theme(legend.position = "none")
@@ -238,7 +238,7 @@ p2 <- gummy_student_tbl |>
 ggplot(aes(x = height, fill = gender)) +
   theme_book() +
   geom_density(alpha = 0.75) +
-  labs(x = "Body height in [cm]", y = "", fill = "") +
+  labs(x = "Body height [cm]", y = "", fill = "") +
   scale_x_continuous(breaks = seq(145, 215, by = 10), limits = c(145, 210)) +
   scale_y_continuous(breaks = seq(0, 0.055, 0.01), limits = c(0, 0.057)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
