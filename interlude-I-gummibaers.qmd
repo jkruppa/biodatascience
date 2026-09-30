@@ -338,7 +338,14 @@ p1 + p2 +
 ### Gummy bear lottery
 
 $$
-Pr(c=1|b=1) = \cfrac{1}{6}^{b-1}
+\begin{align*}
+Pr(c=1|b=1) &= \tfrac{1}{6}^{b-1} \\
+Pr(c=1|b=2) &= 14.53 \cdot \tfrac{1}{3}^{b}\\
+Pr(c=1|b=3) &= 17.5 \cdot \tfrac{1}{2}^{b}\\
+Pr(c=1|b=4) &= 2.98 \cdot 0.7607^b\\
+Pr(c=1|b=5) &= 0.521 \cdot e^{-\tfrac{(b-10.02)^2}{(2\cdot3.39^2)}}\\
+Pr(c=1|b=6) &= 0.00419 \cdot b^2-0.00303 \cdot b-0.12376\\
+\end{align*}
 $$
 
 ```{r}
@@ -348,8 +355,8 @@ $$
 #| label: fig-chap-interlude-I-grid
 #| fig-align: center
 #| fig-height: 3.5
-#| fig-width: 7
-#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues."
+#| fig-width: 7.25
+#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues. Gemini 3.5 (Flash-Lite), Excel and R with `{nlme}` were used to optimise the modelling and generation of the graph equation."
 
 grid_table_tbl <- read_excel("data/grid_table.xlsx") |> 
   pivot_longer(cols = b01:b12,
@@ -361,12 +368,19 @@ grid_table_tbl <- read_excel("data/grid_table.xlsx") |>
 filter(grid_table_tbl, bears %in% 1:9) |> 
   ggplot(aes(x = bears, y = percent, color = c)) +
   theme_book() +
-  geom_shape(data = tibble(bears = c(9.15, 12.25, 12.25, 9.15), 
+  geom_shape(data = tibble(bears = c(9.15, 12.15, 12.15, 9.15), 
                            percent = c(0, 0, 1, 1),
                            c = NA),
              aes(bears, percent), radius = unit(0.25, 'cm'), fill = "gray",
              show.legend = FALSE, alpha = 0.25, inherit.aes = FALSE) +
   annotate("text", x = 10.7, y = 0.9, label = "Simulated on\n10 million bags",
+           fontface = 2) +
+  geom_shape(data = tibble(bears = c(12.25, 15.15, 15.15, 12.25), 
+                           percent = c(0, 0, 1, 1),
+                           c = NA),
+             aes(bears, percent), radius = unit(0.25, 'cm'), fill = "gray",
+             show.legend = FALSE, alpha = 0.25, inherit.aes = FALSE) +
+  annotate("text", x = 13.7, y = 0.9, label = "Modeled on\nb = {6, ..., 12}",
            fontface = 2) +
   geom_line() +
   geom_line(data = filter(grid_table_tbl, bears %in% 9:12),
@@ -374,12 +388,34 @@ filter(grid_table_tbl, bears %in% 1:9) |>
   geom_point2() +
   geom_point2(data = filter(grid_table_tbl, bears %in% 9:12),
               show.legend = FALSE) +
-  scale_x_continuous(breaks = 1:12) +
+  scale_x_continuous(breaks = 1:15, expand = expansion(mult = c(0.01, 0))) +
   labs(color = "Number of colors (c) in a bag", x = "Number of bears (b) in a bag",
        y = "Probability") +
   scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.9) +
+  geom_function(fun = \(x) 14.53 * 1/3^x, xlim = c(6, 15), color = "#6300A7FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 17.5 * 1/2^x, xlim = c(6, 15), color = "#A51F99FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 2.98 * 0.7607^x, xlim = c(6, 15), color = "#D5536FFF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 0.521 * exp(-((x-10.02)^2/(2*3.39^2))), xlim = c(6, 15), 
+                color = "#F58A47FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 0.00419*x^2-0.00303*x-0.12376, xlim = c(6, 15), 
+                color = "#FCCE25FF", size = 2, alpha = 0.35) +
   guides(color = guide_legend(nrow = 1, byrow = TRUE)) 
-  
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-prob-table
+#| tbl-cap: "Probability of observing c colours in a bag containing between 6 and 10 gummy bears. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 100,000."
+
+
+read_excel("data/grid_table.xlsx") |> 
+  select(c, b06:b10) |> 
+  mutate_all(round, 4) |> 
+  mutate(across(2:6, scales::percent)) |> 
+  set_names(c("Colors", "6 bears", "7 bears", "8 bears", "9 bears", "10 bears")) |> 
+  kable(align = "c", "pipe")
 ```
 
 
@@ -408,21 +444,39 @@ bear_10_vec <- gummy_count_tbl |>
   tabyl(color_exp) |> 
   pull("percent") 
 
+bear_8_n <- gummy_count_tbl |> 
+  filter(bear_exp == 8) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
+
+bear_9_n <- gummy_count_tbl |> 
+  filter(bear_exp == 9) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
+
+bear_10_n <- gummy_count_tbl |> 
+  filter(bear_exp == 10) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
+
 rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
              color = rep(1:6, 2),
              percent = c(c(0, 0, bear_8_vec),
                          0, 0.002268376, 0.069015775, 0.364583333, 0.450102881, 0.114026063),
-             bears = "8 bears in a bag (b = 8)"),
+             bears = str_c("8 bears in a bag (n = ", bear_8_n, ")")),
       tibble(type = gl(2, 6, labels = c("observed", "expected")),
              color = rep(1:6, 2),
              percent = c(c(0, bear_9_vec),
                          0, 0.000759102, 0.036020138, 0.277563443, 0.496613512, 0.18904321),
-             bears = "9 bears in a bag (b = 9)"),
+             bears = str_c("9 bears in a bag (n = ", bear_9_n, ")")),
       tibble(type = gl(2, 6, labels = c("observed", "simulated")),
              color = rep(1:6, 2),
              percent = c(c(0, 0, bear_10_vec),
                          0, 0.0002601, 0.0185012, 0.2029175, 0.5064902, 0.271831),
-             bears = "10 bears in a bag (b = 10)")
+             bears = str_c("10 bears in a bag (n = ", bear_10_n, ")"))
 )  |> 
   mutate(bears = as_factor(bears)) |> 
   ggplot(aes(x = color, y = percent, fill = type)) +
