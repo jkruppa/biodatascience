@@ -356,7 +356,7 @@ $$
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7.25
-#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues. Gemini 3.5 (Flash-Lite), Excel and R with `{nlme}` were used to optimise the modelling and generation of the graph equation."
+#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues. Gemini 3.5 (Flash-Lite), Excel and R with `{nlme}` were used to optimise the modelling and generation of the shaded graphs."
 
 grid_table_tbl <- read_excel("data/grid_table.xlsx") |> 
   pivot_longer(cols = b01:b12,
