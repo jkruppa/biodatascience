@@ -17,6 +17,8 @@ full_person <- gummy_tbl |> na.omit() |> nrow()
 
 > *"gummy Bears! Bouncing here and there and everywhere; High adventure that's beyond compare; They are the gummy Bears." --- gummy Bears Theme, Adventures of the gummy Bears*
 
+This chapter provides a brief interlude to present an analysis of a dataset that I am personally connected to. If you work with data that you have generated, that data becomes very special. It's like the rose in The Little Prince. It is not just one of thousands of data sets. It is my data set. Like every other data set, this one has a special story behind it. Where there is a story, there are also emotions. Follow me on the path to truth, guided by gummy bears.
+
 ## General background
 
 Like any good research story, this one begins in a gay club in Berlin with mirrored bathrooms, where you can see everything. Nothing stays hidden. When you can observe everything, no questions remain unanswered. This is somehow boring and not worthwhile for a truth-seeker. However, if you cannot see the truth before you, then you must draw conclusions based on your incomplete observations of reality. 
