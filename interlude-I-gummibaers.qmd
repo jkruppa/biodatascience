@@ -27,7 +27,7 @@ Therefore, I started a survey in 2018. Had I ever imagined how long it would go 
 
 While you are reading these lines, the dataset is still growing. Currently, we have $`r nrow(gummy_tbl)`$ bags containing $`r count_bears`$ bears, counted by $`r full_person`$ people. There are more bags of gummy bears than people who have counted them because some people counted the bears but did not enter any demographic information, or only entered it in part. Therefore, there is a lack of data. The beauty lies in the numbers: over one thousand bags and people, as well as over ten thousand bears counted in nearly ten years.
 
-Therefore, we come to my urgent question. Given my average speed at counting bags during my lectures, is it possible that I will find a bag containing only one colour in my lifetime?
+Therefore, we come to my urgent question. Given my average speed at counting bags during my lectures, is it possible that I will find a bag containing only one colour in my lifetime? Follow me through this chapter to find the answer!
 
 ## Theoretical background
 
@@ -349,7 +349,7 @@ p1 + p2 +
 #| fig-align: center
 #| fig-height: 5
 #| fig-width: 9
-#| fig-cap: "foo."
+#| fig-cap: "Visualisation of the most liked colour taste of the gummy bears by a mosaic plot. **(A)** The plot on the left shows the separation of taste preferences by gender. The global chi-square test is not significant; there are no different taste preferences between the two genders. **(B)** The right plot shows the separation of the gummy bear taste preferences by three different age groups. The global chi-square test is not significant; there are no differences in taste preference between the different age groups of participants."
 
 
 gummi_mosaic_tab <- gummy_student_tbl |>
@@ -409,7 +409,7 @@ p1 + p2 +
 ```
 
 
-### Solutions to the gummy bear lottery
+### The gummy bear lottery
 
 $$
 f(y \mid\mu,\sigma^2)=\cfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\cfrac{(y-\mu)^2}{2\sigma^2}}\quad -\infty<y<\infty
