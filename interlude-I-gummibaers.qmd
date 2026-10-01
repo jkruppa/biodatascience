@@ -156,22 +156,25 @@ janitor::tabyl(bear_exp) |>
 #| message: false
 #| warning: false
 #| label: tbl-gummy-sudent
-#| tbl-cap: "Extract of the gummy bear dataset of the most liked taste of the gummy bear, the gender and the body height of each counting person. All measures are self reported."
+#| tbl-cap: "Extract of the gummy bear dataset of the most liked taste of the gummy bear, the gender, the grouped age and the body height of each counting person. The age groups have been created based on the continuous reported ages from each survey year. All measures are self reported."
 
 gummy_student_tbl <- gummy_tbl |> 
-  select(most_liked, gender, height) 
+  mutate(age_grp = case_when(age <= 21 ~ "<22",
+                             age > 21 & age <= 29 ~ "22-29",
+                             age >= 30 ~ "30+"),
+         age_grp = factor(age_grp, levels = c("<22", "22-29", "30+"))) |> 
+  select(most_liked, gender, age_grp, height)  
 
-gummy_student_raw_tbl <- gummy_tbl |> 
-  select(most_liked, gender, height) |> 
-  mutate(gender = as.character(gender))
+gummy_student_raw_tbl <- gummy_student_tbl |> 
+  mutate(gender = as.character(gender),
+         age_grp = as.character(age_grp))  
 
 rbind(head(gummy_student_raw_tbl, n = 3),
       rep("...", times = ncol(gummy_student_raw_tbl)),
       tail(gummy_student_raw_tbl, n = 3)) |> 
-  set_names(c("Most liked taste", "Gender", "Body height [cm]")) |> 
+  set_names(c("Most liked taste", "Gender", "Grouped age", "Body height [cm]")) |> 
   kable(align = "c", "pipe")
 ```
-
 
 ## Results
 
