@@ -27,6 +27,8 @@ Therefore, I started a survey in 2018. Had I ever imagined how long it would go 
 
 While you are reading these lines, the dataset is still growing. Currently, we have $`r nrow(gummy_tbl)`$ bags containing $`r count_bears`$ bears, counted by $`r full_person`$ people. There are more bags of gummy bears than people who have counted them because some people counted the bears but did not enter any demographic information, or only entered it in part. Therefore, there is a lack of data. The beauty lies in the numbers: over one thousand bags and people, as well as over ten thousand bears counted in nearly ten years.
 
+Therefore, we come to my urgent question. Given my average speed at counting bags during my lectures, is it possible that I will find a bag containing only one colour in my lifetime?
+
 ## Theoretical background
 
 ## Data
@@ -557,7 +559,7 @@ rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
 #| message: false
 #| warning: false
 #| label: tbl-gummy-prob-table
-#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 100,000."
+#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 46,000."
 
 read_excel("data/grid_table.xlsx") |> 
   select(c, b06:b15) |> 
@@ -569,6 +571,7 @@ read_excel("data/grid_table.xlsx") |>
   add_header_above(c(" " = 1, "Bears " = 10))
 ```
 
+With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of `r round(mean(count_tbl$n[-c(1:3)]))` bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need `r round(279936/round(mean(count_tbl$n[-c(1:3)])))` years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me `r round(46656/round(mean(count_tbl$n[-c(1:3)])))` years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I'll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a pity.
 
 ## Alternatives 
 
