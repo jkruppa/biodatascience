@@ -1,21 +1,21 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges, ggbeeswarm, janitor, data.table)
+pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra, ggmosaic2)
 
-## gummi stats
-gummi_tbl <- read_excel("data/gummibears.xlsx") 
-gummi_color_tbl <- gummi_tbl |> 
+## gummy stats
+gummy_tbl <- read_excel("data/gummibears.xlsx") 
+gummy_color_tbl <- gummy_tbl |> 
   select(darkred:white) |> 
   gather(color, count)
-count_bears <- sum(gummi_color_tbl$count)
-full_person <- gummi_tbl |> na.omit() |> nrow()
+count_bears <- sum(gummy_color_tbl$count)
+full_person <- gummy_tbl |> na.omit() |> nrow()
 ```
 
 # Gummy bears {#sec-temp}
 
 *Last modified on `r format(fs::file_info("interlude-I-gummibaers.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-> *"Gummi Bears! Bouncing here and there and everywhere; High adventure that's beyond compare; They are the Gummi Bears." --- Gummi Bears Theme, Adventures of the Gummi Bears*
+> *"gummy Bears! Bouncing here and there and everywhere; High adventure that's beyond compare; They are the gummy Bears." --- gummy Bears Theme, Adventures of the gummy Bears*
 
 ## General background
 
@@ -25,16 +25,20 @@ There was a bag of gummy bears lying on the table. As the comedian performing th
 
 Therefore, I started a survey in 2018. Had I ever imagined how long it would go on for, or how many gummy bears I would end up counting, I would have stopped immediately. However, I was unaware of this, so I created a simple spreadsheet in Google Spreadsheets, shared the shortened link with every new lecture I gave, and counted the number of gummy bears, as well as collecting some demographic data about the students. From the beginning, one idea was good: I only collected some demographic data, such as body height, age, and the most popular flavour of gummy bear. Therefore, the data is from real people, but is anonymised as much as possible. 
 
-While you are reading these lines, the dataset is still growing. Currently, we have $`r nrow(gummi_tbl)`$ bags containing $`r count_bears`$ bears, counted by $`r full_person`$ people. There are more bags of gummy bears than people who have counted them because some people counted the bears but did not enter any demographic information, or only entered it in part. Therefore, there is a lack of data. The beauty lies in the numbers: over one thousand bags and people, as well as over ten thousand bears counted in nearly ten years.
+While you are reading these lines, the dataset is still growing. Currently, we have $`r nrow(gummy_tbl)`$ bags containing $`r count_bears`$ bears, counted by $`r full_person`$ people. There are more bags of gummy bears than people who have counted them because some people counted the bears but did not enter any demographic information, or only entered it in part. Therefore, there is a lack of data. The beauty lies in the numbers: over one thousand bags and people, as well as over ten thousand bears counted in nearly ten years.
 
 ## Theoretical background
 
-## R packages used
-
 ## Data
 
+### Characteristics of gummy bears
+
 ```{r}
-gummi_tbl <- read_excel("data/gummibears.xlsx") |> 
+#| echo: false
+#| message: false
+#| warning: false
+
+gummy_tbl <- read_excel("data/gummibears.xlsx") |> 
   mutate(gender = factor(gender, levels = c("w", "m"), labels = c("female", "male"))) 
 ```
 
@@ -42,23 +46,26 @@ gummi_tbl <- read_excel("data/gummibears.xlsx") |>
 #| echo: false
 #| message: false
 #| warning: false
-#| label: tbl-gummi-bears
-#| tbl-cap: "Extract of the Gummi Bears dataset."
+#| label: tbl-gummy-bears
+#| tbl-cap: "Extract of the gummy bears dataset of the characteristics of gummy bears. The year of the survey is reported, as well as the number of bears of each colour that were counted. The last two columns show the self-reported bear and colour counts."
 
-gummi_bears_tbl <- gummi_tbl |> 
+gummy_bears_tbl <- gummy_tbl |> 
   select(year:count_color) |> 
   rename(color_obs = count_color,
          bear_obs = count_bears)
 
-rbind(head(gummi_bears_tbl, n = 4),
-      rep("...", times = ncol(gummi_bears_tbl)),
-      tail(gummi_bears_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
+rbind(head(gummy_bears_tbl, n = 3),
+      rep("...", times = ncol(gummy_bears_tbl)),
+      tail(gummy_bears_tbl, n = 3)) |>
+  set_names(c("Year", "Darkred", "Lightred", "Orange", "Yellow", "Green", "White", "Bears", "Colors")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Gummy bear color" = 6, "Observed" = 2))
 ```
+
 
 ```{r}
 #| echo: false
-gummi_count_tbl <- gummi_bears_tbl %>%
+gummy_count_tbl <- gummy_bears_tbl %>%
   rowwise() %>% 
   mutate(bear_exp = sum(c_across(darkred:white)),
          color_exp = sum(c_across(darkred:white) > 0),
@@ -72,11 +79,56 @@ gummi_count_tbl <- gummi_bears_tbl %>%
 #| echo: false
 #| message: false
 #| warning: false
-#| label: tbl-gummi-color-exp
-#| tbl-cap: "Extract of the Gummi Bears dataset."
+#| label: tbl-gummy-bears-count
+#| tbl-cap: "Extract of the gummy bear dataset of the self-reported counts ('observed') of the number of gummy bears, as well as their colours, and the deviation from the calculated counts from the gummy bear colour matrix ('expected') separated for the year and individual counting person. Each line represents one bag."
 
-gummi_count_tbl |> 
-janitor::tabyl(color_exp) |> 
+rbind(head(gummy_count_tbl, n = 3),
+      rep("...", times = ncol(gummy_count_tbl)),
+      tail(gummy_count_tbl, n = 3)) |> 
+  set_names(c("Year", "Observed", "Expected", "Deviation", "Observed", "Expected", "Deviation")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Number of bears (b)" = 3, "Number of colors (c)" = 3))
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-diff
+#| fig-align: center
+#| fig-height: 3.25
+#| fig-width: 7
+#| fig-cap: "Deviation between the sum of the gummy bear out of the count matrix and the self-reported counts of bears and colour in a bag. Most people deliver the same values; no deviation can be determined. The observed deviations scatter in both positive and negative directions. No bias can be observed. The following analysis uses the calculated and therefore expected values from the count matrix."
+
+gummy_count_tbl |> 
+  select(bear_diff, color_diff) |> 
+  stack() |> 
+  mutate(ind = factor(ind, labels = c("Number of bears (b)", "Number of colors (c)"))) |> 
+  ggplot(aes(x = values)) +
+  theme_book() +
+  facet_wrap(~ ind, scale = "free_x") +
+  geom_bar() +
+  geom_label(stat='count', aes(label=..count.., y = ..count.. + 40), size = 3) +
+  scale_x_continuous(breaks = seq(-5, 5,1), limits = c(-5, 5)) +
+  scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1200)) +
+  labs(x = "Deviation observed and expected", y = "Count")
+```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-color-exp
+#| tbl-cap: "Expected colour counts in a bag and the corresponding counts in the survey in absolute numbers as well as the percentage."
+
+lower_gummy_count_tbl <- gummy_count_tbl |> 
+janitor::tabyl(color_exp) 
+  
+rbind(tibble(color_exp = 1, n = 0, percent = 0), 
+      lower_gummy_count_tbl) |> 
+  mutate(percent = scales::percent(round(percent, 4))) |> 
+  set_names(c("Expected colors (c)", "Number", "Percentage")) |> 
   kable(align = "c", "pipe")
 ```
 
@@ -85,13 +137,48 @@ janitor::tabyl(color_exp) |>
 #| echo: false
 #| message: false
 #| warning: false
-#| label: tbl-gummi-bear-exp
-#| tbl-cap: "Extract of the Gummi Bears dataset."
+#| label: tbl-gummy-bear-exp
+#| tbl-cap: "Expected bear counts in a bag and the corresponding counts in the survey in absolute numbers as well as the percentage."
 
-gummi_count_tbl |> 
+gummy_count_tbl |> 
 janitor::tabyl(bear_exp) |> 
+  mutate(percent = scales::percent(round(percent, 4))) |> 
+  set_names(c("Expected bears (b)", "Number", "Percentage")) |> 
   kable(align = "c", "pipe")
 ```
+
+
+
+### Characteristics of the counters
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-sudent
+#| tbl-cap: "Extract of the gummy bear dataset of the most liked taste of the gummy bear, the gender, the grouped age and the body height of each counting person. The age groups have been created based on the continuous reported ages from each survey year. All measures are self reported."
+
+gummy_student_tbl <- gummy_tbl |> 
+  mutate(age_grp = case_when(age <= 21 ~ "<22",
+                             age > 21 & age <= 29 ~ "22-29",
+                             age >= 30 ~ "30+"),
+         age_grp = factor(age_grp, levels = c("<22", "22-29", "30+"))) |> 
+  select(most_liked, gender, age_grp, height)  
+
+gummy_student_raw_tbl <- gummy_student_tbl |> 
+  mutate(gender = as.character(gender),
+         age_grp = as.character(age_grp))  
+
+rbind(head(gummy_student_raw_tbl, n = 3),
+      rep("...", times = ncol(gummy_student_raw_tbl)),
+      tail(gummy_student_raw_tbl, n = 3)) |> 
+  set_names(c("Most liked taste", "Gender", "Grouped age", "Body height [cm]")) |> 
+  kable(align = "c", "pipe")
+```
+
+## Results
+
+### Gummy bears over the years of the survey
 
 ```{r}
 #| echo: false
@@ -101,13 +188,13 @@ janitor::tabyl(bear_exp) |>
 #| fig-align: center
 #| fig-height: 3.5
 #| fig-width: 7
-#| fig-cap: "Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves. A clear shrinkage in the size of the gummi bear bags can be observed over the years."
+#| fig-cap: "Dependency of the number of bears in a bag and the year of the survey. Due to the pandemic, data for 2020 is missing. The number of counted bags is shown above the density curves. A clear shrinkage in the size of the gummy bear bags can be observed over the years."
 
-count_tbl <- gummi_count_tbl |> 
+count_tbl <- gummy_count_tbl |> 
   pull(year) |> 
   janitor::tabyl()
 
-gummi_count_tbl |> 
+gummy_count_tbl |> 
   ggplot(aes(x = bear_exp, y = as_factor(year),
              fill = as_factor(year))) +
   theme_book() +
@@ -123,67 +210,7 @@ gummi_count_tbl |>
   coord_flip()
 ```
 
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: fig-chap-interlude-I-diff
-#| fig-align: center
-#| fig-height: 3.25
-#| fig-width: 7
-#| fig-cap: "Deviation between the sum of the gummi bear out of the count matrix and the self-reported counts of bears and colour in a bag. Most people deliver the same values; no deviation can be determined. The observed deviations scatter in both positive and negative directions. No bias can be observed. The following analysis uses the calculated and therefore expected values from the count matrix."
-
-gummi_count_tbl |> 
-  select(bear_diff, color_diff) |> 
-  stack() |> 
-  mutate(ind = factor(ind, labels = c("Number of bears", "Number of colors"))) |> 
-  ggplot(aes(x = values)) +
-  theme_book() +
-  facet_wrap(~ ind, scale = "free_x") +
-  geom_bar() +
-  geom_label(stat='count', aes(label=..count.., y = ..count.. + 40), size = 3) +
-  scale_x_continuous(breaks = seq(-5, 5,1), limits = c(-5, 5)) +
-  scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1200)) +
-  labs(x = "Deviation observed and expected", y = "Count")
-```
-
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummi-bears-count
-#| tbl-cap: "Extract of the Gummi Bears dataset."
-
-rbind(head(gummi_count_tbl, n = 4),
-      rep("...", times = ncol(gummi_count_tbl)),
-      tail(gummi_count_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
-```
-
-
-
-
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummi-sudent
-#| tbl-cap: "Extract of the Gummi Bears dataset."
-
-gummi_student_tbl <- gummi_tbl |> 
-  select(most_liked, gender, height) 
-
-rbind(head(gummi_student_tbl, n = 4),
-      rep("...", times = ncol(gummi_student_tbl)),
-      tail(gummi_student_tbl, n = 4)) |> 
-  kable(align = "c", "pipe")
-```
-
+### Self reported body height by gender
 
 ```{r}
 #| echo: false
@@ -195,26 +222,26 @@ rbind(head(gummi_student_tbl, n = 4),
 #| fig-width: 9
 #| fig-cap: "Information regarding the internal data integration of the individual reported height. No measuring tape was used to determine body size. The different heights for both genders are shown.  **(A)** The top left shows body size as a histogram for both genders, with a bin size of 5 cm.  **(B)** The top right shows density plots of body height for both genders. The line indicates the mean. There is a shift to the right for both genders.  **(C)** The lower figure shows a beeswarm plot divided by gender. Men with a body height of 179 cm are especially rare. Men of this height have only started to appear in recent years."
 
-mean_tbl <- gummi_student_tbl |> 
+mean_tbl <- gummy_student_tbl |> 
   group_by(gender) |> 
   summarise(mean = round(mean(height, na.rm = TRUE), 1)) |> 
   na.omit()
 
-p1 <- gummi_student_tbl |> 
+p1 <- gummy_student_tbl |> 
 ggplot(aes(x = height, fill = gender)) +
   theme_book() +
   geom_histogram(position = "dodge", color = "black") +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
-  labs(x = "Body height in [cm]", y = "Number of people", fill = "Geschlecht") +
+  labs(x = "Body height [cm]", y = "Number of people", fill = "Geschlecht") +
   scale_x_continuous(breaks = seq(145, 215, by = 10), limits = c(145, 210)) +
   scale_y_continuous(breaks = seq(0, 90, 10), limits = c(0, 90)) +
   theme(legend.position = "none")
 
-p2 <- gummi_student_tbl |> 
+p2 <- gummy_student_tbl |> 
 ggplot(aes(x = height, fill = gender)) +
   theme_book() +
   geom_density(alpha = 0.75) +
-  labs(x = "Body height in [cm]", y = "", fill = "") +
+  labs(x = "Body height [cm]", y = "", fill = "") +
   scale_x_continuous(breaks = seq(145, 215, by = 10), limits = c(145, 210)) +
   scale_y_continuous(breaks = seq(0, 0.055, 0.01), limits = c(0, 0.057)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
@@ -224,7 +251,7 @@ ggplot(aes(x = height, fill = gender)) +
   theme(legend.position = "none") #c(0.85, 0.8))
 
 p3 <- 
-  gummi_student_tbl |> 
+  gummy_student_tbl |> 
   na.omit() |> 
   ggplot(aes(x = gender, y = height, color = gender)) +
   theme_book() +
@@ -255,13 +282,7 @@ p3 <-
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-```{r}
-gummi_tbl |> 
-  filter(height == 179 & gender == "male") |> 
-  select(year, height, gender)
-```
-
-
+### Most liked gummy bear taste by gender
 
 ```{r}
 #| echo: false
@@ -273,29 +294,29 @@ gummi_tbl |>
 #| fig-width: 9.5
 #| fig-cap: "Does Haribo know the common people's preferences for gummy bears? Yes, but does Haribo care? Have they changed the production cycle to prioritise the most popular bears? **(A)** The number of people split by gender who liked which taste the most. **(B)** The number of gummy bears in all opened bags, split by colour. In the case of a uniform distribution, the same number of colours are produced, and each colour has an equal chance of being chosen. Therefore, the number of colours should be the dotted line."
 
-gummi_taste_tbl <- gummi_student_tbl |> 
+gummy_taste_tbl <- gummy_student_tbl |> 
   mutate(most_liked = factor(most_liked, 
                              levels = c("darkred", "green", "white", "lightred",
                                         "yellow", "orange", "none"))) |> 
   na.omit()
 
 
-p1 <- ggplot(data = gummi_taste_tbl, aes(x = most_liked, fill = gender)) +
+p1 <- ggplot(data = gummy_taste_tbl, aes(x = most_liked, fill = gender)) +
   theme_book() +
   geom_bar(position = "dodge") +
   #scale_x_continuous(breaks = seq(5, 15, by = 1), limits = c(5, 15)) +
-  labs(x = "Color of gummi bears", y = "Number of people", fill = "Gender") +
+  labs(x = "Color of gummy bear", y = "Number of people", fill = "Gender") +
   theme(legend.position = c(0.8, 0.8)) +
   geom_label(stat='count', aes(label=..count.., group = gender), 
              size = 2.75, fill = "white", position = position_dodge(0.9)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) 
 
 
-gummi_color_tbl <- read_excel("data/gummibears.xlsx") |> 
+gummy_color_tbl <- read_excel("data/gummibears.xlsx") |> 
   select(darkred:white) |> 
   gather(color, count)
 
-count_bag_tbl <- rep(gummi_color_tbl$color, gummi_color_tbl$count) |> 
+count_bag_tbl <- rep(gummy_color_tbl$color, gummy_color_tbl$count) |> 
   as_tibble() |> 
   mutate(value = factor(value, 
                         levels = c("darkred", "green", "white", "lightred",
@@ -305,7 +326,7 @@ p2 <- ggplot(count_bag_tbl, aes(value)) +
   theme_book() +
   geom_bar(position = "dodge", color = "black", 
            fill = c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF" ,"#F0F921FF", "#FCA636FF")) +
-  labs(x = "Color of gummi bears", y = "Number of gummi bears")  +
+  labs(x = "Color of gummy bear", y = "Number of gummy bears")  +
   geom_hline(yintercept = floor(nrow(count_bag_tbl)/6), 
              linetype = 2, size = 1) +
   geom_label(stat='count', aes(label=..count..), size = 4) 
@@ -318,10 +339,47 @@ p1 + p2 +
 ```
 
 
+```{r}
+
+gummi_mosaic_tab <- gummy_student_tbl |>
+  select(gender, age_grp, most_liked) |> 
+  mutate(most_liked = factor(most_liked, 
+                             levels = c("darkred", "green", "white", "lightred",
+                                        "yellow", "orange", "none"))) |> 
+  ftable()
+
+gummi_mosaic_tab |> 
+  as.data.frame() |>
+  ggplot(aes(x = product(fct_rev(gender), most_liked), weight = Freq, fill = gender)) +
+  geom_mosaic() +
+  theme_mosaic(rot_labels = 45) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) 
+
+gummi_mosaic_tab |> 
+  as.data.frame() |>
+  ggplot(aes(x = product(age_grp, most_liked), weight = Freq, fill = age_grp)) +
+  geom_mosaic() +
+  theme_mosaic(rot_labels = 45) +
+  scale_fill_viridis_d()
+```
+
+
+### Gummy bear lottery
+
+$$
+f(y \mid\mu,\sigma^2)=\cfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\cfrac{(y-\mu)^2}{2\sigma^2}}\quad -\infty<y<\infty
+$$
 
 
 $$
-Pr = \cfrac{1}{6}^{b-1}
+\begin{align*}
+Pr(c=1|b) &= \tfrac{1}{6}^{b-1} \\
+Pr(c=2|b) &= 9.34 \cdot 0.355^{b} \mbox{\; for\;} b \in {2,..., 12}\\
+Pr(c=3|b) &= 17.5 \cdot \tfrac{1}{2}^{b}\\
+Pr(c=4|b) &= 2.98 \cdot 0.7607^b\\
+Pr(c=5|b) &= 0.521 \cdot e^{-\tfrac{(b-10.02)^2}{(2\cdot3.39^2)}}\\
+Pr(c=6|b) &= 0.00419 \cdot b^2-0.00303 \cdot b-0.12376\\
+\end{align*}
 $$
 
 ```{r}
@@ -331,8 +389,8 @@ $$
 #| label: fig-chap-interlude-I-grid
 #| fig-align: center
 #| fig-height: 3.5
-#| fig-width: 7
-#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues."
+#| fig-width: 7.25
+#| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues. Gemini 3.5 (Flash-Lite), Excel and R with `{nlme}` were used to optimise the modelling and generation of the shaded graphs."
 
 grid_table_tbl <- read_excel("data/grid_table.xlsx") |> 
   pivot_longer(cols = b01:b12,
@@ -344,12 +402,19 @@ grid_table_tbl <- read_excel("data/grid_table.xlsx") |>
 filter(grid_table_tbl, bears %in% 1:9) |> 
   ggplot(aes(x = bears, y = percent, color = c)) +
   theme_book() +
-  geom_shape(data = tibble(bears = c(9.15, 12.25, 12.25, 9.15), 
+  geom_shape(data = tibble(bears = c(9.15, 12.15, 12.15, 9.15), 
                            percent = c(0, 0, 1, 1),
                            c = NA),
              aes(bears, percent), radius = unit(0.25, 'cm'), fill = "gray",
              show.legend = FALSE, alpha = 0.25, inherit.aes = FALSE) +
   annotate("text", x = 10.7, y = 0.9, label = "Simulated on\n10 million bags",
+           fontface = 2) +
+  geom_shape(data = tibble(bears = c(12.25, 15.15, 15.15, 12.25), 
+                           percent = c(0, 0, 1, 1),
+                           c = NA),
+             aes(bears, percent), radius = unit(0.25, 'cm'), fill = "gray",
+             show.legend = FALSE, alpha = 0.25, inherit.aes = FALSE) +
+  annotate("text", x = 13.7, y = 0.9, label = "Modeled on\nb = {6, ..., 12}",
            fontface = 2) +
   geom_line() +
   geom_line(data = filter(grid_table_tbl, bears %in% 9:12),
@@ -357,12 +422,36 @@ filter(grid_table_tbl, bears %in% 1:9) |>
   geom_point2() +
   geom_point2(data = filter(grid_table_tbl, bears %in% 9:12),
               show.legend = FALSE) +
-  scale_x_continuous(breaks = 1:12) +
-  labs(color = "Number of colors", x = "Number of bears in a bag",
+  scale_x_continuous(breaks = 1:15, expand = expansion(mult = c(0.01, 0))) +
+  labs(color = "Number of colors (c) in a bag", x = "Number of bears (b) in a bag",
        y = "Probability") +
   scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.9) +
+  ## geom_function(fun = \(x) 14.53 * 1/3^x, xlim = c(6, 15), color = "#6300A7FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 9.34 * 0.355^x, xlim = c(3, 15), color = "#6300A7FF", size = 2, alpha = 0.35) +
+  ## geom_function(fun = \(x) 17.5 * 1/2^x, xlim = c(6, 15), color = "#A51F99FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 4.5 * 0.6^x, xlim = c(4, 15), color = "#A51F99FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 2.98 * 0.7607^x, xlim = c(6, 15), color = "#D5536FFF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 0.521 * exp(-((x-10.02)^2/(2*3.39^2))), xlim = c(6, 15), 
+                color = "#F58A47FF", size = 2, alpha = 0.35) +
+  geom_function(fun = \(x) 0.00419*x^2-0.00303*x-0.12376, xlim = c(6, 15), 
+                color = "#FCCE25FF", size = 2, alpha = 0.35) +
   guides(color = guide_legend(nrow = 1, byrow = TRUE)) 
-  
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-prob-table
+#| tbl-cap: "Probability of observing c colours in a bag containing between 6 and 10 gummy bears. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 100,000."
+
+
+read_excel("data/grid_table.xlsx") |> 
+  select(c, b06:b10) |> 
+  mutate_all(round, 4) |> 
+  mutate(across(2:6, scales::percent)) |> 
+  set_names(c("Colors", "6 bears", "7 bears", "8 bears", "9 bears", "10 bears")) |> 
+  kable(align = "c", "pipe")
 ```
 
 
@@ -376,36 +465,54 @@ filter(grid_table_tbl, bears %in% 1:9) |>
 #| fig-width: 7
 #| fig-cap: "Percentage of observed numbers of colours in a bag given different bag sizes. On the left are the observed and expected percentages of eight bears in a bag. In the middle, the observed and expected numbers of colours in a bag containing nine bears. On the right, the observed and simulated percentages for a bag containing 10 bears. The simulation was necessary because calculating the expected values would take too long."
 
-bear_8_vec <- gummi_count_tbl |> 
+bear_8_vec <- gummy_count_tbl |> 
   filter(bear_exp == 8) |> 
   tabyl(color_exp) |> 
   pull("percent")
 
-bear_9_vec <- gummi_count_tbl |> 
+bear_9_vec <- gummy_count_tbl |> 
   filter(bear_exp == 9) |> 
   tabyl(color_exp) |> 
   pull("percent") 
 
-bear_10_vec <- gummi_count_tbl |> 
+bear_10_vec <- gummy_count_tbl |> 
   filter(bear_exp == 10) |> 
   tabyl(color_exp) |> 
   pull("percent") 
+
+bear_8_n <- gummy_count_tbl |> 
+  filter(bear_exp == 8) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
+
+bear_9_n <- gummy_count_tbl |> 
+  filter(bear_exp == 9) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
+
+bear_10_n <- gummy_count_tbl |> 
+  filter(bear_exp == 10) |> 
+  tabyl(color_exp) |> 
+  pull("n") |> 
+  sum()
 
 rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
              color = rep(1:6, 2),
              percent = c(c(0, 0, bear_8_vec),
                          0, 0.002268376, 0.069015775, 0.364583333, 0.450102881, 0.114026063),
-             bears = "8 bears in a bag"),
+             bears = str_c("8 bears in a bag (n = ", bear_8_n, ")")),
       tibble(type = gl(2, 6, labels = c("observed", "expected")),
              color = rep(1:6, 2),
              percent = c(c(0, bear_9_vec),
                          0, 0.000759102, 0.036020138, 0.277563443, 0.496613512, 0.18904321),
-             bears = "9 bears in a bag"),
+             bears = str_c("9 bears in a bag (n = ", bear_9_n, ")")),
       tibble(type = gl(2, 6, labels = c("observed", "simulated")),
              color = rep(1:6, 2),
              percent = c(c(0, 0, bear_10_vec),
                          0, 0.0002601, 0.0185012, 0.2029175, 0.5064902, 0.271831),
-             bears = "10 bears in a bag")
+             bears = str_c("10 bears in a bag (n = ", bear_10_n, ")"))
 )  |> 
   mutate(bears = as_factor(bears)) |> 
   ggplot(aes(x = color, y = percent, fill = type)) +
@@ -414,7 +521,7 @@ rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
   scale_x_continuous(breaks = 1:6) +
   scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, 0.1)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.8) +
-  labs(fill = "", y = "Percentage", x = "Number of colors in a bag") +
+  labs(fill = "", y = "Percentage", x = "Number of colors (c) in a bag") +
   theme(legend.position = c(0.1, 0.85)) +
   facet_wrap(~bears)
 
