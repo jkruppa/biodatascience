@@ -1,6 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra)
+pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra, ggmosaic2)
 
 ## gummy stats
 gummy_tbl <- read_excel("data/gummibears.xlsx") 
@@ -337,6 +337,32 @@ p1 + p2 +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
+
+
+```{r}
+
+gummi_mosaic_tab <- gummy_student_tbl |>
+  select(gender, age_grp, most_liked) |> 
+  mutate(most_liked = factor(most_liked, 
+                             levels = c("darkred", "green", "white", "lightred",
+                                        "yellow", "orange", "none"))) |> 
+  ftable()
+
+gummi_mosaic_tab |> 
+  as.data.frame() |>
+  ggplot(aes(x = product(fct_rev(gender), most_liked), weight = Freq, fill = gender)) +
+  geom_mosaic() +
+  theme_mosaic(rot_labels = 45) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) 
+
+gummi_mosaic_tab |> 
+  as.data.frame() |>
+  ggplot(aes(x = product(age_grp, most_liked), weight = Freq, fill = age_grp)) +
+  geom_mosaic() +
+  theme_mosaic(rot_labels = 45) +
+  scale_fill_viridis_d()
+```
+
 
 ### Gummy bear lottery
 
