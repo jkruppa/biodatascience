@@ -282,7 +282,7 @@ p3 <-
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
-### Most liked gummy bear taste by gender
+### Most liked gummy bear taste 
 
 ```{r}
 #| echo: false
@@ -326,7 +326,7 @@ p2 <- ggplot(count_bag_tbl, aes(value)) +
   theme_book() +
   geom_bar(position = "dodge", color = "black", 
            fill = c("#0D0887FF", "#6A00A8FF", "#B12A90FF", "#E16462FF" ,"#F0F921FF", "#FCA636FF")) +
-  labs(x = "Color of gummy bear", y = "Number of gummy bears")  +
+  labs(x = "Most liked color of gummy bear", y = "Number of gummy bears")  +
   geom_hline(yintercept = floor(nrow(count_bag_tbl)/6), 
              linetype = 2, size = 1) +
   geom_label(stat='count', aes(label=..count..), size = 4) 
@@ -340,27 +340,70 @@ p1 + p2 +
 
 
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-mosaic-taste
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 9
+#| fig-cap: "foo."
+
 
 gummi_mosaic_tab <- gummy_student_tbl |>
   select(gender, age_grp, most_liked) |> 
   mutate(most_liked = factor(most_liked, 
                              levels = c("darkred", "green", "white", "lightred",
                                         "yellow", "orange", "none"))) |> 
-  ftable()
+  mutate(gender = fct_rev(gender))
 
-gummi_mosaic_tab |> 
+p_gender <- gummi_mosaic_tab |> 
+  na.omit() |> 
+  tabyl(gender, most_liked) |> 
+  janitor::chisq.test() |> 
+  broom::tidy() |> 
+  pull(p.value) |> 
+  scales::pvalue()
+
+p_age <- gummi_mosaic_tab |> 
+  na.omit() |> 
+  tabyl(age_grp, most_liked) |> 
+  janitor::chisq.test() |> 
+  broom::tidy() |> 
+  pull(p.value) |> 
+  scales::pvalue()
+
+p1 <- gummi_mosaic_tab |> 
+  select(gender, most_liked) |>   
+  ftable() |> 
   as.data.frame() |>
-  ggplot(aes(x = product(fct_rev(gender), most_liked), weight = Freq, fill = gender)) +
+  ggplot(aes(x = product(gender, most_liked), weight = Freq, fill = gender)) +
+  theme_book() +
   geom_mosaic() +
   theme_mosaic(rot_labels = 45) +
-  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) 
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
+  theme(legend.position = "none") +
+  labs(x = "Most liked color of gummy bear", y = "Gender") +
+  annotate("label", x = 0.05, y = 0.9, label = str_c("p = ", p_gender), hjust = "left")
 
-gummi_mosaic_tab |> 
+p2 <- gummi_mosaic_tab |> 
+  select(age_grp, most_liked) |>   
+  ftable() |> 
   as.data.frame() |>
   ggplot(aes(x = product(age_grp, most_liked), weight = Freq, fill = age_grp)) +
+  theme_book() +
   geom_mosaic() +
   theme_mosaic(rot_labels = 45) +
-  scale_fill_viridis_d()
+  scale_fill_viridis_d() +
+  theme(legend.position = "none") +
+  labs(x = "Most liked color of gummy bear", y = "Grouped age") +
+  annotate("label", x = 0.05, y = 0.9, label = str_c("p = ", p_age), hjust = "left")
+
+p1 + p2 + 
+  plot_layout(ncol = 2) +
+  plot_annotation(tag_levels = 'A') +
+  plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
+  theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
 
@@ -388,7 +431,7 @@ $$
 #| warning: false
 #| label: fig-chap-interlude-I-grid
 #| fig-align: center
-#| fig-height: 3.5
+#| fig-height: 3.75
 #| fig-width: 7.25
 #| fig-cap: "Probability of observation of the number of colours given the number of bears in a bag. The first nine bag sizes could be solved using combination and by counting the number of colours in a bag of a given size. However, the results for 10 to 12 bears in a bag had to be obtained by simulation and drawing 10 million bags due to performance issues. Gemini 3.5 (Flash-Lite), Excel and R with `{nlme}` were used to optimise the modelling and generation of the shaded graphs."
 
@@ -434,23 +477,6 @@ filter(grid_table_tbl, bears %in% 1:9) |>
   geom_function(fun = \(x) 0.00419*x^2-0.00303*x-0.12376, xlim = c(6, 15), 
                 color = "#FCCE25FF", size = 2, alpha = 0.35) +
   guides(color = guide_legend(nrow = 1, byrow = TRUE)) 
-```
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummy-prob-table
-#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 100,000."
-
-read_excel("data/grid_table.xlsx") |> 
-  select(c, b06:b15) |> 
-  mutate_all(round, 4) |> 
-  mutate(across(2:11, scales::percent)) |> 
-  set_names(c("Colors", 6:15)) |> 
-  kable(align = "c", "pipe") |> 
-  add_header_above(c(" " = 1, "Combined" = 4, "Simulated" = 3, "Modeled" = 3)) |> 
-  add_header_above(c(" " = 1, "Bears " = 10))
 ```
 
 
@@ -524,6 +550,23 @@ rbind(tibble(type = gl(2, 6, labels = c("observed", "expected")),
   theme(legend.position = c(0.1, 0.85)) +
   facet_wrap(~bears)
 
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-prob-table
+#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 100,000."
+
+read_excel("data/grid_table.xlsx") |> 
+  select(c, b06:b15) |> 
+  mutate_all(round, 4) |> 
+  mutate(across(2:11, scales::percent)) |> 
+  set_names(c("Colors", 6:15)) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Combined" = 4, "Simulated" = 3, "Modeled" = 3)) |> 
+  add_header_above(c(" " = 1, "Bears " = 10))
 ```
 
 
