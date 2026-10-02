@@ -569,7 +569,7 @@ With seven bears in a bag, I would like to have opened roughly 46,656 bags to fi
 @tbl-probability-comparision
 
 | Event                                        | Odds           |
-|:---------------------------------------------|----------------|
+|:---------------------------------------------|:---------------|
 | Odds to win Lotto 6 out of 49                | $1:15,537,573$ |
 | Annual risk of being killed in a plane crash | $1:11,000,000$ |
 | Lifetime odds to be hit by a comet           | $1:1,600,000$  |
@@ -580,7 +580,7 @@ With seven bears in a bag, I would like to have opened roughly 46,656 bags to fi
 | Getting cancer in a lifetime                 | $1:5$          |
 | Odds to be eaten by a polar bear             | $>0$          |
 
-: A not-so-serious table of rare events and their odds of happening. {@tbl-probability-comparision}
+: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparision}
 
 ## Alternatives
 
