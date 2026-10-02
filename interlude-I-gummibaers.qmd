@@ -573,7 +573,7 @@ With seven bears in a bag, I would like to have opened roughly 46,656 bags to fi
 | Odds to win Lotto 6 out of 49                | $1:15,537,573$ |
 | Annual risk of being killed in a plane crash | $1:11,000,000$ |
 | Lifetime odds to be hit by a comet           | $1:1,600,000$  |
-| Bag of 8 bears with one color                | $1:279,936$    |
+| **Bag of 8 bears with one color**            | $\mathbf{1:279,936}$    |
 | Bitten by a snake in everyday life           | $1:40,000$     |
 | Struck by lightning in a lifetime            | $1:15,300$     |
 | Lifetime odds of dying in a car crash        | $1:100$        |
