@@ -1,6 +1,7 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
-pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra, ggmosaic2)
+pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra, ggmosaic2,
+               gtsummary)
 
 ## gummy stats
 gummy_tbl <- read_excel("data/gummibears.xlsx") 
@@ -174,6 +175,33 @@ rbind(head(gummy_student_raw_tbl, n = 3),
   set_names(c("Most liked taste", "Gender", "Grouped age", "Body height [cm]")) |> 
   kable(align = "c", "pipe")
 ```
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-sudent-tbl-summary
+#| tbl-cap: "Information on the height, age and grouped age of the female and male gummy bear counters."
+
+gummy_tbl |>
+  mutate(age_grp = case_when(age <= 21 ~ "<22",
+                             age > 21 & age <= 29 ~ "22-29",
+                             age >= 30 ~ "30+"),
+         age_grp = factor(age_grp, levels = c("<22", "22-29", "30+"))) |> 
+  select(height, age, age_grp, gender) |> 
+  tbl_summary(
+    by = gender,
+    statistic = list(
+      all_continuous() ~ "{mean} ({sd})",
+      all_categorical() ~ "{n} / {N} ({p}%)"
+    ),
+    digits = all_continuous() ~ 2,
+    label = age_grp ~ "age group",
+    missing_text = "(Missing)"
+  )
+```
+
 
 ## Results
 
