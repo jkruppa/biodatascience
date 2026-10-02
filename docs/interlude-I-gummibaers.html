@@ -454,7 +454,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 02. October 2026 at 09:54:00</em></p>
+<p><em>Last modified on 02. October 2026 at 10:51:33</em></p>
 <blockquote class="blockquote">
 <p><em>“gummy Bears! Bouncing here and there and everywhere; High adventure that’s beyond compare; They are the gummy Bears.” — gummy Bears Theme, Adventures of the gummy Bears</em></p>
 </blockquote>
@@ -1181,13 +1181,13 @@ Modeled
 </div>
 </div>
 <p>With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of 185 bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need 1513 years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me 252 years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I’ll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a bittersweet symphony.</p>
-<p><a href="#tbl-probability-comparision" class="quarto-xref">Table&nbsp;<span>4.7</span></a></p>
-<div id="tbl-probability-comparision" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>The <a href="#tbl-probability-comparison" class="quarto-xref">Table&nbsp;<span>4.7</span></a> shows a collection of odds for rare events that are not taken too seriously. Therefore, finding a one-coloured bag containing eight bears would be as unlikely as being bitten by a snake or hit by a comet in a lifetime. Neither event is more preferable than a bag of coloured bears. The table should not be taken too seriously. I gathered the information from a quick web search and did not consult any scientific references.</p>
+<div id="tbl-probability-comparison" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-probability-comparision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-probability-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;4.7: A not-so-serious table of rare events and their odds of happening.
 </figcaption>
-<div aria-describedby="tbl-probability-comparision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="tbl-probability-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 74%">
@@ -1241,6 +1241,7 @@ Table&nbsp;4.7: A not-so-serious table of rare events and their odds of happenin
 </div>
 </figure>
 </div>
+<p>Well, dear reader, we’ve come to the end of this section. For me, the journey continues—I’ll keep tearing open packets and counting the bears. But you’re probably eager to learn more about the statistics by now. That’s what we’ll cover in the next few chapters.</p>
 </section>
 </section>
 <section id="alternatives" class="level2" data-number="4.5">
@@ -2344,7 +2345,7 @@ Table&nbsp;4.7: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of <span class="in">`r round(mean(count_tbl$n[-c(1:3)]))`</span> bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need <span class="in">`r round(279936/round(mean(count_tbl$n[-c(1:3)])))`</span> years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me <span class="in">`r round(46656/round(mean(count_tbl$n[-c(1:3)])))`</span> years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I'll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a bittersweet symphony.</span>
 <span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>@tbl-probability-comparision</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>The @tbl-probability-comparison shows a collection of odds for rare events that are not taken too seriously. Therefore, finding a one-coloured bag containing eight bears would be as unlikely as being bitten by a snake or hit by a comet in a lifetime. Neither event is more preferable than a bag of coloured bears. The table should not be taken too seriously. I gathered the information from a quick web search and did not consult any scientific references.</span>
 <span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Event                                        <span class="pp">|</span> Odds           <span class="pp">|</span></span>
 <span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------------------------------------|:---------------|</span></span>
@@ -2358,25 +2359,27 @@ Table&nbsp;4.7: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Getting cancer in a lifetime                 <span class="pp">|</span> $1:5$          <span class="pp">|</span></span>
 <span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Odds to be eaten by a polar bear             <span class="pp">|</span> $&gt;0$          <span class="pp">|</span></span>
 <span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparision}</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparison}</span>
 <span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>Well, dear reader, we’ve come to the end of this section. For me, the journey continues—I’ll keep tearing open packets and counting the bears. But you’re probably eager to learn more about the statistics by now. That’s what we’ll cover in the next few chapters.</span>
 <span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
 <span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
 <span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
 <span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>term</span>
 <span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
 <span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
 <span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
 <span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

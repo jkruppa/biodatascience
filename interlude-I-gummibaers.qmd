@@ -566,7 +566,7 @@ read_excel("data/grid_table.xlsx") |>
 
 With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of `r round(mean(count_tbl$n[-c(1:3)]))` bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need `r round(279936/round(mean(count_tbl$n[-c(1:3)])))` years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me `r round(46656/round(mean(count_tbl$n[-c(1:3)])))` years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I'll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a bittersweet symphony.
 
-@tbl-probability-comparision
+The @tbl-probability-comparison shows a collection of odds for rare events that are not taken too seriously. Therefore, finding a one-coloured bag containing eight bears would be as unlikely as being bitten by a snake or hit by a comet in a lifetime. Neither event is more preferable than a bag of coloured bears. The table should not be taken too seriously. I gathered the information from a quick web search and did not consult any scientific references.
 
 | Event                                        | Odds           |
 |:---------------------------------------------|:---------------|
@@ -580,7 +580,9 @@ With seven bears in a bag, I would like to have opened roughly 46,656 bags to fi
 | Getting cancer in a lifetime                 | $1:5$          |
 | Odds to be eaten by a polar bear             | $>0$          |
 
-: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparision}
+: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparison}
+
+Well, dear reader, we’ve come to the end of this section. For me, the journey continues—I’ll keep tearing open packets and counting the bears. But you’re probably eager to learn more about the statistics by now. That’s what we’ll cover in the next few chapters.
 
 ## Alternatives
 
