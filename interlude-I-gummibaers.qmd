@@ -237,7 +237,7 @@ gummy_count_tbl |>
   coord_flip()
 ```
 
-### Self reported body height by gender
+### Self reported body height
 
 ```{r}
 #| echo: false
