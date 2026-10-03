@@ -22,9 +22,7 @@ tabyl(grid_tbl$bar)
 n_sim <- 1e7
 
 simulated_lst <- map(1:n_sim, \(...) {
-  sample(c("darkred", "green", 
-           "white", "lightred", 
-           "yellow", "orange"), 12, replace = TRUE) 
+  sample(col, 12, replace = TRUE) 
 })
 
 simulated_vec <- simulated_lst |> 

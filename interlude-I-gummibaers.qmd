@@ -98,7 +98,7 @@ rbind(head(gummy_count_tbl, n = 3),
 #| echo: false
 #| message: false
 #| warning: false
-#| label: fig-chap-interlude-I-diff
+#| label: fig-chap-interlude-I-diff-1
 #| fig-align: center
 #| fig-height: 3.25
 #| fig-width: 7
@@ -112,10 +112,38 @@ gummy_count_tbl |>
   theme_book() +
   facet_wrap(~ ind, scale = "free_x") +
   geom_bar() +
-  geom_label(stat='count', aes(label=..count.., y = ..count.. + 40), size = 3) +
+  geom_label(stat='count', aes(label=..count.., y = ..count.. + 60), size = 2.25) +
   scale_x_continuous(breaks = seq(-5, 5,1), limits = c(-5, 5)) +
   scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1200)) +
   labs(x = "Deviation observed and expected", y = "Count")
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-diff-2
+#| fig-align: center
+#| fig-height: 2.5
+#| fig-width: 7
+#| fig-cap: "Deviation between the sum of the gummy bear out of the count matrix and the self-reported counts of bears and colour in a bag. Most people deliver the same values; no deviation can be determined. The observed deviations scatter in both positive and negative directions. No bias can be observed. The following analysis uses the calculated and therefore expected values from the count matrix."
+
+gummy_count_tbl |> 
+  select(bear_diff, color_diff) |> 
+  stack() |> 
+  mutate(ind = factor(ind, labels = c("Number of bears (b)", "Number of colors (c)"))) |> 
+  ggplot(aes(x = values, fill = ind)) +
+  theme_book() +
+  ## facet_wrap(~ ind, scale = "free_x") +
+  geom_bar(position = position_dodge(1), width = 0.5) +
+  geom_label(stat='count', aes(label=..count.., y = ..count.. +70), size = 3,
+             position = position_dodge(1), show.legend = FALSE, fontface = 2) +
+  scale_x_continuous(breaks = seq(-5, 5,1), limits = c(-5, 5)) +
+  scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1050)) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, begin = 0.5, end = 0.8,
+                     alpha = 1) +
+  labs(x = "Deviation observed and expected", y = "Count", fill = "") +
+  theme(legend.position = c(0.8, 0.8))
 ```
 
 ```{r}
