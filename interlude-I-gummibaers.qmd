@@ -36,6 +36,8 @@ Therefore, we come to my urgent question. Given my average speed at counting bag
 
 ## Data
 
+I started generating data in 2028. From the beginning, the data generation process has been very hands-on and has not changed since. There is an empty Google spreadsheet with a shortened link. The process has not changed in any of the years that I have conducted the survey. First, I distribute the bags of gummy bears among the students. Each student gets one bag and can eat all the sweets after the survey. Then I present the link, and all the students join the same Google spreadsheet. Depending on the size of the lecture, it can get a little chaotic, but in the end, all the bears are counted and some demographic data is gathered.  
+
 ### Characteristics of gummy bears
 
 ```{r}
