@@ -454,7 +454,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 04. October 2026 at 09:10:37</em></p>
+<p><em>Last modified on 04. October 2026 at 09:15:33</em></p>
 <blockquote class="blockquote">
 <p><em>“Gummy Bears! Bouncing here and there and everywhere; High adventure that’s beyond compare; They are the Gummy Bears.” — Gummy Bears Theme, Adventures of the Gummy Bears</em></p>
 </blockquote>
@@ -2426,7 +2426,7 @@ Table&nbsp;4.8: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> values, <span class="at">fill =</span> ind)) <span class="sc">+</span></span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>  <span class="do">## facet_wrap(~ ind, scale = "free_x") +</span></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="dv">1</span>), <span class="at">width =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="dv">1</span>, <span class="at">preserve =</span> <span class="st">"single"</span>), <span class="at">width =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
 <span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_label</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span>..count.., <span class="at">y =</span> ..count.. <span class="sc">+</span><span class="dv">70</span>), <span class="at">size =</span> <span class="dv">3</span>,</span>
 <span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>             <span class="at">position =</span> <span class="fu">position_dodge</span>(<span class="dv">1</span>), <span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">fontface =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>,<span class="dv">1</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>)) <span class="sc">+</span></span>
