@@ -454,7 +454,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 04. October 2026 at 09:05:12</em></p>
+<p><em>Last modified on 04. October 2026 at 09:06:06</em></p>
 <blockquote class="blockquote">
 <p><em>“Gummy Bears! Bouncing here and there and everywhere; High adventure that’s beyond compare; They are the Gummy Bears.” — Gummy Bears Theme, Adventures of the Gummy Bears</em></p>
 </blockquote>
@@ -2551,7 +2551,7 @@ Table&nbsp;4.8: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>                     <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span>., <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">6</span>, <span class="dv">15</span>, <span class="at">by =</span> <span class="dv">1</span>))) <span class="sc">+</span></span>
 <span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Number of bears in a bag"</span>, <span class="at">y =</span> <span class="st">"Year of the survey"</span>) <span class="sc">+</span></span>
 <span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">end =</span> <span class="fl">0.95</span>) <span class="sc">+</span></span>
 <span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="dv">14</span>, <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>), </span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>           <span class="at">label =</span> <span class="fu">str_c</span>(<span class="st">"n = "</span>, count_tbl<span class="sc">$</span>n)) <span class="sc">+</span></span>
 <span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
