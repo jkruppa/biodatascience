@@ -36,7 +36,9 @@ Therefore, we come to my urgent question. Given my average speed at counting bag
 
 ## Data
 
-I started generating data in 2028. From the beginning, the data generation process has been very hands-on and has not changed since. There is an empty Google spreadsheet with a shortened link. The process has not changed in any of the years that I have conducted the survey. First, I distribute the bags of gummy bears among the students. Each student gets one bag and can eat all the sweets after the survey. Then I present the link, and all the students join the same Google spreadsheet. Depending on the size of the lecture, it can get a little chaotic, but in the end, all the bears are counted and some demographic data is gathered.  
+I started generating data in 2028. From the beginning, the data generation process has been very hands-on and has not changed since. There is an empty Google spreadsheet with a shortened link. The process has not changed in any of the years that I have conducted the survey. First, I distribute the bags of gummy bears among the students. Each student gets one bag and can eat all the sweets after the survey. Then I present the link, and all the students join the same Google spreadsheet. Depending on the size of the lecture, it can get a little chaotic, but in the end, all the bears are counted and some demographic data is gathered. 
+
+The gummy bear data is split into two parts. The first part is a matrix showing the number of gummy bears of each of the six colours: dark red (d), light red (l), orange (o), yellow (y), green (g) and white (w). The second part shows the self-reported bear count and number of colours. Some errors can occur here. Because the bears and the number of colours have to be counted by the counter. Therefore, a discrepancy can occur between the colour matrix and the reported number of bears and colours. The second part includes some demographic information about the consumer. I wanted to know their age, height and favourite flavour of gummy bear.
 
 ### Characteristics of gummy bears
 
@@ -64,7 +66,7 @@ gummy_bears_tbl <- gummy_tbl |>
 rbind(head(gummy_bears_tbl, n = 3),
       rep("...", times = ncol(gummy_bears_tbl)),
       tail(gummy_bears_tbl, n = 3)) |>
-  set_names(c("Year", "Darkred", "Lightred", "Orange", "Yellow", "Green", "White", "Bears", "Colors")) |> 
+  set_names(c("Year", "Dark red", "Light red", "Orange", "Yellow", "Green", "White", "Bears", "Colors")) |> 
   kable(align = "c", "pipe") |> 
   add_header_above(c(" " = 1, "Gummy bear color" = 6, "Observed" = 2))
 ```
