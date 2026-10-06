@@ -2,6 +2,7 @@
 source("init.R")
 pacman::p_load(ggridges, ggbeeswarm, janitor, data.table, kableExtra, ggmosaic2,
                gtsummary)
+conflicts_prefer(dplyr::select)
 
 ## gummy stats
 gummy_tbl <- read_excel("data/gummibears.xlsx") 
@@ -309,9 +310,15 @@ p3 <-
            color = "#0D0887FF") +
   annotate("point", x = c(5*0.0625+1, 8*0.0625+1), y = c(208), color = "#0D0887FF")  +
   annotate("point", x = c(5*0.0625+1), y = c(209.5), color = "#0D0887FF") +
+  annotate("point", x = c(4*0.0625+1), y = c(206.5),
+           color = "#D5536FFF") +
+  annotate("point", x = c(7*0.0625+1), y = c(208), color = "#D5536FFF")  +
   geom_curve(aes(x = 1.25, y = 199, xend = 1.92, yend = 179),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
-             curvature = 0.4, color = "gray25", linewidth = 0.25) +
+             curvature = 0.3, color = "gray25", linewidth = 0.25) +
+  geom_curve(aes(x = 1.25, y = 199, xend = 1.04, yend = 179),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "gray25", linewidth = 0.25) +
   annotate("label", hjust = "left", x = 0.925, y = 209, label = "179cm", size = 3)
 
 (p1 | p2) / 
@@ -319,6 +326,7 @@ p3 <-
   plot_annotation(tag_levels = 'A') +
   plot_annotation(tag_levels = 'A', tag_prefix = '(', tag_suffix = ')') &
   theme(plot.tag = element_text(size = 16, face = "bold"))
+
 ```
 
 ### Most liked gummy bear taste
