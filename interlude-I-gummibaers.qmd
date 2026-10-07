@@ -427,7 +427,7 @@ p1 <- gummi_mosaic_tab |>
   theme_book() +
   geom_mosaic() +
   theme_mosaic(rot_labels = 45) +
-  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
+  scale_fill_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = 1) +
   theme(legend.position = "none") +
   labs(x = "Most liked color of gummy bear", y = "Gender") +
   annotate("label", x = 0.05, y = 0.9, label = str_c("p = ", p_gender), hjust = "left")
