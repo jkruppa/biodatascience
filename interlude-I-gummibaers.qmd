@@ -521,7 +521,9 @@ filter(grid_table_tbl, bears %in% 1:9) |>
                 color = "#F58A47FF", size = 2, alpha = 0.35) +
   geom_function(fun = \(x) 0.00419*x^2-0.00303*x-0.12376, xlim = c(6, 15), 
                 color = "#FCCE25FF", size = 2, alpha = 0.35) +
-  guides(color = guide_legend(nrow = 1, byrow = TRUE)) 
+  guides(color = guide_legend(nrow = 1, byrow = TRUE)) +
+  theme(legend.position = c(0.34, 0.85),
+        legend.box.background = element_rect(color = "black"))
 ```
 
 ```{r}

@@ -454,7 +454,7 @@ window.Quarto = {
 </header>
 
 
-<p><em>Last modified on 07. October 2026 at 16:30:50</em></p>
+<p><em>Last modified on 08. October 2026 at 09:03:09</em></p>
 <blockquote class="blockquote">
 <p><em>“Gummy Bears! Bouncing here and there and everywhere; High adventure that’s beyond compare; They are the Gummy Bears.” — Gummy Bears Theme, Adventures of the Gummy Bears</em></p>
 </blockquote>
@@ -2744,7 +2744,7 @@ Table&nbsp;4.8: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
 <span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_mosaic</span>() <span class="sc">+</span></span>
 <span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_mosaic</span>(<span class="at">rot_labels =</span> <span class="dv">45</span>) <span class="sc">+</span></span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">end =</span> <span class="fl">0.6</span>, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">end =</span> <span class="fl">0.6</span>, <span class="at">direction =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
 <span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
 <span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Most liked color of gummy bear"</span>, <span class="at">y =</span> <span class="st">"Gender"</span>) <span class="sc">+</span></span>
 <span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"label"</span>, <span class="at">x =</span> <span class="fl">0.05</span>, <span class="at">y =</span> <span class="fl">0.9</span>, <span class="at">label =</span> <span class="fu">str_c</span>(<span class="st">"p = "</span>, p_gender), <span class="at">hjust =</span> <span class="st">"left"</span>)</span>
@@ -2837,135 +2837,137 @@ Table&nbsp;4.8: A not-so-serious table of rare events and their odds of happenin
 <span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>                <span class="at">color =</span> <span class="st">"#F58A47FF"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.35</span>) <span class="sc">+</span></span>
 <span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> \(x) <span class="fl">0.00419</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="fl">-0.00303</span><span class="sc">*</span>x<span class="fl">-0.12376</span>, <span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">6</span>, <span class="dv">15</span>), </span>
 <span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>                <span class="at">color =</span> <span class="st">"#FCCE25FF"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.35</span>) <span class="sc">+</span></span>
-<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)) </span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-interlude-I-obs-exp</span></span>
-<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.25</span></span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Percentage of observed numbers of colours in a bag given different bag sizes. On the left are the observed and expected percentages of eight bears in a bag. In the middle, the observed and expected numbers of colours in a bag containing nine bears. On the right, the observed and simulated percentages for a bag containing 10 bears. The simulation was necessary because calculating the expected values would take too long."</span></span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>bear_8_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">8</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>)</span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>bear_9_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>) </span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>bear_10_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>) </span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>bear_8_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">8</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>bear_9_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>bear_10_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"expected"</span>)),</span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, bear_8_vec),</span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.002268376</span>, <span class="fl">0.069015775</span>, <span class="fl">0.364583333</span>, <span class="fl">0.450102881</span>, <span class="fl">0.114026063</span>),</span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"8 bears in a bag (n = "</span>, bear_8_n, <span class="st">")"</span>)),</span>
-<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"expected"</span>)),</span>
-<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
-<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, bear_9_vec),</span>
-<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.000759102</span>, <span class="fl">0.036020138</span>, <span class="fl">0.277563443</span>, <span class="fl">0.496613512</span>, <span class="fl">0.18904321</span>),</span>
-<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"9 bears in a bag (n = "</span>, bear_9_n, <span class="st">")"</span>)),</span>
-<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"simulated"</span>)),</span>
-<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
-<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, bear_10_vec),</span>
-<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.0002601</span>, <span class="fl">0.0185012</span>, <span class="fl">0.2029175</span>, <span class="fl">0.5064902</span>, <span class="fl">0.271831</span>),</span>
-<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"10 bears in a bag (n = "</span>, bear_10_n, <span class="st">")"</span>))</span>
-<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>)  <span class="sc">|&gt;</span> </span>
-<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bears =</span> <span class="fu">as_factor</span>(bears)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> percent, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
-<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
-<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
-<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
-<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.6</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.1</span>)) <span class="sc">+</span></span>
-<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">end =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
-<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Percentage"</span>, <span class="at">x =</span> <span class="st">"Number of colors (c) in a bag"</span>) <span class="sc">+</span></span>
-<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.85</span>)) <span class="sc">+</span></span>
-<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>bears)</span>
-<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="fu">guide_legend</span>(<span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)) <span class="sc">+</span></span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.34</span>, <span class="fl">0.85</span>),</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.box.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>))</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-chap-interlude-I-obs-exp</span></span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: center</span></span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-height: 3.25</span></span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-width: 7</span></span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Percentage of observed numbers of colours in a bag given different bag sizes. On the left are the observed and expected percentages of eight bears in a bag. In the middle, the observed and expected numbers of colours in a bag containing nine bears. On the right, the observed and simulated percentages for a bag containing 10 bears. The simulation was necessary because calculating the expected values would take too long."</span></span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>bear_8_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">8</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>)</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>bear_9_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>) </span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>bear_10_vec <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"percent"</span>) </span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>bear_8_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">8</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>bear_9_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>bear_10_n <span class="ot">&lt;-</span> gummy_count_tbl <span class="sc">|&gt;</span> </span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(bear_exp <span class="sc">==</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tabyl</span>(color_exp) <span class="sc">|&gt;</span> </span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">"n"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>()</span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a><span class="fu">rbind</span>(<span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"expected"</span>)),</span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, bear_8_vec),</span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.002268376</span>, <span class="fl">0.069015775</span>, <span class="fl">0.364583333</span>, <span class="fl">0.450102881</span>, <span class="fl">0.114026063</span>),</span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"8 bears in a bag (n = "</span>, bear_8_n, <span class="st">")"</span>)),</span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"expected"</span>)),</span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, bear_9_vec),</span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.000759102</span>, <span class="fl">0.036020138</span>, <span class="fl">0.277563443</span>, <span class="fl">0.496613512</span>, <span class="fl">0.18904321</span>),</span>
+<span id="cb1-611"><a href="#cb1-611" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"9 bears in a bag (n = "</span>, bear_9_n, <span class="st">")"</span>)),</span>
+<span id="cb1-612"><a href="#cb1-612" aria-hidden="true" tabindex="-1"></a>      <span class="fu">tibble</span>(<span class="at">type =</span> <span class="fu">gl</span>(<span class="dv">2</span>, <span class="dv">6</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"observed"</span>, <span class="st">"simulated"</span>)),</span>
+<span id="cb1-613"><a href="#cb1-613" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, <span class="dv">2</span>),</span>
+<span id="cb1-614"><a href="#cb1-614" aria-hidden="true" tabindex="-1"></a>             <span class="at">percent =</span> <span class="fu">c</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, bear_10_vec),</span>
+<span id="cb1-615"><a href="#cb1-615" aria-hidden="true" tabindex="-1"></a>                         <span class="dv">0</span>, <span class="fl">0.0002601</span>, <span class="fl">0.0185012</span>, <span class="fl">0.2029175</span>, <span class="fl">0.5064902</span>, <span class="fl">0.271831</span>),</span>
+<span id="cb1-616"><a href="#cb1-616" aria-hidden="true" tabindex="-1"></a>             <span class="at">bears =</span> <span class="fu">str_c</span>(<span class="st">"10 bears in a bag (n = "</span>, bear_10_n, <span class="st">")"</span>))</span>
+<span id="cb1-617"><a href="#cb1-617" aria-hidden="true" tabindex="-1"></a>)  <span class="sc">|&gt;</span> </span>
+<span id="cb1-618"><a href="#cb1-618" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bears =</span> <span class="fu">as_factor</span>(bears)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-619"><a href="#cb1-619" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> percent, <span class="at">fill =</span> type)) <span class="sc">+</span></span>
+<span id="cb1-620"><a href="#cb1-620" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_book</span>() <span class="sc">+</span></span>
+<span id="cb1-621"><a href="#cb1-621" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">position =</span> <span class="fu">position_dodge</span>()) <span class="sc">+</span></span>
+<span id="cb1-622"><a href="#cb1-622" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>) <span class="sc">+</span></span>
+<span id="cb1-623"><a href="#cb1-623" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.6</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fl">0.6</span>, <span class="fl">0.1</span>)) <span class="sc">+</span></span>
+<span id="cb1-624"><a href="#cb1-624" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis</span>(<span class="at">option =</span> <span class="st">"plasma"</span>, <span class="at">discrete =</span> <span class="cn">TRUE</span>, <span class="at">end =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb1-625"><a href="#cb1-625" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Percentage"</span>, <span class="at">x =</span> <span class="st">"Number of colors (c) in a bag"</span>) <span class="sc">+</span></span>
+<span id="cb1-626"><a href="#cb1-626" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.85</span>)) <span class="sc">+</span></span>
+<span id="cb1-627"><a href="#cb1-627" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>bears)</span>
 <span id="cb1-628"><a href="#cb1-628" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-631"><a href="#cb1-631" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-632"><a href="#cb1-632" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-gummy-prob-table</span></span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 46,000."</span></span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"data/grid_table.xlsx"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(c, b06<span class="sc">:</span>b15) <span class="sc">|&gt;</span> </span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_all</span>(round, <span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">11</span>, scales<span class="sc">::</span>percent)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(<span class="fu">c</span>(<span class="st">"Colors"</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">15</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="st">"pipe"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Combined"</span> <span class="ot">=</span> <span class="dv">4</span>, <span class="st">"Simulated"</span> <span class="ot">=</span> <span class="dv">3</span>, <span class="st">"Modeled"</span> <span class="ot">=</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Bears "</span> <span class="ot">=</span> <span class="dv">10</span>))</span>
-<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of <span class="in">`r round(mean(count_tbl$n[-c(1:3)]))`</span> bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need <span class="in">`r round(279936/round(mean(count_tbl$n[-c(1:3)])))`</span> years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me <span class="in">`r round(46656/round(mean(count_tbl$n[-c(1:3)])))`</span> years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I'll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a bittersweet symphony.</span>
+<span id="cb1-629"><a href="#cb1-629" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-630"><a href="#cb1-630" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-gummy-prob-table</span></span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "The final table to judge the probability of observing c colours in a bag containing between 6 and 15 gummy bears. It can be assumed that bags containing fewer than six bears will never be produced. With seven gummy bears in a bag, the likelihood of finding only one colour is approximately 1 in 46,000."</span></span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a><span class="fu">read_excel</span>(<span class="st">"data/grid_table.xlsx"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(c, b06<span class="sc">:</span>b15) <span class="sc">|&gt;</span> </span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_all</span>(round, <span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">11</span>, scales<span class="sc">::</span>percent)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_names</span>(<span class="fu">c</span>(<span class="st">"Colors"</span>, <span class="dv">6</span><span class="sc">:</span><span class="dv">15</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">align =</span> <span class="st">"c"</span>, <span class="st">"pipe"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Combined"</span> <span class="ot">=</span> <span class="dv">4</span>, <span class="st">"Simulated"</span> <span class="ot">=</span> <span class="dv">3</span>, <span class="st">"Modeled"</span> <span class="ot">=</span> <span class="dv">3</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">" "</span> <span class="ot">=</span> <span class="dv">1</span>, <span class="st">"Bears "</span> <span class="ot">=</span> <span class="dv">10</span>))</span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>The @tbl-probability-comparison shows a collection of odds for rare events that are not taken too seriously. Therefore, finding a one-coloured bag containing eight bears would be as unlikely as being bitten by a snake or hit by a comet in a lifetime. Neither event is more preferable than a bag of coloured bears. The table should not be taken too seriously. I gathered the information from a quick web search and did not consult any scientific references.</span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>With seven bears in a bag, I would like to have opened roughly 46,656 bags to find a bag with only one color of bear. With eight bears in a bag, it would be an astonishing 279,936 bags. Currently, I have an average of <span class="in">`r round(mean(count_tbl$n[-c(1:3)]))`</span> bags counted per year among my lectures in the last five years. I still believe that the number of bears in a bag will remain stable at eight in the coming years. In this case, on average, I would need <span class="in">`r round(279936/round(mean(count_tbl$n[-c(1:3)])))`</span> years before I would find one of a different colour. Even if Haribo reduces the number of bears in a bag to seven, it would still take me <span class="in">`r round(46656/round(mean(count_tbl$n[-c(1:3)])))`</span> years to reach my goal. Therefore, in answer to my initial research question, I realise that I have little chance of achieving my goal in my lifetime. But this will not stop me — maybe I'll get lucky and the next bag will contain only one colour. The only assumption I have to make is that Haribo does not rig the filling process of the bags and removes any coloured bags that appear. It would be a bittersweet symphony.</span>
 <span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Event                                        <span class="pp">|</span> Odds           <span class="pp">|</span></span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------------------------------------|:---------------|</span></span>
-<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Odds to win Lotto 6 out of 49                <span class="pp">|</span> $1:15,537,573$ <span class="pp">|</span></span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Annual risk of being killed in a plane crash <span class="pp">|</span> $1:11,000,000$ <span class="pp">|</span></span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lifetime odds to be hit by a comet           <span class="pp">|</span> $1:1,600,000$  <span class="pp">|</span></span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bag of 8 bears with one color**            <span class="pp">|</span> $\mathbf{1:279,936}$    <span class="pp">|</span></span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Bitten by a snake in everyday life           <span class="pp">|</span> $1:40,000$     <span class="pp">|</span></span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Struck by lightning in a lifetime            <span class="pp">|</span> $1:15,300$     <span class="pp">|</span></span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lifetime odds of dying in a car crash        <span class="pp">|</span> $1:100$        <span class="pp">|</span></span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Getting cancer in a lifetime                 <span class="pp">|</span> $1:5$          <span class="pp">|</span></span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Odds to be eaten by a polar bear             <span class="pp">|</span> $&gt;0$          <span class="pp">|</span></span>
-<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparison}</span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>The @tbl-probability-comparison shows a collection of odds for rare events that are not taken too seriously. Therefore, finding a one-coloured bag containing eight bears would be as unlikely as being bitten by a snake or hit by a comet in a lifetime. Neither event is more preferable than a bag of coloured bears. The table should not be taken too seriously. I gathered the information from a quick web search and did not consult any scientific references.</span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Event                                        <span class="pp">|</span> Odds           <span class="pp">|</span></span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------------------------------------|:---------------|</span></span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Odds to win Lotto 6 out of 49                <span class="pp">|</span> $1:15,537,573$ <span class="pp">|</span></span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Annual risk of being killed in a plane crash <span class="pp">|</span> $1:11,000,000$ <span class="pp">|</span></span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lifetime odds to be hit by a comet           <span class="pp">|</span> $1:1,600,000$  <span class="pp">|</span></span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bag of 8 bears with one color**            <span class="pp">|</span> $\mathbf{1:279,936}$    <span class="pp">|</span></span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Bitten by a snake in everyday life           <span class="pp">|</span> $1:40,000$     <span class="pp">|</span></span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Struck by lightning in a lifetime            <span class="pp">|</span> $1:15,300$     <span class="pp">|</span></span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Lifetime odds of dying in a car crash        <span class="pp">|</span> $1:100$        <span class="pp">|</span></span>
+<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Getting cancer in a lifetime                 <span class="pp">|</span> $1:5$          <span class="pp">|</span></span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Odds to be eaten by a polar bear             <span class="pp">|</span> $&gt;0$          <span class="pp">|</span></span>
 <span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>Well, dear reader, we’ve come to the end of this section. For me, the journey continues—I’ll keep tearing open packets and counting the bears. But you’re probably eager to learn more about the statistics by now. That’s what we’ll cover in the next few chapters.</span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>: A not-so-serious table of rare events and their odds of happening. {#tbl-probability-comparison}</span>
 <span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>Well, dear reader, we’ve come to the end of this section. For me, the journey continues—I’ll keep tearing open packets and counting the bears. But you’re probably eager to learn more about the statistics by now. That’s what we’ll cover in the next few chapters.</span>
 <span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives</span></span>
 <span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
+<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>Further tutorials and R packages on XXX</span>
 <span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>term</span>
+<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a><span class="fu">## Glossary</span></span>
 <span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
+<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>term</span>
 <span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>: what does it mean.</span>
 <span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
+<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a><span class="fu">## The meaning of "Models of Reality" in this chapter.</span></span>
 <span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>itemize with max. 5-6 words</span>
 <span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a><span class="fu">## References {.unnumbered}</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
