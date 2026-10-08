@@ -376,7 +376,8 @@ p2 <- ggplot(count_bag_tbl, aes(value)) +
   labs(x = "Most liked color of gummy bear", y = "Number of gummy bears")  +
   geom_hline(yintercept = floor(nrow(count_bag_tbl)/6), 
              linetype = 2, size = 1) +
-  geom_label(stat='count', aes(label=..count..), size = 4) 
+  geom_label(stat='count', aes(label=..count..), size = 4) +
+  scale_y_continuous(breaks = c(500, 1000, 1500, floor(nrow(count_bag_tbl)/6), 2000))
 
 p1 + p2 + 
   plot_layout(ncol = 2) +
