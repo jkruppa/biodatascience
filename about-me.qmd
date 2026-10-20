@@ -1,3 +1,38 @@
 # About me {#sec-aboutme}
 
-## This is a first draft about me
+## A short summary of my life
+
+text
+
+## Some important stations in my life
+
+The following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload.
+
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Year       | Description                                                                                                                                                                                                    |
++============+================================================================================================================================================================================================================+
+| since 2022 | Professor of Bio Data Science, Faculty of Agricultural Sciences and Landscape Architecture, Osnabrück University of Applied Sciences                                                                           |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2024       | Habilitation at Freie Universität Berlin in the Department of Mathematics and Computer Science, titled: "Robust analysis of high-dimensional omics data using computer simulation and graphical visualization" |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2018-2021  | Charité - Universitätsmedizin Berlin                                                                                                                                                                           |
+|            |                                                                                                                                                                                                                |
+|            | - Deputy Director of the Institute for Biometry and Clinical Epidemiology                                                                                                                                      |
+|            |                                                                                                                                                                                                                |
+|            | - Head of the branch office of the Institute for Biometry and Clinical Epidemiology                                                                                                                            |
+|            |                                                                                                                                                                                                                |
+|            | - Head of Statistical Bioinformatics Working Group                                                                                                                                                             |
+|            |                                                                                                                                                                                                                |
+|            | - Service Unit Biometrie, Institute for Biometry and Clinical Epidemiology                                                                                                                                     |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2016-2018  | Research assistant, Working group "Genomics and Bioinformatics\                                                                                                                                                |
+|            | of Infectious Diseases", Institute for Animal Breeding and Genetics, University of Veterinary Medicine Hannover                                                                                                |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2014-2015  | Research assistant, Working group ‘Central Service Unit for Medical Biometrics and Statistical Bioinformatics’, Institute for Medical Statistics, University Medical Center Göttingen                          |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2013-2014  | Research assistant, Department of Animal Breeding and Domestic Animal Genetics, University of Göttingen                                                                                                        |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2014       | Doctoral Degree (Ph.D. / Dr. rer. hum. biol.) at the University of Lübeck, titled: "Probability Machines: Consistent Machine Learning Methods for Estimating Conditional Probabilities"                        |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2009-2014  | Research assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck                                                                                                                     |
++------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -1630,7 +1630,7 @@
     "href": "about-me.html",
     "title": "Appendix A — About me",
     "section": "",
-    "text": "A.1 This is a first draft about me",
+    "text": "A.1 A short summary of my life\ntext",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
@@ -1678,6 +1678,17 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Why does it look like this?</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#some-important-stations-in-my-life",
+    "href": "about-me.html#some-important-stations-in-my-life",
+    "title": "Appendix A — About me",
+    "section": "A.2 Some important stations in my life",
+    "text": "A.2 Some important stations in my life\nThe following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload.\n\n\n\n\n\n\n\nYear\nDescription\n\n\n\n\nsince 2022\nProfessor of Bio Data Science, Faculty of Agricultural Sciences and Landscape Architecture, Osnabrück University of Applied Sciences\n\n\n2024\nHabilitation at Freie Universität Berlin in the Department of Mathematics and Computer Science, titled: “Robust analysis of high-dimensional omics data using computer simulation and graphical visualization”\n\n\n2018-2021\nCharité - Universitätsmedizin Berlin\n\nDeputy Director of the Institute for Biometry and Clinical Epidemiology\nHead of the branch office of the Institute for Biometry and Clinical Epidemiology\nHead of Statistical Bioinformatics Working Group\nService Unit Biometrie, Institute for Biometry and Clinical Epidemiology\n\n\n\n2016-2018\nResearch assistant, Working group “Genomics and Bioinformatics\nof Infectious Diseases”, Institute for Animal Breeding and Genetics, University of Veterinary Medicine Hannover\n\n\n2014-2015\nResearch assistant, Working group ‘Central Service Unit for Medical Biometrics and Statistical Bioinformatics’, Institute for Medical Statistics, University Medical Center Göttingen\n\n\n2013-2014\nResearch assistant, Department of Animal Breeding and Domestic Animal Genetics, University of Göttingen\n\n\n2014\nDoctoral Degree (Ph.D. / Dr. rer. hum. biol.) at the University of Lübeck, titled: “Probability Machines: Consistent Machine Learning Methods for Estimating Conditional Probabilities”\n\n\n2009-2014\nResearch assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
     ]
   }
 ]
