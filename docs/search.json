@@ -1630,7 +1630,7 @@
     "href": "about-me.html",
     "title": "Appendix A — About me",
     "section": "",
-    "text": "A.1 A short summary of my life\nLast modified on 20. October 2026 at 10:14:10\nSome people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. In addition, this page is also part of the appendix of my English book about data science and statistics. This page contains content generated using generative AI, which I have personally curated.\nProf. Dr. habil. Jochen Kruppa-Scheetz is a German biostatistician and data scientist specializing in agricultural sciences, bio-data science, and medical biometry.\nAcademic Background & Career\nResearch & Teaching Focus",
+    "text": "A.1 The story of my life\nLast modified on 20. October 2026 at 10:25:12\nSome people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. In addition, this page is also part of the appendix of my English book about data science and statistics. This page contains content generated using generative AI, which I have personally curated.\nProf. Dr. habil. Jochen Kruppa-Scheetz is a German biostatistician and data scientist specializing in agricultural sciences, bio-data science, and medical biometry.\nAcademic Background & Career\nResearch & Teaching Focus",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
@@ -1730,6 +1730,50 @@
     "title": "Appendix A — About me",
     "section": "",
     "text": "Education: He studied Plant Biotechnology with a focus on biostatistics at Leibniz Universität Hannover and earned his doctorate (Dr. rer. hum. biol.) in machine learning and epidemiology at the University of Lübeck. In 2024, he completed his Habilitation in Bioinformatics at Freie Universität Berlin in the Department of Mathematics and Computer Science.\nCharité Berlin & Early Positions: Before his current professorship, he held statistical and bioinformatic research positions at Universitätsklinikum Göttingen and Tierärztliche Hochschule Hannover. From 2018 to 2021, he led the Working Group for Statistical Bioinformatics at Charité – Universitätsmedizin Berlin, where he also served as deputy head of the Institute of Biometry and Clinical Epidemiology until 2021.\nHochschule Osnabrück: Since 2022, he has served as Professor of Bio Data Science in the Faculty of Agricultural Sciences and Landscape Architecture at Osnabrück University of Applied Sciences.\n\n\n\nResearch Interests: His work spans applied statistical modeling, machine learning techniques for classification, metagenomics, high-dimensional omics data analysis, and phenotyping frameworks in agricultural sciences.\nTeaching & Open Science: He focuses on accessible biostatistics instruction for students in life sciences and agriculture. He creates open-access educational content, authors online interactive statistics material, and hosts educational data science videos on YouTube.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#how-can-i-help-you",
+    "href": "about-me.html#how-can-i-help-you",
+    "title": "Appendix A — About me",
+    "section": "A.2 How can I help you?",
+    "text": "A.2 How can I help you?\nConceptual work activities\nI have amassed a wealth of experience in statistical consultancy, providing over 1,000 consultations throughout my career, primarily in the life sciences. Consultants hold bachelor’s, master’s and PhD degrees.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#the-story-ofmy-life",
+    "href": "about-me.html#the-story-ofmy-life",
+    "title": "Appendix A — About me",
+    "section": "",
+    "text": "Education: He studied Plant Biotechnology with a focus on biostatistics at Leibniz Universität Hannover and earned his doctorate (Dr. rer. hum. biol.) in machine learning and epidemiology at the University of Lübeck. In 2024, he completed his Habilitation in Bioinformatics at Freie Universität Berlin in the Department of Mathematics and Computer Science.\nCharité Berlin & Early Positions: Before his current professorship, he held statistical and bioinformatic research positions at Universitätsklinikum Göttingen and Tierärztliche Hochschule Hannover. From 2018 to 2021, he led the Working Group for Statistical Bioinformatics at Charité – Universitätsmedizin Berlin, where he also served as deputy head of the Institute of Biometry and Clinical Epidemiology until 2021.\nHochschule Osnabrück: Since 2022, he has served as Professor of Bio Data Science in the Faculty of Agricultural Sciences and Landscape Architecture at Osnabrück University of Applied Sciences.\n\n\n\nResearch Interests: His work spans applied statistical modeling, machine learning techniques for classification, metagenomics, high-dimensional omics data analysis, and phenotyping frameworks in agricultural sciences.\nTeaching & Open Science: He focuses on accessible biostatistics instruction for students in life sciences and agriculture. He creates open-access educational content, authors online interactive statistics material, and hosts educational data science videos on YouTube.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#the-story-of-my-life",
+    "href": "about-me.html#the-story-of-my-life",
+    "title": "Appendix A — About me",
+    "section": "",
+    "text": "Education: He studied Plant Biotechnology with a focus on biostatistics at Leibniz Universität Hannover and earned his doctorate (Dr. rer. hum. biol.) in machine learning and epidemiology at the University of Lübeck. In 2024, he completed his Habilitation in Bioinformatics at Freie Universität Berlin in the Department of Mathematics and Computer Science.\nCharité Berlin & Early Positions: Before his current professorship, he held statistical and bioinformatic research positions at Universitätsklinikum Göttingen and Tierärztliche Hochschule Hannover. From 2018 to 2021, he led the Working Group for Statistical Bioinformatics at Charité – Universitätsmedizin Berlin, where he also served as deputy head of the Institute of Biometry and Clinical Epidemiology until 2021.\nHochschule Osnabrück: Since 2022, he has served as Professor of Bio Data Science in the Faculty of Agricultural Sciences and Landscape Architecture at Osnabrück University of Applied Sciences.\n\n\n\nResearch Interests: His work spans applied statistical modeling, machine learning techniques for classification, metagenomics, high-dimensional omics data analysis, and phenotyping frameworks in agricultural sciences.\nTeaching & Open Science: He focuses on accessible biostatistics instruction for students in life sciences and agriculture. He creates open-access educational content, authors online interactive statistics material, and hosts educational data science videos on YouTube.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#stations-in-my-life",
+    "href": "about-me.html#stations-in-my-life",
+    "title": "Appendix A — About me",
+    "section": "A.3 Stations in my life",
+    "text": "A.3 Stations in my life\nThe following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload. In the end, it is a classic curriculum vitae.\n\n\n\n\n\n\n\nYear\nDescription\n\n\n\n\nsince 2022\nProfessor of Bio Data Science, Faculty of Agricultural Sciences and Landscape Architecture, Osnabrück University of Applied Sciences\n\n\n2024\nHabilitation at Freie Universität Berlin in the Department of Mathematics and Computer Science, titled: “Robust analysis of high-dimensional omics data using computer simulation and graphical visualization”\n\n\n2018-2021\nCharité - Universitätsmedizin Berlin\n\nDeputy Director of the Institute for Biometry and Clinical Epidemiology\nHead of the branch office of the Institute for Biometry and Clinical Epidemiology\nHead of Statistical Bioinformatics Working Group\nService Unit Biometrie, Institute for Biometry and Clinical Epidemiology\n\n\n\n2016-2018\nResearch assistant, Working group “Genomics and Bioinformatics\nof Infectious Diseases”, Institute for Animal Breeding and Genetics, University of Veterinary Medicine Hannover\n\n\n2014-2015\nResearch assistant, Working group ‘Central Service Unit for Medical Biometrics and Statistical Bioinformatics’, Institute for Medical Statistics, University Medical Center Göttingen\n\n\n2013-2014\nResearch assistant, Department of Animal Breeding and Domestic Animal Genetics, University of Göttingen\n\n\n2014\nDoctoral Degree (Ph.D. / Dr. rer. hum. biol.) at the University of Lübeck, titled: “Probability Machines: Consistent Machine Learning Methods for Estimating Conditional Probabilities”\n\n\n2009-2014\nResearch assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
