@@ -1630,7 +1630,7 @@
     "href": "about-me.html",
     "title": "Appendix A — About me",
     "section": "",
-    "text": "A.1 A short summary of my life\ntext",
+    "text": "A.1 A short summary of my life\nLast modified on 20. October 2026 at 10:02:37\nSome people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests.\ntext",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
@@ -1684,8 +1684,41 @@
     "objectID": "about-me.html#some-important-stations-in-my-life",
     "href": "about-me.html#some-important-stations-in-my-life",
     "title": "Appendix A — About me",
-    "section": "A.2 Some important stations in my life",
-    "text": "A.2 Some important stations in my life\nThe following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload.\n\n\n\n\n\n\n\nYear\nDescription\n\n\n\n\nsince 2022\nProfessor of Bio Data Science, Faculty of Agricultural Sciences and Landscape Architecture, Osnabrück University of Applied Sciences\n\n\n2024\nHabilitation at Freie Universität Berlin in the Department of Mathematics and Computer Science, titled: “Robust analysis of high-dimensional omics data using computer simulation and graphical visualization”\n\n\n2018-2021\nCharité - Universitätsmedizin Berlin\n\nDeputy Director of the Institute for Biometry and Clinical Epidemiology\nHead of the branch office of the Institute for Biometry and Clinical Epidemiology\nHead of Statistical Bioinformatics Working Group\nService Unit Biometrie, Institute for Biometry and Clinical Epidemiology\n\n\n\n2016-2018\nResearch assistant, Working group “Genomics and Bioinformatics\nof Infectious Diseases”, Institute for Animal Breeding and Genetics, University of Veterinary Medicine Hannover\n\n\n2014-2015\nResearch assistant, Working group ‘Central Service Unit for Medical Biometrics and Statistical Bioinformatics’, Institute for Medical Statistics, University Medical Center Göttingen\n\n\n2013-2014\nResearch assistant, Department of Animal Breeding and Domestic Animal Genetics, University of Göttingen\n\n\n2014\nDoctoral Degree (Ph.D. / Dr. rer. hum. biol.) at the University of Lübeck, titled: “Probability Machines: Consistent Machine Learning Methods for Estimating Conditional Probabilities”\n\n\n2009-2014\nResearch assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck",
+    "section": "A.3 Some important stations in my life",
+    "text": "A.3 Some important stations in my life\nThe following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload. In the end, it is a classic curriculum vitae.\n\n\n\n\n\n\n\nYear\nDescription\n\n\n\n\nsince 2022\nProfessor of Bio Data Science, Faculty of Agricultural Sciences and Landscape Architecture, Osnabrück University of Applied Sciences\n\n\n2024\nHabilitation at Freie Universität Berlin in the Department of Mathematics and Computer Science, titled: “Robust analysis of high-dimensional omics data using computer simulation and graphical visualization”\n\n\n2018-2021\nCharité - Universitätsmedizin Berlin\n\nDeputy Director of the Institute for Biometry and Clinical Epidemiology\nHead of the branch office of the Institute for Biometry and Clinical Epidemiology\nHead of Statistical Bioinformatics Working Group\nService Unit Biometrie, Institute for Biometry and Clinical Epidemiology\n\n\n\n2016-2018\nResearch assistant, Working group “Genomics and Bioinformatics\nof Infectious Diseases”, Institute for Animal Breeding and Genetics, University of Veterinary Medicine Hannover\n\n\n2014-2015\nResearch assistant, Working group ‘Central Service Unit for Medical Biometrics and Statistical Bioinformatics’, Institute for Medical Statistics, University Medical Center Göttingen\n\n\n2013-2014\nResearch assistant, Department of Animal Breeding and Domestic Animal Genetics, University of Göttingen\n\n\n2014\nDoctoral Degree (Ph.D. / Dr. rer. hum. biol.) at the University of Lübeck, titled: “Probability Machines: Consistent Machine Learning Methods for Estimating Conditional Probabilities”\n\n\n2009-2014\nResearch assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#conceptual-work-activities.",
+    "href": "about-me.html#conceptual-work-activities.",
+    "title": "Appendix A — About me",
+    "section": "A.2 Conceptual work activities.",
+    "text": "A.2 Conceptual work activities.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#conceptual-work-activities",
+    "href": "about-me.html#conceptual-work-activities",
+    "title": "Appendix A — About me",
+    "section": "A.2 Conceptual work activities",
+    "text": "A.2 Conceptual work activities",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"
+    ]
+  },
+  {
+    "objectID": "about-me.html#looking-for-more",
+    "href": "about-me.html#looking-for-more",
+    "title": "Appendix A — About me",
+    "section": "A.4 Looking for more",
+    "text": "A.4 Looking for more\nYou can find out more about me on my other social media platforms. As I am a little lazy, I have created a Linktree here: https://wonderl.ink/@biodatascience. Thank you for your curiosity!",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>About me</span>"

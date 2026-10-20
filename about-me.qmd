@@ -1,12 +1,22 @@
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+source("init.R")
+```
+
 # About me {#sec-aboutme}
+
+*Last modified on `r format(fs::file_info("about-me.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+Some people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. 
 
 ## A short summary of my life
 
 text
 
+## Conceptual work activities
+
 ## Some important stations in my life
 
-The following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload.
+The following table provides a general overview of the stations in my life. Some parts have been shortened for easier reading and to avoid information overload. In the end, it is a classic curriculum vitae.
 
 +------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Year       | Description                                                                                                                                                                                                    |
@@ -36,3 +46,7 @@ The following table provides a general overview of the stations in my life. Some
 +------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | 2009-2014  | Research assistant, Institute for Medical Biometrics and Statistics, Universität zu Lübeck                                                                                                                     |
 +------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+## Looking for more
+
+You can find out more about me on my other social media platforms. As I am a little lazy, I have created a Linktree here: [https://wonderl.ink/\@biodatascience](https://wonderl.ink/@biodatascience). Thank you for your curiosity!
