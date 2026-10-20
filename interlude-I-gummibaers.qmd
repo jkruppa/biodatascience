@@ -329,6 +329,13 @@ p3 <-
 
 ```
 
+```{r}
+dnorm(34, mean = 32, sd = 2.5) ## likelihood
+dnorm(34, mean = 34, sd = 2.5) ## likelihood
+```
+
+
+
 ### Most liked gummy bear taste
 
 ```{r}

@@ -57,6 +57,7 @@ book:
       - chapter-52-it-started-with-a-line.qmd
       - chapter-53-overview.qmd
   appendices:
+    - about-me.qmd
     - appendix-a.qmd
 
 bibliography: references.bib
