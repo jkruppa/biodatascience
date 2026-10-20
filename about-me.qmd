@@ -8,6 +8,12 @@ source("init.R")
 
 Some people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. In addition, this page is also part of the appendix of my English book about data science and statistics. This page contains content generated using generative AI, which I have personally curated.
 
+::: callout-note
+## To get in touch
+
+If you would like to get in touch, please email me at [j.kruppa\@hs-osnabrueck.de](mailto:j.kruppa@hs-osnabrueck.de). 
+:::
+
 ## A short summary of my life
 
 Prof. Dr. habil. Jochen Kruppa-Scheetz is a German biostatistician and data scientist specializing in agricultural sciences, bio-data science, and medical biometry.
