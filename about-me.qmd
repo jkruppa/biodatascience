@@ -6,11 +6,25 @@ source("init.R")
 
 *Last modified on `r format(fs::file_info("about-me.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
-Some people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. 
+Some people are interested in me and what I do all day. For those people, I have created a simple page about my life and interests. In addition, this page is also part of the appendix of my English book about data science and statistics. This page contains content generated using generative AI, which I have personally curated.
 
 ## A short summary of my life
 
-text
+Prof. Dr. habil. Jochen Kruppa-Scheetz is a German biostatistician and data scientist specializing in agricultural sciences, bio-data science, and medical biometry.
+
+**Academic Background & Career**
+
+- **Education:** He studied Plant Biotechnology with a focus on biostatistics at Leibniz Universität Hannover and earned his doctorate (Dr. rer. hum. biol.) in machine learning and epidemiology at the University of Lübeck. In 2024, he completed his Habilitation in Bioinformatics at Freie Universität Berlin in the Department of Mathematics and Computer Science.
+
+- **Charité Berlin & Early Positions:** Before his current professorship, he held statistical and bioinformatic research positions at Universitätsklinikum Göttingen and Tierärztliche Hochschule Hannover. From 2018 to 2021, he led the Working Group for Statistical Bioinformatics at Charité – Universitätsmedizin Berlin, where he also served as deputy head of the Institute of Biometry and Clinical Epidemiology until 2021.
+
+- **Hochschule Osnabrück:** Since 2022, he has served as Professor of Bio Data Science in the Faculty of Agricultural Sciences and Landscape Architecture at Osnabrück University of Applied Sciences.
+
+**Research & Teaching Focus**
+
+- **Research Interests:** His work spans applied statistical modeling, machine learning techniques for classification, metagenomics, high-dimensional omics data analysis, and phenotyping frameworks in agricultural sciences.
+
+- **Teaching & Open Science:** He focuses on accessible biostatistics instruction for students in life sciences and agriculture. He creates open-access educational content, authors online interactive statistics material, and hosts educational data science videos on YouTube.
 
 ## Conceptual work activities
 
