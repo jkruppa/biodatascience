@@ -40,6 +40,8 @@ The [Flexcellence framework](https://www.hs-osnabrueck.de/en/texas/subprojects/f
 
 I produced a collection of over one hundred statistical and mathematical exam questions with video support on YouTube. These can be used by students to learn in a time- and location-independent way. The exam questions are based on random number generators that allow a diversity of possible outcomes. 
 
+I teach statistics, mathematics and, more broadly, data science in over eleven degree programmes, ranging from landscape architecture to agriculture and biology. Prior to my professorship, I taught students in medicine and life sciences.
+
 Furthermore, I developed the concept of an impromptu maths lecture with live calculations. Students can use Tweedback and other anonymous tools to reduce the burden of asking questions during a maths lecture. The lecture is broadcast live via YouTube stream.
 
 All my lectures avoid fixed PowerPoint presentations and are based on teaching notes that are generated in Goodnotes during the lecture.
