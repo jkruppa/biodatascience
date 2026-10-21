@@ -254,23 +254,40 @@ gummy_count_tbl |>
 
 ```{r}
 gummy_student_tbl |> 
-  filter(gender == "female") |> 
-  summarise(mean(height, na.rm = TRUE), sd(height, na.rm = TRUE))
+  group_by(gender) |> 
+  summarise(mean = mean(height, na.rm = TRUE), sd = sd(height, na.rm = TRUE)) |> 
+  mutate_if(is.numeric, round, 1) |> 
+  na.omit()
 ```
 
 ```{r}
-pnorm(179, 169.37, 7.02, lower.tail = FALSE)
+pnorm(c(177, 180), 169.4, 7.0) |> diff() |> round(3)
+pnorm(c(177, 180), 183.9, 7.8) |> diff() |> round(3)
 ```
+
+$$
+Pr(h = 179cm \mid female)
+$$
 
 ```{r}
-filter(gummy_student_tbl, gender == "female") |> nrow()
+n_female <- filter(gummy_student_tbl, gender == "female") |> nrow()
 
-filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
+n_female_179cm <- filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
 
-2/528
+round(n_female_179cm/n_female, 3)
 ```
 
+$$
+Pr(h = 179cm \mid male)
+$$
 
+```{r}
+n_male <- filter(gummy_student_tbl, gender == "male") |> nrow()
+
+n_male_179cm <- filter(gummy_student_tbl, gender == "male" & height == 179) |> nrow()
+
+round(n_male_179cm/n_male, 3)
+```
 
 ```{r}
 #| echo: false
