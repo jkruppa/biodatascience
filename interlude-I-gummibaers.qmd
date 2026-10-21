@@ -253,7 +253,7 @@ gummy_count_tbl |>
 ### Self reported body height
 
 ```{r}
-gummy_student_tbl |> 
+desc_gender_height_tbl <- gummy_student_tbl |> 
   group_by(gender) |> 
   summarise(mean = mean(height, na.rm = TRUE), sd = sd(height, na.rm = TRUE)) |> 
   mutate_if(is.numeric, round, 1) |> 
@@ -274,7 +274,7 @@ n_female <- filter(gummy_student_tbl, gender == "female") |> nrow()
 
 n_female_179cm <- filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
 
-round(n_female_179cm/n_female, 3)
+pct_female <- round(n_female_179cm/n_female, 3)
 ```
 
 $$
@@ -286,8 +286,19 @@ n_male <- filter(gummy_student_tbl, gender == "male") |> nrow()
 
 n_male_179cm <- filter(gummy_student_tbl, gender == "male" & height == 179) |> nrow()
 
-round(n_male_179cm/n_male, 3)
+pct_male <- round(n_male_179cm/n_male, 3)
 ```
+
+
+```{r}
+desc_gender_height_tbl |> 
+  mutate(p_e = scales::percent(c(0.074, 0.12)),
+         p_o = scales::percent(c(pct_female, pct_male))) |> 
+  set_names(c("Gender", "Mean", "SD", "Expected", "Observed")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Body height [cm]" = 2, "Probability" = 2))
+```
+
 
 ```{r}
 #| echo: false
