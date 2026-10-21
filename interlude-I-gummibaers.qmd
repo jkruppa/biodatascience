@@ -253,6 +253,26 @@ gummy_count_tbl |>
 ### Self reported body height
 
 ```{r}
+gummy_student_tbl |> 
+  filter(gender == "female") |> 
+  summarise(mean(height, na.rm = TRUE), sd(height, na.rm = TRUE))
+```
+
+```{r}
+pnorm(179, 169.37, 7.02, lower.tail = FALSE)
+```
+
+```{r}
+filter(gummy_student_tbl, gender == "female") |> nrow()
+
+filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
+
+2/528
+```
+
+
+
+```{r}
 #| echo: false
 #| message: false
 #| warning: false
