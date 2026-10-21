@@ -32,9 +32,11 @@ Prof. Dr. habil. Jochen Kruppa-Scheetz is a German biostatistician and data scie
 
 - **Teaching & Open Science:** He focuses on accessible biostatistics instruction for students in life sciences and agriculture. He creates open-access educational content, authors online interactive statistics material, and hosts educational data science videos on YouTube.
 
-## How can I help you?
+## How do I teach?
 
-The [Flexcellence framework](https://www.hs-osnabrueck.de/en/texas/subprojects/flexcellence/) is the basis of my teaching and lectures.
+> *"Help me to do it by myself, and do it not for me!" -- Montessori principle*
+
+How can I help you to solve your problems? The [Flexcellence framework](https://www.hs-osnabrueck.de/en/texas/subprojects/flexcellence/) is the basis of my teaching and lectures.
 
 > "[...] increased flexibility applies to both curricular content and learning formats in terms of time and location. In the future, students should have greater autonomy to decide what, how, when, and where they learn."
 
