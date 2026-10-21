@@ -303,6 +303,31 @@ desc_gender_height_tbl |>
 ```
 
 
+
+```{r}
+tibble(p_e = pnorm(seq(170, 186, 1), 169.4, 7.0, lower.tail = FALSE),
+       p_o_a = map_dbl(seq(170, 186, 1), ~filter(gummy_student_tbl, gender == "female" & height >= .x) |> nrow()),
+       p_o = p_o_a/n_female,
+       h = seq(170, 186, 1)) |> 
+pivot_longer(cols = c(p_o, p_e),
+               values_to = "prob",
+               names_to = "type") |> 
+  ggplot(aes(h, prob, color = type)) +
+  geom_path()
+
+
+tibble(p_e = pnorm(seq(178, 205, 1), 183.9, 7.8, lower.tail = FALSE),
+       p_o_a = map_dbl(seq(178, 205, 1), ~filter(gummy_student_tbl, gender == "male" & height >= .x) |> nrow()),
+       p_o = p_o_a/n_male,
+       h = seq(178, 205, 1)) |> 
+pivot_longer(cols = c(p_o, p_e),
+               values_to = "prob",
+               names_to = "type") |> 
+  ggplot(aes(h, prob, color = type)) +
+  geom_path()
+```
+
+
 ```{r}
 #| echo: false
 #| message: false
