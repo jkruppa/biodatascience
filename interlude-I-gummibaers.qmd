@@ -353,8 +353,8 @@ Pr(h = 179cm \mid male)
 $$
 
 ```{r}
-pnorm(c(177, 180), 169.4, 7.0) |> diff() |> round(3)
-pnorm(c(177, 180), 183.9, 7.8) |> diff() |> round(3)
+pnorm(c(178.5, 179.5), 169.4, 7.0) |> diff() |> round(3)
+pnorm(c(178.5, 179.5), 183.9, 7.8) |> diff() |> round(3)
 ```
 
 
@@ -379,11 +379,12 @@ n_male_179cm <- filter(gummy_student_tbl, gender == "male" & height == 179) |> n
 pct_male <- round(n_male_179cm/n_male, 3)
 
 desc_gender_height_tbl |> 
-  mutate(p_e = scales::percent(c(0.074, 0.12)),
-         p_o = scales::percent(c(pct_female, pct_male))) |> 
-  set_names(c("Gender", "Mean", "SD", "Expected", "Observed")) |> 
+  mutate(p_e = scales::percent(c(0.022, 0.042)),
+         p_o = scales::percent(c(pct_female, pct_male)),
+         diff = scales::percent(c(0.018, 0.028))) |> 
+  set_names(c("Gender", "Mean", "SD", "Expected", "Observed", "Deviance")) |> 
   kable(align = "c", "pipe") |> 
-  add_header_above(c(" " = 1, "Body height [cm]" = 2, "Probability to be 179cm" = 2))
+  add_header_above(c(" " = 1, "Body height [cm]" = 2, "Probability to be 179cm" = 3))
 ```
 
 ```{r}
@@ -417,7 +418,7 @@ female_tbl <- tibble(h = seq(150, 190, 1),
        u = pnorm(h+0.5, 169.4, 7.0, lower.tail = FALSE),
        p_e = l-u,
        p_o_a = map_dbl(h, ~filter(gummy_student_tbl, gender == "female" & height == .x) |> nrow()),
-       p_o = p_o_a/n_male,
+       p_o = p_o_a/n_female,
        d_pre = round(p_o - p_e, 3),
        s = sign(d_pre),
        d = scales::percent(d_pre),
@@ -432,6 +433,9 @@ comb_tbl <- rbind(male_tbl, female_tbl)
 comb_tbl |> 
   ggplot(aes(h, prob, color = gender, linetype = type)) +
   theme_book() +
+  geom_shape(data = tibble(x = c(178.5, 179.5, 179.5, 178.5),
+                           y = c(0, 0, 0.1, 0.1)), alpha = 0.25,
+             aes(x, y), radius = unit(0.02, 'cm'), fill = "gray", inherit.aes = FALSE) +
   geom_path(data = filter(comb_tbl, type == "p_e"),
             linewidth = 2, alpha = 0.5) +
   geom_path(data = filter(comb_tbl, type == "p_o")) +
