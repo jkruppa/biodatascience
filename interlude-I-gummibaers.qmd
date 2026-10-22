@@ -436,12 +436,14 @@ comb_tbl |>
             linewidth = 2, alpha = 0.5) +
   geom_path(data = filter(comb_tbl, type == "p_o")) +
   geom_point(data = filter(comb_tbl, type == "p_o")) +
-  geom_text_repel(data = filter(comb_tbl, type == "p_o"), aes(label = d_txt),
+  geom_text_repel(data = filter(comb_tbl, type == "p_o",
+                                d_pre >= 0.01 | d_pre <= -0.01), aes(label = d_txt),
             show.legend = FALSE, size = 3.25, min.segment.length = 0) +
   scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
   facet_wrap(~gender, nrow = 2) +
   scale_y_continuous(label = scales::percent, breaks = c(0, 0.02, 0.04, 0.06, 0.08, 0.1),
-                     limits = c(0, 0.1)) +
+                     limits = c(0, 0.1), sec.axis = dup_axis(name = "")) +
+  scale_x_continuous(sec.axis = dup_axis(name = "")) +
   labs(x = "Body height [cm]", y = "Probability") +
   theme(legend.position = "none",
         strip.background = element_blank(),
