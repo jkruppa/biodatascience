@@ -252,109 +252,7 @@ gummy_count_tbl |>
 
 ### Self reported body height
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-desc_gender_height_tbl <- gummy_student_tbl |> 
-  group_by(gender) |> 
-  summarise(mean = mean(height, na.rm = TRUE), sd = sd(height, na.rm = TRUE)) |> 
-  mutate_if(is.numeric, round, 1) |> 
-  na.omit()
-```
 
-$$
-Pr(h = 179cm \mid female)\\
-Pr(h = 179cm \mid male)
-$$
-
-```{r}
-pnorm(c(177, 180), 169.4, 7.0) |> diff() |> round(3)
-pnorm(c(177, 180), 183.9, 7.8) |> diff() |> round(3)
-```
-
-
-
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
-#| label: tbl-gummy-height-gender
-#| tbl-cap: "foo."
-
-n_female <- filter(gummy_student_tbl, gender == "female") |> nrow()
-
-n_female_179cm <- filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
-
-pct_female <- round(n_female_179cm/n_female, 3)
-
-n_male <- filter(gummy_student_tbl, gender == "male") |> nrow()
-
-n_male_179cm <- filter(gummy_student_tbl, gender == "male" & height == 179) |> nrow()
-
-pct_male <- round(n_male_179cm/n_male, 3)
-
-desc_gender_height_tbl |> 
-  mutate(p_e = scales::percent(c(0.074, 0.12)),
-         p_o = scales::percent(c(pct_female, pct_male))) |> 
-  set_names(c("Gender", "Mean", "SD", "Expected", "Observed")) |> 
-  kable(align = "c", "pipe") |> 
-  add_header_above(c(" " = 1, "Body height [cm]" = 2, "Probability to be 179cm" = 2))
-```
-
-
-
-```{r}
-tibble(p_e = pnorm(seq(170, 186, 1), 169.4, 7.0, lower.tail = FALSE),
-       p_o_a = map_dbl(seq(170, 186, 1), ~filter(gummy_student_tbl, gender == "female" & height >= .x) |> nrow()),
-       p_o = p_o_a/n_female,
-       h = seq(170, 186, 1)) |> 
-pivot_longer(cols = c(p_o, p_e),
-               values_to = "prob",
-               names_to = "type") |> 
-  ggplot(aes(h, prob, color = type)) +
-  geom_path()
-
-
-tibble(p_e = pnorm(seq(178, 205, 1), 183.9, 7.8, lower.tail = FALSE),
-       p_o_a = map_dbl(seq(178, 205, 1), ~filter(gummy_student_tbl, gender == "male" & height >= .x) |> nrow()),
-       p_o = p_o_a/n_male,
-       h = seq(178, 205, 1)) |> 
-pivot_longer(cols = c(p_o, p_e),
-               values_to = "prob",
-               names_to = "type") |> 
-  ggplot(aes(h, prob, color = type)) +
-  geom_path()
-```
-
-```{r}
-tibble(p_e_l = pnorm(seq(170, 186, 1), 169.4, 7.0, lower.tail = FALSE),
-       p_e_u = pnorm(seq(171, 187, 1), 169.4, 7.0, lower.tail = FALSE),
-       p_e = p_e_l - p_e_u,
-       p_o_a = map_dbl(seq(170, 186, 1), ~filter(gummy_student_tbl, gender == "female" & height == .x) |> nrow()),
-       p_o = p_o_a/n_female,
-       h = seq(170, 186, 1)) |> 
-  pivot_longer(cols = c(p_o, p_e),
-               values_to = "prob",
-               names_to = "type") |> 
-  ggplot(aes(h, prob, color = type)) +
-  geom_path() +
-  scale_x_continuous(breaks = seq(170, 187, 1))
-
-
-tibble(p_e_l = pnorm(seq(178, 205, 1), 183.9, 7.8, lower.tail = FALSE),
-       p_e_u = pnorm(seq(179, 206, 1), 183.9, 7.8, lower.tail = FALSE),
-       p_e = p_e_l - p_e_u,
-       p_o_a = map_dbl(seq(178, 205, 1), ~filter(gummy_student_tbl, gender == "male" & height == .x) |> nrow()),
-       p_o = p_o_a/n_male,
-       h = seq(178, 205, 1)) |> 
-  pivot_longer(cols = c(p_o, p_e),
-               values_to = "prob",
-               names_to = "type") |> 
-  ggplot(aes(h, prob, color = type)) +
-  geom_path() +
-  scale_x_continuous(breaks = seq(178, 205, 1))
-```
 
 ```{r}
 #| echo: false
@@ -438,7 +336,117 @@ dnorm(34, mean = 32, sd = 2.5) ## likelihood
 dnorm(34, mean = 34, sd = 2.5) ## likelihood
 ```
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+desc_gender_height_tbl <- gummy_student_tbl |> 
+  group_by(gender) |> 
+  summarise(mean = mean(height, na.rm = TRUE), sd = sd(height, na.rm = TRUE)) |> 
+  mutate_if(is.numeric, round, 1) |> 
+  na.omit()
+```
 
+$$
+Pr(h = 179cm \mid female)\\
+Pr(h = 179cm \mid male)
+$$
+
+```{r}
+pnorm(c(177, 180), 169.4, 7.0) |> diff() |> round(3)
+pnorm(c(177, 180), 183.9, 7.8) |> diff() |> round(3)
+```
+
+
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: tbl-gummy-height-gender
+#| tbl-cap: "foo."
+
+n_female <- filter(gummy_student_tbl, gender == "female") |> nrow()
+
+n_female_179cm <- filter(gummy_student_tbl, gender == "female" & height == 179) |> nrow()
+
+pct_female <- round(n_female_179cm/n_female, 3)
+
+n_male <- filter(gummy_student_tbl, gender == "male") |> nrow()
+
+n_male_179cm <- filter(gummy_student_tbl, gender == "male" & height == 179) |> nrow()
+
+pct_male <- round(n_male_179cm/n_male, 3)
+
+desc_gender_height_tbl |> 
+  mutate(p_e = scales::percent(c(0.074, 0.12)),
+         p_o = scales::percent(c(pct_female, pct_male))) |> 
+  set_names(c("Gender", "Mean", "SD", "Expected", "Observed")) |> 
+  kable(align = "c", "pipe") |> 
+  add_header_above(c(" " = 1, "Body height [cm]" = 2, "Probability to be 179cm" = 2))
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-chap-interlude-I-hist-height-deviation
+#| fig-align: center
+#| fig-height: 7
+#| fig-width: 9
+#| fig-cap: ""
+
+
+male_tbl <- tibble(h = seq(160, 205, 1),
+       l = pnorm(h-0.5, 183.9, 7.8, lower.tail = FALSE),
+       u = pnorm(h+0.5, 183.9, 7.8, lower.tail = FALSE),
+       p_e = l-u,
+       p_o_a = map_dbl(h, ~filter(gummy_student_tbl, gender == "male" & height == .x) |> nrow()),
+       p_o = p_o_a/n_male,
+       d_pre = round(p_o - p_e, 3),
+       s = sign(d_pre),
+       d = scales::percent(d_pre),
+       d_txt = str_c(ifelse(s == 1, "+", ""), d),
+       gender = "male") |> 
+  pivot_longer(cols = c(p_o, p_e),
+               values_to = "prob",
+               names_to = "type")
+
+female_tbl <- tibble(h = seq(150, 190, 1),
+       l = pnorm(h-0.5, 169.4, 7.0, lower.tail = FALSE),
+       u = pnorm(h+0.5, 169.4, 7.0, lower.tail = FALSE),
+       p_e = l-u,
+       p_o_a = map_dbl(h, ~filter(gummy_student_tbl, gender == "female" & height == .x) |> nrow()),
+       p_o = p_o_a/n_male,
+       d_pre = round(p_o - p_e, 3),
+       s = sign(d_pre),
+       d = scales::percent(d_pre),
+       d_txt = str_c(ifelse(s == 1, "+", ""), d),
+       gender = "female") |> 
+  pivot_longer(cols = c(p_o, p_e),
+               values_to = "prob",
+               names_to = "type")
+
+comb_tbl <- rbind(male_tbl, female_tbl) 
+
+comb_tbl |> 
+  ggplot(aes(h, prob, color = gender, linetype = type)) +
+  theme_book() +
+  geom_path(data = filter(comb_tbl, type == "p_e"),
+            linewidth = 2, alpha = 0.5) +
+  geom_path(data = filter(comb_tbl, type == "p_o")) +
+  geom_point(data = filter(comb_tbl, type == "p_o")) +
+  geom_text_repel(data = filter(comb_tbl, type == "p_o"), aes(label = d_txt),
+            show.legend = FALSE, size = 3.25, min.segment.length = 0) +
+  scale_color_viridis(option = "plasma", discrete = TRUE, end = 0.6, direction = -1) +
+  facet_wrap(~gender, nrow = 2) +
+  scale_y_continuous(label = scales::percent, breaks = c(0, 0.02, 0.04, 0.06, 0.08, 0.1),
+                     limits = c(0, 0.1)) +
+  labs(x = "Body height [cm]", y = "Probability") +
+  theme(legend.position = "none",
+        strip.background = element_blank(),
+        strip.text.x = element_blank())
+```
 
 ### Most liked gummy bear taste
 
