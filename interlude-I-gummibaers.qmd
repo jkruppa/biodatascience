@@ -395,7 +395,7 @@ desc_gender_height_tbl |>
 #| fig-align: center
 #| fig-height: 7
 #| fig-width: 9
-#| fig-cap: ""
+#| fig-cap: "Expected and observed body height in centimetres, separated for both genders. A normal distribution of body height is indicated by the thick, shaded line. The observed, self-reported body heights are shown as points connected by a dotted line. Deviations of more than 1% are shown. The shaded area indicates people who are 179 cm tall."
 
 
 male_tbl <- tibble(h = seq(160, 205, 1),
