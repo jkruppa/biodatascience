@@ -364,7 +364,7 @@ pnorm(c(178.5, 179.5), 183.9, 7.8) |> diff() |> round(3)
 #| message: false
 #| warning: false
 #| label: tbl-gummy-height-gender
-#| tbl-cap: "foo."
+#| tbl-cap: "Descriptive statistics of the mean and standard deviation of body height, separated by gender. The expected probability of a normal distribution for a person who is 179 cm tall can be derived using these statistics. This deviation is calculated from the observed, self-reported body height."
 
 n_female <- filter(gummy_student_tbl, gender == "female") |> nrow()
 
