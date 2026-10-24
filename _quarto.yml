@@ -30,6 +30,7 @@ book:
     - preface.qmd
     - part: chapter-00-preface.qmd
       chapters:
+      - chapter-00-what-he-says.qmd
       - chapter-01-what-is-science.qmd
       - chapter-02-what-is-data.qmd
       - chapter-03-what-is-a-model.qmd

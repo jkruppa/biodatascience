@@ -1,0 +1,131 @@
+```{r echo = FALSE, warning = FALSE, message=FALSE}
+source("init.R")
+```
+
+# What he says? {#sec-temp}
+
+*Last modified on `r format(fs::file_info("chapter-00-what-he-says.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## General background
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 5
+#| fig-width: 10
+#| fig-cap: "foo"
+#| label: fig-test-theory-random
+
+  ggplot() +
+  #theme_void() +
+  theme_minimal() +
+  coord_cartesian(xlim = c(-10, 10), ylim = c(0.5, 10)) +
+  ## Population
+  geom_circle(aes(x0 = -5, y0 = 5, r = 4.25), fill = "white", size = 2.5) +
+  annotate("text", x = -5, y = 9, label = "Population", size = 8, fontface = 2, fill = "white") +
+  annotate("text", x = 2, y = 9.95, label = "Randomisation", size = 5.5, fontface = 2) +
+  geom_curve(aes(x = -1.5, y = 8, xend = 6, yend = 7),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 2) +
+  ## Sample
+  geom_circle(aes(x0 = 7.5, y0 = 5, r = 2.25), fill = "white", size = 2) +
+  annotate("text", x = 7.5, y = 9, label = "Sample", size = 7.5, fontface = 2, fill = "white") +
+  ## Test
+  geom_curve(aes(x = 6, y = 3, xend = -1.5, yend = 2),
+             arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
+             curvature = -0.3, color = "black", linewidth = 2.5) +
+  annotate("text", x = 2, y = 1.25, label = "Conclusion", size = 5.5, fontface = 2) 
+
+
+
+```
+
+```{r}
+#| message: false
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-height: 2.75
+#| fig-width: 9
+#| fig-cap: "foo"
+#| label: fig-test-theory-random-2
+
+  ggplot() +
+  theme_void() +
+  #theme_minimal() +
+  coord_cartesian(xlim = c(0, 8), ylim = c(0.23, 2.75)) +
+  ## Population
+  geom_circle(aes(x0 = 1, y0 = 1.5, r = 1), fill = "white", size = 2.5) +
+#  geom_shape(data = tibble(x = c(6, 8, 8, 6), 
+#                           y = c(0.5, 0.5, 2.5, 2.5)),
+#             aes(x, y), fill = "white", color = "black", size = 2.5) +
+  geom_circle(aes(x0 = 0.5, y0 = 1, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
+  geom_circle(aes(x0 = 1, y0 = 2, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
+  geom_circle(aes(x0 = 1.5, y0 = 1.5, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
+  ## error
+  geom_segment(aes(x = 6.1, y = 0.5, xend = 8, yend = 0.5), size = 2.5,
+               lineend = "round", color = "#0D0887FF") +
+  geom_segment(aes(x = 8, y = 0.5, xend = 8, yend = 2.5), size = 2.5,
+               lineend = "round", color = "#0D0887FF") +
+  geom_segment(aes(x = 8, y = 2.5, xend = 6.125, yend = 2.5), size = 2.5,
+               lineend = "round", color = "#0D0887FF") +
+  geom_segment(aes(x = 6, y = 0.6, xend = 6, yend = 2.5), size = 2.5,
+               lineend = "round", color = "#0D0887FF", linetype = "12") +
+  annotate("point", x = 6, y = 0.5, shape = 21, fill = "#0D0887FF", color = "#0D0887FF",
+           size = 2) +
+  geom_circle(aes(x0 = 6, y0 = 2.5, r = 0.1), color = "#0D0887FF", fill = "white", size = 2) +
+  geom_circle(aes(x0 = 6, y0 = 0.5, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
+  ## model
+  geom_curve(aes(x = 3, y = 1.15, xend = 4, yend = 1.5),
+             curvature = 0.6, color = "#6A00A880", linewidth = 2.5, lineend = "round") +
+  geom_curve(aes(x = 4, y = 1.5, xend = 5, yend = 1.85),
+             curvature = -0.6, color = "#6A00A880", linewidth = 2.5, lineend = "round") +
+  geom_segment(aes(x = 3, y = 0.5, xend = 5, yend = 2.5), size = 2.5,
+               lineend = "round", color = "#0D0887FF") +
+  geom_circle(aes(x0 = 3.25, y0 = 0.75, r = 0.1), color = "#0D0887FF", fill = "white", size = 2) +
+  geom_circle(aes(x0 = 4, y0 = 1.5, r = 0.1), color = "#0D0887FF", fill = "white", size = 2) +
+  geom_circle(aes(x0 = 4.75, y0 = 2.25, r = 0.1), color = "#0D0887FF", fill = "white", size = 2) +
+  ## error line
+  geom_circle(aes(x0 = 4.75, y0 = 1, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
+  geom_segment(aes(x = 4.75, y = 1.1, xend = 4.75, yend = 2.1), size = 2.5,
+               lineend = "round", color = "#0D0887FF", linetype = "12") +  
+  annotate("text", x = 1, y = 2.75, label = "DATA", size = 7.5, fontface = 2) + 
+  annotate("text", x = 4, y = 2.75, label = "MODEL", size = 7.5, fontface = 2) +
+  annotate("text", x = 7, y = 2.75, label = "ERROR", size = 7.5, fontface = 2) +
+   annotate("text", x = 1, y = 0.275, label = "Circle", size = 7.5, fontface = 4) + 
+  annotate("text", x = 4, y = 0.275, label = "Line", size = 7.5, fontface = 4) +
+  annotate("text", x = 7, y = 0.275, label = "Square", size = 7.5, fontface = 4)  
+
+
+
+
+```
+
+
+## Theoretical background
+
+## R packages used
+
+## Data
+
+## Alternatives 
+
+Further tutorials and R packages on XXX
+
+## Glossary
+
+term
+
+: what does it mean.
+
+## The meaning of "Models of Reality" in this chapter.
+
+- itemize with max. 5-6 words
+
+## Summary
+
+## References {.unnumbered}
