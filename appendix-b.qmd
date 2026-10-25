@@ -1,0 +1,13 @@
+```{r echo = FALSE, warning = FALSE, message =FALSE}
+source("init.R")
+```
+
+# Statistical proverbs {#sec-app-look-like}
+
+*Last modified on `r format(fs::file_info("appendix-b.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
+
+> *"A quote." --- Dan Meyer*
+
+## Proverbs
+
+## References {.unnumbered}

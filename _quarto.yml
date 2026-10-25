@@ -60,7 +60,8 @@ book:
   appendices:
     - about-me.qmd
     - appendix-a.qmd
-
+    - appendix-b.qmd
+    
 bibliography: references.bib
 csl: taylor-and-francis-ama.csl
 lang: en 
