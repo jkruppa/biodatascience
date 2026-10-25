@@ -1,5 +1,6 @@
 ```{r echo = FALSE, warning = FALSE, message=FALSE}
 source("init.R")
+source("images/part_0/part_0_says.R")
 ```
 
 # What he says? {#sec-temp}
