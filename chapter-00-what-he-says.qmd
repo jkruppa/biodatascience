@@ -18,7 +18,7 @@ source("images/part_0/part_0_says.R")
 #| fig-align: center
 #| fig-height: 3.2
 #| fig-width: 9
-#| fig-cap: "foo"
+#| fig-cap: "Statistics aim to capture an image of reality by generating data. However, the data is only a fraction of reality and a vague representation.  In statistics, two main processes are important. First, data generation, and second, drawing conclusions about reality from the data using a model."
 #| label: fig-what-he-says-1
 
   ggplot() +
@@ -59,7 +59,7 @@ source("images/part_0/part_0_says.R")
 #| fig-align: center
 #| fig-height: 2.75
 #| fig-width: 9
-#| fig-cap: "foo"
+#| fig-cap: "The three geometrical shapes that most define statistics. The circle or dot represents either a single observation or a population of many observations. This can also be interpreted as data. The line represents the model. It can be curved or straight and runs through the data points. Finally, the square describes the deviation between the observed and modelled data points. This deviation is commonly called error."
 #| label: fig-what-he-says-2
 
   ggplot() +
