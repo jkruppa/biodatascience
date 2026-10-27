@@ -11,9 +11,9 @@ p1_what_he_says <- ggplot() +
   geom_circle(aes(x0 = 1.5, y0 = 1.5, r = 1), fill = "gray95", size = 2.5) +
   ## Data
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 2.4, r = 0.1), fill = "gray95", size = 1,
-              color = "gray70") +
+              color = "gray90") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 2.15, r = 0.1), fill = "gray95", size = 1,
-              color = "gray70") +
+              color = "gray80") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.9, r = 0.1), fill = "gray95", size = 1,
               color = "gray70") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.65, r = 0.1), fill = "gray95", size = 1,
@@ -23,9 +23,11 @@ p1_what_he_says <- ggplot() +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.15, r = 0.1), fill = "gray95", size = 1,
               color = "gray70") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 0.9, r = 0.1), fill = "gray95", size = 1,
-              color = "gray70") +
+              color = "gray80") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 0.65, r = 0.1), fill = "gray95", size = 1,
-              color = "gray70") +
+              color = "gray90") +
+  geom_circle(aes(x0 = 7.25, y0 = 1.15, r = 0.1), fill = "gray95", size = 1,
+              color = "gray25") + 
   geom_shape(data = tibble(x = c(6.5, 7.3, 6.7), 
                            y = c(1, 1.125, 2)),
              aes(x, y), radius = unit(0.075, 'cm'), fill = "black") +
