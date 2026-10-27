@@ -2,13 +2,28 @@ p1_what_he_says <- ggplot() +
   theme_void() +
   #theme_minimal() +
   coord_cartesian(xlim = c(0, 8), ylim = c(0, 3)) +
-  geom_shape(data = tibble(x = c(3.25, 5.25, 5.25, 3.25), 
-                           y = c(-0.1, -0.1, 3.1, 3.1)),
-             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95") +
-  annotate("text", x = 4.25, y = 1.5, label = "PROCESS", size = 10, fontface = 2,
-           color = "gray80", angle = 60) + 
   ## Population
-  geom_circle(aes(x0 = 1.5, y0 = 1.5, r = 1), fill = "gray95", size = 2.5) +
+  geom_circle(aes(x0 = 1, y0 = 1.1, r = 1), fill = "gray99", size = 1,
+              color = "gray70", linetype = "12") +
+  geom_circle(aes(x0 = 0.475, y0 = 2, r = 0.7), fill = "gray99", size = 1,
+              color = "gray70", linetype = "12") +
+  geom_circle(aes(x0 = 1.8, y0 = 0.9, r = 1), fill = "gray99", size = 1,
+              color = "gray70", linetype = "12") +
+  geom_circle(aes(x0 = 1.5, y0 = 1.5, r = 1), fill = "gray90", size = 2.5) +
+  ## arrows
+  geom_curve(aes(x = 2.5, y = 2, xend = 6.1, yend = 2),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = -0.5, color = "#6A00A8FF", linewidth = 2) +
+  geom_curve(aes(x = 6.1, y = 1, xend = 2.5, yend = 1),
+             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
+             curvature = -0.5, color = "#0D0887FF", linewidth = 2) +
+  ## box
+  geom_shape(data = tibble(x = c(3, 5.5, 5.5, 3), 
+                           y = c(2.2, 2.2, 3.1, 3.1)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95", color = "#6A00A8FF") +
+  geom_shape(data = tibble(x = c(3, 5.5, 5.5, 3), 
+                           y = c(-0.1, -0.1, 0.8, 0.8)),
+             aes(x, y), radius = unit(0.5, 'cm'), fill = "gray95", color = "#0D0887FF") +
   ## Data
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 2.4, r = 0.1), fill = "gray95", size = 1,
               color = "gray90") +
@@ -26,37 +41,27 @@ p1_what_he_says <- ggplot() +
               color = "gray80") +
   geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 0.65, r = 0.1), fill = "gray95", size = 1,
               color = "gray90") +
-  geom_circle(aes(x0 = 7.25, y0 = 1.15, r = 0.1), fill = "gray95", size = 1,
+  geom_circle(aes(x0 = 7.25, y0 = 1.15, r = 0.1), fill = "gray90", size = 1,
               color = "gray25") + 
   geom_shape(data = tibble(x = c(6.5, 7.3, 6.7), 
                            y = c(1, 1.125, 2)),
              aes(x, y), radius = unit(0.075, 'cm'), fill = "black") +
-  #  geom_circle(aes(x0 = 7.1, y0 = 1.6, r = 0.5), fill = "gray95", size = 2.5,
-  #              color = "gray70", linetype = "12") +
-  #  geom_circle(aes(x0 = 7.6, y0 = 1.4, r = 0.5), fill = "gray95", size = 2.5,
-  #              color = "gray70", linetype = "12") +
-  #  geom_circle(aes(x0 = 7.2, y0 = 0.6, r = 0.5), fill = "gray95", size = 2.5,
-  #              color = "gray70", linetype = "12") +
-  #  geom_circle(aes(x0 = 7.8, y0 = 2.1, r = 0.5), fill = "gray95", size = 2.5,
-  #              color = "gray70", linetype = "12") +
   ## front
-  geom_circle(aes(x0 = 6.5, y0 = 1.5, r = 0.5), fill = "gray95", size = 2.5) +
+  geom_circle(aes(x0 = 6.5, y0 = 1.5, r = 0.5), fill = "gray90", size = 2.5) +
   geom_circle(aes(x0 = 6.5, y0 = 1.7, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
   geom_circle(aes(x0 = 6.25, y0 = 1.4, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
   geom_circle(aes(x0 = 6.7, y0 = 1.3, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
-  ## arrows
-  geom_curve(aes(x = 2.5, y = 2, xend = 6.1, yend = 2),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
-             curvature = -0.3, color = "black", linewidth = 2) +
-  geom_curve(aes(x = 6.1, y = 1, xend = 2.5, yend = 1),
-             arrow = arrow(length = unit(0.04, "npc"), type = "closed"),
-             curvature = -0.3, color = "#0D0887FF", linewidth = 2) +
   ## text
   annotate("text", x = 1.5, y = 2.75, label = "REALITY", size = 7.5, fontface = 2) + 
   annotate("text", x = 6.875, y = 2.75, label = "DATA", size = 7.5, fontface = 2) +
-  annotate("text", x = 4.25, y = 2.85, label = "Generation", size = 7.5, fontface = 4) + 
-  annotate("text", x = 4.25, y = 0.15, label = "Model", size = 7.5, fontface = 4,
-           color = "#0D0887FF")   
+  annotate("text", x = 4.25, y = 2.85, label = "Randomization", size = 7.5, fontface = 4,
+           color = "#6A00A8FF") + 
+  annotate("text", x = 4.25, y = 2.45, label = "Observational | Experimental", size = 4.5, fontface = 3,
+           color = "#6A00A8FF") +   
+  annotate("text", x = 4.25, y = 0.55, label = "Model", size = 7.5, fontface = 4,
+           color = "#0D0887FF") +
+  annotate("text", x = 4.25, y = 0.15, label = "Explanatory | Predictive", size = 4.5, fontface = 3,
+           color = "#0D0887FF")  
 
 
 p2_what_he_says <- ggplot() +
