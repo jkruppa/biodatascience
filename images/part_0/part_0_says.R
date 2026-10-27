@@ -10,6 +10,34 @@ p1_what_he_says <- ggplot() +
   ## Population
   geom_circle(aes(x0 = 1.5, y0 = 1.5, r = 1), fill = "gray95", size = 2.5) +
   ## Data
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 2.4, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 2.15, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.9, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.65, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") + 
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.4, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 1.15, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 0.9, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_circle(aes(x0 = seq(6.25, 7.5, 0.25), y0 = 0.65, r = 0.1), fill = "gray95", size = 1,
+              color = "gray70") +
+  geom_shape(data = tibble(x = c(6.5, 7.3, 6.7), 
+                           y = c(1, 1.125, 2)),
+             aes(x, y), radius = unit(0.075, 'cm'), fill = "black") +
+  #  geom_circle(aes(x0 = 7.1, y0 = 1.6, r = 0.5), fill = "gray95", size = 2.5,
+  #              color = "gray70", linetype = "12") +
+  #  geom_circle(aes(x0 = 7.6, y0 = 1.4, r = 0.5), fill = "gray95", size = 2.5,
+  #              color = "gray70", linetype = "12") +
+  #  geom_circle(aes(x0 = 7.2, y0 = 0.6, r = 0.5), fill = "gray95", size = 2.5,
+  #              color = "gray70", linetype = "12") +
+  #  geom_circle(aes(x0 = 7.8, y0 = 2.1, r = 0.5), fill = "gray95", size = 2.5,
+  #              color = "gray70", linetype = "12") +
+  ## front
   geom_circle(aes(x0 = 6.5, y0 = 1.5, r = 0.5), fill = "gray95", size = 2.5) +
   geom_circle(aes(x0 = 6.5, y0 = 1.7, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
   geom_circle(aes(x0 = 6.25, y0 = 1.4, r = 0.1), fill = "#0D0887FF", color = "#0D0887FF", size = 2) +
@@ -23,7 +51,7 @@ p1_what_he_says <- ggplot() +
              curvature = -0.3, color = "#0D0887FF", linewidth = 2) +
   ## text
   annotate("text", x = 1.5, y = 2.75, label = "REALITY", size = 7.5, fontface = 2) + 
-  annotate("text", x = 6.5, y = 2.3, label = "DATA", size = 7.5, fontface = 2) +
+  annotate("text", x = 6.875, y = 2.75, label = "DATA", size = 7.5, fontface = 2) +
   annotate("text", x = 4.25, y = 2.85, label = "Generation", size = 7.5, fontface = 4) + 
   annotate("text", x = 4.25, y = 0.15, label = "Model", size = 7.5, fontface = 4,
            color = "#0D0887FF")   
