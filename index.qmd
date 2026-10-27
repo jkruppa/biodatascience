@@ -39,15 +39,29 @@ Which book should I read if I want to experience the feeling of watching the His
 This book was written using KI to avoid French and Latin words that nobody understands or can pronounce. We use plain and simple English words.
 
 ::: callout-note
-## Noteworthy statements
+## Noteworthy statements I
 
-- Science is an iterative process.
+- Science is an iterative guessing process — an evolutionary process.
 - Science makes model-based decisions based on data.
 - Data are observations expressed as numbers.
 - Decisions are, by their very nature, undecidable; otherwise, they would be computable.
 - There are digital and analog tools that require skills to use them, as well as knowledge to evaluate the results.
 - Rule-based decisions differ from human decisions. Computers make rule-based decisions. Rule-based decisions are objective.
 - In statistical data analysis, we can examine correlations or make predictions.
+:::
+
+::: callout-note
+## Noteworthy statements II
+
+- Science is a human endeavor. Humans do science. Humans have emotions.
+- On the science stage we use statistics to generate knowledge. 
+- In statistics we translate data into probabilities to make model-based decisions.
+- We use digital and analog tools.
+- Tools are aids that unlock possibilities for problem solving.
+- Data are observations cast in numbers.
+- Numbers are summarized by descriptive statistics or model coefficients.
+- A model is a line through points in a xy-system. 
+- Coefficients describe a model by numbers.
 :::
 
 > *"To write a book you must become the book." — Naval Ravikant*
