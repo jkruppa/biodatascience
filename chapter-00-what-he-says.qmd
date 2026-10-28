@@ -36,6 +36,44 @@ p2_what_he_says
 ```
 
 
+
+::: {#def-stat}
+## Statistics
+
+In statistics we translate [data](#def-data) into [probabilities](#def-prob) to make model-based decisions.
+:::
+
+::: {#def-prob}
+## Probability
+
+A probability describes the frequency of observing an event.
+
+Conditional probabilities are always bound to a given subset.
+
+In statistics the event is not happening.
+
+$$
+Pr(\text{your data} \mid \text{no event})
+$$
+:::
+
+::: {#def-data}
+## Data
+
+$$
+\mbox{Data are} 
+\begin{bmatrix}
+\mbox{perceptions} \\
+\mathbf{information} \\
+\mbox{sensations} 
+\end{bmatrix} 
+\mbox{cast into numbers.} 
+$$
+Although data only represents a fraction of reality, it is possible to draw conclusions about reality itself.
+:::
+
+See @def-data.
+
 ## Theoretical background
 
 ## R packages used
