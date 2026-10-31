@@ -36,6 +36,12 @@ p2_what_he_says
 ```
 
 
+::: {#def-error}
+## Error
+
+An error is a deviation between the current state (as-is) and the target state (to-be).
+
+:::
 
 ::: {#def-stat}
 ## Statistics
