@@ -36,6 +36,14 @@ p2_what_he_says
 ```
 
 
+A metaphor is a figure of speech and thinking that uses one thing to refer to another.
+
+Our aim is to create a strong visual image or simplify a complex concept.
+
+Every human communication uses metaphors and happens in the contexts of myths.
+
+In this book, the myth is the stage on which science takes place.
+
 ::: {#def-error}
 ## Error
 
