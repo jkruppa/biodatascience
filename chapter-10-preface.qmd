@@ -3,17 +3,17 @@ source("init.R")
 source("images/part_1/part_1_data.R")
 ```
 
-# Tales of data 
+# Tales of data
 
 *Last modified on `r format(fs::file_info("chapter-10-preface.qmd")$modification_time, '%d. %B %Y at %H:%M:%S')`*
 
 > *"X-Factor, the unfathomable. We live in a world where dreams and reality are closely intertwined, where facts often seem like figments of the imagination that we cannot explain. Can you distinguish between truth and lies? Yours, Jonathan Frakes." --- German intro of Beyond Belief: Fact or Fiction*
 
-![Canelo and I are sitting on the sofa. Canelo was a transgender guinea pig. This may sound strange, but he looked male on the outside but had a uterus on the inside. Despite this anomaly, he was a very cosy friend. His species might be the source of the main character in this book: the human flea, Pulex irritans. The human flea jumped from guinea pigs to cross the species barrier and infect humans. Pulex irritans has come to stay.](images/canelo_cut.png){fig-align="center" width="300" #fig-data-window-view}
+![Canelo and I are sitting on the sofa. Canelo was a transgender guinea pig. This may sound strange, but he looked male on the outside but had a uterus on the inside. Despite this anomaly, he was a very cosy friend. His species might be the source of the main character in this book: the human flea, Pulex irritans. The human flea jumped from guinea pigs to cross the species barrier and infect humans. Pulex irritans has come to stay.](images/canelo_cut.png){#fig-data-window-view fig-align="center" width="300"}
 
 Once upon a time Cadiergues and his team won the Nobel Prize in Stockholm for their work with dog and cat fleas @cadiergues2000comparison. This sparked a time of increased scientific research on fleas of all types of hosts, with scientists studying them in great detail. A wealth of research questions remained to be addressed, while funding opportunities lay in wait. We now have the great opportunity to use open-source data to revisit all the exciting findings in flea research. What are our main research topics and questions that we want to cover?
 
-Panagiotakopulu and Buckland (2017) @panagiotakopulu2017thousand 
+Panagiotakopulu and Buckland (2017) @panagiotakopulu2017thousand
 
 Unfortunately, none of this ever happened in our branch of reality. But it might happen in countless other branches @everett1957relative.
 
@@ -30,9 +30,7 @@ Unfortunately, none of this ever happened in our branch of reality. But it might
 p_measured_flea
 ```
 
-
 Quality Rating (ACR): 1-Bad, 2-Poor, 3-Fair, 4-Good, 5-Excellent.
-
 
 ```{r}
 #| echo: false
@@ -68,7 +66,22 @@ p_bio_rep + p_tech_rep + p_lab_rep +
   theme(plot.tag = element_text(size = 16, face = "bold"))
 ```
 
+In a world where elephants can jump.
+
+| Outcome | Human flea | African elephant |
+|:-----------------------|-----------------------|-----------------------|
+| Jump length [cm]        |                             |                                       |
+| Trunk cold [0/1]        |                             |                                       |
+| Hairs on back legs [count]       |                             |                                       |
+| Fluid intake [ml]       |                             |                                       |
+| Rating        |                             |                                       |
+| Body length [mm]       |                             |                                       |
+| Weight [mg]       |                             |                                       |
 
 
+
+: Human flea (*Pulex irritans*) and African elephant (*Loxodonta africana*) {#tbl-flea-elephant}
+
+text
 
 ## References {.unnumbered}
