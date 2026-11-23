@@ -121,7 +121,7 @@ gummy_count_tbl |>
   geom_label(stat='count', aes(label=..count.., y = ..count.. +70), size = 3,
              position = position_dodge(1), show.legend = FALSE, fontface = 2) +
   scale_x_continuous(breaks = seq(-5, 5,1), limits = c(-5, 5)) +
-  scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1050)) +
+  scale_y_continuous(breaks = seq(0, 1200, 250), limits = c(0, 1150)) +
   scale_fill_viridis(option = "plasma", discrete = TRUE, begin = 0.5, end = 0.8,
                      alpha = 1) +
   labs(x = "Deviation observed and expected", y = "Count", fill = "") +
@@ -252,8 +252,6 @@ gummy_count_tbl |>
 
 ### Self reported body height
 
-
-
 ```{r}
 #| echo: false
 #| message: false
@@ -303,7 +301,7 @@ p3 <-
   theme(legend.position = "none") +
   scale_y_continuous(breaks = seq(140, 214, 5)) +
   geom_shape(data = tibble(x = c(0.9, 1.6, 1.6, 0.9), 
-                           y = c(199, 199, 212, 212)), alpha = 0.25,
+                           y = c(199, 199, 213, 213)), alpha = 0.25,
              aes(x, y), radius = unit(0.25, 'cm'), fill = "gray", inherit.aes = FALSE) +
   annotate("segment", x = 1, y = 205, xend = 1.5, yend = 205) +
   annotate("segment", x = seq(1, 1.5, 0.0625), xend = seq(1, 1.5, 0.0625), y = 204.5, yend = 205.5) +
@@ -311,10 +309,11 @@ p3 <-
   annotate("point", x = c(3*0.0625+1, 5*0.0625+1, 7*0.0625+1, 8*0.0625+1), y = c(206.5),
            color = "#0D0887FF") +
   annotate("point", x = c(5*0.0625+1, 8*0.0625+1), y = c(208), color = "#0D0887FF")  +
-  annotate("point", x = c(5*0.0625+1), y = c(209.5), color = "#0D0887FF") +
+  annotate("point", x = c(5*0.0625+1, 8*0.0625+1), y = c(209.5), color = "#0D0887FF") +
   annotate("point", x = c(4*0.0625+1), y = c(206.5),
            color = "#D5536FFF") +
   annotate("point", x = c(7*0.0625+1), y = c(208), color = "#D5536FFF")  +
+  annotate("point", x = c(8*0.0625+1), y = c(211), color = "#D5536FFF")  +
   geom_curve(aes(x = 1.25, y = 199, xend = 1.92, yend = 179),
              arrow = arrow(length = unit(0.02, "npc"), type = "closed"),
              curvature = 0.3, color = "gray25", linewidth = 0.25) +
